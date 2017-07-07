@@ -1,6 +1,6 @@
 /*! mobile-slider - v0.1.2 - 2016-03-17
  * Copyright (c) 2016 Angel Vladov; Licensed MIT */
-! function (a) {
+! function(a) {
     "use strict";
 
     function b(a, b) {
@@ -20,16 +20,16 @@
     function d(a) {
         return a.outerWidth(!0)
     }
-    
-    a.fn.mobileSlider = function (e) {
+
+    a.fn.mobileSlider = function(e) {
         var f = a.extend({}, a.fn.mobileSlider.defaults, e);
-        return this.each(function () {
+        return this.each(function() {
             function e() {
                 var b = '<div class="slider-dots">';
-                o.each(function (c) {
+                o.each(function(c) {
                     var d = a(this);
                     d.data("slide-id", c), b += '<div class="slider-dot" data-node="' + c + '"></div>'
-                }), b += "</ul>", p.html('<a href="" class="slider-prev"></a><a href="" class="slider-next"></a>' + b), p.on("click", ".slider-dot", function () {
+                }), b += "</ul>", p.html('<a href="" class="slider-prev"></a><a href="" class="slider-next"></a>' + b), p.on("click", ".slider-dot", function() {
                     var b = a(this).attr("data-node");
                     h(o[b])
                 })
@@ -65,12 +65,12 @@
             }
 
             function i() {
-                p.on("click", ".slider-prev", function (a) {
+                p.on("click", ".slider-prev", function(a) {
                     a.preventDefault();
                     var b = q.data("slide-id"),
                         c = b - 1;
                     return 0 > c && (c = o.length - 1), h(o[c]), !1
-                }), p.on("click", ".slider-next", function (a) {
+                }), p.on("click", ".slider-next", function(a) {
                     a.preventDefault();
                     var b = q.data("slide-id"),
                         c = (b + 1) % o.length;
@@ -82,17 +82,17 @@
                 var b = o.length,
                     c = 0;
                 if ("string" == typeof a) switch (a) {
-                case "middle":
-                    c = Math.ceil((o.length - 1) / 2);
-                    break;
-                case "first":
-                    c = 0;
-                    break;
-                case "last":
-                    c = o.length - 1;
-                    break;
-                default:
-                    c = parseInt(f.startAt)
+                    case "middle":
+                        c = Math.ceil((o.length - 1) / 2);
+                        break;
+                    case "first":
+                        c = 0;
+                        break;
+                    case "last":
+                        c = o.length - 1;
+                        break;
+                    default:
+                        c = parseInt(f.startAt)
                 } else "number" == typeof a ? c = a : jQuery.isFunction(a) && (c = j(a(f, b)));
                 for (isNaN(c) ? c = 0 : c >= b && (c = b - 1); 0 > c;) c = b - c;
                 return c
@@ -127,167 +127,188 @@
         startAt: "middle",
         sliderWhen: 1024,
         container: window
-    }, a(document).ready(function () {
+    }, a(document).ready(function() {
         a(".mobile-slider").mobileSlider()
     })
-    
+
     // End of mobile Slider 
-    
+
     // Accordion Control Navigation
-    
+
     var trigger = $(".control_trigger>.trigger"),
         target_element = $(".item_control");
-    
+
     trigger.on('click', function() {
-       if(target_element.hasClass("is_visible")) {
-           target_element.removeClass("is_visible");
-       } else {
-           target_element.addClass("is_visible");
-       }
+        if (target_element.hasClass("is_visible")) {
+            target_element.removeClass("is_visible");
+        } else {
+            target_element.addClass("is_visible");
+        }
     });
-    
+
     // End of Accordion contro Navigation
-    
+
     // browser window scroll (in pixels) after which the "back to top" link is shown
     var offset = 300,
-      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-      offset_opacity = 1200,
-      scroll_top_duration = 1500,
-      $back_to_top = $('.to-top');
-    
+        //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+        offset_opacity = 1200,
+        scroll_top_duration = 1500,
+        $back_to_top = $('.to-top');
+
     //hide or show the "back to top" link
-    $(window).scroll(function(){
-      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('is-visible') : $back_to_top.removeClass('is-visible fade-out');
-      if( $(this).scrollTop() > offset_opacity ) { 
-        $back_to_top.addClass('fade-out');
-      }
+    $(window).scroll(function() {
+        ($(this).scrollTop() > offset) ? $back_to_top.addClass('is-visible'): $back_to_top.removeClass('is-visible fade-out');
+        if ($(this).scrollTop() > offset_opacity) {
+            $back_to_top.addClass('fade-out');
+        }
     });
 
     //smooth scroll to top
-    $back_to_top.on('click', function(event){
-      event.preventDefault();
-      $('body,html').animate({
-        scrollTop: 0 ,
-        }, scroll_top_duration
-      );
+    $back_to_top.on('click', function(event) {
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0,
+        }, scroll_top_duration);
     });
-    
-    $('[data-toggle="tooltip"]').tooltip({
-    });
-    
-    // Smooth scroll down
-	$('.down_link > a').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, scroll_top_duration);
-            return false;
-          }
+    $('[data-toggle="tooltip"]').tooltip({});
+
+    // Smooth scroll down
+    $('.down_link > a').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, scroll_top_duration);
+                return false;
+            }
         }
-    }); 
-        
+    });
+
 }(jQuery);
 
 /*File upload Script 
 Changes the name of the upload button to the name of the file selected for upload
 */
 
-;( function( $, window, document, undefined )
-{
-    $( '.inputfile' ).each( function()
-    {
-        var $input   = $(this),
-            $label   = $input.next( 'label' ),
+;
+(function($, window, document, undefined) {
+    $('.inputfile').each(function() {
+        var $input = $(this),
+            $label = $input.next('label'),
             labelVal = $label.html();
 
-        $input.on( 'change', function( e )
-        {
+        $input.on('change', function(e) {
             var fileName = '';
 
-            if( this.files && this.files.length > 1 )
-                fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-            else if( e.target.value )
-                fileName = e.target.value.split( '\\' ).pop();
+            if (this.files && this.files.length > 1)
+                fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+            else if (e.target.value)
+                fileName = e.target.value.split('\\').pop();
 
-            if( fileName )
-                $label.find( 'span' ).html( fileName );
+            if (fileName)
+                $label.find('span').html(fileName);
             else
-                $label.html( labelVal );
+                $label.html(labelVal);
         });
 
         // Firefox bug fix
         $input
-        .on( 'focus', function(){ $input.addClass( 'has-focus' ); })
-        .on( 'blur', function(){ $input.removeClass( 'has-focus' ); });
+            .on('focus', function() { $input.addClass('has-focus'); })
+            .on('blur', function() { $input.removeClass('has-focus'); });
     });
 
     /*Explicit Close for Dropdown*/
     $('.dropdown.implicit_close').on({
         "shown.bs.dropdown": function() { this.closable = false; },
         // "click": function() { this.closable = true; },
-        "hide.bs.dropdown":  function() { return this.closable; }
+        "hide.bs.dropdown": function() { return this.closable; }
     });
 
     var close_btn = $(".dropdown.implicit_close .abort");
     var mother_container = $(".dropdown.implicit_close");
 
     close_btn.on('click', function() {
-      mother_container.removeClass("open");
+        mother_container.removeClass("open");
     });
 
-    var back_btn = $(".goBack"); 
-        
+    var back_btn = $(".goBack");
+
     back_btn.on('click', function() {
         prompt = confirm("Are you sure you want to leave and abandone all your changes?");
-        if(prompt==true){
+        if (prompt == true) {
             window.history.back();
             return true;
-        } else{
-            return false;   
+        } else {
+            return false;
         }
     });
 
     /*Custom Audio Player*/
     var cust_player = $(".cust_player"),
         main_control = $(".main_player");
-            
-        cust_player.on('click', function(event) {
-            var curr_cust_player = $(event.target).parents('svg');
-            var media_player = curr_cust_player.prev()[0];
-            
-            if(curr_cust_player.attr('class').includes('played')) {
-                media_player.pause();
-                curr_cust_player.attr("class", "cust_player");
-            } else {
-                media_player.play();
-                curr_cust_player.attr("class", "cust_player played");
-            }
-        });
-        
-        main_control.on('ended', function(event){
-            var button = $(event.target).next();
-            button.attr("class", "cust_player");
-        });
 
-        /*Custom Selector*/
+    cust_player.on('click', function(event) {
+        var curr_cust_player = $(event.target).parents('svg');
+        var media_player = curr_cust_player.prev()[0];
 
-        var selector_input = $(".select_control"),
+        if (curr_cust_player.attr('class').includes('played')) {
+            media_player.pause();
+            curr_cust_player.attr("class", "cust_player");
+        } else {
+            media_player.play();
+            curr_cust_player.attr("class", "cust_player played");
+        }
+    });
+
+    main_control.on('ended', function(event) {
+        var button = $(event.target).next();
+        button.attr("class", "cust_player");
+    });
+
+    /*Custom Selector*/
+
+    var selector_input = $(".select_control"),
         target_container = $('.my_selector');
-    
-        selector_input.on('click', function() {
-            
-           if($(this).attr("checked"), true) {
-               $(this).parents(".select_radio").find(".my_selector").removeClass('active');
-               $(this).parents(".my_selector").addClass("active");
-            } else {
-                $(this).parents(".my_selector").removeClass('active');
-            } 
-        });
-    
-})( jQuery, window, document );
+
+    selector_input.on('click', function() {
+
+        if ($(this).attr("checked"), true) {
+            $(this).parents(".select_radio").find(".my_selector").removeClass('active');
+            $(this).parents(".my_selector").addClass("active");
+        } else {
+            $(this).parents(".my_selector").removeClass('active');
+        }
+    });
+
+    var commentInput = $(".comment_inner .form-control"),
+        commentControl = $(".comment_inner .form_action"),
+        inputSME = $(".comment_inner .post_input"),
+        mediaInput = $(".comment_inner .action_botton"),
+        controlDismiss = $(".comm_dismiss");
+
+    $(".comment_inner").addClass("is_collapsed");
+
+    commentInput.on("focus", function() {
+        $(this).parents(".comment_inner").removeClass("is_collapsed");
+    });
+
+    inputSME.on("click", function() {
+        $(this).parents(".comment_inner").removeClass("is_collapsed");
+    });
+
+    mediaInput.on('click', function() {
+        $(this).parents(".comment_inner").removeClass("is_collapsed");
+    });
+
+    controlDismiss.on('click', function(e) {
+        e.preventDefault();
+        $(this).parents(".comment_inner").addClass("is_collapsed");
+    });
+
+})(jQuery, window, document);
 
 /*End of file upload script*/

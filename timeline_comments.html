@@ -584,7 +584,7 @@
                                                         <img src="img/user_avis/3.jpg" alt="Adedire Oluwaseun">
                                                     </a>
                                                 </div>
-                                                <div class="comment_inner">
+                                                <div class="comment_inner is_collapsed">
                                                    <form action="">
                                                         <div class="post_input no_left_avi">
                                                             <textarea class="form-control" rows="5" id="comment_input" placeholder="Write your comment"></textarea>
@@ -615,7 +615,7 @@
                                                         </div>
                                                         
                                                         <!--Show when the user focus on the input field to type-->
-                                                        <div class="form_action is_hidden text-right">
+                                                        <div class="form_action text-right">
                                                             <button type="button" class="btn comm_dismiss btn-sm btn-card">Cancel</button>
                                                             <button type="submit" class="btn btn-sm btn-primary">Post</button>
                                                         </div>
@@ -918,7 +918,6 @@
     <script src="js/main.js"></script>
     
     <script>
-        
         /* instantiate markDown editor for general posts */
         var simplemde = new SimpleMDE({ 
             element: $("#post_input")[0],
@@ -935,17 +934,6 @@
             toolbar: false,
             status: false,
             spellChecker: true,
-        });
-        
-        $(".is_hidden").hide();
-        
-        $(".CodeMirror-sizer, .post_input, .media_upload_trigger").on("click", function(){
-            $(".is_hidden").show(300);
-        });
-        
-        $(".comm_dismiss").on('click', function(e) {
-            e.preventDefault();
-            $(".is_hidden").hide(300);
         });
     </script>
 
