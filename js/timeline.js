@@ -72,23 +72,5 @@ $(function() {
         obj_tray.removeClass("widget_expanded");
     };
 
-    /*Category and subcategory selection control*/
-    var open_subcats = $('.has_children .cat_button'),
-        subcat_panel = $('.alt_panel'),
-        go_back = $('.track_back'),
-        mother_panel = $('.modal-body');
-
-    open_subcats.on('click', function(e){
-        if(!(mother_panel.hasClass("is_opened"))) {
-            $(this).parents(".modal-body").addClass("is_opened");
-        }
-    });
-
-    go_back.on('click', function() {
-        if(mother_panel.hasClass("is_opened")) {
-            mother_panel.removeClass("is_opened");
-        }
-    });
-
 });
 

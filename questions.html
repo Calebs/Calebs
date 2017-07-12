@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Discover Questions | SAEDConnect</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
+    <link href="css/base.min.css" rel="stylesheet" type="text/css">
+    <link href="css/timeline.css" rel="stylesheet" type="text/css">
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+</head>
+
+<body class="scroll_check">
+   
+    <!--New Question modal-->
+    <div class="modal fade in" id="post_question">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="content-panel new_comment">
+                        <div class="content_wrap">
+                            <div class="comment_author">
+                                <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_sm avi_circle">
+                                    <img src="img/user_avis/3.jpg" alt="Adedire Oluwaseun">
+                                </a>
+                            </div>
+                            <div class="comment_inner">
+                                <form action="">
+                                    <div class="post_content">
+                                        <div class="form-group post_input input_full font_bold">
+                                            <textarea class="form-control" rows="5" id="question_input" placeholder="What is your question?"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <a href="#more_info" class="btn-link" data-toggle="collapse">Add more information</a>
+                                        </div>
+                                        <div class="panel-collapse collapse" id="more_info">
+                                            <div class="post_input input_full form-group">
+                                                <textarea class="form-control" rows="10" placeholder="Provide more details for your question here"></textarea>
+                                                <div class="select_grid select_radio">
+                                                    <div class="my_selector  file_upload">
+                                                        <label for="md_image" class="control-wrapper">
+                                                            <input type="file" name="file" accept="image/*" id="md_image" class="inputfile"/>
+                                                            <span class="c_label"><i class="fa fa-image"></i></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="my_selector file_upload">
+                                                        <label for="md_video" class="control-wrapper radio-inline">
+                                                            <input type="file" name="file" accept=".mp4" id="md_video" class="inputfile"/>
+                                                            <span class="c_label"><i class="fa fa-play"></i></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="my_selector file_upload">
+                                                        <label for="md_audio" class="control-wrapper radio-inline">
+                                                            <input type="file" name="file" accept=".mp3" id="md_audio" class="inputfile"/>
+                                                            <span class="c_label"><i class="fa fa-music"></i></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="my_selector file_upload">
+                                                        <label for="md_file" class="control-wrapper radio-inline">
+                                                            <input type="file" name="file" accept=".doc, .pdf, .docx" id="md_file" class="inputfile"/>
+                                                            <span class="c_label"><i class="fa fa-file"></i></span>
+                                                        </label>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        
+                                   </div>
+                                    <!--Only show this pane when a user attach a media item to the comment-->
+                                    <div class="media_preview hidden">
+                                        <img src="img/banners/tm_card_img.jpg">
+                                        <!--For normal video uploads-->
+                                        <video controls class="embed-responsive-item hidden" preload="metadata">
+                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                        </video>
+
+                                        <div class="pane_control">
+                                            <a href="#" class="control_item">
+                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                            </a>
+                                            <a href="#" class="control_item">
+                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" data-target="#categories_levels" data-toggle="modal" data-backdrop="static" class="btn btn-primary">Post</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Use this to select post category and subcategories-->
+    <div class="modal fade in" id="categories_levels">
+        <div class="modal-dialog layered_modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                   <!--This is the pain that renders the sub category for any selected Category-->
+                    <div class="alt_panel">
+                        <h4 class="title">
+                           <!--Title of selected Category-->
+                            <span class="">Select a Sub Category</span>
+                        </h4>
+                        <p class="subtitle"><span>Training:</span> Please select a Sub-Category under [Category Name] to enable us better classify your post.</p>
+                        <!--List the Sub category of the selected category-->
+                        <div class="list_children">
+                           <div class="select_grid select_radio">
+                                <div class="my_selector">
+                                    <label for="sub_cat_1" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" checked name="pst_type" id="sub_cat_1">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_2" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_2">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_3" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_3">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_4" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_4">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_5" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_5">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_6" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_6">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_7" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_7">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_8" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_8">
+                                        <span class="c_label">Sub-category name</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_9" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_9">
+                                        <span class="c_label">Sub-category name</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_10" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_10">
+                                        <span class="c_label">Sub-category name</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_11" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" checked name="pst_type" id="sub_cat_11">
+                                    <span class="c_label">English</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_12" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_12">
+                                    <span class="c_label">Music</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_13" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_13">
+                                    <span class="c_label">CV Writing</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_14" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_14">
+                                    <span class="c_label">Communication</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_15" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_15">
+                                    <span class="c_label">Art/Design</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_16" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_16">
+                                    <span class="c_label">Music</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_17" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_17">
+                                    <span class="c_label">CV Writing</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_18" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_18">
+                                    <span class="c_label">Communication</span>
+                                </label>
+                                </div>
+                           </div>
+                        </div>
+                        
+                        <div class="more-btn">
+                            <a href="#" class="track_back btn btn-rounded btn-grey">
+                                <i class="fa fa-chevron-left"></i>
+                                Back
+                            </a>
+                            <!--This should Post to the timeline-->
+                            <button type="button" class="btn btn-rounded btn-primary">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="content-panel">
+                        <h4 class="title">Select a Category</h4>
+                        <p class="subtitle">This post best fits under:</p>
+                        
+                        <div class="select_grid">
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Training</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Writing</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Programming</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Fashion</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Multimedia</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Engineering</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header role="banner">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="sr-only">NYSC SAEDConnect</span>
+                        <img src="img/logo_admin.png" alt="NYSC SAEDConnect">
+                    </a>
+                </div>
+                <nav class="sec-nav ">
+                    <ul class="account_info">
+                        <li class="dropdown accounts">
+                            <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
+                                <span class="profile_img">
+                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                            </span>
+                                <span class="profile_name">Jane Doe</span>
+                                <i class="fa fa-chevron-circle-down"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="corp_profile.html"><i class="fa fa-user"></i>Personal Profile</a></li>
+                                <li><a href="skil_profile.html"><i class="fa fa-gears"></i>Skills Profile</a></li>
+                                <li><a href="corp_trainings.html"><i class="fa fa-briefcase"></i>My Briefcase</a></li>
+                                <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav_trigger">
+                            <a class="primary-nav-trigger" title="Open Menu" href="#0" data-effect="st-effect-1">
+                                <span class="menu-icon"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!--Mobile footer navigation-->
+    <div class="mobile_nav">
+        <ul class="nav">
+            <li class="link_nav">
+                <a href="timeline.html">
+                    <span class="navIcon">
+                        <i class="icon icon_feed"></i>
+                    </span>
+                    <span class="link_title">Feeds</span>
+                </a>
+            </li>
+            <li class="link_nav">
+                <a href="conversations.html">
+                    <span class="navIcon">
+                        <i class="icon icon_convo"></i>
+                    </span>
+                    <span class="link_title">Conversations</span>
+                </a>
+            </li>
+            <li class="link_nav">
+                <a href="requests.html">
+                    <span class="navIcon">
+                        <i class="icon icon_request"></i>
+                    </span>
+                    <span class="link_title">Market</span>
+                </a>
+            </li>
+            <li class="link_nav active">
+                <a href="questions.html">
+                    <span class="navIcon">
+                        <i class="icon icon_question"></i>
+                    </span>
+                    <span class="link_title">Questions</span>
+                </a>
+            </li>
+            <li class="link_nav">
+                <a href="#more" class="more_nav">
+                    <span class="navIcon color-secondary">
+                        <i class="fa fa-th"></i>
+                    </span>
+                    <span class="link_title">More</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="floatingWidget catFilter">
+        <div class="widget-wrapper">
+           <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content text-center">
+                <!--<h4 class="title text_caps color-white">Filter Questions By</h4>-->
+                <h4 class="title text_caps color-white">Filter Questions by Category</h4>
+                
+                <div class="content-panel color-white">
+                    <div class="select_grid">
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Entrepreneurship</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Writing</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Programming</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Fashion</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Multimedia</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Engineering</button>
+                        </div>
+                    </div>                        
+                </div>
+                <!--This is the pain that renders the sub category for any selected Category-->
+                <div class="alt_panel">
+                    <!--List the Sub category of the selected category-->
+                    <div class="list_children">
+                       <div class="select_grid select_check">
+                            <div class="my_selector">
+                                <label for="ent_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="ent_1">
+                                <span class="c_label">Funding</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="ent_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="ent_2">
+                                <span class="c_label">Getting Started</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="ent_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="ent_3">
+                                <span class="c_label">Business Plan</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="ent_4" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="ent_4">
+                                    <span class="c_label">Investment</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-btn">
+                        <a href="#" class="track_back btn btn-rounded btn-grey">
+                            <i class="fa fa-chevron-left"></i>
+                            Back
+                        </a>
+                        <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="floatingWidget searchWidget">
+        <div class="widget-wrapper">
+            <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content">
+                <div class="search_panel">
+                    <h4 class="title text_caps color-white">Search Questions</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="search" class="form-control search_control" placeholder="Search for questions...">
+                        </div>
+                        <div class="more-btn">
+                            <button class="btn btn-rounded btn-lg btn-secondary">
+                                <i class="fa fa-search"></i>Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <main class="sd-main-content bg-off-white">
+
+        <!--Insert offcanvas nav here-->
+        <nav class="st-menu">
+            <h4 class="sr-only">Main Menu</h4>
+        </nav>
+
+        <!--Wrap site content-->
+        <div class="timeline_container">
+           
+            <aside class="nav_timeline">
+                <div class="content_wrapper">
+                    <h4 class="menu_title">Menu</h4>
+
+                    <nav class="nav_block main_nav">
+                        <ul class="has_icon">
+                            <li class="link_nav has_children">
+                                <a href="#stuffs" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_feed"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">My Profile</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="stuffs">
+                                    <ul class="link_nav_children">
+                                        <li><a href="">My Post</a></li>
+                                        <li><a href="">My Questions</a></li>
+                                        <li><a href="">My Discussions</a></li>
+                                        <li><a href="">My Achievements</a></li>
+                                        <li><a href="">My Buyer Requests</a></li>
+                                        <li><a href="">My merchandise</a></li>
+                                        <li><a href="">My Jobs</a></li>
+                                    </ul>
+                                </div>
+                            </li>   
+                            <li class="link_nav ">
+                                <a href="timeline.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_feed"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">News Feed</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav active">
+                                <a href="questions.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_question"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Questions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="conversations.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_convo"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Discussions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav has_children">
+                                <a href="#market" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Market</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="market">
+                                    <ul class="link_nav_children">
+                                        <li><a href="market.html">Market Place</a></li>
+                                        <li><a href="requests.html">Buyer Requests</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="campaigns.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_campaign"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Campaigns</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav has_children">
+                                <a href="#jobs" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Jobs</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="jobs">
+                                    <ul class="link_nav_children">
+                                        <li><a href="jobs.html">Short time Jobs</a></li>
+                                        <li><a href="jobs.html">Full time Jobs</a></li>
+                                        <li><a href="jobs.html">Remote Joba</a></li>
+                                        <li><a href="jobs.html">Freelance Jobs</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="amas.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_ama"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Mentor Sessions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="portfolio.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Discover Talents</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="timeline.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Biz Opportunity</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="timeline.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Critic It</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="requests.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Suggestions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="requests.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Complaints</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="nav_block nav_footer">
+                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a><a href="cookies.html">Cookies</a>
+                        <a href="contact_us.html">Contact Us</a></p>
+                        <p>&copy; SAEDConnect 2017</p>
+                    </div>
+                    
+                </div>
+            </aside>
+
+            <section class="layout_content">
+                <div class="box_wrapper bg_default">
+                    
+                    <div class="main_wrapper ct_bare">
+                        <header class="section_header">
+                            <div class="hero_wrapper">
+                                <div class="section_info">
+                                    <h2 class="section-title">Questions</h2>
+                                    <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis eius hic repellat laborum non.</p>
+                                </div>
+                                <div class="section_cto">
+                                    <button type="button" data-target="#post_question" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                        Ask a Question
+                                    </button>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="split_layout">
+                            <section class="split_view">
+                                <div class="filter_widget">
+                                    <div class="filter_block">
+                                        <a href="#" id="trigger_filter" class="filter_trigger">
+                                            Filter By
+                                            <i><img src="./img/app_icon/chevron_down.png" alt="Filter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="filter_actions pull-right">
+                                        <a href="#" id="trigger_search" class="filter_trigger">
+                                            Search
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                                                
+                                <div class="default_content hidden">
+                                    <div class="def_wrapper">
+                                        <div class="intro-text centered">
+                                            <div class="def_img">
+                                                <img src="img/icons/icon_empty.png" alt="Empty">
+                                            </div>
+                                            <h5 class="title color-primary">No questions found</h5>
+                                            <p class="subtitle">Be the first to ask a question.</p>
+                                            <button type="button" data-target="#post_question" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                                Ask a Question
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="content_inner">
+                                   <!--flex_header-->
+                                    <div class="content_header">
+                                        <h4 class="title color-grey text_caps">Recent Questions</h4>
+                                    </div>
+                                    
+                                    <div class="cardList horizontal_card">
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">How do I find an investor for my shoe making venture?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Adedire Oluwaseun</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">20 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">Funding</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">146</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">25</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">Where can I rent an apartment in Abakaliki?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Olamitobi Emanuel</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">21 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">General</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">146</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">25</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">How can I sell my products?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Olamitobi Emanuel</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">21 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">Marketing</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">16</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">5</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">How do I find an investor for my shoe making venture?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Adedire Oluwaseun</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">20 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">Funding</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">146</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">25</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">Where can I rent an apartment in Abakaliki?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Olamitobi Emanuel</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">21 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">General</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">146</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">25</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">How can I sell my products?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Olamitobi Emanuel</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">21 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">Marketing</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">16</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">5</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">How can I sell my products?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Olamitobi Emanuel</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">21 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">Marketing</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">16</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">5</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">How do I find an investor for my shoe making venture?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Adedire Oluwaseun</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">20 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">Funding</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">146</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">25</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">Where can I rent an apartment in Abakaliki?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Olamitobi Emanuel</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">21 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">General</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">146</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">25</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="card_horizontal">
+                                            <div class="postCard__wrapper">
+                                                <div class="postCardDetails">
+                                                    <h4 class="cardTitle"><a href="question_post.html">How can I sell my products?</a></h4>
+                                                    <div class="author_meta profile_title">
+                                                        <span class="title_text color-default font_regular">
+                                                            <a href="user_profile.html">Olamitobi Emanuel</a></span>
+                                                        <time class="post_time" datetime="25-6-2016">21 mins ago</time>
+                                                    </div>
+                                                </div>
+                                                <div class="postCardInfo">
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">Marketing</span>
+                                                        <span class="info_label color-grey">Category</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">16</span>
+                                                        <span class="info_label color-grey">Views</span>
+                                                    </div>
+                                                    <div class="postInfo__item">
+                                                        <span class="info_value font_bold">5</span>
+                                                        <span class="info_label color-grey">Answers</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <nav class="clearfix">
+                                        <ul class="pagination pagination-sm clearfix">
+                                            <li class="disabled">
+                                                <a href="#">
+                                                    <<
+                                                </a>
+                                            </li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li class="">
+                                                <a href="#" class="">
+                                                    >>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                
+                            </section>
+
+                            <aside class="split_nav">
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="https://wwww.saedconnect.com" class="wrapper">
+                                        <img src="./img/banners/join_saedconnect.png" alt="Join SAEDConnect">
+                                    </a>
+                                </article>
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/small_ad.png" alt="random_ad">
+                                    </a>
+                                </article>
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/qlik.png" alt="Learn in insidify">
+                                    </a>
+                                </article>
+                            </aside>
+                        </div>           
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <a href="#0" class="to-top">Top</a>
+
+    <!-- Javascript starts here-->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/site_nav.js"></script>
+    <script src="js/simplemde.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        
+        /* instantiate markDown editor for portfolio posts */
+        var simplemde = new SimpleMDE({ 
+            element: $("#question_input")[0],
+            placeholder: "Write is your question?",
+            toolbar: false,
+            status: false,
+            spellChecker: true,
+        });
+    </script>
+
+    
+</body>
+
+</html>

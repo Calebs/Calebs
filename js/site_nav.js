@@ -86,7 +86,7 @@ $(function() {
             main_container.removeClass('st-menu-open');
             $('body').toggleClass('overflow-hidden');
             $('.menu-icon').toggleClass('is-clicked');
-        }
+        }            
     });
 
     /*Responsive Timeline Main nav script*/
