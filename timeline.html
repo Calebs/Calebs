@@ -83,24 +83,26 @@
                 </div>
                 <div class="modal-body text-center">
                     <div class="content-panel">
-                        <h4 class="title">Post as</h4>
-                        <p class="subtitle">What kind of most best describe this post</p>
+                        <h4 class="title">This is a</h4>
                         
                         <div class="select_grid">
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">General </button>
+                                <button type="submit" class="btn btn-sm cat_button">General Post </button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Complaint </button>
+                                <button type="submit" class="btn btn-sm cat_button">Help Request </button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Message to NYSC SAED</button>
                             </div>
                             <div class="category_item">
                                 <button type="submit" class="btn btn-sm cat_button">Critic It</button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Suggestion</button>
+                                <button type="submit" class="btn btn-sm cat_button">Complaint/Suggestion</button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Biz Opportunity</button>
+                                <button type="submit" class="btn btn-sm cat_button">Business Opportunity</button>
                             </div>
                         </div>                        
                     </div>
@@ -121,8 +123,7 @@
                 <div class="modal-body">
                    
                     <div class="content-panel">
-                           <!--<h3 class="title color-primary">Select the states you want this post.</h3>-->
-                        <p class="subtitle">Only corps members in the states you select will be able to see this post.</p>
+                        <p class="subtitle">Only users in the state(s) you select will be able to see this post.</p>
                             
                         <div class="step_form">
                             <div class="multi_sel_item">
@@ -191,20 +192,21 @@
         <div class="modal-dialog layered_modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4>Select post category</h4>
                     <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
                     </button>
                 </div>
                 <div class="modal-body text-center">
+                   <!--This is the pain that renders the sub category for any selected Category-->
                     <div class="alt_panel">
                         <h4 class="title">
-                            <span class="">Training</span>
+                           <!--Title of selected Category-->
+                            <span class="">Select a Sub Category</span>
                         </h4>
-                        <p class="subtitle">Select a <span>Training</span> category to classify your listing.</p>
-                        <!--List the children category of the selected category-->
+                        <p class="subtitle"><span>Training:</span> Please select a Sub-Category under [Category Name] to enable us better classify your post.</p>
+                        <!--List the Sub category of the selected category-->
                         <div class="list_children">
                            <div class="select_grid select_radio">
-                                <div class="my_selector">
+                                <div class="my_selector active">
                                     <label for="sub_cat_1" class="control-wrapper radio-inline">
                                     <input type="radio" class="select_control" checked name="pst_type" id="sub_cat_1">
                                     <span class="c_label">Sub-category name</span>
@@ -326,8 +328,8 @@
                     </div>
                     
                     <div class="content-panel">
-                        <h4 class="title">Select a category...</h4>
-                        <p class="subtitle">Select a category that best describe this post.</p>
+                        <h4 class="title">Select a Category</h4>
+                        <p class="subtitle">This post best fits under:</p>
                         
                         <div class="select_grid">
                             <div class="category_item has_children">
@@ -355,47 +357,34 @@
         </div>
     </div>
     
-    <!--use this to select request types for posts like - Buy/Hire and Sell-->
+    <!--use this to select request types for posts like - Buy/Hire-->
     <div class="modal fade in" id="request_type">
         <div class="modal-dialog layered_modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Select an option</h4>
+                    <h4 class="modal-title"> I am looking for...</h4>
                     <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
                     </button>
                 </div>
                 <div class="modal-body text-center">
                     <div class="alt_panel">
-                        <h4 class="title"> I want to buy/Hire a 
+                        <h4 class="title">How do you want this
                             <!--Name of selected category here--> 
-                            <span class="">Skilled Personel</span> as
+                            <span class="">Product</span>
                         </h4>
-                        <p class="subtitle">Select a category that best describe this post.</p>
                         <!--List the children category of the selected category-->
                         <div class="list_children">
                            <div class="select_grid select_radio">
                                 <div class="my_selector">
-                                    <label for="sub_cat_1" class="control-wrapper radio-inline">
-                                    <input type="radio" class="select_control" checked name="pst_type" id="sub_cat_1">
-                                    <span class="c_label">Freelance Job</span>
+                                    <label for="it_buy" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="it_buy">
+                                    <span class="c_label">Buy</span>
                                 </label>
                                 </div>
                                 <div class="my_selector">
-                                    <label for="sub_cat_2" class="control-wrapper radio-inline">
-                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_2">
-                                        <span class="c_label">Remote Staff</span>
-                                    </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sub_cat_2" class="control-wrapper radio-inline">
-                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_2">
-                                        <span class="c_label">Short time Job</span>
-                                    </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sub_cat_2" class="control-wrapper radio-inline">
-                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_2">
-                                        <span class="c_label">Full time Job</span>
+                                    <label for="it_lease" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="it_lease">
+                                        <span class="c_label">Short Lease</span>
                                     </label>
                                 </div>
                            </div>
@@ -409,21 +398,89 @@
                         </div>
                     </div>
                     <div class="content-panel">
-                        <h4 class="title">I want to buy/Hire a...</h4>
-                        <p class="subtitle">Select a category that best describe this post.</p>
-                        
-                        
                         <div class="select_grid">
                            <!--List top level categories here adding the class "Has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
                             <div class="category_item has_children">
-                                <button type="submit" class="btn btn-sm cat_button">Product</button>
+                                <button type="submit" class="btn btn-sm cat_button">A Product</button>
                             </div>
                             
                             <div class="category_item has_children">
-                                <button type="submit" class="btn btn-sm cat_button">Skilled Personel</button>
+                                <button type="submit" class="btn btn-sm cat_button">A Skilled Person for a Job</button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Service</button>
+                                <button type="submit" class="btn btn-sm cat_button">A Volunteer/Partner</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Freelancer</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Private Tutor</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Service</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--use this to select request types for posts like - Buy/Hire-->
+    <div class="modal fade in" id="sell_type">
+        <div class="modal-dialog layered_modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="alt_panel">
+                        <h4 class="title">Select available payment Options
+                        </h4>
+                        <!--List the children category of the selected category-->
+                        <div class="list_children">
+                           <div class="select_grid select_radio">
+                                <div class="my_selector">
+                                    <label for="sell_buy" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sell_buy">
+                                        <span class="c_label">Buy</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sell_lease" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sell_lease">
+                                        <span class="c_label">Lease</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sell_stag" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sell_stag">
+                                        <span class="c_label">Staggered payment</span>
+                                    </label>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="more-btn">
+                            <a href="#" class="track_back btn btn-rounded btn-grey">
+                                <i class="fa fa-chevron-left"></i>
+                                Back
+                            </a>
+                            <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                        </div>
+                    </div>
+                    <div class="content-panel">
+                        <h4 class="title">Merchandise Type</h4>
+                        <div class="select_grid">
+                           <!--List top level categories here adding the class "Has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Product</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Service</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Product/Service Combo</button>
                             </div>
                         </div>                        
                     </div>
@@ -502,7 +559,7 @@
                     <span class="navIcon">
                         <i class="icon icon_request"></i>
                     </span>
-                    <span class="link_title">Requests</span>
+                    <span class="link_title">Market</span>
                 </a>
             </li>
             <li class="link_nav">
@@ -523,7 +580,6 @@
             </li>
         </ul>
     </div>
-    
     
     <main class="sd-main-content bg-off-white">
 
@@ -730,10 +786,10 @@
                                             <nav class="post_type_nav">
                                                 <ul class="nav nav-tabs">
                                                     <li class="active"><a href="#general" data-toggle="tab">Post</a></li>
-                                                    <li class=""><a href="#buy_hire" data-toggle="tab">Buy/Hire</a></li>
+                                                    <li class=""><a href="#buy_hire" data-toggle="tab">Need</a></li>
                                                     <li class=""><a href="#sell" data-toggle="tab">Sell</a></li>
                                                     <li class=""><a href="#question" data-toggle="tab">Ask</a></li>
-                                                    <li class=""><a href="#portfolio" data-toggle="tab">#MyAchievements</a></li>
+                                                    <li class=""><a href="#portfolio" data-toggle="tab">MyAchievements</a></li>
                                                 </ul>
                                             </nav>
                                         </div>
@@ -790,7 +846,7 @@
                                                        <div class="form-group">
                                                            <div class="cust_selector">
                                                                <span class="sel_label color-default title_text">
-                                                                   I want to Buy/Hire a
+                                                                   I need a
                                                                </span>
                                                                <span class="sel_label title_text color-primary">
                                                                    <!--Change the text of the selector to the user selection-->
@@ -798,8 +854,7 @@
                                                                         <span class="log_crumb">Select an option</span>
                                                                     </a>
                                                                     <a href="#request_type" class="hidden" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="seperator log_crumb">Skilled Personel</span>
-                                                                        <span class="seperator log_crumb">Full time Job</span>
+                                                                        <span class="seperator log_crumb">Skilled Person for a Job</span>
                                                                     </a>
                                                                </span>
                                                            </div>
@@ -831,7 +886,7 @@
                                                                     <a href="#post_states" data-backdrop="static" data-toggle="modal">
                                                                         <span class="log_crumb">Select location(s)</span>
                                                                     </a>
-                                                                    <a href="#request_type" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
                                                                         <span class="seperator comma_seperated">Lagos</span>
                                                                         <span class="seperator comma_seperated">Abuja</span>
                                                                         <span class="seperator comma_seperated">Rivers</span>
@@ -879,12 +934,11 @@
                                                                </span>
                                                                <span class="sel_label title_text color-primary">
                                                                    <!--Change the text of the selector to the user selection-->
-                                                                    <a href="#request_type" data-backdrop="static" data-toggle="modal">
+                                                                    <a href="#sell_type" data-backdrop="static" data-toggle="modal">
                                                                         <span class="log_crumb">Select an option</span>
                                                                     </a>
-                                                                    <a href="#request_type" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                    <a href="#sell_type" class="hidden" data-backdrop="static" data-toggle="modal">
                                                                         <span class="log_crumb seperator">Product</span>
-                                                                        <span class="log_crumb seperator">Electronics</span>
                                                                     </a>
                                                                </span>
                                                            </div>
@@ -924,7 +978,7 @@
                                                                     <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
                                                                         <span class="log_crumb">Select location(s)</span>
                                                                     </a>
-                                                                    <a href="#request_type" data-backdrop="static" data-toggle="modal">
+                                                                    <a href="#post_states" data-backdrop="static" data-toggle="modal">
                                                                         <span class="comma_seperated seperator">Lagos</span>
                                                                         <span class="comma_seperated seperator">Abuja</span>
                                                                         <span class="comma_seperated seperator">Rivers</span>
@@ -3145,8 +3199,9 @@
                 </div>
             </section>
         </div>
-
     </main>
+    
+    <a href="#0" class="to-top">Top</a>
 
     <!-- Javascript starts here-->
     <script src="js/jquery-2.1.4.js"></script>
