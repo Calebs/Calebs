@@ -868,42 +868,6 @@
     <script src="js/base.min.js"></script>
     <script src="js/site_nav.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function() {
-            //Filter bar logic BEGIN
-            $('.list_tab').click(function(){
-                console.log('clicked');
-                $("body").addClass("open");
-                $(this).children(".filter_menu").slideDown();
-
-            });
-            
-            $(".cancel").click(function(event){
-                event.stopPropagation();
-                $(".filter_menu").slideUp();
-                $("body").removeClass("open");
-            });
-            //Filter bar logic END
-
-        });
-    </script>
-    <script>
-        $(function() {
-            var input_field = $('#post_input'),
-                obj_tray = $('.sub_item_tray'),
-                show_btn = $('.show_tray');
-
-            obj_tray.hide();
-
-            input_field.on("input", function(event) {
-                var text_value = $(event.target).val;
-
-                if (text_value != "" && text_value != null) {
-                    obj_tray.show(400);
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -477,8 +477,8 @@
                                             </div>
                                         </div>
                                     </header>
-                                    <div class="content_inner">
-                                        <div class="panel-group" id="plat_cats">
+                                    <div class="content_inner panel-group" id="accordion">
+                                        <div class="panel-group" id="1">
                                             <article class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <p class="">
@@ -498,7 +498,7 @@
                                                 </div>
                                                 <div class="panel-collapse collapse" id="name">
                                                     <div class="panel-body">
-                                                        <p class="help-block">It's a good idea to use a strong password that you're not using elsewhere.</p>
+                                                        <p class="help-block">What is your name?</p>
                                                         <form action="horizontal-form">
                                                            <fieldset>
                                                                 <div class="form-horizontal">
@@ -521,7 +521,7 @@
                                                 </div>
                                             </article>
                                         </div>
-                                        <div class="panel-group" id="plat_cats">
+                                        <div class="panel-group" id="2">
                                             <article class="panel panel-default">
                                                 <div class="panel-heading">
                                                     <p class="">
@@ -541,14 +541,14 @@
                                                 </div>
                                                 <div class="panel-collapse collapse" id="username">
                                                     <div class="panel-body">
-                                                        <p class="help-block">It's a good idea to use a strong password that you're not using elsewhere.</p>
+                                                        <p class="help-block">Note that changing your Registered email also changes your login ID.</p>
                                                         <form action="horizontal-form">
                                                            <fieldset>
                                                                 <div class="form-horizontal">
                                                                     <div class="form-group col-xs-12">
-                                                                        <label class="control-label col-xs-4">Username </label>
+                                                                        <label class="control-label col-xs-4">Registered Email </label>
                                                                         <div class="col-xs-6">
-                                                                            <input type="text" value="oldUserName" class="form-control">
+                                                                            <input type="email" value="123@saedconnect.com" class="form-control">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -632,7 +632,7 @@
                                                 </div>
                                                 <div class="panel-collapse collapse" id="type">
                                                     <div class="panel-body">
-                                                        <p class="help-block">It's a good idea to use a strong password that you're not using elsewhere.</p>
+                                                        <p class="help-block">Let others know your current status by choosing a member type. You can change you member type at any time.</p>
                                                         <form action="horizontal-form">
                                                            <fieldset>
                                                                 <div class="form-horizontal">
@@ -678,7 +678,7 @@
                                                 </div>
                                                 <div class="panel-collapse collapse" id="handle">
                                                     <div class="panel-body">
-                                                        <p class="help-block">It's a good idea to use a strong password that you're not using elsewhere.</p>
+                                                        <p class="help-block">A handle is Unique to each member, Choose a handle with which you will be identified on SAEDConnect.</p>
                                                         <form action="horizontal-form">
                                                            <fieldset>
                                                                 <div class="form-horizontal">
@@ -706,7 +706,7 @@
                                                 <div class="panel-heading">
                                                     <p class="">
                                                         <a class="accordion-toggle" data-toggle="collapse" 
-                                                        data-parent="#plat_cats" href="#handle">
+                                                        data-parent="#plat_cats" href="#location">
                                                            <div class="col-xs-4">
                                                               <label>Location</label>
                                                             </div>
@@ -721,14 +721,28 @@
                                                 </div>
                                                 <div class="panel-collapse collapse" id="location">
                                                     <div class="panel-body">
-                                                        <p class="help-block">It's a good idea to use a strong password that you're not using elsewhere.</p>
+                                                        <p class="help-block">Where in the world are you.</p>
                                                         <form action="horizontal-form">
                                                            <fieldset>
                                                                 <div class="form-horizontal">
                                                                     <div class="form-group col-xs-12">
-                                                                        <label class="control-label col-xs-4">Handle</label>
+                                                                        <label class="control-label col-xs-4">Country</label>
                                                                         <div class="col-xs-6">
-                                                                            <input type="text" value="location" class="form-control">
+                                                                            <select class="form-control">
+                                                                                <option>Nigeria</option>
+                                                                                <option>United Arab Emirates</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-horizontal">
+                                                                    <div class="form-group col-xs-12">
+                                                                        <label class="control-label col-xs-4">State</label>
+                                                                        <div class="col-xs-6">
+                                                                            <select class="form-control">
+                                                                                <option>Abia</option>
+                                                                                <option>Adamawa</option>
+                                                                            </select>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -779,42 +793,6 @@
     <script src="js/base.min.js"></script>
     <script src="js/site_nav.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function() {
-            //Filter bar logic BEGIN
-            $('.list_tab').click(function(){
-                console.log('clicked');
-                $("body").addClass("open");
-                $(this).children(".filter_menu").slideDown();
-
-            });
-            
-            $(".cancel").click(function(event){
-                event.stopPropagation();
-                $(".filter_menu").slideUp();
-                $("body").removeClass("open");
-            });
-            //Filter bar logic END
-
-        });
-    </script>
-    <script>
-        $(function() {
-            var input_field = $('#post_input'),
-                obj_tray = $('.sub_item_tray'),
-                show_btn = $('.show_tray');
-
-            obj_tray.hide();
-
-            input_field.on("input", function(event) {
-                var text_value = $(event.target).val;
-
-                if (text_value != "" && text_value != null) {
-                    obj_tray.show(400);
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
