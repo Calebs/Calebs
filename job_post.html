@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Stylish foldable table | SAEDConnect</title>
+    <title>Web Designer/Front-End Developer | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
@@ -62,8 +62,24 @@
                                 <input type="url" class="form-control" placeholder="https://url_to_your_media_file.com/file/file_name.fileformat">
                                 <p class="help-block font_bold">Paste your media url here</p>
                             </div>
+                            <!--Only show this pane when a user attach a media item to the comment-->
+                            <div class="media_preview hidden">
+                                <img src="img/banners/tm_card_img.jpg">
+                                <!--For normal video uploads-->
+                                <video controls class="embed-responsive-item hidden" preload="metadata">
+                                    <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                </video>
+
+                                <div class="pane_control">
+                                    <a href="#" class="control_item">
+                                        <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                    </a>
+                                    <a href="#" class="control_item">
+                                        <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -278,8 +294,8 @@
                     </a>
                 </div>
                 <div class="page_nav">
-                    <h2 class="title">Stylish foldable table</h2>
-                    <h4 class="subtitle">Talent Directory</h4>
+                    <h2 class="title">Web Designer/Front-End Developer</h2>
+                    <h4 class="subtitle">Job</h4>
                 </div>
                 <div class="pg_search">
                    <a href="#">
@@ -291,7 +307,6 @@
                 </div>
             </div>
         </header>
-        
         <!--Wrap site content-->
         <div class="timeline_container">
            
@@ -378,7 +393,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="link_nav has_children">
+                            <li class="link_nav active has_children">
                                 <a href="#jobs" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
@@ -406,7 +421,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="link_nav active">
+                            <li class="link_nav ">
                                 <a href="portfolio.html">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
@@ -480,20 +495,20 @@
                                     <div class="card_wrapper">
                                         <div class="post_card_header">
                                             <div class="post_heading">
-                                                <div class="post_author">
+                                               <div class="post_author">
                                                     <div class="user_avartar">
-                                                        <a href="" class="user_avi avi_circle">
+                                                        <a href="" class="user_avi avi_md">
                                                             <img src="./img/user_avis/2.jpg" alt="Adedire Oluwaseun">
                                                         </a>
                                                     </div>
                                                     <div class="user_info">
-                                                        <h3 class="post_title font_bold">Stylish foldable table</h3>
-                                                        <p class="author_meta">
-                                                            <a href="corp_profile_general.html" class="title_text">Sule Zankara</a>
-                                                            <span class="post_time">
-                                                                <time datetime="25-6-2016">Jul 6, 2017</time>
+                                                        <h3 class="post_title font_bold">Web Designer/Front-End Developer</h3>
+                                                        <h4 class="jobsDetails font_regular">
+                                                            <span class="">Adedire Oluwaseun</span>
+                                                            <span class="topCard__bullet timestamp" title="1 month ago">
+                                                                <time datetime="25-6-2017">4 Days ago</time>
                                                             </span>
-                                                        </p>
+                                                        </h4>
                                                     </div>
                                                 </div>
                                                 <div class="dropdown pull-right">
@@ -508,15 +523,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="post_media postCardInner">
+                                        <div class="post_media hidden">
                                             <a href="timeline_comments.html">
-                                                <img src="img/banners/portfolio.jpg" alt="Stylish foldable table ">
+                                                <img src="img/banners/" alt="">
                                             </a>
                                         </div>
                                         <div class="post_card_body">
                                             <div class="post_content">
-                                                
                                                 <p>Here is an image of my most recent carpentry work. It is a collapsible table that can also be detached when moving from one place to another. It is fastened to the wall by 2 metal hinges.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eligendi qui, sunt soluta aliquam magnam cum perferendis eius voluptatum recusandae at itaque maiores ab fugiat. Ut laudantium, perferendis? Repudiandae, sint.</p>
                                                 <div class="sponsor_stat">
                                                     <span class="color_grey">Sponsored</span>
                                                 </div>
@@ -858,7 +873,6 @@
                                                 </div>
                                             </article>
                                         </div>
-                                        
                                     </div>
                                 </article>
 
@@ -872,45 +886,26 @@
                             </section>
 
                             <aside class="split_nav">
-                               
                                 <article class="sidePane">
                                     <div class="paneWrapper">
-                                       <header class="sidePane__header hidden">
-                                            <h4 class="title"><a href="corp_profile_general.html">About Me</a></h4>
+                                        <header class="sidePane__header">
+                                            <h4 class="title"><a href="questions.html">More ICT jobs</a></h4>
                                         </header>
                                         <div class="sidePane__content">
-                                            <div class="profileBox">
-                                                <div class="mediaBox">
-                                                    <div class="mediaImage">
-                                                        <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_md avi_circle">
-                                                            <img src="img/user_avis/2.jpg" alt="Sule Zankara">
-                                                        </a>
-                                                    </div>
-                                                    <div class="mediaInner">
-                                                        <h4 class="cardTitle font_bold">
-                                                            <a href="corp_profile_general.html">Sule Zankara</a>
-                                                            <small class="font_regular color-grey">
-                                                                Corp Member
-                                                            </small>
-                                                        </h4>
-                                                       <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus a quas numquam totam fugiat harum facilis minima tempore rem. Quam, blanditiis, rerum. Nisi, libero? Doloremque ratione.</p>
-                                                       <ul class="social_links">
-                                                            <li class="social_link"><a href="" target="_blank">
-                                                               <i class="fa fa-facebook"></i></a>
-                                                            </li>
-                                                            <li class="social_link"><a href="" target="_blank">
-                                                               <i class="fa fa-twitter"></i></a>
-                                                            </li>
-                                                            <li class="social_link"><a href="" target="_blank">
-                                                               <i class="fa fa-instagram"></i></a>
-                                                            </li>
-                                                            <li class="social_link"><a href="" target="_blank">
-                                                               <i class="fa fa-linkedin"></i></a>
-                                                            </li>
-                                                       </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <ul class="listContents">
+                                                <li class="listItem">
+                                                    <a href="job_post.html">Web Designer / Developer</a>
+                                                </li>
+                                                <li class="listItem">
+                                                    <a href="job_post.html">Senior UX / UI Web Designer</a>
+                                                </li>
+                                                <li class="listItem">
+                                                    <a href="job_post.html">Software Developer (Intermediate)</a>
+                                                </li>
+                                                <li class="listItem">
+                                                    <a href="job_post.html">Web Designer</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </article>
@@ -918,56 +913,25 @@
                                 <article class="sidePane">
                                     <div class="paneWrapper">
                                         <header class="sidePane__header">
-                                            <h4 class="title"><a href="corp_profile_portfolio.html">More from Sule Zankara</a></h4>
+                                            <h4 class="title">More jobs by 
+                                                <a href="corp_profile_general.html">Adedire oluwaseun</a>
+                                            </h4>
                                         </header>
                                         <div class="sidePane__content">
-                                            <div class="listContents thumbContent">
-                                                 <div class="listThumb">
-                                                    <a href="portfolio_post.html" class="postCard__wrapper">
-                                                        <div class="postCardInner">
-                                                            <div class="postCardImage">
-                                                                <img src="./img/banners/partners_banner.jpg">
-                                                            </div>
-                                                            <h4 class="title_text">Out of ideas</h4>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="listThumb">
-                                                    <a href="portfolio_post.html" class="postCard__wrapper">
-                                                        <div class="postCardInner">
-                                                            <div class="postCardImage">
-                                                                <img src="./img/banners/brokeh_pattern.jpg">
-                                                            </div>
-                                                            <h4 class="title_text">CV Writing Masterclass</h4>
-                                                        </div>
-                                                    </a>
-                                                </div>   
-                                                <div class="listThumb">
-                                                    <a href="portfolio_post.html" class="postCard__wrapper">
-                                                        <div class="postCardInner">
-                                                            <div class="postCardImage">
-                                                                <img src="./img/banners/cv_2.jpg">
-                                                            </div>
-                                                            <h4 class="title_text">Portfolio post title here</h4>
-                                                        </div>
-                                                    </a>
-                                                </div>   
-                                                <div class="listThumb">
-                                                    <a href="portfolio_post.html" class="postCard__wrapper">
-                                                        <div class="postCardInner">
-                                                            <div class="postCardImage">
-                                                                <img src="./img/banners/trainers_banner.jpg">
-                                                            </div>
-                                                            <h4 class="title_text">SAEDConnect Homepage Banner</h4>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            <ul class="listContents">
+                                                <li class="listItem">
+                                                    <a href="job_post.html">Software Developer (Intermediate)</a>
+                                                </li>
+                                                <li class="listItem">
+                                                    <a href="job_post.html">UX / UI Web Designer</a>
+                                                </li>
+                                                <li class="listItem">
+                                                    <a href="job_post.html">Web Designer</a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                </article>
-                                
-                                
+                                </article>                             
                             </aside>
                         </div>           
                     </div>

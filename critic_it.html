@@ -79,16 +79,26 @@
                 </div>
                 <nav class="sec-nav ">
                     <ul class="account_info">
+                        <li class="">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_help"></i>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_notification"></i>
+                                <span class="badge badge-secondary">3</span>
+                            </a>
+                        </li>
                         <li class="dropdown accounts">
                             <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
                                 <span class="profile_img">
-                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                <img src="img/user_avis/3.jpg" alt="Jane Doe">
                             </span>
                                 <span class="profile_name">Jane Doe</span>
                                 <i class="fa fa-chevron-circle-down"></i></a>
                             <ul class="dropdown-menu dropdown-right">
-                                <li><a href="corp_profile.html"><i class="fa fa-user"></i>Personal Profile</a></li>
-                                <li><a href="skil_profile.html"><i class="fa fa-gears"></i>Skills Profile</a></li>
+                                <li><a href="corp_profile_general.html"><i class="fa fa-user"></i>My Profile</a></li>
                                 <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
                             </ul>
                         </li>
@@ -122,7 +132,7 @@
                     <span class="navIcon">
                         <i class="icon icon_request"></i>
                     </span>
-                    <span class="link_title">Directories</span>
+                    <span class="link_title">Discover</span>
                 </a>
                 <div class="subNavTray">
                     <h4 class="title">Directories</h4>
@@ -143,25 +153,27 @@
                             </div>
                         </li>
                         <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li><a href="market.html" class="subNavItem">Market</a></li>
+                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
                         <li><a href="#" class="subNavItem">Partner Requests</a></li>
                         <li><a href="#" class="subNavItem">Trainer Requests</a></li>
                     </ul>
                 </div>
             </li>
             <li class="linkNavMain">
-                <a href="questions.html" class="mainTrigger">
+                <a href="corp_profile_general.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_forum"></i>
+                        <i class="icon icon_user"></i>
                     </span>
-                    <span class="link_title">Questions</span>
+                    <span class="link_title">My Profile</span>
                 </a>
             </li>
             <li class="linkNavMain">
-                <a href="market.html" class="mainTrigger">
+                <a href="help_center.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_market"></i>
+                        <i class="icon icon_help"></i>
                     </span>
-                    <span class="link_title">Market</span>
+                    <span class="link_title">Help Center</span>
                 </a>
             </li>
             <li class="linkNavMain">
@@ -199,6 +211,82 @@
         </div>
     </div>
     
+    <div class="floatingWidget catFilter">
+        <div class="widget-wrapper">
+           <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content text-center">
+                <!--<h4 class="title text_caps color-white">Filter Questions By</h4>-->
+                <h4 class="title text_caps color-white">Filter list By</h4>
+                
+                <div class="content-panel color-white">
+                    
+                    <!--Use this to present interest tags/Platform Categories-->
+                    <div class="select_grid">
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Updates</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Small Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Agro Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Career Development</button>
+                        </div>
+                    </div>                       
+                </div>
+                 <!--Contains the sub categories for any selected industry-->
+                <div class="alt_panel">
+                    <!--List the Sub category of the selected category-->
+                    <div class="list_children">
+                       <div class="select_grid select_check">
+                            <div class="my_selector">
+                                <label for="tagSub_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_1">
+                                <span class="c_label">Programming</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_2">
+                                <span class="c_label">Software Design</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_3">
+                                <span class="c_label">Telecommunications</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_4" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_4">
+                                    <span class="c_label">Hardware</span>
+                                </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_5" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_5">
+                                    <span class="c_label">World wide web</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-btn">
+                        <a href="#" class="track_back btn btn-rounded btn-grey">
+                            <i class="fa fa-chevron-left"></i>
+                            Back
+                        </a>
+                        <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <main class="sd-main-content bg-off-white">
         <header class="page_header is_fixed">
             <div class="header_wrapper">
@@ -211,6 +299,9 @@
                     <h2 class="title">Critic It</h2>
                 </div>
                 <div class="pg_search">
+                    <a href="#">
+                        <i class="icon icon_help"></i>
+                    </a>
                     <button class="btn_search trigger_search">
                         <i class="fa fa-search"></i>
                     </button>
@@ -232,76 +323,32 @@
                                         <i class="icon icon_feed"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">My Profile</span>
+                                        <span class="link_title">Feeds</span>
                                     </div>
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="">My Post</a></li>
-                                        <li><a href="">My Questions</a></li>
-                                        <li><a href="">My Discussions</a></li>
-                                        <li><a href="">My Achievements</a></li>
-                                        <li><a href="">My Buyer Requests</a></li>
-                                        <li><a href="">My merchandise</a></li>
-                                        <li><a href="">My Jobs</a></li>
+                                        <li><a href="timeline.html">General Timeline</a></li>
+                                        <li><a href="newsfeeds.html">My Timeline</a></li>
                                     </ul>
                                 </div>
                             </li>   
-                            <li class="link_nav ">
-                                <a href="timeline.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_feed"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">News Feed</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav">
-                                <a href="questions.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_question"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Questions</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="conversations.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_convo"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Discussions</span>
-                                    </div>
-                                </a>
-                            </li>
                             <li class="link_nav has_children">
                                 <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Market</span>
+                                        <span class="link_title">Directories</span>
                                     </div>
                                 </a>
                                 <div class="collapse" id="market">
                                     <ul class="link_nav_children">
-                                        <li><a href="market.html">Market Place</a></li>
-                                        <li><a href="requests.html">Buyer Requests</a></li>
+                                        <li><a href="portfolio.html">Talent Directory</a></li>
+                                        <li><a href="requests.html">Partner Requests</a></li>
+                                        <li><a href="requests.html">Trainer Requests</a></li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="campaigns.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_campaign"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Campaigns</span>
-                                    </div>
-                                </a>
                             </li>
                             <li class="link_nav has_children">
                                 <a href="#jobs" data-toggle="collapse">
@@ -322,62 +369,52 @@
                                 </div>
                             </li>
                             <li class="link_nav ">
-                                <a href="amas.html">
+                                <a href="questions.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_ama"></i>
+                                        <i class="icon icon_forum"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Mentor Sessions</span>
+                                        <span class="link_title">Questions</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="portfolio.html">
+                                <a href="market.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_market"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Discover Talents</span>
+                                        <span class="link_title">Market</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="timeline.html">
+                                <a href="corp_profile_general.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_user"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Biz Opportunity</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav active">
-                                <a href="critic_it.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Critic It</span>
+                                        <span class="link_title">My Profile</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="requests.html">
+                                <a href="helpcenter.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_help"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Suggestions</span>
+                                        <span class="link_title">Help Center</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="requests.html">
+                                <a href="helpcenter.html" class="trigger_filter">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_more"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Complaints</span>
+                                        <span class="link_title">Filter</span>
                                     </div>
                                 </a>
                             </li>
@@ -389,13 +426,11 @@
                         <a href="contact_us.html">Contact Us</a></p>
                         <p>&copy; SAEDConnect 2017</p>
                     </div>
-                    
                 </div>
             </aside>
 
             <section class="layout_content">
                 <div class="box_wrapper bg_default">
-                    
                     <div class="main_wrapper ct_bare">
                         <header class="section_header">
                             <div class="hero_wrapper">

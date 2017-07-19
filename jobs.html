@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Marketplace - Sell your products and services | SAEDConnect</title>
+    <title>Find jobs and gigs | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
@@ -17,10 +17,10 @@
     <!-- Modernizr -->
 </head>
 
-<body class="scroll_check">
+<body class="">
    
     <!--New Question modal-->
-    <div class="modal fade in" id="post_market">
+    <div class="modal fade in" id="post_job">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -34,37 +34,29 @@
                             <div class="comment_inner">
                                 <form action="">
                                     <div class="post_content">
-                                      <div class="form-group">
+                                        <div class="form-group font_bold">
+                                           <label class="sr-only">Title of Post</label>
+                                           <input type="text" class="form-control" placeholder="Enter the job title">
+                                        </div>
+                                        <div class="post_input input_full">
+                                            <textarea class="form-control" rows="5" id="job_input" placeholder="Provide more information about the job"></textarea>
+                                        </div>
+                                        <div class="form-group">
                                            <div class="cust_selector">
                                                <span class="sel_label color-default title_text">
-                                                   I want to sell a
+                                                   Select job type
                                                </span>
                                                <span class="sel_label title_text color-primary">
                                                    <!--Change the text of the selector to the user selection-->
-                                                    <a href="#sell_type" data-backdrop="static" data-toggle="modal">
+                                                    <a href="#job_type" data-backdrop="static" data-toggle="modal">
                                                         <span class="log_crumb">Select an option</span>
                                                     </a>
-                                                    <a href="#sell_type" class="hidden" data-backdrop="static" data-toggle="modal">
-                                                        <span class="log_crumb seperator">Product</span>
+                                                    <a href="#request_type" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                        <span class="seperator log_crumb">Full time</span>
                                                     </a>
                                                </span>
                                            </div>
                                        </div>
-                                       <div class="form-group font_bold">
-                                           <label class="sr-only">Title of Post</label>
-                                           <input type="text" class="form-control" placeholder="The name of what you want to sell">
-                                        </div>
-                                        <div class="post_input input_full">
-                                            <textarea class="form-control" rows="5" id="sell_input" placeholder="Kindly provide information on what you want to sell"></textarea>
-                                        </div>
-                                        <div class="cust_selector">
-                                           <span class="sel_label color-default title_text">
-                                               Amount <span class="bracket_enclosure"><i class="naira"></i></span>
-                                           </span>
-                                           <span class="itle_text color-primary">
-                                               <input type="number" class="cust_input" min="0" placeholder="Amount in Naira">
-                                           </span>
-                                        </div>
                                         <div class="form-group">
                                            <div class="cust_selector">
                                                <span class="sel_label color-default title_text">
@@ -162,42 +154,6 @@
                                 <div class="my_selector">
                                     <label for="sub_cat_1" class="control-wrapper radio-inline">
                                     <input type="radio" class="select_control" checked name="pst_type" id="sub_cat_1">
-                                    <span class="c_label">Sub-category name</span>
-                                </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sub_cat_2" class="control-wrapper radio-inline">
-                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_2">
-                                    <span class="c_label">Sub-category name</span>
-                                </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sub_cat_3" class="control-wrapper radio-inline">
-                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_3">
-                                    <span class="c_label">Sub-category name</span>
-                                </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sub_cat_4" class="control-wrapper radio-inline">
-                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_4">
-                                    <span class="c_label">Sub-category name</span>
-                                </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sub_cat_5" class="control-wrapper radio-inline">
-                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_5">
-                                    <span class="c_label">Sub-category name</span>
-                                </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sub_cat_6" class="control-wrapper radio-inline">
-                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_6">
-                                    <span class="c_label">Sub-category name</span>
-                                </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sub_cat_7" class="control-wrapper radio-inline">
-                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_7">
                                     <span class="c_label">Sub-category name</span>
                                 </label>
                                 </div>
@@ -310,8 +266,8 @@
         </div>
     </div>
     
-    <!--use this to select request types for posts like - Buy/Hire-->
-    <div class="modal fade in" id="sell_type">
+    <!--use this to select job types-->
+    <div class="modal fade in" id="job_type">
         <div class="modal-dialog layered_modal">
             <div class="modal-content">
                 <div class="modal-header">
@@ -319,52 +275,21 @@
                     </button>
                 </div>
                 <div class="modal-body text-center">
-                    <div class="alt_panel">
-                        <h4 class="title">Select available payment Options
-                        </h4>
-                        <!--List the children category of the selected category-->
-                        <div class="list_children">
-                           <div class="select_grid select_radio">
-                                <div class="my_selector">
-                                    <label for="sell_buy" class="control-wrapper radio-inline">
-                                        <input type="radio" class="select_control" name="pst_type" id="sell_buy">
-                                        <span class="c_label">Buy</span>
-                                    </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sell_lease" class="control-wrapper radio-inline">
-                                        <input type="radio" class="select_control" name="pst_type" id="sell_lease">
-                                        <span class="c_label">Lease</span>
-                                    </label>
-                                </div>
-                                <div class="my_selector">
-                                    <label for="sell_stag" class="control-wrapper radio-inline">
-                                        <input type="radio" class="select_control" name="pst_type" id="sell_stag">
-                                        <span class="c_label">Staggered payment</span>
-                                    </label>
-                                </div>
-                           </div>
-                        </div>
-                        <div class="more-btn">
-                            <a href="#" class="track_back btn btn-rounded btn-grey">
-                                <i class="fa fa-chevron-left"></i>
-                                Back
-                            </a>
-                            <button type="button" class="btn btn-rounded btn-primary">Done</button>
-                        </div>
-                    </div>
                     <div class="content-panel">
-                        <h4 class="title">Merchandise Type</h4>
+                        <h4 class="title">Select job type</h4>
                         <div class="select_grid">
                            <!--List top level categories here adding the class "Has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
-                            <div class="category_item has_children">
-                                <button type="submit" class="btn btn-sm cat_button">A Product</button>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Fulltime Job</button>
                             </div>
-                            <div class="category_item has_children">
-                                <button type="submit" class="btn btn-sm cat_button">A Service</button>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Contract Job</button>
                             </div>
-                            <div class="category_item has_children">
-                                <button type="submit" class="btn btn-sm cat_button">A Product/Service Combo</button>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Freelance</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Remote Staff</button>
                             </div>
                         </div>                        
                     </div>
@@ -459,26 +384,16 @@
                 </div>
                 <nav class="sec-nav ">
                     <ul class="account_info">
-                        <li class="">
-                            <a href="#" class="navbar_link_item">
-                                <i class="icon icon_help"></i>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="#" class="navbar_link_item">
-                                <i class="icon icon_notification"></i>
-                                <span class="badge badge-secondary">3</span>
-                            </a>
-                        </li>
                         <li class="dropdown accounts">
                             <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
                                 <span class="profile_img">
-                                <img src="img/user_avis/3.jpg" alt="Jane Doe">
+                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
                             </span>
                                 <span class="profile_name">Jane Doe</span>
                                 <i class="fa fa-chevron-circle-down"></i></a>
                             <ul class="dropdown-menu dropdown-right">
-                                <li><a href="corp_profile_general.html"><i class="fa fa-user"></i>My Profile</a></li>
+                                <li><a href="corp_profile.html"><i class="fa fa-user"></i>Personal Profile</a></li>
+                                <li><a href="skil_profile.html"><i class="fa fa-gears"></i>Skills Profile</a></li>
                                 <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
                             </ul>
                         </li>
@@ -512,7 +427,7 @@
                     <span class="navIcon">
                         <i class="icon icon_request"></i>
                     </span>
-                    <span class="link_title">Discover</span>
+                    <span class="link_title">Directories</span>
                 </a>
                 <div class="subNavTray">
                     <h4 class="title">Directories</h4>
@@ -533,27 +448,25 @@
                             </div>
                         </li>
                         <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
-                        <li><a href="market.html" class="subNavItem">Market</a></li>
-                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
                         <li><a href="#" class="subNavItem">Partner Requests</a></li>
                         <li><a href="#" class="subNavItem">Trainer Requests</a></li>
                     </ul>
                 </div>
             </li>
             <li class="linkNavMain">
-                <a href="corp_profile_general.html" class="mainTrigger">
+                <a href="questions.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_user"></i>
+                        <i class="icon icon_forum"></i>
                     </span>
-                    <span class="link_title">My Profile</span>
+                    <span class="link_title">Questions</span>
                 </a>
             </li>
             <li class="linkNavMain">
-                <a href="help_center.html" class="mainTrigger">
+                <a href="market.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_help"></i>
+                        <i class="icon icon_market"></i>
                     </span>
-                    <span class="link_title">Help Center</span>
+                    <span class="link_title">Market</span>
                 </a>
             </li>
             <li class="linkNavMain">
@@ -578,13 +491,13 @@
                 
                 <div class="content-panel color-white">
                     <div class="select_grid">
-                       <!--Clicking on any of these buttons should show its categories in the list below--> 
-                       <!--Add active to the item the user is filtering by--> 
+                        <!--Clicking on any of these buttons should show its categories in the list below--> 
+                        <!--Add active to the item the user is filtering by--> 
                         <div class="category_item active">
-                            <a href="#" class="btn btn-sm cat_button">Products</a>
+                            <a href="#" class="btn btn-sm cat_button">Employment Type</a>
                         </div>
                         <div class="category_item">
-                            <a href="#" class="btn btn-sm cat_button">Services</a>
+                            <a href="#" class="btn btn-sm cat_button">Industry</a>
                         </div>
                         <div class="category_item">
                             <a href="#" class="btn btn-sm cat_button">Location</a>
@@ -593,27 +506,57 @@
                     
                     <hr>
                     
-                    <!--Use this to present product/Service Categories-->
+                    <!--Use this to present employment type-->
+                    <div class="select_grid hidden">
+                        <div class="category_item">
+                            <button type="button" class="btn btn-sm cat_button">Full Time</button>
+                        </div>
+                        <div class="category_item">
+                            <button type="button" class="btn btn-sm cat_button">Contract Job</button>
+                        </div>
+                        <div class="category_item">
+                            <button type="button" class="btn btn-sm cat_button">Remote Staff</button>
+                        </div>
+                        <div class="category_item">
+                            <button type="button" class="btn btn-sm cat_button">Freelancer</button>
+                        </div>
+                    </div>
+                    
+                    <!--Use this to present Job industries Categories-->
                     <div class="select_grid">
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">ICT</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Manufacturing</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Marketing</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Finance</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Health</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Engineering</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Fashion</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Media</button>
+                        </div>
                         <div class="category_item has_children">
                             <button type="button" class="btn btn-sm cat_button">Design</button>
                         </div>
                         <div class="category_item has_children">
-                            <button type="button" class="btn btn-sm cat_button">Art & Craft</button>
+                            <button type="button" class="btn btn-sm cat_button">Vocational</button>
                         </div>
-                        <div class="category_item has_children">
-                            <button type="button" class="btn btn-sm cat_button">Music</button>
-                        </div>
-                        <div class="category_item has_children">
-                            <button type="button" class="btn btn-sm cat_button">Writing</button>
-                        </div>
-                        <div class="category_item has_children">
-                            <button type="button" class="btn btn-sm cat_button">Multimedia</button>
-                        </div>
-                        <div class="category_item has_children">
-                            <button type="button" class="btn btn-sm cat_button">Speaking</button>
-                        </div>
+                        
                     </div>
+                    
                     <!--Use this to present locations for filter-->
                     <div class="multi_sel_item hidden">
                         <label class="checkbox-inline control_item" for="user_all">
@@ -662,7 +605,7 @@
                         </label>
                     </div>                       
                 </div>
-                <!--This is the pain that renders the sub category for any selected Category-->
+                 <!--Contains the sub categories for any selected industry-->
                 <div class="alt_panel">
                     <!--List the Sub category of the selected category-->
                     <div class="list_children">
@@ -670,25 +613,31 @@
                             <div class="my_selector">
                                 <label for="ent_1" class="control-wrapper">
                                 <input type="checkbox" class="select_control" name="pst_type" id="ent_1">
-                                <span class="c_label">Funding</span>
+                                <span class="c_label">Programming</span>
                             </label>
                             </div>
                             <div class="my_selector">
                                 <label for="ent_2" class="control-wrapper">
                                 <input type="checkbox" class="select_control" name="pst_type" id="ent_2">
-                                <span class="c_label">Getting Started</span>
+                                <span class="c_label">Software Design</span>
                             </label>
                             </div>
                             <div class="my_selector">
                                 <label for="ent_3" class="control-wrapper">
                                 <input type="checkbox" class="select_control" name="pst_type" id="ent_3">
-                                <span class="c_label">Business Plan</span>
+                                <span class="c_label">Telecommunications</span>
                             </label>
                             </div>
                             <div class="my_selector">
                                 <label for="ent_4" class="control-wrapper">
                                     <input type="checkbox" class="select_control" name="pst_type" id="ent_4">
-                                    <span class="c_label">Investment</span>
+                                    <span class="c_label">Hardware</span>
+                                </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="ent_5" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="ent_5">
+                                    <span class="c_label">World wide web</span>
                                 </label>
                             </div>
                         </div>
@@ -712,7 +661,7 @@
             </span>
             <div class="widget_content">
                 <div class="search_panel">
-                    <h4 class="title text_caps color-white">Find talents around you</h4>
+                    <h4 class="title text_caps color-white">Find jobs around you</h4>
                     <form action="">
                         <div class="form-group">
                             <input type="search" class="form-control search_control" placeholder="Search...">
@@ -738,12 +687,9 @@
                     </a>
                 </div>
                 <div class="page_nav">
-                    <h2 class="title">Market place</h2>
+                    <h2 class="title">Jobs</h2>
                 </div>
                 <div class="pg_search">
-                   <a href="#">
-                        <i class="icon icon_help"></i>
-                    </a>
                     <button class="btn_search trigger_search">
                         <i class="fa fa-search"></i>
                     </button>
@@ -759,7 +705,7 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
-                            <li class="link_nav has_children">
+                            <li class="link_nav  has_children">
                                 <a href="#stuffs" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_feed"></i>
@@ -810,7 +756,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="link_nav active open has_children">
+                            <li class="link_nav has_children">
                                 <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
@@ -836,7 +782,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="link_nav has_children">
+                            <li class="link_nav active has_children">
                                 <a href="#jobs" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
@@ -929,15 +875,16 @@
             <section class="layout_content">
                 <div class="box_wrapper bg_default">
                     <div class="main_wrapper ct_bare">
+                       
                         <header class="section_header">
                             <div class="hero_wrapper">
                                 <div class="section_info">
-                                    <h2 class="section-title">Marketplace</h2>
+                                    <h2 class="section-title">Jobs</h2>
                                     <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis eius hic repellat laborum non.</p>
                                 </div>
                                 <div class="section_cto">
-                                    <button type="button" data-target="#post_market" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
-                                        Post to Market
+                                    <button type="button" data-target="#post_job" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                        Post a Job
                                     </button>
                                 </div>
                             </div>
@@ -963,9 +910,10 @@
                                         <div class="def_img">
                                             <img src="img/icons/icon_empty.png" alt="Empty">
                                         </div>
-                                        <p class="subtitle">Be the first to sell in the SAEDConnect marketplace.</p>
-                                        <button type="button" data-target="#post_market" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
-                                            Post to Market
+                                        <h4 class="title">No Job found</h4>
+                                        <p class="subtitle">Do you have a job, or heard of any and would like to share on SAEDConnect?.</p>
+                                        <button type="button" data-target="#post_job" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                            Post a Job
                                         </button>
                                     </div>
                                 </div>
@@ -978,555 +926,435 @@
                             </div>
 
                             <div class="cardList cardTIles">
-                                <article class="cardItem productCard">
+                                <article class="cardItem jobCard">
                                     <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/portfolio.jpg" alt="Foldable Chair">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Product</a>
-                                                    </span>
-                                                    <span class="timestamp">
-                                                        <time>25mins ago</time>
-                                                    </span>
-                                                </div>
-                                                <h4 class="cardTitle">
-                                                    <a href="market_post.html">Foldable wooden table for reading and work</a>
-                                                </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Lukman Haruna
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>12,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="cardItem productCard">
-                                    <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/knitcap.jpg" alt="Foldable Chair">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Product</a>
-                                                    </span>
-                                                    <span class="timestamp">
-                                                        <time>25mins ago</time>
-                                                    </span>
-                                                </div>
-                                                <h4 class="cardTitle">
-                                                    <a href="market_post.html">Hand Knitted winter caps</a>
-                                                </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Areola Olabisi
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="buy_panel ">
-                                            <div class="left_obj">
-                                               <span class="title_text font_bold">
-                                                   <i class="naira"></i>3,000
-                                               </span>
-                                            </div>
-                                            <div class="right_obj">
-                                                <a href="market_post.html" class="btn btn-sm btn-card">
-                                                    Buy
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
                                                 </a>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="cardItem productCard">
-                                    <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/diary-147191_1280.png" alt="Leather Back stripped notebook diary">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Product</a>
-                                                    </span>
-                                                    <span class="timestamp">
-                                                        <time>25mins ago</time>
-                                                    </span>
-                                                </div>
-                                                <h4 class="cardTitle">
-                                                    <a href="market_post.html">Leather back stripped notebook diary</a>
-                                                </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Jerri Adaji
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>6,500
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="cardItem productCard">
-                                    <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/cv_2.jpg" alt="Foldable Chair">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Service</a>
-                                                    </span>
-                                                    <span class="timestamp">
-                                                        <time>25mins ago</time>
-                                                    </span>
-                                                </div>
-                                                <h4 class="cardTitle">
-                                                    <a href="market_post.html">Premium CV writing service</a>
-                                                </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Segun Araromi
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>15,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="cardItem productCard">
-                                    <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/app_muckup.png" alt="Mobile app designs">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Service</a>
-                                                    </span>
-                                                    <span class="timestamp">
-                                                        <time>25mins ago</time>
-                                                    </span>
-                                                </div>
-                                                <h4 class="cardTitle">
-                                                    <a href="market_post.html">Mobile app designs</a>
-                                                </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/2.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Erubu Eyitayo
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>15,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="cardItem productCard">
-                                    <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/image_placeholder.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Service</a>
-                                                    </span>
-                                                    <span class="timestamp">
-                                                        <time>25mins ago</time>
-                                                    </span>
-                                                </div>
-                                                <h4 class="cardTitle">
-                                                    <a href="market_post.html">Music writing and reading training</a>
-                                                </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Ogbo Chidozie
-                                                        </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>15,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="cardItem productCard">
-                                    <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/portfolio.jpg" alt="Foldable Chair">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Product</a>
-                                                    </span>
-                                                    <span class="timestamp">
-                                                        <time>25mins ago</time>
-                                                    </span>
-                                                </div>
-                                                <h4 class="cardTitle">
-                                                    <a href="market_post.html">Foldable wooden table for reading and work</a>
-                                                </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
                                                             Lukman Haruna
                                                         </a>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>12,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="cardItem productCard">
-                                    <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/cv_2.jpg" alt="Foldable Chair">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Service</a>
-                                                    </span>
+                                                    </h4>
                                                     <span class="timestamp">
                                                         <time>25mins ago</time>
                                                     </span>
                                                 </div>
+                                            </div>
+                                            <div class="postInfo">
                                                 <h4 class="cardTitle">
-                                                    <a href="market_post.html">Premium CV writing service</a>
+                                                    <a href="job_post.html">Web Designer / Developer</a>
                                                 </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Segun Araromi
-                                                        </a>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Rivers</a>
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>15,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            <p class="title_text">
+                                                Fulltime
+                                            </p>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="cardItem productCard">
+                                <article class="cardItem jobCard">
                                     <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/app_muckup.png" alt="Mobile app designs">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Service</a>
-                                                    </span>
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
                                                     <span class="timestamp">
                                                         <time>25mins ago</time>
                                                     </span>
                                                 </div>
+                                            </div>
+                                            <div class="postInfo">
                                                 <h4 class="cardTitle">
-                                                    <a href="market_post.html">Mobile app designs</a>
+                                                    <a href="job_post.html">Senior UX / UI Web Designer</a>
                                                 </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/2.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Erubu Eyitayo
-                                                        </a>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>15,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            <p class="title_text">
+                                                Remote Staff
+                                            </p>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="cardItem productCard">
+                                <article class="cardItem jobCard">
                                     <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/knitcap.jpg" alt="Foldable Chair">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Product</a>
-                                                    </span>
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
                                                     <span class="timestamp">
                                                         <time>25mins ago</time>
                                                     </span>
                                                 </div>
+                                            </div>
+                                            <div class="postInfo">
                                                 <h4 class="cardTitle">
-                                                    <a href="market_post.html">Hand Knitted winter caps</a>
+                                                    <a href="job_post.html">Website Design Intern</a>
                                                 </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Areola Olabisi
-                                                        </a>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>3,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            <p class="title_text">
+                                                Contract Staff
+                                            </p>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="cardItem productCard">
+                                <article class="cardItem jobCard">
                                     <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/image_placeholder.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="#">Service</a>
-                                                    </span>
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
                                                     <span class="timestamp">
                                                         <time>25mins ago</time>
                                                     </span>
                                                 </div>
+                                            </div>
+                                            <div class="postInfo">
                                                 <h4 class="cardTitle">
-                                                    <a href="market_post.html">Music writing and reading training</a>
+                                                    <a href="job_post.html">An OCC Jobs in Nigeria : Web Designer/Front-End Developer</a>
                                                 </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Ogbo Chidozie
-                                                        </a>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>15,000
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            <p class="title_text">
+                                                Fulltime
+                                            </p>
                                         </div>
                                     </div>
                                 </article>
-                                <article class="cardItem productCard">
+                                <article class="cardItem jobCard">
                                     <div class="postCard__wrapper">
-                                        <div class="postCardImage">
-                                            <a class="" href="market_post.html">
-                                                <img src="./img/banners/diary-147191_1280.png" alt="Leather Back stripped notebook diary">
-                                            </a>
-                                        </div>
-                                        <div class="postInfo">
-                                            <div class="postCardDetails">
-                                                <div class="post_heading">
-                                                    <span class="comment">
-                                                        <a href="market_post.html">Product</a>
-                                                    </span>
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            SAEDConnect Admin
+                                                        </a>
+                                                    </h4>
                                                     <span class="timestamp">
                                                         <time>25mins ago</time>
                                                     </span>
                                                 </div>
+                                            </div>
+                                            <div class="postInfo">
                                                 <h4 class="cardTitle">
-                                                    <a href="#">Leather back stripped notebook diary</a>
+                                                    <a href="job_post.html">An OCC Jobs in Nigeria : Web Designer/Front-End Developer</a>
                                                 </h4>
-                                                <div class="itemAttribution">
-                                                    <span class="post_author">
-                                                        <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
-                                                            <img src="./img/user_avis/1.jpg"> 
-                                                        </a>
-                                                        <a href="corp_profile_general.html" class="user_info">
-                                                            Jerri Adaji
-                                                        </a>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Nationwide</a>
                                                     </span>
                                                 </div>
                                             </div>
-                                            <div class="buy_panel ">
-                                                <div class="left_obj">
-                                                   <span class="title_text font_bold">
-                                                       <i class="naira"></i>6,500
-                                                   </span>
-                                                </div>
-                                                <div class="right_obj">
-                                                    <a href="market_post.html" class="btn btn-sm btn-card">
-                                                        Buy
-                                                    </a>
+                                            <p class="title_text">
+                                                Fulltime
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
                                                 </div>
                                             </div>
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="job_post.html">Web Designer / Developer</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Rivers</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="title_text">
+                                                Fulltime
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="job_post.html">Senior UX / UI Web Designer</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="title_text">
+                                                Remote Staff
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="job_post.html">Website Design Intern</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="title_text">
+                                                Contract Staff
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="job_post.html">An OCC Jobs in Nigeria : Web Designer/Front-End Developer</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="title_text">
+                                                Fulltime
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            SAEDConnect Admin
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="job_post.html">An OCC Jobs in Nigeria : Web Designer/Front-End Developer</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Nationwide</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="title_text">
+                                                Fulltime
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            SAEDConnect Admin
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="job_post.html">An OCC Jobs in Nigeria : Web Designer/Front-End Developer</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Nationwide</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="title_text">
+                                                Fulltime
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="post_author">
+                                                <a class="user_avi  avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="job_post.html">Web Designer / Developer</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Rivers</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p class="title_text">
+                                                Fulltime
+                                            </p>
                                         </div>
                                     </div>
                                 </article>
@@ -1568,8 +1396,8 @@
         
         /* instantiate markDown editor for portfolio posts */
         var simplemde = new SimpleMDE({ 
-            element: $("#sell_input")[0],
-            placeholder: "Kindly provide information on what you want to sell",
+            element: $("#job_input")[0],
+            placeholder: "Provide more information about the job",
             toolbar: false,
             status: false,
             spellChecker: true,
