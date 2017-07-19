@@ -6,7 +6,6 @@ $(function() {
         side_nav = $(".aside_content"),
         main_content = $(".main_content"),
         filter_bar = $(".content_aside"),
-        help_sidebar = $(".nav_sidebar"),
         filter_trigger = $('.panel_handle'),
         sub_nav = $('.left_nav'),
         resetMenu = function() {
@@ -35,12 +34,10 @@ $(function() {
             side_nav.appendTo(off_canvas_menu);
             sub_nav.appendTo(off_canvas_menu);
             filter_bar.addClass("panel_rendered");
-            help_sidebar.addClass("panel_rendered");
         } else if ((mq == 'tablet') || (mq == 'desktop')) {
             resetMenu();
             detachElements();
             filter_bar.removeClass("panel_rendered");
-            help_sidebar.removeClass("panel_rendered");
             side_nav.insertBefore(main_content);
         }
         resizing = false;
@@ -60,13 +57,6 @@ $(function() {
         }, 25);
     });
 
-    filter_trigger.on('click', function() {
-        setTimeout(function() {
-            help_sidebar.toggleClass("is_opened");
-            filter_bar.toggleClass("is_opened");
-        }, 25);
-    });
-
     /*Verification Alert*/
     var need_verify = $('a.req_verified'),
         dismiss_alert = $('.dismiss_btn'),
@@ -81,25 +71,22 @@ $(function() {
         verify_alert.addClass('is_visible');
     });
 
+    
+    /*Responsive mobile nav script*/
+    var openTray = $('.has_sub > .mainTrigger');
+    
+    openTray.on('click', function(e) {
+        e.preventDefault();
+        event.stopPropagation();
+        $(this).parents(".mobile_nav").find(".linkNavMain").removeClass('showTray');
+        $(this).parents(".linkNavMain").addClass('showTray');
+    });
+
     $(document).on('click', function() {
         if (main_container.hasClass('st-menu-open')) {
             main_container.removeClass('st-menu-open');
-            $('body').toggleClass('overflow-hidden');
             $('.menu-icon').toggleClass('is-clicked');
-        }            
+        }
+        $('body').removeClass('overflow-hidden');
     });
-
-    /*Responsive Timeline Main nav script*/
-    $(function() {
-       var  sidebar = $('.nav_timeline'),
-            sidebarTrigger = $('.more_nav');
-            
-        //open/close primary navigation
-        sidebarTrigger.on('click', function(event){
-            event.preventDefault();
-            $([sidebar]).toggleClass('nav_is_visible');
-            $('body').toggleClass('overflow-hidden');
-        });
-    });
-
 });

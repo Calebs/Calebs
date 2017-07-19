@@ -17,7 +17,7 @@
     <!-- Modernizr -->
 </head>
 
-<body class="scroll_check">
+<body class="">
    
     <div class="modal fade in" id="attach_media">
         <div class="modal-dialog">
@@ -87,24 +87,102 @@
                         
                         <div class="select_grid">
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">General Post </button>
+                                <button type="submit" class="btn btn-sm cat_button">General/Gist</button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Help Request </button>
+                                <button type="submit" class="btn btn-sm cat_button">Tips</button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Message to NYSC SAED</button>
+                                <button type="submit" class="btn btn-sm cat_button">Training</button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Critic It</button>
+                                <button type="submit" class="btn btn-sm cat_button">Program</button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Complaint/Suggestion</button>
+                                <button type="submit" class="btn btn-sm cat_button">Events</button>
                             </div>
                             <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">Business Opportunity</button>
+                                <button type="submit" class="btn btn-sm cat_button">Success Story</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Inspiration</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Business Ideas</button>
                             </div>
                         </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade in" id="post_tags">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                    <h4 class="modal-title">Tag post as</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="content-panel">
+                        <h4 class="title">Select a category</h4>
+                        <div class="select_grid">
+                            <!--List top level categories here adding the class "has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Updates</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Small Business</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Agro Business</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Career Development</button>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="alt_panel">
+                        <h4 class="title">Select sub-category
+                        </h4>
+                        <!--List the children category of the selected category-->
+                        <div class="list_children">
+                           <div class="select_grid select_check">
+                                <div class="my_selector">
+                                    <label for="updates_1" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="updates_1">
+                                        <span class="c_label">NYSC</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="updates_2" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="updates_2">
+                                        <span class="c_label">NYSC SAED</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="updates_3" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="updates_3">
+                                        <span class="c_label">Youth Empowerment</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="updates_4" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="updates_4">
+                                        <span class="c_label">Civic Duty</span>
+                                    </label>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="more-btn">
+                            <a href="#" class="track_back btn btn-rounded btn-grey">
+                                <i class="fa fa-chevron-left"></i>
+                                Back
+                            </a>
+                            <button type="button" class="btn btn-rounded btn-primary">Attach Tag(s)</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -367,6 +445,30 @@
                     </button>
                 </div>
                 <div class="modal-body text-center">
+                    <div class="content-panel">
+                        <div class="select_grid">
+                           <!--List top level categories here adding the class "Has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Product</button>
+                            </div>
+                            
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Skilled Person for a Job</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Volunteer/Partner</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Freelancer</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Private Tutor</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Service</button>
+                            </div>
+                        </div>                        
+                    </div>
                     <div class="alt_panel">
                         <h4 class="title">How do you want this
                             <!--Name of selected category here--> 
@@ -396,30 +498,6 @@
                             </a>
                             <button type="button" class="btn btn-rounded btn-primary">Done</button>
                         </div>
-                    </div>
-                    <div class="content-panel">
-                        <div class="select_grid">
-                           <!--List top level categories here adding the class "Has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
-                            <div class="category_item has_children">
-                                <button type="submit" class="btn btn-sm cat_button">A Product</button>
-                            </div>
-                            
-                            <div class="category_item has_children">
-                                <button type="submit" class="btn btn-sm cat_button">A Skilled Person for a Job</button>
-                            </div>
-                            <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">A Volunteer/Partner</button>
-                            </div>
-                            <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">A Freelancer</button>
-                            </div>
-                            <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">A Private Tutor</button>
-                            </div>
-                            <div class="category_item">
-                                <button type="submit" class="btn btn-sm cat_button">A Service</button>
-                            </div>
-                        </div>                        
                     </div>
                 </div>
             </div>
@@ -488,25 +566,178 @@
             </div>
         </div>
     </div>
+    
+    <div class="floatingWidget searchWidget">
+        <div class="widget-wrapper">
+            <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content">
+                <div class="search_panel">
+                    <h4 class="title text_caps color-white">Search</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="search" class="form-control search_control" placeholder="Search the timeline...">
+                        </div>
+                        <div class="more-btn">
+                            <button class="btn btn-rounded btn-lg btn-secondary">
+                                <i class="fa fa-search"></i>Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="floatingWidget catFilter">
+        <div class="widget-wrapper">
+           <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content text-center">
+                <!--<h4 class="title text_caps color-white">Filter Questions By</h4>-->
+                <h4 class="title text_caps color-white">Filter list By</h4>
+                
+                <div class="content-panel color-white">
+                    <div class="select_grid">
+                        <!--Clicking on any of these buttons should show its categories in the list below--> 
+                        <!--Add active to the item the user is filtering by--> 
+                        <div class="category_item active">
+                            <a href="#" class="btn btn-sm cat_button">Post Type</a>
+                        </div>
+                        <div class="category_item">
+                            <a href="#" class="btn btn-sm cat_button">Interests</a>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <!--Use this to present post type and hide when the user clicks another option-->
+                    <div class="select_grid color-default select_check">
+                        <div class="my_selector">
+                            <label for="pst_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_1">
+                                <span class="c_label">General/Gists</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_2">
+                                <span class="c_label">Tips</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_3">
+                                <span class="c_label">Business Ideas</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_4" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_4">
+                                <span class="c_label">Programs</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_5" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_5">
+                                <span class="c_label">Trainings</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_6" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_6">
+                                <span class="c_label">Events</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_7" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_7">
+                                <span class="c_label">Inspirations</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_8" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_8">
+                                <span class="c_label">Success Stories</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!--Use this to present interest tags/Platform Categories-->
+                    <div class="select_grid hidden">
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Updates</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Small Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Agro Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Career Development</button>
+                        </div>
+                    </div>                       
+                </div>
+                 <!--Contains the sub categories for any selected industry-->
+                <div class="alt_panel">
+                    <!--List the Sub category of the selected category-->
+                    <div class="list_children">
+                       <div class="select_grid select_check">
+                            <div class="my_selector">
+                                <label for="tagSub_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_1">
+                                <span class="c_label">Programming</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_2">
+                                <span class="c_label">Software Design</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_3">
+                                <span class="c_label">Telecommunications</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_4" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_4">
+                                    <span class="c_label">Hardware</span>
+                                </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_5" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_5">
+                                    <span class="c_label">World wide web</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-btn">
+                        <a href="#" class="track_back btn btn-rounded btn-grey">
+                            <i class="fa fa-chevron-left"></i>
+                            Back
+                        </a>
+                        <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header role="banner">
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="logo">
                     <a href="index.html" class="logo-link">
-                        <span class="sr-only">NYSC SAEDConnect</span>
-                        <img src="img/logo_admin.png" alt="NYSC SAEDConnect">
+                        <span class="sr-only">SAEDConnect</span>
+                        <img src="img/logo_admin.png" alt="SAEDConnect">
                     </a>
-                </div>
-                <div class="left_nav">
-                    <ul>
-                        <li class="active">
-                            <a href="timeline.html" class="navbar_link_item">Timeline</a>
-                        </li>
-                        <li class="">
-                            <a href="coming_soon.html" class="navbar_link_item">What else to expect</a>
-                        </li>
-                    </ul>
                 </div>
                 <nav class="sec-nav ">
                     <ul class="account_info">
@@ -517,17 +748,11 @@
                             </span>
                                 <span class="profile_name">Jane Doe</span>
                                 <i class="fa fa-chevron-circle-down"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-right">
+                            <ul class="dropdown-menu dropdown-right">
                                 <li><a href="corp_profile.html"><i class="fa fa-user"></i>Personal Profile</a></li>
                                 <li><a href="skil_profile.html"><i class="fa fa-gears"></i>Skills Profile</a></li>
-                                <li><a href="corp_trainings.html"><i class="fa fa-briefcase"></i>My Briefcase</a></li>
                                 <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
                             </ul>
-                        </li>
-                        <li class="nav_trigger">
-                            <a class="primary-nav-trigger" title="Open Menu" href="#0" data-effect="st-effect-1">
-                                <span class="menu-icon"></span>
-                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -537,57 +762,108 @@
     
     <!--Mobile footer navigation-->
     <div class="mobile_nav">
-        <ul class="nav">
-            <li class="link_nav active">
-                <a href="timeline.html">
+        <ul class="navList">
+            <li class="linkNavMain has_sub active">
+                <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_feed"></i>
                     </span>
                     <span class="link_title">Feeds</span>
                 </a>
+                <div class="subNavTray">
+                    <h4 class="title">Feeds</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="timeline.html" class="subNavItem">General Timeline</a></li>
+                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                    </ul>
+                </div>
             </li>
-            <li class="link_nav">
-                <a href="conversations.html">
-                    <span class="navIcon">
-                        <i class="icon icon_convo"></i>
-                    </span>
-                    <span class="link_title">Conversations</span>
-                </a>
-            </li>
-            <li class="link_nav">
-                <a href="requests.html">
+            <li class="linkNavMain has_sub">
+                <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_request"></i>
+                    </span>
+                    <span class="link_title">Directories</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Directories</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li>
+                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
+                                Jobs
+                            </a>
+                            <div class="collapse" id="jobs">
+                                <ul class="link_nav_children">
+                                    <li><a href="jobs.html">Freelancer</a></li>
+                                    <li><a href="jobs.html">Contract Jobs</a></li>
+                                    <li><a href="jobs.html">Full Jobs</a></li>
+                                    <li><a href="jobs.html">Volunteer</a></li>
+                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li><a href="#" class="subNavItem">Partner Requests</a></li>
+                        <li><a href="#" class="subNavItem">Trainer Requests</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain">
+                <a href="questions.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_forum"></i>
+                    </span>
+                    <span class="link_title">Questions</span>
+                </a>
+                <!--<div class="subNavTray">
+                    <h4 class="title">Forums</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
+                        <li><a href="conversations.html" class="subNavItem">Discussions</a></li>
+                        <li><a href="feedback.html" class="subNavItem">Feedback Requests</a></li>
+                    </ul>
+                </div>-->
+            </li>
+            <li class="linkNavMain">
+                <a href="market.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_market"></i>
                     </span>
                     <span class="link_title">Market</span>
                 </a>
             </li>
-            <li class="link_nav">
-                <a href="questions.html">
-                    <span class="navIcon">
-                        <i class="icon icon_question"></i>
-                    </span>
-                    <span class="link_title">Questions</span>
-                </a>
-            </li>
-            <li class="link_nav">
-                <a href="#more" class="more_nav">
+            <li class="linkNavMain">
+                <a href="#more" class="trigger_filter mainTrigger">
                     <span class="navIcon color-secondary">
-                        <i class="fa fa-th"></i>
+                        <i class="icon icon_more"></i>
                     </span>
-                    <span class="link_title">More</span>
+                    <span class="link_title">Filter</span>
                 </a>
             </li>
         </ul>
     </div>
     
     <main class="sd-main-content bg-off-white">
-
-        <!--Insert offcanvas nav here-->
-        <nav class="st-menu">
-            <h4 class="sr-only">Main Menu</h4>
-        </nav>
-
+        <header class="page_header is_fixed">
+            <div class="header_wrapper">
+                <div class="back_arrow">
+                    <a href="#" class="go_back">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="page_nav">
+                    <h2 class="title">My Timeline</h2>
+                </div>
+                <div class="pg_search">
+                    <button class="btn_search trigger_search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
         <!--Wrap site content-->
         <div class="timeline_container">
            
@@ -810,30 +1086,48 @@
                                                                 </a>
                                                             </div>
                                                         </div>
+                                                        <div class="form-group">
+                                                           <div class="cust_selector">
+                                                               <span class="sel_label color-default title_text">
+                                                                   Post to
+                                                               </span>
+                                                               <span class="sel_label title_text color-primary">
+                                                                   <!--Change the text of the selector to the user selection-->
+                                                                    <a href="#post_states" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="log_crumb">Select location(s)</span>
+                                                                    </a>
+                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="seperator comma_seperated">Lagos</span>
+                                                                        <span class="seperator comma_seperated">Abuja</span>
+                                                                        <span class="seperator comma_seperated">Rivers</span>
+                                                                    </a>
+                                                               </span>
+                                                           </div>
+                                                       </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview hidden">
-                                                            <img src="img/banners/tm_card_img.jpg">
-                                                            <!--For normal video uploads-->
-                                                            <video controls class="embed-responsive-item hidden" preload="metadata">
-                                                                <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
-                                                            </video>
-                                                            <!--For video embeds-->
-                                                            <!--<div class="embed-responsive hidden embed-responsive-16by9">
-                                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
-                                                            </div>-->
-
-                                                            <div class="pane_control">
-                                                                <a href="#" class="control_item">
-                                                                    <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
-                                                                </a>
-                                                                <a href="#" class="control_item">
-                                                                    <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
-                                                                </a>
-                                                            </div>
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                        <img src="img/banners/tm_card_img.jpg" class="">
+                                                        <!--For normal video uploads-->
+                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                        </video>
+                                                        <!--For video embeds-->
+                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                                        </div>-->
+                                                        <div class="pane_control">
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                            </a>
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                            </a>
                                                         </div>
+                                                    </div>
                                                 </form>
                                                 <div class="post_card_footer clearfix">
+                                                    <button type="button" data-target="#post_tags" data-toggle="modal" class="btn btn-sm btn-grey-light btn-rounded">Tag as..</button>
                                                     <div class="post_actions pull-right">
                                                         <button type="button" class="btn collapse_widget btn-card">Cancel</button>
                                                         <button type="button" data-target="#post_category" data-toggle="modal" class="btn btn-primary">Post</button>
@@ -896,7 +1190,7 @@
                                                        </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview">
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9">
                                                         <img src="img/banners/tm_card_img.jpg" class="hidden">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -996,7 +1290,7 @@
                                                        </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview hidden">
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
                                                         <img src="img/banners/tm_card_img.jpg">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -1051,7 +1345,7 @@
                                                         </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview hidden">
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
                                                         <img src="img/banners/tm_card_img.jpg">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -1102,7 +1396,7 @@
                                                         </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview hidden">
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
                                                         <img src="img/banners/tm_card_img.jpg">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -1188,7 +1482,7 @@
                                                 </span>
                                             </p>
                                         </div>
-                                        <div class="post_media">
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
                                             <a href="timeline_comments.html">
                                                 <img src="img/banners/article_image.jpg" alt="">
                                             </a>
@@ -1363,7 +1657,7 @@
                                                 </span>
                                             </p>
                                         </div>
-                                        <div class="post_media hidden">
+                                        <div class="post_media embed-responsive embed-responsive-16by9 hidden">
                                             <a href="timeline_comments.html">
                                                 <img src="img/banners/Shoemaker.jpg" alt="">
                                             </a>
@@ -1546,7 +1840,7 @@
                                                 </span>
                                             </p>
                                         </div>
-                                        <div class="post_media">
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
                                             <a href="#sponsor_url">
                                                 <img src="img/banners/training_banner.jpg" alt="">
                                             </a>
@@ -1726,7 +2020,7 @@
                                                 </span>
                                             </p>
                                         </div>
-                                        <div class="post_media">
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
                                             <a href="timeline_comments.html">
                                                 <img src="img/banners/cv_2.jpg" alt="">
                                             </a>
@@ -2403,7 +2697,7 @@
                                                 </span>
                                             </p>
                                         </div>
-                                        <div class="post_media">
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
                                             <a href="#sponsor_url">
                                                 <img src="img/banners/partners_banner.jpg" alt="">
                                             </a>
@@ -2578,7 +2872,7 @@
                                                 </span>
                                             </p>
                                         </div>
-                                        <div class="post_media">
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
                                             <a href="timeline_comments.html">
                                                 <img src="img/banners/Shoemaker.jpg" alt="">
                                             </a>
@@ -2758,7 +3052,7 @@
                                                 </span>
                                             </p>
                                         </div>
-                                        <div class="post_media">
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
                                             <a href="timeline_comments.html">
                                                 <img src="img/banners/Shoemaker.jpg" alt="">
                                             </a>
@@ -3146,7 +3440,7 @@
                                                 </span>
                                             </p>
                                         </div>
-                                        <div class="post_media">
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
                                             <a href="timeline_comments.html">
                                                 <img src="img/banners/portfolio.jpg" alt="">
                                             </a>

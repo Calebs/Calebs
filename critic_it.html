@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Discover Questions | SAEDConnect</title>
+    <title>Critic It | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
@@ -69,12 +69,12 @@
     </div>
     
     <header role="banner">
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-default" role="navigation">
             <div class="container">
                 <div class="logo">
                     <a href="index.html" class="logo-link">
-                        <span class="sr-only">NYSC SAEDConnect</span>
-                        <img src="img/logo_admin.png" alt="NYSC SAEDConnect">
+                        <span class="sr-only">SAEDConnect</span>
+                        <img src="img/logo_admin.png" alt="SAEDConnect">
                     </a>
                 </div>
                 <nav class="sec-nav ">
@@ -86,17 +86,11 @@
                             </span>
                                 <span class="profile_name">Jane Doe</span>
                                 <i class="fa fa-chevron-circle-down"></i></a>
-                            <ul class="dropdown-menu dropdown-menu-right">
+                            <ul class="dropdown-menu dropdown-right">
                                 <li><a href="corp_profile.html"><i class="fa fa-user"></i>Personal Profile</a></li>
                                 <li><a href="skil_profile.html"><i class="fa fa-gears"></i>Skills Profile</a></li>
-                                <li><a href="corp_trainings.html"><i class="fa fa-briefcase"></i>My Briefcase</a></li>
                                 <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
                             </ul>
-                        </li>
-                        <li class="nav_trigger">
-                            <a class="primary-nav-trigger" title="Open Menu" href="#0" data-effect="st-effect-1">
-                                <span class="menu-icon"></span>
-                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -106,45 +100,76 @@
     
     <!--Mobile footer navigation-->
     <div class="mobile_nav">
-        <ul class="nav">
-            <li class="link_nav">
-                <a href="timeline.html">
+        <ul class="navList">
+            <li class="linkNavMain active has_sub ">
+                <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_feed"></i>
                     </span>
                     <span class="link_title">Feeds</span>
                 </a>
+                <div class="subNavTray">
+                    <h4 class="title">Feeds</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="timeline.html" class="subNavItem">General Timeline</a></li>
+                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                    </ul>
+                </div>
             </li>
-            <li class="link_nav">
-                <a href="conversations.html">
-                    <span class="navIcon">
-                        <i class="icon icon_convo"></i>
-                    </span>
-                    <span class="link_title">Conversations</span>
-                </a>
-            </li>
-            <li class="link_nav">
-                <a href="requests.html">
+            <li class="linkNavMain has_sub">
+                <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_request"></i>
                     </span>
-                    <span class="link_title">Market</span>
+                    <span class="link_title">Directories</span>
                 </a>
+                <div class="subNavTray">
+                    <h4 class="title">Directories</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li>
+                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
+                                Jobs
+                            </a>
+                            <div class="collapse" id="jobs">
+                                <ul class="link_nav_children">
+                                    <li><a href="jobs.html">Freelancer</a></li>
+                                    <li><a href="jobs.html">Contract Jobs</a></li>
+                                    <li><a href="jobs.html">Full Jobs</a></li>
+                                    <li><a href="jobs.html">Volunteer</a></li>
+                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li><a href="#" class="subNavItem">Partner Requests</a></li>
+                        <li><a href="#" class="subNavItem">Trainer Requests</a></li>
+                    </ul>
+                </div>
             </li>
-            <li class="link_nav">
-                <a href="questions.html">
+            <li class="linkNavMain">
+                <a href="questions.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_question"></i>
+                        <i class="icon icon_forum"></i>
                     </span>
                     <span class="link_title">Questions</span>
                 </a>
             </li>
-            <li class="link_nav">
-                <a href="#more" class="more_nav">
-                    <span class="navIcon color-secondary">
-                        <i class="fa fa-th"></i>
+            <li class="linkNavMain">
+                <a href="market.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_market"></i>
                     </span>
-                    <span class="link_title">More</span>
+                    <span class="link_title">Market</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="#more" class="trigger_filter mainTrigger">
+                    <span class="navIcon color-secondary">
+                        <i class="icon icon_more"></i>
+                    </span>
+                    <span class="link_title">Filter</span>
                 </a>
             </li>
         </ul>
@@ -175,12 +200,23 @@
     </div>
     
     <main class="sd-main-content bg-off-white">
-
-        <!--Insert offcanvas nav here-->
-        <nav class="st-menu">
-            <h4 class="sr-only">Main Menu</h4>
-        </nav>
-
+        <header class="page_header is_fixed">
+            <div class="header_wrapper">
+                <div class="back_arrow">
+                    <a href="#" class="go_back">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="page_nav">
+                    <h2 class="title">Critic It</h2>
+                </div>
+                <div class="pg_search">
+                    <button class="btn_search trigger_search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
         <!--Wrap site content-->
         <div class="timeline_container">
            

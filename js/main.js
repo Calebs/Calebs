@@ -29,20 +29,6 @@ Changes the name of the upload button to the name of the file selected for uploa
             .on('blur', function() { $input.removeClass('has-focus'); });
     });
 
-    /*Explicit Close for Dropdown*/
-    $('.dropdown.implicit_close').on({
-        "shown.bs.dropdown": function() { this.closable = false; },
-        // "click": function() { this.closable = true; },
-        "hide.bs.dropdown": function() { return this.closable; }
-    });
-
-    var close_btn = $(".dropdown.implicit_close .abort");
-    var mother_container = $(".dropdown.implicit_close");
-
-    close_btn.on('click', function() {
-        mother_container.removeClass("open");
-    });
-
     var back_btn = $(".goBack");
 
     back_btn.on('click', function() {
@@ -122,24 +108,28 @@ Changes the name of the upload button to the name of the file selected for uploa
 
     /*Widget toggling*/
 
-    var filter_trigger = $('#trigger_filter'),
-        search_trigger = $('#trigger_search'),
+    var filter_trigger = $('.trigger_filter'),
+        search_trigger = $('.trigger_search'),
         filter_widget = $('.catFilter'),
         close_btn = $('.close_dialog'),
         search_widget = $('.searchWidget');
 
     filter_trigger.on('click', function(e) {
         e.preventDefault();
+        $('body').addClass('overflow-hidden');
         filter_widget.addClass('show_widget');
     });
 
     search_trigger.on('click', function(e) {
         e.preventDefault();
+        $('body').addClass('overflow-hidden');
         search_widget.addClass('show_widget');
     });
 
     close_btn.on("click", function() {
         $(this).parents('.floatingWidget').removeClass("show_widget");
+        $(this).parents(".linkNavMain").removeClass('showTray');
+        $('body').removeClass('overflow-hidden');
         mother_panel.removeClass("is_opened");
     });
 
