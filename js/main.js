@@ -112,6 +112,8 @@ Changes the name of the upload button to the name of the file selected for uploa
         search_trigger = $('.trigger_search'),
         filter_widget = $('.catFilter'),
         close_btn = $('.close_dialog'),
+        youth_signup = $('.youth_form'),
+        org_signup = $('.org_form'),
         search_widget = $('.searchWidget');
 
     filter_trigger.on('click', function(e) {
@@ -126,9 +128,18 @@ Changes the name of the upload button to the name of the file selected for uploa
         search_widget.addClass('show_widget');
     });
 
+    $('.trigger_yut').on('click', function() {
+        youth_signup.addClass("show_widget")
+    });
+
+    $('.trigger_org').on('click', function() {
+        org_signup.addClass("show_widget")
+    });
+
     close_btn.on("click", function() {
         $(this).parents('.floatingWidget').removeClass("show_widget");
         $(this).parents(".linkNavMain").removeClass('showTray');
+        $(this).parents(".hero_widget").removeClass('show_widget');
         $('body').removeClass('overflow-hidden');
         mother_panel.removeClass("is_opened");
     });
