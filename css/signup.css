@@ -1426,32 +1426,33 @@ a:link, button {
 .row_flex {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 -7.5px;
+  *zoom: 1;
+}
+/* line 40, ../sass/partials/_mixins.scss */
+.row_flex:before, .row_flex:after {
+  content: "";
+  display: table;
+}
+/* line 47, ../sass/partials/_mixins.scss */
+.row_flex:after {
+  clear: both;
 }
 
-/* line 122, ../sass/partials/_signup.scss */
+/* line 123, ../sass/partials/_signup.scss */
 .form-group.input_halfed {
   width: 50%;
   display: inline-block;
   float: left;
   box-sizing: border-box;
+  padding: 0 7.5px;
 }
-/* line 128, ../sass/partials/_signup.scss */
-.form-group.input_halfed:first-of-type {
-  padding-right: 7.5px;
-  padding-left: 0;
-}
-/* line 133, ../sass/partials/_signup.scss */
-.form-group.input_halfed:last-of-type {
-  padding-left: 7.5px;
-  padding-right: 0;
-}
-/* line 139, ../sass/partials/_signup.scss */
+/* line 131, ../sass/partials/_signup.scss */
 .row_flex .form-group {
   margin: 0 0 15px;
 }
 
-/* line 144, ../sass/partials/_signup.scss */
+/* line 136, ../sass/partials/_signup.scss */
 .more-btn {
   display: block;
   position: relative;
@@ -1468,19 +1469,19 @@ a:link, button {
 .more-btn:after {
   clear: both;
 }
-/* line 151, ../sass/partials/_signup.scss */
+/* line 143, ../sass/partials/_signup.scss */
 .more-btn .btn {
   max-width: 200px;
   display: inline-block;
 }
-/* line 156, ../sass/partials/_signup.scss */
+/* line 148, ../sass/partials/_signup.scss */
 .more-btn .btn-link {
   font-size: 1.1667em;
   font-family: "proxima_nova_bold", Open Sans, sans-serif;
   padding-right: 10px;
 }
 
-/* line 163, ../sass/partials/_signup.scss */
+/* line 155, ../sass/partials/_signup.scss */
 .userTabs {
   display: block;
   clear: both;
@@ -1492,13 +1493,13 @@ a:link, button {
   z-index: 1000;
 }
 
-/* line 174, ../sass/partials/_signup.scss */
+/* line 166, ../sass/partials/_signup.scss */
 .tabLink {
   display: flex;
   background-color: #FFFFFF;
 }
 
-/* line 179, ../sass/partials/_signup.scss */
+/* line 171, ../sass/partials/_signup.scss */
 .tabLinkitem {
   flex: 1;
   height: 50px;
@@ -1508,58 +1509,58 @@ a:link, button {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 179, ../sass/partials/_signup.scss */
+  /* line 171, ../sass/partials/_signup.scss */
   .tabLinkitem {
     text-align: left;
   }
 }
-/* line 190, ../sass/partials/_signup.scss */
+/* line 182, ../sass/partials/_signup.scss */
 .tabLinkitem.active {
   color: #FFFFFF;
 }
-/* line 194, ../sass/partials/_signup.scss */
+/* line 186, ../sass/partials/_signup.scss */
 .tabLinkitem > a {
   display: block;
   height: 100%;
   padding: 0 30px;
 }
 
-/* line 202, ../sass/partials/_signup.scss */
+/* line 194, ../sass/partials/_signup.scss */
 .tab_youth.active {
   background-color: #bf9000;
 }
 
-/* line 208, ../sass/partials/_signup.scss */
+/* line 200, ../sass/partials/_signup.scss */
 .tab_org.active {
   background-color: #128A4B;
 }
 
-/* line 213, ../sass/partials/_signup.scss */
+/* line 205, ../sass/partials/_signup.scss */
 .linkIcon {
   width: 25px;
   margin: 0 10px;
 }
 
-/* line 218, ../sass/partials/_signup.scss */
+/* line 210, ../sass/partials/_signup.scss */
 .linkLabel {
   font-size: 14px;
   font-family: "proxima_nova_bold", Open Sans, sans-serif;
   display: none;
 }
 
-/* line 224, ../sass/partials/_signup.scss */
+/* line 216, ../sass/partials/_signup.scss */
 .linkIcon, .linkLabel {
   vertical-align: middle;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 224, ../sass/partials/_signup.scss */
+  /* line 216, ../sass/partials/_signup.scss */
   .linkIcon, .linkLabel {
     display: inline-block;
   }
 }
 
-/* line 232, ../sass/partials/_signup.scss */
+/* line 224, ../sass/partials/_signup.scss */
 .user_hero {
   background-size: cover;
   background-repeat: no-repeat;
@@ -1576,7 +1577,7 @@ a:link, button {
   overflow: hidden;
   background-image: url(../img/banners/success_banner.jpg);
 }
-/* line 246, ../sass/partials/_signup.scss */
+/* line 238, ../sass/partials/_signup.scss */
 .user_hero::before {
   content: "";
   display: block;
@@ -1591,25 +1592,25 @@ a:link, button {
   background-color: #424242;
 }
 
-/* line 259, ../sass/partials/_signup.scss */
+/* line 251, ../sass/partials/_signup.scss */
 .user_youth {
   background-image: url(../img/banners/success_banner.jpg);
 }
-/* line 262, ../sass/partials/_signup.scss */
+/* line 254, ../sass/partials/_signup.scss */
 .user_youth::before {
   background-color: #bf9000;
 }
 
-/* line 267, ../sass/partials/_signup.scss */
+/* line 259, ../sass/partials/_signup.scss */
 .user_org {
   background-image: url(../img/banners/org_banner.jpg);
 }
-/* line 269, ../sass/partials/_signup.scss */
+/* line 261, ../sass/partials/_signup.scss */
 .user_org::before {
   background-color: #128A4B;
 }
 
-/* line 274, ../sass/partials/_signup.scss */
+/* line 266, ../sass/partials/_signup.scss */
 .hero_wrapper {
   position: absolute;
   top: 0;
@@ -1619,65 +1620,65 @@ a:link, button {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 274, ../sass/partials/_signup.scss */
+  /* line 266, ../sass/partials/_signup.scss */
   .hero_wrapper {
     display: flex;
   }
 }
 
-/* line 285, ../sass/partials/_signup.scss */
+/* line 277, ../sass/partials/_signup.scss */
 .hero_content, .hero_widget {
   height: 100%;
   overflow: auto;
 }
 
-/* line 290, ../sass/partials/_signup.scss */
+/* line 282, ../sass/partials/_signup.scss */
 .hero_content {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 290, ../sass/partials/_signup.scss */
+  /* line 282, ../sass/partials/_signup.scss */
   .hero_content {
     width: 70%;
   }
 }
 
-/* line 296, ../sass/partials/_signup.scss */
+/* line 288, ../sass/partials/_signup.scss */
 .content_wrapper {
   padding: 20px 15px 80px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 296, ../sass/partials/_signup.scss */
+  /* line 288, ../sass/partials/_signup.scss */
   .content_wrapper {
     padding: 50px 40px;
   }
 }
 
-/* line 304, ../sass/partials/_signup.scss */
+/* line 296, ../sass/partials/_signup.scss */
 .hero_banner {
   margin-bottom: 15px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 304, ../sass/partials/_signup.scss */
+  /* line 296, ../sass/partials/_signup.scss */
   .hero_banner {
     margin-bottom: 40px;
   }
 }
 
-/* line 312, ../sass/partials/_signup.scss */
+/* line 304, ../sass/partials/_signup.scss */
 .logoLink {
   display: block;
   width: 150px;
   /* Tablets and phablets */
 }
-/* line 316, ../sass/partials/_signup.scss */
+/* line 308, ../sass/partials/_signup.scss */
 .logoLink img {
   width: 100%;
 }
 @media only screen and (min-width: 800px) {
-  /* line 312, ../sass/partials/_signup.scss */
+  /* line 304, ../sass/partials/_signup.scss */
   .logoLink {
     display: inline-block;
     margin-right: 5px;
@@ -1685,7 +1686,7 @@ a:link, button {
   }
 }
 
-/* line 327, ../sass/partials/_signup.scss */
+/* line 319, ../sass/partials/_signup.scss */
 .support_attrib {
   max-width: 200px;
   position: relative;
@@ -1693,14 +1694,14 @@ a:link, button {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 327, ../sass/partials/_signup.scss */
+  /* line 319, ../sass/partials/_signup.scss */
   .support_attrib {
     display: inline-block;
     vertical-align: middle;
   }
 }
 
-/* line 338, ../sass/partials/_signup.scss */
+/* line 330, ../sass/partials/_signup.scss */
 .attr_label {
   line-height: 1.2;
   display: block;
@@ -1710,14 +1711,14 @@ a:link, button {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 338, ../sass/partials/_signup.scss */
+  /* line 330, ../sass/partials/_signup.scss */
   .attr_label {
     padding-left: 10px;
     border-left: 1px solid #E9EBEE;
   }
 }
 
-/* line 351, ../sass/partials/_signup.scss */
+/* line 343, ../sass/partials/_signup.scss */
 .hero_title {
   font-size: 16px;
   line-height: 1.15;
@@ -1725,44 +1726,44 @@ a:link, button {
   /* Mobile devices */
   /* Tablets and phablets */
 }
-/* line 356, ../sass/partials/_signup.scss */
+/* line 348, ../sass/partials/_signup.scss */
 .hero_title > span {
   display: inline-block;
   padding: 5px;
   margin: 3px 0;
 }
 @media only screen and (min-width: 480px) {
-  /* line 351, ../sass/partials/_signup.scss */
+  /* line 343, ../sass/partials/_signup.scss */
   .hero_title {
     font-size: 21px;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 351, ../sass/partials/_signup.scss */
+  /* line 343, ../sass/partials/_signup.scss */
   .hero_title {
     font-size: 32px;
   }
 }
 
-/* line 371, ../sass/partials/_signup.scss */
+/* line 363, ../sass/partials/_signup.scss */
 .userFeatureList {
   display: flex;
   flex-wrap: wrap;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 371, ../sass/partials/_signup.scss */
+  /* line 363, ../sass/partials/_signup.scss */
   .userFeatureList {
     margin: 0 -10px;
     padding: 20px 0;
   }
 }
 
-/* line 381, ../sass/partials/_signup.scss */
+/* line 373, ../sass/partials/_signup.scss */
 .list_bullet {
   vertical-align: middle;
 }
-/* line 384, ../sass/partials/_signup.scss */
+/* line 376, ../sass/partials/_signup.scss */
 .list_bullet::before {
   content: "";
   width: 16px;
@@ -1774,60 +1775,60 @@ a:link, button {
   background-image: url(../img/app_icon/bullet.png);
 }
 
-/* line 396, ../sass/partials/_signup.scss */
+/* line 388, ../sass/partials/_signup.scss */
 .ftListItem {
   margin-bottom: 10px;
   /* Mobile devices */
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 480px) {
-  /* line 396, ../sass/partials/_signup.scss */
+  /* line 388, ../sass/partials/_signup.scss */
   .ftListItem {
     padding: 0 10px;
     width: 50%;
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 396, ../sass/partials/_signup.scss */
+  /* line 388, ../sass/partials/_signup.scss */
   .ftListItem {
     width: 33.33%;
     margin-bottom: 30px;
   }
 }
 
-/* line 410, ../sass/partials/_signup.scss */
+/* line 402, ../sass/partials/_signup.scss */
 .listLabel, .list_bullet {
   display: table-cell;
   vertical-align: top;
 }
 
-/* line 415, ../sass/partials/_signup.scss */
+/* line 407, ../sass/partials/_signup.scss */
 .listLabel {
   padding-left: 5px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 415, ../sass/partials/_signup.scss */
+  /* line 407, ../sass/partials/_signup.scss */
   .listLabel {
     max-width: 200px;
     font-size: 13px;
   }
 }
 
-/* line 424, ../sass/partials/_signup.scss */
+/* line 416, ../sass/partials/_signup.scss */
 .user_cto {
   text-align: center;
   margin-top: 10px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 424, ../sass/partials/_signup.scss */
+  /* line 416, ../sass/partials/_signup.scss */
   .user_cto {
     display: none;
   }
 }
 
-/* line 433, ../sass/partials/_signup.scss */
+/* line 425, ../sass/partials/_signup.scss */
 .hero_widget {
   position: fixed;
   top: 50px;
@@ -1855,7 +1856,7 @@ a:link, button {
   transform: translateY(-100px);
   /* Tablets and phablets */
 }
-/* line 442, ../sass/partials/_signup.scss */
+/* line 434, ../sass/partials/_signup.scss */
 .hero_widget.show_widget {
   visibility: visible;
   opacity: 1;
@@ -1869,7 +1870,7 @@ a:link, button {
   transition: all 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
 }
 @media only screen and (min-width: 800px) {
-  /* line 433, ../sass/partials/_signup.scss */
+  /* line 425, ../sass/partials/_signup.scss */
   .hero_widget {
     width: 30%;
     position: static;
@@ -1886,7 +1887,7 @@ a:link, button {
   }
 }
 
-/* line 453, ../sass/partials/_signup.scss */
+/* line 445, ../sass/partials/_signup.scss */
 .widget_wrapper {
   padding: 40px 15px 70px;
   position: relative;
@@ -1898,21 +1899,21 @@ a:link, button {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 453, ../sass/partials/_signup.scss */
+  /* line 445, ../sass/partials/_signup.scss */
   .widget_wrapper {
     padding: 20px 40px;
     height: 100%;
   }
 }
 
-/* line 468, ../sass/partials/_signup.scss */
+/* line 460, ../sass/partials/_signup.scss */
 .widget_nav {
   display: flex;
   justify-content: space-around;
   margin: 10px -10px;
 }
 
-/* line 474, ../sass/partials/_signup.scss */
+/* line 466, ../sass/partials/_signup.scss */
 .widgetNavLink {
   font-size: 14px;
   font-weight: 500;
@@ -1921,45 +1922,45 @@ a:link, button {
   border-radius: 4px;
   color: #FFFFFF;
 }
-/* line 482, ../sass/partials/_signup.scss */
+/* line 474, ../sass/partials/_signup.scss */
 .user_youth .widgetNavLink {
   background-color: #bf9000;
 }
-/* line 486, ../sass/partials/_signup.scss */
+/* line 478, ../sass/partials/_signup.scss */
 .user_org .widgetNavLink {
   background-color: #128A4B;
 }
-/* line 490, ../sass/partials/_signup.scss */
+/* line 482, ../sass/partials/_signup.scss */
 .active > .widgetNavLink {
   color: #353535;
   background-color: transparent;
 }
 
-/* line 496, ../sass/partials/_signup.scss */
+/* line 488, ../sass/partials/_signup.scss */
 .widget_header {
   padding: 15px 0;
   margin-bottom: 10px;
 }
 
-/* line 501, ../sass/partials/_signup.scss */
+/* line 493, ../sass/partials/_signup.scss */
 .form_icon {
   width: 80px;
   padding: 10px;
   margin: auto;
 }
 
-/* line 507, ../sass/partials/_signup.scss */
+/* line 499, ../sass/partials/_signup.scss */
 .wdTitle {
   font-size: 16px;
   margin-bottom: 5px;
 }
 
-/* line 512, ../sass/partials/_signup.scss */
+/* line 504, ../sass/partials/_signup.scss */
 .wdSubtitle {
   font-size: 13px;
 }
 
-/* line 516, ../sass/partials/_signup.scss */
+/* line 508, ../sass/partials/_signup.scss */
 .base_strip {
   width: 100%;
   position: absolute;
@@ -1969,12 +1970,12 @@ a:link, button {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 516, ../sass/partials/_signup.scss */
+  /* line 508, ../sass/partials/_signup.scss */
   .base_strip {
     display: flex;
   }
 }
-/* line 528, ../sass/partials/_signup.scss */
+/* line 520, ../sass/partials/_signup.scss */
 .base_strip .line {
   width: 25%;
   height: 100%;
