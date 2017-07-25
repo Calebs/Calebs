@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Feeds Home | SAEDConnect</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet" type="text/css">
+    <link href="css/timeline.css" rel="stylesheet" type="text/css">
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+</head>
+
+<body class="">
+   
+    <header role="banner">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="sr-only">SAEDConnect</span>
+                        <img src="img/logo_admin.png" alt="SAEDConnect">
+                    </a>
+                </div>
+                <nav class="sec-nav ">
+                    <ul class="account_info">
+                        <li class="">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_help"></i>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_notification"></i>
+                                <span class="badge badge-secondary">3</span>
+                            </a>
+                        </li>
+                        <li class="dropdown accounts">
+                            <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
+                                <span class="profile_img">
+                                <img src="img/user_avis/3.jpg" alt="Jane Doe">
+                            </span>
+                                <span class="profile_name">Jane Doe</span>
+                                <i class="fa fa-chevron-circle-down"></i></a>
+                            <ul class="dropdown-menu dropdown-right">
+                                <li><a href="corp_profile_general.html"><i class="fa fa-user"></i>My Profile</a></li>
+                                <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!--Mobile footer navigation-->
+    <div class="mobile_nav">
+        <ul class="navList">
+            <li class="linkNavMain active has_sub ">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_feed"></i>
+                    </span>
+                    <span class="link_title">Feeds</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Feeds</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="timeline.html" class="subNavItem">General Timeline</a></li>
+                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain has_sub">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_request"></i>
+                    </span>
+                    <span class="link_title">Discover</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Discover</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li>
+                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
+                                Jobs
+                            </a>
+                            <div class="collapse" id="jobs">
+                                <ul class="link_nav_children">
+                                    <li><a href="jobs.html">Freelancer</a></li>
+                                    <li><a href="jobs.html">Contract Jobs</a></li>
+                                    <li><a href="jobs.html">Full Jobs</a></li>
+                                    <li><a href="jobs.html">Volunteer</a></li>
+                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li><a href="market.html" class="subNavItem">Market</a></li>
+                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
+                        <li><a href="#" class="subNavItem">Partner Requests</a></li>
+                        <li><a href="#" class="subNavItem">Trainer Requests</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain has_sub">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_user"></i>
+                    </span>
+                    <span class="link_title">My Profile</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">My Profile</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="user_wall.html">My Wall</a></li>
+                        <li><a href="corp_profile_general.html">About Me</a></li>
+                        <li><a href="#">My Shop</a></li>
+                        <li><a href="#">My Requests</a></li>
+                        <li><a href="corp_profile_interests.html">My interests</a></li>
+                        <li><a href="corp_profile_skills.html">My Skills</a></li>
+                        <li><a href="#">My Achievements</a></li>
+                        <li><a href="#">My Questions</a></li>
+                        <li><a href="corp_profile_settings.html">Account settings</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain">
+                <a href="help_center.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_help"></i>
+                    </span>
+                    <span class="link_title">Help Center</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="#more" class="trigger_filter mainTrigger">
+                    <span class="navIcon color-secondary">
+                        <i class="icon icon_more"></i>
+                    </span>
+                    <span class="link_title">Filter</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="floatingWidget searchWidget">
+        <div class="widget-wrapper">
+            <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content">
+                <div class="search_panel">
+                    <h4 class="title text_caps color-white">Find talents around you</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="search" class="form-control search_control" placeholder="Search...">
+                        </div>
+                        <div class="more-btn">
+                            <button class="btn btn-rounded btn-lg btn-secondary">
+                                <i class="fa fa-search"></i>Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <main class="sd-main-content bg-off-white">
+        <header class="page_header is_fixed">
+            <div class="header_wrapper">
+                <div class="back_arrow">
+                    <a href="#" class="go_back">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="page_nav">
+                    <h2 class="title">Feeds</h2>
+                </div>
+                <div class="pg_search">
+                    <button class="btn_search trigger_search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!--Wrap site content-->
+        <div class="timeline_container">
+           
+            <aside class="nav_timeline">
+                <div class="content_wrapper">
+                    <h4 class="menu_title">Menu</h4>
+
+                    <nav class="nav_block main_nav">
+                        <ul class="has_icon">
+                           <li class="link_nav has_children">
+                                <a href="#ds_profile" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_user"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">My Profile</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="ds_profile">
+                                    <ul class="link_nav_children">
+                                        <li><a href="user_wall.html">My Wall</a></li>
+                                        <li><a href="corp_profile_general.html">About Me</a></li>
+                                        <li><a href="#">My Shop</a></li>
+                                        <li><a href="#">My Requests</a></li>
+                                        <li><a href="corp_profile_interests.html">My interests</a></li>
+                                        <li><a href="corp_profile_skills.html">My Skills</a></li>
+                                        <li><a href="#">My Achievements</a></li>
+                                        <li><a href="#">My Questions</a></li>
+                                        <li><a href="corp_profile_settings.html">Account settings</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav active has_children">
+                                <a href="#stuffs" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_feed"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Feeds</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="stuffs">
+                                    <ul class="link_nav_children">
+                                        <li><a href="timeline.html">General Timeline</a></li>
+                                        <li><a href="newsfeeds.html">My Timeline</a></li>
+                                    </ul>
+                                </div>
+                            </li>   
+                            <li class="link_nav has_children">
+                                <a href="#market" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Directories</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="market">
+                                    <ul class="link_nav_children">
+                                        <li><a href="portfolio.html">Talent Directory</a></li>
+                                        <li><a href="requests.html">Partner Requests</a></li>
+                                        <li><a href="requests.html">Trainer Requests</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav has_children">
+                                <a href="#ds_jobs" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Jobs</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="ds_jobs">
+                                    <ul class="link_nav_children">
+                                        <li><a href="jobs.html">Freelancer</a></li>
+                                        <li><a href="jobs.html">Contract Jobs</a></li>
+                                        <li><a href="jobs.html">Full Jobs</a></li>
+                                        <li><a href="jobs.html">Volunteer</a></li>
+                                        <li><a href="jobs.html">Internships/Apprenticeship</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav">
+                                <a href="questions.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_forum"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Questions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="market.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_market"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Market</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="helpcenter.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_help"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Help Center</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="helpcenter.html" class="trigger_filter">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_more"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Filter</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="nav_block nav_footer">
+                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a><a href="cookies.html">Cookies</a>
+                        <a href="contact_us.html">Contact Us</a></p>
+                        <p>&copy; SAEDConnect 2017</p>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="layout_content">
+                <div class="box_wrapper bg_default">
+                    <div class="main_wrapper">
+                        <header class="section_header header_centered">
+                            <div class="hero_wrapper">
+                                <div class="section_info">
+                                    <h2 class="section_title">Join the Conversation.</h2>
+                                    <p class="subtitle">Select a category to join the conversation.</p>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="content_inner widget_content">
+                            <article class="content-panel">
+                                <!--Use this to present Job industries Categories-->
+                                <div class="cardList parentTiles">
+                                    <article class="tileCard">
+                                       <a href="timeline.html" class="postCard__wrapper">
+                                           <div class="postCardDetails text-center">
+                                               <div class="cardImage image_circle">
+                                                   <img src="./img/icons/general.png" alt="">
+                                               </div>
+                                               <h4 class="cardTitle">General</h4>
+                                               <p>View all posts and discussions made by everyone on the platform.</p>
+                                           </div>
+                                       </a>
+                                    </article> 
+                                    <article class="tileCard has_children">
+                                       <a href="#" class="postCard__wrapper cat_button">
+                                           <div class="postCardDetails text-center">
+                                               <div class="cardImage image_circle">
+                                                   <img src="./img/icons/enterpreneur.png" alt="">
+                                               </div>
+                                               <h4 class="cardTitle">Entrepreneurship, Career & Personal Development</h4>
+                                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, a, deserunt commodi mollitia.</p>
+                                           </div>
+                                       </a>
+                                    </article> 
+                                    <article class="tileCard has_children">
+                                       <a href="#" class="postCard__wrapper cat_button">
+                                           <div class="postCardDetails text-center">
+                                               <div class="cardImage image_circle">
+                                                   <img src="./img/icons/smallBiz.png" alt="">
+                                               </div>
+                                               <h4 class="cardTitle">Small Business</h4>
+                                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, a, deserunt commodi mollitia.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                    <article class="tileCard has_children">
+                                       <a href="#" class="postCard__wrapper cat_button">
+                                           <div class="postCardDetails text-center">
+                                               <div class="cardImage image_circle">
+                                                   <img src="./img/icons/agricBiz.png" alt="">
+                                               </div>
+                                               <h4 class="cardTitle">Agri Business</h4>
+                                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, a, deserunt commodi mollitia.</p>
+                                           </div>
+                                       </a>
+                                    </article> 
+                                    <article class="tileCard has_children">
+                                       <a href="#" class="postCard__wrapper cat_button">
+                                           <div class="postCardDetails text-center">
+                                               <div class="cardImage image_circle">
+                                                   <img src="./img/icons/ict.png" alt="">
+                                               </div>
+                                               <h4 class="cardTitle">ICT/Data Analysis</h4>
+                                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, a, deserunt commodi mollitia.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                    <article class="tileCard has_children">
+                                       <a href="#" class="postCard__wrapper cat_button">
+                                           <div class="postCardDetails text-center">
+                                               <div class="cardImage image_circle">
+                                                   <img src="./img/icons/professional.png" alt="">
+                                               </div>
+                                               <h4 class="cardTitle">Professional Careers</h4>
+                                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, a, deserunt commodi mollitia.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                    <article class="tileCard has_children">
+                                       <a href="#" class="postCard__wrapper cat_button">
+                                           <div class="postCardDetails text-center">
+                                               <div class="cardImage image_circle">
+                                                   <img src="./img/icons/media.png" alt="">
+                                               </div>
+                                               <h4 class="cardTitle">Entertainment & Multimedia</h4>
+                                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, a, deserunt commodi mollitia.</p>
+                                           </div>
+                                       </a>
+                                    </article>                  
+                                    <article class="tileCard has_children">
+                                       <a href="#" class="postCard__wrapper cat_button">
+                                           <div class="postCardDetails text-center">
+                                               <div class="cardImage image_circle">
+                                                   <img src="./img/icons/update.png" alt="">
+                                               </div>
+                                               <h4 class="cardTitle">Updates</h4>
+                                               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, a, deserunt commodi mollitia.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                </div>
+                                
+                            </article>
+                            <article class="alt_panel">
+                                <div class="content_header">
+                                    <h4 class="title text_caps">Entrepreneurship, Career & Personal Development</h4>
+                                </div>
+                                <!--List the Sub category of the selected category-->
+                                <div class="list_children cardList">
+                                    <article class="tileCard">
+                                       <a href="feed_timeline.html" class="postCard__wrapper">
+                                           <div class="postCardDetails text-center">
+                                               <h4 class="cardTitle">Discovering Your purpose</h4>
+                                               <p>View all posts and discussions made by everyone on the platform.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                    <article class="tileCard">
+                                       <a href="feed_timeline.html" class="postCard__wrapper">
+                                           <div class="postCardDetails text-center">
+                                               <h4 class="cardTitle">Boosting your employability</h4>
+                                               <p>View all posts and discussions made by everyone on the platform.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                    <article class="tileCard">
+                                       <a href="feed_timeline.html" class="postCard__wrapper">
+                                           <div class="postCardDetails text-center">
+                                               <h4 class="cardTitle">Starting a Business</h4>
+                                               <p>View all posts and discussions made by everyone on the platform.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                    <article class="tileCard">
+                                       <a href="feed_timeline.html" class="postCard__wrapper">
+                                           <div class="postCardDetails text-center">
+                                               <h4 class="cardTitle">Growing your Business</h4>
+                                               <p>View all posts and discussions made by everyone on the platform.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                    <article class="tileCard">
+                                       <a href="feed_timeline.html" class="postCard__wrapper">
+                                           <div class="postCardDetails text-center">
+                                               <h4 class="cardTitle">Emerging Jobs</h4>
+                                               <p>View all posts and discussions made by everyone on the platform.</p>
+                                           </div>
+                                       </a>
+                                    </article>
+                                </div>
+                                <div class="more-btn">
+                                    <a href="#" class="track_back btn btn-rounded btn-grey">
+                                        <i class="fa fa-chevron-left"></i>
+                                        Back
+                                    </a>
+                                </div>
+                            </article>
+                        </div>          
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <a href="#0" class="to-top">Top</a>
+
+    <!-- Javascript starts here-->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/site_nav.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+       
+    </script>
+
+    
+</body>
+
+</html>
