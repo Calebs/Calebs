@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Followers | SAEDConnect</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
+    <link href="css/base.min.css" rel="stylesheet" type="text/css">
+    <link href="css/timeline.css" rel="stylesheet" type="text/css">
+    <link href="css/full_layout.css" rel="stylesheet" type="text/css">
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+</head>
+
+<body class="scroll_check">
+
+    <header role="banner">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="sr-only">SAEDConnect</span>
+                        <img src="img/logo_admin.png" alt="SAEDConnect">
+                    </a>
+                </div>
+                <nav class="sec-nav ">
+                    <ul class="account_info">
+                        <li class="dropdown accounts">
+                            <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
+                                <span class="profile_img">
+                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                            </span>
+                                <span class="profile_name">Jane Doe</span>
+                                <i class="fa fa-chevron-circle-down"></i></a>
+                            <ul class="dropdown-menu dropdown-right">
+                                <li><a href="corp_profile.html"><i class="fa fa-user"></i>Personal Profile</a></li>
+                                <li><a href="skil_profile.html"><i class="fa fa-gears"></i>Skills Profile</a></li>
+                                <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!--Mobile footer navigation-->
+    <div class="mobile_nav">
+        <ul class="navList">
+            <li class="linkNavMain active">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_feed"></i>
+                    </span>
+                    <span class="link_title">Feeds</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Feeds</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="timeline.html" class="subNavItem">Timeline</a></li>
+                        <li><a href="newsfeed.html" class="subNavItem">Newsfeed</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_request"></i>
+                    </span>
+                    <span class="link_title">Directories</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Directories</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li><a href="fn_trainings.html" class="subNavItem">Training Directory</a></li>
+                        <li><a href="fn_programs.html" class="subNavItem">Programs Directory</a></li>
+                        <li><a href="#" class="subNavItem">Events</a></li>
+                        <li>
+                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
+                                Jobs
+                            </a>
+                            <div class="collapse" id="jobs">
+                                <ul class="link_nav_children">
+                                    <li><a href="jobs.html">Freelancer</a></li>
+                                    <li><a href="jobs.html">Private Tutors</a></li>
+                                    <li><a href="jobs.html">Remote Joba</a></li>
+                                    <li><a href="jobs.html">Contract Jobs</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain">
+                <a href="questions.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_forum"></i>
+                    </span>
+                    <span class="link_title">Forum</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Forums</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="conversations.html" class="subNavItem">Discussions</a></li>
+                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
+                        <li><a href="feedback.html" class="subNavItem">Feedback Requests</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain">
+                <a href="#"  class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_market"></i>
+                    </span>
+                    <span class="link_title">Market</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Forums</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="requests.html" class="subNavItem">Buyer Requests</a></li>
+                        <li><a href="market.html" class="subNavItem">Shop</a></li>
+                        <li><a href="campaigns.html" class="subNavItem">Campaigns</a></li>
+                        <li><a href="critic_it.html" class="subNavItem">Business Opportunities</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain">
+                <a href="#more" class="more_nav">
+                    <span class="navIcon color-secondary">
+                        <i class="icon icon_more"></i>
+                    </span>
+                    <span class="link_title">Filter</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <main class="sd-main-content bg-off-white">
+        <!--Wrap site content-->
+        <div class="timeline_container">
+           
+            <aside class="nav_timeline">
+                <div class="content_wrapper">
+                    <h4 class="menu_title">Menu</h4>
+
+                    <nav class="nav_block main_nav">
+                        <ul class="has_icon">
+                            <li class="link_nav has_children">
+                                <a href="#stuffs" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_feed"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">My Profile</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="stuffs">
+                                    <ul class="link_nav_children">
+                                        <li><a href="">My Post</a></li>
+                                        <li><a href="">My Questions</a></li>
+                                        <li><a href="">My Requests</a></li>
+                                        <li><a href="">My Discussions</a></li>
+                                        <li><a href="">My Suggestions</a></li>
+                                        <li><a href="">My Complaints</a></li>
+                                        <li><a href="">My Portfolio</a></li>
+                                    </ul>
+                                </div>
+                            </li>   
+                            <li class="link_nav active">
+                                <a href="timeline.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_feed"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">News Feed</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="questions.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_question"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Questions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="conversations.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_convo"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Discussions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav has_children">
+                                <a href="#market" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Market</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="market">
+                                    <ul class="link_nav_children">
+                                        <li><a href="market.html">Market Place</a></li>
+                                        <li><a href="requests.html">Buyer Requests</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="campaigns.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_campaign"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Campaigns</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav has_children">
+                                <a href="#jobs" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Jobs</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="jobs">
+                                    <ul class="link_nav_children">
+                                        <li><a href="jobs.html">Short time Jobs</a></li>
+                                        <li><a href="jobs.html">Full time Jobs</a></li>
+                                        <li><a href="jobs.html">Remote Joba</a></li>
+                                        <li><a href="jobs.html">Freelance Jobs</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="amas.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_ama"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Mentor Sessions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="portfolio.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Discover Talents</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="timeline.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Biz Opportunity</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="critic_it.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Critic It</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="requests.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Suggestions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="requests.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Complaints</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="nav_block nav_footer">
+                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a><a href="cookies.html">Cookies</a>
+                        <a href="contact_us.html">Contact Us</a></p>
+                        <p>&copy; SAEDConnect 2017</p>
+                    </div>
+                    
+                </div>
+            </aside>
+
+            <section class="layout_content">
+                <div class="box_wrapper bg_default">
+                    
+                    <div class="main_wrapper">
+                        <div class="split_layout">
+                            <section class="split_view">
+                                <!--Main view Area--> 
+                                
+                                <!--Stripped down profile information--> 
+                                <article class="post_card">
+                                    <div class="card_wrapper">
+                                        <div class="profile-highlight">
+                                            <div class="profile-highlight-bg">
+                                            </div>
+                                            <header class="photo-container">
+                                                <figure class="photo-wrapper">
+                                                    <div class="photo">
+                                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
+                                                    </div>
+                                                </figure>
+                                            </header>
+                                            
+                                            <div class="profile-highlight-content">
+                                               <div class="basic-info centered">
+                                                    <h4 class="">
+                                                        <span class="name ">Amammpoh Juliana O</span> | <span class="font_regular">Activities</span>
+                                                    </h4>
+                                                    
+                                                </div>
+                                                <div class="overview">
+                                                   <p>Lorem ipsum dolor sit amet, vel quam duis sed, adipiscing mattis luctus rhoncus sollicitudin nunc, a viverra ante, risus nunc luctus sed elit posuere, justo ante mattis. Vivamus eleifend, consequat nibh nec risus proin suspendisse</p>
+                                                   
+                                                </div>
+                                                <div class="contact-section centered">
+                                                    <a class="btn btn-secondary font_regular  ">Follow</a>
+                                                </div>
+                                                <nav class="nav-section">
+                                                    <div class="dropdown">
+                                                          <a class=" dropdown-toggle" type="button" data-toggle="dropdown">Wall 
+                                                          <span class="caret"></span></a>
+                                                          <ul class="dropdown-menu">
+                                                            <li><a href="">My Post</a></li>
+                                                            <li><a href="">People I am following</a></li>
+                                                          </ul>
+                                                    </div>
+                                                    <a href="corp_profile_general.html" class="">Profile</a>
+                                                    <a href="profile_following.html" class="">
+                                                        Following
+                                                    </a>
+                                                    <div class="dropdown">
+                                                          <a class="dropdown-toggle" type="button" data-toggle="dropdown">More...
+                                                          <span class="caret"></span></a>
+                                                          <ul class="dropdown-menu dropdown-right">
+                                                            <li><a href="">My Post</a></li>
+                                                            <li><a href="">My Questions</a></li>
+                                                            <li><a href="">My Requests</a></li>
+                                                            <li><a href="">My Discussions</a></li>
+                                                            <li><a href="">My Suggestions</a></li>
+                                                            <li><a href="">My Complaints</a></li>
+                                                            <li><a href="">My Portfolio</a></li>
+                                                            <li><a href="profile_my_followers.html">My Followers</a></li>
+                                                          </ul>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!--FOllowers list--> 
+                                <div class="card_wrapper follow-section">
+                                    <header class="follow-section-header">
+                                       <h1 class="title font_regular">People following me</h1>
+                                       <a class="" href="profile_my_followers.html"><i class="fa fa-plus-circle"></i>VIew people you're following</a>
+                                    </header>
+                                    <article class="follow-item">
+                                        <a class="" href="">
+                                            <figure class="info-section">
+                                                <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
+                                                <figcaption>
+                                                    <div class="name font_bold">Jon Snow</div>
+                                                    <div class="handle">@lordCommander</div>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <a class="btn btn-default">Following</a>
+                                        </div>
+                                    </article>
+                                    <article class="follow-item">
+                                        <a class="" href="">
+                                            <figure class="info-section">
+                                                <img src="./img/user_avis/3.jpg" alt="Amamppoh Juliana O">
+                                                <figcaption>
+                                                    <div class="name font_bold">Jon Snow</div>
+                                                    <div class="handle">@lordCommander</div>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <a class="btn btn-primary">Follow</a>
+                                        </div>
+                                    </article>
+                                    <article class="follow-item">
+                                        <a class="" href="">
+                                            <figure class="info-section">
+                                                <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
+                                                <figcaption>
+                                                    <div class="name font_bold">Jon Snow</div>
+                                                    <div class="handle">@lordCommander</div>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <a class="btn btn-default">Following</a>
+                                        </div>
+                                    </article>
+                                    <article class="follow-item">
+                                        <a class="" href="">
+                                            <figure class="info-section">
+                                                <img src="./img/user_avis/3.jpg" alt="Amamppoh Juliana O">
+                                                <figcaption>
+                                                    <div class="name font_bold">Jon Snow</div>
+                                                    <div class="handle">@lordCommander</div>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <a class="btn btn-default">Following</a>
+                                        </div>
+                                    </article>
+                                    <article class="follow-item">
+                                        <a class="" href="">
+                                            <figure class="info-section">
+                                                <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
+                                                <figcaption>
+                                                    <div class="name font_bold">Jon Snow</div>
+                                                    <div class="handle">@lordCommander</div>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <a class="btn btn-default">Following</a>
+                                        </div>
+                                    </article>
+                                    <article class="follow-item">
+                                        <a class="" href="">
+                                            <figure class="info-section">
+                                                <img src="./img/user_avis/3.jpg" alt="Amamppoh Juliana O">
+                                                <figcaption>
+                                                    <div class="name font_bold">Jon Snow</div>
+                                                    <div class="handle">@lordCommander</div>
+                                                </figcaption>
+                                            </figure>
+                                        </a>
+                                        <div>
+                                            <a class="btn btn-primary">Follow</a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <article class="post_card">
+                                    <div class="card_wrapper">
+                                        <button type="button" class="btn btn-block btn-grey">
+                                            Show More
+                                        </button>
+                                    </div>
+                                </article>
+                            </section>
+
+                            <aside class="split_nav">
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="https://wwww.saedconnect.com" class="wrapper">
+                                        <img src="./img/banners/join_saedconnect.png" alt="Join SAEDConnect">
+                                    </a>
+                                </article>
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/small_ad.png" alt="random_ad">
+                                    </a>
+                                </article>
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/qlik.png" alt="Learn in insidify">
+                                    </a>
+                                </article>
+                            </aside>
+                        </div>           
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <a href="#0" class="to-top">Top</a>
+
+    <!-- Javascript starts here-->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/site_nav.js"></script>
+    <script src="js/simplemde.min.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
