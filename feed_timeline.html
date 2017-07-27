@@ -12,6 +12,7 @@
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
     <link href="css/base.min.css" rel="stylesheet" type="text/css">
+    <link href="css/full_layout.css" rel="stylesheet" type="text/css">
     <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <script src="js/modernizr.js"></script>
     <!-- Modernizr -->
@@ -425,12 +426,17 @@
                 </div>
                 <nav class="sec-nav ">
                     <ul class="account_info">
+                        <li class="hidden-xs">
+                            <a href="#" class="navbar_link_item trigger_search">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
                         <li class="">
                             <a href="#" class="navbar_link_item">
                                 <i class="icon icon_help"></i>
                             </a>
                         </li>
-                        <li class="">
+                        <li class="hidden">
                             <a href="#" class="navbar_link_item">
                                 <i class="icon icon_notification"></i>
                                 <span class="badge badge-secondary">3</span>
@@ -468,8 +474,9 @@
                     <h4 class="title">Feeds</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="timeline.html" class="subNavItem">General Timeline</a></li>
                         <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="newsfeed.html" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
                     </ul>
                 </div>
             </li>
@@ -506,28 +513,13 @@
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain has_sub">
-                <a href="#" class="mainTrigger">
+            <li class="linkNavMain">
+                <a href="corp_profile_general.html" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_user"></i>
                     </span>
                     <span class="link_title">My Profile</span>
                 </a>
-                <div class="subNavTray">
-                    <h4 class="title">My Profile</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="user_wall.html">My Wall</a></li>
-                        <li><a href="corp_profile_general.html">About Me</a></li>
-                        <li><a href="#">My Shop</a></li>
-                        <li><a href="#">My Requests</a></li>
-                        <li><a href="corp_profile_interests.html">My interests</a></li>
-                        <li><a href="corp_profile_skills.html">My Skills</a></li>
-                        <li><a href="#">My Achievements</a></li>
-                        <li><a href="#">My Questions</a></li>
-                        <li><a href="corp_profile_settings.html">Account settings</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="linkNavMain">
                 <a href="help_center.html" class="mainTrigger">
@@ -575,8 +567,8 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
-                           <li class="link_nav has_children">
-                                <a href="#ds_profile" data-toggle="collapse">
+                            <li class="link_nav">
+                                <a href="corp_profile_general.html">
                                     <span class="itemIcon">
                                         <i class="icon icon_user"></i>
                                     </span>
@@ -584,19 +576,6 @@
                                         <span class="link_title">My Profile</span>
                                     </div>
                                 </a>
-                                <div class="collapse" id="ds_profile">
-                                    <ul class="link_nav_children">
-                                        <li><a href="user_wall.html">My Wall</a></li>
-                                        <li><a href="corp_profile_general.html">About Me</a></li>
-                                        <li><a href="#">My Shop</a></li>
-                                        <li><a href="#">My Requests</a></li>
-                                        <li><a href="corp_profile_interests.html">My interests</a></li>
-                                        <li><a href="corp_profile_skills.html">My Skills</a></li>
-                                        <li><a href="#">My Achievements</a></li>
-                                        <li><a href="#">My Questions</a></li>
-                                        <li><a href="corp_profile_settings.html">Account settings</a></li>
-                                    </ul>
-                                </div>
                             </li>
                             <li class="link_nav active has_children">
                                 <a href="#stuffs" data-toggle="collapse">
@@ -609,8 +588,9 @@
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="timeline.html">General Timeline</a></li>
                                         <li><a href="newsfeeds.html">My Timeline</a></li>
+                                        <li><a href="#">Saved Posts</a></li>
+                                        <li><a href="feeds_home.html">Communities</a></li>
                                     </ul>
                                 </div>
                             </li>   
@@ -1073,7 +1053,7 @@
                                     </div>
                                 </article>
                                 
-                                <article class="post_card post_pinned has_comment">
+                                <article class="post_card has_comment">
                                     <div class="card_wrapper">
                                         <div class="post_card_header">
                                             <div class="post_heading">
@@ -1093,7 +1073,11 @@
                                                         <span class="title_text">Admin</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn is_following" title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -1275,6 +1259,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn is_following" title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -1453,6 +1441,10 @@
                                                 </div>
                                                 
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -1632,7 +1624,11 @@
                                                         <span class="title_text">Partner</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn is_following" title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -1832,7 +1828,11 @@
                                                         <span class="title_text">Partner</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -2011,7 +2011,11 @@
                                                         <span class="title_text">Conversation Title here</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn is_following" title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -2187,7 +2191,11 @@
                                                         <span class="title_text">Admin</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn is_following" title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -2307,6 +2315,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -2486,7 +2498,11 @@
                                                         <span class="title_text">Corps Member</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn is_following" title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -2666,7 +2682,11 @@
                                                         <span class="title_text">Corps Member</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn is_following" title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -2844,7 +2864,11 @@
                                                         <span class="title_text">Admin</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>
@@ -3049,7 +3073,11 @@
                                                         <a href="conversation_view.html" class="title_text">Carpentry</a>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: "is_following"-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="timeline_comments.html">
                                                         <i class="fa fa-external-link"></i>
                                                     </a>

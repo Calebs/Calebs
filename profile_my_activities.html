@@ -12,13 +12,120 @@
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
     <link href="css/base.min.css" rel="stylesheet" type="text/css">
-    <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <link href="css/full_layout.css" rel="stylesheet" type="text/css">
+    <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <script src="js/modernizr.js"></script>
     <!-- Modernizr -->
 </head>
 
-<body class="scroll_check">
+<body class="">
+   
+   <!--use this to prompt an existing user that has no username to create a username-->
+    <div class="modal fade in" id="setUsername">
+        <div class="modal-dialog layered_modal">
+            <div class="modal-content seedBg">
+                <div class="modal-header text-center">
+                </div>
+                <div class="modal-body text-center">
+                    <div class="content-panel color-white text-center">
+                        <h2 class="title color-white">Hello Babatunde!</h2>
+                        <p>In a bid to improve your experience, we have introduced the ability for you to find and follow people with their usernames. If you will like people to find you on the platform and send </p>
+
+                        <div class="dialog_form form_centered">
+                            <h5 class="title">Create a Username</h5>
+                            <form action="">
+                                <div class="form-group">
+                                    <input type="text" class="form-control text-center form_rounded" placeholder="E.g justina_21">
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-rounded btn-secondary">Create Username</button>
+                                </div>
+                            </form> 
+                        </div>
+                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade in" id="attach_media">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="modal-title">Add Media to comment</h4>
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-panel">
+                        <div class="media_upload_dialog">
+                            <p class="Subtitle">Select a media object type to upload</p>
+                            <div class="select_grid select_radio">
+                                <div class="my_selector  file_upload">
+                                    <label for="md_image" class="control-wrapper">
+                                        <input type="file" name="file" accept="image/*" id="md_image" class="inputfile"/>
+                                        <span class="c_label"><i class="fa fa-image"></i> Image</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector file_upload">
+                                    <label for="md_video" class="control-wrapper radio-inline">
+                                        <input type="file" name="file" accept=".mp4" id="md_video" class="inputfile"/>
+                                        <span class="c_label"><i class="fa fa-play"></i> Video</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector file_upload">
+                                    <label for="md_audio" class="control-wrapper radio-inline">
+                                        <input type="file" name="file" accept=".mp3" id="md_audio" class="inputfile"/>
+                                        <span class="c_label"><i class="fa fa-music"></i> Audio</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector file_upload">
+                                    <label for="md_file" class="control-wrapper radio-inline">
+                                        <input type="file" name="file" accept=".doc, .pdf, .docx" id="md_file" class="inputfile"/>
+                                        <span class="c_label"><i class="fa fa-file"></i> File</span>
+                                    </label>
+                                </div>
+                            </div>                           
+                            <div class="form-group upload_option">
+                                <label class="control-label">Attach video from: Youtube or Vimeo </label>
+                                <input type="url" class="form-control" placeholder="https://url_to_your_media_file.com/file/file_name.fileformat">
+                                <p class="help-block font_bold">Paste your media url here</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Attach</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="floatingWidget searchWidget">
+        <div class="widget-wrapper">
+            <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content">
+                <div class="search_panel">
+                    <h4 class="title text_caps color-white">Search</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="search" class="form-control search_control" placeholder="Search the timeline...">
+                        </div>
+                        <div class="more-btn">
+                            <button class="btn btn-rounded btn-lg btn-secondary">
+                                <i class="fa fa-search"></i>Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header role="banner">
         <div class="navbar navbar-default" role="navigation">
@@ -31,16 +138,31 @@
                 </div>
                 <nav class="sec-nav ">
                     <ul class="account_info">
+                        <li class="hidden-xs">
+                            <a href="#" class="navbar_link_item trigger_search">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_help"></i>
+                            </a>
+                        </li>
+                        <li class="hidden">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_notification"></i>
+                                <span class="badge badge-secondary">3</span>
+                            </a>
+                        </li>
                         <li class="dropdown accounts">
                             <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
                                 <span class="profile_img">
-                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                <img src="img/user_avis/3.jpg" alt="Jane Doe">
                             </span>
                                 <span class="profile_name">Jane Doe</span>
                                 <i class="fa fa-chevron-circle-down"></i></a>
                             <ul class="dropdown-menu dropdown-right">
-                                <li><a href="corp_profile.html"><i class="fa fa-user"></i>Personal Profile</a></li>
-                                <li><a href="skil_profile.html"><i class="fa fa-gears"></i>Skills Profile</a></li>
+                                <li><a href="corp_profile_general.html"><i class="fa fa-user"></i>My Profile</a></li>
                                 <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
                             </ul>
                         </li>
@@ -50,10 +172,9 @@
         </div>
     </header>
     
-    <!--Mobile footer navigation-->
     <div class="mobile_nav">
         <ul class="navList">
-            <li class="linkNavMain active">
+            <li class="linkNavMain has_sub ">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_feed"></i>
@@ -64,26 +185,23 @@
                     <h4 class="title">Feeds</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="timeline.html" class="subNavItem">Timeline</a></li>
-                        <li><a href="newsfeed.html" class="subNavItem">Newsfeed</a></li>
+                        <li><a href="newsfeeds.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain">
+            <li class="linkNavMain has_sub">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_request"></i>
                     </span>
-                    <span class="link_title">Directories</span>
+                    <span class="link_title">Discover</span>
                 </a>
                 <div class="subNavTray">
-                    <h4 class="title">Directories</h4>
+                    <h4 class="title">Discover</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
-                        <li><a href="fn_trainings.html" class="subNavItem">Training Directory</a></li>
-                        <li><a href="fn_programs.html" class="subNavItem">Programs Directory</a></li>
-                        <li><a href="#" class="subNavItem">Events</a></li>
                         <li>
                             <a href="#jobs" class="subNavItem" data-toggle="collapse">
                                 Jobs
@@ -91,52 +209,39 @@
                             <div class="collapse" id="jobs">
                                 <ul class="link_nav_children">
                                     <li><a href="jobs.html">Freelancer</a></li>
-                                    <li><a href="jobs.html">Private Tutors</a></li>
-                                    <li><a href="jobs.html">Remote Joba</a></li>
                                     <li><a href="jobs.html">Contract Jobs</a></li>
+                                    <li><a href="jobs.html">Full Jobs</a></li>
+                                    <li><a href="jobs.html">Volunteer</a></li>
+                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
                                 </ul>
                             </div>
                         </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain">
-                <a href="questions.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_forum"></i>
-                    </span>
-                    <span class="link_title">Forum</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Forums</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="conversations.html" class="subNavItem">Discussions</a></li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li><a href="market.html" class="subNavItem">Market</a></li>
                         <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="feedback.html" class="subNavItem">Feedback Requests</a></li>
+                        <li><a href="#" class="subNavItem">Partner Requests</a></li>
+                        <li><a href="#" class="subNavItem">Trainer Requests</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain">
-                <a href="#"  class="mainTrigger">
+            <li class="linkNavMain active">
+                <a href="corp_profile_general.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_market"></i>
+                        <i class="icon icon_user"></i>
                     </span>
-                    <span class="link_title">Market</span>
+                    <span class="link_title">My Profile</span>
                 </a>
-                <div class="subNavTray">
-                    <h4 class="title">Forums</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="requests.html" class="subNavItem">Buyer Requests</a></li>
-                        <li><a href="market.html" class="subNavItem">Shop</a></li>
-                        <li><a href="campaigns.html" class="subNavItem">Campaigns</a></li>
-                        <li><a href="critic_it.html" class="subNavItem">Business Opportunities</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="linkNavMain">
-                <a href="#more" class="more_nav">
+                <a href="help_center.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_help"></i>
+                    </span>
+                    <span class="link_title">Help Center</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="#more" class="trigger_filter mainTrigger">
                     <span class="navIcon color-secondary">
                         <i class="icon icon_more"></i>
                     </span>
@@ -147,6 +252,24 @@
     </div>
     
     <main class="sd-main-content bg-off-white">
+        <header class="page_header is_fixed">
+            <div class="header_wrapper">
+                <div class="back_arrow">
+                    <a href="#" class="go_back">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="page_nav">
+                    <h2 class="title">Amammpoh Victoria</h2>
+                    <p class="subtitle">Viewing</p>
+                </div>
+                <div class="pg_search">
+                    <button class="btn_search trigger_search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
         <!--Wrap site content-->
         <div class="timeline_container">
            
@@ -156,85 +279,52 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
+                           <li class="link_nav active">
+                                <a href="corp_profile_general.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_user"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">My Profile</span>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="link_nav has_children">
                                 <a href="#stuffs" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_feed"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">My Profile</span>
+                                        <span class="link_title">Feeds</span>
                                     </div>
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="">My Post</a></li>
-                                        <li><a href="">My Questions</a></li>
-                                        <li><a href="">My Requests</a></li>
-                                        <li><a href="">My Discussions</a></li>
-                                        <li><a href="">My Suggestions</a></li>
-                                        <li><a href="">My Complaints</a></li>
-                                        <li><a href="">My Portfolio</a></li>
+                                        <li><a href="newsfeeds.html">My Timeline</a></li>
+                                        <li><a href="#">Saved Posts</a></li>
+                                        <li><a href="feeds_home.html">Communities</a></li>
                                     </ul>
                                 </div>
-                            </li>   
-                            <li class="link_nav active">
-                                <a href="timeline.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_feed"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">News Feed</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="questions.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_question"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Questions</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="conversations.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_convo"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Discussions</span>
-                                    </div>
-                                </a>
-                            </li>
+                            </li>    
                             <li class="link_nav has_children">
                                 <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Market</span>
+                                        <span class="link_title">Directories</span>
                                     </div>
                                 </a>
                                 <div class="collapse" id="market">
                                     <ul class="link_nav_children">
-                                        <li><a href="market.html">Market Place</a></li>
-                                        <li><a href="requests.html">Buyer Requests</a></li>
+                                        <li><a href="portfolio.html">Talent Directory</a></li>
+                                        <li><a href="requests.html">Partner Requests</a></li>
+                                        <li><a href="requests.html">Trainer Requests</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="link_nav ">
-                                <a href="campaigns.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_campaign"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Campaigns</span>
-                                    </div>
-                                </a>
-                            </li>
                             <li class="link_nav has_children">
-                                <a href="#jobs" data-toggle="collapse">
+                                <a href="#ds_jobs" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
                                     </span>
@@ -242,72 +332,53 @@
                                         <span class="link_title">Jobs</span>
                                     </div>
                                 </a>
-                                <div class="collapse" id="jobs">
+                                <div class="collapse" id="ds_jobs">
                                     <ul class="link_nav_children">
-                                        <li><a href="jobs.html">Short time Jobs</a></li>
-                                        <li><a href="jobs.html">Full time Jobs</a></li>
-                                        <li><a href="jobs.html">Remote Joba</a></li>
-                                        <li><a href="jobs.html">Freelance Jobs</a></li>
+                                        <li><a href="jobs.html">Freelancer</a></li>
+                                        <li><a href="jobs.html">Contract Jobs</a></li>
+                                        <li><a href="jobs.html">Full Jobs</a></li>
+                                        <li><a href="jobs.html">Volunteer</a></li>
+                                        <li><a href="jobs.html">Internships/Apprenticeship</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="link_nav ">
-                                <a href="amas.html">
+                                <a href="questions.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_ama"></i>
+                                        <i class="icon icon_forum"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Mentor Sessions</span>
+                                        <span class="link_title">Questions</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="portfolio.html">
+                                <a href="market.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_market"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Discover Talents</span>
+                                        <span class="link_title">Market</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="timeline.html">
+                                <a href="helpcenter.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_help"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Biz Opportunity</span>
+                                        <span class="link_title">Help Center</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="critic_it.html">
+                                <a href="helpcenter.html" class="trigger_filter">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_more"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Critic It</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="requests.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Suggestions</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="requests.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Complaints</span>
+                                        <span class="link_title">Filter</span>
                                     </div>
                                 </a>
                             </li>
@@ -319,7 +390,6 @@
                         <a href="contact_us.html">Contact Us</a></p>
                         <p>&copy; SAEDConnect 2017</p>
                     </div>
-                    
                 </div>
             </aside>
 
@@ -327,442 +397,139 @@
                 <div class="box_wrapper bg_default">
                     
                     <div class="main_wrapper">
-                        <div class="section_header hidden">
-                            <h2 class="section_title">Timeline</h2>
-                            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quia facilis necessitatibus accusantium aperiam aliquam veritatis ad! Amet neque quis recusandae, dolor est ut. Omnis eius hic repellat laborum non.</p>
-                        </div>
-                        <div class="split_layout">
-                            <section class="split_view">
-                                <!--Main view Area--> 
-                                
-                                <!--Stripped down profile information--> 
-                                <article class="post_card">
-                                    <div class="card_wrapper">
-                                        <div class="profile-highlight">
-                                            <div class="profile-highlight-bg">
+                        <!--Stripped down profile information--> 
+                        <header class="profile_banner">
+                            <div class="banner_wrapper">
+                                <div class="banner_content text-center">
+                                    <div class="user_photo image_circle">
+                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
+                                        <!--Only accessible to the profile owner-->
+                                        <div class="img_uploader">
+                                            <label for="item_image" class="file_upload">
+                                                <input type="file" name="file" id="item_image" class="inputfile hidden" />
+                                                <i class="icon icon-sm upload_img" title="Upload header image"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!--Show this when the user clicks upload image-->
+                                    <div class="action_btn hidden text-center">
+                                        <button type="button" class="btn btn-default btn-rounded">
+                                        Cancel</button>
+                                        <button type="submit" class="btn btn-primary btn-rounded">
+                                        Upload</button>
+                                    </div>
+                                    <div class="content_view">
+                                        <div class="user_info">
+                                            <div class="user_meta">
+                                                <h4 class="">Amammpoh Juliana O</h4>
+                                                <h6 class="font_regular">@Juliana_o</h6>
                                             </div>
-                                            <header class="photo-container">
-                                                <figure class="photo-wrapper">
-                                                    <div class="photo">
-                                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
-                                                    </div>
-                                                </figure>
-                                            </header>
-                                            
-                                            <div class="profile-highlight-content">
-                                               <div class="basic-info centered">
-                                                    <h4 class="">
-                                                        <span class="name ">Amammpoh Juliana O</span> | <span class="font_regular">Activities</span>
-                                                    </h4>
-                                                    
-                                                </div>
-                                                <div class="overview">
-                                                   <p>Lorem ipsum dolor sit amet, vel quam duis sed, adipiscing mattis luctus rhoncus sollicitudin nunc, a viverra ante, risus nunc luctus sed elit posuere, justo ante mattis. Vivamus eleifend, consequat nibh nec risus proin suspendisse</p>
-                                                   
-                                                </div>
-                                                <div class="contact-section centered">
-                                                    <a class="btn btn-secondary font_regular  ">Follow</a>
-                                                </div>
-                                                <nav class="nav-section">
-                                                    <div class="dropdown">
-                                                          <a class=" dropdown-toggle" type="button" data-toggle="dropdown">Wall 
-                                                          <span class="caret"></span></a>
-                                                          <ul class="dropdown-menu">
-                                                           <li><a href="">My Wall</a></li>
-                                                            <li><a href="">My Post</a></li>
-                                                            <li><a href="">People I am following</a></li>
-                                                          </ul>
-                                                    </div>
-                                                    <a href="corp_profile_general.html" class="">Profile</a>
-                                                    <a href="profile_following.html" class="">
-                                                        Following
-                                                    </a>
-                                                    <div class="dropdown active">
-                                                          <a class="dropdown-toggle" type="button" data-toggle="dropdown">More
-                                                          <span class="caret"></span></a>
-                                                          <ul class="dropdown-menu dropdown-right">
-                                                            <li><a href="">My Post</a></li>
-                                                            <li><a href="">My Questions</a></li>
-                                                            <li><a href="">My Requests</a></li>
-                                                            <li><a href="">My Discussions</a></li>
-                                                            <li><a href="">My Suggestions</a></li>
-                                                            <li><a href="">My Complaints</a></li>
-                                                            <li><a href="">My Portfolio</a></li>
-                                                            <li><a href="profile_my_followers.html">My Followers</a></li>
-                                                          </ul>
-                                                    </div>
-                                                </nav>
+                                            <p>Lorem ipsum dolor sit amet, vel quam duis sed, adipiscing mattis luctus rhoncus sollicitudin nunc, a viverra ante, risus nunc luctus sed elit posuere, justo ante mattis. Vivamus eleifend, consequat nibh nec risus proin suspendisse</p>
+                                            <div class="action_btn">
+                                                <!--Only visible to a visitor to viewer-->
+                                                <button type="button" class="btn btn-primary btn-rounded">Follow</button>
+                                                <!--only Visible to the owner of the account-->
+                                                <button type="button" class="btn btn-primary btn-rounded"><i class="fa fa-pencil"></i>Edit</button>
                                             </div>
                                         </div>
                                     </div>
-                                </article>
-                                                                                               
+                                    <div class="content_create hidden">
+                                        <form class="form-horizontal" action="">
+                                            <div class="form-group">
+                                                 <label class="control-label col-sm-4 padding_set">About yourself</label>
+                                                <div class="col-sm-8">
+                                                    <textarea rows="5" class="form-control" placeholder="A brief description of who you are, your interests, and what you do.."></textarea>
+                                                </div>
+                                             </div>
+
+                                            <div class="action_btn text-center">
+                                                <button type="button" class="btn btn-default btn-rounded">
+                                                Cancel</button>
+                                                <button type="submit" class="btn btn-primary btn-rounded">
+                                                Save Changes</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="nav-section">
+                                <li class="active dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                      Activity <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="profile_my_activities.html">My Posts</a></li>
+                                        <li><a href="profile_my_activities.html">People I am following</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="corp_profile_general.html">Profile</a></li>
+                                <li><a href="profile_my_followers.html">Followers</a></li>
+                                <li><a href="profile_following.html">Following</a></li>
+                                <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                         More <span class="caret"></span>
+                                      </a>
+                                      <ul class="dropdown-menu dropdown-right">
+                                        <li><a href="">Post</a></li>
+                                        <li><a href="">Questions</a></li>
+                                        <li><a href="">Requests</a></li>
+                                        <li><a href="">Portfolio</a></li>
+                                        <li><a href="">Shop</a></li>
+                                      </ul>
+                                </li>
+                            </nav>
+                        </header> 
+                        
+                        <div class="split_layout">
+                            <section class="split_view">
+                                <!--Main view Area--> 
+                                                                                                                           
                                 <article class="post_card new_post_widget ">
                                     <div class="card_wrapper">
-                                        <div class="post_card_header">
-                                            <nav class="post_type_nav">
-                                                <ul class="nav nav-tabs">
-                                                    <li class="active"><a href="#general" data-toggle="tab">Post</a></li>
-                                                    
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                        <div class="tab-content">
-                                            <article class="tab-pane fade active in" id="general">
-                                                <form class="post_input_widget ">
-                                                    <div class="post_content">
-                                                        <div class="post_input form-group">
-                                                            <div class="user_avi avi_sm avi_circle">
-                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
-                                                            </div>
-                                                            <textarea class="form-control" rows="5" id="post_input" placeholder="Write something to Juliana"></textarea>
-                                                            <div class="media_control">
-                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
-                                                                    <div class="icon_container">
-                                                                        <i class="icon attachment"></i>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
+                                        <div class="post_input_widget">
+                                            <form class="">
+                                                <div class="post_content">
+                                                    <div class="post_input form-group">
+                                                        <div class="user_avi avi_sm avi_circle">
+                                                            <img src="img/user_avis/3.jpg" alt="Ikenna David">
                                                         </div>
-                                                        <div class="form-group">
-                                                           <div class="cust_selector">
-                                                               <span class="sel_label color-default title_text">
-                                                                   Post to
-                                                               </span>
-                                                               <span class="sel_label title_text color-primary">
-                                                                   <!--Change the text of the selector to the user selection-->
-                                                                    <a href="#post_states" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb">Select location(s)</span>
-                                                                    </a>
-                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="seperator comma_seperated">Lagos</span>
-                                                                        <span class="seperator comma_seperated">Abuja</span>
-                                                                        <span class="seperator comma_seperated">Rivers</span>
-                                                                    </a>
-                                                               </span>
-                                                           </div>
-                                                       </div>
-                                                    </div>
-                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
-                                                        <img src="img/banners/tm_card_img.jpg" class="">
-                                                        <!--For normal video uploads-->
-                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
-                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
-                                                        </video>
-                                                        <!--For video embeds-->
-                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
-                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
-                                                        </div>-->
-                                                        <div class="pane_control">
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
-                                                            </a>
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                                <div class="post_card_footer clearfix">
-                                                    <button type="button" data-target="#post_tags" data-toggle="modal" class="btn btn-sm btn-grey-light btn-rounded">Tag as..</button>
-                                                    <div class="post_actions pull-right">
-                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
-                                                        <button type="button" data-target="#post_category" data-toggle="modal" class="btn btn-primary">Post</button>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="tab-pane fade in" id="buy_hire">
-                                                <form class="post_input_widget ">
-                                                    <div class="post_content">
-                                                       <div class="form-group">
-                                                           <div class="cust_selector">
-                                                               <span class="sel_label color-default title_text">
-                                                                   I need a
-                                                               </span>
-                                                               <span class="sel_label title_text color-primary">
-                                                                   <!--Change the text of the selector to the user selection-->
-                                                                    <a href="#request_type" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb">Select an option</span>
-                                                                    </a>
-                                                                    <a href="#request_type" class="hidden" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="seperator log_crumb">Skilled Person for a Job</span>
-                                                                    </a>
-                                                               </span>
-                                                           </div>
-                                                       </div>
-                                                       <div class="form-group font_bold">
-                                                           <label class="sr-only">Title of Post</label>
-                                                           <input type="text" class="form-control" placeholder="Enter the post title">
-                                                       </div>
-                                                        <div class="post_input form-group">
-                                                            <div class="user_avi avi_sm avi_circle">
-                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
-                                                            </div>
-                                                            <textarea class="form-control" rows="5" id="request_input" placeholder="Kindly provide information on what you want to buy/hire"></textarea>
-                                                            <div class="media_control">
-                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
-                                                                    <div class="icon_container">
-                                                                        <i class="icon attachment"></i>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form-group">
-                                                           <div class="cust_selector">
-                                                               <span class="sel_label color-default title_text">
-                                                                   Search across
-                                                               </span>
-                                                               <span class="sel_label title_text color-primary">
-                                                                   <!--Change the text of the selector to the user selection-->
-                                                                    <a href="#post_states" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb">Select location(s)</span>
-                                                                    </a>
-                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="seperator comma_seperated">Lagos</span>
-                                                                        <span class="seperator comma_seperated">Abuja</span>
-                                                                        <span class="seperator comma_seperated">Rivers</span>
-                                                                    </a>
-                                                               </span>
-                                                           </div>
-                                                       </div>
-                                                    </div>
-                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9">
-                                                        <img src="img/banners/tm_card_img.jpg" class="hidden">
-                                                        <!--For normal video uploads-->
-                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
-                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
-                                                        </video>
-                                                        <!--For files-->
-                                                       <div class="fileMetaCard">
-                                                            <div class="metaIcon">
-                                                                <a href="#file_url.docx" target="_blank" download><img src="./img/app_icon/file.png" alt=""></a>
-                                                            </div>
-                                                            <div class="metainfo">
-                                                                <h4 class="title">
-                                                                    <a href="#file_url.docx" target="_blank" download>The SAEDConnect admin user manual.docx</a>
-                                                                </h4>
-                                                                <span class="metaCrumb" title="file size">1.81 MB</span>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="pane_control">
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
-                                                            </a>
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                                <div class="post_card_footer clearfix">
-                                                    <div class="post_actions pull-right">
-                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
-                                                        <button type="button" data-target="#categories_levels" data-toggle="modal" class="btn btn-primary">Post</button>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="tab-pane fade in" id="sell">
-                                                <form class="post_input_widget ">
-                                                    <div class="post_content">
-                                                       <div class="form-group">
-                                                           <div class="cust_selector">
-                                                               <span class="sel_label color-default title_text">
-                                                                   I want to sell a
-                                                               </span>
-                                                               <span class="sel_label title_text color-primary">
-                                                                   <!--Change the text of the selector to the user selection-->
-                                                                    <a href="#sell_type" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb">Select an option</span>
-                                                                    </a>
-                                                                    <a href="#sell_type" class="hidden" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb seperator">Product</span>
-                                                                    </a>
-                                                               </span>
-                                                           </div>
-                                                       </div>
-                                                        <div class="form-group font_bold">
-                                                           <label class="sr-only">Title of Post</label>
-                                                           <input type="text" class="form-control" placeholder="The name of what you want to sell">
-                                                        </div>
-                                                        <div class="post_input form-group">
-                                                            <div class="user_avi avi_sm avi_circle">
-                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
-                                                            </div>
-                                                            <textarea class="form-control" rows="5" id="sell_input" placeholder="Kindly provide information on what you want to sell"></textarea>
-                                                            <div class="media_control">
-                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
-                                                                    <div class="icon_container">
-                                                                        <i class="icon attachment"></i>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cust_selector">
-                                                           <span class="sel_label color-default title_text">
-                                                               Amount <span class="bracket_enclosure"><i class="naira"></i></span>
-                                                           </span>
-                                                           <span class="itle_text color-primary">
-                                                               <input type="number" class="cust_input" min="0" placeholder="Amount in Naira">
-                                                           </span>
-                                                        </div>
-                                                        <div class="form-group">
-                                                           <div class="cust_selector">
-                                                               <span class="sel_label color-default title_text">
-                                                                   Available in
-                                                               </span>
-                                                               <span class="sel_label title_text color-primary">
-                                                                   <!--Change the text of the selector to the user selection-->
-                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb">Select location(s)</span>
-                                                                    </a>
-                                                                    <a href="#post_states" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="comma_seperated seperator">Lagos</span>
-                                                                        <span class="comma_seperated seperator">Abuja</span>
-                                                                        <span class="comma_seperated seperator">Rivers</span>
-                                                                    </a>
-                                                               </span>
-                                                           </div>
-                                                       </div>
-                                                    </div>
-                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
-                                                        <img src="img/banners/tm_card_img.jpg">
-                                                        <!--For normal video uploads-->
-                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
-                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
-                                                        </video>
-                                                        <!--For video embeds-->
-                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
-                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
-                                                        </div>-->
-
-                                                        <div class="pane_control">
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
-                                                            </a>
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                                <div class="post_card_footer clearfix">
-                                                    <div class="post_actions pull-right">
-                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
-                                                        <button type="button" data-target="#categories_levels" data-toggle="modal" class="btn btn-primary">Post</button>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="tab-pane fade in" id="question">
-                                                <form class="post_input_widget ">
-                                                    <div class="post_content">
-                                                        <div class="form-group post_input font_bold">
-                                                           <div class="user_avi avi_sm avi_circle">
-                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
-                                                            </div>
-                                                            <textarea class="form-control" rows="5" id="question_input" placeholder="What is your question?"></textarea>
-                                                        </div>
-                                                       
-                                                        <div class="form-group">
-                                                            <a href="#more_info" class="btn-link" data-toggle="collapse">Add more information</a>
-                                                        </div>
-                                                        <div class="panel-collapse collapse" id="more_info">
-                                                            <div class="post_input input_full form-group">
-                                                                <textarea class="form-control" rows="5" placeholder="More details"></textarea>
-                                                                <div class="media_control">
-                                                                    <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
-                                                                        <div class="icon_container">
-                                                                            <i class="icon attachment"></i>
-                                                                        </div>
-                                                                    </a>
+                                                        <textarea class="form-control" rows="5" id="post_input" placeholder="Write something to Juliana"></textarea>
+                                                        <div class="media_control">
+                                                            <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                <div class="icon_container">
+                                                                    <i class="icon attachment"></i>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
-                                                        <img src="img/banners/tm_card_img.jpg">
-                                                        <!--For normal video uploads-->
-                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
-                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
-                                                        </video>
-                                                        <!--For video embeds-->
-                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
-                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
-                                                        </div>-->
-
-                                                        <div class="pane_control">
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
-                                                            </a>
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
                                                             </a>
                                                         </div>
-                                                    </div>
-                                                </form>
-                                                <div class="post_card_footer clearfix">
-                                                    <div class="post_actions pull-right">
-                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
-                                                        <!--Trigger the categories selection modal-->
-                                                        <button type="button" data-target="#categories_levels" data-toggle="modal" class="btn btn-primary">Post</button>
                                                     </div>
                                                 </div>
-                                            </article>
-                                            <article class="tab-pane fade in" id="portfolio">
-                                                <form class="post_input_widget ">
-                                                    <div class="post_content">
-                                                        <div class="form-group font_bold">
-                                                           <label class="sr-only">Title of achievement</label>
-                                                           <input type="text" class="form-control" placeholder="Title of Project/achievement">
-                                                        </div>
-                                                        <div class="post_input form-group">
-                                                            <div class="user_avi avi_sm avi_circle">
-                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
-                                                            </div>
-                                                            <textarea class="form-control" rows="5" id="portfolio_input" placeholder="More about your accomplishment here"></textarea>
-                                                            <div class="media_control">
-                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
-                                                                    <div class="icon_container">
-                                                                        <i class="icon attachment"></i>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
-                                                        <img src="img/banners/tm_card_img.jpg">
-                                                        <!--For normal video uploads-->
-                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
-                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
-                                                        </video>
-                                                        <!--For video embeds-->
-                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
-                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
-                                                        </div>-->
-
-                                                        <div class="pane_control">
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
-                                                            </a>
-                                                            <a href="#" class="control_item">
-                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                                <div class="post_card_footer clearfix">
-                                                    <div class="post_actions pull-right">
-                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
-                                                        <!--Trigger the categories selection modal-->
-                                                        <button type="button" data-target="#categories_levels" data-toggle="modal" class="btn btn-primary">Post</button>
+                                                <!--Only show this pane when a user tries to upload an image to the timeline.-->
+                                                <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                    <img src="img/banners/tm_card_img.jpg" class="">
+                                                    <!--For normal video uploads-->
+                                                    <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                        <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                    </video>
+                                                    <!--For video embeds-->
+                                                    <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                                    </div>-->
+                                                    <div class="pane_control">
+                                                        <a href="#" class="control_item">
+                                                            <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                        </a>
+                                                        <a href="#" class="control_item">
+                                                            <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                        </a>
                                                     </div>
                                                 </div>
-                                            </article>
+                                            </form>
+                                            <div class="post_card_footer clearfix">
+                                                <div class="post_actions pull-right">
+                                                    <button type="button" class="btn collapse_widget btn-card">Cancel</button>
+                                                    <button type="button" class="btn btn-primary">Post</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </article>
@@ -2968,6 +2735,15 @@
     <script src="js/simplemde.min.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+        $(function() {
+           $('#setUsername').modal({
+               show: "true",
+               backdrop: 'static'
+           })
+       });
+    </script>
     
 </body>
 

@@ -10,10 +10,9 @@
     <title>Following | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
-    <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
     <link href="css/base.min.css" rel="stylesheet" type="text/css">
-    <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <link href="css/full_layout.css" rel="stylesheet" type="text/css">
+    <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <script src="js/modernizr.js"></script>
     <!-- Modernizr -->
 </head>
@@ -31,16 +30,31 @@
                 </div>
                 <nav class="sec-nav ">
                     <ul class="account_info">
+                        <li class="hidden-xs">
+                            <a href="#" class="navbar_link_item trigger_search">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_help"></i>
+                            </a>
+                        </li>
+                        <li class="hidden">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_notification"></i>
+                                <span class="badge badge-secondary">3</span>
+                            </a>
+                        </li>
                         <li class="dropdown accounts">
                             <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
                                 <span class="profile_img">
-                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                <img src="img/user_avis/3.jpg" alt="Jane Doe">
                             </span>
                                 <span class="profile_name">Jane Doe</span>
                                 <i class="fa fa-chevron-circle-down"></i></a>
                             <ul class="dropdown-menu dropdown-right">
-                                <li><a href="corp_profile.html"><i class="fa fa-user"></i>Personal Profile</a></li>
-                                <li><a href="skil_profile.html"><i class="fa fa-gears"></i>Skills Profile</a></li>
+                                <li><a href="corp_profile_general.html"><i class="fa fa-user"></i>My Profile</a></li>
                                 <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
                             </ul>
                         </li>
@@ -53,7 +67,7 @@
     <!--Mobile footer navigation-->
     <div class="mobile_nav">
         <ul class="navList">
-            <li class="linkNavMain active">
+            <li class="linkNavMain has_sub ">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_feed"></i>
@@ -64,26 +78,23 @@
                     <h4 class="title">Feeds</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="timeline.html" class="subNavItem">Timeline</a></li>
-                        <li><a href="newsfeed.html" class="subNavItem">Newsfeed</a></li>
+                        <li><a href="newsfeeds.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain">
+            <li class="linkNavMain has_sub">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_request"></i>
                     </span>
-                    <span class="link_title">Directories</span>
+                    <span class="link_title">Discover</span>
                 </a>
                 <div class="subNavTray">
-                    <h4 class="title">Directories</h4>
+                    <h4 class="title">Discover</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
-                        <li><a href="fn_trainings.html" class="subNavItem">Training Directory</a></li>
-                        <li><a href="fn_programs.html" class="subNavItem">Programs Directory</a></li>
-                        <li><a href="#" class="subNavItem">Events</a></li>
                         <li>
                             <a href="#jobs" class="subNavItem" data-toggle="collapse">
                                 Jobs
@@ -91,52 +102,39 @@
                             <div class="collapse" id="jobs">
                                 <ul class="link_nav_children">
                                     <li><a href="jobs.html">Freelancer</a></li>
-                                    <li><a href="jobs.html">Private Tutors</a></li>
-                                    <li><a href="jobs.html">Remote Joba</a></li>
                                     <li><a href="jobs.html">Contract Jobs</a></li>
+                                    <li><a href="jobs.html">Full Jobs</a></li>
+                                    <li><a href="jobs.html">Volunteer</a></li>
+                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
                                 </ul>
                             </div>
                         </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain">
-                <a href="questions.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_forum"></i>
-                    </span>
-                    <span class="link_title">Forum</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Forums</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="conversations.html" class="subNavItem">Discussions</a></li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li><a href="market.html" class="subNavItem">Market</a></li>
                         <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="feedback.html" class="subNavItem">Feedback Requests</a></li>
+                        <li><a href="#" class="subNavItem">Partner Requests</a></li>
+                        <li><a href="#" class="subNavItem">Trainer Requests</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain">
-                <a href="#"  class="mainTrigger">
+            <li class="linkNavMain active">
+                <a href="corp_profile_general.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_market"></i>
+                        <i class="icon icon_user"></i>
                     </span>
-                    <span class="link_title">Market</span>
+                    <span class="link_title">My Profile</span>
                 </a>
-                <div class="subNavTray">
-                    <h4 class="title">Forums</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="requests.html" class="subNavItem">Buyer Requests</a></li>
-                        <li><a href="market.html" class="subNavItem">Shop</a></li>
-                        <li><a href="campaigns.html" class="subNavItem">Campaigns</a></li>
-                        <li><a href="critic_it.html" class="subNavItem">Business Opportunities</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="linkNavMain">
-                <a href="#more" class="more_nav">
+                <a href="help_center.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_help"></i>
+                    </span>
+                    <span class="link_title">Help Center</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="#more" class="trigger_filter mainTrigger">
                     <span class="navIcon color-secondary">
                         <i class="icon icon_more"></i>
                     </span>
@@ -156,85 +154,52 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
+                           <li class="link_nav active">
+                                <a href="corp_profile_general.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_user"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">My Profile</span>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="link_nav has_children">
                                 <a href="#stuffs" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_feed"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">My Profile</span>
+                                        <span class="link_title">Feeds</span>
                                     </div>
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="">My Post</a></li>
-                                        <li><a href="">My Questions</a></li>
-                                        <li><a href="">My Requests</a></li>
-                                        <li><a href="">My Discussions</a></li>
-                                        <li><a href="">My Suggestions</a></li>
-                                        <li><a href="">My Complaints</a></li>
-                                        <li><a href="">My Portfolio</a></li>
+                                        <li><a href="newsfeeds.html">My Timeline</a></li>
+                                        <li><a href="#">Saved Posts</a></li>
+                                        <li><a href="feeds_home.html">Communities</a></li>
                                     </ul>
                                 </div>
                             </li>   
-                            <li class="link_nav active">
-                                <a href="timeline.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_feed"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">News Feed</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="questions.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_question"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Questions</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="conversations.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_convo"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Discussions</span>
-                                    </div>
-                                </a>
-                            </li>
                             <li class="link_nav has_children">
                                 <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Market</span>
+                                        <span class="link_title">Directories</span>
                                     </div>
                                 </a>
                                 <div class="collapse" id="market">
                                     <ul class="link_nav_children">
-                                        <li><a href="market.html">Market Place</a></li>
-                                        <li><a href="requests.html">Buyer Requests</a></li>
+                                        <li><a href="portfolio.html">Talent Directory</a></li>
+                                        <li><a href="requests.html">Partner Requests</a></li>
+                                        <li><a href="requests.html">Trainer Requests</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="link_nav ">
-                                <a href="campaigns.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_campaign"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Campaigns</span>
-                                    </div>
-                                </a>
-                            </li>
                             <li class="link_nav has_children">
-                                <a href="#jobs" data-toggle="collapse">
+                                <a href="#ds_jobs" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
                                     </span>
@@ -242,72 +207,53 @@
                                         <span class="link_title">Jobs</span>
                                     </div>
                                 </a>
-                                <div class="collapse" id="jobs">
+                                <div class="collapse" id="ds_jobs">
                                     <ul class="link_nav_children">
-                                        <li><a href="jobs.html">Short time Jobs</a></li>
-                                        <li><a href="jobs.html">Full time Jobs</a></li>
-                                        <li><a href="jobs.html">Remote Joba</a></li>
-                                        <li><a href="jobs.html">Freelance Jobs</a></li>
+                                        <li><a href="jobs.html">Freelancer</a></li>
+                                        <li><a href="jobs.html">Contract Jobs</a></li>
+                                        <li><a href="jobs.html">Full Jobs</a></li>
+                                        <li><a href="jobs.html">Volunteer</a></li>
+                                        <li><a href="jobs.html">Internships/Apprenticeship</a></li>
                                     </ul>
                                 </div>
                             </li>
                             <li class="link_nav ">
-                                <a href="amas.html">
+                                <a href="questions.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_ama"></i>
+                                        <i class="icon icon_forum"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Mentor Sessions</span>
+                                        <span class="link_title">Questions</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="portfolio.html">
+                                <a href="market.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_market"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Discover Talents</span>
+                                        <span class="link_title">Market</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="timeline.html">
+                                <a href="helpcenter.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_help"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Biz Opportunity</span>
+                                        <span class="link_title">Help Center</span>
                                     </div>
                                 </a>
                             </li>
                             <li class="link_nav ">
-                                <a href="critic_it.html">
+                                <a href="helpcenter.html" class="trigger_filter">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_more"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Critic It</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="requests.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Suggestions</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="requests.html">
-                                    <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
-                                    </span>
-                                    <div class="link_details">
-                                        <span class="link_title">Complaints</span>
+                                        <span class="link_title">Filter</span>
                                     </div>
                                 </a>
                             </li>
@@ -319,7 +265,6 @@
                         <a href="contact_us.html">Contact Us</a></p>
                         <p>&copy; SAEDConnect 2017</p>
                     </div>
-                    
                 </div>
             </aside>
 
@@ -327,69 +272,93 @@
                 <div class="box_wrapper bg_default">
                     
                     <div class="main_wrapper">
-                        <div class="split_layout">
-                            <section class="split_view">
-                                <!--Main view Area-->
-                                <!--Stripped down profile information--> 
-                                <article class="post_card">
-                                    <div class="card_wrapper">
-                                        <div class="profile-highlight">
-                                            <div class="profile-highlight-bg">
+                        
+                        <!--Stripped down profile information--> 
+                        <header class="profile_banner">
+                            <div class="banner_wrapper">
+                                <div class="banner_content text-center">
+                                    <div class="user_photo image_circle">
+                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
+                                        <!--Only accessible to the profile owner-->
+                                        <div class="img_uploader">
+                                            <label for="item_image" class="file_upload">
+                                                <input type="file" name="file" id="item_image" class="inputfile hidden" />
+                                                <i class="icon icon-sm upload_img" title="Upload header image"></i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!--Show this when the user clicks upload image-->
+                                    <div class="action_btn hidden text-center">
+                                        <button type="button" class="btn btn-default btn-rounded">
+                                        Cancel</button>
+                                        <button type="submit" class="btn btn-primary btn-rounded">
+                                        Upload</button>
+                                    </div>
+                                    <div class="content_view">
+                                        <div class="user_info">
+                                            <div class="user_meta">
+                                                <h4 class="">Amammpoh Juliana O</h4>
+                                                <h6 class="font_regular">@Juliana_o</h6>
                                             </div>
-                                            <header class="photo-container">
-                                                <figure class="photo-wrapper">
-                                                    <div class="photo">
-                                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
-                                                    </div>
-                                                </figure>
-                                            </header>
-                                            
-                                            <div class="profile-highlight-content">
-                                               <div class="basic-info centered">
-                                                    <h4 class="">
-                                                        <span class="name ">Amammpoh Juliana O</span> | <span class="font_regular">Activities</span>
-                                                    </h4>
-                                                    
-                                                </div>
-                                                <div class="overview">
-                                                   <p>Lorem ipsum dolor sit amet, vel quam duis sed, adipiscing mattis luctus rhoncus sollicitudin nunc, a viverra ante, risus nunc luctus sed elit posuere, justo ante mattis. Vivamus eleifend, consequat nibh nec risus proin suspendisse</p>
-                                                   
-                                                </div>
-                                                <div class="contact-section centered">
-                                                    <a class="btn btn-secondary font_regular  ">Follow</a>
-                                                </div>
-                                                <nav class="nav-section">
-                                                    <div class="dropdown">
-                                                          <a class=" dropdown-toggle" type="button" data-toggle="dropdown">Wall 
-                                                          <span class="caret"></span></a>
-                                                          <ul class="dropdown-menu">
-                                                            <li><a href="">My Post</a></li>
-                                                            <li><a href="">People I am following</a></li>
-                                                          </ul>
-                                                    </div>
-                                                    <a href="corp_profile_general.html" class="">Profile</a>
-                                                    <a href="profile_following.html" class="">
-                                                        Following
-                                                    </a>
-                                                    <div class="dropdown">
-                                                          <a class="dropdown-toggle" type="button" data-toggle="dropdown">More...
-                                                          <span class="caret"></span></a>
-                                                          <ul class="dropdown-menu dropdown-right">
-                                                            <li><a href="">My Post</a></li>
-                                                            <li><a href="">My Questions</a></li>
-                                                            <li><a href="">My Requests</a></li>
-                                                            <li><a href="">My Discussions</a></li>
-                                                            <li><a href="">My Suggestions</a></li>
-                                                            <li><a href="">My Complaints</a></li>
-                                                            <li><a href="">My Portfolio</a></li>
-                                                            <li><a href="profile_my_followers.html">My Followers</a></li>
-                                                          </ul>
-                                                    </div>
-                                                </nav>
+                                            <p>Lorem ipsum dolor sit amet, vel quam duis sed, adipiscing mattis luctus rhoncus sollicitudin nunc, a viverra ante, risus nunc luctus sed elit posuere, justo ante mattis. Vivamus eleifend, consequat nibh nec risus proin suspendisse</p>
+                                            <div class="action_btn">
+                                                <!--Only visible to a visitor to viewer-->
+                                                <button type="button" class="btn btn-primary btn-rounded">Follow</button>
+                                                <!--only Visible to the owner of the account-->
+                                                <button type="button" class="btn btn-primary btn-rounded"><i class="fa fa-pencil"></i>Edit</button>
                                             </div>
                                         </div>
                                     </div>
-                                </article>
+                                    <div class="content_create hidden">
+                                        <form class="form-horizontal" action="">
+                                            <div class="form-group">
+                                                 <label class="control-label col-sm-4 padding_set">About yourself</label>
+                                                <div class="col-sm-8">
+                                                    <textarea rows="5" class="form-control" placeholder="A brief description of who you are, your interests, and what you do.."></textarea>
+                                                </div>
+                                             </div>
+
+                                            <div class="action_btn text-center">
+                                                <button type="button" class="btn btn-default btn-rounded">
+                                                Cancel</button>
+                                                <button type="submit" class="btn btn-primary btn-rounded">
+                                                Save Changes</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="nav-section">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                      Activity <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="profile_my_activities.html">My Posts</a></li>
+                                        <li><a href="profile_my_activities.html">People I am following</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="corp_profile_general.html">Profile</a></li>
+                                <li><a href="profile_my_followers.html">Followers</a></li>
+                                <li class="active"><a href="profile_following.html">Following</a></li>
+                                <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                         More <span class="caret"></span>
+                                      </a>
+                                      <ul class="dropdown-menu dropdown-right">
+                                        <li><a href="">Post</a></li>
+                                        <li><a href="">Questions</a></li>
+                                        <li><a href="">Requests</a></li>
+                                        <li><a href="">Portfolio</a></li>
+                                        <li><a href="">Shop</a></li>
+                                      </ul>
+                                </li>
+                            </nav>
+                        </header>
+                        
+                        <div class="split_layout">
+                            <section class="split_view">
+                                <!--Main view Area-->
                                 <!--FOllowers list--> 
                                 <div class="card_wrapper follow-section">
                                     <header class="follow-section-header">
@@ -401,13 +370,13 @@
                                             <figure class="info-section">
                                                 <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
                                                 <figcaption>
-                                                    <div class="name font_bold">Jon Snow</div>
-                                                    <div class="handle">@lordCommander</div>
+                                                    <h4 class="name">Jon Snow</h4>
+                                                    <h6 class="handle font_regular">@lordCommander</h6>
                                                 </figcaption>
                                             </figure>
                                         </a>
                                         <div>
-                                            <a class="btn btn-primary">Unfollow</a>
+                                            <button type="button" class="btn btn-sm btn-rounded btn-default">Unfollow</button>
                                         </div>
                                     </article>
                                     <article class="follow-item">
@@ -415,13 +384,13 @@
                                             <figure class="info-section">
                                                 <img src="./img/user_avis/3.jpg" alt="Amamppoh Juliana O">
                                                 <figcaption>
-                                                    <div class="name font_bold">Jon Snow</div>
-                                                    <div class="handle">@lordCommander</div>
+                                                    <h4 class="name">Jon Snow</h4>
+                                                    <h6 class="handle font_regular">@lordCommander</h6>
                                                 </figcaption>
                                             </figure>
                                         </a>
                                         <div>
-                                            <a class="btn btn-primary">unfollow</a>
+                                            <button type="button" class="btn btn-sm btn-rounded btn-primary">unfollow</button>
                                         </div>
                                     </article>
                                     <article class="follow-item">
@@ -429,13 +398,13 @@
                                             <figure class="info-section">
                                                 <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
                                                 <figcaption>
-                                                    <div class="name font_bold">Jon Snow</div>
-                                                    <div class="handle">@lordCommander</div>
+                                                    <h4 class="name">Jon Snow</h4>
+                                                    <h6 class="handle font_regular">@lordCommander</h6>
                                                 </figcaption>
                                             </figure>
                                         </a>
                                         <div>
-                                            <a class="btn btn-primary">Unfollow</a>
+                                            <button type="button" class="btn btn-sm btn-rounded btn-default">Unfollow</button>
                                         </div>
                                     </article>
                                     <article class="follow-item">
@@ -443,13 +412,13 @@
                                             <figure class="info-section">
                                                 <img src="./img/user_avis/3.jpg" alt="Amamppoh Juliana O">
                                                 <figcaption>
-                                                    <div class="name font_bold">Jon Snow</div>
-                                                    <div class="handle">@lordCommander</div>
+                                                    <h4 class="name">Jon Snow</h4>
+                                                    <h6 class="handle font_regular">@lordCommander</h6>
                                                 </figcaption>
                                             </figure>
                                         </a>
                                         <div>
-                                            <a class="btn btn-primary">unfollow</a>
+                                            <button type="button" class="btn btn-sm btn-rounded btn-primary">unfollow</button>
                                         </div>
                                     </article>
                                     <article class="follow-item">
@@ -457,13 +426,13 @@
                                             <figure class="info-section">
                                                 <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
                                                 <figcaption>
-                                                    <div class="name font_bold">Jon Snow</div>
-                                                    <div class="handle">@lordCommander</div>
+                                                    <h4 class="name">Jon Snow</h4>
+                                                    <h6 class="handle font_regular">@lordCommander</h6>
                                                 </figcaption>
                                             </figure>
                                         </a>
                                         <div>
-                                            <a class="btn btn-primary">Unfollow</a>
+                                            <button type="button" class="btn btn-sm btn-rounded btn-default">Unfollow</button>
                                         </div>
                                     </article>
                                     <article class="follow-item">
@@ -471,13 +440,13 @@
                                             <figure class="info-section">
                                                 <img src="./img/user_avis/3.jpg" alt="Amamppoh Juliana O">
                                                 <figcaption>
-                                                    <div class="name font_bold">Jon Snow</div>
-                                                    <div class="handle">@lordCommander</div>
+                                                    <h4 class="name">Jon Snow</h4>
+                                                    <h6 class="handle font_regular">@lordCommander</h6>
                                                 </figcaption>
                                             </figure>
                                         </a>
                                         <div>
-                                            <a class="btn btn-primary">unfollow</a>
+                                            <button type="button" class="btn btn-sm btn-rounded btn-primary">unfollow</button>
                                         </div>
                                     </article>
                                 </div>

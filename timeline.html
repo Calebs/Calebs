@@ -789,8 +789,9 @@
                     <h4 class="title">Feeds</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="timeline.html" class="subNavItem">General Timeline</a></li>
                         <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
                     </ul>
                 </div>
             </li>
@@ -827,28 +828,13 @@
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain has_sub">
-                <a href="#" class="mainTrigger">
+            <li class="linkNavMain">
+                <a href="corp_profile_general.html" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_user"></i>
                     </span>
                     <span class="link_title">My Profile</span>
                 </a>
-                <div class="subNavTray">
-                    <h4 class="title">My Profile</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="user_wall.html">My Wall</a></li>
-                        <li><a href="corp_profile_general.html">About Me</a></li>
-                        <li><a href="#">My Shop</a></li>
-                        <li><a href="#">My Requests</a></li>
-                        <li><a href="corp_profile_interests.html">My interests</a></li>
-                        <li><a href="corp_profile_skills.html">My Skills</a></li>
-                        <li><a href="#">My Achievements</a></li>
-                        <li><a href="#">My Questions</a></li>
-                        <li><a href="corp_profile_settings.html">Account settings</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="linkNavMain">
                 <a href="help_center.html" class="mainTrigger">
@@ -896,8 +882,8 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
-                           <li class="link_nav has_children">
-                                <a href="#ds_profile" data-toggle="collapse">
+                           <li class="link_nav">
+                                <a href="corp_profile_general.html" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_user"></i>
                                     </span>
@@ -905,19 +891,6 @@
                                         <span class="link_title">My Profile</span>
                                     </div>
                                 </a>
-                                <div class="collapse" id="ds_profile">
-                                    <ul class="link_nav_children">
-                                        <li><a href="user_wall.html">My Wall</a></li>
-                                        <li><a href="corp_profile_general.html">About Me</a></li>
-                                        <li><a href="#">My Shop</a></li>
-                                        <li><a href="#">My Requests</a></li>
-                                        <li><a href="corp_profile_interests.html">My interests</a></li>
-                                        <li><a href="corp_profile_skills.html">My Skills</a></li>
-                                        <li><a href="#">My Achievements</a></li>
-                                        <li><a href="#">My Questions</a></li>
-                                        <li><a href="corp_profile_settings.html">Account settings</a></li>
-                                    </ul>
-                                </div>
                             </li>
                             <li class="link_nav active has_children">
                                 <a href="#stuffs" data-toggle="collapse">
@@ -930,8 +903,9 @@
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="timeline.html">General Timeline</a></li>
                                         <li><a href="newsfeeds.html">My Timeline</a></li>
+                                        <li><a href="#">Saved Posts</a></li>
+                                        <li><a href="feeds_home.html">Communities</a></li>
                                     </ul>
                                 </div>
                             </li>   
@@ -1172,7 +1146,7 @@
                                                        </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9">
+                                                    <div class="media_preview">
                                                         <img src="img/banners/tm_card_img.jpg" class="hidden">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -1411,7 +1385,7 @@
                                     </div>
                                 </article>
                                 
-                                <article class="post_card post_pinned has_comment">
+                                <article class="post_card has_comment">
                                     <div class="card_wrapper">
                                         <div class="post_card_header">
                                             <div class="post_heading">
@@ -1425,19 +1399,16 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">Abia State SAED</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">2ds</time>
+                                                                <time datetime="25-6-2016">2d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">Admin</span>
+                                                        <span class="title_text">@AbiaSAED</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn">
+                                                    <a href="#" class="ff_btn" title="Follow">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -1534,7 +1505,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -1608,20 +1579,17 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">Adedire Oluwaseun</a>
                                                             <p class="post_time" title="1 month ago">
-                                                                <time datetime="25-6-2017">4ds</time>
+                                                                <time datetime="25-6-2017">4d</time>
                                                             </p>
                                                         </div>
                                                         <!--Portfolio Skill area-->
-                                                        <span class="title_text">User</span>
+                                                        <span class="title_text">@ChristianDrey</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                    <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn is_following">
+                                                    <a href="#" class="ff_btn is_following" title="Following">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -1717,7 +1685,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -1790,19 +1758,16 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">MTN Nigeria</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">2ds</time>
+                                                                <time datetime="25-6-2016">2d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">Partner</span>
+                                                        <span class="title_text">@MTN_Nigeria</span>
                                                     </div>
                                                 </div>    
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn is_following">
+                                                    <a href="#" class="ff_btn is_following" title="Following">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -1895,7 +1860,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -1969,19 +1934,16 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">Segun Araromi</a>
                                                             <p class="post_time" title="1 month ago">
-                                                                <time datetime="25-6-2017">2ds</time>
+                                                                <time datetime="25-6-2017">2d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">Partner</span>
+                                                        <span class="title_text">@d_segun</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn is_following">
+                                                    <a href="#" class="ff_btn is_following" title="Following">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -2100,7 +2062,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -2173,15 +2135,15 @@
                                                        <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">Dexters and heroes</a>
                                                             <p class="post_time" title="4 days ago">
-                                                                <time datetime="25-6-2016">4ds</time>
+                                                                <time datetime="25-6-2016">4d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">Partner</span>
+                                                        <span class="title_text">@dexters_n_heroes</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn is_following">
+                                                    <a href="#" class="ff_btn is_following" title="You are following">
                                                         <i class="icon icon_f_stat"></i>
                                                     </a>
                                                     <a href="timeline_comments.html">
@@ -2283,7 +2245,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -2356,19 +2318,16 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">MTN Nigeria</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">2ds</time>
+                                                                <time datetime="25-6-2016">2d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">Conversation Title here</span>
+                                                        <span class="title_text">@MTN_Nigeria</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn is_following">
+                                                    <a href="#" class="ff_btn is_following" You are following>
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -2463,7 +2422,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -2536,19 +2495,16 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">SAEDConnect Support</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">5hrs</time>
+                                                                <time datetime="25-6-2016">5h</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">Admin</span>
+                                                        <span class="title_text">@Support</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn is_following">
+                                                    <a href="#" class="ff_btn is_following" title="You are following">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -2659,19 +2615,16 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">MTN Nigeria</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">2ds</time>
+                                                                <time datetime="25-6-2016">2d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">Partner</span>
+                                                        <span class="title_text">@MTN_Nigeria</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn is_following">
+                                                    <a href="#" class="ff_btn is_following" title="You are following">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -2768,7 +2721,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -2842,20 +2795,17 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">Mmpape Paul</a>
                                                             <p class="post_time" title="1 month ago">
-                                                                <time datetime="25-6-2017">4ds</time>
+                                                                <time datetime="25-6-2017">4d</time>
                                                             </p>
                                                         </div>
                                                         <!--Portfolio Skill area-->
-                                                        <span class="title_text">Corps Member</span>
+                                                        <span class="title_text">@Paul1245</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn">
+                                                    <a href="#" class="ff_btn" title="You are following">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -2952,7 +2902,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -3026,20 +2976,17 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">Alayo Hussain</a>
                                                             <p class="post_time" title="1 month ago">
-                                                                <time datetime="25-6-2017">4ds</time>
+                                                                <time datetime="25-6-2017">4d</time>
                                                             </p>
                                                         </div>
                                                         <!--Portfolio Skill area-->
-                                                        <span class="title_text">Corps Member</span>
+                                                        <span class="title_text">@huzaynbolt</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn">
+                                                    <a href="#" class="ff_btn" title="Follow">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -3136,7 +3083,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -3209,19 +3156,16 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">National SAED</a>
                                                             <p class="post_time" title="1 month ago">
-                                                                <time datetime="25-6-2017">1mnt</time>
+                                                                <time datetime="25-6-2017">1m</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">Admin</span>
+                                                        <span class="title_text">@NationalSAED</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                    <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn is_following">
+                                                    <a href="#" class="ff_btn is_following" title="You are following">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -3343,7 +3287,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -3415,22 +3359,18 @@
                                                     </div>
                                                     <div class="user_info">
                                                         <div class="profile_title">
-                                                            <a href="user_profile.html" class="title_text">Sule Zankara</a>
+                                                            <a href="user_profile.html" class="title_text">Segun Araromi</a>
                                                             <p class="post_time" title="1 month ago">
-                                                                <time datetime="25-6-2017">3ds</time>
+                                                                <time datetime="25-6-2017">1m</time>
                                                             </p>
                                                         </div>
-                                                        <!--Portfolio Skill area-->
-                                                        <a href="conversation_view.html" class="title_text">Carpentry</a>
+                                                        <span class="title_text">@d_segun</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
                                                     <!--toggle: "is_following"-->
-                                                    <a href="#" class="ff_btn">
+                                                    <a href="#" class="ff_btn" title="Follow">
                                                         <i class="icon icon_f_stat"></i>
-                                                    </a>
-                                                    <a href="timeline_comments.html">
-                                                        <i class="fa fa-external-link"></i>
                                                     </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
@@ -3549,7 +3489,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
