@@ -18,6 +18,7 @@
 </head>
 
 <body class="">
+   
     <header role="banner">
         <div class="navbar navbar-default" role="navigation">
             <div class="container">
@@ -29,12 +30,17 @@
                 </div>
                 <nav class="sec-nav ">
                     <ul class="account_info">
+                        <li class="hidden-xs">
+                            <a href="#" class="navbar_link_item trigger_search">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
                         <li class="">
                             <a href="#" class="navbar_link_item">
                                 <i class="icon icon_help"></i>
                             </a>
                         </li>
-                        <li class="">
+                        <li class="hidden">
                             <a href="#" class="navbar_link_item">
                                 <i class="icon icon_notification"></i>
                                 <span class="badge badge-secondary">3</span>
@@ -61,7 +67,7 @@
     <!--Mobile footer navigation-->
     <div class="mobile_nav">
         <ul class="navList">
-            <li class="linkNavMain  has_sub ">
+            <li class="linkNavMain has_sub ">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_feed"></i>
@@ -72,8 +78,9 @@
                     <h4 class="title">Feeds</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="timeline.html" class="subNavItem">General Timeline</a></li>
-                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="newsfeeds.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
                     </ul>
                 </div>
             </li>
@@ -110,28 +117,13 @@
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain active has_sub">
-                <a href="#" class="mainTrigger">
+            <li class="linkNavMain active">
+                <a href="corp_profile_general.html" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_user"></i>
                     </span>
                     <span class="link_title">My Profile</span>
                 </a>
-                <div class="subNavTray">
-                    <h4 class="title">My Profile</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="user_wall.html">My Wall</a></li>
-                        <li><a href="corp_profile_general.html">About Me</a></li>
-                        <li><a href="#">My Shop</a></li>
-                        <li><a href="#">My Requests</a></li>
-                        <li><a href="corp_profile_interests.html">My interests</a></li>
-                        <li><a href="corp_profile_skills.html">My Skills</a></li>
-                        <li><a href="#">My Achievements</a></li>
-                        <li><a href="#">My Questions</a></li>
-                        <li><a href="corp_profile_settings.html">Account settings</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="linkNavMain">
                 <a href="help_center.html" class="mainTrigger">
@@ -154,7 +146,7 @@
     
     <!-- work as ST-container-->
     <main class="sd-main-content bg-off-white">
-        <header class="page_header is_fixed">
+        <header class="page_header has_back is_fixed">
             <div class="header_wrapper">
                 <div class="back_arrow">
                     <a href="#" class="go_back">
@@ -162,7 +154,8 @@
                     </a>
                 </div>
                 <div class="page_nav">
-                    <h2 class="title">My Skills</h2>
+                    <h2 class="title">Amammpoh Juliana O</h2>
+                    <p class="subtitle">Skills</p>
                 </div>
                 <div class="pg_search">
                     <button class="btn_search trigger_search">
@@ -181,8 +174,8 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
-                           <li class="link_nav active has_children">
-                                <a href="#ds_profile" data-toggle="collapse">
+                           <li class="link_nav active">
+                                <a href="corp_profile_general.html">
                                     <span class="itemIcon">
                                         <i class="icon icon_user"></i>
                                     </span>
@@ -190,20 +183,6 @@
                                         <span class="link_title">My Profile</span>
                                     </div>
                                 </a>
-                                <div class="collapse" id="ds_profile">
-                                    <ul class="link_nav_children">
-                                        <li><a href="user_wall.html">My Wall</a></li>
-                                        <li><a href="corp_profile_general.html">About Me</a></li>
-                                        <li><a href="#">My Shop</a></li>
-                                        <li><a href="#">My Requests</a></li>
-                                        <li><a href="#">My Tutuor Profile</a></li>
-                                        <li><a href="corp_profile_interests.html">My interests</a></li>
-                                        <li class="active"><a href="corp_profile_skills.html">My Skills</a></li>
-                                        <li><a href="#">My Achievements</a></li>
-                                        <li><a href="#">My Questions</a></li>
-                                        <li><a href="corp_profile_settings.html">Account settings</a></li>
-                                    </ul>
-                                </div>
                             </li>
                             <li class="link_nav has_children">
                                 <a href="#stuffs" data-toggle="collapse">
@@ -216,8 +195,9 @@
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="timeline.html">General Timeline</a></li>
                                         <li><a href="newsfeeds.html">My Timeline</a></li>
+                                        <li><a href="#">Saved Posts</a></li>
+                                        <li><a href="feeds_home.html">Communities</a></li>
                                     </ul>
                                 </div>
                             </li>   
@@ -310,7 +290,64 @@
 
             <section class="layout_content">
                 <div class="box_wrapper bg_default">
+                   
                     <div class="main_wrapper">
+                        
+                        <!--Stripped down profile information--> 
+                        <header class="profile_banner profile_table_view">
+                            <div class="banner_wrapper">
+                                <div class="profile_info">
+                                    <div class="user_photo image_circle">
+                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
+                                    </div>
+                                    <div class="user_info">
+                                        <div class="user_meta color-white">
+                                            <h4 class="">Amammpoh Juliana O</h4>
+                                            <h6 class="font_regular">@Juliana_o</h6>
+                                        </div>
+                                        <div class="">
+                                            <!--Only visible to a visitor to viewer-->
+                                            <button type="button" class="btn btn-primary btn-sm btn-rounded">Follow</button>
+                                            <!--SHow if following-->
+                                            <button type="button" class="btn hidden btn-default btn-sm btn-rounded">Following</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="nav-section">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                      Activity <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="profile_my_activities.html">My Posts</a></li>
+                                        <li><a href="profile_my_activities.html">People I am following</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="corp_profile_general.html">Profile</a></li>
+                                <li class="hidden-xs"><a href="profile_my_followers.html">Followers</a></li>
+                                <li class="hidden-xs"><a href="profile_following.html">Following</a></li>
+                                <li class="dropdown active">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                     More <span class="caret"></span>
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-right">
+                                    <li><a href="user_shop.html">Shop</a></li>
+                                    <li><a href="user_questions.html">Questions</a></li>
+                                    <li><a href="user_portfolio.html">Portfolio</a></li>
+                                    <li><a href="user_jobs.html">Jobs</a></li>
+                                    <li><a href="user_requests.html">Requests</a></li>
+                                    <li><a href="corp_profile_tutor.html">Tutor Profile</a></li>
+                                    <li class="visible-xs"><a href="profile_my_followers.html">Followers</a></li>
+                                    <li class="visible-xs"><a href="profile_following.html">Following</a></li>
+                                    <li><a href="corp_profile_skills.html">Skills</a></li>
+                                    <li><a href="corp_profile_interests.html">Interests</a></li>
+                                    <li><a href="corp_profile_settings.html">Account Settings</a></li>
+                                  </ul>
+                                </li>
+                            </nav>
+                        </header> 
+                        
                         <div class="split_layout">
                             <section class="split_view">
                                 <!--Main view Area--> 

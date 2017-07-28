@@ -7,12 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>My Activities | SAEDConnect</title>
+    <title>My Timeline | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
     <link href="css/base.min.css" rel="stylesheet" type="text/css">
-    <link href="css/full_layout.css" rel="stylesheet" type="text/css">
     <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <script src="js/modernizr.js"></script>
     <!-- Modernizr -->
@@ -20,34 +19,6 @@
 
 <body class="">
    
-   <!--use this to prompt an existing user that has no username to create a username-->
-    <div class="modal fade in" id="setUsername">
-        <div class="modal-dialog">
-            <div class="modal-content seedBg">
-                <div class="modal-header text-center">
-                    <h4 class="modal-title color-white">Create a Username</h4>
-                </div>
-                <div class="modal-body text-center">
-                    <div class="content-panel color-white text-center">
-                        <h2 class="title color-white">Hello Babatunde!</h2>
-                        <p>In a bid to improve your experience, we have introduced the ability for you to find and follow people with their usernames. </p>
-
-                        <div class="dialog_form form_centered">
-                            <form action="">
-                                <div class="form-group">
-                                    <input type="text" class="form-control text-center form_rounded" placeholder="E.g justina_21">
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-rounded btn-secondary">Create Username</button>
-                                </div>
-                            </form> 
-                        </div>    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <div class="modal fade in" id="attach_media">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -103,6 +74,499 @@
         </div>
     </div>
     
+    <div class="modal fade in" id="post_category">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="content-panel">
+                        <h4 class="title">This is a</h4>
+                        
+                        <div class="select_grid">
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">General/Gist</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Tips</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Training</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Program</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Events</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Success Story</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Inspiration</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">Business Ideas</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade in" id="post_tags">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                    <h4 class="modal-title">Tag post as</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="content-panel">
+                        <h4 class="title">Select a category</h4>
+                        <div class="select_grid">
+                            <!--List top level categories here adding the class "has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Updates</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Small Business</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Agro Business</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Career Development</button>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="alt_panel">
+                        <h4 class="title">Select sub-category
+                        </h4>
+                        <!--List the children category of the selected category-->
+                        <div class="list_children">
+                           <div class="select_grid select_check">
+                                <div class="my_selector">
+                                    <label for="updates_1" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="updates_1">
+                                        <span class="c_label">NYSC</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="updates_2" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="updates_2">
+                                        <span class="c_label">NYSC SAED</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="updates_3" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="updates_3">
+                                        <span class="c_label">Youth Empowerment</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="updates_4" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="updates_4">
+                                        <span class="c_label">Civic Duty</span>
+                                    </label>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="more-btn">
+                            <a href="#" class="track_back btn btn-rounded btn-grey">
+                                <i class="fa fa-chevron-left"></i>
+                                Back
+                            </a>
+                            <button type="button" class="btn btn-rounded btn-primary">Attach Tag(s)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <!--Location Selector-->
+    <div class="modal fade in" id="post_states">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="modal-title">Post to State</h4>
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body">
+                   
+                    <div class="content-panel">
+                        <p class="subtitle">Only users in the state(s) you select will be able to see this post.</p>
+                            
+                        <div class="step_form">
+                            <div class="multi_sel_item">
+                                <label class="checkbox-inline control_item" for="user_all">
+                                    <input type="checkbox" checked id="user_all">
+                                    <span>Nationwide</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-rounded" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary btn-rounded">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    <!--Use this to select post category and subcategories-->
+    <div class="modal fade in" id="categories_levels">
+        <div class="modal-dialog layered_modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                   <!--This is the pain that renders the sub category for any selected Category-->
+                    <div class="alt_panel">
+                        <h4 class="title">
+                           <!--Title of selected Category-->
+                            <span class="">Select a Sub Category</span>
+                        </h4>
+                        <p class="subtitle"><span>Training:</span> Please select a Sub-Category under [Category Name] to enable us better classify your post.</p>
+                        <!--List the Sub category of the selected category-->
+                        <div class="list_children">
+                           <div class="select_grid select_radio">
+                                <div class="my_selector active">
+                                    <label for="sub_cat_1" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" checked name="pst_type" id="sub_cat_1">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_2" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_2">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_3" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_3">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_4" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_4">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_5" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_5">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_6" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_6">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_7" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_7">
+                                    <span class="c_label">Sub-category name</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_8" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_8">
+                                        <span class="c_label">Sub-category name</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_9" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_9">
+                                        <span class="c_label">Sub-category name</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_10" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sub_cat_10">
+                                        <span class="c_label">Sub-category name</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_11" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" checked name="pst_type" id="sub_cat_11">
+                                    <span class="c_label">English</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_12" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_12">
+                                    <span class="c_label">Music</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_13" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_13">
+                                    <span class="c_label">CV Writing</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_14" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_14">
+                                    <span class="c_label">Communication</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_15" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_15">
+                                    <span class="c_label">Art/Design</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_16" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_16">
+                                    <span class="c_label">Music</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_17" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_17">
+                                    <span class="c_label">CV Writing</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sub_cat_18" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="sub_cat_18">
+                                    <span class="c_label">Communication</span>
+                                </label>
+                                </div>
+                           </div>
+                        </div>
+                        
+                        <div class="more-btn">
+                            <a href="#" class="track_back btn btn-rounded btn-grey">
+                                <i class="fa fa-chevron-left"></i>
+                                Back
+                            </a>
+                            <!--This should Post to the timeline-->
+                            <button type="button" class="btn btn-rounded btn-primary">Post</button>
+                        </div>
+                    </div>
+                    
+                    <div class="content-panel">
+                        <h4 class="title">Select a Category</h4>
+                        <p class="subtitle">This post best fits under:</p>
+                        
+                        <div class="select_grid">
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Training</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Writing</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Programming</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Fashion</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Multimedia</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">Engineering</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--use this to select request types for posts like - Buy/Hire-->
+    <div class="modal fade in" id="request_type">
+        <div class="modal-dialog layered_modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> I am looking for...</h4>
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="content-panel">
+                        <div class="select_grid">
+                           <!--List top level categories here adding the class "Has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Product</button>
+                            </div>
+                            
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Skilled Person for a Job</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Volunteer/Partner</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Freelancer</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Private Tutor</button>
+                            </div>
+                            <div class="category_item">
+                                <button type="submit" class="btn btn-sm cat_button">A Service</button>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="alt_panel">
+                        <h4 class="title">How do you want this
+                            <!--Name of selected category here--> 
+                            <span class="">Product</span>
+                        </h4>
+                        <!--List the children category of the selected category-->
+                        <div class="list_children">
+                           <div class="select_grid select_radio">
+                                <div class="my_selector">
+                                    <label for="it_buy" class="control-wrapper radio-inline">
+                                    <input type="radio" class="select_control" name="pst_type" id="it_buy">
+                                    <span class="c_label">Buy</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="it_lease" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="it_lease">
+                                        <span class="c_label">Short Lease</span>
+                                    </label>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="more-btn">
+                            <a href="#" class="track_back btn btn-rounded btn-grey">
+                                <i class="fa fa-chevron-left"></i>
+                                Back
+                            </a>
+                            <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--use this to select request types for posts like - Buy/Hire-->
+    <div class="modal fade in" id="sell_type">
+        <div class="modal-dialog layered_modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="alt_panel">
+                        <h4 class="title">Select available payment Options
+                        </h4>
+                        <!--List the children category of the selected category-->
+                        <div class="list_children">
+                           <div class="select_grid select_radio">
+                                <div class="my_selector">
+                                    <label for="sell_buy" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sell_buy">
+                                        <span class="c_label">Buy</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sell_lease" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sell_lease">
+                                        <span class="c_label">Lease</span>
+                                    </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="sell_stag" class="control-wrapper radio-inline">
+                                        <input type="radio" class="select_control" name="pst_type" id="sell_stag">
+                                        <span class="c_label">Staggered payment</span>
+                                    </label>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="more-btn">
+                            <a href="#" class="track_back btn btn-rounded btn-grey">
+                                <i class="fa fa-chevron-left"></i>
+                                Back
+                            </a>
+                            <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                        </div>
+                    </div>
+                    <div class="content-panel">
+                        <h4 class="title">Merchandise Type</h4>
+                        <div class="select_grid">
+                           <!--List top level categories here adding the class "Has_children" to categories that have subcategories. Categories without subcategories should perform the submit action -->
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Product</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Service</button>
+                            </div>
+                            <div class="category_item has_children">
+                                <button type="submit" class="btn btn-sm cat_button">A Product/Service Combo</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="floatingWidget searchWidget">
         <div class="widget-wrapper">
             <span class="widget_close">
@@ -113,7 +577,7 @@
                     <h4 class="title text_caps color-white">Search</h4>
                     <form action="">
                         <div class="form-group">
-                            <input type="search" class="form-control search_control" placeholder="Search the timeline...">
+                            <input type="search" class="form-control search_control" placeholder="Find People or topics on SAEDConnect...">
                         </div>
                         <div class="more-btn">
                             <button class="btn btn-rounded btn-lg btn-secondary">
@@ -125,16 +589,147 @@
             </div>
         </div>
     </div>
-
-    <div class="alert alert_secondary">
-        <div class="container wrapper">
-            <div class="alert_info text-center">
-                <p>Your email address <span class="font_bold">john_doe@gmail.com</span> has not been verified. <a href="email_verification.html" class="font_bold">Click Here</a> to confirm your email address</p>
-            </div>
-            <button type="button" class="close_dialog" data-dismiss="alert" aria-hidden="true"></button>
-       </div>
-    </div>
     
+    <div class="floatingWidget catFilter">
+        <div class="widget-wrapper">
+           <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content text-center">
+                <!--<h4 class="title text_caps color-white">Filter Questions By</h4>-->
+                <h4 class="title text_caps color-white">Filter list By</h4>
+                
+                <div class="content-panel color-white">
+                    <div class="select_grid">
+                        <!--Clicking on any of these buttons should show its categories in the list below--> 
+                        <!--Add active to the item the user is filtering by--> 
+                        <div class="category_item active">
+                            <a href="#" class="btn btn-sm cat_button">Post Type</a>
+                        </div>
+                        <div class="category_item">
+                            <a href="#" class="btn btn-sm cat_button">Interests</a>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <!--Use this to present post type and hide when the user clicks another option-->
+                    <div class="select_grid color-default select_check">
+                        <div class="my_selector">
+                            <label for="pst_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_1">
+                                <span class="c_label">General/Gists</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_2">
+                                <span class="c_label">Tips</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_3">
+                                <span class="c_label">Business Ideas</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_4" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_4">
+                                <span class="c_label">Programs</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_5" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_5">
+                                <span class="c_label">Trainings</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_6" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_6">
+                                <span class="c_label">Events</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_7" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_7">
+                                <span class="c_label">Inspirations</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_8" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_8">
+                                <span class="c_label">Success Stories</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!--Use this to present interest tags/Platform Categories-->
+                    <div class="select_grid hidden">
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Updates</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Small Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Agro Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Career Development</button>
+                        </div>
+                    </div>                       
+                </div>
+                 <!--Contains the sub categories for any selected industry-->
+                <div class="alt_panel">
+                    <!--List the Sub category of the selected category-->
+                    <div class="list_children">
+                       <div class="select_grid select_check">
+                            <div class="my_selector">
+                                <label for="tagSub_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_1">
+                                <span class="c_label">Programming</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_2">
+                                <span class="c_label">Software Design</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_3">
+                                <span class="c_label">Telecommunications</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_4" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_4">
+                                    <span class="c_label">Hardware</span>
+                                </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_5" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_5">
+                                    <span class="c_label">World wide web</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-btn">
+                        <a href="#" class="track_back btn btn-rounded btn-grey">
+                            <i class="fa fa-chevron-left"></i>
+                            Back
+                        </a>
+                        <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header role="banner">
         <div class="navbar navbar-default" role="navigation">
             <div class="container">
@@ -180,9 +775,10 @@
         </div>
     </header>
     
+    <!--Mobile footer navigation-->
     <div class="mobile_nav">
         <ul class="navList">
-            <li class="linkNavMain has_sub ">
+            <li class="linkNavMain active has_sub ">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_feed"></i>
@@ -193,9 +789,10 @@
                     <h4 class="title">Feeds</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="newsfeeds.html" class="subNavItem">My Timeline</a></li>
-                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
                         <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
+                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
                     </ul>
                 </div>
             </li>
@@ -232,7 +829,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain active">
+            <li class="linkNavMain">
                 <a href="corp_profile_general.html" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_user"></i>
@@ -260,7 +857,7 @@
     </div>
     
     <main class="sd-main-content bg-off-white">
-        <header class="page_header has_back is_fixed">
+        <header class="page_header is_fixed">
             <div class="header_wrapper">
                 <div class="back_arrow">
                     <a href="#" class="go_back">
@@ -268,8 +865,7 @@
                     </a>
                 </div>
                 <div class="page_nav">
-                    <h2 class="title">Amammpoh Juliana O</h2>
-                    <p class="subtitle">Activities</p>
+                    <h2 class="title">My Timeline</h2>
                 </div>
                 <div class="pg_search">
                     <button class="btn_search trigger_search">
@@ -287,7 +883,7 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
-                           <li class="link_nav active">
+                           <li class="link_nav">
                                 <a href="corp_profile_general.html">
                                     <span class="itemIcon">
                                         <i class="icon icon_user"></i>
@@ -297,7 +893,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="link_nav has_children">
+                            <li class="link_nav active has_children">
                                 <a href="#stuffs" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_feed"></i>
@@ -308,12 +904,13 @@
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="newsfeeds.html">My Timeline</a></li>
-                                        <li><a href="#">Saved Posts</a></li>
+                                        <li class="active"><a href="newsfeeds.html">My Timeline</a></li>
+                                        <li><a href="timeline.html">Global Timeline</a></li>
                                         <li><a href="feeds_home.html">Communities</a></li>
+                                        <li><a href="#">Saved Posts</a></li>
                                     </ul>
                                 </div>
-                            </li>    
+                            </li>   
                             <li class="link_nav has_children">
                                 <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
@@ -405,116 +1002,391 @@
                 <div class="box_wrapper bg_default">
                     
                     <div class="main_wrapper">
-                        <!--Stripped down profile information--> 
-                        <header class="profile_banner profile_table_view">
-                            <div class="banner_wrapper">
-                                <div class="profile_info">
-                                    <div class="user_photo image_circle">
-                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
-                                    </div>
-                                    <div class="user_info">
-                                        <div class="user_meta color-white">
-                                            <h4 class="">Amammpoh Juliana O</h4>
-                                            <h6 class="font_regular">@Juliana_o</h6>
-                                        </div>
-                                        <div class="">
-                                            <!--Only visible to a visitor to viewer-->
-                                            <button type="button" class="btn btn-primary btn-sm btn-rounded">Follow</button>
-                                            
-                                            <!--SHow if following-->
-                                            <button type="button" class="btn hidden btn-default btn-sm btn-rounded">Following</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <nav class="nav-section">
-                                <li class="active dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                      Activity <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="profile_my_activities.html">My Posts</a></li>
-                                        <li><a href="profile_my_activities.html">People I am following</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="corp_profile_general.html">Profile</a></li>
-                                <li class="hidden-xs"><a href="profile_my_followers.html">Followers</a></li>
-                                <li class="hidden-xs"><a href="profile_following.html">Following</a></li>
-                                <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                     More <span class="caret"></span>
-                                  </a>
-                                  <ul class="dropdown-menu dropdown-right">
-                                    <li><a href="user_shop.html">Shop</a></li>
-                                    <li><a href="user_questions.html">Questions</a></li>
-                                    <li><a href="user_portfolio.html">Portfolio</a></li>
-                                    <li><a href="user_jobs.html">Jobs</a></li>
-                                    <li><a href="user_requests.html">Requests</a></li>
-                                    <li><a href="corp_profile_tutor.html">Tutor Profile</a></li>
-                                    <li class="visible-xs"><a href="profile_my_followers.html">Followers</a></li>
-                                    <li class="visible-xs"><a href="profile_following.html">Following</a></li>
-                                    <li><a href="corp_profile_skills.html">Skills</a></li>
-                                    <li><a href="corp_profile_interests.html">Interests</a></li>
-                                    <li><a href="corp_profile_settings.html">Account Settings</a></li>
-                                  </ul>
-                                </li>
-                            </nav>
-                        </header> 
-                        
+                        <div class="section_header hidden">
+                            <h2 class="section_title">General Timeline</h2>
+                            <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos quia facilis necessitatibus accusantium aperiam aliquam veritatis ad! Amet neque quis recusandae, dolor est ut. Omnis eius hic repellat laborum non.</p>
+                        </div>
                         <div class="split_layout">
                             <section class="split_view">
                                 <!--Main view Area--> 
-                                                                                                                           
+                                <!--toggle class 'has_new' to show or hide the updates bubble-->
+                                <div class="update_prompt">
+                                    <a href="#"><span>25 New Updates</span></a>
+                                </div>
+
                                 <article class="post_card new_post_widget ">
                                     <div class="card_wrapper">
-                                        <div class="post_input_widget">
-                                            <form class="">
-                                                <div class="post_content">
-                                                    <div class="post_input form-group">
-                                                        <div class="user_avi avi_sm avi_circle">
-                                                            <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                        <div class="post_card_header">
+                                            <nav class="post_type_nav">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="active"><a href="#general" data-toggle="tab">Post</a></li>
+                                                    <li class=""><a href="#buy_hire" data-toggle="tab">Need</a></li>
+                                                    <li class=""><a href="#sell" data-toggle="tab">Sell</a></li>
+                                                    <li class=""><a href="#question" data-toggle="tab">Ask</a></li>
+                                                    <li class=""><a href="#portfolio" data-toggle="tab">MyAchievements</a></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                        <div class="tab-content">
+                                            <article class="tab-pane fade active in" id="general">
+                                                <form class="post_input_widget ">
+                                                    <div class="post_content">
+                                                        <div class="post_input form-group">
+                                                            <div class="user_avi avi_sm avi_circle">
+                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                                            </div>
+                                                            <textarea class="form-control" rows="5" id="post_input" placeholder="What's up?"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
                                                         </div>
-                                                        <textarea class="form-control" rows="5" id="post_input" placeholder="Write something to Juliana"></textarea>
-                                                        <div class="media_control">
-                                                            <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
-                                                                <div class="icon_container">
-                                                                    <i class="icon attachment"></i>
-                                                                </div>
+                                                        <div class="form-group">
+                                                           <div class="cust_selector">
+                                                               <span class="sel_label color-default title_text">
+                                                                   Post to
+                                                               </span>
+                                                               <span class="sel_label title_text color-primary">
+                                                                   <!--Change the text of the selector to the user selection-->
+                                                                    <a href="#post_states" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="log_crumb">Select location(s)</span>
+                                                                    </a>
+                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="seperator comma_seperated">Lagos</span>
+                                                                        <span class="seperator comma_seperated">Abuja</span>
+                                                                        <span class="seperator comma_seperated">Rivers</span>
+                                                                    </a>
+                                                               </span>
+                                                           </div>
+                                                       </div>
+                                                    </div>
+                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                        <img src="img/banners/tm_card_img.jpg" class="">
+                                                        <!--For normal video uploads-->
+                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                        </video>
+                                                        <!--For video embeds-->
+                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                                        </div>-->
+                                                        <div class="pane_control">
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                            </a>
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
                                                             </a>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
-                                                    <img src="img/banners/tm_card_img.jpg" class="">
-                                                    <!--For normal video uploads-->
-                                                    <video controls class="embed-responsive-item hidden" preload="metadata">
-                                                        <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
-                                                    </video>
-                                                    <!--For video embeds-->
-                                                    <!--<div class="embed-responsive hidden embed-responsive-16by9">
-                                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
-                                                    </div>-->
-                                                    <div class="pane_control">
-                                                        <a href="#" class="control_item">
-                                                            <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
-                                                        </a>
-                                                        <a href="#" class="control_item">
-                                                            <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
-                                                        </a>
+                                                </form>
+                                                <div class="post_card_footer clearfix">
+                                                    <button type="button" data-target="#post_tags" data-toggle="modal" class="btn btn-sm btn-grey-light btn-rounded">Tag as..</button>
+                                                    <div class="post_actions pull-right">
+                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
+                                                        <button type="button" data-target="#post_category" data-toggle="modal" class="btn btn-primary">Post</button>
                                                     </div>
                                                 </div>
-                                            </form>
-                                            <div class="post_card_footer clearfix">
-                                                <div class="post_actions pull-right">
-                                                    <button type="button" class="btn collapse_widget btn-card">Cancel</button>
-                                                    <button type="button" class="btn btn-primary">Post</button>
+                                            </article>
+                                            <article class="tab-pane fade in" id="buy_hire">
+                                                <form class="post_input_widget ">
+                                                    <div class="post_content">
+                                                       <div class="form-group">
+                                                           <div class="cust_selector">
+                                                               <span class="sel_label color-default title_text">
+                                                                   I need a
+                                                               </span>
+                                                               <span class="sel_label title_text color-primary">
+                                                                   <!--Change the text of the selector to the user selection-->
+                                                                    <a href="#request_type" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="log_crumb">Select an option</span>
+                                                                    </a>
+                                                                    <a href="#request_type" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="seperator log_crumb">Skilled Person for a Job</span>
+                                                                    </a>
+                                                               </span>
+                                                           </div>
+                                                       </div>
+                                                       <div class="form-group font_bold">
+                                                           <label class="sr-only">Title of Post</label>
+                                                           <input type="text" class="form-control" placeholder="Enter the post title">
+                                                       </div>
+                                                        <div class="post_input form-group">
+                                                            <div class="user_avi avi_sm avi_circle">
+                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                                            </div>
+                                                            <textarea class="form-control" rows="5" id="request_input" placeholder="Kindly provide information on what you want to buy/hire"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                           <div class="cust_selector">
+                                                               <span class="sel_label color-default title_text">
+                                                                   Search across
+                                                               </span>
+                                                               <span class="sel_label title_text color-primary">
+                                                                   <!--Change the text of the selector to the user selection-->
+                                                                    <a href="#post_states" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="log_crumb">Select location(s)</span>
+                                                                    </a>
+                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="seperator comma_seperated">Lagos</span>
+                                                                        <span class="seperator comma_seperated">Abuja</span>
+                                                                        <span class="seperator comma_seperated">Rivers</span>
+                                                                    </a>
+                                                               </span>
+                                                           </div>
+                                                       </div>
+                                                    </div>
+                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
+                                                    <div class="media_preview">
+                                                        <img src="img/banners/tm_card_img.jpg" class="hidden">
+                                                        <!--For normal video uploads-->
+                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                        </video>
+                                                        <!--For files-->
+                                                       <div class="fileMetaCard">
+                                                            <div class="metaIcon">
+                                                                <a href="#file_url.docx" target="_blank" download><img src="./img/app_icon/file.png" alt=""></a>
+                                                            </div>
+                                                            <div class="metainfo">
+                                                                <h4 class="title">
+                                                                    <a href="#file_url.docx" target="_blank" download>The SAEDConnect admin user manual.docx</a>
+                                                                </h4>
+                                                                <span class="metaCrumb" title="file size">1.81 MB</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="pane_control">
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                            </a>
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="post_card_footer clearfix">
+                                                    <div class="post_actions pull-right">
+                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
+                                                        <button type="button" data-target="#categories_levels" data-toggle="modal" class="btn btn-primary">Post</button>
+                                                    </div>
                                                 </div>
-                                            </div>
+                                            </article>
+                                            <article class="tab-pane fade in" id="sell">
+                                                <form class="post_input_widget ">
+                                                    <div class="post_content">
+                                                       <div class="form-group">
+                                                           <div class="cust_selector">
+                                                               <span class="sel_label color-default title_text">
+                                                                   I want to sell a
+                                                               </span>
+                                                               <span class="sel_label title_text color-primary">
+                                                                   <!--Change the text of the selector to the user selection-->
+                                                                    <a href="#sell_type" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="log_crumb">Select an option</span>
+                                                                    </a>
+                                                                    <a href="#sell_type" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="log_crumb seperator">Product</span>
+                                                                    </a>
+                                                               </span>
+                                                           </div>
+                                                       </div>
+                                                        <div class="form-group font_bold">
+                                                           <label class="sr-only">Title of Post</label>
+                                                           <input type="text" class="form-control" placeholder="The name of what you want to sell">
+                                                        </div>
+                                                        <div class="post_input form-group">
+                                                            <div class="user_avi avi_sm avi_circle">
+                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                                            </div>
+                                                            <textarea class="form-control" rows="5" id="sell_input" placeholder="Kindly provide information on what you want to sell"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cust_selector">
+                                                           <span class="sel_label color-default title_text">
+                                                               Amount <span class="bracket_enclosure"><i class="naira"></i></span>
+                                                           </span>
+                                                           <span class="itle_text color-primary">
+                                                               <input type="number" class="cust_input" min="0" placeholder="Amount in Naira">
+                                                           </span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                           <div class="cust_selector">
+                                                               <span class="sel_label color-default title_text">
+                                                                   Available in
+                                                               </span>
+                                                               <span class="sel_label title_text color-primary">
+                                                                   <!--Change the text of the selector to the user selection-->
+                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="log_crumb">Select location(s)</span>
+                                                                    </a>
+                                                                    <a href="#post_states" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="comma_seperated seperator">Lagos</span>
+                                                                        <span class="comma_seperated seperator">Abuja</span>
+                                                                        <span class="comma_seperated seperator">Rivers</span>
+                                                                    </a>
+                                                               </span>
+                                                           </div>
+                                                       </div>
+                                                    </div>
+                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                        <img src="img/banners/tm_card_img.jpg">
+                                                        <!--For normal video uploads-->
+                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                        </video>
+                                                        <!--For video embeds-->
+                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                                        </div>-->
+
+                                                        <div class="pane_control">
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                            </a>
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="post_card_footer clearfix">
+                                                    <div class="post_actions pull-right">
+                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
+                                                        <button type="button" data-target="#categories_levels" data-toggle="modal" class="btn btn-primary">Post</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="tab-pane fade in" id="question">
+                                                <form class="post_input_widget ">
+                                                    <div class="post_content">
+                                                        <div class="form-group post_input font_bold">
+                                                           <div class="user_avi avi_sm avi_circle">
+                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                                            </div>
+                                                            <textarea class="form-control" rows="5" id="question_input" placeholder="What is your question?"></textarea>
+                                                        </div>
+                                                       
+                                                        <div class="form-group">
+                                                            <a href="#more_info" class="btn-link" data-toggle="collapse">Add more information</a>
+                                                        </div>
+                                                        <div class="panel-collapse collapse" id="more_info">
+                                                            <div class="post_input input_full form-group">
+                                                                <textarea class="form-control" rows="5" placeholder="More details"></textarea>
+                                                                <div class="media_control">
+                                                                    <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                        <div class="icon_container">
+                                                                            <i class="icon attachment"></i>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                        <img src="img/banners/tm_card_img.jpg">
+                                                        <!--For normal video uploads-->
+                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                        </video>
+                                                        <!--For video embeds-->
+                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                                        </div>-->
+
+                                                        <div class="pane_control">
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                            </a>
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="post_card_footer clearfix">
+                                                    <div class="post_actions pull-right">
+                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
+                                                        <!--Trigger the categories selection modal-->
+                                                        <button type="button" data-target="#categories_levels" data-toggle="modal" class="btn btn-primary">Post</button>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="tab-pane fade in" id="portfolio">
+                                                <form class="post_input_widget ">
+                                                    <div class="post_content">
+                                                        <div class="form-group font_bold">
+                                                           <label class="sr-only">Title of achievement</label>
+                                                           <input type="text" class="form-control" placeholder="Title of Project/achievement">
+                                                        </div>
+                                                        <div class="post_input form-group">
+                                                            <div class="user_avi avi_sm avi_circle">
+                                                                <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                                            </div>
+                                                            <textarea class="form-control" rows="5" id="portfolio_input" placeholder="More about your accomplishment here"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--Only show this pane when a user tries to upload an image to the timeline.-->
+                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                        <img src="img/banners/tm_card_img.jpg">
+                                                        <!--For normal video uploads-->
+                                                        <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                            <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                        </video>
+                                                        <!--For video embeds-->
+                                                        <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                                        </div>-->
+
+                                                        <div class="pane_control">
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                            </a>
+                                                            <a href="#" class="control_item">
+                                                                <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="post_card_footer clearfix">
+                                                    <div class="post_actions pull-right">
+                                                        <button type="button" class="btn collapse_widget btn-card">Cancel</button>
+                                                        <!--Trigger the categories selection modal-->
+                                                        <button type="button" data-target="#categories_levels" data-toggle="modal" class="btn btn-primary">Post</button>
+                                                    </div>
+                                                </div>
+                                            </article>
                                         </div>
                                     </div>
                                 </article>
-                                                                                                
+                                
                                 <article class="post_card has_comment">
                                     <div class="card_wrapper">
                                         <div class="post_card_header">
@@ -536,6 +1408,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -631,7 +1507,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -708,10 +1584,15 @@
                                                                 <time datetime="25-6-2017">4d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">@Christian_drey</span>
+                                                        <!--Portfolio Skill area-->
+                                                        <span class="title_text">@ChristianDrey</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                   <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -806,7 +1687,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -879,14 +1760,17 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">MTN Nigeria</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">2min</time>
+                                                                <time datetime="25-6-2016">2d</time>
                                                             </p>
                                                         </div>
                                                         <span class="title_text">@MTN_Nigeria</span>
                                                     </div>
-                                                </div>
-                                                
+                                                </div>    
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -896,11 +1780,6 @@
                                                         <li><a href="#">Delete post</a></li>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                            <!--Toggle "post_pinned" for a pinned post-->
-                                            <div class="post_status">
-                                                <span class="status_wrap">
-                                                </span>
                                             </div>
                                         </div>
                                         <div class="post_meta_info">
@@ -983,7 +1862,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -1064,6 +1943,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="Following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -1181,7 +2064,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -1247,7 +2130,7 @@
                                                 <div class="post_author">
                                                     <div class="user_avartar">
                                                         <a href="" class="user_avi avi_circle">
-                                                            <img src="./img/icons/affordable_workspace.png" alt="Dexters and heroes">
+                                                            <img src="./img/icons/ict.png" alt="Dexters and heroes">
                                                         </a>
                                                     </div>
                                                     <div class="user_info">
@@ -1261,6 +2144,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="You are following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
+                                                    <a href="timeline_comments.html">
+                                                        <i class="fa fa-external-link"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -1357,7 +2247,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -1430,13 +2320,17 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">MTN Nigeria</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">2m</time>
+                                                                <time datetime="25-6-2016">2d</time>
                                                             </p>
                                                         </div>
                                                         <span class="title_text">@MTN_Nigeria</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " You are following>
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -1530,7 +2424,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -1603,13 +2497,17 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">SAEDConnect Support</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">5hr</time>
+                                                                <time datetime="25-6-2016">5h</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">@SAEDConnect_support</span>
+                                                        <span class="title_text">@Support</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="You are following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -1719,13 +2617,17 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">MTN Nigeria</a>
                                                             <p class="post_time" title="2 days ago">
-                                                                <time datetime="25-6-2016">25min</time>
+                                                                <time datetime="25-6-2016">2d</time>
                                                             </p>
                                                         </div>
                                                         <span class="title_text">@MTN_Nigeria</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="You are following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -1821,7 +2723,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -1893,15 +2795,20 @@
                                                     </div>
                                                     <div class="user_info">
                                                         <div class="profile_title">
-                                                            <a href="user_profile.html" class="title_text">Adedire Oluwaseun</a>
+                                                            <a href="user_profile.html" class="title_text">Mmpape Paul</a>
                                                             <p class="post_time" title="1 month ago">
                                                                 <time datetime="25-6-2017">4d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">@Christian_drey</span>
+                                                        <!--Portfolio Skill area-->
+                                                        <span class="title_text">@Paul1245</span>
                                                     </div>
                                                 </div>
-                                                <div class="sub_menu dropdown pull-right">
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn" title="You are following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -1997,7 +2904,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -2069,15 +2976,20 @@
                                                     </div>
                                                     <div class="user_info">
                                                         <div class="profile_title">
-                                                            <a href="user_profile.html" class="title_text">Adedire Oluwaseun</a>
+                                                            <a href="user_profile.html" class="title_text">Alayo Hussain</a>
                                                             <p class="post_time" title="1 month ago">
                                                                 <time datetime="25-6-2017">4d</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">@Christian_drey</span>
+                                                        <!--Portfolio Skill area-->
+                                                        <span class="title_text">@huzaynbolt</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -2173,7 +3085,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -2246,13 +3158,17 @@
                                                         <div class="profile_title">
                                                             <a href="user_profile.html" class="title_text">National SAED</a>
                                                             <p class="post_time" title="1 month ago">
-                                                                <time datetime="25-6-2017">1 month</time>
+                                                                <time datetime="25-6-2017">1m</time>
                                                             </p>
                                                         </div>
                                                         <span class="title_text">@NationalSAED</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                   <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="You are following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -2373,7 +3289,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -2445,15 +3361,19 @@
                                                     </div>
                                                     <div class="user_info">
                                                         <div class="profile_title">
-                                                            <a href="user_profile.html" class="title_text">Sule Zankara</a>
+                                                            <a href="user_profile.html" class="title_text">Segun Araromi</a>
                                                             <p class="post_time" title="1 month ago">
-                                                                <time datetime="25-6-2017">3d</time>
+                                                                <time datetime="25-6-2017">1m</time>
                                                             </p>
                                                         </div>
-                                                        <span class="title_text">@Sule_Zankara</span>
+                                                        <span class="title_text">@d_segun</span>
                                                     </div>
                                                 </div>
                                                 <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
                                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-angle-down"></i>
                                                     </a>
@@ -2571,7 +3491,7 @@
                                                                 <a href="user_profile.html" class="title_text">Cennet Alkan</a>
                                                             </h4>
                                                             <p class="post_time">
-                                                                <time datetime="25-6-2017" class="timestamp">23 hrs</time>
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
                                                             </p>
                                                         </div>
                                                         <div class="post_content">
@@ -2672,16 +3592,6 @@
     <script src="js/simplemde.min.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/main.js"></script>
-    
-    <script>
-        /*Load modal on page load*/
-        $(function() {
-           $('#setUsername').modal({
-               show: "true",
-               backdrop: 'static'
-           })
-       });
-    </script>
     
 </body>
 
