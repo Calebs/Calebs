@@ -57,21 +57,9 @@ $(function() {
         }, 25);
     });
 
-    /*Verification Alert*/
-    var need_verify = $('a.req_verified'),
-        dismiss_alert = $('.dismiss_btn'),
-        verify_alert = $('.floating_alert');
 
-    dismiss_alert.on('click', function() {
-        verify_alert.removeClass('is_visible');
-    });
-
-    need_verify.on('click', function(e) {
-        e.preventDefault();
-        verify_alert.addClass('is_visible');
-    });
-
-    
+    /*Alert*/
+        
     /*Responsive mobile nav script*/
     var openTray = $('.has_sub > .mainTrigger');
     

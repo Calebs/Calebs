@@ -118,7 +118,7 @@
                     <h4 class="title">Feeds</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li><a href="newsfeeds.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
                         <li><a href="#" class="subNavItem">Saved Posts</a></li>
                         <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
                     </ul>
@@ -235,12 +235,12 @@
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="newsfeeds.html">My Timeline</a></li>
+                                        <li><a href="newsfeed.html">My Timeline</a></li>
                                         <li><a href="#">Saved Posts</a></li>
                                         <li><a href="feeds_home.html">Communities</a></li>
                                     </ul>
                                 </div>
-                            </li>   
+                            </li>    
                             <li class="link_nav has_children">
                                 <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
@@ -253,8 +253,7 @@
                                 <div class="collapse" id="market">
                                     <ul class="link_nav_children">
                                         <li><a href="portfolio.html">Talent Directory</a></li>
-                                        <li><a href="requests.html">Partner Requests</a></li>
-                                        <li><a href="requests.html">Trainer Requests</a></li>
+                                        <li><a href="requests.html">Requests</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -276,6 +275,16 @@
                                         <li><a href="jobs.html">Internships/Apprenticeship</a></li>
                                     </ul>
                                 </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="trainings.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_forum"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Trainings</span>
+                                    </div>
+                                </a>
                             </li>
                             <li class="link_nav ">
                                 <a href="questions.html">
@@ -335,25 +344,26 @@
                         <!--Stripped down profile information--> 
                         <header class="profile_banner">
                             <div class="banner_wrapper">
-                                <div class="banner_content text-center">
-                                    <div class="user_photo image_circle">
-                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
-                                        <!--Only accessible to the profile owner-->
-                                        <div class="img_uploader">
-                                            <label for="item_image" class="file_upload">
-                                                <input type="file" name="file" id="item_image" class="inputfile hidden" />
-                                                <i class="icon icon-sm upload_img" title="Upload header image"></i>
-                                            </label>
+                                <div class="content_view ">
+                                    <div class="banner_content text-center">
+                                        <div class="user_photo image_circle">
+                                            <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
+                                            <!--Only accessible to the profile owner-->
+                                            <div class="img_uploader">
+                                                <label for="item_image" class="file_upload">
+                                                    <input type="file" name="file" id="item_image" class="inputfile hidden" />
+                                                    <i class="icon icon-sm upload_img" title="Upload header image"></i>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <!--Show this when the user clicks upload image-->
-                                    <div class="action_btn hidden text-center">
-                                        <button type="button" class="btn btn-default btn-rounded">
-                                        Cancel</button>
-                                        <button type="submit" class="btn btn-primary btn-rounded">
-                                        Upload</button>
-                                    </div>
-                                    <div class="content_view">
+                                        <!--Show this when the user clicks upload image-->
+                                        <div class="action_btn hidden text-center">
+                                            <button type="button" class="btn btn-default btn-rounded">
+                                            Cancel</button>
+                                            <button type="submit" class="btn btn-primary btn-rounded">
+                                            Upload</button>
+                                        </div>
+
                                         <div class="user_info">
                                             <div class="user_meta">
                                                 <h4 class="">Amammpoh Juliana O</h4>
@@ -368,21 +378,23 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="content_create hidden">
-                                        <form class="form-horizontal" action="">
-                                            <div class="form-group">
-                                                 <label class="control-label col-sm-4 padding_set">About yourself</label>
-                                                <div class="col-sm-8">
-                                                    <textarea rows="5" class="form-control" placeholder="A brief description of who you are, your interests, and what you do.."></textarea>
+                                </div>
+                                <div class="content_create hidden">
+                                    <div class="banner_content">
+                                        <form action="">
+                                           <div class="dialog_form ">
+                                                <div class="form-group">
+                                                    <label class="control-label">My Bio</label>
+                                                    <textarea rows="5" class="form-control" placeholder="A short information about you."></textarea>
+                                                 </div>
+                                                <div class="action_btn">
+                                                    <button type="button" class="btn btn-default">
+                                                    Cancel</button>
+                                                    <button type="submit" class="btn btn-primary">
+                                                    Save Changes</button>
                                                 </div>
-                                             </div>
-
-                                            <div class="action_btn text-center">
-                                                <button type="button" class="btn btn-default btn-rounded">
-                                                Cancel</button>
-                                                <button type="submit" class="btn btn-primary btn-rounded">
-                                                Save Changes</button>
-                                            </div>
+                                               
+                                           </div>
                                         </form>
                                     </div>
                                 </div>
@@ -430,7 +442,7 @@
                                         <header class="profile_header">
                                             <h6 class="title title_md color-primary font_regular">Primary Contact</h6>
                                         </header>
-                                        <div class="content_view">
+                                        <div class="content_view ">
                                             <div class="data_list">
                                                 <article class="data_item">
                                                     <div class="label">Email</div>
@@ -450,6 +462,20 @@
                                                         <p>2347012345678</p>
                                                     </div>
                                                 </article>
+                                                <article class="data_item">
+                                                    <div class="label">Website</div>
+                                                    <div class="value">
+                                                        <p>-None-</p>
+                                                    </div>
+                                                </article>
+                                                <article class="data_item">
+                                                    <div class="label">Contact Address</div>
+                                                    <div class="value">
+                                                        <address>
+                                                            <p class="">3, Kaltungo Str., Off Amurie Omanze Cres. Off Samuel Ladoke Akintola Boulevard, Garki II, Abuja, Nigeria</p>
+                                                       </address>
+                                                    </div>
+                                                </article>
                                             </div>
                                             <a href="#" class="edit_link">
                                                 <i class="fa fa-pencil"> </i>Edit
@@ -466,6 +492,14 @@
                                                          <label class="control-label">Telephone Number</label>
                                                          <input type="telephone" class="form-control" placeholder="E.g 08055378683">
                                                      </div>
+                                                 </div>
+                                                 <div class="form-group">
+                                                     <label class="control-label">Website URL</label>
+                                                     <input type="url" class="form-control" placeholder="E.g https://www.mywebsite.com">
+                                                 </div>
+                                                <div class="form-group">
+                                                     <label class="control-label">Contact Address</label>
+                                                    <textarea rows="2" class="form-control" placeholder=""></textarea>
                                                  </div>
                                                  <div class="action_btn text-center">
                                                     <button type="button" class="btn btn-default btn-rounded">
@@ -914,7 +948,7 @@
                                     <!--Social Media-->
                                     <article class=" bg-white user_profile_article" id="">
                                         <header class="profile_header">
-                                            <h6 class="title title_md color-primary font_regular">NYSC Information</h6>
+                                            <h6 class="title title_md color-primary font_regular">Social Contacts</h6>
                                         </header>
                                         <div class="content_view">
                                             <div class="links_list">

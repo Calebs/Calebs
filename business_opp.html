@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -7,20 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>My Questions | SAEDConnect</title>
+    <title>Find Business Opportunities | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
     <link href="css/base.min.css" rel="stylesheet" type="text/css">
-    <link href="css/full_layout.css" rel="stylesheet" type="text/css">
     <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <script src="js/modernizr.js"></script>
     <!-- Modernizr -->
 </head>
 
 <body class="">
-    
-    <!--New Question modal-->
-    <div class="modal fade in" id="post_question">
+   
+    <!--New request modal-->
+    <div class="modal fade in" id="post_opp">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -34,44 +34,56 @@
                             <div class="comment_inner">
                                 <form action="">
                                     <div class="post_content">
-                                        <div class="form-group post_input input_full font_bold">
-                                            <textarea class="form-control" rows="5" id="question_input" placeholder="What is your question?"></textarea>
+                                       <div class="form-group font_bold">
+                                           <label class="sr-only">Title of Post</label>
+                                           <input type="text" class="form-control" placeholder="A short title or the business opportunity">
+                                        </div>
+                                        <div class="post_input input_full">
+                                            <textarea class="form-control" rows="5" id="sell_input" placeholder="Kindly provide more information this opportunity"></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <a href="#more_info" class="btn-link" data-toggle="collapse">Add more information</a>
-                                        </div>
-                                        <div class="panel-collapse collapse" id="more_info">
-                                            <div class="post_input input_full form-group">
-                                                <textarea class="form-control" rows="10" placeholder="Provide more details for your question here"></textarea>
+                                           <div class="cust_selector">
+                                               <span class="sel_label color-default title_text">
+                                                   Search accross
+                                               </span>
+                                               <span class="sel_label title_text color-primary">
+                                                   <!--Change the text of the selector to the user selection-->
+                                                    <a href="#post_states" class="" data-backdrop="static" data-toggle="modal">
+                                                        <span class="log_crumb">Select location(s)</span>
+                                                    </a>
+                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                        <span class="comma_seperated seperator">Lagos</span>
+                                                        <span class="comma_seperated seperator">Abuja</span>
+                                                    </a>
+                                               </span>
+                                           </div>
+                                       </div>
+                                        <div class="select_grid select_radio">
+                                            <div class="my_selector  file_upload">
+                                                <label for="md_image" class="control-wrapper">
+                                                    <input type="file" name="file" accept="image/*" id="md_image" class="inputfile"/>
+                                                    <span class="c_label"><i class="fa fa-image"></i></span>
+                                                </label>
                                             </div>
-                                            <div class="select_grid select_radio">
-                                                <div class="my_selector  file_upload">
-                                                    <label for="md_image" class="control-wrapper">
-                                                        <input type="file" name="file" accept="image/*" id="md_image" class="inputfile"/>
-                                                        <span class="c_label"><i class="fa fa-image"></i></span>
-                                                    </label>
-                                                </div>
-                                                <div class="my_selector file_upload">
-                                                    <label for="md_video" class="control-wrapper radio-inline">
-                                                        <input type="file" name="file" accept=".mp4" id="md_video" class="inputfile"/>
-                                                        <span class="c_label"><i class="fa fa-play"></i></span>
-                                                    </label>
-                                                </div>
-                                                <div class="my_selector file_upload">
-                                                    <label for="md_audio" class="control-wrapper radio-inline">
-                                                        <input type="file" name="file" accept=".mp3" id="md_audio" class="inputfile"/>
-                                                        <span class="c_label"><i class="fa fa-music"></i></span>
-                                                    </label>
-                                                </div>
-                                                <div class="my_selector file_upload">
-                                                    <label for="md_file" class="control-wrapper radio-inline">
-                                                        <input type="file" name="file" accept=".doc, .pdf, .docx" id="md_file" class="inputfile"/>
-                                                        <span class="c_label"><i class="fa fa-file"></i></span>
-                                                    </label>
-                                                </div>
+                                            <div class="my_selector file_upload">
+                                                <label for="md_video" class="control-wrapper radio-inline">
+                                                    <input type="file" name="file" accept=".mp4" id="md_video" class="inputfile"/>
+                                                    <span class="c_label"><i class="fa fa-play"></i></span>
+                                                </label>
                                             </div>
-                                        </div>
-                                        
+                                            <div class="my_selector file_upload">
+                                                <label for="md_audio" class="control-wrapper radio-inline">
+                                                    <input type="file" name="file" accept=".mp3" id="md_audio" class="inputfile"/>
+                                                    <span class="c_label"><i class="fa fa-music"></i></span>
+                                                </label>
+                                            </div>
+                                            <div class="my_selector file_upload">
+                                                <label for="md_file" class="control-wrapper radio-inline">
+                                                    <input type="file" name="file" accept=".doc, .pdf, .docx" id="md_file" class="inputfile"/>
+                                                    <span class="c_label"><i class="fa fa-file"></i></span>
+                                                </label>
+                                            </div>
+                                        </div>                                
                                    </div>
                                     <!--Only show this pane when a user attach a media item to the comment-->
                                     <div class="media_preview hidden">
@@ -80,7 +92,6 @@
                                         <video controls class="embed-responsive-item hidden" preload="metadata">
                                             <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
                                         </video>
-
                                         <div class="pane_control">
                                             <a href="#" class="control_item">
                                                 <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
@@ -272,6 +283,81 @@
             </div>
         </div>
     </div>
+        
+    <!--Location Selector-->
+    <div class="modal fade in" id="post_states">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="modal-title">Post request to state</h4>
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-panel">
+                        <p class="subtitle">Only users in the state(s) you select will be able to see this post.</p>
+                            
+                        <div class="step_form">
+                            <div class="multi_sel_item">
+                                <label class="checkbox-inline control_item" for="user_all">
+                                    <input type="checkbox" checked id="user_all">
+                                    <span>Nationwide</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                                <label class="checkbox-inline control_item">
+                                    <input type="checkbox">
+                                    <span>State Name</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-rounded" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary btn-rounded">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <header role="banner">
         <div class="navbar navbar-default" role="navigation">
@@ -317,7 +403,7 @@
             </div>
         </div>
     </header>
-    
+      
     <!--Mobile footer navigation-->
     <div class="mobile_nav">
         <ul class="navList">
@@ -333,12 +419,13 @@
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
                         <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
-                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
                         <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
+                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain has_sub">
+            <li class="linkNavMain active has_sub">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_request"></i>
@@ -365,13 +452,14 @@
                         </li>
                         <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
                         <li><a href="market.html" class="subNavItem">Market</a></li>
+                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
+                        <li><a href="trainings.html" class="subNavItem">Trainings</a></li>
                         <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="#" class="subNavItem">Partner Requests</a></li>
-                        <li><a href="#" class="subNavItem">Trainer Requests</a></li>
+                        <li><a href="requests.html" class="subNavItem">Requests</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain active">
+            <li class="linkNavMain">
                 <a href="corp_profile_general.html" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_user"></i>
@@ -398,8 +486,107 @@
         </ul>
     </div>
     
+    <div class="floatingWidget searchWidget">
+        <div class="widget-wrapper">
+            <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content">
+                <div class="search_panel">
+                    <h4 class="title text_caps color-white">Search Questions</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="search" class="form-control search_control" placeholder="Search for questions...">
+                        </div>
+                        <div class="more-btn">
+                            <button class="btn btn-rounded btn-lg btn-secondary">
+                                <i class="fa fa-search"></i>Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="floatingWidget catFilter">
+        <div class="widget-wrapper">
+           <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content text-center">
+                <!--<h4 class="title text_caps color-white">Filter Questions By</h4>-->
+                <h4 class="title text_caps color-white">Filter list By</h4>
+                
+                <div class="content-panel color-white">
+                    
+                    <!--Use this to present interest tags/Platform Categories-->
+                    <div class="select_grid">
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Updates</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Small Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Agro Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Career Development</button>
+                        </div>
+                    </div>                       
+                </div>
+                 <!--Contains the sub categories for any selected industry-->
+                <div class="alt_panel">
+                    <!--List the Sub category of the selected category-->
+                    <div class="list_children">
+                       <div class="select_grid select_check">
+                            <div class="my_selector">
+                                <label for="tagSub_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_1">
+                                <span class="c_label">Programming</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_2">
+                                <span class="c_label">Software Design</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_3">
+                                <span class="c_label">Telecommunications</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_4" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_4">
+                                    <span class="c_label">Hardware</span>
+                                </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_5" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_5">
+                                    <span class="c_label">World wide web</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-btn">
+                        <a href="#" class="track_back btn btn-rounded btn-grey">
+                            <i class="fa fa-chevron-left"></i>
+                            Back
+                        </a>
+                        <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <main class="sd-main-content bg-off-white">
-        <header class="page_header has_back is_fixed">
+        <header class="page_header is_fixed">
             <div class="header_wrapper">
                 <div class="back_arrow">
                     <a href="#" class="go_back">
@@ -407,8 +594,7 @@
                     </a>
                 </div>
                 <div class="page_nav">
-                    <h2 class="title">Amammpoh Juliana O</h2>
-                    <p class="subtitle">Questions</p>
+                    <h2 class="title">Business Opportunities</h2>
                 </div>
                 <div class="pg_search">
                     <button class="btn_search trigger_search">
@@ -417,16 +603,16 @@
                 </div>
             </div>
         </header>
-        
         <!--Wrap site content-->
         <div class="timeline_container">
+           
             <aside class="nav_timeline">
                 <div class="content_wrapper">
                     <h4 class="menu_title">Menu</h4>
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
-                           <li class="link_nav active">
+                           <li class="link_nav ">
                                 <a href="corp_profile_general.html">
                                     <span class="itemIcon">
                                         <i class="icon icon_user"></i>
@@ -448,12 +634,13 @@
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
                                         <li><a href="newsfeed.html">My Timeline</a></li>
-                                        <li><a href="#">Saved Posts</a></li>
+                                        <li><a href="timeline.html">Global Timeline</a></li>
                                         <li><a href="feeds_home.html">Communities</a></li>
+                                        <li><a href="#">Saved Posts</a></li>
                                     </ul>
                                 </div>
                             </li>    
-                            <li class="link_nav has_children">
+                            <li class="link_nav  has_children">
                                 <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_request"></i>
@@ -465,7 +652,7 @@
                                 <div class="collapse" id="market">
                                     <ul class="link_nav_children">
                                         <li><a href="portfolio.html">Talent Directory</a></li>
-                                        <li><a href="requests.html">Requests</a></li>
+                                        <li class="active"><a href="requests.html">Requests</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -491,10 +678,20 @@
                             <li class="link_nav ">
                                 <a href="trainings.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_forum"></i>
+                                        <i class="icon icon_request"></i>
                                     </span>
                                     <div class="link_details">
                                         <span class="link_title">Trainings</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav active">
+                                <a href="business_opp.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Business Opportunities</span>
                                     </div>
                                 </a>
                             </li>
@@ -508,7 +705,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="link_nav ">
+                            <li class="link_nav">
                                 <a href="market.html">
                                     <span class="itemIcon">
                                         <i class="icon icon_market"></i>
@@ -551,254 +748,220 @@
 
             <section class="layout_content">
                 <div class="box_wrapper bg_default">
-                    <div class="main_wrapper">
-                        <!--Stripped down profile information--> 
-                        <header class="profile_banner profile_table_view">
-                            <div class="banner_wrapper">
-                                <div class="profile_info">
-                                    <div class="user_photo image_circle">
-                                        <img src="./img/user_avis/2.jpg" alt="Amamppoh Juliana O">
-                                    </div>
-                                    <div class="user_info">
-                                        <div class="user_meta color-white">
-                                            <h4 class="">Amammpoh Juliana O</h4>
-                                            <h6 class="font_regular">@Juliana_o</h6>
-                                        </div>
-                                        <div class="">
-                                            <!--Only visible to a visitor to viewer-->
-                                            <button type="button" class="btn btn-primary btn-sm btn-rounded">Follow</button>
-                                            
-                                            <!--SHow if following-->
-                                            <button type="button" class="btn hidden btn-default btn-sm btn-rounded">Following</button>
+                    <div class="main_wrapper ct_bare">
+                       
+                        <header class="section_header">
+                            <div class="hero_wrapper">
+                                <div class="section_info">
+                                    <h2 class="section_title">Business Opportunities</h2>
+                                    <p class="subtitle">Start off your journey to financial independence. Explore exciting home based businesses, distributorships, franchises, and licensing opportunities near you.</p>
+                                    <div class="alert alert_default">
+                                        <div class="wrapper">
+                                            <p>When you post a “Need” of Type “Business Partner” from your timeline or in any of the communities, it shows under the business opportunities directory. <a href="#" class="font_bold">Learn More</a></p>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="section_cto">
+                                    <button type="button" data-target="#post_opp" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                        New Opportunity
+                                    </button>
+                                </div>
                             </div>
-                            <nav class="nav-section">
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                      Activity <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="profile_my_activities.html">My Posts</a></li>
-                                        <li><a href="profile_my_activities.html">People I am following</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="corp_profile_general.html">Profile</a></li>
-                                <li class="hidden-xs"><a href="profile_my_followers.html">Followers</a></li>
-                                <li class="hidden-xs"><a href="profile_following.html">Following</a></li>
-                                <li class="dropdown active">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                     More <span class="caret"></span>
-                                  </a>
-                                  <ul class="dropdown-menu dropdown-right">
-                                    <li><a href="user_shop.html">Shop</a></li>
-                                    <li><a href="user_questions.html">Questions</a></li>
-                                    <li><a href="user_portfolio.html">Portfolio</a></li>
-                                    <li><a href="user_jobs.html">Jobs</a></li>
-                                    <li><a href="user_requests.html">Requests</a></li>
-                                    <li><a href="corp_profile_tutor.html">Tutor Profile</a></li>
-                                    <li class="visible-xs"><a href="profile_my_followers.html">Followers</a></li>
-                                    <li class="visible-xs"><a href="profile_following.html">Following</a></li>
-                                    <li><a href="corp_profile_skills.html">Skills</a></li>
-                                    <li><a href="corp_profile_interests.html">Interests</a></li>
-                                    <li><a href="corp_profile_settings.html">Account Settings</a></li>
-                                  </ul>
-                                </li>
-                            </nav>
                         </header>
-                        
-                        <div class="user_profile_article bg-white">
-                           
-                            <header class="floated_header">
-                                <h2 class="title title_md color-primary">My Questions</h2>
-                                <div class="pull-right">
-                                    <a href="#" data-target="#post_question" data-toggle="modal" data-backdrop="static" class="btn btn-secondary btn-rounded">
-                                        Ask a Question
-                                    </a>
-                                </div>
-                            </header>
-                            
-                            <div class="default_content hidden">
-                                <div class="def_wrapper">
-                                    <div class="centered">
-                                        <div class="def_img">
-                                            <img src="img/icons/icon_empty.png" alt="Empty">
-                                        </div>
-                                        <p class="subtitle">You have never asked any question on the platform, seems you have everything figured out.</p>
-                                        <button type="button" data-target="#post_question" data-toggle="modal" data-backdrop="static" class="btn btn-rounded btn-secondary">
-                                            Ask a Question
-                                        </button>
+                                 
+                        <div class="filter_widget">
+                            <div class="filter_block">
+                                <a href="#" class="filter_trigger trigger_filter">
+                                    Filter by
+                                    <i><img src="./img/app_icon/chevron_down.png" alt="Filter"></i>
+                                </a>
+                            </div>
+                            <div class="filter_actions pull-right">
+                                <a href="#" class="filter_trigger trigger_search">
+                                    Search
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="default_content hidden">
+                            <div class="def_wrapper">
+                                <div class="intro-text centered">
+                                    <div class="def_img">
+                                        <img src="img/icons/icon_empty.png" alt="Empty">
                                     </div>
+                                    <h4 class="title">No post found</h4>
+                                    <p class="subtitle">Do you have a business opportunity, or heard of any and would like to share on SAEDConnect?</p>
+                                    <button type="button" data-target="#post_opp" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                        New Opportunity
+                                    </button>
                                 </div>
                             </div>
-                            
-                            <div class="content_inner">
-                               
-                                <div class="cardList horizontal_card">
-                                    <article class="card_horizontal">
-                                        <div class="postCard__wrapper">
-                                            <div class="postCardDetails">
-                                                <h4 class="cardTitle">
-                                                    <a href="question_post.html">How do I find an investor for my shoe making venture?</a>
-                                                </h4>
-                                            </div>
-                                            <div class="postCardInfo">
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">Funding</span>
-                                                    <span class="info_label color-grey">Category</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">146</span>
-                                                    <span class="info_label color-grey">Views</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">25</span>
-                                                    <span class="info_label color-grey">Answers</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <button class="btn btn-card btn-sm btn-rounded">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="card_horizontal">
-                                        <div class="postCard__wrapper">
-                                            <div class="postCardDetails">
-                                                <h4 class="cardTitle">
-                                                    <a href="question_post.html">How do I find an investor for my shoe making venture?</a>
-                                                </h4>
-                                            </div>
-                                            <div class="postCardInfo">
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">Funding</span>
-                                                    <span class="info_label color-grey">Category</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">146</span>
-                                                    <span class="info_label color-grey">Views</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">25</span>
-                                                    <span class="info_label color-grey">Answers</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <button class="btn btn-card btn-sm btn-rounded">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="card_horizontal">
-                                        <div class="postCard__wrapper">
-                                            <div class="postCardDetails">
-                                                <h4 class="cardTitle">
-                                                    <a href="question_post.html">How do I find an investor for my shoe making venture?</a>
-                                                </h4>
-                                            </div>
-                                            <div class="postCardInfo">
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">Funding</span>
-                                                    <span class="info_label color-grey">Category</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">146</span>
-                                                    <span class="info_label color-grey">Views</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">25</span>
-                                                    <span class="info_label color-grey">Answers</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <button class="btn btn-card btn-sm btn-rounded">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="card_horizontal">
-                                        <div class="postCard__wrapper">
-                                            <div class="postCardDetails">
-                                                <h4 class="cardTitle">
-                                                    <a href="question_post.html">How do I find an investor for my shoe making venture?</a>
-                                                </h4>
-                                            </div>
-                                            <div class="postCardInfo">
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">Funding</span>
-                                                    <span class="info_label color-grey">Category</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">146</span>
-                                                    <span class="info_label color-grey">Views</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">25</span>
-                                                    <span class="info_label color-grey">Answers</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <button class="btn btn-card btn-sm btn-rounded">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <article class="card_horizontal">
-                                        <div class="postCard__wrapper">
-                                            <div class="postCardDetails">
-                                                <h4 class="cardTitle">
-                                                    <a href="question_post.html">How do I find an investor for my shoe making venture?</a>
-                                                </h4>
-                                            </div>
-                                            <div class="postCardInfo">
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">Funding</span>
-                                                    <span class="info_label color-grey">Category</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">146</span>
-                                                    <span class="info_label color-grey">Views</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <span class="info_value font_bold">25</span>
-                                                    <span class="info_label color-grey">Answers</span>
-                                                </div>
-                                                <div class="postInfo__item">
-                                                    <button class="btn btn-card btn-sm btn-rounded">
-                                                        <i class="fa fa-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                
-                                <nav class="clearfix">
-                                    <ul class="pagination pagination-sm clearfix">
-                                        <li class="disabled">
-                                            <a href="#">
-                                                <<
-                                            </a>
-                                        </li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li class="">
-                                            <a href="#" class="">
-                                                >>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                
+                        </div>
+
+                        <div class="content_inner">
+                            <!--flex_header-->
+                            <div class="content_header">
+                                <h4 class="title color-grey text_caps">Latest Opportunities</h4>
                             </div>
-                            
-                        </div>    
+
+                            <div class="cardList cardTIles">
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="opp_post.html">Organic tea distribution partner</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post_author">
+                                                <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="opp_post.html">Organic tea distribution partner</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post_author">
+                                                <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="opp_post.html">Organic tea distribution partner</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post_author">
+                                                <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="cardItem jobCard">
+                                    <div class="postCard__wrapper">
+                                        <div class="postCardDetails">
+                                            <div class="postInfo">
+                                                <h4 class="cardTitle">
+                                                    <a href="opp_post.html">Organic tea distribution partner</a>
+                                                </h4>
+                                                <div class="title_text">
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Lagos</a>
+                                                    </span>
+                                                    <span class="seperator comma_seperated">
+                                                        <a href="#">Abuja</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="post_author">
+                                                <a class="user_avi avi_circle" rel="contact" href="corp_profile_general.html">
+                                                    <img src="./img/user_avis/1.jpg"> 
+                                                </a>
+                                                <div class="user_info">
+                                                    <h4 class="profile_title">
+                                                        <a href="corp_profile_general.html" class="">
+                                                            Lukman Haruna
+                                                        </a>
+                                                    </h4>
+                                                    <span class="timestamp">
+                                                        <time>25mins ago</time>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <nav class="clearfix">
+                                <ul class="pagination pagination-sm clearfix">
+                                    <li class="disabled">
+                                        <a href="#">
+                                            <<
+                                        </a>
+                                    </li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            >>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                                  
                     </div>
                 </div>
             </section>
@@ -812,8 +975,21 @@
     <script src="js/base.min.js"></script>
     <script src="js/site_nav.js"></script>
     <script src="js/simplemde.min.js"></script>
-    <script src="js/timeline.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+        
+        /* instantiate markDown editor for portfolio posts */
+        var simplemde = new SimpleMDE({ 
+            element: $("#post_input")[0],
+            placeholder: "Kindly provide more information this opportunity",
+            toolbar: false,
+            status: false,
+            spellChecker: true,
+        });
+    </script>
+
+    
 </body>
 
 </html>
