@@ -25,6 +25,5 @@ $(function() {
     function collapse_widget() {
         obj_tray.removeClass("widget_expanded");
     };
-
 });
 

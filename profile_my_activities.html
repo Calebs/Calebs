@@ -18,9 +18,10 @@
     <!-- Modernizr -->
 </head>
 
+<!--Add the class "onBoard_user" to show the onboarding widget-->
 <body class="">
    
-   <!--use this to prompt an existing user that has no username to create a username-->
+   <!--use this to prompt an existing user that has no username to create a username--> 
     <div class="modal fade in" id="setUsername">
         <div class="modal-dialog">
             <div class="modal-content seedBg">
@@ -125,7 +126,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="alert alert_secondary">
         <div class="container wrapper">
             <div class="alert_info text-center">
@@ -514,7 +515,19 @@
                                         </div>
                                     </div>
                                 </article>
-                                                                                                
+                                                                                               
+                                <div class="default_content ">
+                                    <div class="def_wrapper">
+                                        <div class="centered">
+                                            <div class="def_img">
+                                                <img src="img/icons/icon_empty.png" alt="Empty">
+                                            </div>
+                                            <h4 class="title font_regular">No post found.</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="content_inner hidden">                                                      
                                 <article class="post_card has_comment">
                                     <div class="card_wrapper">
                                         <div class="post_card_header">
@@ -1247,7 +1260,7 @@
                                                 <div class="post_author">
                                                     <div class="user_avartar">
                                                         <a href="" class="user_avi avi_circle">
-                                                            <img src="./img/icons/affordable_workspace.png" alt="Dexters and heroes">
+                                                            <img src="./img/icons/update.png" alt="Dexters and heroes">
                                                         </a>
                                                     </div>
                                                     <div class="user_info">
@@ -2637,6 +2650,7 @@
                                         </button>
                                     </div>
                                 </article>
+                                </div>
                             </section>
 
                             <aside class="split_nav">
@@ -2674,12 +2688,12 @@
     <script src="js/main.js"></script>
     
     <script>
-        /*Load modal on page load*/
         $(function() {
-//           $('#setUsername').modal({
-//               show: "true",
-//               backdrop: 'static'
-//           })
+        /*Load modal on page load*/
+           $('#setUsername').modal({
+               show: "true",
+               backdrop: 'static'
+           })
        });
     </script>
     
