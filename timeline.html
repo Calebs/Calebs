@@ -11,6 +11,7 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/datepicker.min.css">
     <link href="css/base.min.css" rel="stylesheet" type="text/css">
     <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <script src="js/modernizr.js"></script>
@@ -1044,17 +1045,17 @@
                                                                 </a>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                           <div class="cust_selector">
-                                                               <span class="sel_label color-default title_text">
-                                                                   Post to
-                                                               </span>
-                                                               <span class="sel_label title_text color-primary">
-                                                                   <!--Change the text of the selector to the user selection-->
+                                                        <div class="cust_selector">
+                                                            <div class="select_grid">
+                                                                <a href="#post_states" data-backdrop="static" data-toggle="modal" class="my_selector">
+                                                                    <label class="control-wrapper">
+                                                                        <span class="c_label"><i class="fa fa-map-marker"></i></span>
+                                                                    </label>
+                                                                </a>
+                                                            </div>
+                                                            <div class="select_grid">
+                                                               <span class="my_selector title_text color-primary">
                                                                     <a href="#post_states" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb">Select location(s)</span>
-                                                                    </a>
-                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
                                                                         <span class="seperator comma_seperated">Lagos</span>
                                                                         <span class="seperator comma_seperated">Abuja</span>
                                                                         <span class="seperator comma_seperated">Rivers</span>
@@ -1088,7 +1089,7 @@
                                                     <button type="button" data-target="#post_tags" data-toggle="modal" class="btn btn-sm btn-grey-light btn-rounded">Tag as..</button>
                                                     <div class="post_actions pull-right">
                                                         <button type="button" class="btn collapse_widget btn-card">Cancel</button>
-                                                        <button type="button" data-target="#post_category" data-toggle="modal" class="btn btn-primary">Post</button>
+                                                        <button type="button" data-target="#" class="btn btn-primary">Post</button>
                                                     </div>
                                                 </div>
                                             </article>
@@ -1226,6 +1227,20 @@
                                                            </span>
                                                            <span class="itle_text color-primary">
                                                                <input type="number" class="cust_input" min="0" placeholder="Amount in Naira">
+                                                           </span>
+                                                        </div>
+                                                        <div class="cust_selector">
+                                                           <span class="sel_label color-default title_text">
+                                                               <i class="fa fa-calendar"></i>
+                                                           </span>
+                                                           <span class="title_text color-primary">
+                                                               <input type="text" class="cust_input date" placeholder="Set closing date">
+                                                           </span>
+                                                           <span class="checkbox-inline">
+                                                               <label for="tm_open" class="">
+                                                                   <input type="checkbox" checked id="tm_open">
+                                                                   <span class="control_text">Always Open</span>
+                                                               </label>
                                                            </span>
                                                         </div>
                                                         <div class="form-group">
@@ -3728,9 +3743,18 @@
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/base.min.js"></script>
     <script src="js/site_nav.js"></script>
+    <script src="js/datepicker.min.js"></script>
     <script src="js/simplemde.min.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/main.js"></script>
+    
+    <script>
+        $('.date').datepicker({
+            format: "D d, M, yyyy",
+            multidate: false,
+            autoclose: true,
+        });
+    </script>
     
 </body>
 
