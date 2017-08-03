@@ -30,6 +30,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="content-panel">
+                       
                         <div class="media_upload_dialog">
                             <p class="Subtitle">Select a media object type to upload</p>
                             <div class="select_grid select_radio">
@@ -62,6 +63,27 @@
                                 <label class="control-label">Attach video from: Youtube or Vimeo </label>
                                 <input type="url" class="form-control" placeholder="https://url_to_your_media_file.com/file/file_name.fileformat">
                                 <p class="help-block font_bold">Paste your media url here</p>
+                            </div>
+                        </div>
+                        
+                        <div class="media_preview">
+                            <img src="img/banners/tm_card_img.jpg">
+                            <!--For normal video uploads-->
+                            <video controls class="embed-responsive-item hidden" preload="metadata">
+                                <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                            </video>
+                            <!--For video embeds-->
+                            <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                            </div>-->
+
+                            <div class="pane_control">
+                                <a href="#" class="control_item">
+                                    <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                </a>
+                                <a href="#" class="control_item">
+                                    <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                </a>
                             </div>
                         </div>
                         
@@ -792,7 +814,6 @@
                     <ul class="subNavList">
                         <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
                         <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
-                        <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
                         <li><a href="#" class="subNavItem">Saved Posts</a></li>
                     </ul>
                 </div>
@@ -808,6 +829,9 @@
                     <h4 class="title">Discover</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
+                        <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
+                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
+                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
                         <li>
                             <a href="#jobs" class="subNavItem" data-toggle="collapse">
                                 Jobs
@@ -822,20 +846,29 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li>
+                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
+                                Buyer Requests
+                            </a>
+                            <div class="collapse" id="by_rq">
+                                <ul class="link_nav_children">
+                                    <li><a href="requests.html">Product Requests</a></li>
+                                    <li><a href="requests.html">Service Requests</a></li>
+                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="market.html" class="subNavItem">Market</a></li>
-                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="#" class="subNavItem">Partner Requests</a></li>
-                        <li><a href="#" class="subNavItem">Trainer Requests</a></li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
                     </ul>
                 </div>
             </li>
             <li class="linkNavMain">
-                <a href="corp_profile_general.html" class="mainTrigger">
+                <a href="feeds_home.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_user"></i>
+                        <i class="icon icon_forum"></i>
                     </span>
-                    <span class="link_title">My Profile</span>
+                    <span class="link_title">Communities</span>
                 </a>
             </li>
             <li class="linkNavMain">
@@ -884,7 +917,7 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
-                           <li class="link_nav">
+                            <li class="link_nav">
                                 <a href="corp_profile_general.html">
                                     <span class="itemIcon">
                                         <i class="icon icon_user"></i>
@@ -905,34 +938,47 @@
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li class="active"><a href="timeline.html">Global Timeline</a></li>
                                         <li><a href="newsfeed.html">My Timeline</a></li>
+                                        <li class="active"><a href="timeline.html">Global Timeline</a></li>
                                         <li><a href="feeds_home.html">Communities</a></li>
                                         <li><a href="#">Saved Posts</a></li>
                                     </ul>
                                 </div>
-                            </li>   
-                            <li class="link_nav has_children">
-                                <a href="#market" data-toggle="collapse">
+                            </li>
+                            <li class="link_nav ">
+                                <a href="trainings.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_trdir"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Directories</span>
+                                        <span class="link_title">Training Directory</span>
                                     </div>
                                 </a>
-                                <div class="collapse" id="market">
-                                    <ul class="link_nav_children">
-                                        <li><a href="portfolio.html">Talent Directory</a></li>
-                                        <li><a href="requests.html">Partner Requests</a></li>
-                                        <li><a href="requests.html">Trainer Requests</a></li>
-                                    </ul>
-                                </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="questions.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_question"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Questions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="business_opp.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_biz"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Business Opportunities</span>
+                                    </div>
+                                </a>
                             </li>
                             <li class="link_nav has_children">
                                 <a href="#ds_jobs" data-toggle="collapse">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_job"></i>
                                     </span>
                                     <div class="link_details">
                                         <span class="link_title">Jobs</span>
@@ -948,15 +994,22 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="link_nav ">
-                                <a href="questions.html">
+                            <li class="link_nav has_children">
+                                <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
-                                        <i class="icon icon_forum"></i>
+                                        <i class="icon icon_request"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Questions</span>
+                                        <span class="link_title">Buyer Request</span>
                                     </div>
                                 </a>
+                                <div class="collapse" id="market">
+                                    <ul class="link_nav_children">
+                                        <li><a href="requests.html">Product Requests</a></li>
+                                        <li><a href="requests.html">Service Requests</a></li>
+                                        <li><a href="requests.html">Trainer/Tutor Requests</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="link_nav ">
                                 <a href="market.html">
@@ -965,6 +1018,16 @@
                                     </span>
                                     <div class="link_details">
                                         <span class="link_title">Market</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="portfolio.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_talent"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Talent Directory</span>
                                     </div>
                                 </a>
                             </li>
@@ -992,8 +1055,7 @@
                     </nav>
                     
                     <div class="nav_block nav_footer">
-                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a><a href="cookies.html">Cookies</a>
-                        <a href="contact_us.html">Contact Us</a></p>
+                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a></p>
                         <p>&copy; SAEDConnect 2017</p>
                     </div>
                 </div>
@@ -1046,26 +1108,41 @@
                                                             </div>
                                                         </div>
                                                         <div class="cust_selector">
-                                                            <div class="select_grid">
-                                                                <a href="#post_states" data-backdrop="static" data-toggle="modal" class="my_selector">
-                                                                    <label class="control-wrapper">
-                                                                        <span class="c_label"><i class="fa fa-map-marker"></i></span>
-                                                                    </label>
-                                                                </a>
-                                                            </div>
-                                                            <div class="select_grid">
-                                                               <span class="my_selector title_text color-primary">
+                                                           <span class="sel_label color-default title_text">
+                                                               <i class="fa fa-calendar"></i>
+                                                           </span>
+                                                           <span class="title_text color-primary">
+                                                               <input type="text" class="cust_input date" placeholder="Set closing date">
+                                                           </span>
+                                                           <span class="checkbox-inline">
+                                                               <label for="tm_open" class="">
+                                                                   <input type="checkbox" checked id="tm_open">
+                                                                   <span class="control_text">Always Open</span>
+                                                               </label>
+                                                           </span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="cust_selector select_grid">
+                                                                <div class="my_selector">
                                                                     <a href="#post_states" data-backdrop="static" data-toggle="modal">
+                                                                        <label class="control-wrapper">
+                                                                            <span class="c_label"><i class="fa fa-map-marker"></i></span>
+                                                                        </label>
+                                                                    </a>
+                                                                </div>
+                                                                <!--Show this after the user selects locations-->
+                                                                <div class="my_selector hidden">
+                                                                    <a href="#post_states" class="title_text color-primary" data-backdrop="static" data-toggle="modal">
                                                                         <span class="seperator comma_seperated">Lagos</span>
                                                                         <span class="seperator comma_seperated">Abuja</span>
                                                                         <span class="seperator comma_seperated">Rivers</span>
                                                                     </a>
-                                                               </span>
+                                                               </div>
                                                            </div>
                                                        </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                    <div class="media_preview hidden">
                                                         <img src="img/banners/tm_card_img.jpg" class="">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -1129,27 +1206,42 @@
                                                                 </a>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                           <div class="cust_selector">
-                                                               <span class="sel_label color-default title_text">
-                                                                   Search across
-                                                               </span>
-                                                               <span class="sel_label title_text color-primary">
-                                                                   <!--Change the text of the selector to the user selection-->
+                                                        <div class="cust_selector">
+                                                           <span class="sel_label color-default title_text">
+                                                               <i class="fa fa-calendar"></i>
+                                                           </span>
+                                                           <span class="title_text color-primary">
+                                                               <input type="text" class="cust_input date" placeholder="Set closing date">
+                                                           </span>
+                                                           <span class="checkbox-inline">
+                                                               <label for="tm_open" class="">
+                                                                   <input type="checkbox" checked id="tm_open">
+                                                                   <span class="control_text">Always Open</span>
+                                                               </label>
+                                                           </span>
+                                                        </div>
+                                                        <div class="form_group">
+                                                            <div class="cust_selector select_grid">
+                                                                <div class="my_selector hidden">
                                                                     <a href="#post_states" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb">Select location(s)</span>
+                                                                        <label class="control-wrapper">
+                                                                            <span class="c_label"><i class="fa fa-map-marker"></i></span>
+                                                                        </label>
                                                                     </a>
-                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
+                                                                </div>
+                                                                <!--Show this after the user selects locations-->
+                                                                <div class="my_selector">
+                                                                    <a href="#post_states" class="title_text color-primary" data-backdrop="static" data-toggle="modal">
                                                                         <span class="seperator comma_seperated">Lagos</span>
                                                                         <span class="seperator comma_seperated">Abuja</span>
                                                                         <span class="seperator comma_seperated">Rivers</span>
                                                                     </a>
-                                                               </span>
+                                                               </div>
                                                            </div>
                                                        </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview">
+                                                    <div class="media_preview hidden">
                                                         <img src="img/banners/tm_card_img.jpg" class="hidden">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -1244,26 +1336,27 @@
                                                            </span>
                                                         </div>
                                                         <div class="form-group">
-                                                           <div class="cust_selector">
-                                                               <span class="sel_label color-default title_text">
-                                                                   Available in
-                                                               </span>
-                                                               <span class="sel_label title_text color-primary">
-                                                                   <!--Change the text of the selector to the user selection-->
-                                                                    <a href="#post_states" class="hidden" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="log_crumb">Select location(s)</span>
-                                                                    </a>
+                                                           <div class="cust_selector select_grid">
+                                                                <div class="my_selector">
                                                                     <a href="#post_states" data-backdrop="static" data-toggle="modal">
-                                                                        <span class="comma_seperated seperator">Lagos</span>
-                                                                        <span class="comma_seperated seperator">Abuja</span>
-                                                                        <span class="comma_seperated seperator">Rivers</span>
+                                                                        <label class="control-wrapper">
+                                                                            <span class="c_label"><i class="fa fa-map-marker"></i></span>
+                                                                        </label>
                                                                     </a>
-                                                               </span>
+                                                                </div>
+                                                                <!--Show this after the user selects locations-->
+                                                                <div class="my_selector hidden">
+                                                                    <a href="#post_states" class="title_text color-primary" data-backdrop="static" data-toggle="modal">
+                                                                        <span class="seperator comma_seperated">Lagos</span>
+                                                                        <span class="seperator comma_seperated">Abuja</span>
+                                                                        <span class="seperator comma_seperated">Rivers</span>
+                                                                    </a>
+                                                               </div>
                                                            </div>
                                                        </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                    <div class="media_preview hidden">
                                                         <img src="img/banners/tm_card_img.jpg">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -1318,7 +1411,7 @@
                                                         </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                    <div class="media_preview hidden">
                                                         <img src="img/banners/tm_card_img.jpg">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -1369,7 +1462,7 @@
                                                         </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                                    <div class="media_preview embed-responsive embed-responsive-16by9 hidden">
+                                                    <div class="media_preview hidden">
                                                         <img src="img/banners/tm_card_img.jpg">
                                                         <!--For normal video uploads-->
                                                         <video controls class="embed-responsive-item hidden" preload="metadata">

@@ -79,8 +79,8 @@
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
                         <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
                         <li><a href="#" class="subNavItem">Saved Posts</a></li>
-                        <li><a href="feeds_home.html" class="subNavItem">Communities</a></li>
                     </ul>
                 </div>
             </li>
@@ -95,6 +95,9 @@
                     <h4 class="title">Discover</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
+                        <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
+                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
+                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
                         <li>
                             <a href="#jobs" class="subNavItem" data-toggle="collapse">
                                 Jobs
@@ -109,20 +112,29 @@
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li>
+                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
+                                Buyer Requests
+                            </a>
+                            <div class="collapse" id="by_rq">
+                                <ul class="link_nav_children">
+                                    <li><a href="requests.html">Product Requests</a></li>
+                                    <li><a href="requests.html">Service Requests</a></li>
+                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="market.html" class="subNavItem">Market</a></li>
-                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="#" class="subNavItem">Partner Requests</a></li>
-                        <li><a href="#" class="subNavItem">Trainer Requests</a></li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="linkNavMain active">
-                <a href="corp_profile_general.html" class="mainTrigger">
+            <li class="linkNavMain">
+                <a href="feeds_home.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_user"></i>
+                        <i class="icon icon_forum"></i>
                     </span>
-                    <span class="link_title">My Profile</span>
+                    <span class="link_title">Communities</span>
                 </a>
             </li>
             <li class="linkNavMain">
@@ -173,7 +185,7 @@
 
                     <nav class="nav_block main_nav">
                         <ul class="has_icon">
-                           <li class="link_nav active">
+                            <li class="link_nav active">
                                 <a href="corp_profile_general.html">
                                     <span class="itemIcon">
                                         <i class="icon icon_user"></i>
@@ -194,33 +206,47 @@
                                 </a>
                                 <div class="collapse" id="stuffs">
                                     <ul class="link_nav_children">
-                                        <li><a href="newsfeed.html">My Timeline</a></li>
-                                        <li><a href="#">Saved Posts</a></li>
+                                        <li class=""><a href="newsfeed.html">My Timeline</a></li>
+                                        <li><a href="timeline.html">Global Timeline</a></li>
                                         <li><a href="feeds_home.html">Communities</a></li>
+                                        <li><a href="#">Saved Posts</a></li>
                                     </ul>
                                 </div>
-                            </li>   
-                            <li class="link_nav has_children">
-                                <a href="#market" data-toggle="collapse">
+                            </li>
+                            <li class="link_nav ">
+                                <a href="trainings.html">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_trdir"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Directories</span>
+                                        <span class="link_title">Training Directory</span>
                                     </div>
                                 </a>
-                                <div class="collapse" id="market">
-                                    <ul class="link_nav_children">
-                                        <li><a href="portfolio.html">Talent Directory</a></li>
-                                        <li><a href="requests.html">Partner Requests</a></li>
-                                        <li><a href="requests.html">Trainer Requests</a></li>
-                                    </ul>
-                                </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="questions.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_question"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Questions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="business_opp.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_biz"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Business Opportunities</span>
+                                    </div>
+                                </a>
                             </li>
                             <li class="link_nav has_children">
                                 <a href="#ds_jobs" data-toggle="collapse">
                                     <span class="itemIcon">
-                                        <i class="icon icon_request"></i>
+                                        <i class="icon icon_job"></i>
                                     </span>
                                     <div class="link_details">
                                         <span class="link_title">Jobs</span>
@@ -236,15 +262,22 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="link_nav ">
-                                <a href="questions.html">
+                            <li class="link_nav has_children">
+                                <a href="#market" data-toggle="collapse">
                                     <span class="itemIcon">
-                                        <i class="icon icon_forum"></i>
+                                        <i class="icon icon_request"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Questions</span>
+                                        <span class="link_title">Buyer Request</span>
                                     </div>
                                 </a>
+                                <div class="collapse" id="market">
+                                    <ul class="link_nav_children">>
+                                        <li><a href="requests.html">Product Requests</a></li>
+                                        <li><a href="requests.html">Service Requests</a></li>
+                                        <li><a href="requests.html">Trainer/Tutor Requests</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="link_nav ">
                                 <a href="market.html">
@@ -253,6 +286,16 @@
                                     </span>
                                     <div class="link_details">
                                         <span class="link_title">Market</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="portfolio.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_talent"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Talent Directory</span>
                                     </div>
                                 </a>
                             </li>
@@ -280,8 +323,7 @@
                     </nav>
                     
                     <div class="nav_block nav_footer">
-                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a><a href="cookies.html">Cookies</a>
-                        <a href="contact_us.html">Contact Us</a></p>
+                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a></p>
                         <p>&copy; SAEDConnect 2017</p>
                     </div>
                 </div>
@@ -312,37 +354,24 @@
                                     </div>
                                 </div>
                             </div>
-                            <nav class="nav-section">
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                      Activity <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="profile_my_activities.html">My Posts</a></li>
-                                        <li><a href="profile_my_activities.html">People I am following</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="corp_profile_general.html">Profile</a></li>
-                                <li class="hidden-xs"><a href="profile_my_followers.html">Followers</a></li>
-                                <li class="hidden-xs"><a href="profile_following.html">Following</a></li>
-                                <li class="active dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                     More <span class="caret"></span>
-                                  </a>
-                                  <ul class="dropdown-menu dropdown-right">
-                                    <li><a href="user_shop.html">Shop</a></li>
-                                    <li><a href="user_questions.html">Questions</a></li>
-                                    <li><a href="user_portfolio.html">Portfolio</a></li>
-                                    <li><a href="user_jobs.html">Jobs</a></li>
-                                    <li><a href="user_requests.html">Requests</a></li>
-                                    <li><a href="corp_profile_tutor.html">Tutor Profile</a></li>
-                                    <li class="visible-xs"><a href="profile_my_followers.html">Followers</a></li>
-                                    <li class="visible-xs"><a href="profile_following.html">Following</a></li>
-                                    <li><a href="corp_profile_skills.html">Skills</a></li>
-                                    <li><a href="corp_profile_interests.html">Interests</a></li>
-                                    <li><a href="corp_profile_settings.html">Account Settings</a></li>
-                                  </ul>
-                                </li>
+                            <nav>
+                                <ul class="nav-section">
+                                    <li><a href="corp_profile_general.html">Profile</a></li>
+                                    <li class=""><a href="corp_profile_skills.html">Skills</a></li>
+                                    <li class="hidden-xs"><a href="corp_profile_tutor.html">Tutor Profile</a></li>
+                                    <li class="active hidden-xs"><a href="corp_profile_interests.html">Interests</a></li>
+                                    <li class=" hidden-xs"><a href="corp_profile_settings.html">Settings</a></li>
+                                    <li class="dropdown visible-xs active">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                         More <span class="caret"></span>
+                                      </a>
+                                      <ul class="dropdown-menu dropdown-right">
+                                        <li class=""><a href="corp_profile_tutor.html">Tutor Profile</a></li>
+                                        <li class=""><a href="corp_profile_interests.html">Interests</a></li>
+                                        <li class=""><a href="corp_profile_settings.html">Account Settings</a></li>
+                                      </ul>
+                                    </li>
+                                </ul>
                             </nav>
                         </header>
                         
