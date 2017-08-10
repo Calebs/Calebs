@@ -811,7 +811,7 @@
                     <ul class="subNavList">
                         <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
                         <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
-                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="savedPost.html" class="subNavItem">Saved Posts</a></li>
                     </ul>
                 </div>
             </li>
@@ -826,6 +826,18 @@
                     <h4 class="title">Discover</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
+                        <li>
+                            <a href="#md_training" class="subNavItem" data-toggle="collapse">
+                                Growth Opportunities
+                            </a>
+                            <div class="collapse" id="md_training">
+                                <ul class="link_nav_children">
+                                    <li><a href="trainings.html">Trainings</a></li>
+                                    <li><a href="trainings.html">Programs</a></li>
+                                    <li><a href="trainings.html">Events</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
                         <li><a href="questions.html" class="subNavItem">Questions</a></li>
                         <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
@@ -938,19 +950,26 @@
                                         <li class="active"><a href="newsfeed.html">My Timeline</a></li>
                                         <li><a href="timeline.html">Global Timeline</a></li>
                                         <li><a href="feeds_home.html">Communities</a></li>
-                                        <li><a href="#">Saved Posts</a></li>
+                                        <li><a href="savedPost.html">Saved Posts</a></li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="link_nav ">
-                                <a href="trainings.html">
+                            <li class="link_nav has_children">
+                                <a href="#trainings" data-toggle="collapse">
                                     <span class="itemIcon">
                                         <i class="icon icon_trdir"></i>
                                     </span>
                                     <div class="link_details">
-                                        <span class="link_title">Training Directory</span>
+                                        <span class="link_title">Growth Opportunities</span>
                                     </div>
                                 </a>
+                                <div class="collapse" id="trainings">
+                                    <ul class="link_nav_children">
+                                        <li><a href="trainings.html">Trainings</a></li>
+                                        <li><a href="trainings.html">Programs</a></li>
+                                        <li><a href="trainings.html">Events</a></li>
+                                    </ul>
+                                </div>
                             </li>
                             <li class="link_nav ">
                                 <a href="questions.html">
@@ -1137,6 +1156,17 @@
                                                                </div>
                                                            </div>
                                                        </div>
+                                                       <!--Show this after the user selects post tags-->
+                                                        <div class="cust_selector">
+                                                           <span class="sel_label color-default title_text">
+                                                               <i class="fa fa-tags"></i>
+                                                           </span>
+                                                           <!--List selected tags here. Just the sub categories no need for the parent category-->
+                                                           <span class="title_text color-primary">
+                                                               <span class="seperator comma_seperated">Fashion</span>
+                                                                <span class="seperator comma_seperated">Emerging Jobs</span>
+                                                           </span>
+                                                        </div>
                                                     </div>
                                                     <!--Only show this pane when a user tries to upload an image to the timeline.-->
                                                     <div class="media_preview hidden">
