@@ -1,0 +1,86 @@
+.main_content_wrapper {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    &::before {
+		/* never visible - used to check MQ in jQuery */
+		display: none;
+		content: 'mobile';
+	}
+
+    @include MQ(M) {
+        &::before {
+            /* never visible - used to check MQ in jQuery */
+            content: 'tablet';
+        }
+    }
+
+    @include MQ(L) {
+        margin-top: 0;
+
+         &::before {
+            /* never visible - used to check MQ in jQuery */
+            content: 'desktop';
+        }
+    }
+}
+
+.section_block {
+    padding: 30px 0;
+    display: block;
+    width: 100%;
+    position: relative;
+
+    @include MQ(M) {
+        padding: 60px 0;
+    }
+}
+
+.section_header {
+    padding-bottom: 40px;
+    max-width: 750px;
+    position: relative;
+}
+
+.section_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+
+    @include MQ(M) {
+        font-size: 32px;
+    }
+}
+
+.quote_block {
+    padding: 40px 0 20px;
+}
+
+.customer {
+    margin-top: 15px;
+    font-size: 14px;
+    display: block;
+    clear: both;
+
+    &::before {
+        content: "-";
+        padding-right: 4px;
+    }
+
+    @include MQ(M) {
+        font-size: 16px;
+    }
+}
+
+.cust_testimonial {
+    max-width: 960px;
+
+    .testimony {
+        line-height: 1.4;
+        font-size: 21px;
+
+        @include MQ(M) {
+            font-size: 32px;
+        }
+    }
+}

@@ -1,0 +1,511 @@
+// antialiasing mode font rendering
+
+html * {
+  @include font-smoothing;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.caps_upper {
+    text-transform: uppercase !important;
+}
+
+.caps_normal {
+    text-transform: none !important;
+}
+
+mark {
+    padding:0 5px; 
+    border-radius: 5px;
+    background-color: lighten($brand_accent, 35);
+}
+
+body {
+    font-family: $body_font;
+    color: $color_text;
+    font-size: 12px;
+    line-height: 1.35;
+    word-spacing: .5px;
+    font-weight: 400;
+    position: relative;
+
+    &.loading, &.nav-is-visible {
+        overflow: hidden;
+    }
+}
+
+/* Backgrounds */
+
+.bg_default {
+    background-color: $border_grey_light !important;
+}
+
+.bg_off_white {
+    background-color: $off_white !important;
+}
+
+.bg_primary {
+    background-color: $brand_primary !important;
+}
+
+.bg_accent {
+    background-color: $brand_accent !important;
+}
+
+.bg_inverse {
+    background-color: $brand_inverse !important;
+}
+
+.bg_inverse_light {
+    background-color: $brand_inverse_light !important;
+}
+
+.bg_black {
+    background-color: $color_text !important;
+}
+
+.bg_white {
+    background-color: $color_white !important;
+}
+
+.color-primary {
+    color: $brand_primary !important;
+}
+
+.color-secondary {
+    color: $brand_accent !important;
+}
+
+.color-inverse {
+    color: $brand_inverse !important;
+}
+
+.color-inverse_2 {
+    color: $brand_inverse_2 !important;
+}
+
+.color-grey_light {
+    color: $border_grey_light !important;
+}
+
+.color-grey {
+    color: $border_grey_dark !important;
+}
+
+.color-white {
+    color: $color_white !important;
+}
+
+.color-default {
+    color: $color_text !important;
+}
+
+.color-black {
+    color: $color_black !important;
+}
+
+.font-sm {
+    font-size: .833em !important;
+}
+
+.font-md {
+    font-size: 1.33em !important;
+}
+
+.font-lg {
+    font-size: 1.75em !important;
+}
+
+.h-pad {
+    padding-top: 30px !important;
+}
+
+.h-pad-sm {
+    padding-top: 15px !important;
+}
+
+.h-pad-xs {
+    padding-top: 5px !important;
+}
+
+.font_bold {
+    font-family: $header_font !important;
+} 
+
+.font_regular {
+    font-family: $body_font !important;
+}
+
+.container {
+    width: auto;
+    position: relative;
+    max-width: 1170px;
+}
+
+.narrow_container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 4;
+}
+
+.more-btn{
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 15px 0;
+    @include clearfix;
+
+    .btn {
+        max-width: 200px;
+        display: inline-block;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $header_font;
+    margin: 0;
+    color: inherit;
+    line-height: 1.1;
+
+    small {
+        text-transform: none;
+    }
+}
+
+
+h1 {
+	font-size: 2.6em;
+}
+
+h2 {
+	font-size: 2.2em;
+}
+
+h3 {
+	font-size: 1.8em;
+}
+
+h4 {
+	font-size: 1.6em;
+}
+
+h5 {
+	font-size: 1.4em;
+}
+
+h6 {
+	font-size: 1.2em;
+}
+
+p {
+    margin: 0;
+
+    + p {
+        padding-top: .5em;
+    }
+    
+    em,quote {
+        font-style: italic;
+
+        sup {
+            color: $brand_accent;
+        }
+    }
+}
+
+.input-group {
+    z-index: 1;
+    
+    + .input-group {
+        margin-top: 1em;
+    }
+}
+
+.input-group-addon {
+    background: $border_grey_light;
+    border: 1px solid $border_grey;
+    color: $brand_primary;
+    padding: 6px 15px;
+}
+
+.input-group-btn {
+    font-size: 1em;
+
+    .btn {
+        vertical-align: top;
+        padding: 6px 15px;
+    }
+}
+
+.centered {
+	float: none; 
+	margin: 0 auto; 
+	display: table; 
+	text-align: center;
+}
+
+.form-horizontal {
+    @include clearfix;
+    margin-bottom: 1em;
+    clear: both;
+
+    > .form_title {
+        margin-bottom: 10px;
+    }
+}
+
+.slim_form {
+    max-width: 500px;
+
+    &.form_Centered {
+        margin: auto;
+    }
+}
+
+.form-group {
+    &[class*="col-"] {
+        .control-label {
+            margin-bottom: 10px;
+        }
+
+        @include MQ(S) {
+            margin:0;
+
+            &:first-of-type{
+                padding-right: 7.5px;
+                padding-left: 0;
+            }
+
+            &:last-of-type {
+                padding-left: 7.5px;
+                padding-right: 0;
+            }  
+        }
+    }
+}
+
+textarea, textarea.form-control, 
+input.form-control, input[type=text], input[type=password], 
+input[type=email], input[type=number], [type=text].form-control,select.form-control, 
+[type=password].form-control, [type=email].form-control, [type=tel].form-control, [contenteditable].form-control {
+	border: 1px solid darken($color_grey_light, 7.5);
+    border-radius: 4px;
+    padding: 6px 10px;
+    line-height: normal;
+    color: $color_text;
+    font-size: 1em;
+    margin: 0;
+    outline: 0;
+    overflow: hidden;
+    text-indent: .01px;
+    background: white;
+    @include appearance(none);
+    box-shadow: none;
+    resize: none;
+
+    &.control_dark {
+        border: none;
+        background-color: darken($brand_primary, 15);
+    }
+   
+    &:focus {
+    	outline: 0;
+        border-color: $brand_primary;
+    	box-shadow: none;
+    }
+}
+
+select.form-control {
+    background: white url(../img/arrow-down.png) right center no-repeat;
+
+    &:focus {
+        outline: none;
+        background: white url(../img/arrow-down.png) right center no-repeat;
+    }
+}
+
+address {
+    display: block;
+
+    span {
+        display: block;
+    }
+}
+
+input[type="radio"], 
+.radio input[type="radio"], 
+.radio-inline input[type="radio"] {
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+input[type="checkbox"]:checked, 
+.checkbox input[type="checkbox"]:checked, 
+.checkbox-inline input[type="checkbox"]:checked {
+    &::after {
+        background-color: $brand_accent;
+        border-color: darken($brand_accent,5);
+    }
+}
+
+input[type="radio"], 
+.radio input[type="radio"], 
+.radio-inline input[type="radio"] {
+    &::before {
+        background: $brand_accent;
+    }
+    
+    &:checked:after {
+		border-color: $brand_accent;
+	}
+}
+
+.control-label {
+	text-transform: none;
+    font-size: 1em;
+    padding-top: 0;
+    color: $brand_primary;
+    
+    &[class*="col-"] {
+        padding: 0;
+        text-align: right;
+    }
+}
+
+
+fieldset {
+    border: none;
+    padding: 1em 0 0;
+
+    .help-block {
+        margin-bottom: 15px;
+    }
+    
+    + fieldset {
+        margin-top: 20px;
+        border-top: 1px solid $border_grey_light;
+    }
+}
+
+.form_title {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.label {
+    color: inherit;
+    padding: 0;
+    font-weight: normal;
+    white-space: initial;
+    line-height: normal
+}
+
+.required {
+    &::before {
+        content: "*";
+        font-size: 1.025em;
+        padding-left: 3px;
+        color: adjust-hue($brand_accent, 5);
+    }
+}
+
+hr {
+    margin: 15px 0;
+    clear: both;
+}
+
+input[disabled] {
+    background-color: $border_grey;
+}
+
+.radio-inline, .checkbox-inline {
+    padding: 10px 0 5px;
+}
+
+label {
+    font-weight: normal;
+
+    &.radio-inline {
+        + label {
+            margin-left: 15px;
+        }
+    }
+
+    &.checkbox-inline{
+        margin: 5px 0;
+        margin-bottom: 0 !important;
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.help-block {
+    font-size: 11px;
+    color: $border_grey_dark;
+    font-style: italic;
+}
+
+.action_btn {
+    padding-top: 20px;
+}
+
+.close_dialog {
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: $color_white;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    @include image_replacement;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        background: $color_text;
+        height: 14px;
+        top: 50%;
+        left: 50%;
+        margin: -7px 0 0 -1px;
+    }
+    &::before {
+        @include transform(rotate(-45deg));
+    }
+    &::after {
+        @include transform(rotate(45deg));
+    }
+    &:hover,
+    &:focus {
+        background-color: $brand_accent;
+        &::before,
+        &::after {
+            background-color: $color_white;
+        }
+    }
+}

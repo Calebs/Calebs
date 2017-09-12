@@ -1,0 +1,158 @@
+.dropdown-menu {
+    padding: 0;
+    font-size: 1em;
+    z-index: 2000;
+
+    &.dropdown-right {
+        left: auto;
+        right: 0;
+    }
+
+    li {
+        display: block;
+        padding: 0;
+        margin:0;
+
+        &.active > * {
+            background: $brand_accent;
+            color: $color_white;
+        }
+
+        > * {
+            padding: 10px;
+            font-size: 11px;
+            display: block;
+            color: $color_text;
+            text-transform: uppercase;
+            line-height: normal;
+
+            &:hover {
+                background: $border_grey_light;
+                color: $brand_accent;
+            }
+        }
+    }
+
+    .radio, .checkbox {
+        margin: 0;
+    }
+
+    &.datepicker {
+        padding: 10px 15px;
+
+        .prev, .next {
+            color: $color_text;
+            font-size: 15px;
+            padding: 0 10px;
+            font-weight: bold;
+            background-color: rgba($border_grey_light, .5);
+        }
+
+        .datepicker-switch {
+            color: $brand_accent;
+        }
+
+        .dow {
+            color: $color_grey_dark;
+            font-family: $header_font;
+        }
+    }
+}
+
+.modal-backdrop {
+    background-color: $brand_primary;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-dialog {
+    z-index: 2000;
+}
+
+.modal {
+
+    .modal-open & {
+        background-color: rgba($brand_primary, .85)
+    }
+
+    .modal-header {
+        border-bottom: none;
+        padding: 10px 15px;
+        @include clearfix;
+
+        @include MQ(M) {
+            padding: 15px 30px;
+        }
+    }
+
+    .modal-title {
+        font-size: 16px;
+    }
+
+    .close {
+        right: 15px;
+        opacity: 1;
+        text-shadow: none;
+        @include transition(background-color 1s);
+        padding: 0;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+
+        span {
+            right: 0;
+            width: 15px;
+            height: 20px;
+            padding: 0;
+            top: 5px;
+            position: absolute;
+        }
+
+        .modal_close {
+            background: url(../img/modal_close.png) left bottom no-repeat;
+            display: block;
+        }
+
+        &:hover {
+            text-decoration: none;
+            opacity: .8;
+        }
+    }
+
+    .modal-body {
+        position: relative;
+        padding: 0;
+
+        &.info_details {
+            padding: 20px 15px;
+            display: block;
+
+            @include MQ(M) {
+                padding: 30px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .content-panel {
+        padding: 0 15px 10px;
+
+        .subtitle {
+            margin-bottom: 10px;
+        }
+
+        @include MQ(M) {
+            padding: 0 30px 15px;
+        }
+    }
+
+    .modal-footer {
+        background: $color_white;
+        border-top: none;
+        padding: 10px 15px;
+    }
+}

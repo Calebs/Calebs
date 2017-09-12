@@ -1,0 +1,64 @@
+/* SVG Icon systems */
+.cust_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  vertical-align: middle;
+
+  img, svg {
+    display: block;
+    width: 100%;
+  }
+
+  &.icon_xs {
+      width: 30px;
+      height: 30px;
+  }
+  
+  &.icon_sm {
+      width: 48px;
+      height: 48px;
+  }
+}
+
+.icon_white {
+  fill: $color_white;
+  color: $color_white;
+}
+
+.icon_green {
+  fill: $brand_inverse_2;
+  color: $brand_inverse_2;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        text-align: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &.icon-xs::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    &.icon-sm::before {
+        width: 32px;
+        height: 32px;
+    }
+
+    &.icon-md::before {
+        width: 64px;
+        height: 64px;
+        line-height: 64px;
+    }
+}

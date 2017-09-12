@@ -1,0 +1,96 @@
+.flex_grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    justify-content: center;
+
+    @include MQ(S) {
+        justify-content: flex-start;
+    }
+}
+
+.item {
+    padding: 15px;
+
+    @include MQ(S) {
+        .grid_3rd & {
+            width: calc(100% / 3);
+        }
+
+        .grid_4th & {
+            width: 50%;
+        }
+    }
+
+    @include MQ(M) {
+        padding: 30px 15px;
+
+        .grid_4th & {
+            width: 25%;
+        }
+    }
+}
+
+.item_wrapper {
+    width: 100%;
+    display: block;
+    height: 100%;
+    font-size: 14px;
+
+    > * {
+        display: block;
+
+        + * {
+            margin-top: 15px;
+        }
+    }
+
+    @include MQ(S) {
+        font-size: 16px;
+    }
+}
+
+.item_title {
+    font-size: 18px;
+     
+    @include MQ(M) {
+        font-size: 21px;
+    }
+}
+
+.item_icon {
+    display: block;
+    overflow: hidden;
+    max-width: 256px;
+
+    .text-center & {
+        margin: auto;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.card_item {
+    max-width: 300px;
+}
+
+.card_wrapper {
+    height: 100%;
+    padding: 15px;
+    background-color: $color_white;
+    @include transition(all .6s ease-in-out);
+
+    &:hover, &:focus {
+        box-shadow: 0 1px 4px rgba($brand_inverse, .6);
+    }
+
+    > * {
+        display: block;
+
+        + * {
+            margin-top: 10px;
+        }
+    }
+}
