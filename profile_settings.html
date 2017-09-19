@@ -157,7 +157,7 @@
     </div>
     
     <!-- work as ST-container-->
-    <main class="sd-main-content bg-off-white">
+    <main class="sd-main-content bg-grey-light">
         <header class="page_header has_back is_fixed">
             <div class="header_wrapper">
                 <div class="back_arrow">
@@ -184,6 +184,25 @@
                 <div class="content_wrapper">
                     
                     <div class="nav_block info_banner">
+                        <nav class="nav-section">
+                            <li class="">
+                                <a href="profile_my_activities.html">
+                                  Activities
+                                </a>
+                            </li>
+                            <li class=""><a href="user_profile.html">Bio</a></li>
+                            <li class="dropdown ">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                 More <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu active dropdown-right">
+                                <li><a href="profile_my_followers.html">Followers</a></li>
+                                <li><a href="profile_following.html">Following</a></li>
+                                <li><a href="saed_partnership.html">SAED Partnership</a></li>
+                                <li><a href="profile_settings.html">Account Settings</a></li>
+                              </ul>
+                            </li>
+                        </nav>
                         <div class="profileinfo">
                             <div class="profileInfoimage image_circle">
                                 <img src="./img/user_avis/2.jpg" alt="Segun D. Araromi">
@@ -195,33 +214,13 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="profileInfoDetails">
+                            <div class="profileInfoDetails ">
                                 <h4 class="infoTitle">Segun D. Araromi</h4>
                                 <h6 class="font_regular color-grey">@innosegz</h6>
                                 <p class="">Head of Marketing at VMLearn Nigeria</p>
-                                <span class="fieldControl">
-                                    <a href="#" class="btn btn-card btn-sm btn-rounded"><i class="fa fa-edit"></i></a>
-                                </span>
                             </div>
                         </div>
-                        <nav class="nav-section">
-                            <li class="">
-                                <a href="profile_my_activities.html">
-                                  Activities
-                                </a>
-                            </li>
-                            <li><a href="user_profile.html">About</a></li>
-                            <li class="dropdown active">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                 More <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-right">
-                                <li><a href="profile_my_followers.html">Followers</a></li>
-                                <li><a href="profile_following.html">Following</a></li>
-                                <li><a href="profile_settings.html">Account Settings</a></li>
-                              </ul>
-                            </li>
-                        </nav>
+                        
                     </div> 
 
                     <nav class="nav_block hidden-sm hidden-xs">
@@ -235,9 +234,9 @@
                                     <span class="infoCount"></span>
                                 </a>
                             </li>
-                            <li class="link_nav">
+                            <li class="link_nav ">
                                 <a href="user_profile.html">
-                                    <span class="link_title">About</span>
+                                    <span class="link_title">Bio</span>
                                     <span class="infoCount"></span>
                                 </a>
                             </li>
@@ -289,7 +288,7 @@
                                     <span class="infoCount">0</span>
                                 </a>
                             </li>
-                            <li class="link_nav">
+                            <li class="link_nav ">
                                 <a href="saed_partnership.html">
                                     <span class="link_title">SAED Partnership</span>
                                 </a>
@@ -484,28 +483,18 @@
                                                             <div class="col-xs-6">
                                                                <span class="title font_bold color-primary"> 123@saedconnect.com</span>
                                                             </div>
-                                                            <div class="col-xs-2 ">
-                                                               <span class="font_regular color-primary text-right pull-right"> Edit</span>
-                                                            </div>
                                                         </a>
                                                     </div>
                                                     <div class="panel-collapse collapse" id="usemail">
                                                         <div class="panel-body">
-                                                            <p class="color-inverse">Changing your Registered email also changes your login email address.</p>
                                                             <form action="">
                                                                 <div class="fieldList">
                                                                     <article class="fieldItem">
                                                                         <div class="fieldLabel">Registered Email</div>
                                                                         <div class="fieldValue">
-                                                                            <input type="email" value="123@saedconnect.com" class="form-control">
+                                                                            <input type="email" disabled value="123@saedconnect.com" class="form-control">
                                                                         </div>
                                                                     </article>
-                                                                </div>
-                                                                <div class="action_btn text-right">
-                                                                    <button type="button" class="btn btn-card btn-rounded">
-                                                                    Cancel</button>
-                                                                    <button type="submit" class="btn btn-secondary btn-rounded">
-                                                                    Save Changes</button>
                                                                 </div>
                                                             </form>
                                                         </div>
@@ -618,9 +607,6 @@
                                                             <div class="col-xs-6">
                                                                <span class="title font_bold color-primary"> @myHandle</span>
                                                             </div>
-                                                            <div class="col-xs-2 ">
-                                                               <span class="font_regular color-primary text-right pull-right"> Edit</span>
-                                                            </div>
                                                         </a>
                                                     </div>
                                                     <div class="panel-collapse collapse" id="ushandle">
@@ -634,12 +620,6 @@
                                                                             <input type="text" value="myHandle" disabled class="form-control">
                                                                         </div>
                                                                     </article>
-                                                                </div>
-                                                                <div class="action_btn text-right">
-                                                                    <button type="button" class="btn btn-card btn-rounded">
-                                                                    Cancel</button>
-                                                                    <button type="submit" class="btn btn-secondary btn-rounded">
-                                                                    Save Changes</button>
                                                                 </div>
                                                             </form>
                                                         </div>
@@ -728,184 +708,23 @@
                                         <a href="saed_partnership.html" class="btn btn-sm btn-black">Get Started</a>
                                     </div>
                                 </section>
-                                <section class="nav_block">
-                                    <header class="blockHeader">
-                                        <h4 class="blockLabel font_regular">Profile Highlights</h4>
-                                        <a href="user_profile.html/#contact" class="paneControl"><i class="fa fa-edit"></i> Edit </a>
-                                    </header>
-                                    <div class="blockWrapper">
-                                        <article class="infoMeta">
-                                            <div class="metaLabel">
-                                               <i class="fa fa-phone"></i>
-                                           </div>
-                                           <div class="metaValue">
-                                               <a href="tel:2348067432288">2348067432288</a>
-                                           </div>
-                                        </article>
-                                        <article class="infoMeta">
-                                            <div class="metaLabel">
-                                               <i class="fa fa-map-marker"></i>
-                                           </div>
-                                           <div class="metaValue">
-                                               <p>Abuja, Nigeria</p>
-                                           </div>
-                                        </article>
-                                        <article class="infoMeta">
-                                            <div class="metaLabel">
-                                               <i class="fa fa-map-o"></i>
-                                           </div>
-                                           <div class="metaValue">
-                                               <address>
-                                                    <p class="">3, Kaltungo Str., Off Amurie Omanze Cres. Off Samuel Ladoke Akintola Boulevard, Garki II</p>
-                                               </address>
-                                           </div>
-                                        </article>
-                                    </div>
-                                </section>
-                                <section class="nav_block">
-                                    <header class="blockHeader">
-                                        <h4 class="blockLabel font_regular">Interested In</h4>
-                                        <a href="user_profile.html/#interests" class="paneControl"><i class="fa fa-edit"></i> Edit </a>
-                                    </header>
-                                    <div class="blockWrapper">
-                                       <!--Owner of the profile can remove an interest, viewer of another's profile can follow the community. If viewer is already viewing the community, the overlay shouldn't be visible-->
-                                        <ul class="tagList">
-                                            <li class="tagBubble">
-                                                <a class="item_wrapper">
-                                                    <span class="tagLabel color-default">
-                                                        Fashion
-                                                    </span>
-                                                    <div class="overlay_control" title="Join Community">
-                                                        <span class="actionLabel"><i class="fa fa-plus"></i></span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="tagBubble">
-                                                <a class="item_wrapper">
-                                                    <span class="tagLabel color-default">
-                                                        Design
-                                                    </span>
-                                                    <div class="overlay_control" title="Remove Interest">
-                                                        <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="tagBubble">
-                                                <a class="item_wrapper">
-                                                    <span class="tagLabel color-default">
-                                                        Entrepreneurship
-                                                    </span>
-                                                    <div class="overlay_control" title="Join Community">
-                                                        <span class="actionLabel"><i class="fa fa-plus"></i></span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="tagBubble">
-                                                <a class="item_wrapper">
-                                                    <span class="tagLabel color-default">
-                                                        Marketing
-                                                    </span>
-                                                    <div class="overlay_control" title="Join Community">
-                                                        <span class="actionLabel"><i class="fa fa-plus"></i></span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </section>
-                                <section class="nav_block">
-                                    <header class="blockHeader">
-                                        <h4 class="blockLabel font_regular">247 Followers</h4>
-                                       <a href="profile_my_followers.html" class="paneControl">View all <i class="fa fa-angle-right"></i></a>
-                                    </header>
-                                    <div class="blockWrapper">
-                                        <div class="userList">
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/user_avis/3.jpg" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/user_avis/2.jpg" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/user_avis/1.jpg" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/banners/news_insp.jpg" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/icons/employability.png" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb more_item" title="See all">
-                                                <a href="user_churches.html" class="thumb_wrapper">
-                                                    <div class="item_pos" title="4 More">
-                                                       +242
-                                                    </div>
-                                                </a>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="nav_block">
-                                    <header class="blockHeader">
-                                        <h4 class="blockLabel font_regular">Also Found On</h4>
-                                        <a href="user_profile.html/#social" class="paneControl"><i class="fa fa-edit"></i> Edit </a>
-                                    </header>
-                                    <div class="blockWrapper">
-                                       <div class="linksList link_vertical">
-                                            <div class="userLink linkFb">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </span>
-                                                    <span class="link_handle">facebook.com/d_segun</span>
-                                                </a>
-                                            </div>
-                                            <div class="userLink linkTw">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </span>
-                                                    <span class="link_handle">@innosegz</span>
-                                                </a>
-                                            </div>
-                                            <div class="userLink linkLn">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-linkedin"></i>
-                                                    </span>
-                                                    <span class="link_handle">@d_segun</span>
-                                                </a>
-                                            </div>
-                                            <div class="userLink linkIg">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-instagram"></i>
-                                                    </span>
-                                                    <span class="link_handle">@d_segun</span>
-                                                </a>
-                                            </div>
-                                            <div class="userLink linkLn">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-external-link"></i>
-                                                    </span>
-                                                    <span class="link_handle">mywebsite.com/profile</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="https://wwww.saedconnect.com" class="wrapper">
+                                        <img src="./img/banners/join_saedconnect.png" alt="Join SAEDConnect">
+                                    </a>
+                                </article>
                                 
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/small_ad.png" alt="random_ad">
+                                    </a>
+                                </article>
+                                
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/qlik.png" alt="Learn in insidify">
+                                    </a>
+                                </article>
                             </aside>
                         </div>           
                     </div>

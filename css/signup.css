@@ -1237,43 +1237,49 @@ select.form-control:focus {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
   margin: auto;
   text-align: center;
-  top: 50%;
-  bottom: auto;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
   width: 30px;
   height: 30px;
+  top: 10px;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 0.85);
+  /* Tablets and phablets */
 }
-/* line 1006, ../sass/partials/_base.scss */
+/* line 1005, ../sass/partials/_base.scss */
 .img_uploader:hover, .img_uploader:focus {
   background-color: #959595;
 }
-/* line 1010, ../sass/partials/_base.scss */
+@media only screen and (min-width: 800px) {
+  /* line 992, ../sass/partials/_base.scss */
+  .img_uploader {
+    top: 50%;
+    bottom: auto;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+/* line 1013, ../sass/partials/_base.scss */
 .img_uploader p {
   padding: 10px 0;
   /* Tablets and phablets */
 }
-/* line 1012, ../sass/partials/_base.scss */
+/* line 1015, ../sass/partials/_base.scss */
 .media_thumb .img_uploader p {
   color: #959595;
   font-size: 1em;
   padding: 0;
 }
 @media only screen and (min-width: 800px) {
-  /* line 1010, ../sass/partials/_base.scss */
+  /* line 1013, ../sass/partials/_base.scss */
   .img_uploader p {
     font-size: 18px;
   }
 }
 
-/* line 1024, ../sass/partials/_base.scss */
+/* line 1027, ../sass/partials/_base.scss */
 .close_dialog {
   z-index: 5;
   width: 30px;
@@ -1289,31 +1295,31 @@ select.form-control:focus {
   text-indent: 100%;
   white-space: nowrap;
 }
-/* line 1036, ../sass/partials/_base.scss */
+/* line 1039, ../sass/partials/_base.scss */
 .subNavTray .close_dialog {
   width: 20px;
   height: 20px;
   right: 10px;
   top: 7.5px;
 }
-/* line 1043, ../sass/partials/_base.scss */
+/* line 1046, ../sass/partials/_base.scss */
 .form-group .close_dialog {
   right: -10px;
   top: -15px;
 }
-/* line 1048, ../sass/partials/_base.scss */
+/* line 1051, ../sass/partials/_base.scss */
 .hero_widget .close_dialog {
   right: 15px;
   top: 5px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 800px) {
-  /* line 1048, ../sass/partials/_base.scss */
+  /* line 1051, ../sass/partials/_base.scss */
   .hero_widget .close_dialog {
     display: none;
   }
 }
-/* line 1057, ../sass/partials/_base.scss */
+/* line 1060, ../sass/partials/_base.scss */
 .close_dialog::before, .close_dialog::after {
   position: absolute;
   content: "";
@@ -1324,30 +1330,30 @@ select.form-control:focus {
   left: 50%;
   margin: -7px 0 0 -1px;
 }
-/* line 1068, ../sass/partials/_base.scss */
+/* line 1071, ../sass/partials/_base.scss */
 .close_dialog::before {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 1071, ../sass/partials/_base.scss */
+/* line 1074, ../sass/partials/_base.scss */
 .close_dialog::after {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 1074, ../sass/partials/_base.scss */
+/* line 1077, ../sass/partials/_base.scss */
 .close_dialog:hover, .close_dialog:focus {
   background-color: #FDC00F;
 }
-/* line 1077, ../sass/partials/_base.scss */
+/* line 1080, ../sass/partials/_base.scss */
 .close_dialog:hover::before, .close_dialog:hover::after, .close_dialog:focus::before, .close_dialog:focus::after {
   background-color: #FFFFFF;
 }
 
-/* line 1084, ../sass/partials/_base.scss */
+/* line 1087, ../sass/partials/_base.scss */
 .floated_header {
   *zoom: 1;
   display: block;
@@ -1364,18 +1370,18 @@ select.form-control:focus {
 .floated_header:after {
   clear: both;
 }
-/* line 1091, ../sass/partials/_base.scss */
+/* line 1094, ../sass/partials/_base.scss */
 .card_wrapper .floated_header {
   border-bottom-width: 1px;
   margin-bottom: 10px;
   padding-bottom: 5px;
 }
-/* line 1097, ../sass/partials/_base.scss */
+/* line 1100, ../sass/partials/_base.scss */
 .floated_header [class*="title"] {
   margin: 0;
   padding: 0;
 }
-/* line 1102, ../sass/partials/_base.scss */
+/* line 1105, ../sass/partials/_base.scss */
 .floated_header > * {
   display: inline-block;
   vertical-align: -webkit-baseline-middle;

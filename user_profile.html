@@ -158,7 +158,7 @@
         </ul>
     </div>
     
-    <main class="sd-main-content bg-off-white">
+    <main class="sd-main-content bg-grey-light">
         <header class="page_header has_back is_fixed">
             <div class="header_wrapper">
                 <div class="back_arrow">
@@ -184,6 +184,25 @@
                 <div class="content_wrapper">
                     
                     <div class="nav_block info_banner">
+                        <nav class="nav-section">
+                            <li class="">
+                                <a href="profile_my_activities.html">
+                                  Activities
+                                </a>
+                            </li>
+                            <li class="active"><a href="user_profile.html">Bio</a></li>
+                            <li class="dropdown ">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                 More <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu dropdown-right">
+                                <li><a href="profile_my_followers.html">Followers</a></li>
+                                <li><a href="profile_following.html">Following</a></li>
+                                <li><a href="saed_partnership.html">SAED Partnership</a></li>
+                                <li><a href="profile_settings.html">Account Settings</a></li>
+                              </ul>
+                            </li>
+                        </nav>
                         <div class="profileinfo">
                             <div class="profileInfoimage image_circle">
                                 <img src="./img/user_avis/2.jpg" alt="Segun D. Araromi">
@@ -202,6 +221,11 @@
                                 <span class="fieldControl">
                                     <a href="#" class="btn btn-card btn-sm btn-rounded"><i class="fa fa-edit"></i></a>
                                 </span>
+                                <div class="profileInfoAction">
+                                    <button type="button" class="btn btn-rounded  btn-primary"><i class="fa fa-plus"></i>Follow</button>
+                                    <button type="button" class="btn btn-rounded hidden btn-sm  btn-rounded btn-default"><i class="fa fa-check"></i>Following</button>
+                                    <a href="profile_settings.html" class="btn btn-rounded btn-card"><i class="fa fa-cog"></i></a>
+                                </div>
                             </div>
                             <div class="profileInfoDetails hidden detailEdit">
                                 <div class="form-group">
@@ -218,24 +242,7 @@
                                 </div>
                             </div>
                         </div>
-                        <nav class="nav-section">
-                            <li class="">
-                                <a href="profile_my_activities.html">
-                                  Activities
-                                </a>
-                            </li>
-                            <li class="active"><a href="user_profile.html">About</a></li>
-                            <li class="dropdown ">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                 More <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu dropdown-right">
-                                <li><a href="profile_my_followers.html">Followers</a></li>
-                                <li><a href="profile_following.html">Following</a></li>
-                                <li><a href="profile_settings.html">Account Settings</a></li>
-                              </ul>
-                            </li>
-                        </nav>
+                        
                     </div> 
 
                     <nav class="nav_block hidden-sm hidden-xs">
@@ -251,7 +258,7 @@
                             </li>
                             <li class="link_nav active">
                                 <a href="user_profile.html">
-                                    <span class="link_title">About</span>
+                                    <span class="link_title">Bio</span>
                                     <span class="infoCount"></span>
                                 </a>
                             </li>
@@ -335,17 +342,13 @@
                                    <div class="card_wrapper">
                                         <header class="cardPaneHeader">
                                             <h3 class="blockLabel font_regular">Professional information</h3>
+                                            <a href="#" class="paneControl">
+                                                <i class="fa fa-edit"> </i>Edit
+                                            </a>
                                         </header>
                                         
-                                        <div class="content_inner  content_view ">
-                                            
+                                        <div class="content_inner content_view ">
                                             <div class="blockPanes">
-                                                <header class="blockHeader">
-                                                    <h4 class="blockLabel font_regular">Professional Bio</h4>
-                                                    <a href="#" class="paneControl">
-                                                        <i class="fa fa-edit"> </i>Edit
-                                                    </a>
-                                                </header>
                                                 <article class="fieldItem">
                                                     <!--Remove the class "blockCollapsed" when the used clicks show more-->
                                                    <div class="textBlock blockCollapsed">
@@ -374,72 +377,47 @@
                                                     </a>
                                                 </article>
                                             </div>
-                                           
-                                            <div class="blockPanes">
-                                                <div class="fieldList">
-                                                <article class="fieldItem">
-                                                    <div class="fieldLabel">Work Status</div>
-                                                    <div class="fieldValue">
-                                                        <p>Entrepreneur</p>
-                                                    </div>
-                                                    <div class="fieldControl">
-                                                        <a href="#">
-                                                            <i class="fa fa-edit"></i>Edit
-                                                        </a>
-                                                    </div>
-                                                </article>
-                                                <article class="fieldItem hidden newItem">
-                                                    <a href="#" class="fieldCTA">
-                                                        + Add your work status
+                                           <div class="blockPanes">
+                                               <header class="blockHeader">
+                                                    <h4 class="blockLabel font_regular">Work Status</h4>
+                                                    <a href="#" class="paneControl">
+                                                        <i class="fa fa-edit"> </i>Edit
                                                     </a>
-                                                </article>
-                                            </div>
+                                                </header>
                                                 <div class="fieldList">
                                                     <article class="fieldItem">
-                                                        <div class="fieldLabel">Industry of Experience</div>
                                                         <div class="fieldValue">
-                                                            <p>ICT, Marketing, Accounting</p>
-                                                        </div>
-                                                        <div class="fieldControl">
-                                                            <a href="#">
-                                                                <i class="fa fa-edit"></i>Edit
-                                                            </a>
+                                                          <p>Entrepreneur</p>
                                                         </div>
                                                     </article>
+                                                    <!--Only show if user has't added his phone number-->
                                                     <article class="fieldItem hidden newItem">
+                                                        <a href="#" class="fieldCTA">
+                                                            + Add your work status
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                            <div class="blockPanes">
+                                               <header class="blockHeader">
+                                                    <h4 class="blockLabel font_regular">Industry of Experience</h4>
+                                                    <a href="#" class="paneControl">
+                                                        <i class="fa fa-edit"> </i>Edit
+                                                    </a>
+                                                </header>
+                                                <div class="fieldList">
+                                                    <article class="fieldItem">
+                                                        <div class="fieldValue">
+                                                          <p>ICT, Marketing, Accounting</p>
+                                                        </div>
+                                                    </article>
+                                                    <!--Only show if user has't added his phone number-->
+                                                    <article class="fieldItem newItem">
                                                         <a href="#" class="fieldCTA">
                                                             + Add Industries of Experience
                                                         </a>
                                                     </article>
                                                 </div>
-                                            </div>
-                                            <div class="blockPanes">
-                                                <div class="fieldList">
-                                                    <div class="fileMetaCard">
-                                                        <div class="metaIcon">
-                                                            <a href="#file_url.docx" target="_blank" download><img src="./img/app_icon/file.png" alt=""></a>
-                                                        </div>
-                                                        <div class="metainfo">
-                                                            <h4 class="title">
-                                                                <a href="#file_url.docx" target="_blank" download>Segun_Araromi_cv.pdf</a>
-                                                            </h4>
-                                                            <span class="metaCrumb" title="file size">181KB</span>
-                                                            <div class="metaCto">
-                                                                <a href="#file_url.docx" class="btn btn-default btn-sm" target="_blank" download>
-                                                                    <i class="fa fa-download"></i>Download
-                                                                </a>
-                                                                <a href="#" class="btn btn-card btn-sm">
-                                                                    <i class="fa fa-edit"></i>Edit
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <article class="fieldItem hidden newItem">
-                                                    <a href="#" class="fieldCTA">
-                                                        + Add your CV
-                                                    </a>
-                                                </article>
                                             </div>
                                         </div>
                                         <div class="content_inner hidden content_create ">
@@ -695,32 +673,7 @@
                                                         Save Changes</button>
                                                     </div>
                                                 </form>
-                                            </div>
-                                            
-                                            <!--CV Upload-->
-                                            <div class="fieldForm hidden">
-                                                <form action="">
-                                                    <h4 class="form-title color-primary">Upload your CV</h4>
-                                                     <div class="dialog_form">
-                                                        <div class="form-group">
-                                                            <div class="file_uploader">
-                                                                <input type="file" id="new_file" class="hidden">
-                                                                <!--Bind the name of the user's file here-->
-                                                                <input type="text" value="No file selected" disabled>
-                                                                <label for="new_file" class="btn btn-sm btn-rounded btn-black">Select file</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                     <div class="action_btn text-right">
-                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
-                                                        Cancel</button>
-                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
-                                                        Save Changes</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            
+                                            </div>                                            
                                         </div>
                                    </div>
                                 </article>
@@ -735,36 +688,34 @@
                                             <div class="fieldList">
                                                 <article class="fieldItem profileProp">
                                                    <div class="fieldValue">
-                                                    <h4 class="propTitle">Ladoke Akintola University of Technology
-                                                        <small class="propMeta color-primary font_regular">
-                                                            <time year="2016">2012</time>
-                                                        </small> 
-                                                    </h4>
-                                                    <p class="propMeta meta_dept">Electrical and Electronics Engineering</p>
-                                                    <p class="propMeta font_size_sm color-grey font_bold">Bachelor of Technology(B.Tech)</p>
-                                                    </div>
-                                                    <div class="fieldControl">
-                                                        <a href="#">
-                                                            <i class="fa fa-edit"></i>Edit
-                                                        </a>
+                                                        <h4 class="propTitle">Ladoke Akintola University of Technology
+                                                            <small class="propMeta color-primary font_regular">
+                                                                <time year="2016">2012</time>
+                                                            </small> 
+                                                        </h4>
+                                                        <p class="propMeta meta_dept">Electrical and Electronics Engineering</p>
+                                                        <p class="propMeta font_size_sm color-grey font_bold">Bachelor of Technology(B.Tech)</p>
+                                                        <div class="fieldControl">
+                                                            <a href="#"><i class="fa fa-edit"></i>Edit</a>
+                                                            <a href="#"><i class="fa fa-trash"></i>Delete</a>
+                                                        </div>
                                                     </div>
                                                 </article>
                                             </div>
                                             <div class="fieldList">
                                                 <article class="fieldItem profileProp">
                                                    <div class="fieldValue">
-                                                    <h4 class="propTitle">University of Ibadan
-                                                        <small class="propMeta color-primary font_regular">
-                                                            <time year="2016">2016</time>
-                                                        </small> 
-                                                    </h4>
-                                                    <p class="propMeta meta_dept">Information Processing and Communication</p>
-                                                    <p class="propMeta font_size_sm color-grey font_bold">Master of Science (M.SC)</p>
-                                                    </div>
-                                                    <div class="fieldControl">
-                                                        <a href="#">
-                                                            <i class="fa fa-edit"></i>Edit
-                                                        </a>
+                                                        <h4 class="propTitle">University of Ibadan
+                                                            <small class="propMeta color-primary font_regular">
+                                                                <time year="2016">2016</time>
+                                                            </small> 
+                                                        </h4>
+                                                        <p class="propMeta meta_dept">Information Processing and Communication</p>
+                                                        <p class="propMeta font_size_sm color-grey font_bold">Master of Science (M.SC)</p>
+                                                        <div class="fieldControl">
+                                                            <a href="#"><i class="fa fa-edit"></i>Edit</a>
+                                                            <a href="#"><i class="fa fa-trash"></i>Delete</a>
+                                                        </div>
                                                     </div>
                                                 </article>
                                             </div>
@@ -841,10 +792,68 @@
                                             <h3 class="blockLabel font_regular">Contact</h3>
                                         </header>
                                         <div class="content_inner  content_view ">
-                                          
                                             <div class="blockPanes">
+                                               <header class="blockHeader">
+                                                    <h4 class="blockLabel font_regular">Address</h4>
+                                                </header>
+                                                <div class="fieldList flexList">
+                                                    <article class="addressbox">
+                                                       <div class="wrapper">
+                                                            <h4 class="metaTitle">Abuja Address</h4>
+                                                            <address>
+                                                                <p><span>3, Kaltungo Street, </span><span>Off Samuel Ladoke Akintola Boulevard,Garki II</span> <span>Abuja, Nigeria</span> </p>
+                                                            </address>
+                                                            <div class="fieldControl">
+                                                                <a href="#"><i class="fa fa-edit"></i>Edit</a>
+                                                                <a href="#"><i class="fa fa-trash"></i>Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="addressbox">
+                                                       <div class="wrapper">
+                                                            <h4 class="metaTitle">Lagos Address</h4>
+                                                            <address>
+                                                                <p><span>6b, Lanre Awolokun Street, </span><span>Gbagada phase 11,Oshodi</span> <span>Lagos, Nigeria</span> </p>
+                                                            </address>
+                                                            <div class="fieldControl">
+                                                                <a href="#"><i class="fa fa-edit"></i>Edit</a>
+                                                                <a href="#"><i class="fa fa-trash"></i>Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <article class="fieldItem newItem">
+                                                    <a href="#" class="fieldCTA">
+                                                        + Add Address
+                                                    </a>
+                                                </article>
+                                            </div>
+                                            <!--Contacts-->
+                                            <article class="blockPanes">
+                                                <header class="blockHeader">
+                                                    <h4 class="blockLabel font_regular">Contacts</h4>
+                                                </header>
                                                 <div class="fieldList">
-                                                    <article class="fieldItem hidden">
+                                                    <article class="fieldItem">
+                                                        <div class="fieldLabel">Website</div>
+                                                        <div class="fieldValue">
+                                                            <a href="https://vmlearn.com">vmlearn.com</a>
+                                                        </div>
+                                                        <div class="fieldControl">
+                                                            <a href="#">
+                                                                <i class="fa fa-edit"></i>Edit
+                                                            </a>
+                                                        </div>
+                                                    </article>
+                                                    <!--Only show if user has't added his phone number-->
+                                                    <article class="fieldItem hidden newItem">
+                                                        <a href="#" class="fieldCTA">
+                                                            + Add Website
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                                <div class="fieldList">
+                                                    <article class="fieldItem ">
                                                         <div class="fieldLabel">Mobile Phone</div>
                                                         <div class="fieldValue">
                                                            <a href="tel:+2348043234342" class="linkItem">
@@ -858,53 +867,6 @@
                                                         </div>
                                                     </article>
                                                     <!--Only show if user has't added his phone number-->
-                                                    <article class="fieldItem newItem">
-                                                        <a href="#" class="fieldCTA">
-                                                            + Add phone
-                                                        </a>
-                                                    </article>
-                                                </div>
-                                                <div class="fieldList">
-                                                    <article class="fieldItem profileProp">
-                                                      <div class="fieldLabel">Address</div>
-                                                       <div class="fieldValue">
-                                                            <address>
-                                                                <p><span>3, Kaltungo Street, </span><span>Off Samuel Ladoke Akintola Boulevard,Garki II</span> <span>Abuja, Nigeria</span> </p>
-                                                            </address>
-                                                            <div class="fieldControl">
-                                                                <a href="#">
-                                                                    <i class="fa fa-edit"></i>Edit
-                                                                </a>
-                                                                <a href="#">
-                                                                    <i class="fa fa-trash"></i>Delete
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </article>
-                                                    <article class="fieldItem newItem">
-                                                        <a href="#" class="fieldCTA">
-                                                            + Add Address
-                                                        </a>
-                                                    </article>
-                                                </div>
-                                            </div>
-                                                
-                                            <!--Social Media-->
-                                            <article class="blockPanes">
-                                                <header class="blockHeader">
-                                                    <h4 class="blockLabel font_regular">Social & Website</h4>
-                                                    <a href="#" class="paneControl">
-                                                        <i class="fa fa-edit"> </i>Edit
-                                                    </a>
-                                                </header>
-                                                <div class="fieldList">
-                                                    <article class="fieldItem">
-                                                        <div class="fieldLabel">Website</div>
-                                                        <div class="fieldValue">
-                                                            <a href="https://vmlearn.com">vmlearn.com</a>
-                                                        </div>
-                                                    </article>
-                                                    <!--Only show if user has't added his phone number-->
                                                     <article class="fieldItem hidden newItem">
                                                         <a href="#" class="fieldCTA">
                                                             + Add phone
@@ -913,46 +875,92 @@
                                                 </div>
                                                 <div class="fieldList">
                                                     <article class="fieldItem">
-                                                        <div class="fieldLabel">Social Links</div>
+                                                        <div class="fieldLabel">Facebook</div>
                                                         <div class="fieldValue">
                                                             <a href="#" class="linkItem">
                                                                 <span class="link_handle font_bold">facebook.com/d_segun</span>
                                                             </a>
-                                                            <a href="#" class="linkItem">
-                                                                <span class="link_handle font_bold">twitter.com/d_segun</span>
+                                                        </div>
+                                                        <div class="fieldControl">
+                                                            <a href="#">
+                                                                <i class="fa fa-edit"></i>Edit
                                                             </a>
                                                         </div>
                                                     </article>
                                                     <!--Only show if user has't added his phone number-->
                                                     <article class="fieldItem hidden newItem">
                                                         <a href="#" class="fieldCTA">
-                                                            + Add Social link
+                                                            + Add facebook
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                                <div class="fieldList">
+                                                    <article class="fieldItem">
+                                                        <div class="fieldLabel">Twitter</div>
+                                                        <div class="fieldValue">
+                                                            <a href="#" class="linkItem">
+                                                                <span class="link_handle font_bold">twitter.com/innosegz</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="fieldControl">
+                                                            <a href="#">
+                                                                <i class="fa fa-edit"></i>Edit
+                                                            </a>
+                                                        </div>
+                                                    </article>
+                                                    <!--Only show if user has't added his phone number-->
+                                                    <article class="fieldItem hidden newItem">
+                                                        <a href="#" class="fieldCTA">
+                                                            + Add Twitter Link
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                                <div class="fieldList">
+                                                    <article class="fieldItem hidden">
+                                                        <div class="fieldLabel">Linked in</div>
+                                                        <div class="fieldValue">
+                                                            <a href="#" class="linkItem">
+                                                                <span class="link_handle font_bold">linked.com/innosegz</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="fieldControl">
+                                                            <a href="#">
+                                                                <i class="fa fa-edit"></i>Edit
+                                                            </a>
+                                                        </div>
+                                                    </article>
+                                                    <!--Only show if user has't added his phone number-->
+                                                    <article class="fieldItem newItem">
+                                                        <a href="#" class="fieldCTA">
+                                                            + Add linkedIn
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                                <div class="fieldList">
+                                                    <article class="fieldItem hidden">
+                                                        <div class="fieldLabel">Instagram</div>
+                                                        <div class="fieldValue">
+                                                            <a href="#" class="linkItem">
+                                                                <span class="link_handle font_bold">instagram.com/innosegz</span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="fieldControl">
+                                                            <a href="#">
+                                                                <i class="fa fa-edit"></i>Edit
+                                                            </a>
+                                                        </div>
+                                                    </article>
+                                                    <!--Only show if user has't added his phone number-->
+                                                    <article class="fieldItem newItem">
+                                                        <a href="#" class="fieldCTA">
+                                                            + Add Instagram
                                                         </a>
                                                     </article>
                                                 </div>
                                             </article>
-                                                
                                         </div>
                                         <div class="content_inner hidden content_create ">
-                                            <!--Phone Number-->
-                                            <div class="fieldForm hidden">
-                                               <form action="">
-                                                   <h4 class="form-title color-primary">Update Phone Number</h4>
-                                                    <div class="form-group">
-                                                        <label class="control-label">
-                                                            Mobile number
-                                                        </label>
-                                                        <input type="tel" class="form-control" placeholder="E.g '2348077237439'">
-                                                    </div>
-                                                    <div class="action_btn text-right">
-                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
-                                                        Cancel</button>
-                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
-                                                        Save Changes</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            
+                                                                                       
                                             <!--Address-->
                                             <div class="fieldForm hidden">
                                                <form action="">
@@ -1009,31 +1017,99 @@
                                                 </form>
                                             </div>
                                             
-                                            <!--Social Links-->
-                                            <div class="fieldForm ">
+                                             <!--Phone Number-->
+                                            <div class="fieldForm hidden">
                                                <form action="">
-                                                   <h4 class="form-title color-primary">Manage Social links</h4>
-                                                   <p class="help-block">Provide Just the links you have</p>
-                                                   
-                                                   <div class="form-group">
-                                                        <label class="control-label">Website Url <small>Optional</small></label>
+                                                   <h4 class="form-title color-primary">Update Phone Number</h4>
+                                                    <div class="form-group">
+                                                        <label class="control-label">
+                                                            Mobile number
+                                                        </label>
+                                                        <input type="tel" class="form-control" placeholder="E.g '2348077237439'">
+                                                    </div>
+                                                    <div class="action_btn text-right">
+                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
+                                                        Cancel</button>
+                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
+                                                        Save Changes</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            
+                                            <!--Website-->
+                                            <div class="fieldForm hidden">
+                                               <form action="">
+                                                   <h4 class="form-title color-primary">Update Website</h4>
+                                                    <div class="form-group">
+                                                        <label class="control-label sr-only">Website Url <small>Optional</small></label>
                                                         <input type="text" class="form-control" placeholder="e.g @microsoft_corps">
                                                     </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label">Twitter Handle <small>Optional</small></label>
-                                                        <input type="text" class="form-control" placeholder="e.g @microsoft_corps">
+                                                    <div class="action_btn text-right">
+                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
+                                                        Cancel</button>
+                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
+                                                        Save Changes</button>
                                                     </div>
+                                                </form>
+                                            </div>
+                                            
+                                            <!--Facebook Link-->
+                                            <div class="fieldForm hidden">
+                                               <form action="">
+                                                   <h4 class="form-title color-primary">Link your Facebook page </h4>
                                                     <div class="form-group">
-                                                        <label class="control-label">Facebook URL <small>Optional</small></label>
+                                                        <label class="control-label sr-only">Facebook URL <small>Optional</small></label>
                                                         <input type="url" class="form-control" placeholder="https://facebook.com/ibitoye_david">
                                                     </div>
-                                                
+                                                    <div class="action_btn text-right">
+                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
+                                                        Cancel</button>
+                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
+                                                        Save Changes</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            
+                                            <!--Twitter Link-->
+                                            <div class="fieldForm hidden">
+                                               <form action="">
+                                                   <h4 class="form-title color-primary">Share your Twitter account</h4>
                                                     <div class="form-group">
-                                                        <label class="control-label">Instagram Handle <small>Optional</small></label>
+                                                        <label class="control-label sr-only">Twitter Handle <small>Optional</small></label>
+                                                        <input type="text" class="form-control" placeholder="e.g @microsoft_corps">
+                                                    </div>
+                                                    <div class="action_btn text-right">
+                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
+                                                        Cancel</button>
+                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
+                                                        Save Changes</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            
+                                              <!--Instagram Link-->
+                                            <div class="fieldForm hidden">
+                                               <form action="">
+                                                   <h4 class="form-title color-primary">Share your Instagram account</h4>
+                                                    <div class="form-group">
+                                                        <label class="control-label sr-only">Instagram Handle <small>Optional</small></label>
                                                         <input type="url" class="form-control" placeholder="@ig_davidibitoye">
                                                     </div>
+                                                    <div class="action_btn text-right">
+                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
+                                                        Cancel</button>
+                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
+                                                        Save Changes</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            
+                                            <!--Linked in account-->
+                                            <div class="fieldForm ">
+                                               <form action="">
+                                                   <h4 class="form-title color-primary">Share your Linked In account</h4>
                                                     <div class="form-group">
-                                                        <label class="control-label">Linkedin URL <small>Optional</small></label>
+                                                        <label class="control-label sr-only">Linked In URL <small>Optional</small></label>
                                                         <input type="url" class="form-control" placeholder="https://linkedin.com/ibitoye_david">
                                                     </div>
                                                     
@@ -1056,72 +1132,10 @@
                                             <h3 class="blockLabel font_regular">Skills & Interests</h3>
                                         </header>
                                         <div class="content_inner content_view ">
+                                                                                       
                                             <div class="blockPanes">
                                                <header class="blockHeader">
-                                                    <h4 class="blockLabel font_regular">Skill Areas</h4>
-                                                    <a href="#" class="paneControl">
-                                                        <i class="fa fa-edit"> </i>Edit
-                                                    </a>
-                                                </header>
-                                                <div class="fieldList">
-                                                    <article class="fieldItem">
-                                                        <div class="fieldValue">
-                                                           <ul class="tagList">
-                                                                <li class="tagBubble">
-                                                                    <a class="item_wrapper">
-                                                                        <span class="tagLabel color-default">
-                                                                            Sale & Marketing
-                                                                        </span>
-                                                                        <div class="overlay_control" title="Remove">
-                                                                            <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="tagBubble">
-                                                                    <a class="item_wrapper">
-                                                                        <span class="tagLabel color-default">
-                                                                            Product
-                                                                        </span>
-                                                                        <div class="overlay_control" title="Remove">
-                                                                            <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="tagBubble">
-                                                                    <a class="item_wrapper">
-                                                                        <span class="tagLabel color-default">
-                                                                            Entertainment
-                                                                        </span>
-                                                                        <div class="overlay_control" title="Remove">
-                                                                            <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="tagBubble">
-                                                                    <a class="item_wrapper">
-                                                                        <span class="tagLabel color-default">
-                                                                            Business Development
-                                                                        </span>
-                                                                        <div class="overlay_control" title="Remove">
-                                                                            <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </article>
-                                                    <!--Only show if user has't added his phone number-->
-                                                    <article class="fieldItem newItem">
-                                                        <a href="#" class="fieldCTA">
-                                                            + Add skills
-                                                        </a>
-                                                    </article>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="blockPanes">
-                                               <header class="blockHeader">
-                                                    <h4 class="blockLabel font_regular">Interests</h4>
+                                                    <h4 class="blockLabel font_regular">Communities of Interest</h4>
                                                     <a href="#" class="paneControl">
                                                         <i class="fa fa-edit"> </i>Edit
                                                     </a>
@@ -1166,289 +1180,17 @@
                                                     <!--Only show if user has't added his phone number-->
                                                     <article class="fieldItem newItem">
                                                         <a href="#" class="fieldCTA">
-                                                            + Add Interests Area
+                                                            + Add Communities
                                                         </a>
                                                     </article>
                                                 </div>
                                             </div>
-                                                                                           
-                                            <div class="blockPanes">
-                                               <header class="blockHeader">
-                                                    <div>
-                                                        <h4 class="blockLabel font_regular">Tutor Profile</h4>
-                                                        <p>These are subject/topic areas you can function as a tutor</p>
-                                                    </div>
-                                                    <a href="#" class="paneControl">
-                                                        <i class="fa fa-edit"> </i>Edit
-                                                    </a>
-                                                </header>
-                                                <div class="fieldList">
-                                                    <article class="fieldItem">
-                                                        <div class="fieldValue">
-                                                           <ul class="tagList">
-                                                                <li class="tagBubble">
-                                                                    <a class="item_wrapper">
-                                                                        <span class="tagLabel color-default">
-                                                                            Music
-                                                                        </span>
-                                                                        <div class="overlay_control" title="Remove">
-                                                                            <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="tagBubble">
-                                                                    <a class="item_wrapper">
-                                                                        <span class="tagLabel color-default">
-                                                                            English Language
-                                                                        </span>
-                                                                        <div class="overlay_control" title="Remove">
-                                                                            <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="tagBubble">
-                                                                    <a class="item_wrapper">
-                                                                        <span class="tagLabel color-default">
-                                                                            Mathemathics
-                                                                        </span>
-                                                                        <div class="overlay_control" title="Remove">
-                                                                            <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                                        </div>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </article>
-                                                    <!--Only show if user has't added his phone number-->
-                                                    <article class="fieldItem newItem">
-                                                        <a href="#" class="fieldCTA">
-                                                            + Add Tutor profile
-                                                        </a>
-                                                    </article>
-                                                </div>
-                                            </div>                                               
+                                                                                              
                                         </div>
                                         
-                                        <div class="content_inner hidden content_create ">
+                                        <div class="content_inner hidden content_create ">                                            
                                             <!--User Skill areas-->
-                                            <div class="fieldForm hidden">
-                                                <form action="">
-                                                    <h4 class="form-title color-primary">Select Skill areas</h4>
-                                                    
-                                                     <div class="panel-group" id="skills">
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#skills" href="#us_skill_1">
-                                                                       <span class="title text_caps">Art & Craft</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse in collapse" id="us_skill_1">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Knitting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Weaving</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Drawing</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Sculpting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Embroidery</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Painting</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#skills" href="#us_skill_2">
-                                                                       <span class="title text_caps">Art & Craft</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse collapse" id="us_skill_2">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Knitting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Weaving</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Drawing</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Sculpting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Embroidery</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Painting</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#skills" href="#us_skill_3">
-                                                                       <span class="title text_caps">Domestic</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse collapse" id="us_skill_3">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Knitting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Weaving</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Drawing</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Sculpting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Embroidery</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Painting</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#skills" href="#us_skill_4">
-                                                                       <span class="title text_caps">Art & Craft</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse collapse" id="us_skill_4">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Knitting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Weaving</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Drawing</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Sculpting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Embroidery</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Painting</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#skills" href="#us_skill_5">
-                                                                       <span class="title text_caps">Art & Craft</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse collapse" id="us_skill_5">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Knitting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Weaving</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Drawing</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Sculpting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Embroidery</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Painting</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                     </div>
-
-                                                     <div class="action_btn text-right">
-                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
-                                                        Cancel</button>
-                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
-                                                        Save Changes</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            
-                                            <!--User Skill areas-->
-                                            <div class="fieldForm hidden">
+                                            <div class="fieldForm ">
                                                 <form action="">
                                                     <h4 class="form-title color-primary">Select Interest Areas</h4>
                                                     
@@ -1671,231 +1413,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            
-                                            <!--User Tutor Profile-->
-                                            <div class="fieldForm">
-                                                <form action="">
-                                                    <h4 class="form-title color-primary">Update your tutor profile</h4>
-                                                    
-                                                    <div class="panel-group" id="tutProf">
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#tutProf" href="#tutInfo_1">
-                                                                       <span class="title text_caps">Entrepreneurship, Career & Personal Development</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse in collapse" id="tutInfo_1">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Discovering your Purpose</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Boosting your employability</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Starting a Business</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Growing your Business</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Emerging Jobs</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#tutProf" href="#tutInfo_2">
-                                                                       <span class="title text_caps">Business Sectors</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse collapse" id="tutInfo_2">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Forex</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Mobile phone repairs</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Solar & Inverter</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Art & Craft</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Catering, Food processing & preservation</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Tye & Dye</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Bead making</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Fashion & Garment making</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Beauty & Cosmetology</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#tutProf" href="#tutInfo_3">
-                                                                       <span class="title text_caps">Agri Business/Careers</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse collapse" id="tutInfo_3">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Fish Farming</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Poultry farming</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Snail Farming</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Rabbitry/Piggery</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Crop Farming</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Feed production</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#tutProf" href="#tutInfo_4">
-                                                                       <span class="title text_caps">ICT Business/Careers</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse collapse" id="tutInfo_4">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Web Programming</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>UI/UX Design</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Hardware/Networking & Security</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Graphics</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Data Analysis</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Futuristic Technology</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                        <article class="panel panel_opaque">
-                                                            <div class="panel-heading">
-                                                                <h4 class="panel-title">
-                                                                    <a class="accordion-toggle" data-toggle="collapse" 
-                                                                    data-parent="#tutProf" href="#tutInfo_5">
-                                                                       <span class="title text_caps">Corporate Careers</span>
-                                                                    </a>
-                                                                </h4>
-                                                            </div>
-                                                            <div class="panel-collapse collapse" id="tutInfo_5">
-                                                                <div class="panel-body">
-                                                                    <div class="multi_sel_item">
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat1">
-                                                                            <input type="checkbox" id="subcat_cat1">
-                                                                            <span>Health & Safety</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat2">
-                                                                            <input type="checkbox" id="subcat_cat2">
-                                                                            <span>Finane & Accounting</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat3">
-                                                                            <input type="checkbox" id="subcat_cat3">
-                                                                            <span>Human Resources</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat4">
-                                                                            <input type="checkbox" id="subcat_cat4">
-                                                                            <span>Project & Event Management</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Business Analysis</span>
-                                                                        </label>
-                                                                        <label class="checkbox-inline control_item" for="subcat_cat6">
-                                                                            <input type="checkbox" id="subcat_cat6">
-                                                                            <span>Administration</span>
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                     </div>
-
-                                                     <div class="action_btn text-right">
-                                                        <button type="button" class="btn btn-sm btn-card btn-rounded">
-                                                        Cancel</button>
-                                                        <button type="submit" class="btn btn-sm btn-secondary btn-rounded">
-                                                        Save Changes</button>
-                                                    </div>
-                                                </form>
-                                            </div>                                                                                        
+                                                                                                                                  
                                         </div>
                                    </div>
                                 </article>
@@ -2284,182 +1802,94 @@
                                         <a href="saed_partnership.html" class="btn btn-sm btn-black">Get Started</a>
                                     </div>
                                 </section>
+                                
                                 <section class="nav_block">
                                     <header class="blockHeader">
-                                        <h4 class="blockLabel font_regular">Profile Highlights</h4>
-                                        <a href="user_profile.html/#contact" class="">View all <i class="fa fa-angle-right"></i></a>
+                                        <h4 class="blockLabel font_regular">Contact Information</h4>
+                                        <a href="user_profile.html/#contact" class="paneControl"><i class="fa fa-edit"></i>Edit</a>
                                     </header>
                                     <div class="blockWrapper">
-                                        <article class="infoMeta">
-                                            <div class="metaLabel">
-                                               <i class="fa fa-phone"></i>
-                                           </div>
-                                           <div class="metaValue">
-                                               <a href="tel:2348067432288">2348067432288</a>
-                                           </div>
-                                        </article>
-                                        <article class="infoMeta">
-                                            <div class="metaLabel">
-                                               <i class="fa fa-map-marker"></i>
-                                           </div>
-                                           <div class="metaValue">
-                                               <p>Abuja, Nigeria</p>
-                                           </div>
-                                        </article>
-                                        <article class="infoMeta">
-                                            <div class="metaLabel">
-                                               <i class="fa fa-map-o"></i>
-                                           </div>
-                                           <div class="metaValue">
-                                               <address>
-                                                    <p class="">3, Kaltungo Str., Off Amurie Omanze Cres. Off Samuel Ladoke Akintola Boulevard, Garki II</p>
-                                               </address>
-                                           </div>
-                                        </article>
+                                        <div class="panel-collapse collapse" id="more_info">
+                                            <article class="infoMeta">
+                                                <div class="metaLabel">
+                                                   <i class="fa fa-phone"></i>
+                                               </div>
+                                               <div class="metaValue">
+                                                    <h6 class="metaTitle">Phone Number</h6>
+                                                   <a href="tel:2348067432288">2348067432288</a>
+                                               </div>
+                                            </article>
+                                            <article class="infoMeta">
+                                                <div class="metaLabel">
+                                                   <i class="fa fa-map-marker"></i>
+                                               </div>
+                                               <div class="metaValue">
+                                                  <h6 class="metaTitle">Website</h6>
+                                                   <p><a href="http://vmlearn.com">vmlearn.com</a></p>
+                                               </div>
+                                            </article>
+                                            <article class="infoMeta">
+                                                <div class="metaLabel">
+                                                   <i class="fa fa-map-o"></i>
+                                               </div>
+                                               <div class="metaValue">
+                                                  <h6 class="metaTitle">Address</h6>
+                                                   <address>
+                                                        <p class="">3, Kaltungo Str., Off Amurie Omanze Cres. Off Samuel Ladoke Akintola Boulevard, Garki II</p>
+                                                   </address>
+                                               </div>
+                                            </article>
+                                        </div>
+                                        <a href="#more_info" class="more_link collapsed" data-toggle="collapse"><i class="dropIcon"></i></a>
                                     </div>
                                 </section>
                                 <section class="nav_block">
                                     <header class="blockHeader">
-                                        <h4 class="blockLabel font_regular">Interested In</h4>
-                                        <a href="user_profile.html/#interests" class="">View all <i class="fa fa-angle-right"></i></a>
+                                        <h4 class="blockLabel font_regular">Mentors In</h4>
+                                        <!--Visible to the profile owner-->
+                                        <a href="user_profile.html/#mentor" class="paneControl"><i class="fa fa-edit"></i>Edit</a>
                                     </header>
                                     <div class="blockWrapper">
-                                       <!--Owner of the profile can remove an interest, viewer of another's profile can follow the community. If viewer is already viewing the community, the overlay shouldn't be visible-->
-                                        <ul class="tagList">
-                                            <li class="tagBubble">
-                                                <a class="item_wrapper">
-                                                    <span class="tagLabel color-default">
-                                                        Fashion
-                                                    </span>
-                                                    <div class="overlay_control" title="Join Community">
-                                                        <span class="actionLabel"><i class="fa fa-plus"></i></span>
-                                                    </div>
-                                                </a>
+                                       <!--List just 5 items by default, list all when the user clicks show more-->
+                                        <ul class="listContents">
+                                            <li class="listItem">
+                                                <a href="feed_timeline.html">Community name here</a>
                                             </li>
-                                            <li class="tagBubble">
-                                                <a class="item_wrapper">
-                                                    <span class="tagLabel color-default">
-                                                        Design
-                                                    </span>
-                                                    <div class="overlay_control" title="Remove Interest">
-                                                        <span class="actionLabel"><i class="fa fa-trash"></i></span>
-                                                    </div>
-                                                </a>
+                                            <li class="listItem">
+                                                <a href="feed_timeline.html">Community name here</a>
                                             </li>
-                                            <li class="tagBubble">
-                                                <a class="item_wrapper">
-                                                    <span class="tagLabel color-default">
-                                                        Entrepreneurship
-                                                    </span>
-                                                    <div class="overlay_control" title="Join Community">
-                                                        <span class="actionLabel"><i class="fa fa-plus"></i></span>
-                                                    </div>
-                                                </a>
+                                            <li class="listItem">
+                                                <a href="feed_timeline.html">Community name here</a>
                                             </li>
-                                            <li class="tagBubble">
-                                                <a class="item_wrapper">
-                                                    <span class="tagLabel color-default">
-                                                        Marketing
-                                                    </span>
-                                                    <div class="overlay_control" title="Join Community">
-                                                        <span class="actionLabel"><i class="fa fa-plus"></i></span>
-                                                    </div>
-                                                </a>
+                                            <li class="listItem">
+                                                <a href="feed_timeline.html">Community name here</a>
+                                            </li>
+                                            <li class="listItem">
+                                                <a href="feed_timeline.html">Community name here</a>
                                             </li>
                                         </ul>
+                                        <!--Show all mentor's communities, and toggle the class "collapsed" on the more_link-->
+                                        <a href="#" class="more_link collapsed"><i class="dropIcon"></i></a>
                                     </div>
                                 </section>
-                                <section class="nav_block">
-                                    <header class="blockHeader">
-                                        <h4 class="blockLabel font_regular">247 Followers</h4>
-                                       <a href="user_profile.html/#interests" class="">View all <i class="fa fa-angle-right"></i></a>
-                                    </header>
-                                    <div class="blockWrapper">
-                                        <div class="userList">
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/user_avis/3.jpg" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/user_avis/2.jpg" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/user_avis/1.jpg" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/banners/news_insp.jpg" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb" title="Akintade Samson" data-toggle="tooltip">
-                                                <a href="user_profile.html" class="thumb_wrapper">
-                                                   <img src="./img/icons/employability.png" alt="Akintade Samson">
-                                               </a>
-                                            </article>
-                                            <article class="userThumb more_item" title="See all">
-                                                <a href="user_churches.html" class="thumb_wrapper">
-                                                    <div class="item_pos" title="4 More">
-                                                       +242
-                                                    </div>
-                                                </a>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="nav_block">
-                                    <header class="blockHeader">
-                                        <h4 class="blockLabel font_regular">Also Found On</h4>
-                                    </header>
-                                    <div class="blockWrapper">
-                                       <div class="linksList link_vertical">
-                                            <div class="userLink linkFb">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-facebook"></i>
-                                                    </span>
-                                                    <span class="link_handle">facebook.com/d_segun</span>
-                                                </a>
-                                            </div>
-                                            <div class="userLink linkTw">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </span>
-                                                    <span class="link_handle">@innosegz</span>
-                                                </a>
-                                            </div>
-                                            <div class="userLink linkLn">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-linkedin"></i>
-                                                    </span>
-                                                    <span class="link_handle">@d_segun</span>
-                                                </a>
-                                            </div>
-                                            <div class="userLink linkIg">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-instagram"></i>
-                                                    </span>
-                                                    <span class="link_handle">@d_segun</span>
-                                                </a>
-                                            </div>
-                                            <div class="userLink linkLn">
-                                                <a href="#" class="linkWrapper">
-                                                    <span class="link_icon">
-                                                        <i class="fa fa-external-link"></i>
-                                                    </span>
-                                                    <span class="link_handle">mywebsite.com/profile</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                                
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="https://wwww.saedconnect.com" class="wrapper">
+                                        <img src="./img/banners/join_saedconnect.png" alt="Join SAEDConnect">
+                                    </a>
+                                </article>
+                                
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/small_ad.png" alt="random_ad">
+                                    </a>
+                                </article>
+                                
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/qlik.png" alt="Learn in insidify">
+                                    </a>
+                                </article>
                                 
                             </aside>
                         </div>           
