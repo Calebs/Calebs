@@ -7,18 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SAED Partnership | SAEDConnect</title>
+    <title>New post | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/datepicker.min.css">
     <link href="css/base.min.css" rel="stylesheet" type="text/css">
-    <link href="css/full_layout.css" rel="stylesheet" type="text/css">
     <link href="css/timeline.css" rel="stylesheet" type="text/css">
     <script src="js/modernizr.js"></script>
     <!-- Modernizr -->
 </head>
 
 <body class="">
-           
+   
+   <div class="alert alert_secondary hidden floating_alert">
+        <div class="container wrapper">
+            <div class="alert_info text-center">
+                <p>Your email address <span class="font_bold">nkemowu@gmail.com</span> has not been verified. <a href="/account/verifyemail" class="font_bold">Click Here</a> to confirm your email address</p>
+            </div>
+            <button type="button" class="close_dialog" data-dismiss="alert" aria-hidden="true"></button>
+        </div>
+    </div>
+    
     <div class="floatingWidget newPostWidget">
         <div class="widget-wrapper">
             <div class="widget_close">
@@ -120,7 +130,7 @@
                 </div> 
             </div>
         </div>
-    </div> 
+    </div>
     
     <header role="banner">
         <div class="navbar navbar-default" role="navigation">
@@ -201,7 +211,7 @@
                                                     <span class="tagLabel ">Emerging Jobs</span>
                                                 </a>
                                             </article>
-                                            <article class="coloredTag ">
+                                            <article class="coloredTag current">
                                                 <a href="community_home.html" class="tagWrapper">
                                                     <span class="tagLabel ">Starting a Business</span>
                                                 </a>
@@ -280,7 +290,7 @@
     <!--Mobile footer navigation-->
     <div class="mobile_nav">
         <ul class="navList">
-            <li class="linkNavMain has_sub ">
+            <li class="linkNavMain active has_sub ">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
                         <i class="icon icon_feed"></i>
@@ -293,7 +303,7 @@
                     <ul class="subNavList">
                         <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
                         <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
-                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                        <li><a href="savedPost.html" class="subNavItem">Saved Posts</a></li>
                     </ul>
                 </div>
             </li>
@@ -308,6 +318,18 @@
                     <h4 class="title">Discover</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
+                        <li>
+                            <a href="#md_training" class="subNavItem" data-toggle="collapse">
+                                Growth Opportunities
+                            </a>
+                            <div class="collapse" id="md_training">
+                                <ul class="link_nav_children">
+                                    <li><a href="trainings.html">Trainings</a></li>
+                                    <li><a href="trainings.html">Programs</a></li>
+                                    <li><a href="trainings.html">Events</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
                         <li><a href="questions.html" class="subNavItem">Questions</a></li>
                         <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
@@ -369,7 +391,7 @@
         </ul>
     </div>
     
-    <main class="sd-main-content bg-grey-light">
+    <main class="sd-main-content bg-grey">
         <header class="page_header has_back is_fixed">
             <div class="header_wrapper">
                 <div class="back_arrow">
@@ -378,279 +400,166 @@
                     </a>
                 </div>
                 <div class="page_nav">
-                    <h2 class="title">Segun D. Araromi</h2>
-                    <p class="subtitle">SAED Partnership</p>
-                </div>
-                <div class="pg_search">
-                    <button class="btn_search trigger_search">
-                        <i class="fa fa-search"></i>
-                    </button>
+                    <h2 class="title">New Post</h2>
                 </div>
             </div>
         </header>
-        <!--Wrap site content-->
-        <div class="timeline_container">
-           
-            <aside class="nav_timeline ">
-                <div class="content_wrapper">
-                    
-                    <div class="nav_block info_banner">
-                        <nav class="nav-section">
-                            <li class="">
-                                <a href="profile_my_activities.html">
-                                  Activities
-                                </a>
-                            </li>
-                            <li class=""><a href="user_profile.html">Bio</a></li>
-                            <li class="dropdown ">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                 More <span class="caret"></span>
-                              </a>
-                              <ul class="dropdown-menu active dropdown-right">
-                                <li><a href="profile_my_followers.html">Followers</a></li>
-                                <li><a href="profile_following.html">Following</a></li>
-                                <li><a href="saed_partnership.html">SAED Partnership</a></li>
-                                <li><a href="profile_settings.html">Account Settings</a></li>
-                              </ul>
-                            </li>
-                        </nav>
-                        <div class="profileinfo">
-                            <div class="profileInfoimage image_circle">
-                                <img src="./img/user_avis/2.jpg" alt="Segun D. Araromi">
-                                <!--Only accessible to the profile owner-->
-                                <div class="img_uploader">
-                                    <label for="item_image" class="file_upload">
-                                        <input type="file" name="file" id="item_image" class="inputfile hidden" />
-                                        <i class="icon icon-sm upload_img" title="Upload header image"></i>
-                                    </label>
+        
+        <div class="post_widget ">
+            <div class="postMediaBlock">
+                <aside class="postAuthor">
+                    <a href="user_profile.html" class="user_avi avi_sm avi_circle">
+                        <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                    </a>
+                </aside>
+                <div class="post_input">
+                    <article class="post_card ">
+                        <div class="card_wrapper">
+                            <div class="post_card_header">
+                                <div class="post_heading">
+                                    <h4 class="title">Segun Araromi</h4>
+                                    <div class="controlItem hasOptions">
+                                        <a href="#" class="control_wrapper info_trigger" title="Post Settings">
+                                            <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 57.57">
+                                                <path d="M49.39,31.61a22.43,22.43,0,0,0,.2-2.82,22.43,22.43,0,0,0-.2-2.82l6.07-4.75a1.45,1.45,0,0,0,.35-1.84l-5.76-10a1.45,1.45,0,0,0-1.76-.63l-7.17,2.88a21,21,0,0,0-4.86-2.82L35.17,1.21A1.4,1.4,0,0,0,33.76,0H22.25a1.4,1.4,0,0,0-1.41,1.21L19.74,8.84a22.12,22.12,0,0,0-4.86,2.82L7.71,8.78A1.4,1.4,0,0,0,6,9.41L.2,19.37a1.42,1.42,0,0,0,.35,1.84L6.62,26a22.83,22.83,0,0,0-.2,2.82,22.83,22.83,0,0,0,.2,2.82L.55,36.36A1.45,1.45,0,0,0,.2,38.2L6,48.16a1.45,1.45,0,0,0,1.76.63l7.17-2.88a21,21,0,0,0,4.86,2.82l1.09,7.63a1.4,1.4,0,0,0,1.41,1.21H33.76a1.4,1.4,0,0,0,1.41-1.21l1.09-7.63a22.12,22.12,0,0,0,4.86-2.82l7.17,2.88a1.4,1.4,0,0,0,1.76-.63l5.76-10a1.45,1.45,0,0,0-.35-1.84ZM28,38.86A10.07,10.07,0,1,1,38.08,28.79,10.09,10.09,0,0,1,28,38.86Z"/>
+                                            </svg>
+                                        </a>
+                                        <div class="floatingPanel">
+                                            <div class="panelInner">
+                                                <div class="itemDismiss">
+                                                    <svg class="cust_icon icon_xs" id="icClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                                        <path d="M60.9,3.1L60.9,3.1c-1.5-1.5-4-1.5-5.5,0L32,26.5L8.7,3.1c-1.5-1.5-4-1.5-5.5,0l0,0c-1.5,1.5-1.5,4,0,5.5L26.5,32L3.1,55.3c-1.5,1.5-1.5,4,0,5.5l0,0c1.5,1.5,4,1.5,5.5,0L32,37.5l23.3,23.3c1.5,1.5,4,1.5,5.5,0l0,0c1.5-1.5,1.5-4,0-5.5L37.5,32L60.9,8.7C62.4,7.2,62.4,4.7,60.9,3.1z"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="optionsGrid">
+                                                   <article class="optionGroup">
+                                                        <div class="optionLabel">
+                                                            <label for="shwTitle" class="control-label font_bold">Post Title</label>
+                                                        </div>
+                                                        <div class="optionContent">
+                                                            <div class="adjContent">
+                                                                <div class="checkbox">
+                                                                    <input type="checkbox" id="shwTitle">
+                                                                    <label for="shwTitle" class="font_bold color-grey">Add Title</label>
+                                                                </div>
+                                                                <p class="help-text">Add a title to your post</p>
+                                                            </div>
+                                                        </div>
+                                                   </article>
+                                                   <article class="optionGroup">
+                                                        <div class="optionLabel">
+                                                            <label for="shwTitle" class="control-label font_bold">Text Editor</label>
+                                                        </div>
+                                                        <div class="optionContent">
+                                                            <div class="adjContent">
+                                                                <select class="form-control">
+                                                                    <option selected>Markdown Editor</option>
+                                                                    <option>HTML Editor</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                   </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="profileInfoDetails ">
-                                <h4 class="infoTitle">Segun D. Araromi</h4>
-                                <h6 class="font_regular color-grey">@innosegz</h6>
-                                <p class="">Head of Marketing at VMLearn Nigeria</p>
+                            <div class="post_card_body">
+                                <div class="post_content">
+                                    <form class="">
+                                        <div class="form-group">
+                                           <input type="text" class="form-control title_input" placeholder="Your post title">
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control" rows="5" id="post_input" placeholder="Your text here"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="cust_selector">
+                                                <div class="my_selector">
+                                                    <div class="selLabel">
+                                                        Tag to:
+                                                    </div>
+                                                    <div class="selContent">
+                                                        <select class="form-control">
+                                                            <option>Select Community</option>
+                                                            <option selected>Starting a Business</option>
+                                                            <option>Emerging Jobs</option>
+                                                            <option>UI/UX Design</option>
+                                                            <option>Futuristic Technology</option>
+                                                        </select>
+                                                   </div>
+                                                </div>
+                                                <!--Show this after the user selects locations-->
+                                           </div>
+                                       </div>
+                                        <div class="select_grid select_radio">
+                                            <div class="my_selector  file_upload">
+                                                <label for="md_image" class="control-wrapper">
+                                                    <input type="file" name="file" accept="image/*" id="md_image" class="inputfile"/>
+                                                    <span class="c_label"><i class="fa fa-image"></i></span>
+                                                </label>
+                                            </div>
+                                            <div class="my_selector file_upload">
+                                                <label for="md_video" class="control-wrapper radio-inline">
+                                                    <input type="file" name="file" accept=".mp4" id="md_video" class="inputfile"/>
+                                                    <span class="c_label"><i class="fa fa-play"></i></span>
+                                                </label>
+                                            </div>
+                                            <div class="my_selector file_upload">
+                                                <label for="md_audio" class="control-wrapper radio-inline">
+                                                    <input type="file" name="file" accept=".mp3" id="md_audio" class="inputfile"/>
+                                                    <span class="c_label"><i class="fa fa-music"></i></span>
+                                                </label>
+                                            </div>
+                                            <div class="my_selector file_upload">
+                                                <label for="md_file" class="control-wrapper radio-inline">
+                                                    <input type="file" name="file" accept=".doc, .pdf, .docx" id="md_file" class="inputfile"/>
+                                                    <span class="c_label"><i class="fa fa-file"></i></span>
+                                                </label>
+                                            </div>
+                                        </div> 
+                                    </form>
+                                </div>
+                                <!--Only show this pane when a user tries to upload an image to the timeline.-->
+                                <div class="media_preview ">
+                                <img src="img/banners/tm_card_img.jpg">
+                                <!--For normal video uploads-->
+                                <video controls class="embed-responsive-item hidden" preload="metadata">
+                                    <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                </video>
+                                <!--For video embeds-->
+                                <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                </div>-->
+
+                                <div class="pane_control">
+                                    <a href="#" class="control_item">
+                                        <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                    </a>
+                                    <a href="#" class="control_item">
+                                        <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="post_card_footer clearfix">
+                                <div class="post_actions pull-right">
+                                    <button type="button" class="btn btn-card">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Post</button>
+                                </div>
                             </div>
                         </div>
-                        
-                    </div> 
-
-                    <nav class="nav_block hidden-sm hidden-xs">
-                        <header class="blockHeader">
-                            <h4 class="blockLabel font_regular">Menu</h4>
-                        </header>
-                        <ul class="">
-                            <li class="link_nav ">
-                                <a href="my_activities.html">
-                                    <span class="link_title">My Activities</span>
-                                    <span class="infoCount"></span>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="user_profile.html">
-                                    <span class="link_title">Bio</span>
-                                    <span class="infoCount"></span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="user_conversations.html">
-                                    <span class="link_title">Conversations</span>
-                                    <span class="infoCount">2</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="profile_my_activities.html">
-                                    <span class="link_title">Sessions</span>
-                                    <span class="infoCount">0</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="user_trainings.html">
-                                    <span class="link_title">Trainings</span>
-                                    <span class="infoCount">0</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="user_programs.html">
-                                    <span class="link_title">Programs</span>
-                                    <span class="infoCount">0</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="profile_following.html">
-                                    <span class="link_title">Following</span>
-                                    <span class="infoCount">57</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="profile_my_followers.html">
-                                    <span class="link_title">Followers</span>
-                                    <span class="infoCount">247</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="user_programs.html">
-                                    <span class="link_title">Events</span>
-                                    <span class="infoCount">0</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="user_programs.html">
-                                    <span class="link_title">Business Opportunities</span>
-                                    <span class="infoCount">0</span>
-                                </a>
-                            </li>
-                            <li class="link_nav active">
-                                <a href="saed_partnership.html">
-                                    <span class="link_title">SAED Partnership</span>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="profile_settings.html">
-                                    <span class="link_title">Account Settings</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    
-                    <div class="nav_block hidden-sm hidden-xs nav_footer">
-                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a></p>
-                        <p>&copy; SAEDConnect 2017</p>
-                    </div>
+                    </article>
                 </div>
-            </aside>
-
-            <section class="layout_content">
-                <div class="box_wrapper bg_default">
-                    <div class="main_wrapper">                        
-                        <div class="split_layout">
-                            <section class="split_view">
-                                <!--Education-->
-                                <article class="cardPane" id="">
-                                   <div class="card_wrapper">
-                                        <header class="cardPaneHeader">
-                                            <h3 class="blockLabel font_regular">SAED Partnership</h3>
-                                        </header>
-                                        
-                                        <div class="content_inner content_view">
-                                            <h3 class="title color-primary">How to get verified</h3>
-                                            <p class="subtitle">To be verified, you need to visit a SAED officer in any state or your choice with proof of your credibility and capacity to support the NYSC Scheme in any capacity.</p>
-                                            <p>Select a state where you will like to be verified.</p>
-
-                                            <div class="form-group dialog_form form_mng">
-                                                <label class="control-label">Select your preferred State</label>
-                                               <!--Set partner state as default-->
-                                                <select class="form-control ">
-                                                    <option>Federal Capital Territory</option>
-                                                    <option>Lagos state</option>
-                                                    <option>Kaduna state</option>
-                                                    <option>Kano state</option>
-                                                    <option>Kogi state</option>
-                                                    <option>Zamfara state</option>
-                                                    <option>Rivers state</option>
-                                                    <option>Cross River state</option>
-                                                </select>
-                                            </div>
-                                            
-                                            <div class="action_btn">
-                                                <button type="submit" class="btn btn-rounded btn-secondary">
-                                                    Get Verified
-                                                </button>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                        <!--For partners pending verification-->
-                                        <div class="content_inner hidden content_view ">
-                                            <h4 class="title">Please visit the NYSC office below for your verification.</h4>
-                                            <p>If you are a new partner, Please go along with any relevant documentation you might heve to showcase you credibility and capacity to offer trainings, events, SAED products, services and programs to Corps members under the SAED program.</p>
-                                            <div class="fieldList">
-                                                <article class="fieldItem">
-                                                    <div class="fieldLabel">Address</div>
-                                                    <div class="fieldValue">
-                                                        NYSC Secretariate, Off Governor's office, Alausa, Ikeja, Lagos state
-                                                    </div>
-                                                </article>
-                                                <article class="fieldItem">
-                                                    <div class="fieldLabel">Contact Person</div>
-                                                    <div class="fieldValue">
-                                                        Mrs. Racheal Edewo
-                                                    </div>
-                                                </article>
-                                                <article class="fieldItem">
-                                                    <div class="fieldLabel">Email Address</div>
-                                                    <div class="fieldValue">
-                                                        <a href="mailto:lagos@nyscsaed.com">lagos@nyscsaed.com</a>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            <p>If you are an existing partner in this state, please reachout to the SAED head with you partner ID <span>(#XXXXX)</span> to expedite your verification. </p>
-                                            <div class="action_btn text-center">
-                                                <button type="button" class="btn btn-sm btn-rounded btn-black">
-                                                    <i class="fa fa-times"></i>Cancel Application
-                                                </button>
-                                            </div>
-                                        </div>
-                                        
-                                        <!--For verified Partners-->
-                                        <div class="content_inner hidden content_view ">
-                                            <div class="fieldList">
-                                                <article class="fieldItem">
-                                                    <div class="fieldLabel">Status</div>
-                                                    <div class="fieldValue">
-                                                        <p>You are a NYSC SAED Partner</p>
-                                                    </div>
-                                                </article>
-                                                <article class="fieldItem">
-                                                    <div class="fieldLabel">Partner Id</div>
-                                                    <div class="fieldValue">
-                                                        <p>######</p>
-                                                    </div>
-                                                </article>
-                                                <article class="fieldItem">
-                                                    <div class="fieldLabel">Verification Date</div>
-                                                    <div class="fieldValue">
-                                                        <time>12th Jul, 2017</time>
-                                                    </div>
-                                                </article>
-                                                <article class="fieldItem">
-                                                    <div class="fieldLabel">Verified In</div>
-                                                    <div class="fieldValue">
-                                                        <p>Lagos State</p>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                        </div>
-                                        
-                                   </div>
-                                </article>
-                            </section>
-
-                            <aside class="split_nav">
-                                
-                                <article class="widget_box widget_lg add_widget">
-                                    <a href="https://wwww.saedconnect.com" class="wrapper">
-                                        <img src="./img/banners/join_saedconnect.png" alt="Join SAEDConnect">
-                                    </a>
-                                </article>
-                                
-                                <article class="widget_box widget_lg add_widget">
-                                    <a href="#" class="wrapper">
-                                        <img src="./img/banners/small_ad.png" alt="random_ad">
-                                    </a>
-                                </article>
-                                
-                                <article class="widget_box widget_lg add_widget">
-                                    <a href="#" class="wrapper">
-                                        <img src="./img/banners/qlik.png" alt="Learn in insidify">
-                                    </a>
-                                </article>
-                                
-                            </aside>
-                        </div>           
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
+        <div class="nav_footer">
+            <div class="narrow_container text-center">
+                <p>&copy; SAEDConnect, <a href="./help_center/help_center.html">Help</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy Policy</a></p>
+            </div>
+        </div>
+    
     </main>
     
     <a href="#0" class="to-top">Top</a>
@@ -658,9 +567,21 @@
     <!-- Javascript starts here-->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/base.min.js"></script>
+    <script src="js/simplemde.min.js"></script>
     <script src="js/site_nav.js"></script>
     <script src="js/main.js"></script>
-        
+    
+     <script>
+        /* instantiate markDown editor for general posts */
+        var simplemde = new SimpleMDE({ 
+            element: $("#post_input")[0],
+            placeholder: "Your text here",
+            toolbar: false,
+            status: false,
+            spellChecker: true,
+        });
+    </script>
+    
 </body>
 
 </html>

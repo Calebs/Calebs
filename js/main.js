@@ -1,72 +1,27 @@
-/*File upload Script 
-Changes the name of the upload button to the name of the file selected for upload
-*/
+$(function() {
+        
+    // browser window scroll (in pixels) after which the "back to top" link is shown
+    var offset = 300,
+      //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+      offset_opacity = 1200,
+      scroll_top_duration = 1500,
+      $back_to_top = $('.to-top');
 
-;
-(function($, window, document, undefined) {
-    $('.inputfile').each(function() {
-        var $input = $(this),
-            $label = $input.next('label'),
-            labelVal = $label.html();
-
-        $input.on('change', function(e) {
-            var fileName = '';
-
-            if (this.files && this.files.length > 1)
-                fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-            else if (e.target.value)
-                fileName = e.target.value.split('\\').pop();
-
-            if (fileName)
-                $label.find('span').html(fileName);
-            else
-                $label.html(labelVal);
-        });
-
-        // Firefox bug fix
-        $input
-            .on('focus', function() { $input.addClass('has-focus'); })
-            .on('blur', function() { $input.removeClass('has-focus'); });
+    //hide or show the "back to top" link
+    $(window).scroll(function(){
+      ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('is-visible') : $back_to_top.removeClass('is-visible fade-out');
+      if( $(this).scrollTop() > offset_opacity ) { 
+        $back_to_top.addClass('fade-out');
+      }
     });
 
-     $(function() {
-        /*    
-        var subNav = $(".subsection_nav");
-        var navScrolled = "fix-top";
-        var winBottom = $('.content_wrapper').height();
-        var hdr = 150;
-        
-        $(window).scroll(function() {
-           if($(this).scrollTop() > hdr) {
-               subNav.addClass(navScrolled);
-           } else {
-               subNav.removeClass(navScrolled);
-           }
-        });*/
-
-        // browser window scroll (in pixels) after which the "back to top" link is shown
-        var offset = 300,
-          //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-          offset_opacity = 1200,
-          scroll_top_duration = 1500,
-          $back_to_top = $('.to-top');
-
-        //hide or show the "back to top" link
-        $(window).scroll(function(){
-          ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('is-visible') : $back_to_top.removeClass('is-visible fade-out');
-          if( $(this).scrollTop() > offset_opacity ) { 
-            $back_to_top.addClass('fade-out');
-          }
-        });
-
-        //smooth scroll to top
-        $back_to_top.on('click', function(event){
-          event.preventDefault();
-          $('body,html').animate({
-            scrollTop: 0 ,
-            }, scroll_top_duration
-          );
-        });    
+    //smooth scroll to top
+    $back_to_top.on('click', function(event){
+      event.preventDefault();
+      $('body,html').animate({
+        scrollTop: 0 ,
+        }, scroll_top_duration
+      );
     });
 
     var back_btn = $(".goBack");
@@ -148,24 +103,32 @@ Changes the name of the upload button to the name of the file selected for uploa
 
     /*Widget toggling*/
 
-    var filter_trigger = $('.trigger_filter'),
-        search_trigger = $('.trigger_search'),
-        filter_widget = $('.catFilter'),
+    var search_trigger = $('.trigger_search'),
+        new_widget = $('.newPostWidget'),
+        selectPostType = $('.createNew'),
         close_btn = $('.close_dialog'),
         youth_signup = $('.youth_form'),
         org_signup = $('.org_form'),
-        search_widget = $('.searchWidget');
+        search_widget = $('.navSearchBar');
 
-    filter_trigger.on('click', function(e) {
+    selectPostType.on('click', function(e) {
         e.preventDefault();
         $('body').addClass('overflow-hidden');
-        filter_widget.addClass('show_widget');
+        new_widget.addClass('show_widget');
     });
 
+    $("#icClose").hide();
     search_trigger.on('click', function(e) {
         e.preventDefault();
-        $('body').addClass('overflow-hidden');
-        search_widget.addClass('show_widget');
+        search_widget.toggleClass('show_widget');
+
+        if(search_widget.hasClass('show_widget')) {
+            $("#icSearch").hide();
+            $("#icClose").show();
+        } else {
+            $("#icSearch").show();
+            $("#icClose").hide();
+        }
     });
 
     $('.trigger_yut').on('click', function() {
@@ -203,7 +166,24 @@ Changes the name of the upload button to the name of the file selected for uploa
         $(this).parents(".my_selector").toggleClass("active");
     });
 
+    /*Info tooltip*/
+    
+    var tip_trigger = $('.info_trigger'),
+        info_dismmiss = $('.hasOptions .itemDismiss');
+        info_container = $('.hasOptions');
+    
+    tip_trigger.on('click', function(e) {
+        e.preventDefault();
+        event.stopPropagation();
+        $(this).parents('.hasOptions').toggleClass("info_open");
+    });
+    
+    info_dismmiss.on('click', function() {
+        if(info_container.hasClass('info_open')) {
+           info_container.removeClass('info_open'); 
+        }
+    });
 
-})(jQuery, window, document);
+});
 
 /*End of file upload script*/
