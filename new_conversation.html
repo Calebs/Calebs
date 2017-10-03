@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>New post | SAEDConnect</title>
+    <title>New Conversation | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href="css/simplemde.min.css" rel="stylesheet" type="text/css">
@@ -406,7 +406,6 @@
         </header>
         
         <div class="post_widget ">
-                        
             <div class="widget_header">
                 <div class="leftControls">
                    <div class="controlItem">
@@ -417,7 +416,7 @@
                         </a>
                     </div>
                     <div class="controlItem">
-                        <h4 class="title text_caps">New post</h4>
+                        <h4 class="title text_caps">Start a Conversation</h4>
                     </div>
                 </div>
             </div>
@@ -450,20 +449,6 @@
                                                 <div class="optionsGrid">
                                                    <article class="optionGroup">
                                                         <div class="optionLabel">
-                                                            <label for="shwTitle" class="control-label font_bold">Post Title</label>
-                                                        </div>
-                                                        <div class="optionContent">
-                                                            <div class="adjContent">
-                                                                <div class="checkbox">
-                                                                    <input type="checkbox" id="shwTitle">
-                                                                    <label for="shwTitle" class="font_bold color-grey">Add Title</label>
-                                                                </div>
-                                                                <p class="help-text">Add a title to your post</p>
-                                                            </div>
-                                                        </div>
-                                                   </article>
-                                                   <article class="optionGroup">
-                                                        <div class="optionLabel">
                                                             <label class="control-label font_bold">Text Editor</label>
                                                         </div>
                                                         <div class="optionContent">
@@ -484,30 +469,27 @@
                             <div class="post_card_body">
                                 <div class="post_content">
                                     <form class="">
-                                        <div class="form-group hidden">
-                                           <input type="text" class="form-control title_input" placeholder="Your post title">
+                                        <div class="form-group">
+                                           <input type="text" class="form-control title_input" placeholder="Title your conversation">
                                         </div>
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="5" id="post_input" placeholder="Your text here"></textarea>
+                                            <textarea class="form-control" rows="5" id="post_input" placeholder="Provide additional information"></textarea>
                                         </div>
-                                        <div class="form-group">
-                                            <div class="cust_selector">
-                                                <div class="my_selector">
-                                                    <div class="selLabel">
-                                                        Tag to:
-                                                    </div>
-                                                    <div class="selContent">
-                                                        <select class="form-control">
-                                                            <option>Select Community</option>
-                                                            <option selected>Starting a Business</option>
-                                                            <option>Emerging Jobs</option>
-                                                            <option>UI/UX Design</option>
-                                                            <option>Futuristic Technology</option>
-                                                        </select>
-                                                   </div>
+                                        <div class="form-group cust_selector">
+                                            <div class="my_selector">
+                                                <div class="selLabel">
+                                                    Tag to:
                                                 </div>
-                                                <!--Show this after the user selects locations-->
-                                           </div>
+                                                <div class="selContent">
+                                                    <select class="form-control">
+                                                        <option>Select Community</option>
+                                                        <option selected>Starting a Business</option>
+                                                        <option>Emerging Jobs</option>
+                                                        <option>UI/UX Design</option>
+                                                        <option>Futuristic Technology</option>
+                                                    </select>
+                                               </div>
+                                            </div>
                                        </div>
                                         <div class="select_grid select_radio">
                                             <div class="my_selector  file_upload">
@@ -538,26 +520,25 @@
                                     </form>
                                 </div>
                                 <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                <div class="media_preview hidden">
+                                <div class="media_preview">
                                 <img src="img/banners/tm_card_img.jpg">
-                                <!--For normal video uploads-->
-                                <video controls class="embed-responsive-item hidden" preload="metadata">
-                                    <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
-                                </video>
-                                <!--For video embeds-->
-                                <!--<div class="embed-responsive hidden embed-responsive-16by9">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
-                                </div>-->
-
-                                <div class="pane_control">
-                                    <a href="#" class="control_item">
-                                        <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
-                                    </a>
-                                    <a href="#" class="control_item">
-                                        <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
-                                    </a>
+                                    <!--For normal video uploads-->
+                                    <video controls class="embed-responsive-item hidden" preload="metadata">
+                                        <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                    </video>
+                                    <!--For video embeds-->
+                                    <!--<div class="embed-responsive hidden embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                    </div>-->
+                                    <div class="pane_control">
+                                        <a href="#" class="control_item">
+                                            <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                        </a>
+                                        <a href="#" class="control_item">
+                                            <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <div class="post_card_footer clearfix">
                                 <div class="post_actions pull-right">
@@ -591,7 +572,7 @@
         /* instantiate markDown editor for general posts */
         var simplemde = new SimpleMDE({ 
             element: $("#post_input")[0],
-            placeholder: "Your text here",
+            placeholder: "Provide additional information",
             toolbar: false,
             status: false,
             spellChecker: true,
