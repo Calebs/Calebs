@@ -1,5 +1,9 @@
 $(function() {
-        
+    
+    $('[data-toggle="tooltip"]').tooltip({
+        placement:"bottom"
+    });
+
     // browser window scroll (in pixels) after which the "back to top" link is shown
     var offset = 300,
       //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
@@ -104,12 +108,20 @@ $(function() {
     /*Widget toggling*/
 
     var search_trigger = $('.trigger_search'),
+        searchCommunity = $('.commSearchtrig'),
         new_widget = $('.newPostWidget'),
         selectPostType = $('.createNew'),
         close_btn = $('.close_dialog'),
         youth_signup = $('.youth_form'),
         org_signup = $('.org_form'),
+        commSearchForm = $('.searchWidget'),
         search_widget = $('.navSearchBar');
+
+    searchCommunity.on('click', function(e) {
+        e.preventDefault();
+        commSearchForm.addClass('show_widget');
+        $('body').addClass('overflow-hidden');
+    });
 
     selectPostType.on('click', function(e) {
         e.preventDefault();
