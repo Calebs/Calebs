@@ -115,6 +115,8 @@ $(function() {
         youth_signup = $('.youth_form'),
         org_signup = $('.org_form'),
         commSearchForm = $('.searchWidget'),
+        filter_trigger = $('.trigger_filter'),
+        filter_widget = $('.catFilter'),
         search_widget = $('.navSearchBar');
 
     searchCommunity.on('click', function(e) {
@@ -127,6 +129,12 @@ $(function() {
         e.preventDefault();
         $('body').addClass('overflow-hidden');
         new_widget.addClass('show_widget');
+    });
+
+    filter_trigger.on('click', function(e) {
+        e.preventDefault();
+        $('body').addClass('overflow-hidden');
+        filter_widget.addClass('show_widget');
     });
 
     $("#icClose").hide();

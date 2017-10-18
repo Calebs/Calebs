@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Training Directory - Find trainings here | SAEDConnect</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet" type="text/css">
+    <link href="css/timeline.css" rel="stylesheet" type="text/css">
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+</head>
+
+<body class="">
+   <div class="alert alert_secondary hidden floating_alert">
+        <div class="container wrapper">
+            <div class="alert_info text-center">
+                <p>Your email address <span class="font_bold">nkemowu@gmail.com</span> has not been verified. <a href="/account/verifyemail" class="font_bold">Click Here</a> to confirm your email address</p>
+            </div>
+            <button type="button" class="close_dialog" data-dismiss="alert" aria-hidden="true"></button>
+        </div>
+    </div>
+
+    <div class="floatingWidget searchWidget">
+        <div class="widget-wrapper">
+            <div class="widget_close">
+                <button class="close_dialog"></button>
+            </div>
+            <div class="narrow_container container_padded">
+                <div class="widget_content text-center">
+                    <h4 class="title text_caps color-white">Search the training Directory</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="search" class="form-control search_control" placeholder="FInd trainings by name, category, or trainer">
+                        </div>
+                        <div class="more-btn">
+                            <button class="btn btn-rounded btn-secondary">
+                                <i class="fa fa-search"></i>Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="floatingWidget catFilter">
+        <div class="widget-wrapper">
+           <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="narrow_container container_padded">
+                <div class="widget_content text-center">
+                    <!--<h4 class="title text_caps color-white">Filter Questions By</h4>-->
+                    <h4 class="title text_caps color-white">Filter list By</h4>
+
+                    <div class="content-panel color-white">
+                        <ul class="contextNav">
+                            <li class="active">
+                                <a href="#flcat" data-toggle="tab">Category</a>
+                            </li>
+                            <li class="">
+                                <a href="#flloc" data-toggle="tab">Location</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <!--Use this to filter by categories type-->
+                            <div class="tab-pane fade in active" id="flcat">
+                                <div class="select_grid">
+                                    <div class="category_item has_children">
+                                        <button type="submit" class="btn btn-sm cat_button">Entrepreneurship</button>
+                                    </div>
+                                    <div class="category_item has_children">
+                                        <button type="submit" class="btn btn-sm cat_button">Writing</button>
+                                    </div>
+                                    <div class="category_item has_children">
+                                        <button type="submit" class="btn btn-sm cat_button">Programming</button>
+                                    </div>
+                                    <div class="category_item has_children">
+                                        <button type="submit" class="btn btn-sm cat_button">Fashion</button>
+                                    </div>
+                                    <div class="category_item has_children">
+                                        <button type="submit" class="btn btn-sm cat_button">Multimedia</button>
+                                    </div>
+                                    <div class="category_item has_children">
+                                        <button type="submit" class="btn btn-sm cat_button">Engineering</button>
+                                    </div>
+                                </div>     
+                            </div>
+                            <div class="tab-pane fade in" id="flloc">
+                                <!--Use this to filter by location-->
+                                <div class="multi_sel_item">
+                                    <label class="checkbox-inline control_item" for="user_all">
+                                        <input type="checkbox" checked id="user_all">
+                                        <span>Nationwide</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>FCT</span>
+                                    </label>                                
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Zaria</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Kano</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Kaduna</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Enugu</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Imo</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Abia</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Lagos</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Rivers</span>
+                                    </label>
+                                    <label class="checkbox-inline control_item">
+                                        <input type="checkbox">
+                                        <span>Cross Rivers</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!--This is the pain that renders the sub category for any selected Category-->
+                    <div class="alt_panel">
+                        <!--List the Sub category of the selected category-->
+                        <div class="list_children">
+                           <div class="select_grid select_check">
+                                <div class="my_selector">
+                                    <label for="ent_1" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="ent_1">
+                                    <span class="c_label">Funding</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="ent_2" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="ent_2">
+                                    <span class="c_label">Getting Started</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="ent_3" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="ent_3">
+                                    <span class="c_label">Business Plan</span>
+                                </label>
+                                </div>
+                                <div class="my_selector">
+                                    <label for="ent_4" class="control-wrapper">
+                                        <input type="checkbox" class="select_control" name="pst_type" id="ent_4">
+                                        <span class="c_label">Investment</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-btn">
+                            <a href="#" class="track_back btn btn-rounded btn-grey">
+                                <i class="fa fa-chevron-left"></i>
+                                Back
+                            </a>
+                            <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header role="banner">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="sr-only">SAEDConnect</span>
+                        <img src="img/logo.png" alt="SAEDConnect">
+                    </a>
+                </div>
+                <div class="left_nav">
+                    <div class="navSearchTr">
+                        <a href="#" class="navbar_link_item trigger_search">
+                            <svg class="cust_icon" id="icSearch" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                <path d="M45.6,40.5h-2.7l-1-0.9c3.8-4.4,5.9-10.2,5.3-16.5C46.3,12.4,37.8,3.8,27.2,2.8C13.2,1.6,1.6,13.2,2.8,27.2c1,10.6,9.6,19.1,20.2,20.1c6.3,0.6,12.2-1.5,16.5-5.3l0.9,1v2.7l14.6,14.6c1.4,1.4,3.7,1.4,5.1,0l0,0c1.4-1.4,1.4-3.7,0-5.1L45.6,40.5z M27,40.4C16.9,41.6,8.5,33.2,9.7,23c0.9-6.9,6.4-12.5,13.3-13.3C33.2,8.5,41.6,16.9,40.4,27C39.5,33.9,33.9,39.5,27,40.4z"/>
+                            </svg>
+
+                            <svg class="cust_icon" id="icClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                <path d="M60.9,3.1L60.9,3.1c-1.5-1.5-4-1.5-5.5,0L32,26.5L8.7,3.1c-1.5-1.5-4-1.5-5.5,0l0,0c-1.5,1.5-1.5,4,0,5.5L26.5,32L3.1,55.3c-1.5,1.5-1.5,4,0,5.5l0,0c1.5,1.5,4,1.5,5.5,0L32,37.5l23.3,23.3c1.5,1.5,4,1.5,5.5,0l0,0c1.5-1.5,1.5-4,0-5.5L37.5,32L60.9,8.7C62.4,7.2,62.4,4.7,60.9,3.1z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="navSearchBar header_bg">
+                        <div class="searchControl">
+                            <input type="search" class="form-control" placeholder="Search saedconnect">
+                            <button type="button" class="searchBtn">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                    <path d="M45.6,40.5h-2.7l-1-0.9c3.8-4.4,5.9-10.2,5.3-16.5C46.3,12.4,37.8,3.8,27.2,2.8C13.2,1.6,1.6,13.2,2.8,27.2c1,10.6,9.6,19.1,20.2,20.1c6.3,0.6,12.2-1.5,16.5-5.3l0.9,1v2.7l14.6,14.6c1.4,1.4,3.7,1.4,5.1,0l0,0c1.4-1.4,1.4-3.7,0-5.1L45.6,40.5z M27,40.4C16.9,41.6,8.5,33.2,9.7,23c0.9-6.9,6.4-12.5,13.3-13.3C33.2,8.5,41.6,16.9,40.4,27C39.5,33.9,33.9,39.5,27,40.4z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <nav class="sec-nav">
+                    <ul class="mainNavItems">
+                        <li class="">
+                            <a href="trending.html" class="navbar_link_item" title="Communities">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.9 93.8">
+                                    <path d="M38.2,83.3V57.1h17.4v26.2h21.8V48.4h13.1L46.9,9.2L3.3,48.4h13.1v34.9H38.2z"/>	
+                                </svg>
+                                <span class="nav_label">Home</span>
+                            </a>
+                        </li>
+                        <li class="dropdown active accounts">
+                            <a href="#" data-toggle="dropdown" title="Discover" class="navbar_link_item dropdown-toggle">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.9 93.8">
+                                    <path class="st1" d="M46.4,87.7c-22.5,0-40.8-18.3-40.8-40.8S23.9,6.1,46.4,6.1s40.8,18.3,40.8,40.8S68.9,87.7,46.4,87.7zM46.4,15.7c-17.2,0-31.2,14-31.2,31.2s14,31.2,31.2,31.2s31.2-14,31.2-31.2S63.7,15.7,46.4,15.7z"/>
+                                    <path class="st1" d="M38.5,39L24.8,68.5l29.5-13.7L68,25.3L38.5,39z M46.4,50.9c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S48.6,50.9,46.4,50.9z"/>
+                                </svg>
+                                <span class="nav_label">Discover <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-right">
+                                <li class="active"><a href="trainings.html">Trainings</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="business_opp.html">Business Opportunities</a></li>
+                                <li><a href="programs.html">Programs</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_utility ">
+                            <a href="#" class="navbar_link_item" title="Communities">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                    <path class="st0" d="M32.1,2C16.8,2,4.3,14.4,4.3,29.6c0,8,3.3,15.1,8.7,20.2l-8.1,10c-0.1,1.8,1.8,2.9,3.3,1.9l17-5.1c2.2,0.6,4.5,0.9,6.8,0.9c15.3,0,27.7-12.4,27.7-27.7C59.7,14.4,47.3,2,32.1,2z M22.3,20.7c0.6,0,1.1,0.1,1.6,0.2c0.6-3.3,3.5-5.9,7-5.9c3.7,0,6.7,2.8,7.1,6.3c0.8-0.4,1.7-0.7,2.7-0.7c3.1,0,5.5,2.5,5.5,5.5s-2.5,5.5-5.5,5.5c-2.5,0-4.7-1.7-5.3-4.1c-1.2,1-2.7,1.5-4.4,1.5c-1.3,0-2.4-0.3-3.5-0.9c-0.8,2-2.8,3.4-5.1,3.4c-3.1,0-5.5-2.5-5.5-5.5S19.3,20.7,22.3,20.7z M50.8,42.1h-6.9v0.4H19.3v-0.4h-6v-0.5c0-5.3,4.3-9.6,9.6-9.6c0.4,0,0.9,0,1.3,0.1c2.1-1.6,4.6-2.5,7.4-2.5c2.9,0,5.5,1,7.6,2.6c0.6-0.1,1.3-0.2,2-0.2c5.3,0,9.6,4.3,9.6,9.6V42.1z"/>
+                                </svg>
+                                <span class="nav_label">Communities <i class="caret"></i></span>
+                            </a>
+                            <div class="utilityMenu header_bg utilityLg">
+                                <div class="narrow_container">
+                                    <h4 class="title color-white">Communities you follow</h4>
+                                    <div class="widget_content">
+                                        <div class="tagList">
+                                            <article class="coloredTag">
+                                                <a href="community_home.html" class="tagWrapper">
+                                                    <span class="tagLabel ">Emerging Jobs</span>
+                                                </a>
+                                            </article>
+                                            <article class="coloredTag">
+                                                <a href="community_home.html" class="tagWrapper">
+                                                    <span class="tagLabel ">Emerging Jobs</span>
+                                                </a>
+                                            </article>
+                                            <article class="coloredTag current">
+                                                <a href="community_home.html" class="tagWrapper">
+                                                    <span class="tagLabel ">Starting a Business</span>
+                                                </a>
+                                            </article>
+                                            <article class="coloredTag">
+                                                <a href="community_home.html" class="tagWrapper">
+                                                    <span class="tagLabel ">UI/UX Design</span>
+                                                </a>
+                                            </article>
+                                            <article class="coloredTag">
+                                                <a href="community_home.html" class="tagWrapper">
+                                                    <span class="tagLabel">Futuristic Technology</span>
+                                                </a>
+                                            </article>
+                                        </div>
+                                        <div class="action_btn">
+                                            <a href="feeds_home.html" class="btn-link font_bold">Browse all Communities <i class="fa fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <a href="sessions.html" class="navbar_link_item" title="Sessions">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.9 93.8">
+                                    <path class="st0" d="M47.2,4.4C26,4.4,8.6,21.7,8.5,42.9C8.5,54,13.2,64,20.6,71L9.3,84.9c-0.2,2.4,2.5,4,4.6,2.6l23.7-7.1c3,0.8,6.2,1.2,9.5,1.2c21.3,0,38.6-17.3,38.6-38.6C85.7,21.7,68.5,4.5,47.2,4.4zM36.3,59.6c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8c5.4,0,9.8,4.4,9.8,9.8S41.7,59.6,36.3,59.6zM46.4,40.9c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8c5.4,0,9.8,4.4,9.8,9.8S51.8,40.9,46.4,40.9z M58,59.6c-5.4,0-9.8-4.4-9.8-9.8S52.6,40,58,40c5.4,0,9.8,4.4,9.8,9.8S63.4,59.6,58,59.6z"/>
+                                </svg>
+                                <span class="nav_label">Sessions</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="account_info">
+                        <li class="hidden">
+                            <a href="#" class="navbar_link_item">
+                                <div class="nav_icon">
+                                    <i class="icon icon_notification"></i>
+                                    <span class="badge badge-secondary">3</span>
+                                </div>
+                                <div class="nav_label">
+                                    Notification
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown accounts">
+                            <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
+                                <span class="profile_img">
+                                    <img src="img/user_avis/3.jpg" alt="Jane Doe">
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-right">
+                                <li><a href="user_profile.html"><i class="fa fa-user"></i>My Profile</a></li>
+                                <li><a href="profile_settings.html"><i class="fa fa-gear"></i>Account Settings</a></li>
+                                <li><a href="#"><i class="fa fa-life-bouy"></i>Help Center</a></li>
+                                <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile_nav">
+        <ul class="navList">
+            <li class="linkNavMain  has_sub ">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_feed"></i>
+                    </span>
+                    <span class="link_title">Feeds</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Feeds</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
+                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain active has_sub">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_request"></i>
+                    </span>
+                    <span class="link_title">Discover</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Discover</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li>
+                            <a href="#md_training" class="subNavItem" data-toggle="collapse">
+                                Growth Opportunities
+                            </a>
+                            <div class="collapse" id="md_training">
+                                <ul class="link_nav_children">
+                                    <li><a href="trainings.html">Trainings</a></li>
+                                    <li><a href="trainings.html">Programs</a></li>
+                                    <li><a href="trainings.html">Events</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
+                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
+                        <li>
+                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
+                                Jobs
+                            </a>
+                            <div class="collapse" id="jobs">
+                                <ul class="link_nav_children">
+                                    <li><a href="jobs.html">Freelancer</a></li>
+                                    <li><a href="jobs.html">Contract Jobs</a></li>
+                                    <li><a href="jobs.html">Full Jobs</a></li>
+                                    <li><a href="jobs.html">Volunteer</a></li>
+                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
+                                Buyer Requests
+                            </a>
+                            <div class="collapse" id="by_rq">
+                                <ul class="link_nav_children">
+                                    <li><a href="requests.html">Product Requests</a></li>
+                                    <li><a href="requests.html">Service Requests</a></li>
+                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="market.html" class="subNavItem">Market</a></li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain">
+                <a href="feeds_home.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_forum"></i>
+                    </span>
+                    <span class="link_title">Communities</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="help_center.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_help"></i>
+                    </span>
+                    <span class="link_title">Help Center</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="#more" class="trigger_filter mainTrigger">
+                    <span class="navIcon color-secondary">
+                        <i class="icon icon_more"></i>
+                    </span>
+                    <span class="link_title">Filter</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+    <main class="sd-main-content bg-grey-light">
+       
+        <header class="page_header is_fixed">
+            <div class="header_wrapper">
+                <div class="back_arrow">
+                    <a href="#" class="go_back">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="page_nav">
+                    <h2 class="title">Trainings</h2>
+                </div>
+                <div class="pg_search">
+                    <button class="btn_search trigger_search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <section class="featContentArea">
+            <!--Wrap site content-->
+            <div class="narrow_container">
+                <header class="section_header">
+                    <h2 class="section_title">Training Directory</h2>
+                    <p class="subtitle">Share your trainings with just the right audience. Find amazing opportunities for capacity building and growth, nationwide.</p>
+                    <div class="alert alert_default">
+                        <div class="wrapper">
+                            <p>When you make a “Sell” post of Type “Training, program or Event” from your timeline or in any of the communities, it shows under the Training & Program directory. <a href="#" class="font_bold">Learn More</a></p>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="filter_widget">
+                    <div class="filter_block">
+                        <a href="#" class="filter_trigger trigger_filter">
+                            Filter by
+                            <i><img src="./img/app_icon/chevron_down.png" alt="Filter"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="filter_actions ">
+                        <a href="#" class="filter_trigger commSearchtrig">
+                            <i class="fa fa-search"></i>
+                            Search...
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="filterTray hidden">
+                    <div class="hero_wrapper">
+                        <h4 class="trayLabel font-regular">Filtering By:</h4>
+                        <div class="tagList">
+                            <div class="tagBubble">
+                                <a class="item_wrapper">
+                                    <span class="tagLabel color-default">
+                                        Lagos
+                                    </span>
+                                    <div class="itemDismiss">
+                                        <svg class="cust_icon icon_xs" id="icClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                            <path d="M60.9,3.1L60.9,3.1c-1.5-1.5-4-1.5-5.5,0L32,26.5L8.7,3.1c-1.5-1.5-4-1.5-5.5,0l0,0c-1.5,1.5-1.5,4,0,5.5L26.5,32L3.1,55.3c-1.5,1.5-1.5,4,0,5.5l0,0c1.5,1.5,4,1.5,5.5,0L32,37.5l23.3,23.3c1.5,1.5,4,1.5,5.5,0l0,0c1.5-1.5,1.5-4,0-5.5L37.5,32L60.9,8.7C62.4,7.2,62.4,4.7,60.9,3.1z"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="tagBubble">
+                                <a class="item_wrapper">
+                                    <span class="tagLabel color-default">
+                                        Ict
+                                    </span>
+                                    <div class="itemDismiss">
+                                        <svg class="cust_icon icon_xs" id="icClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                            <path d="M60.9,3.1L60.9,3.1c-1.5-1.5-4-1.5-5.5,0L32,26.5L8.7,3.1c-1.5-1.5-4-1.5-5.5,0l0,0c-1.5,1.5-1.5,4,0,5.5L26.5,32L3.1,55.3c-1.5,1.5-1.5,4,0,5.5l0,0c1.5,1.5,4,1.5,5.5,0L32,37.5l23.3,23.3c1.5,1.5,4,1.5,5.5,0l0,0c1.5-1.5,1.5-4,0-5.5L37.5,32L60.9,8.7C62.4,7.2,62.4,4.7,60.9,3.1z"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="tagBubble">
+                                <a class="item_wrapper">
+                                    <span class="tagLabel color-default">
+                                        Career
+                                    </span>
+                                    <div class="itemDismiss">
+                                        <svg class="cust_icon icon_xs" id="icClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                            <path d="M60.9,3.1L60.9,3.1c-1.5-1.5-4-1.5-5.5,0L32,26.5L8.7,3.1c-1.5-1.5-4-1.5-5.5,0l0,0c-1.5,1.5-1.5,4,0,5.5L26.5,32L3.1,55.3c-1.5,1.5-1.5,4,0,5.5l0,0c1.5,1.5,4,1.5,5.5,0L32,37.5l23.3,23.3c1.5,1.5,4,1.5,5.5,0l0,0c1.5-1.5,1.5-4,0-5.5L37.5,32L60.9,8.7C62.4,7.2,62.4,4.7,60.9,3.1z"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-sm btn-rounded ">
+                            <div class="itemDismiss">
+                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                    <path d="M60.9,3.1L60.9,3.1c-1.5-1.5-4-1.5-5.5,0L32,26.5L8.7,3.1c-1.5-1.5-4-1.5-5.5,0l0,0c-1.5,1.5-1.5,4,0,5.5L26.5,32L3.1,55.3c-1.5,1.5-1.5,4,0,5.5l0,0c1.5,1.5,4,1.5,5.5,0L32,37.5l23.3,23.3c1.5,1.5,4,1.5,5.5,0l0,0c1.5-1.5,1.5-4,0-5.5L37.5,32L60.9,8.7C62.4,7.2,62.4,4.7,60.9,3.1z"/>
+                                </svg>
+                            </div>
+                            <span>Clear</span>
+                        </button>
+                           
+                    </div>
+                </div>
+
+                <div class="default_content hidden">
+                    <div class="def_wrapper">
+                        <div class="intro-text centered">
+                            <div class="def_img">
+                                <img src="img/icons/icon_empty.png" alt="Empty">
+                            </div>
+                            <p class="subtitle">There are no trainings at the moment, please check back in a bit. You can also post a training by following the link below.</p>
+                            <button type="button" data-target="#post_training" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                Post a Training
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content_inner ">
+                    
+                    <header class="blockHeader">
+                        <h4 class="blockLabel text_caps font_regular">Latest Trainings</h4>
+                        <a href="new_training.html" class="btn btn-secondary btn-sm">New Training</a>
+                    </header>
+
+                    <div class="cardList cardTiles">
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/image_placeholder_light.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                Dexters & Heroes
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                       <div class="meta_item">
+                                           <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                           </span>
+                                            <span class="metaValue font_bold" title="Available in: Lagos, Abuja, Ogun, Rivers, Osun" data-toggle="tooltip">Lagos, Abuja, + 3</span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">Microsoft office certification training</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>12,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Career, Corporate
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/cv.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                Skills Edge Consults
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                        <div class="meta_item">
+                                           <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                           </span>
+                                            <span class="metaValue font_bold" title="Available in: Nationwide" data-toggle="tooltip">
+                                            Nationwide
+                                           </span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">How to write professional CVs</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>15,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Career, Corporate
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/training_banner.jpg" alt="ASP.Net/C# programming masterclass">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                The Training Center
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                            </span>
+                                            <span class="metaValue font_bold" title="Available in: Abuja, Rivers" data-toggle="tooltip">
+                                            Abuja, Rivers
+                                           </span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">ASP.Net/C# programming masterclass</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>12,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Programming
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/image_placeholder_light.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                Dexters & Heroes
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                       <div class="meta_item">
+                                           <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                           </span>
+                                            <span class="metaValue font_bold" title="Available in: Lagos, Abuja, Ogun, Rivers, Osun" data-toggle="tooltip">Lagos, Abuja, + 3</span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">Microsoft office certification training</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>12,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Career, Corporate
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/cv.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                Skills Edge Consults
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                        <div class="meta_item">
+                                           <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                           </span>
+                                            <span class="metaValue font_bold" title="Available in: Nationwide" data-toggle="tooltip">
+                                            Nationwide
+                                           </span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">How to write professional CVs</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>15,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Career, Corporate
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/training_banner.jpg" alt="ASP.Net/C# programming masterclass">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                The Training Center
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                            </span>
+                                            <span class="metaValue font_bold" title="Available in: Abuja, Rivers" data-toggle="tooltip">
+                                            Abuja, Rivers
+                                           </span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">ASP.Net/C# programming masterclass</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>12,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Programming
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/image_placeholder_light.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                Dexters & Heroes
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                       <div class="meta_item">
+                                           <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                           </span>
+                                            <span class="metaValue font_bold" title="Available in: Lagos, Abuja, Ogun, Rivers, Osun" data-toggle="tooltip">Lagos, Abuja, + 3</span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">Microsoft office certification training</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>12,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Career, Corporate
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/cv.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                Skills Edge Consults
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                        <div class="meta_item">
+                                           <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                           </span>
+                                            <span class="metaValue font_bold" title="Available in: Nationwide" data-toggle="tooltip">
+                                            Nationwide
+                                           </span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">How to write professional CVs</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>15,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Career, Corporate
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/training_banner.jpg" alt="ASP.Net/C# programming masterclass">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                The Training Center
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                            </span>
+                                            <span class="metaValue font_bold" title="Available in: Abuja, Rivers" data-toggle="tooltip">
+                                            Abuja, Rivers
+                                           </span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">ASP.Net/C# programming masterclass</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>12,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Programming
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/image_placeholder_light.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                Dexters & Heroes
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                       <div class="meta_item">
+                                           <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                           </span>
+                                            <span class="metaValue font_bold" title="Available in: Lagos, Abuja, Ogun, Rivers, Osun" data-toggle="tooltip">Lagos, Abuja, + 3</span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">Microsoft office certification training</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>12,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Career, Corporate
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/cv.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                Skills Edge Consults
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                        <div class="meta_item">
+                                           <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                           </span>
+                                            <span class="metaValue font_bold" title="Available in: Nationwide" data-toggle="tooltip">
+                                            Nationwide
+                                           </span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">How to write professional CVs</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>15,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Career, Corporate
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="cardItem productCard">
+                            <div class="postCard__wrapper">
+                               <div class="programBanner">
+                                    <div class="postCardImage">
+                                        <a class="" href="training_post.html">
+                                            <img src="./img/banners/training_banner.jpg" alt="ASP.Net/C# programming masterclass">
+                                        </a>
+                                    </div>
+                                    <div class="postInfoDetail">
+                                        <h5 class="userInfoTitle font_regular">
+                                            <a href="user_profile.html">
+                                                The Training Center
+                                            </a>
+                                        </h5>
+                                        <span class="divider bg-default"></span>
+                                    </div>
+                                    <div class="controlItem">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-map"></i>
+                                            </span>
+                                            <span class="metaValue font_bold" title="Available in: Abuja, Rivers" data-toggle="tooltip">
+                                            Abuja, Rivers
+                                           </span>
+                                        </div>
+                                    </div>
+                               </div>
+                                <div class="postInfo">
+                                    <div class="postCardDetails">
+                                        <h4 class="cardTitle">
+                                            <a href="training_post.html">ASP.Net/C# programming masterclass</a>
+                                        </h4>
+                                        <div class="infoMeta">
+                                            <span class="metaLabel">
+                                                <i class="naira"></i>12,000
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buy_panel">
+                                        <div class="meta_item">
+                                            <span class="metaLabel color-grey">
+                                                <i class="fa fa-tags"></i>
+                                            </span>
+                                            <span class="metaValue font_bold">
+                                                ICT, Programming
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <nav class="clearfix">
+                        <ul class="pagination pagination-sm clearfix">
+                            <li class="disabled">
+                                <a href="#">
+                                    <<
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="">
+                                <a href="#" class="">
+                                    >>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                </div>          
+            </div>
+        </section>
+    </main>
+    
+    <a href="#0" class="to-top">Top</a>
+
+    <!-- Javascript starts here-->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/site_nav.js"></script>
+    <script src="js/main.js"></script>
+        
+</body>
+
+</html>
