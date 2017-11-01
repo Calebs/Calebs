@@ -359,7 +359,7 @@
                     </a>
                 </div>
                 <div class="page_nav">
-                    <h2 class="title">New Event</h2>
+                    <h2 class="title">Post an Event</h2>
                 </div>
             </div>
         </header>
@@ -367,17 +367,15 @@
         <div class="post_widget ">
            
             <div class="widget_header">
-                <div class="leftControls">
-                   <div class="controlItem">
-                        <a href="community_ev.html" class="control_wrapper go_back" title="back">
-                            <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.44 56">
-                                <path d="M55.75,24.32H12.57l18-18a3.68,3.68,0,0,0-5.2-5.2L1.08,25.4a3.68,3.68,0,0,0,0,5.2L25.4,54.92a3.68,3.68,0,0,0,5.2-5.2l-18-18H55.75a3.68,3.68,0,1,0,0-7.36Z"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="controlItem">
-                        <h4 class="title text_caps">New Event</h4>
-                    </div>
+               <div class="controlItem">
+                    <a href="community_ev.html" class="control_wrapper go_back" title="back">
+                        <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.44 56">
+                            <path d="M55.75,24.32H12.57l18-18a3.68,3.68,0,0,0-5.2-5.2L1.08,25.4a3.68,3.68,0,0,0,0,5.2L25.4,54.92a3.68,3.68,0,0,0,5.2-5.2l-18-18H55.75a3.68,3.68,0,1,0,0-7.36Z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="controlItem">
+                    <h4 class="title text_caps">Post an Event</h4>
                 </div>
             </div>
             
@@ -390,14 +388,19 @@
                 <div class="post_input">
                     <article class="post_card ">
                         <div class="card_wrapper">
+                           <div class="post_card_header">
+                                <div class="post_heading">
+                                    <h4 class="title">Segun Araromi</h4>
+                                </div>
+                            </div>
                             <div class="post_card_body">
                                 <div class="post_content">
                                     <form class="">
                                         <div class="form-group">
-                                           <input type="text" class="form-control title_input" placeholder="Enter event title">
+                                           <input type="text" class="form-control title_input" placeholder="Title or Name of the event">
                                         </div>
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="10" id="post_input" placeholder="More about the event here"></textarea>
+                                        <div class="form-group hasToolbar">
+                                            <textarea class="form-control" rows="10" id="post_input" placeholder="More information about the event here"></textarea>
                                         </div>
                                         <div class="form-group">
                                            <div class="crumbinfo">
@@ -499,9 +502,7 @@
         
         var simplemde = new SimpleMDE({ 
             element: $("#post_input")[0],
-            placeholder: "More about the event here.",
-            toolbar: false,
-            status: false,
+            placeholder: "More information about the event here",
             spellChecker: true,
         });
     </script>

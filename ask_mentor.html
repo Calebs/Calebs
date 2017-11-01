@@ -323,10 +323,10 @@
                                 <div class="post_content">
                                     <form class="">
                                         <div class="form-group">
-                                           <input type="text" class="form-control title_input" autofocus placeholder="What is your Question?">
+                                           <input type="text" class="form-control title_input" autofocus placeholder="Title your Question?">
                                         </div>
-                                        <div class="form-group">
-                                            <textarea class="form-control" rows="5" id="post_input" placeholder="Provide additional information"></textarea>
+                                        <div class="form-group hasToolbar">
+                                            <textarea class="form-control" rows="5" id="post_input" placeholder="Provide additional information on the question asked"></textarea>
                                         </div>
                                         <div class="select_grid select_radio">
                                             <div class="my_selector  file_upload">
@@ -357,7 +357,7 @@
                                     </form>
                                 </div>
                                 <!--Only show this pane when a user tries to upload an image to the timeline.-->
-                                <div class="media_preview">
+                                <div class="media_preview hidden">
                                     <img src="img/banners/tm_card_img.jpg">
                                     <!--For normal video uploads-->
                                     <video controls class="embed-responsive-item hidden" preload="metadata">
@@ -405,9 +405,7 @@
         /* instantiate markDown editor for general posts */
         var simplemde = new SimpleMDE({ 
             element: $("#post_input")[0],
-            placeholder: "Provide additional information",
-            toolbar: false,
-            status: false,
+            placeholder: "Provide additional information on the question asked",
             spellChecker: true,
         });
     </script>

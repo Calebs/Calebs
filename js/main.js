@@ -91,11 +91,11 @@ $(function() {
     var open_subcats = $('.has_children .cat_button'),
         subcat_panel = $('.alt_panel'),
         go_back = $('.track_back'),
-        mother_panel = $('.modal-body, .widget_content');
+        mother_panel = $('.layered_panel');
 
     open_subcats.on('click', function(e){
         if(!(mother_panel.hasClass("is_opened"))) {
-            $(this).parents(".modal-body, .widget_content").addClass("is_opened");
+            $(this).parents(".layered_panel").addClass("is_opened");
         }
     });
 

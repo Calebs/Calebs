@@ -276,7 +276,7 @@
     </div>
     
     
-    <main class="sd-main-content bg-grey-light">
+    <main class="sd-main-content bg-off-white">
         <header class="page_header has_back is_fixed">
             <div class="header_wrapper">
                 <div class="back_arrow">
@@ -452,11 +452,11 @@
                                                 <label class="control-label font_bold">Hosts</label>
                                             </div>
                                             <div class="optionContent ">
-                                                <div class="emptyMessage">
-                                                   <p class="help-block">You have not attached any host to this sessions.</p>
+                                                <div class="emptyMessage hidden">
+                                                   <p class="help-block ">You have not attached any host to this sessions.</p>
                                                     <a href="#" class="btn-link">Add Host(s)</a>
                                                 </div>
-                                                <div class="content_view hidden hasControl">
+                                                <div class="content_view  hasControl">
                                                     <div class="adjContent">
                                                         <div class="select_grid selectUser ">
                                                             <article class="tagBubble profileTag">
@@ -647,7 +647,7 @@
                                                 <label class="control-label font_bold">Duration</label>
                                             </div>
                                             <div class="optionContent ">
-                                               <div class="emptyMessage">
+                                               <div class="emptyMessage hidden">
                                                    <p class="help-block">Set how long the session will stay open for asking and answering questions.</p>
                                                     <a href="#" class="btn-link">Set Duration</a>
                                                 </div>
@@ -670,7 +670,7 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="content_edit hidden">
+                                                <div class="content_edit ">
                                                     <form action="">
                                                        <div class="form-horizontal">
                                                             <div class="form-group col-sm-6">
@@ -694,12 +694,12 @@
                                        <!--Open Date-->
                                        <article class="optionGroup">
                                             <div class="optionLabel">
-                                                <label class="control-label font_bold">Open Date</label>
+                                                <label class="control-label font_bold">Answering From</label>
                                             </div>
                                             <div class="optionContent ">
                                                 
                                                 <div class="emptyMessage hidden">
-                                                   <p class="help-block">Set the date when session will be open for users to start submitting questions</p>
+                                                   <p class="help-block">Set the date the host(s) will be available to provide answers to the questions asked.</p>
                                                     <a href="#" class="btn-link">Set open date</a>
                                                 </div>
                                                 <div class="content_view  hasControl">
@@ -709,7 +709,7 @@
                                                                 <time>Oct 6, 2017</time>
                                                             </span>
                                                         </div>
-                                                        <p class="help-block">This is when users can start submitting their questions</p>
+                                                        <p class="help-block">This is day the host will start answering questions.</p>
                                                     </div>
                                                     <div class="optionControl">
                                                         <a href="#" class="btn btn-card btn-sm btn-rounded">
@@ -720,9 +720,8 @@
                                                 <div class="content_edit hidden">
                                                     <form action="">
                                                         <div class="form-group">
-                                                           <label class="control-label">Open Date</label>
-                                                            <input type="text" class="form-control date" placeholder="Set the date the session is open for question submission">
-                                                            <p class="help-block">This is when users can start submitting their questions</p>
+                                                            <input type="text" class="form-control date" placeholder="Set date.">
+                                                            <p class="help-block">This is day the host will start answering questions.</p>
                                                         </div>
                                                         <div>
                                                             <button class="btn btn-secondary btn-sm btn-rounded">Save</button>
@@ -759,9 +758,10 @@
                                                         <div class="form-group">
                                                            <label class="control-label">Set Viewing rights</label>
                                                             <select class="form-control">
-                                                                <option value="">Free (Anyone can see - even without logging in)</option>
-                                                                <option value="">Active Subscriber only (when we start a subscrition service)</option>
-                                                                <option value="">Premium (Special payment required to view this session/Topic)</option>
+                                                                <option value="">Free (Anyone can see)</option>
+                                                                <option value="">Logged in Users</option>
+                                                                <option value="">Active Subscriber only</option>
+                                                                <option value="">Premium (Special payment required to view this session)</option>
                                                             </select>
                                                             <p class="help-block">Set the kind of users you want to be able to see your session</p>
                                                         </div>
@@ -865,7 +865,7 @@
                                                 <label class="control-label font_bold">Privileges</label>
                                             </div>
                                             <div class="optionContent ">
-                                                <div class="content_view hasControl">
+                                                <div class="content_view  hasControl">
                                                     <div class="adjContent">
                                                         <div class="featMetaItem">
                                                             <span class="">
@@ -897,7 +897,9 @@
                                                                <label class="control-label">Create Conversation</label>
                                                                 <select class="form-control">
                                                                     <option value="">All</option>
-                                                                    <option value="">Admins</option>
+                                                                    <option value="">Admins only</option>
+                                                                    <option value="">Hosts Only</option>
+                                                                    <option value="">Admins And Hosts</option>
                                                                     <option value="">Specify User(s)</option>
                                                                 </select>
                                                                 <p class="help-block">Who can create a conversation under this session?</p>
@@ -913,7 +915,9 @@
                                                                <label class="control-label">Create Post in a Conversations</label>
                                                                 <select class="form-control">
                                                                     <option value="">All</option>
-                                                                    <option value="">Admins</option>
+                                                                    <option value="">Admins only</option>
+                                                                    <option value="">Hosts Only</option>
+                                                                    <option value="">Admins And Hosts</option>
                                                                     <option value="">Specify User(s)</option>
                                                                 </select>
                                                                 <p class="help-block">Who can create a post under a conversation in this session?</p>
@@ -941,7 +945,7 @@
                                             <div class="optionContent ">
                                                 <div class="content_view">
                                                     <div class="adjContent">
-                                                        <button class="btn btn-primary btn-rounded btn-sm">Published</button>                                                        
+                                                        <button class="btn btn-default btn-rounded btn-sm">Unpublish</button>                                                        
                                                         <button class="btn btn-card btn-rounded btn-sm">Delete Session</button>        
                                                     </div>
                                                 </div>
