@@ -1,0 +1,1661 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Saved posts | SAEDConnect</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet" type="text/css">
+    <link href="css/timeline.css" rel="stylesheet" type="text/css">
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+</head>
+
+<body class="">
+      
+    
+    <div class="floatingWidget searchWidget">
+        <div class="widget-wrapper">
+            <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content">
+                <div class="search_panel">
+                    <h4 class="title text_caps color-white">Search</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <input type="search" class="form-control search_control" placeholder="Find People or topics on SAEDConnect...">
+                        </div>
+                        <div class="more-btn">
+                            <button class="btn btn-rounded btn-lg btn-secondary">
+                                <i class="fa fa-search"></i>Search
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="floatingWidget catFilter">
+        <div class="widget-wrapper">
+           <span class="widget_close">
+                <button class="close_dialog"></button>
+            </span>
+            <div class="widget_content text-center">
+                <!--<h4 class="title text_caps color-white">Filter Questions By</h4>-->
+                <h4 class="title text_caps color-white">Filter list By</h4>
+                
+                <div class="content-panel color-white">
+                    <div class="select_grid">
+                        <!--Clicking on any of these buttons should show its categories in the list below--> 
+                        <!--Add active to the item the user is filtering by--> 
+                        <div class="category_item active">
+                            <a href="#" class="btn btn-sm cat_button">Post Type</a>
+                        </div>
+                        <div class="category_item">
+                            <a href="#" class="btn btn-sm cat_button">Interests</a>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <!--Use this to present post type and hide when the user clicks another option-->
+                    <div class="select_grid color-default select_check">
+                        <div class="my_selector">
+                            <label for="pst_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_1">
+                                <span class="c_label">General/Gists</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_2">
+                                <span class="c_label">Tips</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_3">
+                                <span class="c_label">Business Ideas</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_4" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_4">
+                                <span class="c_label">Programs</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_5" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_5">
+                                <span class="c_label">Trainings</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_6" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_6">
+                                <span class="c_label">Events</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_7" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_7">
+                                <span class="c_label">Inspirations</span>
+                            </label>
+                        </div>
+                        <div class="my_selector">
+                            <label for="pst_8" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="pst_8">
+                                <span class="c_label">Success Stories</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!--Use this to present interest tags/Platform Categories-->
+                    <div class="select_grid hidden">
+                        <div class="category_item has_children">
+                            <button type="button" class="btn btn-sm cat_button">Updates</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Small Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Agro Business</button>
+                        </div>
+                        <div class="category_item has_children">
+                            <button type="submit" class="btn btn-sm cat_button">Career Development</button>
+                        </div>
+                    </div>                       
+                </div>
+                 <!--Contains the sub categories for any selected industry-->
+                <div class="alt_panel">
+                    <!--List the Sub category of the selected category-->
+                    <div class="list_children">
+                       <div class="select_grid select_check">
+                            <div class="my_selector">
+                                <label for="tagSub_1" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_1">
+                                <span class="c_label">Programming</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_2" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_2">
+                                <span class="c_label">Software Design</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_3" class="control-wrapper">
+                                <input type="checkbox" class="select_control" name="pst_type" id="tagSub_3">
+                                <span class="c_label">Telecommunications</span>
+                            </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_4" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_4">
+                                    <span class="c_label">Hardware</span>
+                                </label>
+                            </div>
+                            <div class="my_selector">
+                                <label for="tagSub_5" class="control-wrapper">
+                                    <input type="checkbox" class="select_control" name="pst_type" id="tagSub_5">
+                                    <span class="c_label">World wide web</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-btn">
+                        <a href="#" class="track_back btn btn-rounded btn-grey">
+                            <i class="fa fa-chevron-left"></i>
+                            Back
+                        </a>
+                        <button type="button" class="btn btn-rounded btn-primary">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header role="banner">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <span class="sr-only">SAEDConnect</span>
+                        <img src="img/logo_admin.png" alt="SAEDConnect">
+                    </a>
+                </div>
+                <nav class="sec-nav ">
+                    <ul class="account_info">
+                        <li class="hidden-xs">
+                            <a href="#" class="navbar_link_item trigger_search">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_help"></i>
+                            </a>
+                        </li>
+                        <li class="hidden">
+                            <a href="#" class="navbar_link_item">
+                                <i class="icon icon_notification"></i>
+                                <span class="badge badge-secondary">3</span>
+                            </a>
+                        </li>
+                        <li class="dropdown accounts">
+                            <a href="#" data-toggle="dropdown" class="navbar_link_item dropdown-toggle">
+                                <span class="profile_img">
+                                <img src="img/user_avis/3.jpg" alt="Jane Doe">
+                            </span>
+                                <span class="profile_name">Jane Doe</span>
+                                <i class="fa fa-chevron-circle-down"></i></a>
+                            <ul class="dropdown-menu dropdown-right">
+                                <li><a href="corp_profile_general.html"><i class="fa fa-user"></i>My Profile</a></li>
+                                <li><a href="#"><i class="fa fa-power-off"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!--Mobile footer navigation-->
+    <div class="mobile_nav">
+        <ul class="navList">
+            <li class="linkNavMain active has_sub ">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_feed"></i>
+                    </span>
+                    <span class="link_title">Feeds</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Feeds</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
+                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
+                        <li><a href="savedPost.html" class="subNavItem">Saved Posts</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain has_sub">
+                <a href="#" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_request"></i>
+                    </span>
+                    <span class="link_title">Discover</span>
+                </a>
+                <div class="subNavTray">
+                    <h4 class="title">Discover</h4>
+                    <button class="close_dialog"></button>
+                    <ul class="subNavList">
+                        <li>
+                            <a href="#md_training" class="subNavItem" data-toggle="collapse">
+                                Growth Opportunities
+                            </a>
+                            <div class="collapse" id="md_training">
+                                <ul class="link_nav_children">
+                                    <li><a href="trainings.html">Trainings</a></li>
+                                    <li><a href="trainings.html">Programs</a></li>
+                                    <li><a href="trainings.html">Events</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
+                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
+                        <li>
+                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
+                                Jobs
+                            </a>
+                            <div class="collapse" id="jobs">
+                                <ul class="link_nav_children">
+                                    <li><a href="jobs.html">Freelancer</a></li>
+                                    <li><a href="jobs.html">Contract Jobs</a></li>
+                                    <li><a href="jobs.html">Full Jobs</a></li>
+                                    <li><a href="jobs.html">Volunteer</a></li>
+                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
+                                Buyer Requests
+                            </a>
+                            <div class="collapse" id="by_rq">
+                                <ul class="link_nav_children">
+                                    <li><a href="requests.html">Product Requests</a></li>
+                                    <li><a href="requests.html">Service Requests</a></li>
+                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="market.html" class="subNavItem">Market</a></li>
+                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="linkNavMain">
+                <a href="feeds_home.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_forum"></i>
+                    </span>
+                    <span class="link_title">Communities</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="help_center.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <i class="icon icon_help"></i>
+                    </span>
+                    <span class="link_title">Help Center</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="#more" class="trigger_filter mainTrigger">
+                    <span class="navIcon color-secondary">
+                        <i class="icon icon_more"></i>
+                    </span>
+                    <span class="link_title">Filter</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <main class="sd-main-content bg-off-white">
+        <header class="page_header is_fixed">
+            <div class="header_wrapper">
+                <div class="back_arrow">
+                    <a href="#" class="go_back">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="page_nav">
+                    <h2 class="title">My Saved Posts</h2>
+                </div>
+                <div class="pg_search">
+                    <button class="btn_search trigger_search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!--Wrap site content-->
+        <div class="timeline_container">
+           
+            <aside class="nav_timeline">
+                <div class="content_wrapper">
+                    <h4 class="menu_title">Menu</h4>
+
+                    <nav class="nav_block main_nav">
+                        <ul class="has_icon">
+                            <li class="link_nav">
+                                <a href="corp_profile_general.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_user"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">My Profile</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav active has_children">
+                                <a href="#stuffs" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_feed"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Feeds</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="stuffs">
+                                    <ul class="link_nav_children">
+                                        <li><a href="newsfeed.html">My Timeline</a></li>
+                                        <li><a href="timeline.html">Global Timeline</a></li>
+                                        <li><a href="feeds_home.html">Communities</a></li>
+                                        <li class="active"><a href="savedPost.html">Saved Posts</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav has_children">
+                                <a href="#trainings" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_trdir"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Growth Opportunities</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="trainings">
+                                    <ul class="link_nav_children">
+                                        <li><a href="trainings.html">Trainings</a></li>
+                                        <li><a href="trainings.html">Programs</a></li>
+                                        <li><a href="trainings.html">Events</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="questions.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_question"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Questions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="business_opp.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_biz"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Business Opportunities</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav has_children">
+                                <a href="#ds_jobs" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_job"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Jobs</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="ds_jobs">
+                                    <ul class="link_nav_children">
+                                        <li><a href="jobs.html">Freelancer</a></li>
+                                        <li><a href="jobs.html">Contract Jobs</a></li>
+                                        <li><a href="jobs.html">Full Jobs</a></li>
+                                        <li><a href="jobs.html">Volunteer</a></li>
+                                        <li><a href="jobs.html">Internships/Apprenticeship</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav has_children">
+                                <a href="#market" data-toggle="collapse">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_request"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Buyer Request</span>
+                                    </div>
+                                </a>
+                                <div class="collapse" id="market">
+                                    <ul class="link_nav_children">
+                                        <li><a href="requests.html">Product Requests</a></li>
+                                        <li><a href="requests.html">Service Requests</a></li>
+                                        <li><a href="requests.html">Trainer/Tutor Requests</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="market.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_market"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Market</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="portfolio.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_talent"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Talent Directory</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="helpcenter.html">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_help"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Help Center</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="link_nav ">
+                                <a href="helpcenter.html" class="trigger_filter">
+                                    <span class="itemIcon">
+                                        <i class="icon icon_more"></i>
+                                    </span>
+                                    <div class="link_details">
+                                        <span class="link_title">Filter</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                    <div class="nav_block nav_footer">
+                        <p><a href="terms.html">Terms and Condition</a><a href="privacy.html">Privacy Policy</a></p>
+                        <p>&copy; SAEDConnect 2017</p>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="layout_content">
+                <div class="box_wrapper bg_default">
+                    
+                    <div class="main_wrapper">
+                        <div class="split_layout">
+                            <section class="split_view">
+                                <!--Main view Area--> 
+                                
+                                <article class="post_card has_comment">
+                                    <div class="card_wrapper">
+                                        <div class="post_card_header">
+                                            <div class="post_heading">
+                                                <div class="post_author">
+                                                    <div class="user_avartar">
+                                                        <a href="" class="user_avi avi_circle">
+                                                            <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                                                        </a>
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <div class="profile_title">
+                                                            <a href="user_profile.html" class="title_text">Abia State SAED</a>
+                                                            <p class="post_time" title="2 days ago">
+                                                                <time datetime="25-6-2016">2d</time>
+                                                            </p>
+                                                        </div>
+                                                        <span class="title_text">@AbiaSAED</span>
+                                                    </div>
+                                                </div>
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-right">
+                                                        <li><a href="#">Un-save post</a></li>
+                                                        <li><a href="#">Report post</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post_meta_info">
+                                            <p class="meta">
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">This is a:</strong>
+                                                    <span class="meta_value"><a href="conversations.html">Discussion</a></span>
+                                                </span>
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">under:</strong>
+                                                    <span class="meta_value"><a href="conversation_page.html">Conversation Title here</a></span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
+                                            <a href="timeline_comments.html">
+                                                <img src="img/banners/article_image.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post_card_body">
+                                            <div class="post_content content_article">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, blanditiis, rerum. Nisi, libero? Doloremque ratione ex nulla repudiandae explicabo, recusandae corporis voluptatum saepe enim cupiditate accusantium eveniet labore aspernatur, neque.</p>
+                                                <div class="sponsor_stat">
+                                                    <span class="color_grey">Sponsored</span>
+                                                </div>
+                                            </div>
+                                            <div class="post_actionlist">
+                                                <article class="action_item">
+                                                    <a href="timeline_comments.html" class="action_botton">
+                                                        <div class="action_botton_container" title="Comment">
+                                                            <div class="icon_container">
+                                                                <i class="icon comments"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count">0</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                                <article class="action_item">
+                                                    <button type="button" class="action_botton">
+                                                        <div class="action_botton_container" title="Boost">
+                                                            <div class="icon_container">
+                                                                <i class="icon trend"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count hidden-xs">Boost</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </article>
+                                                <div class="pull-right">
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Like">
+                                                                <div class="icon_container">
+                                                                    <i class="icon favourite"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">0</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Share">
+                                                                <div class="icon_container">
+                                                                    <i class="icon shares"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">0</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post_replies clearfix">
+                                            <article class="post_comment">
+                                                <div class="content_wrap">
+                                                    <div class="comment_author">
+                                                        <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_circle">
+                                                            <img src="img/user_avis/1.jpg" alt="Cennet Alkan">
+                                                        </a>
+                                                    </div>
+                                                    <div class="comment_inner">
+                                                        <div class="comment_heading">
+                                                            <h4 class="profile_title">
+                                                                <a href="user_profile.html" class="title_text">Cennet Alkan</a>
+                                                            </h4>
+                                                            <p class="post_time">
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
+                                                            </p>
+                                                        </div>
+                                                        <div class="post_content">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus a quas numquam totam fugiat harum facilis minima tempore rem.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="post_comment_widget new_comment">
+                                            <div class="content_wrap">
+                                                <div class="comment_author">
+                                                    <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_sm avi_circle">
+                                                        <img src="img/user_avis/3.jpg" alt="Adedire Oluwaseun">
+                                                    </a>
+                                                </div>
+                                                <div class="comment_inner is_collapsed">
+                                                   <form action="">
+                                                        <div class="post_input no_left_avi">
+                                                            <textarea class="form-control" rows="2" placeholder="Write your comment"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!--Only show this pane when a user attach a media item to the comment-->
+                                                        <div class="media_preview hidden">
+                                                            <img src="img/banners/tm_card_img.jpg">
+                                                            <!--For normal video uploads-->
+                                                            <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                                <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                            </video>
+                                                            
+                                                            <div class="pane_control">
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                                </a>
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!--Show when the user focus on the input field to type-->
+                                                        <div class="form_action  text-right">
+                                                            <button type="button" class="btn comm_dismiss btn-sm btn-card">Cancel</button>
+                                                            <button type="submit" class="btn btn-sm btn-primary">Post</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="post_card">
+                                    <div class="card_wrapper">
+                                        <div class="post_card_header">
+                                            <div class="post_heading">
+                                                <div class="post_author">
+                                                    <div class="user_avartar">
+                                                        <a href="" class="user_avi avi_circle">
+                                                            <img src="img/icons/media.png" alt="MTN Nigeria">
+                                                        </a>
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <div class="profile_title">
+                                                            <a href="user_profile.html" class="title_text">MTN Nigeria</a>
+                                                            <p class="post_time" title="2 days ago">
+                                                                <time datetime="25-6-2016">2d</time>
+                                                            </p>
+                                                        </div>
+                                                        <span class="title_text">@MTN_Nigeria</span>
+                                                    </div>
+                                                </div>
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " You are following>
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-right">
+                                                        <li><a href="#">Un-save post</a></li>
+                                                        <li><a href="#">Report post</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--Toggle "post_pinned" for a pinned post-->
+                                            <div class="post_status">
+                                                <span class="status_wrap">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="post_meta_info">
+                                            <p class="meta">
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">This is a:</strong>
+                                                    <span class="meta_value"><a href="conversations.html">Discussion</a></span>
+                                                </span>
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">under:</strong>
+                                                    <span class="meta_value"><a href="conversation_page.html">Conversation title</a></span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
+                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4PggfbzJcvA" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="post_card_body">
+                                            <div class="post_content ">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, blanditiis, rerum. Nisi, libero? Doloremque ratione.</p>
+                                                <div class="sponsor_stat">
+                                                    <span class="color_grey">Sponsored</span>
+                                                </div>
+                                            </div>
+                                            <div class="post_actionlist">
+                                                <article class="action_item">
+                                                    <a href="timeline_comments.html" class="action_botton">
+                                                        <div class="action_botton_container" title="Comment">
+                                                            <div class="icon_container">
+                                                                <i class="icon comments"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count">0</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                                <article class="action_item">
+                                                    <button type="button" class="action_botton">
+                                                        <div class="action_botton_container" title="Boost">
+                                                            <div class="icon_container">
+                                                                <i class="icon trend"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count hidden-xs">Boost</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </article>
+                                                <div class="pull-right">
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Like">
+                                                                <div class="icon_container">
+                                                                    <i class="icon favourite"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">100</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Share">
+                                                                <div class="icon_container">
+                                                                    <i class="icon shares"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">50</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post_replies clearfix">
+                                            <article class="post_comment">
+                                                <div class="content_wrap">
+                                                    <div class="comment_author">
+                                                        <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_circle">
+                                                            <img src="img/user_avis/1.jpg" alt="Cennet Alkan">
+                                                        </a>
+                                                    </div>
+                                                    <div class="comment_inner">
+                                                        <div class="comment_heading">
+                                                            <h4 class="profile_title">
+                                                                <a href="user_profile.html" class="title_text">Cennet Alkan</a>
+                                                            </h4>
+                                                            <p class="post_time">
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
+                                                            </p>
+                                                        </div>
+                                                        <div class="post_content">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus a quas numquam totam fugiat harum facilis minima tempore rem.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="post_comment_widget new_comment">
+                                            <div class="content_wrap">
+                                                <div class="comment_author">
+                                                    <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_sm avi_circle">
+                                                        <img src="img/user_avis/3.jpg" alt="Adedire Oluwaseun">
+                                                    </a>
+                                                </div>
+                                                <div class="comment_inner is_collapsed">
+                                                   <form action="">
+                                                        <div class="post_input no_left_avi">
+                                                            <textarea class="form-control" rows="2" placeholder="Write your comment"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!--Only show this pane when a user attach a media item to the comment-->
+                                                        <div class="media_preview hidden">
+                                                            <img src="img/banners/tm_card_img.jpg">
+                                                            <!--For normal video uploads-->
+                                                            <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                                <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                            </video>
+                                                            
+                                                            <div class="pane_control">
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                                </a>
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!--Show when the user focus on the input field to type-->
+                                                        <div class="form_action  text-right">
+                                                            <button type="button" class="btn comm_dismiss btn-sm btn-card">Cancel</button>
+                                                            <button type="submit" class="btn btn-sm btn-primary">Post</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="post_card">
+                                    <div class="card_wrapper">
+                                        <div class="post_card_header">
+                                            <div class="post_heading">
+                                                <div class="post_author">
+                                                    <div class="user_avartar">
+                                                        <a href="" class="user_avi avi_circle">
+                                                            <img src="img/icons/media.png" alt="MTN Nigeria">
+                                                        </a>
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <div class="profile_title">
+                                                            <a href="user_profile.html" class="title_text">SAEDConnect Support</a>
+                                                            <p class="post_time" title="2 days ago">
+                                                                <time datetime="25-6-2016">5h</time>
+                                                            </p>
+                                                        </div>
+                                                        <span class="title_text">@Support</span>
+                                                    </div>
+                                                </div>
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="You are following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-right">
+                                                        <li><a href="#">Un-save post</a></li>
+                                                        <li><a href="#">Report post</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post_meta_info">
+                                            <p class="meta">
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">This is a:</strong>
+                                                    <span class="meta_value"><a href="conversations.html">Discussion</a></span>
+                                                </span>
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">under:</strong>
+                                                    <span class="meta_value"><a href="conversation_page.html">Help and Support</a></span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="post_card_body">
+                                            <div class="post_content ">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, blanditiis, rerum. Nisi, libero? Doloremque ratione.</p>
+                                                <div class="post_media">
+                                                    <div class="fileMetaCard">
+                                                        <div class="metaIcon">
+                                                            <a href="#file_url.docx" target="_blank" download><img src="./img/app_icon/file.png" alt=""></a>
+                                                        </div>
+                                                        <div class="metainfo">
+                                                            <h4 class="title">
+                                                                <a href="#file_url.docx" target="_blank" download>The SAEDConnect admin user manual.docx</a>
+                                                            </h4>
+                                                            <span class="metaCrumb" title="file size">1.81 MB</span>
+                                                            <div class="metaCto">
+                                                                <a href="#file_url.docx" class="btn btn-default btn-sm" target="_blank" download>
+                                                                    <i class="fa fa-download"></i>Download
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sponsor_stat">
+                                                    <span class="color_grey">Sponsored</span>
+                                                </div>
+                                            </div>
+                                            <div class="post_actionlist">
+                                                <article class="action_item">
+                                                    <a href="timeline_comments.html" class="action_botton">
+                                                        <div class="action_botton_container" title="Comment">
+                                                            <div class="icon_container">
+                                                                <i class="icon comments"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count">0</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                                <article class="action_item">
+                                                    <button type="button" class="action_botton">
+                                                        <div class="action_botton_container" title="Boost">
+                                                            <div class="icon_container">
+                                                                <i class="icon trend"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count hidden-xs">Boost</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </article>
+                                                <div class="pull-right">
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Like">
+                                                                <div class="icon_container">
+                                                                    <i class="icon favourite"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">100</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Share">
+                                                                <div class="icon_container">
+                                                                    <i class="icon shares"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">50</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post_replies clearfix">
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!--Regular sponsored post-->
+                                <article class="post_card sponsored">
+                                    <div class="card_wrapper">
+                                       <div class="post_card_header">
+                                            <div class="post_heading">
+                                                <div class="post_author">
+                                                    <div class="user_avartar">
+                                                        <a href="" class="user_avi avi_circle">
+                                                            <img src="img/icons/media.png" alt="MTN Nigeria">
+                                                        </a>
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <div class="profile_title">
+                                                            <a href="user_profile.html" class="title_text">MTN Nigeria</a>
+                                                            <p class="post_time" title="2 days ago">
+                                                                <time datetime="25-6-2016">2d</time>
+                                                            </p>
+                                                        </div>
+                                                        <span class="title_text">@MTN_Nigeria</span>
+                                                    </div>
+                                                </div>
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn " title="You are following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-right">
+                                                        <li><a href="#">Un-save post</a></li>
+                                                        <li><a href="#">Report post</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--Toggle "post_pinned" for a pinned post-->
+                                            <div class="post_status">
+                                                <span class="status_wrap">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="post_meta_info">
+                                            <p class="meta">
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">This is a:</strong>
+                                                    <span class="meta_value"><a href="questions.html">Question</a></span>
+                                                </span>
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">under:</strong>
+                                                    <span class="meta_value"><a href="questions.html">Entrepreneurship</a></span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
+                                            <a href="#sponsor_url">
+                                                <img src="img/banners/partners_banner.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post_card_body">
+                                            <div class="post_content">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, quae, unde. Voluptatum asperiores at ex tenetur iure aperiam corporis cupiditate soluta fugiat illum culpa, dolores dolorem laboriosam maiores assumenda vel.</p>
+                                                <div class="sponsor_stat">
+                                                    <span class="color_grey">Sponsored</span>
+                                                </div>
+                                            </div>
+                                            <div class="post_actionlist">
+                                                <article class="action_item">
+                                                    <a href="timeline_comments.html" class="action_botton">
+                                                        <div class="action_botton_container" title="Comment">
+                                                            <div class="icon_container">
+                                                                <i class="icon comments"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count">0</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                                <article class="action_item">
+                                                    <button type="button" class="action_botton">
+                                                        <div class="action_botton_container" title="Boost">
+                                                            <div class="icon_container">
+                                                                <i class="icon trend"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count hidden-xs">Boost</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </article>
+                                                <div class="pull-right">
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Like">
+                                                                <div class="icon_container">
+                                                                    <i class="icon favourite"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">13</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Share">
+                                                                <div class="icon_container">
+                                                                    <i class="icon shares"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">2</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post_replies clearfix">
+                                            <article class="post_comment">
+                                                <div class="content_wrap">
+                                                    <div class="comment_author">
+                                                        <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_circle">
+                                                            <img src="img/user_avis/1.jpg" alt="Cennet Alkan">
+                                                        </a>
+                                                    </div>
+                                                    <div class="comment_inner">
+                                                        <div class="comment_heading">
+                                                            <h4 class="profile_title">
+                                                                <a href="user_profile.html" class="title_text">Cennet Alkan</a>
+                                                            </h4>
+                                                            <p class="post_time">
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
+                                                            </p>
+                                                        </div>
+                                                        <div class="post_content">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus a quas numquam totam fugiat harum facilis minima tempore rem.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="post_comment_widget new_comment">
+                                            <div class="content_wrap">
+                                                <div class="comment_author">
+                                                    <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_sm avi_circle">
+                                                        <img src="img/user_avis/3.jpg" alt="Adedire Oluwaseun">
+                                                    </a>
+                                                </div>
+                                                <div class="comment_inner is_collapsed">
+                                                   <form action="">
+                                                        <div class="post_input no_left_avi">
+                                                            <textarea class="form-control" rows="2" placeholder="Write your comment"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!--Only show this pane when a user attach a media item to the comment-->
+                                                        <div class="media_preview hidden">
+                                                            <img src="img/banners/tm_card_img.jpg">
+                                                            <!--For normal video uploads-->
+                                                            <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                                <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                            </video>
+                                                            
+                                                            <div class="pane_control">
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                                </a>
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!--Show when the user focus on the input field to type-->
+                                                        <div class="form_action  text-right">
+                                                            <button type="button" class="btn comm_dismiss btn-sm btn-card">Cancel</button>
+                                                            <button type="submit" class="btn btn-sm btn-primary">Post</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <!--Question-->
+                                <article class="post_card has_comment ">
+                                    <div class="card_wrapper">
+                                        <div class="post_card_header">
+                                            <div class="post_heading">
+                                                <div class="post_author">
+                                                    <div class="user_avartar">
+                                                        <a href="" class="user_avi avi_circle">
+                                                            <img src="./img/user_avis/2.jpg" alt="Adedire Oluwaseun">
+                                                        </a>
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <div class="profile_title">
+                                                            <a href="user_profile.html" class="title_text">Mmpape Paul</a>
+                                                            <p class="post_time" title="1 month ago">
+                                                                <time datetime="25-6-2017">4d</time>
+                                                            </p>
+                                                        </div>
+                                                        <!--Portfolio Skill area-->
+                                                        <span class="title_text">@Paul1245</span>
+                                                    </div>
+                                                </div>
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn" title="You are following">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-right">
+                                                        <li><a href="#">Un-save post</a></li>
+                                                        <li><a href="#">Report post</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post_meta_info">
+                                            <p class="meta">
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">This is a:</strong>
+                                                    <span class="meta_value"><a href="questions.html">Question</a></span>
+                                                </span>
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">under:</strong>
+                                                    <span class="meta_value"><a href="questions.html">Entrepreneurship</a></span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
+                                            <a href="timeline_comments.html">
+                                                <img src="img/banners/Shoemaker.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post_card_body">
+                                            <div class="post_content">
+                                               <h3 class="post_title font_bold">
+                                                   <a href="question_view.html">
+                                                       How can I attract investors for my shoe-making venture?
+                                                   </a>
+                                               </h3>
+                                                <p>My name is Seun currently serving in abuja. I just learn shoe-making and I am interested in growing it to a proper business. I will like to the things I can do to attract investors to invest in my business. Here is a picture of my tools.</p>
+                                                <div class="sponsor_stat">
+                                                    <span class="color_grey">Sponsored</span>
+                                                </div>
+                                            </div>
+                                            <div class="post_actionlist">
+                                                <article class="action_item">
+                                                    <a href="timeline_comments.html" class="action_botton">
+                                                        <div class="action_botton_container" title="Comment">
+                                                            <div class="icon_container">
+                                                                <i class="icon comments"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count">25</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                                <article class="action_item">
+                                                    <button type="button" class="action_botton">
+                                                        <div class="action_botton_container" title="Boost">
+                                                            <div class="icon_container">
+                                                                <i class="icon trend"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count hidden-xs">Boost</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </article>
+                                                <div class="pull-right">
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Like">
+                                                                <div class="icon_container">
+                                                                    <i class="icon favourite"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">23</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Share">
+                                                                <div class="icon_container">
+                                                                    <i class="icon shares"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">12</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post_replies clearfix">
+                                            <article class="post_comment">
+                                                <div class="content_wrap">
+                                                    <div class="comment_author">
+                                                        <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_circle">
+                                                            <img src="img/user_avis/1.jpg" alt="Cennet Alkan">
+                                                        </a>
+                                                    </div>
+                                                    <div class="comment_inner">
+                                                        <div class="comment_heading">
+                                                            <h4 class="profile_title">
+                                                                <a href="user_profile.html" class="title_text">Cennet Alkan</a>
+                                                            </h4>
+                                                            <p class="post_time">
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
+                                                            </p>
+                                                        </div>
+                                                        <div class="post_content">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus a quas numquam totam fugiat harum facilis minima tempore rem.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="post_comment_widget new_comment">
+                                            <div class="content_wrap">
+                                                <div class="comment_author">
+                                                    <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_sm avi_circle">
+                                                        <img src="img/user_avis/3.jpg" alt="Adedire Oluwaseun">
+                                                    </a>
+                                                </div>
+                                                <div class="comment_inner is_collapsed">
+                                                   <form action="">
+                                                        <div class="post_input no_left_avi">
+                                                            <textarea class="form-control" rows="2" placeholder="Write your comment"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!--Only show this pane when a user attach a media item to the comment-->
+                                                        <div class="media_preview hidden">
+                                                            <img src="img/banners/tm_card_img.jpg">
+                                                            <!--For normal video uploads-->
+                                                            <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                                <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                            </video>
+                                                            
+                                                            <div class="pane_control">
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                                </a>
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!--Show when the user focus on the input field to type-->
+                                                        <div class="form_action  text-right">
+                                                            <button type="button" class="btn comm_dismiss btn-sm btn-card">Cancel</button>
+                                                            <button type="submit" class="btn btn-sm btn-primary">Post</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="post_card has_comment ">
+                                    <div class="card_wrapper">
+                                        <div class="post_card_header">
+                                            <div class="post_heading">
+                                                <div class="post_author">
+                                                    <div class="user_avartar">
+                                                        <a href="" class="user_avi avi_circle">
+                                                            <img src="./img/user_avis/2.jpg" alt="Segun Araromi">
+                                                        </a>
+                                                    </div>
+                                                    <div class="user_info">
+                                                        <div class="profile_title">
+                                                            <a href="user_profile.html" class="title_text">Segun Araromi</a>
+                                                            <p class="post_time" title="1 month ago">
+                                                                <time datetime="25-6-2017">1m</time>
+                                                            </p>
+                                                        </div>
+                                                        <span class="title_text">@d_segun</span>
+                                                    </div>
+                                                </div>
+                                                <div class="sub_menu dropdown">
+                                                    <!--toggle: ""-->
+                                                    <a href="#" class="ff_btn" title="Follow">
+                                                        <i class="icon icon_f_stat"></i>
+                                                    </a>
+                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                        <i class="fa fa-angle-down"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-right">
+                                                        <li><a href="#">Un-save post</a></li>
+                                                        <li><a href="#">Report post</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--Toggle "post_pinned" for a pinned post-->
+                                            <div class="post_status">
+                                                <span class="status_wrap">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="post_meta_info">
+                                            <p class="meta">
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">This is a:</strong>
+                                                    <span class="meta_value"><a href="portfolio.html">Portfolio</a></span>
+                                                </span>
+                                                <span class="meta_item">
+                                                    <strong class="meta_label font_bold">under:</strong>
+                                                    <span class="meta_value"><a href="#">Skill Area</a></span>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="post_media embed-responsive embed-responsive-16by9">
+                                            <a href="timeline_comments.html">
+                                                <img src="img/banners/portfolio.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="post_card_body">
+                                            <div class="post_content">
+                                                <h3 class="post_title font_bold">
+                                                   <a href="portfolio_view.html">
+                                                       Stylish foldable table 
+                                                   </a>
+                                               </h3>
+                                                <p>Here is an image of my most recent carpentry work. It is a collapsible table that can also be detached when moving from one place to another. It is fastened to the wall by 2 metal hinges.</p>
+                                                <div class="sponsor_stat">
+                                                    <span class="color_grey">Sponsored</span>
+                                                </div>
+                                            </div>
+                                            <div class="post_actionlist">
+                                                <article class="action_item">
+                                                    <a href="timeline_comments.html" class="action_botton">
+                                                        <div class="action_botton_container" title="Comment">
+                                                            <div class="icon_container">
+                                                                <i class="icon comments"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count">25</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </article>
+                                                <article class="action_item">
+                                                    <button type="button" class="action_botton">
+                                                        <div class="action_botton_container" title="Boost">
+                                                            <div class="icon_container">
+                                                                <i class="icon trend"></i>
+                                                            </div>
+                                                            <div class="icon_text">
+                                                                <span class="action_count hidden-xs">Boost</span>
+                                                            </div>
+                                                        </div>
+                                                    </button>
+                                                </article>
+                                                <div class="pull-right">
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Like">
+                                                                <div class="icon_container">
+                                                                    <i class="icon favourite"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">23</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                    <article class="action_item">
+                                                        <button type="button" class="action_botton">
+                                                            <div class="action_botton_container" title="Share">
+                                                                <div class="icon_container">
+                                                                    <i class="icon shares"></i>
+                                                                </div>
+                                                                <div class="icon_text">
+                                                                    <span class="action_count">12</span>
+                                                                </div>
+                                                            </div>
+                                                        </button>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buy_panel ">
+                                            <div class="left_obj">
+                                                <div class="cust_selector ">
+                                                   <span class="title_text">
+                                                       Amount
+                                                   </span>
+                                                   <span class="title_text">
+                                                       <i class="naira"></i>15,000
+                                                   </span>
+                                               </div>
+                                            </div>
+                                            <div class="right_obj">
+                                                <a class="btn btn-sm btn-secondary">
+                                                    Buy
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="post_replies clearfix">
+                                            <article class="post_comment">
+                                                <div class="content_wrap">
+                                                    <div class="comment_author">
+                                                        <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_circle">
+                                                            <img src="img/user_avis/1.jpg" alt="Cennet Alkan">
+                                                        </a>
+                                                    </div>
+                                                    <div class="comment_inner">
+                                                        <div class="comment_heading">
+                                                            <h4 class="profile_title">
+                                                                <a href="user_profile.html" class="title_text">Cennet Alkan</a>
+                                                            </h4>
+                                                            <p class="post_time">
+                                                                <time datetime="25-6-2017" class="timestamp">23 h</time>
+                                                            </p>
+                                                        </div>
+                                                        <div class="post_content">
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus a quas numquam totam fugiat harum facilis minima tempore rem.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="post_comment_widget new_comment">
+                                            <div class="content_wrap">
+                                                <div class="comment_author">
+                                                    <a href="user_profile.html" target="_blank" title="View Profile" class="user_avi avi_sm avi_circle">
+                                                        <img src="img/user_avis/3.jpg" alt="Adedire Oluwaseun">
+                                                    </a>
+                                                </div>
+                                                <div class="comment_inner is_collapsed">
+                                                   <form action="">
+                                                        <div class="post_input no_left_avi">
+                                                            <textarea class="form-control" rows="2" placeholder="Write your comment"></textarea>
+                                                            <div class="media_control">
+                                                                <a href="#attach_media" data-toggle="modal" class="action_botton media_upload_trigger">
+                                                                    <div class="icon_container">
+                                                                        <i class="icon attachment"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <!--Only show this pane when a user attach a media item to the comment-->
+                                                        <div class="media_preview hidden">
+                                                            <img src="img/banners/tm_card_img.jpg">
+                                                            <!--For normal video uploads-->
+                                                            <video controls class="embed-responsive-item hidden" preload="metadata">
+                                                                <source src="./img/media_assets/sample_video.MP4" type="video/mp4">
+                                                            </video>
+                                                            
+                                                            <div class="pane_control">
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-times" aria-hidden="true" title="Remove item"></i>
+                                                                </a>
+                                                                <a href="#" class="control_item">
+                                                                    <i class="fa fa-upload" aria-hidden="true" title="Change item"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!--Show when the user focus on the input field to type-->
+                                                        <div class="form_action text-right">
+                                                            <button type="button" class="btn comm_dismiss btn-sm btn-card">Cancel</button>
+                                                            <button type="submit" class="btn btn-sm btn-primary">Post</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                
+                                <article class="post_card">
+                                    <div class="card_wrapper">
+                                        <button type="button" class="btn btn-block btn-grey">
+                                            Show More
+                                        </button>
+                                    </div>
+                                </article>
+                            </section>
+
+                            <aside class="split_nav">
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="https://wwww.saedconnect.com" class="wrapper">
+                                        <img src="./img/banners/join_saedconnect.png" alt="Join SAEDConnect">
+                                    </a>
+                                </article>
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/small_ad.png" alt="random_ad">
+                                    </a>
+                                </article>
+                                <article class="widget_box widget_lg add_widget">
+                                    <a href="#" class="wrapper">
+                                        <img src="./img/banners/qlik.png" alt="Learn in insidify">
+                                    </a>
+                                </article>
+                            </aside>
+                        </div>           
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <a href="#0" class="to-top">Top</a>
+
+    <!-- Javascript starts here-->
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/site_nav.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+
+</html>
