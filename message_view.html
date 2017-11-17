@@ -19,6 +19,63 @@
 </head>
 
 <body class=""> 
+   
+    <div class="modal fade in" id="reportPost">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="modal-title text_caps">Block For</h4>
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-panel">
+                        <div class="media_upload_dialog">
+                            <p class="subtitle">Kindly let us know why you are blocking this user .</p>
+                            <form action="">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="isAbuse" >
+                                           <input type="radio" name="pstIsh" id="isAbuse">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Abuse and Harassment
+                                                </span>
+                                                <p class="help-block">
+                                                    This individual is abusive, or has harassed you in anyway.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isSpam">
+                                           <input type="radio" name="pstIsh" id="isSpam">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Spam
+                                                </span>
+                                                <p class="help-block">
+                                                    The individual has been sending unsolicited message.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Any additional comment</label>
+                                    <textarea rows="5" class="form-control" placeholder="Provide any other information you think can be necessary."></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <header role="banner">
         <div class="navbar navbar-default" role="navigation">
@@ -158,99 +215,7 @@
             </div>
         </div>
     </header>
-    
-    <!--Mobile footer navigation-->
-    <div class="mobile_nav">
-        <ul class="navList">
-            <li class="linkNavMain has_sub ">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_feed"></i>
-                    </span>
-                    <span class="link_title">Feeds</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Feeds</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
-                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
-                        <li><a href="#" class="subNavItem">Saved Posts</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain has_sub">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_request"></i>
-                    </span>
-                    <span class="link_title">Discover</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Discover</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
-                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
-                        <li>
-                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
-                                Jobs
-                            </a>
-                            <div class="collapse" id="jobs">
-                                <ul class="link_nav_children">
-                                    <li><a href="jobs.html">Freelancer</a></li>
-                                    <li><a href="jobs.html">Contract Jobs</a></li>
-                                    <li><a href="jobs.html">Full Jobs</a></li>
-                                    <li><a href="jobs.html">Volunteer</a></li>
-                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
-                                Buyer Requests
-                            </a>
-                            <div class="collapse" id="by_rq">
-                                <ul class="link_nav_children">
-                                    <li><a href="requests.html">Product Requests</a></li>
-                                    <li><a href="requests.html">Service Requests</a></li>
-                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="market.html" class="subNavItem">Market</a></li>
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain">
-                <a href="feeds_home.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_forum"></i>
-                    </span>
-                    <span class="link_title">Communities</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="help_center.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_help"></i>
-                    </span>
-                    <span class="link_title">Help Center</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="#more" class="trigger_filter mainTrigger">
-                    <span class="navIcon color-secondary">
-                        <i class="icon icon_more"></i>
-                    </span>
-                    <span class="link_title">Filter</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    
+        
     <main class="sd-main-content bg-grey-light">
         <header class="page_header has_back is_fixed">
             <div class="header_wrapper">
@@ -347,7 +312,6 @@
                     <div class="main_wrapper">                        
                         <div class="split_layout">
                             <section class="split_view ">
-                               
                                 <header class="heroControlCenter">
                                         <div class="leftControls">
                                             <div class="controlItem">
@@ -382,13 +346,12 @@
                                                 </a> 
                                                 <ul class="dropdown-menu dropdown-right">
                                                     <li><a href="user_profile.html">About User</a></li>
-                                                    <li><a href="#">Block User</a></li>
+                                                    <li><a href="#reportPost" data-toggle="modal">Block User</a></li>
                                                     <li><a href="#">Delete Conversation</a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </header>
-                                
                                 <article class="userDmConversation">
                                     <div class="userDmWrapper">
                                         <div class="userDmInfo">
@@ -405,7 +368,7 @@
                                             <div class="userDmContent">
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repellat consectetur adipisicing elit. Nam repellat!</p>
                                                 <div class="post_media embed-responsive embed-responsive-16by9">
-                                                    <img src="./img/banners/auth_banner.jpg" alt="">
+                                                    <img src="./img/banners/trainers_banner.jpg" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -579,7 +542,6 @@
     <!-- Javascript starts here-->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/base.min.js"></script>
-    <script src="js/site_nav.js"></script>
     <script src="js/simplemde.min.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/main.js"></script>

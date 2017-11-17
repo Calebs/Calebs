@@ -10,7 +10,7 @@
     <title>New Event | SAEDConnect</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link href="css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/datepicker.min.css">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
     <link rel="stylesheet" href="css/simplemde.min.css">
     <link href="css/base.min.css" rel="stylesheet" type="text/css">
     <link href="css/timeline.css" rel="stylesheet" type="text/css">
@@ -242,111 +242,7 @@
             </div>
         </div>
     </header>
-    
-    <!--Mobile footer navigation-->
-    <div class="mobile_nav">
-        <ul class="navList">
-            <li class="linkNavMain active has_sub ">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_feed"></i>
-                    </span>
-                    <span class="link_title">Feeds</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Feeds</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
-                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
-                        <li><a href="savedPost.html" class="subNavItem">Saved Posts</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain has_sub">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_request"></i>
-                    </span>
-                    <span class="link_title">Discover</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Discover</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li>
-                            <a href="#md_training" class="subNavItem" data-toggle="collapse">
-                                Growth Opportunities
-                            </a>
-                            <div class="collapse" id="md_training">
-                                <ul class="link_nav_children">
-                                    <li><a href="trainings.html">Trainings</a></li>
-                                    <li><a href="trainings.html">Programs</a></li>
-                                    <li><a href="trainings.html">Events</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
-                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
-                        <li>
-                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
-                                Jobs
-                            </a>
-                            <div class="collapse" id="jobs">
-                                <ul class="link_nav_children">
-                                    <li><a href="jobs.html">Freelancer</a></li>
-                                    <li><a href="jobs.html">Contract Jobs</a></li>
-                                    <li><a href="jobs.html">Full Jobs</a></li>
-                                    <li><a href="jobs.html">Volunteer</a></li>
-                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
-                                Buyer Requests
-                            </a>
-                            <div class="collapse" id="by_rq">
-                                <ul class="link_nav_children">
-                                    <li><a href="requests.html">Product Requests</a></li>
-                                    <li><a href="requests.html">Service Requests</a></li>
-                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="market.html" class="subNavItem">Market</a></li>
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain">
-                <a href="feeds_home.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_forum"></i>
-                    </span>
-                    <span class="link_title">Communities</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="help_center.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_help"></i>
-                    </span>
-                    <span class="link_title">Help Center</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="#more" class="trigger_filter mainTrigger">
-                    <span class="navIcon color-secondary">
-                        <i class="icon icon_more"></i>
-                    </span>
-                    <span class="link_title">Filter</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    
+        
     <main class="sd-main-content bg-grey">
         <header class="page_header has_back is_fixed">
             <div class="header_wrapper">
@@ -480,21 +376,18 @@
         </div>
     </main>
     
-    <a href="#0" class="to-top">Top</a>
-
     <!-- Javascript starts here-->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/base.min.js"></script>
-    <script src="js/datepicker.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
     <script src="js/simplemde.min.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/main.js"></script>
     
     <script>
-        $('.date').datepicker({
-            format: "D d, M, yyyy",
-            multidate: false,
-            autoclose: true,
+        $('.date').datetimepicker({
+            format:'M d, Y H:i',
+            lang:'en'
         });
         
         var simplemde = new SimpleMDE({ 

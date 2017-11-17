@@ -20,6 +20,115 @@
 </head>
 
 <body class="">
+  
+  <div class="modal fade in" id="reportPost">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="modal-title text_caps">Report For</h4>
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-panel">
+                        <div class="media_upload_dialog">
+                            <p class="subtitle">Help us maintain a good quality of content, Kindly let us know what you think is wrong with this post.</p>
+                            <form action="">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="isInterest" >
+                                           <input type="radio" name="pstIsh" id="isInterest">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    I am not Interested
+                                                </span>
+                                                <p class="help-block">
+                                                    You just don't like the content.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isAbuse" >
+                                           <input type="radio" name="pstIsh" id="isAbuse">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    It's abusive or harmful
+                                                </span>
+                                                <p class="help-block">
+                                                    The post contains pornographic content, or not appropriate.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isPlag" >
+                                           <input type="radio" name="pstIsh" id="isPlag">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Plagiarism
+                                                </span>
+                                                <p class="help-block">
+                                                    You think the content is used without proper acknowledgement of the source.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isGram" >
+                                           <input type="radio" name="pstIsh" id="isGram">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Poorly Written
+                                                </span>
+                                                <p class="help-block">
+                                                    Not properly presented, or with very bad formatting, spelling, and grammer.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isSpam">
+                                           <input type="radio" name="pstIsh" id="isSpam">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Spam
+                                                </span>
+                                                <p class="help-block">
+                                                    An unapproved promotion of a link or product.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isrelevant">
+                                           <input type="radio" name="pstIsh" id="isrelevant">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Out of date, or it doesn't answer the question.
+                                                </span>
+                                                <p class="help-block">
+                                                    The post is irrelevant or no more relevant to the question.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Any additional comment</label>
+                                    <textarea rows="5" class="form-control" placeholder="Provide any other information you think can be necessary."></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
    
    <div class="alert alert_secondary hidden floating_alert">
         <div class="container wrapper">
@@ -201,111 +310,7 @@
             </div>
         </div>
     </header>
-    
-    <!--Mobile footer navigation-->
-    <div class="mobile_nav">
-        <ul class="navList">
-            <li class="linkNavMain active has_sub ">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_feed"></i>
-                    </span>
-                    <span class="link_title">Feeds</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Feeds</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
-                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
-                        <li><a href="savedPost.html" class="subNavItem">Saved Posts</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain has_sub">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_request"></i>
-                    </span>
-                    <span class="link_title">Discover</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Discover</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li>
-                            <a href="#md_training" class="subNavItem" data-toggle="collapse">
-                                Growth Opportunities
-                            </a>
-                            <div class="collapse" id="md_training">
-                                <ul class="link_nav_children">
-                                    <li><a href="trainings.html">Trainings</a></li>
-                                    <li><a href="trainings.html">Programs</a></li>
-                                    <li><a href="trainings.html">Events</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
-                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
-                        <li>
-                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
-                                Jobs
-                            </a>
-                            <div class="collapse" id="jobs">
-                                <ul class="link_nav_children">
-                                    <li><a href="jobs.html">Freelancer</a></li>
-                                    <li><a href="jobs.html">Contract Jobs</a></li>
-                                    <li><a href="jobs.html">Full Jobs</a></li>
-                                    <li><a href="jobs.html">Volunteer</a></li>
-                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
-                                Buyer Requests
-                            </a>
-                            <div class="collapse" id="by_rq">
-                                <ul class="link_nav_children">
-                                    <li><a href="requests.html">Product Requests</a></li>
-                                    <li><a href="requests.html">Service Requests</a></li>
-                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="market.html" class="subNavItem">Market</a></li>
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain">
-                <a href="feeds_home.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_forum"></i>
-                    </span>
-                    <span class="link_title">Communities</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="help_center.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_help"></i>
-                    </span>
-                    <span class="link_title">Help Center</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="#more" class="trigger_filter mainTrigger">
-                    <span class="navIcon color-secondary">
-                        <i class="icon icon_more"></i>
-                    </span>
-                    <span class="link_title">Filter</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    
+        
     <main class="sd-main-content bg-off-white">
         <header class="page_header has_back is_fixed">
             <div class="header_wrapper">
@@ -331,7 +336,7 @@
                             <div class="heroControlCenter">
                                 <div class="leftControls">
                                     <div class="controlItem">
-                                        <a href="#" class="go_back" data-toggle="tooltip" title="Return to Articles">
+                                        <a href="community_articles.html" class="go_back" data-toggle="tooltip" title="Return to Articles">
                                             <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.44 56">
                                                 <path d="M55.75,24.32H12.57l18-18a3.68,3.68,0,0,0-5.2-5.2L1.08,25.4a3.68,3.68,0,0,0,0,5.2L25.4,54.92a3.68,3.68,0,0,0,5.2-5.2l-18-18H55.75a3.68,3.68,0,1,0,0-7.36Z"/>
                                             </svg>
@@ -348,7 +353,7 @@
                                             </svg>
                                         </a> 
                                         <ul class="dropdown-menu dropdown-right">
-                                            <li><a href="#">Report</a></li>
+                                            <li><a href="#reportPost" data-toggle="modal">Report</a></li>
                                             <li><a href="#">Save Conversation</a></li>
                                             <li><a href="#">Delete</a></li>
                                         </ul>
@@ -788,8 +793,9 @@
                             <header class="blockHeader">
                                 <h4 class="blockLabel font_regular">More from Segun</h4>
                                 <button class="followBtn" title="Follow @d_segun">
-                                    <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.2 60">
-                                        <polygon points="58.2 35.19 34.62 35.19 34.62 60 23.57 60 23.57 35.19 0 35.19 0 24.59 23.57 24.59 23.57 0 34.62 0 34.62 24.59 58.2 24.59 58.2 35.19"/>
+                                    <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 52.72">
+                                        <path d="M25.6,29.32c-.68-2.8,1.91-4.93,3.06-7.13a22.71,22.71,0,0,0,2.42-8.09c.71-9.43-4.66-14.95-12.36-14-5.6.69-8.94,5.19-9.3,11C9,18.33,12.16,23.26,14.74,26.55c1.22,3.64-1.48,4.32-3.27,5.1-3,1.32-6.76,3.1-9,5.57C.52,39.33,0,50,0,50l5.52,1.52a16.46,16.46,0,0,0,3.81.58l19.3.66S38.62,51,41,49c2-9-5.44-14-10-16.2C29.65,32.13,26,31.09,25.6,29.32Z"/>
+                                        <path d="M51,19.3V13.5a1.18,1.18,0,0,0-1.18-1.18H46a1.17,1.17,0,0,0-1.18,1.18V19.3H39a1.17,1.17,0,0,0-1.17,1.18v3.81A1.17,1.17,0,0,0,39,25.47h5.81v5.81A1.17,1.17,0,0,0,46,32.44h3.81A1.18,1.18,0,0,0,51,31.27V25.47h5.81A1.18,1.18,0,0,0,58,24.29V20.48a1.18,1.18,0,0,0-1.18-1.18Z"/>
                                     </svg>
                                 </button>
                             </header>
@@ -855,7 +861,6 @@
                 </div>           
             </div>
         </section>
-        
     </main>
 
     <!-- Javascript starts here-->

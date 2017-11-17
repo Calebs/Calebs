@@ -17,6 +17,115 @@
 </head>
 
 <body class="">
+    
+    <div class="modal fade in" id="reportPost">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="modal-title text_caps">Report For</h4>
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-panel">
+                        <div class="media_upload_dialog">
+                            <p class="subtitle">Help us maintain a good quality of content, Kindly let us know what you think is wrong with this post.</p>
+                            <form action="">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="isInterest" >
+                                           <input type="radio" name="pstIsh" id="isInterest">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    I am not Interested
+                                                </span>
+                                                <p class="help-block">
+                                                    You just don't like the content.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isAbuse" >
+                                           <input type="radio" name="pstIsh" id="isAbuse">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    It's abusive or harmful
+                                                </span>
+                                                <p class="help-block">
+                                                    The post contains pornographic content, or not appropriate.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isPlag" >
+                                           <input type="radio" name="pstIsh" id="isPlag">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Plagiarism
+                                                </span>
+                                                <p class="help-block">
+                                                    You think the content is used without proper acknowledgement of the source.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isGram" >
+                                           <input type="radio" name="pstIsh" id="isGram">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Poorly Written
+                                                </span>
+                                                <p class="help-block">
+                                                    Not properly presented, or with very bad formatting, spelling, and grammer.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isSpam">
+                                           <input type="radio" name="pstIsh" id="isSpam">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Spam
+                                                </span>
+                                                <p class="help-block">
+                                                    An unapproved promotion of a link or product.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isrelevant">
+                                           <input type="radio" name="pstIsh" id="isrelevant">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Out of date, or it doesn't answer the question.
+                                                </span>
+                                                <p class="help-block">
+                                                    The post is irrelevant or no more relevant to the question.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Any additional comment</label>
+                                    <textarea rows="5" class="form-control" placeholder="Provide any other information you think can be necessary."></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="alert alert_secondary hidden floating_alert">
         <div class="container wrapper">
@@ -192,27 +301,33 @@
     <!--Mobile footer navigation-->
     <div class="mobile_nav">
         <ul class="navList">
+            <li class="linkNavMain">
+                <a href="community_home.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <svg class="cust_icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.9 93.8">
+                            <path d="M46.5,4.9C25.2,4.9,7.7,22.3,7.7,43.6c0,11.1,4.6,21.1,12.1,28.2L8.5,85.7c-0.2,2.5,2.6,4,4.6,2.7l23.8-7.2c3.1,0.8,6.2,1.2,9.5,1.2c21.4,0,38.8-17.3,38.8-38.8C85.2,22.3,67.9,5,46.5,4.9z M26.7,40c-3.6,0-6.6-2.9-6.6-6.6c0-3.6,2.9-6.6,6.6-6.6c3.6,0,6.6,2.9,6.6,6.6C33.3,37,30.3,40,26.7,40z M46.4,64.8c-6.3,0-11.4-5.1-11.4-11.4h22.9C57.9,59.7,52.8,64.8,46.4,64.8z M66.2,40c-3.6,0-6.6-2.9-6.6-6.6c0-3.6,2.9-6.6,6.6-6.6c3.6,0,6.6,2.9,6.6,6.6C72.7,37,69.8,40,66.2,40z"/>
+                        </svg>
+                    </span>
+                    <span class="link_title">Conversations</span>
+                </a>
+            </li>
+            <li class="linkNavMain">
+                <a href="community_sessions.html" class="mainTrigger">
+                    <span class="navIcon">
+                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.9 93.8">
+                            <path d="M47.2,4.4C26,4.4,8.6,21.7,8.5,42.9C8.5,54,13.2,64,20.6,71L9.3,84.9c-0.2,2.4,2.5,4,4.6,2.6l23.7-7.1c3,0.8,6.2,1.2,9.5,1.2c21.3,0,38.6-17.3,38.6-38.6C85.7,21.7,68.5,4.5,47.2,4.4zM36.3,59.6c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8c5.4,0,9.8,4.4,9.8,9.8S41.7,59.6,36.3,59.6zM46.4,40.9c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8c5.4,0,9.8,4.4,9.8,9.8S51.8,40.9,46.4,40.9z M58,59.6c-5.4,0-9.8-4.4-9.8-9.8S52.6,40,58,40c5.4,0,9.8,4.4,9.8,9.8S63.4,59.6,58,59.6z"/>
+                        </svg>
+                    </span>
+                    <span class="link_title">Sessions</span>
+                </a>
+            </li>
             <li class="linkNavMain active has_sub ">
                 <a href="#" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_feed"></i>
-                    </span>
-                    <span class="link_title">Feeds</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Feeds</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
-                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
-                        <li><a href="savedPost.html" class="subNavItem">Saved Posts</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain has_sub">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_request"></i>
+                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.9 93.8">
+                            <path d="M46.4,87.7c-22.5,0-40.8-18.3-40.8-40.8S23.9,6.1,46.4,6.1s40.8,18.3,40.8,40.8S68.9,87.7,46.4,87.7zM46.4,15.7c-17.2,0-31.2,14-31.2,31.2s14,31.2,31.2,31.2s31.2-14,31.2-31.2S63.7,15.7,46.4,15.7z"/>
+                            <path class="st1" d="M38.5,39L24.8,68.5l29.5-13.7L68,25.3L38.5,39z M46.4,50.9c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S48.6,50.9,46.4,50.9z"/>
+                        </svg>
                     </span>
                     <span class="link_title">Discover</span>
                 </a>
@@ -220,74 +335,23 @@
                     <h4 class="title">Discover</h4>
                     <button class="close_dialog"></button>
                     <ul class="subNavList">
-                        <li>
-                            <a href="#md_training" class="subNavItem" data-toggle="collapse">
-                                Growth Opportunities
-                            </a>
-                            <div class="collapse" id="md_training">
-                                <ul class="link_nav_children">
-                                    <li><a href="trainings.html">Trainings</a></li>
-                                    <li><a href="trainings.html">Programs</a></li>
-                                    <li><a href="trainings.html">Events</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
-                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
-                        <li>
-                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
-                                Jobs
-                            </a>
-                            <div class="collapse" id="jobs">
-                                <ul class="link_nav_children">
-                                    <li><a href="jobs.html">Freelancer</a></li>
-                                    <li><a href="jobs.html">Contract Jobs</a></li>
-                                    <li><a href="jobs.html">Full Jobs</a></li>
-                                    <li><a href="jobs.html">Volunteer</a></li>
-                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
-                                Buyer Requests
-                            </a>
-                            <div class="collapse" id="by_rq">
-                                <ul class="link_nav_children">
-                                    <li><a href="requests.html">Product Requests</a></li>
-                                    <li><a href="requests.html">Service Requests</a></li>
-                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="market.html" class="subNavItem">Market</a></li>
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
+                        <li><a href="community_articles.html" class="subNavItem">Articles</a></li>
+                        <li><a href="community_mentors.html" class="subNavItem">Mentors</a></li>
+                        <li><a href="community_tr.html" class="subNavItem">Trainings</a></li>
+                        <li><a href="community_prg.html" class="subNavItem">Programs</a></li>
+                        <li><a href="community_ev.html" class="subNavItem">Events</a></li>
+                        <li><a href="community_biz.html" class="subNavItem">Business Opportunities</a></li>
                     </ul>
                 </div>
             </li>
             <li class="linkNavMain">
-                <a href="feeds_home.html" class="mainTrigger">
+                <a href="trending.html" class="mainTrigger">
                     <span class="navIcon">
-                        <i class="icon icon_forum"></i>
+                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92.9 93.8">
+                            <path d="M38.2,83.3V57.1h17.4v26.2h21.8V48.4h13.1L46.9,9.2L3.3,48.4h13.1v34.9H38.2z"/>	
+                        </svg>
                     </span>
-                    <span class="link_title">Communities</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="help_center.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_help"></i>
-                    </span>
-                    <span class="link_title">Help Center</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="#more" class="trigger_filter mainTrigger">
-                    <span class="navIcon color-secondary">
-                        <i class="icon icon_more"></i>
-                    </span>
-                    <span class="link_title">Filter</span>
+                    <span class="link_title">Go Home</span>
                 </a>
             </li>
         </ul>
@@ -298,6 +362,7 @@
             <div class="header_wrapper">
                 <div class="page_nav">
                     <h2 class="title">Starting a Business</h2>
+                    <p class="subtitle">Articles</p>
                 </div>
             </div>
         </header>
@@ -484,19 +549,22 @@
                                                     <div class="rightControls">
                                                         <div class="controlItem ">
                                                             <button class="followBtn" title="Follow @d_segun">
-                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.2 60">
-                                                                    <polygon points="58.2 35.19 34.62 35.19 34.62 60 23.57 60 23.57 35.19 0 35.19 0 24.59 23.57 24.59 23.57 0 34.62 0 34.62 24.59 58.2 24.59 58.2 35.19"/>
+                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 52.72">
+                                                                    <path d="M25.6,29.32c-.68-2.8,1.91-4.93,3.06-7.13a22.71,22.71,0,0,0,2.42-8.09c.71-9.43-4.66-14.95-12.36-14-5.6.69-8.94,5.19-9.3,11C9,18.33,12.16,23.26,14.74,26.55c1.22,3.64-1.48,4.32-3.27,5.1-3,1.32-6.76,3.1-9,5.57C.52,39.33,0,50,0,50l5.52,1.52a16.46,16.46,0,0,0,3.81.58l19.3.66S38.62,51,41,49c2-9-5.44-14-10-16.2C29.65,32.13,26,31.09,25.6,29.32Z"/>
+                                                                    <path d="M51,19.3V13.5a1.18,1.18,0,0,0-1.18-1.18H46a1.17,1.17,0,0,0-1.18,1.18V19.3H39a1.17,1.17,0,0,0-1.17,1.18v3.81A1.17,1.17,0,0,0,39,25.47h5.81v5.81A1.17,1.17,0,0,0,46,32.44h3.81A1.18,1.18,0,0,0,51,31.27V25.47h5.81A1.18,1.18,0,0,0,58,24.29V20.48a1.18,1.18,0,0,0-1.18-1.18Z"/>
                                                                 </svg>
                                                             </button>
                                                         </div>
                                                         <div class="controlItem dropdown">
                                                             <a href="#" class="" data-toggle="dropdown" title="Options">
-                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 31.5">
-                                                                    <path d="M29.5,31.5a2,2,0,0,1-1.41-.59L.59,3.41A2,2,0,0,1,3.41.59L29.5,26.67,55.59.59a2,2,0,0,1,2.83,2.83l-27.5,27.5A2,2,0,0,1,29.5,31.5Z"/>
+                                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                                                    <circle cx="24" cy="9" r="5.6"/>
+                                                                    <circle cx="24" cy="32" r="5.6"/>
+                                                                    <circle cx="24" cy="55" r="5.6"/>
                                                                 </svg>
                                                             </a>
                                                             <ul class="dropdown-menu dropdown-right">
-                                                                <li><a href="#">Report Article</a></li>
+                                                                <li><a href="#reportPost" data-toggle="modal">Report Article</a></li>
                                                                 <li><a href="#">Save Article</a></li>
                                                                 <li><a href="#">Delete</a></li>
                                                             </ul>
@@ -655,19 +723,22 @@
                                                     <div class="rightControls">
                                                         <div class="controlItem ">
                                                             <button class="followBtn" title="Follow @d_segun">
-                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.2 60">
-                                                                    <polygon points="58.2 35.19 34.62 35.19 34.62 60 23.57 60 23.57 35.19 0 35.19 0 24.59 23.57 24.59 23.57 0 34.62 0 34.62 24.59 58.2 24.59 58.2 35.19"/>
+                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 52.72">
+                                                                    <path d="M25.6,29.32c-.68-2.8,1.91-4.93,3.06-7.13a22.71,22.71,0,0,0,2.42-8.09c.71-9.43-4.66-14.95-12.36-14-5.6.69-8.94,5.19-9.3,11C9,18.33,12.16,23.26,14.74,26.55c1.22,3.64-1.48,4.32-3.27,5.1-3,1.32-6.76,3.1-9,5.57C.52,39.33,0,50,0,50l5.52,1.52a16.46,16.46,0,0,0,3.81.58l19.3.66S38.62,51,41,49c2-9-5.44-14-10-16.2C29.65,32.13,26,31.09,25.6,29.32Z"/>
+                                                                    <path d="M51,19.3V13.5a1.18,1.18,0,0,0-1.18-1.18H46a1.17,1.17,0,0,0-1.18,1.18V19.3H39a1.17,1.17,0,0,0-1.17,1.18v3.81A1.17,1.17,0,0,0,39,25.47h5.81v5.81A1.17,1.17,0,0,0,46,32.44h3.81A1.18,1.18,0,0,0,51,31.27V25.47h5.81A1.18,1.18,0,0,0,58,24.29V20.48a1.18,1.18,0,0,0-1.18-1.18Z"/>
                                                                 </svg>
                                                             </button>
                                                         </div>
                                                         <div class="controlItem dropdown">
                                                             <a href="#" class="" data-toggle="dropdown" title="Options">
-                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 31.5">
-                                                                    <path d="M29.5,31.5a2,2,0,0,1-1.41-.59L.59,3.41A2,2,0,0,1,3.41.59L29.5,26.67,55.59.59a2,2,0,0,1,2.83,2.83l-27.5,27.5A2,2,0,0,1,29.5,31.5Z"/>
+                                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                                                    <circle cx="24" cy="9" r="5.6"/>
+                                                                    <circle cx="24" cy="32" r="5.6"/>
+                                                                    <circle cx="24" cy="55" r="5.6"/>
                                                                 </svg>
                                                             </a>
                                                             <ul class="dropdown-menu dropdown-right">
-                                                                <li><a href="#">Report Article</a></li>
+                                                                <li><a href="#reportPost" data-toggle="modal">Report Article</a></li>
                                                                 <li><a href="#">Save Article</a></li>
                                                                 <li><a href="#">Delete</a></li>
                                                             </ul>
@@ -818,19 +889,22 @@
                                                     <div class="rightControls">
                                                         <div class="controlItem ">
                                                             <button class="followBtn" title="Follow @d_segun">
-                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58.2 60">
-                                                                    <polygon points="58.2 35.19 34.62 35.19 34.62 60 23.57 60 23.57 35.19 0 35.19 0 24.59 23.57 24.59 23.57 0 34.62 0 34.62 24.59 58.2 24.59 58.2 35.19"/>
+                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 58 52.72">
+                                                                    <path d="M25.6,29.32c-.68-2.8,1.91-4.93,3.06-7.13a22.71,22.71,0,0,0,2.42-8.09c.71-9.43-4.66-14.95-12.36-14-5.6.69-8.94,5.19-9.3,11C9,18.33,12.16,23.26,14.74,26.55c1.22,3.64-1.48,4.32-3.27,5.1-3,1.32-6.76,3.1-9,5.57C.52,39.33,0,50,0,50l5.52,1.52a16.46,16.46,0,0,0,3.81.58l19.3.66S38.62,51,41,49c2-9-5.44-14-10-16.2C29.65,32.13,26,31.09,25.6,29.32Z"/>
+                                                                    <path d="M51,19.3V13.5a1.18,1.18,0,0,0-1.18-1.18H46a1.17,1.17,0,0,0-1.18,1.18V19.3H39a1.17,1.17,0,0,0-1.17,1.18v3.81A1.17,1.17,0,0,0,39,25.47h5.81v5.81A1.17,1.17,0,0,0,46,32.44h3.81A1.18,1.18,0,0,0,51,31.27V25.47h5.81A1.18,1.18,0,0,0,58,24.29V20.48a1.18,1.18,0,0,0-1.18-1.18Z"/>
                                                                 </svg>
                                                             </button>
                                                         </div>
                                                         <div class="controlItem dropdown">
                                                             <a href="#" class="" data-toggle="dropdown" title="Options">
-                                                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59 31.5">
-                                                                    <path d="M29.5,31.5a2,2,0,0,1-1.41-.59L.59,3.41A2,2,0,0,1,3.41.59L29.5,26.67,55.59.59a2,2,0,0,1,2.83,2.83l-27.5,27.5A2,2,0,0,1,29.5,31.5Z"/>
+                                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                                                    <circle cx="24" cy="9" r="5.6"/>
+                                                                    <circle cx="24" cy="32" r="5.6"/>
+                                                                    <circle cx="24" cy="55" r="5.6"/>
                                                                 </svg>
                                                             </a>
                                                             <ul class="dropdown-menu dropdown-right">
-                                                                <li><a href="#">Report Article</a></li>
+                                                                <li><a href="#reportPost" data-toggle="modal">Report Article</a></li>
                                                                 <li><a href="#">Save Article</a></li>
                                                                 <li><a href="#">Delete</a></li>
                                                             </ul>
@@ -1001,6 +1075,7 @@
     <!-- Javascript starts here-->
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/base.min.js"></script>
+    <script src="js/site_nav.js"></script>
     <script src="js/timeline.js"></script>
     <script src="js/main.js"></script>
 

@@ -18,6 +18,115 @@
 
 <body class="">
    
+    <div class="modal fade in" id="reportPost">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                   <h4 class="modal-title text_caps">Report For</h4>
+                    <button type="button" class="close_dialog" data-dismiss="modal" aria-hidden="true">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-panel">
+                        <div class="media_upload_dialog">
+                            <p class="subtitle">Help us maintain a good quality of content, Kindly let us know what you think is wrong with this post.</p>
+                            <form action="">
+                                <div class="form-group">
+                                    <div class="radio">
+                                        <label for="isInterest" >
+                                           <input type="radio" name="pstIsh" id="isInterest">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    I am not Interested
+                                                </span>
+                                                <p class="help-block">
+                                                    You just don't like the content.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isAbuse" >
+                                           <input type="radio" name="pstIsh" id="isAbuse">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    It's abusive or harmful
+                                                </span>
+                                                <p class="help-block">
+                                                    The post contains pornographic content, or not appropriate.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isPlag" >
+                                           <input type="radio" name="pstIsh" id="isPlag">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Plagiarism
+                                                </span>
+                                                <p class="help-block">
+                                                    You think the content is used without proper acknowledgement of the source.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isGram" >
+                                           <input type="radio" name="pstIsh" id="isGram">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Poorly Written
+                                                </span>
+                                                <p class="help-block">
+                                                    Not properly presented, or with very bad formatting, spelling, and grammer.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isSpam">
+                                           <input type="radio" name="pstIsh" id="isSpam">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Spam
+                                                </span>
+                                                <p class="help-block">
+                                                    An unapproved promotion of a link or product.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="isrelevant">
+                                           <input type="radio" name="pstIsh" id="isrelevant">
+                                            <div class="">
+                                                <span class="label_text font_bold color-primary">
+                                                    Out of date, or it doesn't answer the question.
+                                                </span>
+                                                <p class="help-block">
+                                                    The post is irrelevant or no more relevant to the question.
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label sr-only">Any additional comment</label>
+                                    <textarea rows="5" class="form-control" placeholder="Provide any other information you think can be necessary."></textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
     <div class="alert alert_secondary hidden floating_alert">
         <div class="container wrapper">
             <div class="alert_info text-center">
@@ -165,110 +274,6 @@
             </div>
         </div>
     </header>
-    
-    <!--Mobile footer navigation-->
-    <div class="mobile_nav">
-        <ul class="navList">
-            <li class="linkNavMain active has_sub ">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_feed"></i>
-                    </span>
-                    <span class="link_title">Feeds</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Feeds</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li><a href="newsfeed.html" class="subNavItem">My Timeline</a></li>
-                        <li><a href="timeline.html" class="subNavItem">Global Timeline</a></li>
-                        <li><a href="savedPost.html" class="subNavItem">Saved Posts</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain has_sub">
-                <a href="#" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_request"></i>
-                    </span>
-                    <span class="link_title">Discover</span>
-                </a>
-                <div class="subNavTray">
-                    <h4 class="title">Discover</h4>
-                    <button class="close_dialog"></button>
-                    <ul class="subNavList">
-                        <li>
-                            <a href="#md_training" class="subNavItem" data-toggle="collapse">
-                                Growth Opportunities
-                            </a>
-                            <div class="collapse" id="md_training">
-                                <ul class="link_nav_children">
-                                    <li><a href="trainings.html">Trainings</a></li>
-                                    <li><a href="trainings.html">Programs</a></li>
-                                    <li><a href="trainings.html">Events</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="trainings.html" class="subNavItem">Training Directory</a></li>
-                        <li><a href="questions.html" class="subNavItem">Questions</a></li>
-                        <li><a href="business_opp.html" class="subNavItem">Business Opportunities</a></li>
-                        <li>
-                            <a href="#jobs" class="subNavItem" data-toggle="collapse">
-                                Jobs
-                            </a>
-                            <div class="collapse" id="jobs">
-                                <ul class="link_nav_children">
-                                    <li><a href="jobs.html">Freelancer</a></li>
-                                    <li><a href="jobs.html">Contract Jobs</a></li>
-                                    <li><a href="jobs.html">Full Jobs</a></li>
-                                    <li><a href="jobs.html">Volunteer</a></li>
-                                    <li><a href="jobs.html">Internships/Apprenticeship</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#by_rq" class="subNavItem" data-toggle="collapse">
-                                Buyer Requests
-                            </a>
-                            <div class="collapse" id="by_rq">
-                                <ul class="link_nav_children">
-                                    <li><a href="requests.html">Product Requests</a></li>
-                                    <li><a href="requests.html">Service Requests</a></li>
-                                    <li><a href="requests.html">Trainer/Private Tutor</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="market.html" class="subNavItem">Market</a></li>
-                        <li><a href="portfolio.html" class="subNavItem">Talent Directory</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="linkNavMain">
-                <a href="feeds_home.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_forum"></i>
-                    </span>
-                    <span class="link_title">Communities</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="help_center.html" class="mainTrigger">
-                    <span class="navIcon">
-                        <i class="icon icon_help"></i>
-                    </span>
-                    <span class="link_title">Help Center</span>
-                </a>
-            </li>
-            <li class="linkNavMain">
-                <a href="#more" class="trigger_filter mainTrigger">
-                    <span class="navIcon color-secondary">
-                        <i class="icon icon_more"></i>
-                    </span>
-                    <span class="link_title">Filter</span>
-                </a>
-            </li>
-        </ul>
-    </div>
     
     <main class="sd-main-content bg-off-white">
         <header class="page_header has_back is_fixed">
@@ -474,7 +479,117 @@
                                                         </div>
                                                     </a>
                                                     <ul class="dropdown-menu dropdown-right">
-                                                        <li><a href="#">Report </a></li>
+                                                        <li><a href="#reportPost" data-toggle="modal">Report </a></li>
+                                                        <li><a href="#">Save</a></li>
+                                                        <li><a href="#">Delete</a></li>
+                                                    </ul>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="feedQuestionItem">
+                                        <div class="feedItemWrap">
+                                            <h3 class="post_title"><a href="community_conv_view.html">Is it right to call out a lying individual in a live interview session?</a></h3>
+                                        
+                                        <div class="post_actionlist">
+                                            <article class="action_item">
+                                                <button class="btn btn-default btn-sm action_botton">
+                                                    <div class="action_botton_container" title="Upvote">
+                                                        <div class="icon_container">
+                                                            Upvote
+                                                        </div>
+                                                        <div class="icon_text">
+                                                            <span class="action_count">15</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </article>
+                                            <article class="action_item">
+                                                <button type="button" class="action_botton">
+                                                    <div class="action_botton_container" title="Share">
+                                                        <div class="icon_container">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="cust_icon" viewBox="0 0 50.6 56">
+                                                                <path d="M42.17,39.58a8.19,8.19,0,0,0-5.51,2.16l-20-11.67a9.2,9.2,0,0,0,.25-2,9.2,9.2,0,0,0-.25-2L36.43,14.59a8.41,8.41,0,1,0-2.7-6.16,9.2,9.2,0,0,0,.25,2L14.17,22a8.43,8.43,0,1,0,0,12.31L34.18,46A7.93,7.93,0,0,0,34,47.79a8.21,8.21,0,1,0,8.21-8.21Z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="icon_text">
+                                                            <span class="action_count">53</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </article>
+                                            <div class="pull-right text-right">
+                                                <article class="action_item dropdown">
+                                                    <a href="#" data-toggle="dropdown" class="action_botton">
+                                                        <div class="action_botton_container" title="Options">
+                                                            <div class="icon_container">
+                                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                                                    <circle cy="24" cx="9" r="5.6"/>
+                                                                    <circle cy="24" cx="32" r="5.6"/>
+                                                                    <circle cy="24" cx="55" r="5.6"/>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-right">
+                                                        <li><a href="#reportPost" data-toggle="modal">Report </a></li>
+                                                        <li><a href="#">Save</a></li>
+                                                        <li><a href="#">Delete</a></li>
+                                                    </ul>
+                                                </article>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="feedQuestionItem">
+                                        <div class="feedItemWrap">
+                                            <h3 class="post_title"><a href="community_conv_view.html">Is there any dependable means of measuring the ratings and number of viewers of a talk show in Nigeria?</a></h3>
+                                        
+                                        <div class="post_actionlist">
+                                            <article class="action_item">
+                                                <button class="btn btn-default btn-sm action_botton">
+                                                    <div class="action_botton_container" title="Upvote">
+                                                        <div class="icon_container">
+                                                            Upvote
+                                                        </div>
+                                                        <div class="icon_text">
+                                                            <span class="action_count">15</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </article>
+                                            <article class="action_item">
+                                                <button type="button" class="action_botton">
+                                                    <div class="action_botton_container" title="Share">
+                                                        <div class="icon_container">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" class="cust_icon" viewBox="0 0 50.6 56">
+                                                                <path d="M42.17,39.58a8.19,8.19,0,0,0-5.51,2.16l-20-11.67a9.2,9.2,0,0,0,.25-2,9.2,9.2,0,0,0-.25-2L36.43,14.59a8.41,8.41,0,1,0-2.7-6.16,9.2,9.2,0,0,0,.25,2L14.17,22a8.43,8.43,0,1,0,0,12.31L34.18,46A7.93,7.93,0,0,0,34,47.79a8.21,8.21,0,1,0,8.21-8.21Z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="icon_text">
+                                                            <span class="action_count">53</span>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </article>
+                                            <div class="pull-right text-right">
+                                                <article class="action_item dropdown">
+                                                    <a href="#" data-toggle="dropdown" class="action_botton">
+                                                        <div class="action_botton_container" title="Options">
+                                                            <div class="icon_container">
+                                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                                                    <circle cy="24" cx="9" r="5.6"/>
+                                                                    <circle cy="24" cx="32" r="5.6"/>
+                                                                    <circle cy="24" cx="55" r="5.6"/>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-right">
+                                                        <li><a href="#reportPost" data-toggle="modal">Report </a></li>
                                                         <li><a href="#">Save</a></li>
                                                         <li><a href="#">Delete</a></li>
                                                     </ul>
@@ -584,117 +699,7 @@
                                                         </div>
                                                     </a>
                                                     <ul class="dropdown-menu dropdown-right">
-                                                        <li><a href="#">Report </a></li>
-                                                        <li><a href="#">Save</a></li>
-                                                        <li><a href="#">Delete</a></li>
-                                                    </ul>
-                                                </article>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </article>
-                                    
-                                    <article class="feedQuestionItem">
-                                        <div class="feedItemWrap">
-                                            <h3 class="post_title"><a href="community_conv_view.html">Is it right to call out a lying individual in a live interview session?</a></h3>
-                                        
-                                        <div class="post_actionlist">
-                                            <article class="action_item">
-                                                <button class="btn btn-default btn-sm action_botton">
-                                                    <div class="action_botton_container" title="Upvote">
-                                                        <div class="icon_container">
-                                                            Upvote
-                                                        </div>
-                                                        <div class="icon_text">
-                                                            <span class="action_count">15</span>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </article>
-                                            <article class="action_item">
-                                                <button type="button" class="action_botton">
-                                                    <div class="action_botton_container" title="Share">
-                                                        <div class="icon_container">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="cust_icon" viewBox="0 0 50.6 56">
-                                                                <path d="M42.17,39.58a8.19,8.19,0,0,0-5.51,2.16l-20-11.67a9.2,9.2,0,0,0,.25-2,9.2,9.2,0,0,0-.25-2L36.43,14.59a8.41,8.41,0,1,0-2.7-6.16,9.2,9.2,0,0,0,.25,2L14.17,22a8.43,8.43,0,1,0,0,12.31L34.18,46A7.93,7.93,0,0,0,34,47.79a8.21,8.21,0,1,0,8.21-8.21Z"/>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="icon_text">
-                                                            <span class="action_count">53</span>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </article>
-                                            <div class="pull-right text-right">
-                                                <article class="action_item dropdown">
-                                                    <a href="#" data-toggle="dropdown" class="action_botton">
-                                                        <div class="action_botton_container" title="Options">
-                                                            <div class="icon_container">
-                                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                                                                    <circle cy="24" cx="9" r="5.6"/>
-                                                                    <circle cy="24" cx="32" r="5.6"/>
-                                                                    <circle cy="24" cx="55" r="5.6"/>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <ul class="dropdown-menu dropdown-right">
-                                                        <li><a href="#">Report </a></li>
-                                                        <li><a href="#">Save</a></li>
-                                                        <li><a href="#">Delete</a></li>
-                                                    </ul>
-                                                </article>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </article>
-                                    
-                                    <article class="feedQuestionItem">
-                                        <div class="feedItemWrap">
-                                            <h3 class="post_title"><a href="community_conv_view.html">Is there any dependable means of measuring the ratings and number of viewers of a talk show in Nigeria?</a></h3>
-                                        
-                                        <div class="post_actionlist">
-                                            <article class="action_item">
-                                                <button class="btn btn-default btn-sm action_botton">
-                                                    <div class="action_botton_container" title="Upvote">
-                                                        <div class="icon_container">
-                                                            Upvote
-                                                        </div>
-                                                        <div class="icon_text">
-                                                            <span class="action_count">15</span>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </article>
-                                            <article class="action_item">
-                                                <button type="button" class="action_botton">
-                                                    <div class="action_botton_container" title="Share">
-                                                        <div class="icon_container">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" class="cust_icon" viewBox="0 0 50.6 56">
-                                                                <path d="M42.17,39.58a8.19,8.19,0,0,0-5.51,2.16l-20-11.67a9.2,9.2,0,0,0,.25-2,9.2,9.2,0,0,0-.25-2L36.43,14.59a8.41,8.41,0,1,0-2.7-6.16,9.2,9.2,0,0,0,.25,2L14.17,22a8.43,8.43,0,1,0,0,12.31L34.18,46A7.93,7.93,0,0,0,34,47.79a8.21,8.21,0,1,0,8.21-8.21Z"/>
-                                                            </svg>
-                                                        </div>
-                                                        <div class="icon_text">
-                                                            <span class="action_count">53</span>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </article>
-                                            <div class="pull-right text-right">
-                                                <article class="action_item dropdown">
-                                                    <a href="#" data-toggle="dropdown" class="action_botton">
-                                                        <div class="action_botton_container" title="Options">
-                                                            <div class="icon_container">
-                                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-                                                                    <circle cy="24" cx="9" r="5.6"/>
-                                                                    <circle cy="24" cx="32" r="5.6"/>
-                                                                    <circle cy="24" cx="55" r="5.6"/>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <ul class="dropdown-menu dropdown-right">
-                                                        <li><a href="#">Report </a></li>
+                                                        <li><a href="#reportPost" data-toggle="modal">Report </a></li>
                                                         <li><a href="#">Save</a></li>
                                                         <li><a href="#">Delete</a></li>
                                                     </ul>
@@ -749,7 +754,7 @@
                                                         </div>
                                                     </a>
                                                     <ul class="dropdown-menu dropdown-right">
-                                                        <li><a href="#">Report </a></li>
+                                                        <li><a href="#reportPost" data-toggle="modal">Report </a></li>
                                                         <li><a href="#">Save</a></li>
                                                         <li><a href="#">Delete</a></li>
                                                     </ul>
@@ -804,7 +809,7 @@
                                                         </div>
                                                     </a>
                                                     <ul class="dropdown-menu dropdown-right">
-                                                        <li><a href="#">Report </a></li>
+                                                        <li><a href="#reportPost" data-toggle="modal">Report </a></li>
                                                         <li><a href="#">Save</a></li>
                                                         <li><a href="#">Delete</a></li>
                                                     </ul>
@@ -859,7 +864,7 @@
                                                         </div>
                                                     </a>
                                                     <ul class="dropdown-menu dropdown-right">
-                                                        <li><a href="#">Report </a></li>
+                                                        <li><a href="#reportPost" data-toggle="modal">Report </a></li>
                                                         <li><a href="#">Save</a></li>
                                                         <li><a href="#">Delete</a></li>
                                                     </ul>
