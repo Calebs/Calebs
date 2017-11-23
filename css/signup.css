@@ -3305,16 +3305,19 @@ a:link, button {
 .itemDismiss {
   margin-left: 10px;
   color: #959595;
-  opacity: 0;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   cursor: pointer;
 }
+/* line 706, ../sass/partials/_signup.scss */
+.no-touch .itemDismiss {
+  opacity: 0;
+}
 
 /* Select Boxes */
-/* line 710, ../sass/partials/_signup.scss */
+/* line 713, ../sass/partials/_signup.scss */
 .select_grid {
   margin: 0 -5px;
   display: -webkit-box;
@@ -3325,7 +3328,7 @@ a:link, button {
   flex-wrap: wrap;
 }
 
-/* line 716, ../sass/partials/_signup.scss */
+/* line 719, ../sass/partials/_signup.scss */
 .my_selector {
   padding: 5px;
   width: 50%;
@@ -3334,18 +3337,18 @@ a:link, button {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 480px) {
-  /* line 716, ../sass/partials/_signup.scss */
+  /* line 719, ../sass/partials/_signup.scss */
   .my_selector {
     width: calc(100% / 3);
   }
 }
 @media only screen and (min-width: 800px) {
-  /* line 716, ../sass/partials/_signup.scss */
+  /* line 719, ../sass/partials/_signup.scss */
   .my_selector {
     width: calc(100% / 4);
   }
 }
-/* line 729, ../sass/partials/_signup.scss */
+/* line 732, ../sass/partials/_signup.scss */
 .my_selector .select_control {
   visibility: hidden;
   opacity: 0;
@@ -3353,7 +3356,7 @@ a:link, button {
   width: 0;
 }
 
-/* line 737, ../sass/partials/_signup.scss */
+/* line 740, ../sass/partials/_signup.scss */
 .control-wrapper {
   border-radius: 10px;
   overflow: hidden;
@@ -3370,16 +3373,16 @@ a:link, button {
   align-items: center;
   justify-content: center;
 }
-/* line 750, ../sass/partials/_signup.scss */
+/* line 753, ../sass/partials/_signup.scss */
 .control-wrapper:hover .c_label, .control-wrapper:focus .c_label {
   color: #D0D8DB;
 }
-/* line 754, ../sass/partials/_signup.scss */
+/* line 757, ../sass/partials/_signup.scss */
 .control-wrapper:hover .selectIndicator, .control-wrapper:focus .selectIndicator {
   border-color: #D0D8DB;
 }
 
-/* line 760, ../sass/partials/_signup.scss */
+/* line 763, ../sass/partials/_signup.scss */
 .itemInfo {
   position: relative;
   z-index: 30;
@@ -3388,7 +3391,7 @@ a:link, button {
   padding: 5px 10px;
 }
 
-/* line 768, ../sass/partials/_signup.scss */
+/* line 771, ../sass/partials/_signup.scss */
 .c_label {
   font-size: 14px;
   display: block;
@@ -3398,12 +3401,12 @@ a:link, button {
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
 }
-/* line 774, ../sass/partials/_signup.scss */
+/* line 777, ../sass/partials/_signup.scss */
 .active .c_label {
   color: #D0D8DB;
 }
 
-/* line 779, ../sass/partials/_signup.scss */
+/* line 782, ../sass/partials/_signup.scss */
 .selectIndicator {
   display: block;
   width: 20px;
@@ -3419,19 +3422,19 @@ a:link, button {
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
 }
-/* line 791, ../sass/partials/_signup.scss */
+/* line 794, ../sass/partials/_signup.scss */
 .selectIndicator:after {
   font-family: "fontAwesome";
   content: "";
 }
-/* line 796, ../sass/partials/_signup.scss */
+/* line 799, ../sass/partials/_signup.scss */
 .active .selectIndicator {
   border-color: transparent;
-  background-color: #006E48;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #006E48;
   text-align: center;
 }
-/* line 802, ../sass/partials/_signup.scss */
+/* line 805, ../sass/partials/_signup.scss */
 .active .selectIndicator:after {
   content: "\f00c";
 }
