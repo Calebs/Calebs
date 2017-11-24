@@ -1564,6 +1564,206 @@ select.form-control:focus {
   opacity: .5;
 }
 
+/* Custom Object Selector */
+/* line 1232, ../sass/partials/_base.scss */
+.sub_item_tray {
+  border-top: 1px solid #D0D8DB;
+  padding-top: 10px;
+  margin-top: 15px;
+  transform-origin: top;
+}
+
+/* line 1239, ../sass/partials/_base.scss */
+.select_grid {
+  margin: 0 -5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 1244, ../sass/partials/_base.scss */
+.text-center .select_grid {
+  justify-content: center;
+}
+/* line 1248, ../sass/partials/_base.scss */
+.modal .select_grid {
+  padding: 10px 0 15px;
+}
+/* line 1252, ../sass/partials/_base.scss */
+.flexApart .select_grid {
+  margin-bottom: 10px;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 800px) {
+  /* line 1252, ../sass/partials/_base.scss */
+  .flexApart .select_grid {
+    margin-bottom: 0;
+  }
+}
+
+/* line 1261, ../sass/partials/_base.scss */
+.my_selector {
+  padding: 0 5px;
+}
+/* line 1265, ../sass/partials/_base.scss */
+.my_selector.active .control-wrapper {
+  background-color: #FDC00F;
+}
+/* line 1270, ../sass/partials/_base.scss */
+.my_selector .select_control {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+/* line 1278, ../sass/partials/_base.scss */
+.backdropImage {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/banners/image_placeholder.jpg);
+}
+/* line 1290, ../sass/partials/_base.scss */
+.backdropImage:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 1301, ../sass/partials/_base.scss */
+.control-wrapper {
+  display: block;
+  background-color: #E9EBEE;
+  border-radius: 15px;
+  padding: 5px 18px;
+  font-size: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+/* line 1311, ../sass/partials/_base.scss */
+.commThumb .control-wrapper {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* line 1323, ../sass/partials/_base.scss */
+.commThumb .control-wrapper:hover .c_label, .commThumb .control-wrapper:focus .c_label {
+  color: #D0D8DB;
+}
+/* line 1329, ../sass/partials/_base.scss */
+.control-wrapper:hover, .control-wrapper:focus {
+  background-color: rgba(253, 192, 15, 0.3);
+}
+/* line 1331, ../sass/partials/_base.scss */
+.control-wrapper:hover .selectIndicator, .control-wrapper:focus .selectIndicator {
+  border-color: #D0D8DB;
+}
+
+/* line 1337, ../sass/partials/_base.scss */
+.commThumb {
+  padding: 5px;
+  width: 50%;
+  height: 100px;
+  /* Mobile devices */
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 480px) {
+  /* line 1337, ../sass/partials/_base.scss */
+  .commThumb {
+    width: calc(100% / 3);
+  }
+}
+@media only screen and (min-width: 800px) {
+  /* line 1337, ../sass/partials/_base.scss */
+  .commThumb {
+    width: calc(100% / 4);
+  }
+}
+
+/* line 1351, ../sass/partials/_base.scss */
+.itemInfo {
+  position: relative;
+  z-index: 30;
+  width: 100%;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+/* line 1359, ../sass/partials/_base.scss */
+.c_label {
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+/* line 1362, ../sass/partials/_base.scss */
+.commThumb .c_label {
+  display: block;
+  color: #FFFFFF;
+}
+/* line 1366, ../sass/partials/_base.scss */
+.active .commThumb .c_label {
+  color: #D0D8DB;
+}
+
+/* line 1373, ../sass/partials/_base.scss */
+.selectIndicator {
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: 2px solid #FFFFFF;
+  -moz-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+/* line 1385, ../sass/partials/_base.scss */
+.selectIndicator:after {
+  font-family: "fontAwesome";
+  content: "";
+}
+/* line 1390, ../sass/partials/_base.scss */
+.active .selectIndicator {
+  border-color: transparent;
+  background-color: #FFFFFF;
+  color: #006E48;
+  text-align: center;
+}
+/* line 1396, ../sass/partials/_base.scss */
+.active .selectIndicator:after {
+  content: "\f00c";
+}
+
 /* line 1, ../sass/partials/_custom_icons.scss */
 .icon {
   display: inline-block;
@@ -3187,38 +3387,13 @@ a:link, button {
 }
 
 /* line 617, ../sass/partials/_signup.scss */
-.backdropImage {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url(../img/banners/image_placeholder.jpg);
-}
-/* line 629, ../sass/partials/_signup.scss */
-.backdropImage:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* line 640, ../sass/partials/_signup.scss */
 .postCardDetails {
   padding: 20px 10px;
   position: relative;
   z-index: 10;
 }
 
-/* line 646, ../sass/partials/_signup.scss */
+/* line 623, ../sass/partials/_signup.scss */
 .cardTitle {
   line-height: 1.2;
   -moz-transition: all 0.3s;
@@ -3230,7 +3405,7 @@ a:link, button {
   margin-bottom: 10px;
 }
 
-/* line 654, ../sass/partials/_signup.scss */
+/* line 631, ../sass/partials/_signup.scss */
 .filterTray {
   display: -webkit-box;
   display: -moz-box;
@@ -3242,13 +3417,13 @@ a:link, button {
   margin-top: 0px;
 }
 
-/* line 661, ../sass/partials/_signup.scss */
+/* line 638, ../sass/partials/_signup.scss */
 .trayLabel {
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-/* line 666, ../sass/partials/_signup.scss */
+/* line 643, ../sass/partials/_signup.scss */
 .tagList {
   *zoom: 1;
   margin: 0 -3px;
@@ -3263,14 +3438,14 @@ a:link, button {
   clear: both;
 }
 
-/* line 671, ../sass/partials/_signup.scss */
+/* line 648, ../sass/partials/_signup.scss */
 .tagBubble {
   display: inline-block;
   padding: 3px;
   list-style: none;
 }
 
-/* line 677, ../sass/partials/_signup.scss */
+/* line 654, ../sass/partials/_signup.scss */
 .item_wrapper {
   border: 1px solid #D0D8DB;
   padding: 5px 12px;
@@ -3291,17 +3466,17 @@ a:link, button {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-/* line 690, ../sass/partials/_signup.scss */
+/* line 667, ../sass/partials/_signup.scss */
 .item_wrapper:hover, .item_wrapper:focus {
   box-shadow: 0 0 2px rgba(149, 149, 149, 0.2);
   background-color: rgba(255, 255, 255, 0.9);
 }
-/* line 694, ../sass/partials/_signup.scss */
+/* line 671, ../sass/partials/_signup.scss */
 .item_wrapper:hover .itemDismiss, .item_wrapper:focus .itemDismiss {
   opacity: 1;
 }
 
-/* line 700, ../sass/partials/_signup.scss */
+/* line 677, ../sass/partials/_signup.scss */
 .itemDismiss {
   margin-left: 10px;
   color: #959595;
@@ -3311,130 +3486,7 @@ a:link, button {
   transition: all 0.4s ease;
   cursor: pointer;
 }
-/* line 706, ../sass/partials/_signup.scss */
+/* line 683, ../sass/partials/_signup.scss */
 .no-touch .itemDismiss {
   opacity: 0;
-}
-
-/* Select Boxes */
-/* line 713, ../sass/partials/_signup.scss */
-.select_grid {
-  margin: 0 -5px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* line 719, ../sass/partials/_signup.scss */
-.my_selector {
-  padding: 5px;
-  width: 50%;
-  height: 100px;
-  /* Mobile devices */
-  /* Tablets and phablets */
-}
-@media only screen and (min-width: 480px) {
-  /* line 719, ../sass/partials/_signup.scss */
-  .my_selector {
-    width: calc(100% / 3);
-  }
-}
-@media only screen and (min-width: 800px) {
-  /* line 719, ../sass/partials/_signup.scss */
-  .my_selector {
-    width: calc(100% / 4);
-  }
-}
-/* line 732, ../sass/partials/_signup.scss */
-.my_selector .select_control {
-  visibility: hidden;
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
-/* line 740, ../sass/partials/_signup.scss */
-.control-wrapper {
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-/* line 753, ../sass/partials/_signup.scss */
-.control-wrapper:hover .c_label, .control-wrapper:focus .c_label {
-  color: #D0D8DB;
-}
-/* line 757, ../sass/partials/_signup.scss */
-.control-wrapper:hover .selectIndicator, .control-wrapper:focus .selectIndicator {
-  border-color: #D0D8DB;
-}
-
-/* line 763, ../sass/partials/_signup.scss */
-.itemInfo {
-  position: relative;
-  z-index: 30;
-  width: 100%;
-  text-align: center;
-  padding: 5px 10px;
-}
-
-/* line 771, ../sass/partials/_signup.scss */
-.c_label {
-  font-size: 14px;
-  display: block;
-  color: #FFFFFF;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-}
-/* line 777, ../sass/partials/_signup.scss */
-.active .c_label {
-  color: #D0D8DB;
-}
-
-/* line 782, ../sass/partials/_signup.scss */
-.selectIndicator {
-  display: block;
-  width: 20px;
-  height: 20px;
-  line-height: 16px;
-  border-radius: 50%;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  border: 2px solid #FFFFFF;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-}
-/* line 794, ../sass/partials/_signup.scss */
-.selectIndicator:after {
-  font-family: "fontAwesome";
-  content: "";
-}
-/* line 799, ../sass/partials/_signup.scss */
-.active .selectIndicator {
-  border-color: transparent;
-  background-color: #FFFFFF;
-  color: #006E48;
-  text-align: center;
-}
-/* line 805, ../sass/partials/_signup.scss */
-.active .selectIndicator:after {
-  content: "\f00c";
 }
