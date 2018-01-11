@@ -217,9 +217,8 @@
         
         <!--Wrap site content-->
         <div class="timeline_container">
-            <aside class="nav_timeline ">
-                <div class="content_wrapper">
-                    
+            <aside class="nav_timeline isFixed">
+                <div class="content_wrapper">                    
                     <div class="nav_block info_banner">
                        <nav class="nav-section">
                             <li class="active">
@@ -227,7 +226,7 @@
                                   Desk
                                 </a>
                             </li>
-                            <li class=""><a href="profile_settings.html">Settings</a></li>
+                            <li class=""><a href="user_courses.html">My Courses</a></li>
                             <li class="dropdown ">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                  More <span class="caret"></span>
@@ -237,6 +236,7 @@
                                 <li><a href="user_programs.html">Programs</a></li>
                                 <li><a href="user_events.html">Events</a></li>
                                 <li><a href="user_biz.html">Business Opportunities</a></li>
+                                <li><a href="profile_settings.html">Account Settings</a></li>
                               </ul>
                             </li>
                         </nav>
@@ -248,9 +248,6 @@
                                 <h4 class="infoTitle">Segun D. Araromi</h4>
                                 <h6 class="font_regular color-grey">@innosegz</h6>
                                 <p class="">Head of Marketing at VMLearn Nigeria</p>
-                                <div class="profileInfoAction">
-                                    <button type="button" class="btn btn-rounded  btn-primary">Follow</button>
-                                </div>
                             </div>
                         </div>
                     </div> 
@@ -268,6 +265,11 @@
                             <li class="link_nav">
                                 <a href="user_trainings.html">
                                     <span class="link_title">My Trainings</span>
+                                </a>
+                            </li>
+                            <li class="link_nav">
+                                <a href="user_courses.html">
+                                    <span class="link_title">My Courses</span>
                                 </a>
                             </li>
                             <li class="link_nav">
@@ -299,73 +301,253 @@
                 <div class="box_wrapper bg_default">
                     <div class="main_wrapper">                        
                         <div class="split_layout">
-                            <section class="split_view">
-                               
-                                <!--Main view Area-->                                                                                               
-                                <article class="post_card new_post_widget ">
-                                    <div class="card_wrapper">
-                                        <div class="postMediaBlock">
-                                            <aside class="postAuthor">
-                                                <a href="user_profile.html" class="user_avi avi_sm avi_circle">
-                                                    <img src="img/user_avis/3.jpg" alt="Ikenna David">
+                            <section class="split_view">                               
+                                <div class="content_inner ">
+                                   
+                                    <div class="listGroup">
+                                        <header class="blockHeader ">
+                                            <h3 class="blockLabel font_regular ">My Trainings <span class="infoCount">2</span></h3>
+                                            <a href="user_trainings.html">See All</a>
+                                        </header>
+                                        <div class="default_content hidden">
+                                            <div class="def_wrapper text-center">
+                                                <p class="subtitle">You are not following any training, nor created any.</p>
+                                                <a href="new_training.html" class="btn btn-rounded btn-black">
+                                                    Post a training
                                                 </a>
-                                            </aside>
-                                            <div class="post_input">
-                                                <div class="titleGroup">
-                                                   <h5 class="font_regular">Nkem Onwuka</h5>
-                                                    <h2 class=" title_input color-grey">
-                                                       <a href="new_post.html">Send a message to Segun</a>
-                                                    </h2>
+                                            </div>
+                                        </div>
+                                        <div class="cardList cardTiles">
+                                            <article class="cardItem medium_2 large_3">
+                                                <div class="postCard__wrapper">
+                                                   <div class="programBanner">
+                                                        <div class="postCardImage">
+                                                            <img src="./img/banners/image_placeholder_light.jpg" alt="">
+                                                        </div>
+                                                   </div>
+                                                    <div class="postInfo">
+                                                        <div class="postCardDetails">
+                                                            <h4 class="cardTitle">
+                                                                <a href="about_training.html">Microsoft office certification training</a>
+                                                            </h4>
+                                                            <span class="metaLabel">
+                                                                Category Name
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="cardItem medium_2 large_3">
+                                                <div class="postCard__wrapper">
+                                                    <div class="programBanner">
+                                                        <div class="postCardImage">
+                                                            <img src="./img/banners/cv.png" alt="">
+                                                        </div>
+                                                   </div>
+                                                    <div class="postInfo">
+                                                        <div class="postCardDetails">
+                                                            <h4 class="cardTitle">
+                                                                <a href="about_training.html">How to write professional CVs</a>
+                                                            </h4>
+                                                            <span class="metaLabel">
+                                                                Category Name
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="listGroup">
+                                        <header class="blockHeader ">
+                                            <h3 class="blockLabel font_regular ">My Events<span class="infoCount">1</span></h3>
+                                            <a href="user_events.html">See All</a>
+                                        </header>
+                                        <div class="default_content hidden">
+                                            <div class="def_wrapper text-center">
+                                                <p class="subtitle">You are not following any event, nor created any.</p>
+                                                <a href="new_event.html" class="btn btn-rounded btn-black">
+                                                    Post an Event
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="cardList cardTiles ">
+                                            <article class="cardItem medium_2 eventCard">
+                                                <div class="postCard__wrapper">
+                                                   <div class="programBanner">
+                                                        <div class="postCardImage">
+                                                            <img src="./img/banners/community_bg.png" alt="">
+                                                        </div>
+                                                   </div>
+                                                    <div class="postInfo">
+                                                        <a href="about_event.html" class="eventMeta">
+                                                            <div class="eventDate">
+                                                                <span class="day">21</span>
+                                                                <span class="month">Oct</span>
+                                                            </div>
+                                                            <div class="postCardDetails">
+                                                                <h4 class="eventTitle">2017, SAED Festival</h4>
+                                                                <span class="metaLabel">
+                                                                    Category Name
+                                                                </span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="listGroup">
+                                        <header class="blockHeader ">
+                                            <h3 class="blockLabel font_regular ">My Business Opportunities<span class="infoCount">0</span></h3>
+                                            <a href="user_biz.html">See All</a>
+                                        </header>
+                                        <div class="default_content ">
+                                            <div class="def_wrapper text-center">
+                                                <p class="subtitle">You have not shared a business opportunity, nor following any.</p>
+                                                <a href="new_biz.html" class="btn btn-rounded btn-black">
+                                                    Share an Opportunity
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="cardList cardTiles hidden">
+                                            <article class="cardItem medium_2 biz_card">
+                                            <div class="postCard__wrapper">
+                                                <div class="postInfo">
+                                                    <div class="postCardDetails">
+                                                        <h4 class="cardTitle">
+                                                            <a href="about_opp.html">Organic tea distribution program</a>
+                                                        </h4>
+                                                        <span class="metaLabel">
+                                                            Category Name
+                                                        </span>
+                                                    </div>
+                                                    <div class="buy_panel">
+                                                        <div class="dropdown">
+                                                            <a href="#" class="btn btn-sm btn-grey" data-toggle="dropdown" title="Options">
+                                                                View
+                                                            </a> 
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </article>
                                         </div>
                                     </div>
-                                </article>
-                                
-                                <div class="default_content hidden">
-                                    <div class="def_wrapper">
-                                        <div class="centered">
-                                            <div class="def_img">
-                                                <img src="img/icons/icon_empty.png" alt="Empty">
+                                    
+                                    <div class="listGroup">
+                                        <header class="blockHeader ">
+                                            <h3 class="blockLabel font_regular ">My Programs<span class="infoCount">2</span></h3>
+                                            <a href="user_programs.html">See All</a>
+                                        </header>
+                                        <div class="default_content hidden">
+                                            <div class="def_wrapper text-center">
+                                                <p class="subtitle">You have no program.</p>
+                                                <a href="new_program.html" class="btn btn-rounded btn-black">
+                                                    Create a Program
+                                                </a>
                                             </div>
-                                            <h4 class="title font_regular">The user does not have any post recorded.</h4>
+                                        </div>
+                                        <div class="listContents thumbContent">
+                                             <article class="listThumb large_3 medium_2">
+                                                <a href="training_post.html" class="postCard__wrapper">
+                                                    <div class="postCardInner">
+                                                        <div class="postCardImage">
+                                                            <img src="./img/banners/partners_banner.jpg">
+                                                        </div>
+                                                        <h4 class="title_text">Out of ideas</h4>
+                                                        <span class="metaLabel">
+                                                            Category Name
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                            <article class="listThumb large_3 medium_2">
+                                                <a href="training_post.html" class="postCard__wrapper">
+                                                    <div class="postCardInner">
+                                                        <div class="postCardImage">
+                                                            <img src="./img/banners/portfolio.jpg">
+                                                        </div>
+                                                        <h4 class="title_text">CV Writing Masterclass</h4>
+                                                        <span class="metaLabel">
+                                                            Category Name
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </article>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                <div class="content_inner ">
                                     
                                 </div>
                             </section>
 
                             <aside class="split_nav">
-                                
-                                
-                                <section class="nav_block hidden">
+                              
+                               <article class="nav_block bannerBlock">
                                     <div class="blockWrapper">
-                                       <!--List just 5 items by default, list all when the user clicks show more-->
-                                        <ul class="listContents">
-                                            <li class="listItem">
-                                                <a href="feed_timeline.html">Community name here</a>
+                                        <h4 class="blockLabel">Become a Mentor</h4>
+                                        <p>Fill your mentor profile and get verified to become a verified community mentor on SAEDConnect</p>
+                                        <a href="user_profile.html/mentors" class="btn btn-sm btn-black">Get Started</a>
+                                    </div>
+                                </article>
+                                                               
+                                <article class="nav_block">
+                                    <header class="blockHeader">
+                                        <h4 class="blockLabel font_regular">Communities I Follow</h4>
+                                        <a href="communities.html">See More</a>
+                                    </header>
+                                    <div class="blockWrapper">
+                                        <div class="default_content ">
+                                            <div class="def_wrapper text-center">
+                                                <p class="subtitle">Follow any community of interest to discover growth insights.</p>
+                                                <a href="communities.html" class="btn btn-sm btn-rounded btn-black">
+                                                    Discover Communities
+                                                </a>
+                                            </div>
+                                        </div>
+                                       <ul class="listContents hidden">
+                                            <li class="listItem has_dismiss">
+                                                <div class="tagImage">
+                                                    <img src="./img/banners/media_audio.png" alt="">
+                                                </div>
+                                                <div class="listItemLabel">
+                                                   <a href="community_home.html" class="">
+                                                        <h4 class="userInfoTitle">A very long Community name here</h4>
+                                                        <p class="subtitle color-primary">
+                                                            + 3,743 Followers
+                                                        </p>
+                                                    </a>
+                                                    <div class="itemDismiss" title="Unfollow">
+                                                        <svg class="cust_icon icon_xs" id="icClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                                            <path d="M60.9,3.1L60.9,3.1c-1.5-1.5-4-1.5-5.5,0L32,26.5L8.7,3.1c-1.5-1.5-4-1.5-5.5,0l0,0c-1.5,1.5-1.5,4,0,5.5L26.5,32L3.1,55.3c-1.5,1.5-1.5,4,0,5.5l0,0c1.5,1.5,4,1.5,5.5,0L32,37.5l23.3,23.3c1.5,1.5,4,1.5,5.5,0l0,0c1.5-1.5,1.5-4,0-5.5L37.5,32L60.9,8.7C62.4,7.2,62.4,4.7,60.9,3.1z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
                                             </li>
-                                            <li class="listItem">
-                                                <a href="feed_timeline.html">Community name here</a>
-                                            </li>
-                                            <li class="listItem">
-                                                <a href="feed_timeline.html">Community name here</a>
-                                            </li>
-                                            <li class="listItem">
-                                                <a href="feed_timeline.html">Community name here</a>
-                                            </li>
-                                            <li class="listItem">
-                                                <a href="feed_timeline.html">Community name here</a>
+                                            <li class="listItem has_dismiss">
+                                                <div class="tagImage">
+                                                    <img src="./img/banners/article_image.jpg" alt="">
+                                                </div>
+                                                <div class="listItemLabel">
+                                                   <a href="community_home.html" class="">
+                                                        <h4 class="userInfoTitle">A very long Community name here</h4>
+                                                        <p class="subtitle color-primary">
+                                                            + 3,743 Followers
+                                                        </p>
+                                                    </a>
+                                                    <div class="itemDismiss" title="Unfollow">
+                                                        <svg class="cust_icon icon_xs" id="icClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                                                            <path d="M60.9,3.1L60.9,3.1c-1.5-1.5-4-1.5-5.5,0L32,26.5L8.7,3.1c-1.5-1.5-4-1.5-5.5,0l0,0c-1.5,1.5-1.5,4,0,5.5L26.5,32L3.1,55.3c-1.5,1.5-1.5,4,0,5.5l0,0c1.5,1.5,4,1.5,5.5,0L32,37.5l23.3,23.3c1.5,1.5,4,1.5,5.5,0l0,0c1.5-1.5,1.5-4,0-5.5L37.5,32L60.9,8.7C62.4,7.2,62.4,4.7,60.9,3.1z"/>
+                                                        </svg>
+                                                    </div>
+                                                </div>
                                             </li>
                                         </ul>
-                                        <!--Show all mentor's communities, and toggle the class "collapsed" on the more_link-->
-                                        <a href="#" class="more_link collapsed"><i class="dropIcon"></i></a>
                                     </div>
-                                </section>
-                                
+                                </article>
+                                                                
                                 <article class="widget_box widget_lg add_widget">
                                     <a href="https://wwww.saedconnect.com" class="wrapper">
                                         <img src="./img/banners/join_saedconnect.png" alt="Join SAEDConnect">

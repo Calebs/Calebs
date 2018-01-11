@@ -311,45 +311,62 @@
         <!--Wrap site content-->
         <div class="timeline_container">
            
-            <aside class="nav_timeline">
+            <aside class="nav_timeline ">
                 <div class="content_wrapper">
                     
                     <div class="nav_block info_banner">
-                        <nav class="nav-section">
+                       <nav class="nav-section">
                             <li class="">
                                 <a href="profile_my_activities.html">
-                                  Activities
+                                  Desk
                                 </a>
                             </li>
-                            <li class=""><a href="user_profile.html">Bio</a></li>
-                            <li class="dropdown ">
+                            <li class=""><a href="user_courses.html">My Courses</a></li>
+                            <li class="dropdown active">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                  More <span class="caret"></span>
                               </a>
-                              <ul class="dropdown-menu active dropdown-right">
-                                <li><a href="profile_my_followers.html">Followers</a></li>
-                                <li><a href="profile_following.html">Following</a></li>
-                                <li><a href="saed_partnership.html">SAED Partnership</a></li>
-                                <li><a href="profile_settings.html">Account Settings</a></li>
-                                <li><a href="user_conversations.html">Conversations</a></li>
+                              <ul class="dropdown-menu dropdown-right">
                                 <li><a href="user_trainings.html">Trainings</a></li>
                                 <li><a href="user_programs.html">Programs</a></li>
                                 <li><a href="user_events.html">Events</a></li>
                                 <li><a href="user_biz.html">Business Opportunities</a></li>
+                                <li><a href="profile_settings.html">Account Settings</a></li>
                               </ul>
                             </li>
                         </nav>
                         <div class="profileinfo">
                             <div class="profileInfoimage image_circle">
                                 <img src="./img/user_avis/2.jpg" alt="Segun D. Araromi">
+                                <!--Only accessible to the profile owner-->
+                                <div class="img_uploader">
+                                    <label for="item_image" class="file_upload">
+                                        <input type="file" name="file" id="item_image" class="inputfile hidden" />
+                                        <i class="icon icon-sm upload_img" title="Upload header image"></i>
+                                    </label>
+                                </div>
                             </div>
                             <div class="profileInfoDetails ">
                                 <h4 class="infoTitle">Segun D. Araromi</h4>
                                 <h6 class="font_regular color-grey">@innosegz</h6>
                                 <p class="">Head of Marketing at VMLearn Nigeria</p>
+                                <span class="fieldControl">
+                                    <a href="#" class="btn btn-card btn-sm btn-rounded"><i class="fa fa-edit"></i></a>
+                                </span>
                                 <div class="profileInfoAction">
-                                    <button type="button" class="btn btn-rounded  btn-primary"><i class="fa fa-plus"></i>Follow</button>
-                                    <button type="button" class="btn btn-rounded hidden btn-sm  btn-rounded btn-default"><i class="fa fa-check"></i>Following</button>
+                                    <button type="button" class="btn btn-rounded btn-black">Edit Profile</button>
+                                </div>
+                            </div>
+                            <div class="profileInfoDetails hidden detailEdit">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" value="Segun Araromi">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="2" placeholder="5 times senate president of Nigeria"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-sm btn-secondary btn-rounded">Update</button>
+                                    <button type="button" class="btn btn-sm btn-card btn-rounded">Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -362,64 +379,32 @@
                         <ul class="">
                             <li class="link_nav ">
                                 <a href="my_activities.html">
-                                    <span class="link_title">My Activities</span>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="user_profile.html">
-                                    <span class="link_title">Bio</span>
-                                </a>
-                            </li>
-                            <li class="link_nav ">
-                                <a href="user_messages.html">
-                                    <span class="link_title">Messages</span>
-                                </a>
-                            </li>
-                            <li class="link_nav">
-                                <a href="user_conversations.html">
-                                    <span class="link_title">Conversations</span>
-                                </a>
-                            </li>
-                            <li class="link_nav">
-                                <a href="user_sessions.html">
-                                    <span class="link_title">Sessions</span>
+                                    <span class="link_title">My Desk</span>
                                 </a>
                             </li>
                             <li class="link_nav">
                                 <a href="user_trainings.html">
-                                    <span class="link_title">Trainings</span>
+                                    <span class="link_title">My Trainings</span>
+                                </a>
+                            </li>
+                            <li class="link_nav">
+                                <a href="user_courses.html">
+                                    <span class="link_title">My Courses</span>
                                 </a>
                             </li>
                             <li class="link_nav">
                                 <a href="user_programs.html">
-                                    <span class="link_title">Programs</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="profile_following.html">
-                                    <span class="link_title">Following</span>
-                                    <span class="infoCount">57</span>
-                                </a>
-                            </li>
-                            <li class="link_nav hasCount">
-                                <a href="profile_my_followers.html">
-                                    <span class="link_title">Followers</span>
-                                    <span class="infoCount">247</span>
+                                    <span class="link_title">My Programs</span>
                                 </a>
                             </li>
                             <li class="link_nav">
                                 <a href="user_events.html">
-                                    <span class="link_title">Events</span>
+                                    <span class="link_title">My Events</span>
                                 </a>
                             </li>
                             <li class="link_nav">
                                 <a href="user_biz.html">
-                                    <span class="link_title">Business Opportunities</span>
-                                </a>
-                            </li>
-                            <li class="link_nav">
-                                <a href="saed_partnership.html">
-                                    <span class="link_title">SAED Partnership</span>
+                                    <span class="link_title">My Business Opportunities</span>
                                 </a>
                             </li>
                             <li class="link_nav active">
