@@ -1,0 +1,204 @@
+.mainHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $brand_black;
+    width: 100%;
+    text-align: center;
+    z-index: $header-zindex;
+    @include font-smoothing;
+    height: $header_height_sm;
+
+    +.main_content_wrapper {
+        padding-top: $header_height_sm;
+    }
+
+    @include MQ(M) {
+        height: $header_height;
+        position: absolute;
+        background-color: transparent;
+        
+        +.main_content_wrapper {
+            padding-top: $header_height;
+        }       
+    }
+}
+
+.brand_img {
+    display: block;
+    float: left;
+}
+
+.logo_link {
+    padding: 0;
+    display: block;
+    line-height: $header_height_sm;
+    width: 50px;
+    position: relative;
+    >img {
+        vertical-align: middle;
+    }
+
+    @include MQ(M) {
+        width: 85px;
+        line-height: $header_height;
+    }
+}
+
+.navMenu {
+    vertical-align: middle;
+    line-height: $header_height_sm;
+    @include clearfix;
+    color: rgba($color_white, .75);
+    fill: rgba($color_white, .75);
+
+    &.menu_alt {
+        float: right;
+        margin-right: 50px;
+    }
+    
+    @include MQ(M) {
+        display: inline-block;
+        line-height: $header_height;
+
+        &.menu_alt {
+            margin-right: 0;
+        }
+    }
+}
+
+.menuList-item {
+    display: inline-block;
+    position: relative;
+    
+    .menu__primary & {
+        display: block;
+        
+        @include MQ(M) {
+            display: inline-block;
+        }
+    }
+}
+
+.menu__primary {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    @include transform(scaleY(0));
+    @include transition(all .6s cubic-bezier(.68, .34, .15, 1));
+    transform-origin: top;
+    position: fixed;
+    left: 0;
+    background-color: $brand_black;
+    top: $header_height_sm;
+    font-size: 21px;
+
+    .is-active & {
+        @include transform(scaleY(1));
+        visibility: visible;
+        @include transition(transform .8s cubic-bezier(.68, .34, .15, 1));
+    }
+
+    @include MQ(M) {
+        width: auto;
+        display: inline-block;
+        @include transform(scaleY(1));
+        background-color: transparent;
+        position: static;
+        visibility: visible;
+        border-top: none;
+        font-size: 12px;
+    }
+}
+
+.menu__link_item {
+    display: block;
+    font-family: $header_font;
+    padding: 0 15px;
+    text-transform: uppercase;
+    color: inherit;
+
+    .active &,
+    &:hover,
+    &:focus {
+        color: $brand_accent;
+    }
+}
+
+.nav_trigger {
+    display: inline-block;
+    position: absolute;
+    width: 18px;
+    @include center(y);
+    right: 15px;
+    @include MQ(M) {
+        display: none;
+    }
+}
+
+.menu-text {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.primary-nav-trigger {
+    .menu-icon {
+        /* this span is the central line of the menu icon */
+        display: inline-block;
+        position: absolute;
+        @include center; // mixin inside partials > _mixins.scss
+        width: 18px;
+        height: 2px;
+        background-color: $color_white;
+        @include transition(background-color .3s);
+        /* these are the upper and lower lines in the menu icon */
+        &::before,
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: $color_white;
+            right: 0;
+            @include transition(transform .3s, top .3s, background-color 0s);
+        }
+        &::before {
+            top: -5px;
+        }
+        &::after {
+            top: 5px;
+        }
+        &.is-clicked {
+            background-color: rgba($brand_accent, 0);
+            &::before,
+            &::after {
+                background-color: rgba($brand_accent, 1);
+            }
+            &::before {
+                top: 0;
+                @include transform(rotate(135deg));
+            }
+            &::after {
+                top: 0;
+                @include transform(rotate(225deg));
+            }
+        }
+    }
+    @include MQ(M) {
+        width: 100px;
+        padding-left: 1em;
+        background-color: transparent;
+        height: 30px;
+        line-height: 30px;
+        position: relative;
+        border: none;
+        @include center(y);
+        .menu-text {
+            display: inline-block;
+        }
+        .menu-icon {
+            left: -1em;
+            @include transform(translateX(0) translateY(-50%));
+        }
+    }
+}

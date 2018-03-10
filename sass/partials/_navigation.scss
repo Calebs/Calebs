@@ -1,0 +1,197 @@
+a {
+    text-decoration: none;
+    @include transition(all .4s ease);
+    color: inherit;
+    &:hover,
+    &:focus {
+        color: $brand_accent;
+    }
+    >.fa {
+        padding: 0 4px;
+    }
+    &:focus {
+        outline: thin dotted $brand_accent;
+        .no-touch & {
+            outline: none;
+        }
+    }
+}
+
+a:link,
+button {
+    -webkit-tap-highlight-color: rgba($brand_accent, .6);
+    -moz-tap-highlight-color: rgba($brand_accent, .6);
+}
+
+.btn {
+    outline: none;
+    font-size: 14px;
+    background-color: transparent;
+    color: $color_text;
+    fill: $color_text;
+    padding: 5px 24px;
+    font-family: $header_font;
+    text-transform: uppercase;
+    box-shadow: 0 1px 2px transparent;
+    text-decoration: none !important;
+    @include border-radius(25px);
+    @include transition(all .8s ease-in-out);
+    @include background-image(none);
+    +.btn {
+        margin-left: 1em;
+    }
+    &.btn-primary {
+        background-color: $brand_primary;
+        color: $color_white;
+        fill: $color_white;
+        &:hover,
+        &:focus {
+            background-color: $brand_black;
+        }
+    }
+    &.btn-secondary {
+        background-color: $brand_accent;
+        &:hover,
+        &:focus {
+            background-color: darken($brand_accent, 15);
+        }
+    }
+    &.btn-default {
+        color: $brand_accent;
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: $color_white;
+            color: $brand_black;
+        }
+    }
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+        background-color: $border_grey_light;
+        box-shadow: 0 1px 3px rgba($brand_black, .5);
+    }
+}
+
+.btn-sm.btn,
+.btn-group-sm>.btn {
+    padding: 3.5px 15px;
+    font-size: 12px;
+}
+
+.btn-lg.btn,
+.btn-group-lg>.btn {
+    padding: 10px 36px;
+    font-size: 15px;
+}
+
+.btn-link {
+    padding: 0;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    letter-space: .2em;
+    font-family: $header_font;
+    text-transform: uppercase;
+    color: $brand_primary;
+    fill: $brand_primary;
+
+    .cust_icon {
+        margin: 0 0 0 .3409090909rem;
+        height: 1.3636363636rem;
+        width: 1.3636363636rem;
+        @include transform(translate3d(0, 0, 0));
+        @include transition(transform .8s cubic-bezier(0.755, 0.050, 0.855, 0.060));
+    }
+
+    &:hover,
+    &:focus {
+        color: $border_grey_dark;
+        fill: $border_grey_dark;
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+
+        .cust_icon {
+            @include transform(translate3d(5px, 0, 0));
+        }
+    }
+
+    &:active {
+        background-color: transparent;
+        background-image: none;
+    }
+}
+
+.social_links {
+    clear: both;
+    a {
+        display: inline-block;
+        font-size: 18px;
+        color: $color_white;;
+        +a {
+            margin-left: 15px;
+        }
+        &:hover {
+            fill: $brand_accent;
+        }
+    }
+}
+
+.to-top {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    right: 3.5%;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba($brand_primary, .6) url(../img/top-arrow.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    @include transition (opacity .3s 0s, visibility 0s .3s);
+    z-index: 30000;
+    .no-touch & {
+        &:hover,
+        &:focus {
+            background-color: $brand_primary;
+            opacity: 1;
+        }
+    }
+    &.is-visible,
+    &.fade-out,
+    .no-touch &:hover {
+        @include transition(opacity .3s, visibility 0s);
+    }
+    &.is-visible {
+        /* the button becomes visible */
+        visibility: visible;
+        opacity: 1;
+    }
+    &.fade-out {
+        /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+        opacity: .5;
+    }
+}
+
+.nav-tabs {
+    box-shadow: inset 0 -1px 0 $border_grey;
+    >li {
+        margin-bottom: 0;
+        >a {
+            color: rgba($color_text, .5);
+            &:hover,
+            &:focus {
+                color: rgba($color_text, 1);
+                box-shadow: none;
+            }
+        }
+        &.active>a {
+            color: rgba($color_text, 1);
+            box-shadow: inset 0 -2px 0 $color_text;
+        }
+    }
+}

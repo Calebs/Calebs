@@ -1,0 +1,198 @@
+%hero_background {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: auto;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+    }
+}
+
+.hero_full {
+    height: auto;
+    height: 100vh;
+
+    @include MQ(M) {
+        min-height: 320px;
+        max-height: 1200px;
+    }
+}
+
+.hero_area {
+    @extend %hero_background;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    &::before {
+        background-color: rgba($brand_primary, .9);
+    }
+}
+
+.fixed_hero {
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+    @include MQ(M) {
+        position: fixed;
+        top: 0;
+    }
+}
+
+.main_hero {
+    background-image: url(../img/banners/home_banner.jpg);
+}
+
+.bg_grains {
+    background-image: url(../img/banners/bg_grains.png);
+    background-repeat: repeat-y;
+    // background-size: cover;
+}
+
+.brand_summary {
+    background-repeat: no-repeat;
+    background-position: 115% -100px;
+
+    @include MQ(M) {
+        background-image: url(../img/banners/insign.png);
+    }
+}
+
+.bg_map_contours {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-image: url(../img/banners/maps_bg.jpg);
+}
+
+
+.banner_content {
+    position: relative;
+    overflow: hidden; 
+    padding: 140px 0;   
+}
+
+.banner_bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro_msg {
+    max-width: 680px;
+    padding: 60px 0;
+    line-height: 1.15;
+    font-size: 14px;
+
+    &.intro_centered {
+        margin: auto;
+        text-align: center;
+    }
+
+    @include MQ(S) {
+        text-align: left;
+    }
+    .title {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    @include MQ(M) {
+        padding: 30px 0;
+        font-size: 18px;
+        .title {
+            font-size: 36px;
+        }
+    }
+}
+
+.banner_cto {
+    padding-top: 30px;
+}
+
+.hero_down {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    @include transform(translate3d(-50%, 0, 0));
+    text-decoration: none;
+    z-index: 20;
+    line-height: 1;
+    padding: 1em;
+    fill: $color_white;
+
+    > a {
+        display: inline-block;
+    }
+
+    .cust_icon {
+        height: 20px;
+        width: 20px;
+        -webkit-animation: bounceDelayed 4s 2s infinite linear;
+        animation: bounceDelayed 4s 2s infinite linear;
+    }
+}
+
+.sec_tag {
+    margin-bottom: 10px;
+    clear: both;
+    font-size: 14px;
+    text-transform: uppercase;
+    @include MQ(M) {
+        font-size: 16px;
+    }
+}
+
+.sub_form {
+    @include clearfix;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    max-width: 550px;
+    @include MQ(M) {
+        text-align: left;
+    }
+}
+
+.sub_help {
+    font-size: 14px;
+}
+
+.sub_content {
+    @include flexbox();
+    flex-direction: column;
+    align-items: center;
+    @include MQ(M) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 -10px;
+        align-items: flex-start;
+    }
+}
+
+.sub_input,
+.sub_btn {
+    padding: 0 10px;
+}
+
+.sub_input {
+    width: 100%;
+    @include MQ(S) {
+        min-width: 70%
+    }
+}
+
+.sub_btn {
+    @include MQ(S) {
+        width: 30%
+    }
+}

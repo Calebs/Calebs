@@ -1,0 +1,550 @@
+// antialiasing mode font rendering
+html * {
+    @include font-smoothing;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    @include transition(filter .8s ease-in);
+    @include filter(grayscale(0%));
+}
+
+mark {
+    padding: 0 5px;
+    border-radius: 5px;
+    background-color: lighten($brand_accent, 35);
+}
+
+body {
+    font-family: $body_font;
+    color: $color_text;
+    font-size: 14px;
+    line-height: 1.3;
+    word-spacing: .5px;
+    position: relative;
+    font-weight: 400;
+    background-color: white;
+}
+
+figure {
+    margin: 0;
+}
+
+
+/* Backgrounds */
+
+.bg__default {
+    background-color: $border_grey_light !important;
+}
+
+.bg__white {
+    background-color: $color_white !important;
+}
+
+.bg__primary {
+    background-color: $brand_primary !important;
+}
+
+.bg__secondary {
+    background-color: $brand_accent !important;
+}
+
+.bg__black {
+    background-color: $brand_black !important;
+}
+
+.color__primary {
+    color: $brand_primary !important;
+}
+
+.color__secondary {
+    color: $brand_accent !important;
+}
+
+.color__black {
+    color: $brand_black !important;
+}
+
+.color__grey_light {
+    color: $border_grey_light !important;
+}
+
+.color__grey_dark {
+    color: $border_grey_dark !important;
+}
+
+.color__white {
+    color: $color_white !important;
+}
+
+.color__default {
+    color: $color_text !important;
+}
+
+.font__sm {
+    font-size: 12px !important;
+}
+
+.font__md {
+    font-size: 16px !important;
+}
+
+.font__lg {
+    font-size: 21px !important;
+}
+
+.font__bold {
+    font-family: $header_font !important;
+}
+
+.font__regular {
+    font-family: $body_font !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.caps_upper {
+    text-transform: uppercase !important;
+}
+
+.caps_normal {
+    text-transform: none !important;
+}
+
+.container {
+    width: auto;
+    position: relative;
+    max-width: 1170px;
+
+    &.narrow {
+        max-width: 1000px;
+    }
+}
+
+.inner {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.action_btn {
+    padding-top: 20px;
+    @include clearfix;
+    .btn {
+        min-width: 200px;
+        display: inline-block;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $header_font;
+    margin: 0;
+    color: inherit;
+    letter-spacing: .02em;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.6em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+h6 {
+    font-size: 1.2em;
+}
+
+p {
+    margin: 0;
+    +p {
+        padding-top: .5em;
+    }
+    em,
+    quote {
+        font-style: italic;
+    }
+}
+
+.input-group {
+    z-index: 1;
+    +.input-group {
+        margin-top: 1em;
+    }
+}
+
+.input-group-addon {
+    background: $brand_black;
+    border: none;
+    color: $border_grey;
+    padding: 6px 15px;
+    .checkbox-inline {
+        padding: 0;
+        margin: 0;
+        input[type="checkbox"] {
+            margin-left: 0
+        }
+    }
+}
+
+.bracket_enclosure {
+    &::before, &::after {
+        padding: 0 2px;
+    }
+
+    &::before {
+        content: "(";
+    }
+
+    &::after {
+        content: ")";
+    }
+}
+
+.input-group-btn {
+    font-size: 1em;
+    .btn {
+        vertical-align: top;
+        padding: 6px 15px;
+    }
+}
+
+.centered {
+    float: none;
+    margin: 0 auto;
+    display: table;
+    text-align: center;
+}
+
+.form-horizontal {
+    @include clearfix;
+    margin-bottom: 1em;
+    clear: both;
+    >.form_title {
+        margin-bottom: 10px;
+    }
+}
+
+.slim_form {
+    max-width: 500px;
+    &.form_Centered {
+        margin: auto;
+    }
+}
+
+.form-group {
+    &[class*="col-"] {
+        .control-label {
+            margin-bottom: 10px;
+        }
+        @include MQ(S) {
+            margin: 0;
+            &:first-of-type {
+                padding-right: 7.5px;
+                padding-left: 0;
+            }
+            &:last-of-type {
+                padding-left: 7.5px;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+textarea,
+textarea.form-control,
+input.form-control,
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+[type=text].form-control,
+select.form-control,
+[type=password].form-control,
+[type=email].form-control,
+[type=tel].form-control,
+[contenteditable].form-control {
+    border: 1px solid $border_grey;
+    border-radius: 4px;
+    padding: 6px 10px;
+    line-height: normal;
+    color: inherit;
+    font-size: 14px;
+    margin: 0;
+    outline: 0;
+    overflow: hidden;
+    text-indent: .01px;
+    background: white;
+    @include appearance(none);
+    box-shadow: none;
+    resize: none;
+    &.control_dark {
+        border: none;
+        color: $border_grey_light;
+        background-color: darken($brand_black, 15);
+    }
+    &.field_rounded {
+        border-radius: 25px;
+        padding: 15px 20px;
+    }
+    &:focus {
+        outline: 0;
+        border-color: $brand_primary;
+        box-shadow: none;
+    }
+}
+
+select.form-control {
+    background: white url(../img/icons/arrow-down.png) right center no-repeat;
+    &:focus {
+        outline: none;
+        background: white url(../img/arrow-down.png) right center no-repeat;
+    }
+}
+
+address,
+address span {
+    display: block;
+}
+
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+    vertical-align: middle;
+    margin-top: 0;
+}
+
+input[type="checkbox"]:checked,
+.checkbox input[type="checkbox"]:checked,
+.checkbox-inline input[type="checkbox"]:checked {
+    &::after {
+        background-color: $brand_accent;
+        border-color: darken($brand_accent, 5);
+    }
+}
+
+input[type="radio"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+    &::before {
+        background: $brand_accent;
+    }
+    &:checked:after {
+        border-color: $brand_accent;
+    }
+}
+
+.control-label {
+    text-transform: none;
+    font-size: 1em;
+    padding-top: 0;
+    color: $brand_black;
+    &[class*="col-"] {
+        padding: 0;
+        text-align: right;
+    }
+}
+
+.label {
+    color: inherit;
+    padding: 0;
+    font-weight: normal;
+    white-space: initial;
+    line-height: normal
+}
+
+.required {
+    &::before {
+        content: "*";
+        font-size: 1.025em;
+        padding-left: 3px;
+        color: adjust-hue($brand_accent, 5);
+    }
+}
+
+input[disabled] {
+    background-color: $color_grey_dark;
+}
+
+.radio-inline,
+.checkbox-inline {
+    padding: 10px 0 5px;
+}
+
+label {
+    font-weight: normal;
+    &.radio-inline {
+        +label {
+            margin-left: 15px;
+        }
+    }
+    &.checkbox-inline {
+        margin: 5px 0;
+        margin-bottom: 0 !important;
+        font-size: 14px;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+.help-block {
+    font-size: 12px;
+    color: $border_grey_dark;
+}
+
+.close_dialog {
+    z-index: 5;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    @include image_replacement;
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        background: $border_grey_dark;
+        height: 14px;
+        top: 50%;
+        left: 50%;
+        margin: -7px 0 0 -1px;
+    }
+    &::before {
+        @include transform(rotate(-45deg));
+    }
+    &::after {
+        @include transform(rotate(45deg));
+    }
+    &:hover,
+    &:focus {
+        background-color: rgba($border_grey_dark, .2);
+        &::before,
+        &::after {
+            background-color: $brand_black;
+        }
+    }
+}
+
+.loadmore {
+    position: relative;
+    display: block;
+    clear: both;
+    margin-top: 30px;
+    padding-top: 40px;
+}
+
+.spinner {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    @include center(x);
+    bottom: 0;
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    border: 3px solid $brand_primary;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    @include animation(rotate .6s infinite cubic-bezier(0.3, 0.82, 0.86, 0.25));
+    .loading & {
+        display: block;
+    }
+}
+
+.feedback_sig {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: $brand_primary;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    .navMenu & {
+        position: relative;
+        top: -10px;
+        right: 0;
+    }
+    .has_feedback & {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.default_content {
+    position: relative;
+    max-width: 450px;
+    min-height: 100px;
+    margin: 30px auto;
+    .def_wrapper {
+        padding: 50px 0;
+        display: block;
+    }
+    .subtitle {
+        margin-bottom: 10px;
+        clear: both;
+    }
+    .def_img {
+        width: 90px;
+        margin: 20px auto;
+    }
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 11px;
+    line-height: 1;
+    color: $color_white;
+    cursor: pointer;
+    opacity: .95;
+    &.badge-default {
+        background-color: $color_white;
+        color: $brand_black;
+    }
+    &.badge-primary {
+        background-color: $brand_primary;
+    }
+    &.badge-secondary {
+        background-color: $brand_accent;
+        color: $color_text;
+    }
+    &.badge-black {
+        background-color: $brand_black;
+    }
+}
