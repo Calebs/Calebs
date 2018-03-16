@@ -93,7 +93,7 @@ jQuery(document).ready(function($){
 
     var subNav = $(".sticky_nav"),
         navScrolled = "fix__top",
-        scroll_offset_top = $(".slide_item").height();
+        scroll_offset_top = 500; //$(".slide_item").height()
 
       $(window).scroll(function() {
          if($(this).scrollTop() > scroll_offset_top) {
