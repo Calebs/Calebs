@@ -23,6 +23,9 @@ jQuery(document).ready(function($) {
         }, scroll_top_duration);
     });
 
+    $('[data-toggle="tooltip"]').tooltip({
+    });
+
     // Smooth scroll down
     $('.hero_down > a').click(function() {
         if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -38,6 +41,21 @@ jQuery(document).ready(function($) {
         }
     });
 
+    var tip_trigger = $('.info_trigger'),
+        info_container = $('.has_details');
+    
+    tip_trigger.on('click', function(e) {
+        e.preventDefault();
+        event.stopPropagation();
+        $(this).parents('.has_details').toggleClass("info_open");
+    });
+    
+    $(document).on('click', function() {
+        if(info_container.hasClass('info_open')) {
+           info_container.removeClass('info_open'); 
+        }
+    });
+
     /* General Navigation*/
 
     //open/close primary navigation
@@ -49,7 +67,7 @@ jQuery(document).ready(function($) {
     });
 
     //open search widget
-    $('.btn_search_trigger').on('click', function() {
+    $('.btn_search_trigger > a').on('click', function() {
         event.stopPropagation();
         $('.navbar_search_form').addClass('has_value');
         $('.main_header').addClass('show_search');
@@ -63,7 +81,7 @@ jQuery(document).ready(function($) {
     });
 
     $('.form-control').on('input', function() {
-        var $input_field = $(this).closest('.form-group');
+        var $input_field = $(this).closest('.funky_form');
         if (this.value) {
             $input_field.addClass('not_empty');
         } else {
@@ -78,6 +96,20 @@ jQuery(document).ready(function($) {
             parent_container.addClass('has_value');
         } else if (!($('.main_header').hasClass('show_search'))) {
             parent_container.removeClass('has_value');
+        }
+    });
+
+     /*Custom Selector*/
+    var selector_input = $(".cst_selector"),
+        target_container = $('.cst_select_list');
+        
+
+    selector_input.on('click', function() {
+        if ($(this).attr("checked"), true) {
+            $(this).parents(".select_radio").find(".select_item").removeClass('selected');
+            $(this).parents(".select_item").addClass("selected");
+        } else {
+            $(this).parents(".select_item").removeClass('selected');
         }
     });
 
