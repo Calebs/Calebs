@@ -37,30 +37,55 @@ jQuery(document).ready(function($) {
 	close_btn.on('click', function() {
 	  mother_container.removeClass("open");
 	});
+    
+    // Main nav fix state transition 
+    
+    var MQL = 992;
+    
+    if($(window).width() > MQL) {
+      var headerHeight = $('.main_header').height();
+      $(window).on('scroll',
+      {
+            previousTop: 0
+        }, 
+        function () {
+          var currentTop = $(window).scrollTop();
+          //check if user is scrolling up
+          if (currentTop < this.previousTop ) {
+            //if scrolling up...
+            if (currentTop > 0 && $('.main_header').hasClass('nav_stuck')) {
+              $('.main_header').removeClass('menu_collapsed');
+            } else {
+              $('.nav_header').addClass('menu_collapsed');
+            }
+          } else {
+            //if scrolling down...
+            $('.main_header').addClass('menu_collapsed');
+            if( currentTop > headerHeight && !$('.main_header').hasClass('nav_stuck')) $('.main_header').addClass('nav_stuck menu_collapsed');
+          }
+          this.previousTop = currentTop;
+      });
+    }
 
-
-	var toggle_box = $("#emailsubscribe");
-    var form_box = $(".sub_form");
-
-    toggle_box.on("focus", function(event) {
-    	event.preventDefault();
-        form_box.addClass('is_visible');
+     //open/close primary navigation
+    $('.primary-nav-trigger').on('click', function() {
+        event.stopPropagation();
+        $('.menu-icon').toggleClass('is-clicked');
+        $('body').toggleClass('overflow_hidden');
+        $('.main_header').toggleClass('is-active');
+    });    
+    
+     //open search widget
+    $('.btn_search_trigger > a').on('click', function() {
+        event.stopPropagation();
+        $('.navbar_search_form').addClass('has_value');
+        $('.main_header').addClass('show_search');
     });
     
-    /* responsive navigation*/
-    
-    var menu_wrap = $('.main_menu'),
-        filter_trigger = $('.menu-trigger'),
-        close_button = $('.nav_close')
-    
-    filter_trigger.on('click', function() {
-        setTimeout( function() {
-            menu_wrap.addClass("is_opened");
-        }, 25 );
+    $('.navbar_search_reset').on('click', function() {
+        event.stopPropagation();
+        if($('.main_header').hasClass('show_search')) {
+            $('.main_header').removeClass('show_search');
+        }
     });
-    
-    close_button.on('click', function() {
-        menu_wrap.removeClass("is_opened");
-    }); 
-        	
 });
