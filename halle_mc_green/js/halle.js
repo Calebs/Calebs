@@ -31,11 +31,15 @@ jQuery(document).ready(function($) {
 	    "hide.bs.dropdown":  function() { return this.closable; }
 	});
 
-	var close_btn = $(".dropdown.implicit_close .abort");
-	var mother_container = $(".dropdown.implicit_close");
+	var close_btn = $(".implicit_close > .abort"),
+        mother_container = $(".implicit_close"),
+        dropdown_container = $(".implicit_close > .dropdown-menu");
 
 	close_btn.on('click', function() {
-	  mother_container.removeClass("open");
+        if(mother_container.hasClass("show")){
+            mother_container.removeClass("show");
+            dropdown_container.removeClass("show");
+        }
 	});
     
     // Main nav fix state transition 
