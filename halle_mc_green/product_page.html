@@ -19,6 +19,56 @@
 </head>
 
 <body class="has_promo">
+
+    <div class="modal fade" id="custom_size">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Add your measurement</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        <span class="modal_close"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="content-panel">
+                        <form action="">
+                           <div class="form-group">
+                                <label class="control-label sr-only">Shoulder</label>
+                                <input type="number" class="form-control" placeholder="Shoulder">
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="form-group col-sm-6">
+                                    <label class="control-label sr-only">Bust Circumference</label>
+                                    <input type="number" class="form-control" placeholder="Bust Circumference">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label class="control-label sr-only">Arm Circumference</label>
+                                    <input type="number" class="form-control" placeholder="Arm Circumference">
+                                </div>
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="form-group col-sm-6">
+                                    <label class="control-label sr-only">Waist Circumference</label>
+                                    <input type="number" class="form-control" placeholder="Waist Circumference">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label class="control-label sr-only">Hip Circumference</label>
+                                    <input type="number" class="form-control" placeholder="Hip Circumference">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label sr-only">Waist to Knee Length</label>
+                                <input type="number" class="form-control" placeholder="Waist to Knee Length">
+                            </div>
+                        </form>             
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" value="Submit" class="btn btn-secondary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 	
 	<section class="promo_message_container">
         <div class="promo_banner">
@@ -454,8 +504,8 @@
                                 </div>
                                 <div class="info_row margin_bottom_xxs">
                                     <span class="size_label font_md body_copy_sm">Size</span>
-                                    <a href="sizeguide.html" class="btn-link body_copy_sm font_md">
-                                        Size Chart
+                                    <a href="#custom_size" data-toggle="modal" class="btn-link body_copy_sm font_md">
+                                        Add Custom Size
                                     </a>
                                 </div>
                                 <div class="product_attr prod_size">
@@ -468,6 +518,12 @@
                                         <option value="8">12 / US 8</option>		
                                         <option value="10">14 /US 10</option>
                                     </select>
+                                </div>
+                                <div class="info_row margin_top_xxs">
+                                    <span class="size_label font_md body_copy_sm"></span>
+                                    <a href="sizeguide.html" class="btn-link body_copy_sm font_md">
+                                        Size Chart
+                                    </a>
                                 </div>
                                 <div class="availability">
                                     <!--Show the stock status of the selected size here.-->
