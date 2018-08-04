@@ -304,7 +304,9 @@
 	<main class="halle_content">
 		<section class="section-block my_cart">
             <div class="container clearfix">
-                <h1 class="section_title text-center">Shopping Bag</h1>
+                <header class="product_list_header text-center">
+                    <h1 class="section_title">Shopping Bag</h1>
+                </header>
 
                 <div class="cart_holder">
                     <article class="cart-column-left">
@@ -523,7 +525,7 @@
                                         <span class="value">$695.00</span>
                                     </div>
                                 </div>
-                                <div class="promo_message">
+                                <div class="font_md margin_top_xs">
                                     <p>Free shipping <span>on this order</span></p>
                                 </div>
                             </div>
@@ -536,109 +538,162 @@
                         </div>
                     </aside>
                 </div>
-                
             </div>
 		</section>
 
-		<section class="section-block product_recommendation">
-			<div class="container">
-				<div class="our_recommendation">
-					<h3 class="pdp_content_header">
-						You May also Like
+		<section class="section-block">
+			<div class="container-fluid">
+				<header class="product_list_header text-center">
+					<h3 class="title title_lg">
+						You may also Like
 					</h3>
-					<div id="recommendations" class="itemcarousel">
-						<ul class="">
-							<li>
-								<div class="sug_item">
-									<div class="thumbnail">
-										<a href="product_page.html" title="TEXTURED BURLAP JACKET">
-											<img src="img/products/sug1.jpg" alt="Halle McGreen TEXTURED BURLAP JACKET  ">
-										</a>
-									</div>
-									<div class="quick_view_btn">
-										<a href="product_page.html" title="TEXTURED BURLAP JACKET">
-											Quickshop
-										</a>
-									</div>
-									<div class="name">
-										<a href="product_page.html" title="TEXTURED BURLAP JACKET">
-											Textured Burlap Jacket
-										</a>
-									</div>
-									<div class="item_price">
-										<span class="salesprice">£445.00</span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="sug_item">
-									<div class="thumbnail">
-										<a href="product_page.html" title="FISHNET PENCIL SKIRT">
-											<img src="img/products/sug2.jpg" alt="Halle McGreen FISHNET PENCIL SKIRT">
-										</a>
-									</div>
-									<div class="quick_view_btn">
-										<a href="product_page.html" title="FISHNET PENCIL SKIRT">
-											Quickshop
-										</a>
-									</div>
-									<div class="name">
-										<a href="product_page.html" title="FISHNET PENCIL SKIRT">
-											FISHNET PENCIL SKIRT
-										</a>
-									</div>
-									<div class="item_price">
-										<span class="salesprice">£295.00</span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="sug_item">
-									<div class="thumbnail">
-										<a href="product_page.html" title="SIMONE CARDIGAN">
-											<img src="img/products/sug3.jpg" alt="Halle McGreen SIMONE CARDIGAN">
-										</a>
-									</div>
-									<div class="quick_view_btn">
-										<a href="product_page.html" title="SIMONE CARDIGAN">
-											Quickshop
-										</a>
-									</div>
-									<div class="name">
-										<a href="product_page.html" title="SIMONE CARDIGAN">
-											SIMONE CARDIGAN
-										</a>
-									</div>
-									<div class="item_price">
-										<span class="salesprice">£205.00</span>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="sug_item">
-									<div class="thumbnail">
-										<a href="product_page.html" title="PIECED-GUIPURE CARDIGAN">
-											<img src="img/products/sug4.jpg" alt="Halle McGreen PIECED-GUIPURE CARDIGAN">
-										</a>
-									</div>
-									<div class="quick_view_btn">
-										<a href="product_page.html" title="PIECED-GUIPURE CARDIGAN">
-											Quickshop
-										</a>
-									</div>
-									<div class="name">
-										<a href="product_page.html" title="PIECED-GUIPURE CARDIGAN">
-											PIECED-GUIPURE CARDIGAN
-										</a>
-									</div>
-									<div class="item_price">
-										<span class="salesprice">£355.00</span>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
+                </header>
+                <div class="store_item_listing justify-content-center">
+                    <article class="col-lg-3 col-md-4 col-6 item_tile">
+                        <div class="item_tile_inner">
+                            <div class="item_tile_thumb">
+                                <!--Add the class "item_liked" when user adds the item to wishlist-->
+                                <div class="item_control_btn tile_wishlist_btn">
+                                    <button class="wishlist_btn">
+                                        <span class="utility_icon">
+                                            <i class="cust_icon icon_wish"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="item_image">
+                                    <a href="product_page.html" title="Caftan">
+                                        <img src="img/product_samples/caftan.jpg" alt="Caftan">
+                                    </a>
+                                </div>
+                                <div class="item_control_btn tile_quickshop_btn ">
+                                    <a href="#quick_view" class="btn btn-block btn-neutral" title="Brigitte Shirt">
+                                        Quickshop
+                                    </a>
+                                </div>
+                                <!--Insert the quickview panel here, using the quickview template-->
+                            </div>
+                            <div class="item_tile_info">
+                                <h2 class="item_name title title_xs">
+                                    <a href="product_page.html" title="Caftan">
+                                        Caftan
+                                    </a>
+                                </h2>
+                                <div class="item_price pricing">
+                                    <span>#7,500</span>
+                                </div>
+                                <div class="item_tile_colors margin_top_xxs">
+                                    <!--Insert color variantions here using the following template-->
+                                    <ul class="swatch_list">
+                                        <li class="color_swatch swatch_sm selected">
+                                            <div class="swatch_d_name">Halle Pink</div>
+                                           <a href="#" title="Patterned Pink">
+                                               <img src="./img/color_pattern_1.jpg" alt="Patterned Pink" class="swatch_img">
+                                           </a>
+                                        </li>
+                                        <li class="color_swatch swatch_sm">
+                                           <a href="#" title="Patterned grey">
+                                               <img src="./img/color_pattern_2.jpg" alt="Patterned grey" class="swatch_img">
+                                           </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- show only if item is out of stock -->
+                                <div class="item_message support_copy margin_top_xs">
+                                    <!--Insert any special message or status here-->
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                                
+                    <article class="col-lg-3 col-md-4 col-6 item_tile">
+                    <div class="item_tile_inner">
+                        <div class="item_tile_thumb">
+                           <!--Add the class "item_liked" when user adds the item to wishlist-->
+                            <div class="item_control_btn tile_wishlist_btn">
+                                <button class="wishlist_btn">
+                                    <span class="utility_icon">
+                                        <i class="cust_icon icon_wish"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="item_image">
+                                <a href="product_page.html" title="Folly Dress">
+                                    <img src="img/product_samples/folly_dress.jpg" alt="Folly Dress">
+                                </a>
+                            </div>
+                            <div class="item_control_btn tile_quickshop_btn ">
+                                <a href="#quick_view" class="btn btn-block btn-neutral" title="Folly Dress">
+                                    Quickshop
+                                </a>
+                            </div>
+                            <!--Insert the quickview panel here, using the quickview template-->
+                        </div>
+                        <div class="item_tile_info">
+                            <h2 class="item_name title title_xs">
+                                <a href="product_page.html" title="Folly Dress">
+                                    Folly Dress
+                                </a>
+                            </h2>
+                            <div class="item_price pricing">
+                                <span>#5,000</span>
+                            </div>
+                            <div class="item_tile_colors margin_top_xxs">
+                                <!--Insert color variantions here using the following template-->
+                            </div>
+                            <!-- show only if item is out of stock -->
+                            <div class="item_message support_copy margin_top_xs">
+                                <!--Insert any special message or status here-->
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </article>                        
+                    <article class="col-lg-3 col-md-4 col-6 item_tile">
+                    <div class="item_tile_inner">
+                        <div class="item_tile_thumb">
+                           <!--Add the class "item_liked" when user adds the item to wishlist-->
+                            <div class="item_control_btn tile_wishlist_btn item_liked">
+                                <button class="wishlist_btn">
+                                    <span class="utility_icon">
+                                        <i class="cust_icon icon_wish"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="item_image">
+                                <a href="product_page.html" title="Gabriella Dress">
+                                    <img src="img/product_samples/gabriella_dress.jpg" alt="Gabriella Dress">
+                                </a>
+                            </div>
+                            <div class="item_control_btn tile_quickshop_btn ">
+                                <a href="#quick_view" class="btn btn-block btn-neutral" title="Gabriella Dress">
+                                    Quickshop
+                                </a>
+                            </div>
+                            <!--Insert the quickview panel here, using the quickview template-->
+                        </div>
+                        <div class="item_tile_info">
+                            <h2 class="item_name title title_xs">
+                                <a href="product_page.html" title="Gabriella Dress">
+                                    Gabriella Dress
+                                </a>
+                            </h2>
+                            <div class="item_price pricing">
+                                <span class="standardprice">#14,000</span>
+                                <span class="salesprice">#8,500</span>
+                            </div>
+                            <div class="item_tile_colors margin_top_xxs">
+                                <!--Insert color variantions here using the following template-->
+                            </div>
+                            <!-- show only if item is out of stock -->
+                            <div class="item_message support_copy margin_top_xs">
+                                <!--Insert any special message or status here-->
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                </div>
 			</div>
 		</section>
 	</main>
