@@ -19,7 +19,6 @@
 
 <body>
 
-    <!-- is-active -->
     <header role="banner" class="main_header">
         <div class="navbar_container">
             <div class="navbar_group navbar_group_left">
@@ -33,7 +32,7 @@
             </div>
             <div class="navbar_group navbar_group_center">
                 <form class="navbar_search_form">
-                    <input class="navbar_search_input" type="search" placeholder="Find vendors and services">
+                    <input class="navbar_search_input" type="search" placeholder="Find vendor by name or services">
                     <ul class="searchbar_autocomplete">
                     </ul>
                     <button class="navbar_search_btn navbar_search_submit" type="submit">
@@ -54,23 +53,49 @@
                 <nav class="primary_nav_menu">
                     <ul class="primary_nav">
                         <li class="nav_item">
-                            <a href="merchant_home.html" class="nav_link_item font-bold link_highlight">Become a Vendor</a>
+                            <a href="all_services.html" class="nav_link_item">Local Vendors</a>
+                            <!--Toggle "nav_visible" to show list-->
+                            <div class="sub_bav_block">
+                                <div class="nav_block_wrapper">
+                                   <ul class="nav_item_list">
+                                       <li class="nav_item"><a href="service_listings.html">Caterers</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Disk Jockey</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Rentals</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Logistics</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Photographer / Videographer</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Musical Band</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Makeup / Makeover</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Security</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Ushering & Hospitality</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Cakes & Confectionaries</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Drinks & Cocktails</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Fashion Designer</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Event Compere</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Venue Management</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Decoration</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Multimedia</a></li>
+                                   </ul>
+                                    <a href="all_services.html" class="nav_block_cta">
+                                        See all Vendors
+                                    </a>
+                                </div>
+                            </div>
                         </li>
                         <li class="nav_item">
-                            <a href="#" class="nav_link_item btn btn-sm btn-inverse">New Event</a>
+                            <a href="merchant_home.html" class="nav_link_item">Become a Vendor</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="navbar_consts">
                    <div class="control_btns btn_search_trigger">
-                        <a href="#" class="">
+                        <a href="#">
                             <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
                                 <path class="cls-1" d="M58.53,51.44l-13-13c-.07-.07-.15-.12-.22-.18a24.68,24.68,0,1,0-7.05,7c.06.07.11.15.18.22l13,13a5,5,0,1,0,7.09-7.09ZM24.67,40.78A16.12,16.12,0,1,1,40.78,24.67,16.12,16.12,0,0,1,24.67,40.78Z"/>
                             </svg>
                         </a>
                    </div>
-                   <div class="control_btns has_message btn_user_messages">
-                        <a href="#" class="">
+                   <div class="control_btns btn_user_messages">
+                        <a href="#">
                             <span class="msg_notification"></span>
                             <span class="icon_holder">
                                 <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11.56">
@@ -99,7 +124,7 @@
                                     </figure>
                                     <div class="media_info">
                                         <h4 class="media_title color-primary">David Olaniyi</h4>
-                                        <a href="user_profile.html" class="btn-link">View Profile</a>
+                                        <a href="vendor_profile.html" class="btn-link">View Profile</a>
                                     </div>
                                 </div>
                             </header>
@@ -145,76 +170,62 @@
     </header>
 
     <main class="main_content_area bg-off-white">
-       
-        <section class="user_banner_area">
-            <div class="container ct_slim">
-                <div class="banner_content">
-                    <div class="media_item user_media_lg">
-                        <figure class="media_figure">
+       <section class="user_banner_area" style="background-image: url(./img/banners/merchant_hold.jpg);">
+            <div class="container">
+                <div class="merchant_profile_details">
+                    <div class="pr_info_block">
+                        <figure class="merchant_logo">
                             <div class="user_avatar">
-                                <img src="./img/test_dp.png" alt="David Olaniyi">
+                                <img src="./img/icons/user_default.png" alt="David Olaniyi">
                             </div>
                         </figure>
-                        <div class="media_info">
-                            <div class="prof_header">
-                                <h4 class="prof_title d-inline-block color-primary">David Olaniyi</h4>
-                                <span class="vend_status" title="Verified Vendor" data-toggle="tooltip">
-                                    <i class="cust_icon user_verified"></i>
-                                </span>
-                            </div>
-                            <div class="prof_details">
-                                <div class="dsp_tab_row">
-                                    <span class="icon_holder color-grey-light">
-                                        <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.94 20">
-                                            <path d="M7,0A7,7,0,0,0,0,7c0,3.65,5.52,12,5.75,12.32A1.47,1.47,0,0,0,7,20a1.47,1.47,0,0,0,1.21-.7c.24-.35,5.76-8.68,5.76-12.33A7,7,0,0,0,7,0ZM7,11.27A4.3,4.3,0,1,1,11.27,7,4.3,4.3,0,0,1,7,11.27Z"/>
-                                        </svg>
-                                    </span>
-                                    <span>Lagos, Nigeria</span>
-                                </div>
-                                <div class="user_performance_widget">
-                                    <div class="media_item vn_rating">
-                                        <div class="media_figure ">
-                                            <div class="rating_avg">
-                                                <span class="value">
-                                                    4.5
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="media_info">
-                                            <p class="rating_remarks dsp_tab_row font-bold">
-                                                <span class="">Very Good</span>
-                                                <span class="rating_sample_space">15</span>
-                                            </p>
-                                            <div class="rating_ind">
-                                                <div class="rateit" data-rateit-value="4.5" data-rateit-ispreset="true" 
-                                            data-rateit-readonly="true"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="prof_header">
+                            <h4 class="prof_title d-inline-block ">David Olaniyi</h4>
+                            <span class="vend_status" title="Verified Vendor" data-toggle="tooltip">
+                                <i class="cust_icon user_verified"></i>
+                            </span>
+                        </div>
+                        <div class="info_meta meta_loc">
+                            <span class="meta_icon color-grey-light">
+                                <svg class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.94 20">
+                                    <path d="M7,0A7,7,0,0,0,0,7c0,3.65,5.52,12,5.75,12.32A1.47,1.47,0,0,0,7,20a1.47,1.47,0,0,0,1.21-.7c.24-.35,5.76-8.68,5.76-12.33A7,7,0,0,0,7,0ZM7,11.27A4.3,4.3,0,1,1,11.27,7,4.3,4.3,0,0,1,7,11.27Z"/>
+                                </svg>
+                            </span>
+                            <span class="meta_value">Lagos, Nigeria</span>
+                        </div>
+                        <div class="info_meta meta_date">
+                            <p class="meta_label">Joined <strong>2 Months ago</strong></p>
                         </div>
                     </div>
+                    <div class="pr_info_block">
+                        <a href="#update_bio" data-toggle="modal" class="btn btn-sm btn-secondary">
+                            Update Profile
+                        </a>
+                    </div>
                 </div>
-                <nav class="user_context_nav">
-                    <ul class="nav nav-tabs">
-                        <li><a href="user_profile.html">Overview</a></li>
-                        <li><a href="user_events.html">Events</a></li>
-                        <li class="active"><a href="vendor_services.html">Services</a></li>
-                    </ul>
-                </nav>
             </div>
+            <nav class="user_context_nav">
+                <div class="container">
+                    <div class="merchant_content_area">
+                        <ul class="nav nav-tabs">
+                            <li><a href="vendor_profile.html">Overview</a></li>
+                            <li><a href="user_events.html">Events</a></li>
+                            <li class="active"><a href="vendor_services.html">Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </section>
         <section class="section_block">
-            <div class="container ct_slim">
-                <div class="content_wrapper">
+            <div class="container">
+                <div class="content_wrapper merchant_content_area">
                     <header class="user_infoHeader">
                         <h3 class="pane_title text-caps color-primary">My Services</h3>
                         <div class="header_cto">
                             <a href="new_service_1.html" class="btn btn-sm btn-inverse">New Service</a>
                         </div>
                     </header>
-                    <div class="empty_state ">
+                    <div class="empty_state d-none">
                         <div class="def_wrapper text-center">
                             <h4 class="title font-bold color-primary">No Service found</h4>
                             <p class="">You have no listed services. Start by creating a service, and submiting it for verification.</p>
@@ -224,18 +235,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="content_inner d-none">
-                        <div class="prd_card_list prd_services">
-                            <article class="prd_card small_full medium_1_2 large_1_3">
+                    <div class="content_inner">
+                        <div class="prd_card_list row">
+                            <article class="prd_card col-sm-6 col-md-4">
                                 <div class="prd_card_wrapper bg-white">
                                     <header class="prd_card_hd">
                                         <div class="prd_card_meta meta_type">
                                             <span class="prd_program_type" title="Catering">
                                                 Catering
                                             </span>
-                                        </div>
-                                        <div class="prd_status hidden">
-                                            <span class="st_tag st_tag_off">Unverified</span>
                                         </div>
                                     </header>
                                     <a href="mng_service.html" class="prd_card_banner">
@@ -262,16 +270,13 @@
                                     </div>
                                 </div>
                             </article>
-                            <article class="prd_card small_full medium_1_2 large_1_3">
+                            <article class="prd_card col-sm-6 col-md-4">
                                 <div class="prd_card_wrapper bg-white">
                                     <header class="prd_card_hd">
                                         <div class="prd_card_meta meta_type">
                                             <span class="prd_program_type" title="Videography">
                                                 Videography
                                             </span>
-                                        </div>
-                                        <div class="prd_status hidden">
-                                            <span class="st_tag st_tag_off">Unverified</span>
                                         </div>
                                     </header>
                                     <a href="mng_service.html" class="prd_card_banner">
@@ -281,7 +286,7 @@
                                     </a>
                                     <div class="prd_card_bd">
                                         <h4 class="prd_title">
-                                            <a title="Animum Videography" href="mng_service.html">Animum Videography</a>
+                                            <a title="Animum Videography" href="mng_service.html">Anniversary Videography</a>
                                         </h4>
                                         <div class="prd_support_info">
                                             <div class="rating_ind">
@@ -298,15 +303,12 @@
                                     </div>
                                 </div>
                             </article>
-                            <article class="prd_card small_full medium_1_2 large_1_3">
+                            <article class="prd_card col-sm-6 col-md-4">
                                 <div class="prd_card_wrapper bg-white">
                                     <header class="prd_card_hd">
                                         <div class="prd_card_meta meta_type">
                                             <span class="prd_program_type" title="Cakes & Confectionaries">Cakes & Confectionaries
                                             </span>
-                                        </div>
-                                        <div class="prd_status hidden">
-                                            <span class="st_tag st_tag_off">Unverified</span>
                                         </div>
                                     </header>
                                     <a href="mng_service.html" class="prd_card_banner">
@@ -333,7 +335,7 @@
                                     </div>
                                 </div>
                             </article>
-                            <article class="prd_card small_full medium_1_2 large_1_3">
+                            <article class="prd_card col-sm-6 col-md-4">
                                 <div class="prd_card_wrapper bg-white">
                                     <header class="prd_card_hd">
                                         <div class="prd_card_meta meta_type">
@@ -361,7 +363,7 @@
                                     </div>
                                 </div>
                             </article>
-                            <article class="prd_card small_full medium_1_2 large_1_3">
+                            <article class="prd_card col-sm-6 col-md-4">
                                 <div class="prd_card_wrapper bg-white">
                                     <header class="prd_card_hd">
                                         <div class="prd_card_meta meta_type">
@@ -399,7 +401,6 @@
                             </article>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>

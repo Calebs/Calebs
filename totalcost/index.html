@@ -19,7 +19,6 @@
 
 <body>
 
-    <!-- is-active -->
     <header role="banner" class="main_header">
         <div class="navbar_container">
             <div class="navbar_group navbar_group_left">
@@ -33,7 +32,7 @@
             </div>
             <div class="navbar_group navbar_group_center">
                 <form class="navbar_search_form">
-                    <input class="navbar_search_input" type="search" placeholder="Find vendors and services">
+                    <input class="navbar_search_input" type="search" placeholder="Find vendor by name or services">
                     <ul class="searchbar_autocomplete">
                     </ul>
                     <button class="navbar_search_btn navbar_search_submit" type="submit">
@@ -54,14 +53,43 @@
                 <nav class="primary_nav_menu">
                     <ul class="primary_nav">
                         <li class="nav_item">
-                            <a href="merchant_home.html" class="nav_link_item font-bold link_highlight">Become a Vendor</a>
+                            <a href="#" class="nav_link_item">Local Vendors</a>
+                            <!--Toggle "nav_visible" to show list-->
+                            <div class="sub_bav_block">
+                                <div class="nav_block_wrapper">
+                                   <ul class="nav_item_list">
+                                       <li class="nav_item"><a href="service_listings.html">Caterers</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Disk Jockey</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Rentals</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Logistics</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Photographer / Videographer</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Musical Band</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Makeup / Makeover</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Security</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Ushering & Hospitality</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Cakes & Confectionaries</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Drinks & Cocktails</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Fashion Designer</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Event Compere</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Venue Management</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Decoration</a></li>
+                                       <li class="nav_item"><a href="service_listings.html">Multimedia</a></li>
+                                   </ul>
+                                    <a href="all_services.html" class="nav_block_cta">
+                                        See all Vendors
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav_item">
+                            <a href="merchant_home.html" class="nav_link_item">Become a Vendor</a>
                         </li>
                         <li class="nav_item">
                             <a href="login.html" class="nav_link_item">
                             Login</a>
                         </li>
-                        <li class="nav_item">
-                            <a href="signup.html" class="nav_link_item">
+                        <li class="nav_item ">
+                            <a href="signup.html" class="nav_link_item link_highlight">
                             Sign Up</a>
                         </li>
                     </ul>
@@ -73,9 +101,6 @@
                                 <path class="cls-1" d="M58.53,51.44l-13-13c-.07-.07-.15-.12-.22-.18a24.68,24.68,0,1,0-7.05,7c.06.07.11.15.18.22l13,13a5,5,0,1,0,7.09-7.09ZM24.67,40.78A16.12,16.12,0,1,1,40.78,24.67,16.12,16.12,0,0,1,24.67,40.78Z"/>
                             </svg>
                         </a>
-                    </div>
-                    <div class="control_btns">
-                        <a href="#" class="btn btn-sm btn-inverse">New Event</a>
                     </div>
                     <div class="control_btns btn_menu ">
                         <a class="primary-nav-trigger" href="#0">
@@ -111,7 +136,7 @@
     <main class="main_content_area">
         <section class="section_block">
             <div class="section_wrapper">
-                <div class="budget_widget">
+                <div class="budget_widget wid_floated">
                     <div class="widget_wrapper">
                        <header class="widget_header centered text-center">
                            <h3 class="widget_title centered text-caps color-inverse">Let's plan a party</h3>
@@ -288,7 +313,7 @@
             <div class="container narrow_container section_wrapper">
                 <header class="section_header text-center">
                     <h1 class="section_title color-primary">Browse our Service Directory</h1>
-                    <p class="subtitle">Select a service to see a list of verified vendors offering such service neer you. </p>
+                    <p class="subtitle">Select a service to see a list of verified vendors offering such service near you. </p>
                 </header>
                 <div class="card_list">
                     <article class="card_item ">
@@ -452,40 +477,43 @@
                         </a>
                     </article>
                 </div>
-                
-                <div class="v_pad_lg">
-                    <header class="widget_header text-center">
-                       <h3 class="widget_title centered color-inverse">Let’s be part of your next event.</h3>
-                   </header>
-                   <div class="custom_control_group">
-                        <div class="budget_input_group">
-                            <div class="input_group_wrapper">
-                                <div class="budget_input_item form-group">
-                                    <label for="" class="control-label sr-only">Event Type</label>
-                                    <select class="form-control input_filled">
-                                        <option>Event Type</option>
-                                        <option>Birthday</option>
-                                        <option>Wedding</option>
-                                        <option>Burial</option>
-                                        <option>Award</option>
-                                        <option>Coronation</option>
-                                        <option>Inauguration</option>
-                                        <option>Others</option>
-                                    </select>
-                                </div>
-                                <div class="budget_input_item form-group">
-                                    <label for="" class="control-label sr-only">Event Location</label>
-                                    <input type="text" placeholder="Event Location" class="form-control input_filled">
-                                </div>
-                                <div class="budget_input_item form-group">
-                                    <label for="" class="control-label sr-only">Your Budget</label>
-                                    <input type="number" placeholder="Your budget" class="form-control input_filled">
+                                
+                <div class="budget_widget">
+                    <div class="widget_wrapper">
+                       <header class="widget_header centered text-center">
+                           <h3 class="widget_title centered text-caps color-inverse">Let’s plan your next event</h3>
+                       </header>
+
+                        <div class="custom_control_group">
+                            <div class="budget_input_group">
+                                <div class="input_group_wrapper">
+                                    <div class="budget_input_item form-group">
+                                        <label for="" class="control-label sr-only">Event Type</label>
+                                        <select class="form-control input_filled">
+                                            <option>Event Type</option>
+                                            <option>Birthday</option>
+                                            <option>Wedding</option>
+                                            <option>Burial</option>
+                                            <option>Award</option>
+                                            <option>Coronation</option>
+                                            <option>Inauguration</option>
+                                            <option>Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="budget_input_item form-group">
+                                        <label for="" class="control-label sr-only">Event Location</label>
+                                        <input type="text" placeholder="Event Location" class="form-control input_filled">
+                                    </div>
+                                    <div class="budget_input_item form-group">
+                                        <label for="" class="control-label sr-only">Your Budget</label>
+                                        <input type="number" placeholder="Your budget" class="form-control input_filled">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="budget_input_btn">
-                            <button type="submit" class="btn btn-primary">Get Started</button>
+                            <div class="budget_input_btn">
+                                <button type="submit" class="btn btn-primary">Get Started</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -573,7 +601,6 @@
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/base.min.js"></script>
     <script src="js/main.js"></script>
-    <!-- Resource jQuery -->
 
 </body>
 

@@ -99,6 +99,18 @@ jQuery(document).ready(function($) {
         }
     });
 
+    var subNav = $(".sticky_nav"),
+        navScrolled = "fix__top",
+        scroll_offset_top = 500; 
+
+    $(window).scroll(function() {
+        if($(this).scrollTop() > scroll_offset_top) {
+            subNav.addClass(navScrolled);
+        } else {
+            subNav.removeClass(navScrolled);
+        }
+    });
+
      /*Custom Selector*/
     var selector_input = $(".cst_selector"),
         target_container = $('.cst_select_list');
