@@ -55,6 +55,28 @@ jQuery(document).ready(function($) {
            info_container.removeClass('info_open'); 
         }
     });
+    
+    /*Services list filter on mobile*/
+    
+    //open/close Filter panel
+    $("body").on('click','.toggle_filter', function() {
+        event.stopPropagation();
+        $('body').addClass('expand_filter');
+    });
+    
+    //open/close Filter panel
+    $('body').on('click','.flWidget_Header > .close_dialog', function(event) {
+        event.stopPropagation();
+        closeFilter();
+    });
+    
+    $('.widget_overlay').on('click', function(){
+		closeFilter();
+	});
+    
+    function closeFilter() {
+		$('body').removeClass('expand_filter');
+	}
 
     /* General Navigation*/
 
