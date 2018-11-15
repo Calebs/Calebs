@@ -788,6 +788,7 @@ input[type="checkbox"]:disabled:checked:after,
   border: none;
   outline: 0;
   padding: 5px 10px;
+  background-color: transparent;
 }
 
 /* SVG Icon systems */
@@ -2614,11 +2615,24 @@ a.btn:focus {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  justify-content: center;
   width: 100%;
+  /* Tablets and phablets */
+  /* Tablets and phablets */
+}
+@media only screen and (max-width: 767px) {
+  /* line 146, ../sass/partials/_cards.scss */
+  .logo_grid {
+    overflow-x: scroll;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 146, ../sass/partials/_cards.scss */
+  .logo_grid {
+    justify-content: center;
+  }
 }
 
-/* line 153, ../sass/partials/_cards.scss */
+/* line 160, ../sass/partials/_cards.scss */
 .logo_item {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -2626,29 +2640,29 @@ a.btn:focus {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 153, ../sass/partials/_cards.scss */
+  /* line 160, ../sass/partials/_cards.scss */
   .logo_item {
     padding-top: 30px;
     padding-bottom: 30px;
   }
 }
-/* line 163, ../sass/partials/_cards.scss */
+/* line 170, ../sass/partials/_cards.scss */
 .logo_item img {
   display: inline-block;
-  max-width: 125px;
+  min-width: 75px;
 }
 
-/* line 169, ../sass/partials/_cards.scss */
+/* line 176, ../sass/partials/_cards.scss */
 .grey_scaled {
   filter: grayscale(1) brightness(0);
 }
 
-/* line 173, ../sass/partials/_cards.scss */
+/* line 180, ../sass/partials/_cards.scss */
 .postList {
   flex-wrap: wrap;
 }
 
-/* line 177, ../sass/partials/_cards.scss */
+/* line 184, ../sass/partials/_cards.scss */
 .postMetaItems {
   display: -webkit-box;
   display: -moz-box;
@@ -2658,32 +2672,32 @@ a.btn:focus {
   flex-wrap: wrap;
 }
 
-/* line 182, ../sass/partials/_cards.scss */
+/* line 189, ../sass/partials/_cards.scss */
 .postMetaItem {
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 1px;
 }
-/* line 187, ../sass/partials/_cards.scss */
+/* line 194, ../sass/partials/_cards.scss */
 .postThumbDetails .postMetaItem {
   flex-grow: 0;
 }
-/* line 191, ../sass/partials/_cards.scss */
+/* line 198, ../sass/partials/_cards.scss */
 .postMetaItem + .metaItem {
   margin-left: 5px;
 }
-/* line 194, ../sass/partials/_cards.scss */
+/* line 201, ../sass/partials/_cards.scss */
 .postMetaItem + .metaItem::before {
   content: "/";
   color: #d5d5d5;
 }
 
-/* line 201, ../sass/partials/_cards.scss */
+/* line 208, ../sass/partials/_cards.scss */
 .postThumb {
   margin-bottom: 30px;
 }
 
-/* line 205, ../sass/partials/_cards.scss */
+/* line 212, ../sass/partials/_cards.scss */
 .postThumbWrapper {
   height: 100%;
   width: 100%;
@@ -2704,28 +2718,28 @@ a.btn:focus {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 218, ../sass/partials/_cards.scss */
+/* line 225, ../sass/partials/_cards.scss */
 .postThumbWrapper:hover, .postThumbWrapper:focus {
   box-shadow: 2px 3px 20px rgba(18, 23, 19, 0.3);
 }
-/* line 221, ../sass/partials/_cards.scss */
+/* line 228, ../sass/partials/_cards.scss */
 .postThumbWrapper:hover .curl, .postThumbWrapper:focus .curl {
   width: 30px;
   height: 30px;
 }
-/* line 226, ../sass/partials/_cards.scss */
+/* line 233, ../sass/partials/_cards.scss */
 .postThumbWrapper:hover img, .postThumbWrapper:focus img {
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-/* line 231, ../sass/partials/_cards.scss */
+/* line 238, ../sass/partials/_cards.scss */
 .slick-slide .postThumbWrapper {
   min-height: 375px;
 }
 
-/* line 236, ../sass/partials/_cards.scss */
+/* line 243, ../sass/partials/_cards.scss */
 .postThumbDetails {
   width: 100%;
   padding: 20px 15px;
@@ -2737,7 +2751,7 @@ a.btn:focus {
   flex-direction: column;
   height: 100%;
 }
-/* line 243, ../sass/partials/_cards.scss */
+/* line 250, ../sass/partials/_cards.scss */
 .featured_post .postThumbDetails {
   font-size: 16px;
   padding: 0;
@@ -2745,20 +2759,20 @@ a.btn:focus {
   /* Tablets and phablets */
 }
 @media only screen and (max-width: 575px) {
-  /* line 243, ../sass/partials/_cards.scss */
+  /* line 250, ../sass/partials/_cards.scss */
   .featured_post .postThumbDetails {
     padding-top: 20px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 243, ../sass/partials/_cards.scss */
+  /* line 250, ../sass/partials/_cards.scss */
   .featured_post .postThumbDetails {
     font-size: 21px;
     padding-right: 30px;
   }
 }
 
-/* line 258, ../sass/partials/_cards.scss */
+/* line 265, ../sass/partials/_cards.scss */
 .postTitle {
   font-size: 16px;
   color: inherit;
@@ -2769,7 +2783,7 @@ a.btn:focus {
   max-height: 4.5em;
   overflow: hidden;
 }
-/* line 268, ../sass/partials/_cards.scss */
+/* line 275, ../sass/partials/_cards.scss */
 .featured_post .postTitle {
   font-size: 21px;
   margin-bottom: 20px;
@@ -2777,12 +2791,12 @@ a.btn:focus {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 268, ../sass/partials/_cards.scss */
+  /* line 275, ../sass/partials/_cards.scss */
   .featured_post .postTitle {
     font-size: 42px;
   }
 }
-/* line 278, ../sass/partials/_cards.scss */
+/* line 285, ../sass/partials/_cards.scss */
 .postTitle a {
   color: inherit;
   -moz-transition: opacity 0.4s;
@@ -2790,12 +2804,12 @@ a.btn:focus {
   -webkit-transition: opacity 0.4s;
   transition: opacity 0.4s;
 }
-/* line 282, ../sass/partials/_cards.scss */
+/* line 289, ../sass/partials/_cards.scss */
 .postTitle a:hover, .postTitle a:focus {
   opacity: .65;
 }
 
-/* line 288, ../sass/partials/_cards.scss */
+/* line 295, ../sass/partials/_cards.scss */
 .postThumbImage {
   text-align: center;
   overflow: hidden;
@@ -2809,12 +2823,12 @@ a.btn:focus {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 300, ../sass/partials/_cards.scss */
+  /* line 307, ../sass/partials/_cards.scss */
   .featured_post .postThumbImage {
     padding-bottom: 66%;
   }
 }
-/* line 305, ../sass/partials/_cards.scss */
+/* line 312, ../sass/partials/_cards.scss */
 .postThumbImage img {
   width: 100%;
   position: absolute;
@@ -2830,7 +2844,7 @@ a.btn:focus {
   transition: transform 0.4s ease-out 0s;
 }
 
-/* line 317, ../sass/partials/_cards.scss */
+/* line 324, ../sass/partials/_cards.scss */
 .postExcerpt {
   font-size: 1em;
   line-height: 1.5em;
@@ -2840,21 +2854,21 @@ a.btn:focus {
   text-overflow: ellipsis;
 }
 
-/* line 326, ../sass/partials/_cards.scss */
+/* line 333, ../sass/partials/_cards.scss */
 .postTag {
   display: block;
   z-index: 10;
   font-size: 12px;
   margin-bottom: 7.5px;
 }
-/* line 332, ../sass/partials/_cards.scss */
+/* line 339, ../sass/partials/_cards.scss */
 .postThumbImage .postTag {
   position: absolute;
   top: 15px;
   left: 15px;
 }
 
-/* line 339, ../sass/partials/_cards.scss */
+/* line 346, ../sass/partials/_cards.scss */
 .curl {
   width: 0px;
   height: 0px;
@@ -2870,7 +2884,7 @@ a.btn:focus {
   -webkit-transition-delay: 0s;
   transition: all 0.3s ease 0s;
 }
-/* line 350, ../sass/partials/_cards.scss */
+/* line 357, ../sass/partials/_cards.scss */
 .curl::after {
   position: absolute;
   display: block;
@@ -2886,7 +2900,7 @@ a.btn:focus {
   background: white;
 }
 
-/* line 363, ../sass/partials/_cards.scss */
+/* line 370, ../sass/partials/_cards.scss */
 .tile_content_wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -2899,39 +2913,39 @@ a.btn:focus {
   height: 100%;
 }
 
-/* line 371, ../sass/partials/_cards.scss */
+/* line 378, ../sass/partials/_cards.scss */
 .tile_item {
   border: 1px solid #e5e5e5;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 376, ../sass/partials/_cards.scss */
+  /* line 383, ../sass/partials/_cards.scss */
   .tile_item:nth-child(odd) .content_inner {
     padding-left: 17.5%;
   }
-  /* line 382, ../sass/partials/_cards.scss */
+  /* line 389, ../sass/partials/_cards.scss */
   .tile_item:nth-child(even) .content_inner {
     padding-right: 17.5%;
   }
-  /* line 388, ../sass/partials/_cards.scss */
+  /* line 395, ../sass/partials/_cards.scss */
   .floating_layout .tile_item .content_inner {
     padding: 100px 50px;
   }
 }
 
-/* line 395, ../sass/partials/_cards.scss */
+/* line 402, ../sass/partials/_cards.scss */
 .content_inner {
   padding: 30px 15px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 395, ../sass/partials/_cards.scss */
+  /* line 402, ../sass/partials/_cards.scss */
   .content_inner {
     padding: 50px 40px;
   }
 }
 
-/* line 403, ../sass/partials/_cards.scss */
+/* line 410, ../sass/partials/_cards.scss */
 .client_logos {
   display: -webkit-box;
   display: -moz-box;
@@ -2945,13 +2959,13 @@ a.btn:focus {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 403, ../sass/partials/_cards.scss */
+  /* line 410, ../sass/partials/_cards.scss */
   .client_logos {
     padding-top: 30px;
   }
 }
 
-/* line 415, ../sass/partials/_cards.scss */
+/* line 422, ../sass/partials/_cards.scss */
 .logoBlock {
   position: relative;
   width: 50%;
@@ -2963,19 +2977,19 @@ a.btn:focus {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 576px) {
-  /* line 415, ../sass/partials/_cards.scss */
+  /* line 422, ../sass/partials/_cards.scss */
   .logoBlock {
     width: 33.33%;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 415, ../sass/partials/_cards.scss */
+  /* line 422, ../sass/partials/_cards.scss */
   .logoBlock {
     width: 25%;
   }
 }
 
-/* line 432, ../sass/partials/_cards.scss */
+/* line 439, ../sass/partials/_cards.scss */
 .logo_image_wrap {
   width: 100%;
   height: 100%;
@@ -2993,7 +3007,7 @@ a.btn:focus {
   transition: all 0.5s ease;
   outline: none;
 }
-/* line 442, ../sass/partials/_cards.scss */
+/* line 449, ../sass/partials/_cards.scss */
 .logo_image_wrap img {
   display: block;
   width: 100%;
@@ -3006,7 +3020,7 @@ a.btn:focus {
   -webkit-transition: filter 0.5s ease;
   transition: filter 0.5s ease;
 }
-/* line 452, ../sass/partials/_cards.scss */
+/* line 459, ../sass/partials/_cards.scss */
 .logo_image_wrap:hover img, .logo_image_wrap:focus img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
