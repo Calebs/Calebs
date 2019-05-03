@@ -1,0 +1,1318 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Welcome Jake | Gradely.ng for Parent</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal fade" id="add_child">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Add Child</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="" class="control-label caps_upper">Your Child's name</label>
+                            <input type="text" class="form-control" placeholder="Firstname Lastname">
+                            <p class="help-block hidden text-error">Invalid class code. Try again</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="control-label caps_upper">School</label>
+                            <select class="form-control" placeholder="Select school">
+                            <option>Select School</option>
+                            <option>Christland Intl. College</option>
+                            <option>Queens College</option>
+                            <option>Kings College</option>
+                            <option>Kings and Queens Intl. College</option>
+                            <option>British International School</option>
+                            </select>
+                            <div class="more_control margin_top_md">
+                            <button type="button" data-target="#addSchool" data-toggle="modal" class="input_control">
+                                <span class="t_icon">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                </svg>
+                                </span>
+                                <span >Can't find the school? <span class="widget_cta_link">Add it now</span></span>
+                            </button>
+                            </div>
+                            <p class="help-block hidden text-error">Invalid class code. Try again</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="control-label caps_upper">Class</label>
+                            <select class="form-control" placeholder="Select school">
+                            <option>Select class</option>
+                            <option>Senior Secondary School 1 - SSS1</option>
+                            <option>Senior Secondary School 2 - SSS2</option>
+                            <option>Senior Secondary School 3 - SSS3</option>
+                            <option>Junior Secondary School 1 - JSS1</option>
+                            <option>Junior Secondary School 2 - JSS2</option>
+                            <option>Junior Secondary School 3 - JSS3</option>
+                            </select>
+                        </div>
+
+                        <!-- Use this to show a preview of the school that match with the provided student code -->
+                        <div class="infoPreviewCard ">
+                            <div class="cardWrapper">
+                                <div class="details_col_info ">
+                                    <div class="insight_title">
+                                        <span>Child Code</span>
+                                    </div>
+                                    <div class="insight_value">
+                                        <h4 class="title title_sm font-bold color__black">RUBIUSHAG</h4>
+                                    </div>
+                                    <div class="details_col_cta">
+                                    <p class="color__grey_dark">This is your child's unique code. It will be required to connect your accounts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addSchool">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Add school</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p class="subtitle font-md">An invitation to sign up on gradely will be sent to the school using the information you provide.</p>
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label">School Name</label>
+                            <input type="text" class="form-control" placeholder="Enter the name of the school">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Contact Email</label>
+                            <input type="email" class="form-control" placeholder="e.g admin@school.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Contact Phone number</label>
+                            <input type="tel" class="form-control" placeholder="">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for students">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem active">
+                            <a href="parent_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="homework.html" class="menuLinkItem">Homework</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="#">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
+                                </svg>
+                                <span class="badgeCount">12</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi bg__secondary">JH</div>
+                                </div>
+                                <span class="control_label">Jake Hagrid</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul class="dpd_nav">
+                                    <li>
+                                        <a href="profile.html">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="act_settings.html">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../login.html">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text sr-only">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="global_alert_holder hidden">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Personal information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">   
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+
+                        <div class="pageInfoStrip">
+                            <div class="container">
+                                <div class="infoStripCaption ">
+                                    <span class="opt_rule"></span>
+                                    <span class="captionText">You are viewing reports  on: </span>
+                                </div>
+                                <div class="infoStripWrapper">
+                                    <div class="infoStripItemBLock dropdown">
+                                        <a href="#" data-toggle="dropdown" class="customDropdownHeader dropdown-toggle">
+                                            <div class="user_profile_details">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="../img/" alt="">
+                                                    <span class="default_avi">RH</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                    <span class="listMetaInfo">Code: <span>RUBIUSHAG</span> </span>
+                                                </div>
+                                            </div>
+                                            <span class="selectorTrigger_btn">
+                                                <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M7.43437 10.3598L7.99997 10.9254L12.5256 6.39975L11.3944 5.26855L7.99997 8.66215L4.60557 5.26855L3.47437 6.39975L7.43437 10.3598Z"/>
+                                                </svg>
+                                            </span>                        
+                                        </a>
+                                        <div class="dropdown-menu widget_select_menu">
+                                            <!-- Toggle the class "is_empty" when the list is empty -->
+                                            <div class="widget_select_body ">
+                                                <ul class="search_result_list">
+                                                    <li class="search_result_item">
+                                                        <a href="" class="result_item_wrapper active">
+                                                            <div class="user_profile_details">
+                                                                <div class="user_info_avi">
+                                                                    <img src="../img/" alt="">
+                                                                    <span class="default_avi">RH</span>
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div class="search_result_empty">
+                                                    <p>No result found</p>
+                                                </div>
+                                            </div>
+                                            <footer class="widget_select_footer">
+                                                <button type="button" class="widgetSelectCTA" data-target="#add_child" data-toggle="modal">Add a Child</b>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                    <div class="infoStripItemBLock">
+                                        <div class="user_info text-right">
+                                            <span class="data_label">
+                                                <time>01 April, 2019</time>
+                                            </span>
+                                            <div class="title"><span>First Term</span> - <span>Week 2</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="gridCardRow">
+                            <div class="container">
+                                <div class="row">
+                                    <article class="gridCardItem col-lg-8">
+                                        <div class="gridCardWrapper">
+                                            <header class="gridCardHeader">
+                                                <div class="headerTitleHolder">
+                                                    <h4 class="gridCardTitle">Performance Summary</h4>
+                                                </div>
+                                                <div class="headerContols">
+                                                    <div class="controlItem">
+                                                        <label for="subjectswitcher" class="controlItemLabel">Subject</label>
+                                                        <select class="controlItemInput controlAction" id="subjectswitcher">
+                                                            <option>Mathematics</option>
+                                                            <option>English Language</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="empty_state hidden centered text-center">
+                                                <div class="def_wrapper">
+                                                    <div class="defImg">
+                                                        <img src="../img/icons/empty_report.svg" alt="No Report">
+                                                    </div>
+                                                    <h4 class="title font-bold margin_bottom_sm">Nothing to Report</h4>
+                                                    <p>You have no performance record yet. This will change as you complete your homework and interact with Gradely.</p>
+                                                </div>
+                                            </div>
+                                            <div class="row paneInner ">
+                                                <div class="col-sm-5 infoBlock performanceChart">
+                                                    <div class="progressScore">
+                                                        <div id="bar" class="progressMeter"></div>
+                                                    </div>
+                                                    <div class="userRank margin_top_lg">
+                                                        <div class="rankScale align-items-center text-center">
+                                                            <span class="data_label">Class rank</span>
+                                                            <div class="percentileScale">
+                                                                <div class="scaleItem itemTop">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemTop">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemTop">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemTop">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="percentileLabel">Top 40% of your class</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-7 infoBlock activityInfo">
+                                                    <div class="dataInfoBlock">
+                                                        <span class="data_label">Excelling in</span>
+                                                        <div class="bubbleTileList">
+                                                            <div class="bubbleTileItem bubble_high">
+                                                                <span class="tileLabel">Number Base System</span>
+                                                            </div>
+                                                            <div class="bubbleTileItem bubble_high">
+                                                                <span class="tileLabel">Modular Arithmetic</span>
+                                                            </div>
+                                                            <div class="bubbleTileItem bubble_high">
+                                                                <span class="tileLabel">Indices</span>
+                                                            </div>
+                                                            <div class="bubbleTileItem bubble_high">
+                                                                <span class="tileLabel">Logarithm and Indices</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dataInfoBlock">
+                                                        <span class="data_label">Average in</span>
+                                                        <div class="bubbleTileList">
+                                                            <div class="bubbleTileItem bubble_default">
+                                                                <span class="tileLabel">Quadratic Equations</span>
+                                                            </div>
+                                                            <div class="bubbleTileItem bubble_default">
+                                                                <span class="tileLabel">Logical Reasoning</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dataInfoBlock">
+                                                        <span class="data_label">Struggling With</span>
+                                                        <div class="bubbleTileList">
+                                                            <div class="bubbleTileItem bubble_low">
+                                                                <span class="tileLabel">Trigonometric Ratios</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="gridCardItem col-lg-4">
+                                        <div class="gridCardWrapper">
+                                            <div class="empty_state centered text-center hidden">
+                                                <div class="def_wrapper">
+                                                    <p>You have not been merged to any class yet. Add you class below </p>
+                                                    <div class="margin_top_sm">
+                                                        <button type="button" data-target="#add_class" data-toggle="modal" class="btn btn-primary-outline btn-sm">Add Class</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="paneInner">
+                                                <h4 class="gridCardTitle margin_bottom_md">Class</h4>
+                                                <div class="dataInfoBlock">
+                                                    <div class="address_block">
+                                                        <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                        <span class="addr_field ">Christland Intl. College</span>
+                                                    </div>
+                                                    <div class="insight_row margin_top_md">
+                                                        <div class="insight_item">
+                                                            <div class="insight_value">
+                                                                <span class="title title_sm color__black">CRL/SAT/REM</span>
+                                                            </div>
+                                                            <div class="insight_title">
+                                                                <span class="color__grey_dark">Class Code</span>
+                                                            </div>  
+                                                        </div>
+                                                        <div class="insight_item">
+                                                            <div class="insight_value">
+                                                                <span class="title title_sm color__black">120</span>
+                                                            </div>
+                                                            <div class="insight_title">
+                                                                <span class="color__grey_dark">Class Size</span>
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="base_divider"></div>
+                                                <div class="dataInfoBlock">
+                                                    <span class="data_label">Teachers</span>
+                                                    <div class="user_list margin_top_sm">
+                                                        <article class="user_item margin_bottom_sm user_profile_details">
+                                                            <div class="user_info_avi">
+                                                                <img src="../img/horace.jpg" alt="">
+                                                                <span class="default_avi">HS</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped">Horace Slughorn</h4>
+                                                                <span class="listMetaInfo">Mathematics</span>
+                                                            </div>
+                                                        </article>
+                                                        <article class="user_item margin_bottom_sm user_profile_details">
+                                                            <div class="user_info_avi">
+                                                                <img src="../img/mcgonangal.jpg" alt="">
+                                                                <span class="default_avi">MM</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped">Minerva McGonagall</h4>
+                                                                <span class="listMetaInfo">Biology</span>
+                                                            </div>
+                                                        </article>
+                                                        <article class="user_item margin_bottom_sm user_profile_details">
+                                                            <div class="user_info_avi">
+                                                                <img src="../img/horace.jpg" alt="">
+                                                                <span class="default_avi">HS</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped">Horace Slughorn</h4>
+                                                                <span class="listMetaInfo">Mathematics</span>
+                                                            </div>
+                                                        </article>
+                                                        <article class="user_item margin_bottom_sm user_profile_details">
+                                                            <div class="user_info_avi">
+                                                                <img src="../img/mcgonangal.jpg" alt="">
+                                                                <span class="default_avi">MM</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped">Minerva McGonagall</h4>
+                                                                <span class="listMetaInfo">Biology</span>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="gridCardRow">
+                            <div class="container">
+                                <div class="row">
+                                    <article class="gridCardItem col-md-7">
+                                        <div class="gridCardWrapper">
+                                            <header class="gridCardHeader">
+                                                <div class="headerTitleHolder">
+                                                    <h4 class="gridCardTitle">Topic Performance</h4>
+                                                </div>
+                                                <div class="headerContols">
+                                                    <div class="controlItem">
+                                                        <label for="sbj" class="controlItemLabel">Subject</label>
+                                                        <select class="controlItemInput controlAction" id="sbj">
+                                                            <option>Mathematics</option>
+                                                            <option>English Language</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="controlItem">
+                                                        <label for="term" class="controlItemLabel">Term</label>
+                                                        <select class="controlItemInput controlAction" id="term">
+                                                            <option>First Terms</option>
+                                                            <option>Second Terms</option>
+                                                            <option>Third Terms</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="paneInner">
+                                                <div class="dataInfoBlock">
+                                                    <div class="address_block">
+                                                        <h4 class="title title_sm">Mathematics</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="">SSS1</span>
+                                                            <span class="inline_seperator">-</span>
+                                                            <span class="">First Term</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="termTopicList row">
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Number Base System</span>
+                                                                <span class="topicgrade color__grey_dark">89%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Modular Arithmetic</span>
+                                                                <span class="topicgrade color__grey_dark">82%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Quadratic Equations</span>
+                                                                <span class="topicgrade color__grey_dark">73%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_avg">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Trigonometric Ratios</span>
+                                                                <span class="topicgrade color__grey_dark">49%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_fail">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Indices</span>
+                                                                <span class="topicgrade color__grey_dark">92%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Number Base System</span>
+                                                                <span class="topicgrade color__grey_dark">89%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Modular Arithmetic</span>
+                                                                <span class="topicgrade color__grey_dark">82%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Quadratic Equations</span>
+                                                                <span class="topicgrade color__grey_dark">73%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_avg">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Trigonometric Ratios</span>
+                                                                <span class="topicgrade color__grey_dark">49%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_fail">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Indices</span>
+                                                                <span class="topicgrade color__grey_dark">92%</span>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="reportRowFooter">
+                                                    <div class="commentLabel">
+                                                        <span class="cust_icon icon_comment"></span>
+                                                        <span class="font-default caps_upper margin_left_s">5 new teacher remarks. </span>
+                                                    </div>
+                                                    <div class="commentCTA">
+                                                        <a href="childPageRemarks.html" class="widget_cta_link">
+                                                            See All
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="gridCardItem col-md-5">
+                                        <div class="gridCardWrapper">
+                                            <div class="empty_state centered text-center hidden">
+                                                <div class="def_wrapper">
+                                                    <h4 class="title font-bold margin_bottom_sm">Yay! No assignment</h4>
+                                                    <p class="font-sm">You have no upcoming assignment. Good time to read some more.</p>
+                                                </div>
+                                            </div>
+                                            <div class="paneInner ">
+                                                <h4 class="gridCardTitle margin_bottom_md">Upcoming Homework</h4>
+                                                <div class="verticalItemList">
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                                <div class="more_control margin_top_md">
+                                                    <a href="homework.html" class="widget_cta_link">
+                                                        See All
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="gridCardRow">
+                            <div class="container">
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="gridFancyHeader infoStripCaption">
+                                        <span class="opt_rule"></span>
+                                        <span class="captionText gridCardTitle">Homework Results</span>
+                                    </header>
+                                    <div class="empty_state justify-content-center centered text-center hidden">
+                                        <div class="def_wrapper">
+                                            <p class="">There are no completed homework yet.</p>
+                                            <div class="margin_top_sm">
+                                                <a href="homework" class="btn btn-default-outline btn-sm">See all homework</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_inner ">
+                                        <div class="table table-responsive table-brand">
+                                            <table class="table table-hover">
+                                                <thead class="sr-only">
+                                                    <tr>
+                                                        <th>
+                                                            <div class="">Description</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="">Subject</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="text-center">Result</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="text-center">Questions</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="text-center">Highest</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="text-center">Least</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="">Options</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 2 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="badge badge-default">
+                                                                    Mathematics
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta justify-content-center">
+                                                                        <span class="topicTitle color__black"><em>47</em>/<em>50</em></span>
+                                                                        <span class="topicgrade color__grey_dark">(94%)</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions" title="Total Questions" data-toggle="tooltip">50</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest class score" data-toggle="tooltip">49</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest class score" data-toggle="tooltip">
+                                                                    15
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="homeworkReport.html" class="controlItemLink">View Report</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 2 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="badge badge-default">
+                                                                    Mathematics
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta justify-content-center">
+                                                                        <span class="topicTitle color__black"><em>32</em>/<em>50</em></span>
+                                                                        <span class="topicgrade color__grey_dark">(64%)</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_avg">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions" title="Total Questions" data-toggle="tooltip">50</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest class score" data-toggle="tooltip">46</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest class score" data-toggle="tooltip">
+                                                                    21
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="homeworkReport.html" class="controlItemLink">View Report</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 3 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="badge badge-default">
+                                                                    English Language
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta justify-content-center">
+                                                                        <span class="topicTitle color__black"><em>45</em>/<em>50</em></span>
+                                                                        <span class="topicgrade color__grey_dark">(90%)</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions" title="Total Questions" data-toggle="tooltip">50</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest class score" data-toggle="tooltip">45</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest class score" data-toggle="tooltip">
+                                                                    32
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="homeworkReport.html" class="controlItemLink">View Report</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 2 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="badge badge-default">
+                                                                    Mathematics
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta justify-content-center">
+                                                                        <span class="topicTitle color__black"><em>32</em>/<em>50</em></span>
+                                                                        <span class="topicgrade color__grey_dark">(64%)</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_avg">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 64%" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions" title="Total Questions" data-toggle="tooltip">50</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest class score" data-toggle="tooltip">46</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest class score" data-toggle="tooltip">
+                                                                    21
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="homeworkReport.html" class="controlItemLink">View Report</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="more_control margin_top_md">
+                                            <a href="homework.html" class="widget_cta_link">
+                                                See all Homework
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="gridFancyHeader infoStripCaption">
+                                        <span class="opt_rule"></span>
+                                        <span class="captionText gridCardTitle">Recommendation</span>
+                                    </header>
+                                    <div class="empty_state centered text-center hidden">
+                                        <div class="def_wrapper">
+                                            <p class="">There are no recommendation for you at the moment. You can however browse our marketplace for exciting products that can help improve your performance.</p>
+                                            <div class="margin_top_sm">
+                                                <a href="#" class="btn btn-default-outline btn-sm">Go to Marketplace</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_inner">
+                                        <div class="row userRecommendation">
+                                            <article class="productCard col-sm-6 col-md-4 col-lg-3">
+                                                <div class="cardWrapper">
+                                                    <div class="cardDetails">
+                                                        <div class="cardDetailsRow productInfo">
+                                                            <div class="data_entity align-items-center">
+                                                                <div class="data_entity_icon">
+                                                                    <div class="productThumb avi_md">
+                                                                        <img src="../img/" alt="">
+                                                                        <div class="default_avi">
+                                                                            <span class="cust_icon icon_school"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data_entity_info user_info">
+                                                                    <h4 class="title text_clipped">Horgwarts College</h4>
+                                                                    <div class="listMetaInfo">
+                                                                        <span>School</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardDetailsRow productMeta">
+                                                            <div class="vn_rating">
+                                                                <div class="rating_remarks">
+                                                                    <span>Avg. Rating</span>
+                                                                    <span class="rating_avg has_brackets">4.5</span>
+                                                                </div>
+                                                                <div class="rating_ind">
+                                                                    <div class="rateit" data-rateit-value="4.5" data-rateit-ispreset="true" 
+                                                                data-rateit-readonly="true"></div>
+                                                                    <span class="rating_sample_space">171</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="productDetails.html" class="cardLink"></a>
+                                                    <div class="ctaArrowIndicator">
+                                                        <span class="cust_icon icon_xs icon_arrow_right"></span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="productCard col-sm-6 col-md-4 col-lg-3">
+                                                <div class="cardWrapper">
+                                                    <div class="cardDetails">
+                                                        <div class="cardDetailsRow productInfo">
+                                                            <div class="data_entity align-items-center">
+                                                                <div class="data_entity_icon">
+                                                                    <div class="productThumb avi_md">
+                                                                        <img src="../img/hermionie.jpg" alt="">
+                                                                        <div class="default_avi">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data_entity_info user_info">
+                                                                    <h4 class="title text_clipped">Hermione Granger</h4>
+                                                                    <div class="listMetaInfo">
+                                                                        <span>Tutor</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardDetailsRow productMeta">
+                                                            <div class="vn_rating">
+                                                                <div class="rating_remarks">
+                                                                    <span>Avg. Rating</span>
+                                                                    <span class="rating_avg has_brackets">4.3</span>
+                                                                </div>
+                                                                <div class="rating_ind">
+                                                                    <div class="rateit" data-rateit-value="4.3" data-rateit-ispreset="true" 
+                                                                data-rateit-readonly="true"></div>
+                                                                    <span class="rating_sample_space">91</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="productDetails.html" class="cardLink"></a>
+                                                    <div class="ctaArrowIndicator">
+                                                        <span class="cust_icon icon_xs icon_arrow_right"></span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="productCard col-sm-6 col-md-4 col-lg-3">
+                                                <div class="cardWrapper">
+                                                    <div class="cardDetails">
+                                                        <div class="cardDetailsRow productInfo">
+                                                            <div class="data_entity align-items-center">
+                                                                <div class="data_entity_icon">
+                                                                    <div class="productThumb avi_md">
+                                                                        <img src="../img/" alt="">
+                                                                        <div class="default_avi">
+                                                                            <span class="cust_icon icon_book"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="data_entity_info user_info">
+                                                                    <h4 class="title text_clipped">Introduction to Spells</h4>
+                                                                    <div class="listMetaInfo">
+                                                                        <span>Textbook</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cardDetailsRow productMeta">
+                                                            <div class="vn_rating">
+                                                                <div class="rating_remarks">
+                                                                    <span>Avg. Rating</span>
+                                                                    <span class="rating_avg has_brackets">4.1</span>
+                                                                </div>
+                                                                <div class="rating_ind">
+                                                                    <div class="rateit" data-rateit-value="4.1" data-rateit-ispreset="true" 
+                                                                data-rateit-readonly="true"></div>
+                                                                    <span class="rating_sample_space">1,023</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="productDetails.html" class="cardLink"></a>
+                                                    <div class="ctaArrowIndicator">
+                                                        <span class="cust_icon icon_xs icon_arrow_right"></span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="more_control margin_top_md">
+                                            <a href="marketplace.html" class="widget_cta_link">
+                                                Go to Marketplace
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/jquery.rateit.min.js"></script>
+    <script src="../js/rounded_progressbar.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        var bar=new RadialProgress(
+            document.getElementById("bar"), {
+                colorBg: "#DDF1FA",
+                colorFg: "#60D2B0",
+                colorText: "#353535",
+                progress: 0.7865,
+                animationSpeed: .35,
+                setLabel: "Score",
+                round: true,
+                thick: 10,
+            });
+    </script>
+    		
+</body>
+</html>
