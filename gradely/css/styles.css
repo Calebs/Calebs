@@ -4463,7 +4463,7 @@ header[role="banner"] [class*="container"] {
 
 /* line 23, ../sass/partials/_header_nav.scss */
 .preAuthHeader {
-  color: #dbf5f8;
+  color: #757575;
   -moz-transition: background-color 0.6s ease-in-out;
   -o-transition: background-color 0.6s ease-in-out;
   -webkit-transition: background-color 0.6s ease-in-out;
@@ -4489,7 +4489,11 @@ header[role="banner"] [class*="container"] {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 36, ../sass/partials/_header_nav.scss */
+  /* line 23, ../sass/partials/_header_nav.scss */
+  .preAuthHeader {
+    color: #dbf5f8;
+  }
+  /* line 37, ../sass/partials/_header_nav.scss */
   .preAuthHeader.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
@@ -4502,7 +4506,7 @@ header[role="banner"] [class*="container"] {
     transition: transform 0.6s ease-in-out;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   }
-  /* line 45, ../sass/partials/_header_nav.scss */
+  /* line 46, ../sass/partials/_header_nav.scss */
   .preAuthHeader.is-visible {
     /* if the user changes the scrolling direction, we show the header */
     -moz-transform: translate3d(0, 60px, 0);
@@ -4512,7 +4516,7 @@ header[role="banner"] [class*="container"] {
   }
 }
 
-/* line 53, ../sass/partials/_header_nav.scss */
+/* line 54, ../sass/partials/_header_nav.scss */
 .navbarWrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -4525,7 +4529,7 @@ header[role="banner"] [class*="container"] {
   justify-content: space-between;
 }
 
-/* line 61, ../sass/partials/_header_nav.scss */
+/* line 62, ../sass/partials/_header_nav.scss */
 .navbarGroupItem {
   width: auto;
   height: 100%;
@@ -4539,7 +4543,7 @@ header[role="banner"] [class*="container"] {
   position: relative;
 }
 
-/* line 70, ../sass/partials/_header_nav.scss */
+/* line 71, ../sass/partials/_header_nav.scss */
 .navBarItemLeft {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -4549,7 +4553,7 @@ header[role="banner"] [class*="container"] {
   flex-shrink: 0;
 }
 
-/* line 79, ../sass/partials/_header_nav.scss */
+/* line 80, ../sass/partials/_header_nav.scss */
 .navBarItemRight {
   float: right;
   justify-content: flex-end;
@@ -4557,14 +4561,14 @@ header[role="banner"] [class*="container"] {
   flex-shrink: 0;
 }
 
-/* line 86, ../sass/partials/_header_nav.scss */
+/* line 87, ../sass/partials/_header_nav.scss */
 .navBarItemCenter {
   flex-grow: 1;
   /* Landscape tablets and desktop or laptops */
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (max-width: 991px) {
-  /* line 86, ../sass/partials/_header_nav.scss */
+  /* line 87, ../sass/partials/_header_nav.scss */
   .navBarItemCenter {
     width: 100%;
     position: absolute;
@@ -4572,22 +4576,22 @@ header[role="banner"] [class*="container"] {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 86, ../sass/partials/_header_nav.scss */
+  /* line 87, ../sass/partials/_header_nav.scss */
   .navBarItemCenter {
     padding-left: 40px;
   }
 }
 
-/* line 100, ../sass/partials/_header_nav.scss */
+/* line 101, ../sass/partials/_header_nav.scss */
 .brand_img {
   display: block;
 }
-/* line 103, ../sass/partials/_header_nav.scss */
+/* line 104, ../sass/partials/_header_nav.scss */
 header[role="banner"] .brand_img {
   height: 60px;
 }
 
-/* line 108, ../sass/partials/_header_nav.scss */
+/* line 109, ../sass/partials/_header_nav.scss */
 .logo_link {
   padding: 0;
   display: inline-block;
@@ -4598,18 +4602,18 @@ header[role="banner"] .brand_img {
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (min-width: 992px) {
-  /* line 108, ../sass/partials/_header_nav.scss */
+  /* line 109, ../sass/partials/_header_nav.scss */
   .logo_link {
     width: 150px;
   }
 }
-/* line 120, ../sass/partials/_header_nav.scss */
+/* line 121, ../sass/partials/_header_nav.scss */
 .logo_link > img {
   vertical-align: middle;
   display: inline-block;
 }
 
-/* line 126, ../sass/partials/_header_nav.scss */
+/* line 127, ../sass/partials/_header_nav.scss */
 .navMenu {
   display: -webkit-box;
   display: -moz-box;
@@ -4620,7 +4624,7 @@ header[role="banner"] .brand_img {
   width: 100%;
 }
 
-/* line 132, ../sass/partials/_header_nav.scss */
+/* line 133, ../sass/partials/_header_nav.scss */
 .menuPrimary {
   -moz-transition: all 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
   -o-transition: all 0.6s cubic-bezier(0.68, 0.34, 0.15, 1);
@@ -4631,12 +4635,13 @@ header[role="banner"] .brand_img {
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (max-width: 991px) {
-  /* line 132, ../sass/partials/_header_nav.scss */
+  /* line 133, ../sass/partials/_header_nav.scss */
   .menuPrimary {
     left: 0;
     width: 100%;
     position: fixed;
     height: 100%;
+    height: 100vh;
     visibility: hidden;
     top: 60px;
     flex-direction: column;
@@ -4649,7 +4654,7 @@ header[role="banner"] .brand_img {
     padding: 20px 15px;
   }
 }
-/* line 150, ../sass/partials/_header_nav.scss */
+/* line 152, ../sass/partials/_header_nav.scss */
 .is-active .menuPrimary {
   -moz-transform: scaleY(1);
   -ms-transform: scaleY(1);
@@ -4662,36 +4667,36 @@ header[role="banner"] .brand_img {
   transition: transform 0.8s cubic-bezier(0.68, 0.34, 0.15, 1);
 }
 @media only screen and (min-width: 992px) {
-  /* line 132, ../sass/partials/_header_nav.scss */
+  /* line 133, ../sass/partials/_header_nav.scss */
   .menuPrimary {
     flex-direction: row;
     justify-content: center;
   }
 }
 
-/* line 162, ../sass/partials/_header_nav.scss */
+/* line 164, ../sass/partials/_header_nav.scss */
 .controlBtn {
   margin-left: 30px;
   position: relative;
 }
-/* line 166, ../sass/partials/_header_nav.scss */
+/* line 168, ../sass/partials/_header_nav.scss */
 .controlBtn > a {
   fill: #2a4f77;
   color: #252525;
 }
-/* line 170, ../sass/partials/_header_nav.scss */
+/* line 172, ../sass/partials/_header_nav.scss */
 .controlBtn > a:hover, .controlBtn > a:focus {
   fill: #F2AB3E;
 }
 
-/* line 176, ../sass/partials/_header_nav.scss */
+/* line 178, ../sass/partials/_header_nav.scss */
 .menuListItem {
   position: relative;
   /* Landscape tablets and desktop or laptops */
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (max-width: 991px) {
-  /* line 176, ../sass/partials/_header_nav.scss */
+  /* line 178, ../sass/partials/_header_nav.scss */
   .menuListItem {
     display: block;
     width: 100%;
@@ -4699,13 +4704,13 @@ header[role="banner"] .brand_img {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 176, ../sass/partials/_header_nav.scss */
+  /* line 178, ../sass/partials/_header_nav.scss */
   .menuListItem {
     padding: 0 5px;
   }
 }
 
-/* line 190, ../sass/partials/_header_nav.scss */
+/* line 192, ../sass/partials/_header_nav.scss */
 .menuLinkItem:not(.btn) {
   display: block;
   padding: 12px 22px;
@@ -4720,17 +4725,17 @@ header[role="banner"] .brand_img {
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-/* line 201, ../sass/partials/_header_nav.scss */
+/* line 203, ../sass/partials/_header_nav.scss */
 .active .menuLinkItem:not(.btn), .menuLinkItem:not(.btn):hover, .menuLinkItem:not(.btn):focus {
   color: #2a4f77;
   background-color: #dbf5f8;
 }
-/* line 208, ../sass/partials/_header_nav.scss */
+/* line 210, ../sass/partials/_header_nav.scss */
 .active .menuLinkItem:not(.btn) {
   font-weight: 700;
 }
 
-/* line 213, ../sass/partials/_header_nav.scss */
+/* line 215, ../sass/partials/_header_nav.scss */
 .userAccountDetails {
   display: -webkit-box;
   display: -moz-box;
@@ -4740,7 +4745,7 @@ header[role="banner"] .brand_img {
   align-items: center;
 }
 
-/* line 218, ../sass/partials/_header_nav.scss */
+/* line 220, ../sass/partials/_header_nav.scss */
 .badgeCount {
   display: inline-flex;
   width: 24px;
@@ -4760,80 +4765,80 @@ header[role="banner"] .brand_img {
   right: -12px;
 }
 
-/* line 237, ../sass/partials/_header_nav.scss */
+/* line 239, ../sass/partials/_header_nav.scss */
 .control_label {
   margin-left: 5px;
   /* Tablets and phablets */
 }
 @media only screen and (max-width: 767px) {
-  /* line 237, ../sass/partials/_header_nav.scss */
+  /* line 239, ../sass/partials/_header_nav.scss */
   .control_label {
     display: none;
   }
 }
 
-/* line 245, ../sass/partials/_header_nav.scss */
+/* line 247, ../sass/partials/_header_nav.scss */
 .nav_trigger {
   display: inline-block;
   margin-left: 20px;
   /* Landscape tablets and desktop or laptops */
 }
 @media only screen and (min-width: 992px) {
-  /* line 245, ../sass/partials/_header_nav.scss */
+  /* line 247, ../sass/partials/_header_nav.scss */
   .nav_trigger {
     display: none;
   }
 }
 
-/* line 254, ../sass/partials/_header_nav.scss */
+/* line 256, ../sass/partials/_header_nav.scss */
 .primary-nav-trigger {
   position: relative;
 }
 
-/* line 258, ../sass/partials/_header_nav.scss */
+/* line 260, ../sass/partials/_header_nav.scss */
 .menu-icon {
   /* this span is the central line of the menu icon */
   display: block;
   width: 24px;
-  height: 1px;
+  height: 2px;
   position: relative;
-  background-color: #959595;
-  -moz-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  background-color: #2a4f77;
+  -moz-transition: background-color 0.6s;
+  -o-transition: background-color 0.6s;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
   /* these are the upper and lower lines in the menu icon */
 }
-/* line 267, ../sass/partials/_header_nav.scss */
+/* line 269, ../sass/partials/_header_nav.scss */
 .menu-icon::before, .menu-icon:after {
   content: '';
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: #959595;
+  background-color: #2a4f77;
   right: 0;
-  -moz-transition: -moz-transform 0.3s, top 0.3s, background-color 0s;
-  -o-transition: -o-transform 0.3s, top 0.3s, background-color 0s;
-  -webkit-transition: -webkit-transform 0.3s, top 0.3s, background-color 0s;
-  transition: transform 0.3s, top 0.3s, background-color 0s;
+  -moz-transition: -moz-transform 0.6s, top 0.6s, background-color 0s;
+  -o-transition: -o-transform 0.6s, top 0.6s, background-color 0s;
+  -webkit-transition: -webkit-transform 0.6s, top 0.6s, background-color 0s;
+  transition: transform 0.6s, top 0.6s, background-color 0s;
 }
-/* line 277, ../sass/partials/_header_nav.scss */
+/* line 279, ../sass/partials/_header_nav.scss */
 .menu-icon::before {
   top: -7px;
 }
-/* line 280, ../sass/partials/_header_nav.scss */
+/* line 282, ../sass/partials/_header_nav.scss */
 .menu-icon::after {
   top: 7px;
 }
-/* line 283, ../sass/partials/_header_nav.scss */
-.menu-icon.is-clicked {
-  background-color: rgba(42, 79, 119, 0);
-}
 /* line 285, ../sass/partials/_header_nav.scss */
-.menu-icon.is-clicked::before, .menu-icon.is-clicked::after {
-  background-color: #2a4f77;
+.menu-icon.is-clicked {
+  background-color: rgba(242, 171, 62, 0);
 }
-/* line 289, ../sass/partials/_header_nav.scss */
+/* line 287, ../sass/partials/_header_nav.scss */
+.menu-icon.is-clicked::before, .menu-icon.is-clicked::after {
+  background-color: #fe747d;
+}
+/* line 291, ../sass/partials/_header_nav.scss */
 .menu-icon.is-clicked::before {
   top: 0;
   -moz-transform: rotate(135deg);
@@ -4841,7 +4846,7 @@ header[role="banner"] .brand_img {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-/* line 293, ../sass/partials/_header_nav.scss */
+/* line 295, ../sass/partials/_header_nav.scss */
 .menu-icon.is-clicked::after {
   top: 0;
   -moz-transform: rotate(225deg);
@@ -4850,7 +4855,7 @@ header[role="banner"] .brand_img {
   transform: rotate(225deg);
 }
 
-/* line 301, ../sass/partials/_header_nav.scss */
+/* line 303, ../sass/partials/_header_nav.scss */
 .formWidgetHeader {
   left: 0px;
   position: fixed;
@@ -4860,7 +4865,7 @@ header[role="banner"] .brand_img {
   z-index: 99;
 }
 
-/* line 310, ../sass/partials/_header_nav.scss */
+/* line 312, ../sass/partials/_header_nav.scss */
 .widgetHeaderWrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -4881,7 +4886,7 @@ header[role="banner"] .brand_img {
   background-color: white;
 }
 
-/* line 326, ../sass/partials/_header_nav.scss */
+/* line 328, ../sass/partials/_header_nav.scss */
 .formNavGroup {
   display: -webkit-box;
   display: -moz-box;
@@ -4891,13 +4896,13 @@ header[role="banner"] .brand_img {
   flex: 1 0 auto;
 }
 
-/* line 331, ../sass/partials/_header_nav.scss */
+/* line 333, ../sass/partials/_header_nav.scss */
 .navGroupLeft {
   -webkit-box-pack: start;
   justify-content: flex-start;
 }
 
-/* line 336, ../sass/partials/_header_nav.scss */
+/* line 338, ../sass/partials/_header_nav.scss */
 .navGroupCenter {
   flex-grow: 0;
   flex-shrink: 0;
@@ -4905,13 +4910,13 @@ header[role="banner"] .brand_img {
   justify-content: center;
 }
 
-/* line 343, ../sass/partials/_header_nav.scss */
+/* line 345, ../sass/partials/_header_nav.scss */
 .navGroupRight {
   -webkit-box-pack: end;
   justify-content: flex-end;
 }
 
-/* line 348, ../sass/partials/_header_nav.scss */
+/* line 350, ../sass/partials/_header_nav.scss */
 .navGroupItem {
   padding-left: 10px;
   padding-right: 10px;
@@ -4935,24 +4940,24 @@ header[role="banner"] .brand_img {
   fill: #959595;
   /* Tablets and phablets */
 }
-/* line 362, ../sass/partials/_header_nav.scss */
+/* line 364, ../sass/partials/_header_nav.scss */
 .navGroupLeft .navGroupItem:not(.formTitle) {
   border-right: 1px solid #dbf5f8;
 }
-/* line 365, ../sass/partials/_header_nav.scss */
+/* line 367, ../sass/partials/_header_nav.scss */
 .navGroupLeft .navGroupItem:not(.formTitle):hover, .navGroupLeft .navGroupItem:not(.formTitle):focus {
   background-color: #f5f5f5;
   fill: #F2AB3E;
 }
 @media only screen and (min-width: 768px) {
-  /* line 348, ../sass/partials/_header_nav.scss */
+  /* line 350, ../sass/partials/_header_nav.scss */
   .navGroupItem {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-/* line 377, ../sass/partials/_header_nav.scss */
+/* line 379, ../sass/partials/_header_nav.scss */
 .formSubmit {
   background-color: #2a4f77;
   color: #f5f5f5;
@@ -4960,23 +4965,23 @@ header[role="banner"] .brand_img {
   text-transform: uppercase;
   /* Tablets and phablets */
 }
-/* line 383, ../sass/partials/_header_nav.scss */
+/* line 385, ../sass/partials/_header_nav.scss */
 .formSubmit:hover, .formSubmit:focus {
   background-color: #252525;
 }
 @media only screen and (min-width: 768px) {
-  /* line 377, ../sass/partials/_header_nav.scss */
+  /* line 379, ../sass/partials/_header_nav.scss */
   .formSubmit {
     padding-right: 45px;
     padding-left: 45px;
   }
 }
-/* line 392, ../sass/partials/_header_nav.scss */
+/* line 394, ../sass/partials/_header_nav.scss */
 .formSubmit.disabled, .formSubmit:disabled {
   background-color: #959595;
 }
 
-/* line 397, ../sass/partials/_header_nav.scss */
+/* line 399, ../sass/partials/_header_nav.scss */
 .formProgressBar {
   background-color: transparent;
   height: 2px;
@@ -4988,7 +4993,7 @@ header[role="banner"] .brand_img {
   bottom: 1px;
 }
 
-/* line 408, ../sass/partials/_header_nav.scss */
+/* line 410, ../sass/partials/_header_nav.scss */
 .countdownTimer {
   border-left: 1px solid #dbf5f8;
 }
