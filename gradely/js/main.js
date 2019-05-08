@@ -27,37 +27,41 @@ jQuery(document).ready(function($){
     
     /* General Navigation*/
 
-    //primary navigation slide-in effect
+   //primary navigation slide-in effect
     // Toggles the top-navs fixed and scroll state.
+    var MQL = 768;
 
-      var headerHeight = $('.mainHeader').height();
-      $(window).on('scroll', {
+    if ($(window).width() > MQL) {
+        var headerHeight = $('.preAuthHeader').height();
+        $(window).on('scroll', {
             previousTop: 0
-        }, 
-        function () {
-          var currentTop = $(window).scrollTop();
-          //check if user is scrolling up
-          if (currentTop < this.previousTop ) {
-            //if scrolling up...
-            if (currentTop > 0 && $('.mainHeader').hasClass('is-fixed')) {
-              $('.mainHeader').addClass('is-visible');
+          },
+          function() {
+            var currentTop = $(window).scrollTop();
+            //check if user is scrolling up
+            if (currentTop < this.previousTop) {
+                //if scrolling up...
+                if (currentTop > 0 && $('.preAuthHeader').hasClass('is-fixed')) {
+                    $('.preAuthHeader').addClass('is-visible');
+                } else {
+                    $('.preAuthHeader').removeClass('is-visible is-fixed');
+                }
             } else {
-              $('.mainHeader').removeClass('is-visible is-fixed');
+                //if scrolling down...
+                $('.preAuthHeader').removeClass('is-visible');
+                if (currentTop > headerHeight && !$('.preAuthHeader').hasClass('is-fixed')) {
+                    $('.preAuthHeader').addClass('is-fixed');
+                }
             }
-          } else {
-            //if scrolling down...
-            $('.mainHeader').removeClass('is-visible');
-            if( currentTop > headerHeight && !$('.mainHeader').hasClass('is-fixed')) $('.mainHeader').addClass('is-fixed');
-          }
-          this.previousTop = currentTop;
-      });
-        
+            this.previousTop = currentTop;
+        });
+    }
         //open/close primary navigation
     $('.primary-nav-trigger').on('click', function(event){
         event.stopPropagation();
         $('.menu-icon').toggleClass('is-clicked');
-        $('.mainHeader').toggleClass('menu-is-open');
-        $('.mainHeader').toggleClass('is-active');
+        $('header[role="banner"]').toggleClass('menu-is-open');
+        $('header[role="banner"]').toggleClass('is-active');
         $('body').toggleClass('scroll_lock');
     });
         
