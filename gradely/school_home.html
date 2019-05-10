@@ -18,7 +18,68 @@
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
 </head>
 
-<body class="">
+<body>
+
+    <div class="modal fade" id="school_signup">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="content-panel">
+                        <section class="formPane ">
+                            <h3 class="title title_sm font-bold margin_bottom_md">Become a Pilot School</h3>
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="control-label">School name</label>
+                                    <input type="text" class="form-control" placeholder="The name of your school">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Contact Person</label>
+                                    <input type="text" class="form-control" placeholder="Name of contact person ">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Contact's Role</label>
+                                    <input type="text" class="form-control" placeholder="The role of contact person. E.g School Admin, Head Teacher, e.t.c.">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Contact Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter email address">
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Contact Phone number</label>
+                                    <input type="text" class="form-control" value="+234">
+                                </div>
+                                <div class="form_cta text-right">
+                                    <button type="submit" class="btn btn-primary">
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+                        <!-- Hide the form pane and show this after the user submit the form -->
+                        <section class="responsePane hidden">
+                            <div class="content_wrapper text-center">
+                                <div class="defImg">
+                                    <img src="./img/icons/task_done.svg" class="avi_xl" alt="">
+                                </div>
+                                <h3 class="title title_sm margin_bottom_md font-bold">Submission Received</h3>
+                                <p class="font-md">We appreciate your interest in joining the Gradely pilot program. Your submission has been received, and we will get back to you with more information on steps!</p>
+                            
+                                <div class="section_cto">
+                                    <button type="button" data-dismiss="modal" class="btn btn-primary-outline">Close</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header role="banner" class="preAuthHeader">
         <div class="container">
@@ -32,10 +93,10 @@
                 </div>
                 <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuPrimary">
-                        <div class="menuListItem active">
+                        <div class="menuListItem">
                             <a href="index.html" class="menuLinkItem">Home</a>
                         </div>
-                        <div class="menuListItem">
+                        <div class="menuListItem active">
                             <a href="school_home.html" class="menuLinkItem">For School</a>
                         </div>
                         <div class="menuListItem">
@@ -58,92 +119,86 @@
         </div>
     </header>
 
-    <section class="hero_area home_hero">
+    <section class="hero_area school_hero">
         <div class="container">
             <div class="heroContentWrapper row">
-                <div class="heroTextWrapper color__inverse_light col-md-7 col-lg-6">
-                    <h2 class="hero_title font-bold color__white">Help your child <br> succeed in Real-time</h2>
-                    <div class="subscribeFormHolder margin_top_lg">
-                        <div class="formcontrolItem formInputHolder">
-                            <input type="text" class="form-control input-rounded" placeholder="Enter your email address">
-                        </div>
-                        <div class="formcontrolItem formInputBtn">
-                            <button type="submit" class="btn btn-secondary">Sign Me Up</button>
-                        </div>
-                    </div>
-                    <p class="font-md margin_top_sm">Sign up to be among the first to know when we go live.</p>
+                <div class="heroTextWrapper color__inverse_light col-md-10 col-lg-7">
+                    <h2 class="hero_title font-bold color__white">Transform your school through e-learning and the power of digitized homework </h2>
                 </div>
             </div>
         </div>
-        <div class="homeHeroAngle heroBottomArch"></div>
+        <div class="herobottomShape heroBottomArch"></div>
     </section>
-
     <main class="mainContentArea bg__white">
-        <section class="brandLogoHolder">
+        <section class="heroSubs">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-3">
-                        <h4 class="title font-bold caps_upper style_title">Presently Piloted in:</h4>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="logo_grid align-items-center">
-                            <div class="logo_item col">
-                                <img src="./img/icons/DCL.png" alt="DCL">
+                <div class="floatingContentPanel">
+                    <div class="row">
+                        <div class="featureItem col-sm-4">
+                            <div class="feature_wrapper align-items-center text-center">
+                                <figure class="feature_icon margin_bottom_md">
+                                    <div class="featureIconWrapper">
+                                        <img src="./img/icons/classPerformnce.svg" alt="Imporve and Track class performance">
+                                    </div>
+                                </figure>
+                                <div class="feature_details">
+                                    <h4 class="title">Track and Improve academic performance across all classes</h4>
+                                </div>
                             </div>
-                            <div class="logo_item col">
-                                <img src="./img/icons/IMAAD.png" alt="IMAAD">
+                        </div>
+                        <div class="featureItem col-sm-4">
+                            <div class="feature_wrapper align-items-center text-center">
+                                <figure class="feature_icon margin_bottom_md">
+                                    <div class="featureIconWrapper ft_danger">
+                                        <img src="./img/icons/Reporting.svg" alt="Parent Reporting">
+                                    </div>
+                                </figure>
+                                <div class="feature_details">
+                                    <h4 class="title">Improve the experience of Continuous Assessment reporting to parents </h4>
+                                </div>
                             </div>
-                            <div class="logo_item col">
-                                <img src="./img/icons/lekki.png" alt="Lekki British School">
-                            </div>
-                            <div class="logo_item col">
-                                <img src="./img/icons/meadow.png" alt="Meadow Hall">
-                            </div>
-                            <div class="logo_item col">
-                                <img src="./img/icons/Chrisland.png" alt="Chrisland School">
+                        </div>
+                        <div class="featureItem col-sm-4">
+                            <div class="feature_wrapper align-items-center text-center">
+                                <figure class="feature_icon margin_bottom_md ">
+                                    <div class="featureIconWrapper ft_secondary">
+                                        <img src="./img/icons/TeacherGrowth.svg" alt="Teachers growth">
+                                    </div>
+                                </figure>
+                                <div class="feature_details">
+                                    <h4 class="title">Grow quality of teachers with better tracking and training.</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section_block">
-            <div class="container">
-                <div class="row info_sub_row align-items-center">
-                    <div class="col-sm-7 col-lg-5 order-2 order-lg-1">
-                        <h2 class="title title_lg margin_bottom_md font-bold">Personalization of your child’s education is finally here.</h2>
-                        <p class="font-lg">Gradely empowers schools to quickly identify gaps in their students' learning and supports parents to plug them before it is too late.</p>
-                    </div>
-                    <div class="col-sm-5 col-lg-7 order-1 order-lg-2 imageItemHolder">
-                        <img src="./img/banners/ipadPreview2.png" alt="Personalization education">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section_block">
+        <section>
             <div class="container">
                 <div class="row info_sub_row align-items-center">
                     <div class="col-sm-5 col-lg-7 imageItemHolder">
-                        <img src="./img/banners/gradelySuggestions.svg" alt="Personalized Study pack">
+                        <img src="./img/banners/imageShim.png" alt="School">
                     </div>
                     <div class="col-sm-7 col-lg-5">
-                        <h2 class="title title_lg margin_bottom_md font-bold">Get a Personalized Home Study Pack.</h2>
-                        <p class="font-md">Let our system give you insights on your child’s academic performance in real-time and get personalized recommendations for video material and tutor sessions. Buy just the right videos and specific tutor hours needed to help your kid catch up in Math and English Language.</p>
+                        <p class="title title_lg">Bring out the best in your teachers and students. <span class="sbjHighligher">Adopt Gradely for Free.</span></p>
                         <div class="margin_top_lg">
-                            <a href="pricing.html" class="ft_control caps_upper">See our Plans</a>
+                            <a href="#school_signup" data-toggle="modal" class="btn btn-secondary">Sign Up Now</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="hero_area section_hero_banner bg_school">
+        <section class="section_block">
             <div class="container">
-                <div class="heroContentWrapper row">
-                    <div class="heroTextWrapper color__inverse_light text-center offset-lg-2 col-lg-8">
-                        <h3 class="title title_lg font-bold color__white margin_bottom_md">Are you a School or Teacher?</h3>
-                        <p class="hero_blub">Be a pioneer school or teacher today by digitizing homework in your school and personalizing education for your students.  It’s easy and free to implement. </p>
-                        <div class="section_cto">
-                            <a href="school_home.html" class="btn btn-inverse">Learn More</a>
+                <div class="callOutBanner bg_teacher">
+                    <div class="bannerWrapper">
+                        <div class="callOutBox">
+                            <h3 class="title title_sm font-bold caps_upper margin_bottom_md">Are you a School or Teacher?</h3>
+                            <p class="">Be a pioneer school or teacher today by digitizing homework in your school and personalizing education for your students.  It’s easy and free to implement. </p>
+                            <div class="margin_top_lg">
+                                <a href="teacherSignup.html" class="btn btn-secondary">Sign Up now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -152,7 +207,7 @@
         <section class="section_block">
             <div class="container">
                 <header class="text-center">
-                    <h4 class="title title_sm style_title caps_upper font-bold">Parents love Gradely</h4>
+                    <h4 class="title title_sm style_title caps_upper font-bold">Find out what schools are saying</h4>
                 </header>
                 <div class="row">
                     <div class="offset-lg-2 col-lg-8">
@@ -198,7 +253,7 @@
         <footer role="contentinfo" class="footerArea bg__inverse_light">
             <div class="footerArc"></div>
             <div class="container">
-                <section class="footerTop footerRow">
+                <section class="footerTop hidden footerRow">
                     <div class="text-center">
                         <h3 class="title title_lg margin_bottom_lg color__primary">Be the first to know when we launch</h3>
                         <div class="row">
