@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Setup your account - Add crops | Farmzone</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal alt_modal fade" id="newCrop">
+        <div class="pageClose dialogDismiss">
+            <button type="button" class="close_dialog cls_lg" data-dismiss="modal"></button>
+        </div>
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <header class="section_header font-md">
+                        <h3 class="title title_md color__black font-bold">Crop Details</h3>
+                    </header>
+                    <form action="">
+                        <fieldset>
+
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Crop Name</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <input type="text" class="form-control" placeholder="E.g. Plantains">
+                                </div>
+                            </div>
+
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Crop Type</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <select class="form-control">
+                                        <option>Select Crop type</option>
+                                        <option>Cash Crop</option>
+                                        <option>Food Crop</option>
+                                        <option>Ornamental Crop</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Farming Seasone</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <select class="form-control">
+                                        <option>Select Season</option>
+                                        <option>Raining</option>
+                                        <option>Harmattan</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Number of Seeds</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <div class="inputaffixed inputSurfixed">
+                                        <div class="inputfixture order-2">
+                                            <span>Seeds</span>
+                                        </div>
+                                        <input type="number" maxlength="10" class="inputControl form-control order-1" placeholder="1000">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Size of Planting Area</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <div class="inputaffixed inputSurfixed">
+                                        <div class="inputfixture order-2">
+                                            <span>sqm</span>
+                                        </div>
+                                        <input type="number" maxlength="10" class="inputControl form-control order-1" placeholder="750">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Date Planted</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <div class="date_selector_widget">
+                                        <div class="date_item">
+                                            <label class="control-label font-bold sr-only">Day</label>
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                                <option>9</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                                <option>25</option>
+                                            </select>
+                                        </div>
+                                        <div class="date_item">
+                                            <label class="control-label sr-only">Month</label>
+                                            <select class="form-control">
+                                                <option>January</option>
+                                                <option>February</option>
+                                                <option>March</option>
+                                                <option>April</option>
+                                                <option>May</option>
+                                                <option>June</option>
+                                                <option>July</option>
+                                                <option>Aughust</option>
+                                                <option>September</option>
+                                                <option>October</option>
+                                                <option>November</option>
+                                                <option>December</option>
+                                            </select>
+                                        </div>
+                                        <div class="date_item">
+                                            <label class="control-label font-bold sr-only">Year</label>
+                                            <select class="form-control">
+                                                <option>2017</option>
+                                                <option>2018</option>
+                                                <option selected>2019</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Farm Inputs</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <textarea class="form-control" rows="4" placeholder=""></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Price per kg</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <div class="inputaffixed inputPrefixed">
+                                        <div class="inputfixture">
+                                            <span>₦</span>
+                                        </div>
+                                        <input type="number" maxlength="10" class="inputControl form-control" placeholder="2500">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        
+                        <fieldset>
+                            <label class="control-label  font-bold caps_upper">Farming stage</label>
+                            <p>Set how long the crop is expected to spend in each of the listed phases</p>
+                            <div class="row form_row_group margin_top_md">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Planting</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <div class="inputaffixed inputSurfixed">
+                                        <div class="inputfixture order-2">
+                                            <select class="fixtureControl">
+                                                <option selected>Days</option>
+                                                <option>Weeks</option>
+                                                <option>Months</option>
+                                                <option>Years</option>
+                                            </select>
+                                        </div>
+                                        <input type="number" maxlength="10" class="inputControl form-control order-1" placeholder="10">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Growing</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <div class="inputaffixed inputSurfixed">
+                                        <div class="inputfixture order-2">
+                                            <select class="fixtureControl">
+                                                <option>Days</option>
+                                                <option selected>Weeks</option>
+                                                <option>Months</option>
+                                                <option>Years</option>
+                                            </select>
+                                        </div>
+                                        <input type="number" maxlength="10" class="inputControl form-control order-1" placeholder="45">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form_row_group">
+                                <div class="form_group_item col-4">
+                                    <h4 class="form_row_title font-bold">Harvest</h4>
+                                </div>
+                                <div class="form_group_item col-8">
+                                    <div class="inputaffixed inputSurfixed">
+                                        <div class="inputfixture order-2">
+                                            <select class="fixtureControl"> 
+                                                <option selected>Days</option>
+                                                <option>Weeks</option>
+                                                <option>Months</option>
+                                                <option>Years</option>
+                                            </select>
+                                        </div>
+                                        <input type="number" maxlength="10" class="inputControl form-control order-1" placeholder="5">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <label class="control-label  font-bold caps_upper">Crop Images</label>
+                            <p>Attach at least one image of the crop.</p>
+                            <div class="attachment_tray margin_top_md">
+                                <div class="tray_item attachment_control">
+                                    <label for="upload_imgs" class="upload_btn" title="Select Image">
+                                        <input type="file" multiple accept=".png, .jpg, .jpeg" name="file" id="upload_imgs" hidden="" class="inputfile">
+                                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"></polygon>
+                                        </svg>
+                                    </label>
+                                </div>
+                                <div class="tray_item attachment_tile">
+                                    <figure class="tile_image">
+                                        <div class="image_wrapper">
+                                            <img src="../img/banners/auth_bg.jpg">
+                                            <div class="attachment_dismiss">
+                                                <a href="#" class="dataDismiss">
+                                                    <svg class="cust_icon " viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"/>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 8.29289C16.0976 8.68342 16.0976 9.31658 15.7071 9.70711L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L14.2929 8.29289C14.6834 7.90237 15.3166 7.90237 15.7071 8.29289Z"/>
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 8.29289C8.68342 7.90237 9.31658 7.90237 9.70711 8.29289L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L8.29289 9.70711C7.90237 9.31658 7.90237 8.68342 8.29289 8.29289Z"/>
+                                                    </svg>                                                            
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="form_cta text-center">
+                        <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Crop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="formWidgetHeader">
+        <div class="widgetHeaderWrapper">
+            <div class="formNavGroup navGroupLeft">
+            <a href="account_setup_three.html" class="navGroupItem formClose" title="Skip this Setup">
+                Skip
+            </a>
+            <a href="account_setup_one.html" title="Previous Step" class="navGroupItem navBack">
+                <svg class="cust_icon" viewBox="0 0 30 30" fill="none" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.575 13.9394L9.51447 14.9999L18 23.4854L20.121 21.3644L13.758 14.9999L20.121 8.6354L18 6.5144L10.575 13.9394Z"/>
+                </svg>
+            </a>
+            </div>
+            <div class="formNavGroup navGroupCenter">
+            <div class="navGroupItem formTitle">
+                <h4 class="title font-bold">Setup your account</h4>
+            </div>
+            </div>
+            <div class="formNavGroup navGroupRight">
+            <a href="account_setup_three.html" class="navGroupItem formSubmit">
+                Next
+            </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="formWidgetWrapper row no-gutters">
+            <section class="formWidgetbody bg__white col-md-9 col-lg-8">
+                <div class="section_block">
+                    <div class="container form_body">
+                        <header class="section_header font-md">
+                            <h3 class="title title_md color__black font-bold">Farm Produce</h3>
+                        </header>
+                        <div class="content_inner">
+                            <div class="pageDefault margin_bottom_lg">
+                                <div class="userOptions row">
+                                    <article class="actionCard col-sm-6">
+                                        <a href="#newCrop" data-toggle="modal" data-backdrop="static" class="actionCardWrapper">
+                                            <div class="media_item">
+                                                <div class="media_figure">
+                                                    <i class="cust_icon icon_crop"></i>
+                                                </div>
+                                                <div class="media_info">
+                                                    <h4 class="title font-bold margin_bottom_sm">Add a Crop</h4>
+                                                    <p>Add information about the different crops grown on your farms</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </article>
+                                    <article class="actionCard col-sm-6">
+                                        <a href="#newAnimal" data-toggle="modal" data-backdrop="static" class="actionCardWrapper">
+                                            <div class="media_item">
+                                                <div class="media_figure">
+                                                    <i class="cust_icon icon_animal"></i>
+                                                </div>
+                                                <div class="media_info">
+                                                    <h4 class="title font-bold margin_bottom_sm">Add an Animal</h4>
+                                                    <p>Add information about the different animals you raise on your farm.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="base_divider"></div>
+                            <div class="previewList ">
+                                <header class="groupHeader">
+                                    <span class="title caps_upper font_bold">My Crops</span>
+                                    <span class="opt_rule"></span>
+                                </header>
+                                <div class="verticla_item_list matter_list">
+                                    <article class="list_item">
+                                        <div class="listItemWrapper media_item">
+                                            <div class="media_fgure">
+                                                <div class="icon_box box_inverse">
+                                                    <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18.1144 15.4416C17.9013 15.2284 17.5855 15.1697 17.3099 15.2921C15.5553 16.071 14.4857 16.6461 14.1308 17.0013C13.7772 17.3547 13.5599 17.8079 13.519 18.2775C13.4929 18.5778 13.5432 18.8699 13.6597 19.1274L12.5434 20.2422V16.338H12.5433L14.427 14.4569C14.6421 14.5538 14.8781 14.6019 15.1194 14.6019C15.6217 14.6019 16.147 14.3938 16.5545 13.9863C16.9097 13.6316 17.4849 12.5619 18.2639 10.8069C18.3863 10.5314 18.3275 10.2155 18.1143 10.0024C17.901 9.78914 17.5852 9.73055 17.3098 9.85289C15.5551 10.6318 14.4855 11.2069 14.1306 11.5621C13.777 11.9154 13.5598 12.3686 13.5189 12.8383C13.4927 13.1385 13.543 13.4306 13.6595 13.6882L12.5432 14.8029V10.9748L14.4269 9.09412C14.6419 9.19111 14.8779 9.2392 15.1192 9.2392C15.6216 9.2392 16.147 9.03094 16.5545 8.62303C16.9096 8.26833 17.4848 7.19864 18.2639 5.44369C18.3862 5.16811 18.3275 4.85227 18.1143 4.63912C17.901 4.42594 17.5851 4.3673 17.3097 4.48964C15.5551 5.26852 14.4855 5.84363 14.1306 6.19884C13.7769 6.55219 13.5597 7.00547 13.5188 7.4753C13.4927 7.77572 13.5429 8.0678 13.6595 8.32537L12.5432 9.43992V5.75644C13.2228 5.49909 13.7141 4.77333 13.7141 3.91988C13.7141 3.41644 13.3644 2.25347 12.6747 0.463266C12.5665 0.181828 12.3016 0 12.0001 0C11.6986 0 11.4338 0.181828 11.3255 0.463125C10.6358 2.25342 10.286 3.41639 10.286 3.91978C10.286 4.77323 10.7773 5.499 11.457 5.75634V9.43983L10.3407 8.32533C10.4572 8.0678 10.5075 7.77563 10.4814 7.47525C10.4405 7.00547 10.2233 6.55219 9.8696 6.1988C9.51471 5.84353 8.44507 5.26852 6.69054 4.48959C6.4151 4.36725 6.09921 4.42589 5.88602 4.63908C5.67279 4.85227 5.61406 5.16806 5.7364 5.44364C6.51551 7.19855 7.09067 8.26823 7.44537 8.62252C7.85309 9.03066 8.3786 9.23906 8.88115 9.23906C9.12237 9.23906 9.35829 9.19102 9.57335 9.09398L11.4571 10.9747V14.8028L10.3408 13.6881C10.4573 13.4306 10.5077 13.1385 10.4815 12.8381C10.4406 12.3685 10.2234 11.9153 9.86979 11.562C9.51485 11.2067 8.44526 10.6316 6.69063 9.85275C6.41524 9.73041 6.09931 9.78905 5.88612 10.0022C5.67288 10.2154 5.6141 10.5312 5.73649 10.8068C6.5156 12.5617 7.09076 13.6314 7.44565 13.9859C7.85342 14.3936 8.3786 14.6017 8.88106 14.6017C9.12227 14.6017 9.35824 14.5537 9.57335 14.4566L11.4572 16.3379V20.2421L10.3409 19.1273C10.4574 18.8699 10.5077 18.5778 10.4816 18.2775C10.4407 17.8078 10.2234 17.3546 9.86979 17.0013C9.5149 16.646 8.44526 16.071 6.69073 15.2921C6.41538 15.1698 6.0994 15.2284 5.88621 15.4416C5.67302 15.6548 5.6142 15.9705 5.73659 16.2462C6.51574 18.0012 7.09085 19.0708 7.44556 19.425C7.79904 19.7788 8.25237 19.9962 8.72215 20.037C8.77427 20.0415 8.82612 20.0438 8.87759 20.0438C9.12326 20.0438 9.36021 19.9927 9.57345 19.896L11.4573 21.7772V22.9136H8.5054C8.20549 22.9136 7.96231 23.1567 7.96231 23.4567C7.96231 23.7567 8.20549 23.9998 8.5054 23.9998H13.8379C14.1378 23.9998 14.381 23.7567 14.381 23.4567C14.381 23.1568 14.1378 22.9136 13.8379 22.9136H12.5435V21.7772L14.4273 19.896C14.6405 19.9927 14.8774 20.0438 15.1232 20.0438C15.1746 20.0438 15.2265 20.0415 15.2786 20.037C15.7483 19.9962 16.2018 19.7789 16.5548 19.4255C16.9099 19.0708 17.485 18.0011 18.2642 16.2462C18.3864 15.9706 18.3277 15.6548 18.1144 15.4416ZM14.601 12.9324C14.6195 12.7202 14.728 12.5007 14.8986 12.3302C14.8987 12.3301 14.8989 12.33 14.8991 12.3298C15.0475 12.1812 15.6515 11.8188 16.8695 11.2472C16.2978 12.4655 15.9356 13.0693 15.7867 13.218C15.4607 13.544 14.9816 13.616 14.7408 13.3755C14.7408 13.3755 14.7408 13.3755 14.7408 13.3755C14.598 13.2327 14.5919 13.0367 14.601 12.9324ZM14.6011 7.56942C14.6195 7.35694 14.728 7.13738 14.8986 6.96694C14.8988 6.9668 14.899 6.96666 14.8991 6.96652C15.0476 6.81788 15.6515 6.45553 16.8696 5.88394C16.2979 7.10217 15.9356 7.70606 15.7865 7.85484C15.4607 8.18105 14.9816 8.25328 14.7408 8.01272C14.598 7.86998 14.5919 7.67372 14.6011 7.56942ZM9.25985 8.01244C9.01863 8.25333 8.53962 8.181 8.21337 7.85437C8.06477 7.70592 7.70253 7.10203 7.1307 5.88389C8.34893 6.45558 8.95273 6.81783 9.10118 6.96647C9.10132 6.96661 9.10151 6.96675 9.10165 6.96689C9.27227 7.13733 9.38074 7.35689 9.39921 7.56938C9.40835 7.67372 9.40231 7.86998 9.25985 8.01244ZM9.25976 13.3752C9.01877 13.616 8.53952 13.544 8.21332 13.2177C8.06473 13.0693 7.70248 12.4654 7.13065 11.2472C8.34888 11.8189 8.95268 12.1812 9.10113 12.3298C9.10127 12.33 9.10146 12.3301 9.1016 12.3302C9.27223 12.5007 9.3807 12.7202 9.39917 12.9324C9.40831 13.0366 9.40221 13.2327 9.25976 13.3752ZM9.25962 18.8146C9.25948 18.8147 9.25934 18.8149 9.2592 18.815C9.25915 18.815 9.2591 18.8151 9.25906 18.8151C9.11618 18.9578 8.92029 18.964 8.81599 18.9549C8.60374 18.9365 8.38427 18.828 8.21337 18.657C8.06477 18.5085 7.70253 17.9046 7.1307 16.6865C8.34893 17.2582 8.95273 17.6204 9.10118 17.769C9.10132 17.7692 9.10151 17.7693 9.10165 17.7695C9.27232 17.9399 9.38074 18.1594 9.39921 18.3717C9.40826 18.4759 9.40217 18.6719 9.25962 18.8146ZM12.0001 4.77037C11.6598 4.77037 11.3723 4.38089 11.3723 3.91983C11.3723 3.70884 11.5433 3.02494 12.0001 1.76025C12.457 3.02512 12.628 3.70884 12.628 3.91983C12.628 4.38089 12.3404 4.77037 12.0001 4.77037ZM15.7865 18.6575C15.6161 18.8281 15.3966 18.9365 15.1843 18.955C15.08 18.9641 14.8838 18.9578 14.7408 18.8148C14.598 18.6721 14.5919 18.476 14.601 18.3718C14.6195 18.1596 14.728 17.94 14.8986 17.7696C14.8987 17.7695 14.8989 17.7693 14.8991 17.7692C15.0475 17.6205 15.6515 17.2582 16.8695 16.6866C16.2978 17.9047 15.9355 18.5087 15.7865 18.6575Z"/>
+                                                        <path d="M15.4946 22.9137H15.3307C15.0308 22.9137 14.7876 23.1568 14.7876 23.4568C14.7876 23.7568 15.0308 24 15.3307 24H15.4946C15.7945 24 16.0377 23.7568 16.0377 23.4568C16.0378 23.1568 15.7946 22.9137 15.4946 22.9137Z"/>
+                                                    </svg>                                                            
+                                                </div>
+                                            </div>
+                                            <div class="media_info">
+                                                <h5 class="title font-bold">Plantains</h5>
+                                                <div class="listmeta">
+                                                    <span class="listMetaItem">Cash Crop</span>
+                                                    <span class="listMetaseperator">•</span>
+                                                    <span class="listMetaItem">₦2,500 Per kg</span>
+                                                </div>
+                                            </div>
+                                            <div class="tableControl">
+                                                <div class="tabelControlItem" title="Edit Details" data-toggle="tooltip">
+                                                    <button type="button" data-target="#newCrop" data-toggle="modal" class="btn-icon">
+                                                        <svg class="cust_icon icon_xs" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9.84 2.96L13.04 6.16L3.2 16H0V12.8L9.84 2.96ZM10.96 1.84L12.8 0L16 3.2L14.16 5.04L10.96 1.84Z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                    <button type="button" class="btn-icon">
+                                                        <svg viewBox="0 0 16 16" class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z"/>
+                                                        </svg>           
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="list_item">
+                                        <div class="listItemWrapper media_item">
+                                            <div class="media_fgure">
+                                                <div class="icon_box box_inverse">
+                                                    <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18.1144 15.4416C17.9013 15.2284 17.5855 15.1697 17.3099 15.2921C15.5553 16.071 14.4857 16.6461 14.1308 17.0013C13.7772 17.3547 13.5599 17.8079 13.519 18.2775C13.4929 18.5778 13.5432 18.8699 13.6597 19.1274L12.5434 20.2422V16.338H12.5433L14.427 14.4569C14.6421 14.5538 14.8781 14.6019 15.1194 14.6019C15.6217 14.6019 16.147 14.3938 16.5545 13.9863C16.9097 13.6316 17.4849 12.5619 18.2639 10.8069C18.3863 10.5314 18.3275 10.2155 18.1143 10.0024C17.901 9.78914 17.5852 9.73055 17.3098 9.85289C15.5551 10.6318 14.4855 11.2069 14.1306 11.5621C13.777 11.9154 13.5598 12.3686 13.5189 12.8383C13.4927 13.1385 13.543 13.4306 13.6595 13.6882L12.5432 14.8029V10.9748L14.4269 9.09412C14.6419 9.19111 14.8779 9.2392 15.1192 9.2392C15.6216 9.2392 16.147 9.03094 16.5545 8.62303C16.9096 8.26833 17.4848 7.19864 18.2639 5.44369C18.3862 5.16811 18.3275 4.85227 18.1143 4.63912C17.901 4.42594 17.5851 4.3673 17.3097 4.48964C15.5551 5.26852 14.4855 5.84363 14.1306 6.19884C13.7769 6.55219 13.5597 7.00547 13.5188 7.4753C13.4927 7.77572 13.5429 8.0678 13.6595 8.32537L12.5432 9.43992V5.75644C13.2228 5.49909 13.7141 4.77333 13.7141 3.91988C13.7141 3.41644 13.3644 2.25347 12.6747 0.463266C12.5665 0.181828 12.3016 0 12.0001 0C11.6986 0 11.4338 0.181828 11.3255 0.463125C10.6358 2.25342 10.286 3.41639 10.286 3.91978C10.286 4.77323 10.7773 5.499 11.457 5.75634V9.43983L10.3407 8.32533C10.4572 8.0678 10.5075 7.77563 10.4814 7.47525C10.4405 7.00547 10.2233 6.55219 9.8696 6.1988C9.51471 5.84353 8.44507 5.26852 6.69054 4.48959C6.4151 4.36725 6.09921 4.42589 5.88602 4.63908C5.67279 4.85227 5.61406 5.16806 5.7364 5.44364C6.51551 7.19855 7.09067 8.26823 7.44537 8.62252C7.85309 9.03066 8.3786 9.23906 8.88115 9.23906C9.12237 9.23906 9.35829 9.19102 9.57335 9.09398L11.4571 10.9747V14.8028L10.3408 13.6881C10.4573 13.4306 10.5077 13.1385 10.4815 12.8381C10.4406 12.3685 10.2234 11.9153 9.86979 11.562C9.51485 11.2067 8.44526 10.6316 6.69063 9.85275C6.41524 9.73041 6.09931 9.78905 5.88612 10.0022C5.67288 10.2154 5.6141 10.5312 5.73649 10.8068C6.5156 12.5617 7.09076 13.6314 7.44565 13.9859C7.85342 14.3936 8.3786 14.6017 8.88106 14.6017C9.12227 14.6017 9.35824 14.5537 9.57335 14.4566L11.4572 16.3379V20.2421L10.3409 19.1273C10.4574 18.8699 10.5077 18.5778 10.4816 18.2775C10.4407 17.8078 10.2234 17.3546 9.86979 17.0013C9.5149 16.646 8.44526 16.071 6.69073 15.2921C6.41538 15.1698 6.0994 15.2284 5.88621 15.4416C5.67302 15.6548 5.6142 15.9705 5.73659 16.2462C6.51574 18.0012 7.09085 19.0708 7.44556 19.425C7.79904 19.7788 8.25237 19.9962 8.72215 20.037C8.77427 20.0415 8.82612 20.0438 8.87759 20.0438C9.12326 20.0438 9.36021 19.9927 9.57345 19.896L11.4573 21.7772V22.9136H8.5054C8.20549 22.9136 7.96231 23.1567 7.96231 23.4567C7.96231 23.7567 8.20549 23.9998 8.5054 23.9998H13.8379C14.1378 23.9998 14.381 23.7567 14.381 23.4567C14.381 23.1568 14.1378 22.9136 13.8379 22.9136H12.5435V21.7772L14.4273 19.896C14.6405 19.9927 14.8774 20.0438 15.1232 20.0438C15.1746 20.0438 15.2265 20.0415 15.2786 20.037C15.7483 19.9962 16.2018 19.7789 16.5548 19.4255C16.9099 19.0708 17.485 18.0011 18.2642 16.2462C18.3864 15.9706 18.3277 15.6548 18.1144 15.4416ZM14.601 12.9324C14.6195 12.7202 14.728 12.5007 14.8986 12.3302C14.8987 12.3301 14.8989 12.33 14.8991 12.3298C15.0475 12.1812 15.6515 11.8188 16.8695 11.2472C16.2978 12.4655 15.9356 13.0693 15.7867 13.218C15.4607 13.544 14.9816 13.616 14.7408 13.3755C14.7408 13.3755 14.7408 13.3755 14.7408 13.3755C14.598 13.2327 14.5919 13.0367 14.601 12.9324ZM14.6011 7.56942C14.6195 7.35694 14.728 7.13738 14.8986 6.96694C14.8988 6.9668 14.899 6.96666 14.8991 6.96652C15.0476 6.81788 15.6515 6.45553 16.8696 5.88394C16.2979 7.10217 15.9356 7.70606 15.7865 7.85484C15.4607 8.18105 14.9816 8.25328 14.7408 8.01272C14.598 7.86998 14.5919 7.67372 14.6011 7.56942ZM9.25985 8.01244C9.01863 8.25333 8.53962 8.181 8.21337 7.85437C8.06477 7.70592 7.70253 7.10203 7.1307 5.88389C8.34893 6.45558 8.95273 6.81783 9.10118 6.96647C9.10132 6.96661 9.10151 6.96675 9.10165 6.96689C9.27227 7.13733 9.38074 7.35689 9.39921 7.56938C9.40835 7.67372 9.40231 7.86998 9.25985 8.01244ZM9.25976 13.3752C9.01877 13.616 8.53952 13.544 8.21332 13.2177C8.06473 13.0693 7.70248 12.4654 7.13065 11.2472C8.34888 11.8189 8.95268 12.1812 9.10113 12.3298C9.10127 12.33 9.10146 12.3301 9.1016 12.3302C9.27223 12.5007 9.3807 12.7202 9.39917 12.9324C9.40831 13.0366 9.40221 13.2327 9.25976 13.3752ZM9.25962 18.8146C9.25948 18.8147 9.25934 18.8149 9.2592 18.815C9.25915 18.815 9.2591 18.8151 9.25906 18.8151C9.11618 18.9578 8.92029 18.964 8.81599 18.9549C8.60374 18.9365 8.38427 18.828 8.21337 18.657C8.06477 18.5085 7.70253 17.9046 7.1307 16.6865C8.34893 17.2582 8.95273 17.6204 9.10118 17.769C9.10132 17.7692 9.10151 17.7693 9.10165 17.7695C9.27232 17.9399 9.38074 18.1594 9.39921 18.3717C9.40826 18.4759 9.40217 18.6719 9.25962 18.8146ZM12.0001 4.77037C11.6598 4.77037 11.3723 4.38089 11.3723 3.91983C11.3723 3.70884 11.5433 3.02494 12.0001 1.76025C12.457 3.02512 12.628 3.70884 12.628 3.91983C12.628 4.38089 12.3404 4.77037 12.0001 4.77037ZM15.7865 18.6575C15.6161 18.8281 15.3966 18.9365 15.1843 18.955C15.08 18.9641 14.8838 18.9578 14.7408 18.8148C14.598 18.6721 14.5919 18.476 14.601 18.3718C14.6195 18.1596 14.728 17.94 14.8986 17.7696C14.8987 17.7695 14.8989 17.7693 14.8991 17.7692C15.0475 17.6205 15.6515 17.2582 16.8695 16.6866C16.2978 17.9047 15.9355 18.5087 15.7865 18.6575Z"/>
+                                                        <path d="M15.4946 22.9137H15.3307C15.0308 22.9137 14.7876 23.1568 14.7876 23.4568C14.7876 23.7568 15.0308 24 15.3307 24H15.4946C15.7945 24 16.0377 23.7568 16.0377 23.4568C16.0378 23.1568 15.7946 22.9137 15.4946 22.9137Z"/>
+                                                    </svg>                                                            
+                                                </div>
+                                            </div>
+                                            <div class="media_info">
+                                                <h5 class="title font-bold">Plantains</h5>
+                                                <div class="listmeta">
+                                                    <span class="listMetaItem">Cash Crop</span>
+                                                    <span class="listMetaseperator">•</span>
+                                                    <span class="listMetaItem">₦2,500 Per kg</span>
+                                                </div>
+                                            </div>
+                                            <div class="tableControl">
+                                                <div class="tabelControlItem" title="Edit Details" data-toggle="tooltip">
+                                                    <button type="button" data-target="#newCrop" data-toggle="modal" class="btn-icon">
+                                                        <svg class="cust_icon icon_xs" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9.84 2.96L13.04 6.16L3.2 16H0V12.8L9.84 2.96ZM10.96 1.84L12.8 0L16 3.2L14.16 5.04L10.96 1.84Z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                    <button type="button" class="btn-icon">
+                                                        <svg viewBox="0 0 16 16" class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z"/>
+                                                        </svg>           
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="list_item">
+                                        <div class="listItemWrapper media_item">
+                                            <div class="media_fgure">
+                                                <div class="icon_box box_inverse">
+                                                    <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18.1144 15.4416C17.9013 15.2284 17.5855 15.1697 17.3099 15.2921C15.5553 16.071 14.4857 16.6461 14.1308 17.0013C13.7772 17.3547 13.5599 17.8079 13.519 18.2775C13.4929 18.5778 13.5432 18.8699 13.6597 19.1274L12.5434 20.2422V16.338H12.5433L14.427 14.4569C14.6421 14.5538 14.8781 14.6019 15.1194 14.6019C15.6217 14.6019 16.147 14.3938 16.5545 13.9863C16.9097 13.6316 17.4849 12.5619 18.2639 10.8069C18.3863 10.5314 18.3275 10.2155 18.1143 10.0024C17.901 9.78914 17.5852 9.73055 17.3098 9.85289C15.5551 10.6318 14.4855 11.2069 14.1306 11.5621C13.777 11.9154 13.5598 12.3686 13.5189 12.8383C13.4927 13.1385 13.543 13.4306 13.6595 13.6882L12.5432 14.8029V10.9748L14.4269 9.09412C14.6419 9.19111 14.8779 9.2392 15.1192 9.2392C15.6216 9.2392 16.147 9.03094 16.5545 8.62303C16.9096 8.26833 17.4848 7.19864 18.2639 5.44369C18.3862 5.16811 18.3275 4.85227 18.1143 4.63912C17.901 4.42594 17.5851 4.3673 17.3097 4.48964C15.5551 5.26852 14.4855 5.84363 14.1306 6.19884C13.7769 6.55219 13.5597 7.00547 13.5188 7.4753C13.4927 7.77572 13.5429 8.0678 13.6595 8.32537L12.5432 9.43992V5.75644C13.2228 5.49909 13.7141 4.77333 13.7141 3.91988C13.7141 3.41644 13.3644 2.25347 12.6747 0.463266C12.5665 0.181828 12.3016 0 12.0001 0C11.6986 0 11.4338 0.181828 11.3255 0.463125C10.6358 2.25342 10.286 3.41639 10.286 3.91978C10.286 4.77323 10.7773 5.499 11.457 5.75634V9.43983L10.3407 8.32533C10.4572 8.0678 10.5075 7.77563 10.4814 7.47525C10.4405 7.00547 10.2233 6.55219 9.8696 6.1988C9.51471 5.84353 8.44507 5.26852 6.69054 4.48959C6.4151 4.36725 6.09921 4.42589 5.88602 4.63908C5.67279 4.85227 5.61406 5.16806 5.7364 5.44364C6.51551 7.19855 7.09067 8.26823 7.44537 8.62252C7.85309 9.03066 8.3786 9.23906 8.88115 9.23906C9.12237 9.23906 9.35829 9.19102 9.57335 9.09398L11.4571 10.9747V14.8028L10.3408 13.6881C10.4573 13.4306 10.5077 13.1385 10.4815 12.8381C10.4406 12.3685 10.2234 11.9153 9.86979 11.562C9.51485 11.2067 8.44526 10.6316 6.69063 9.85275C6.41524 9.73041 6.09931 9.78905 5.88612 10.0022C5.67288 10.2154 5.6141 10.5312 5.73649 10.8068C6.5156 12.5617 7.09076 13.6314 7.44565 13.9859C7.85342 14.3936 8.3786 14.6017 8.88106 14.6017C9.12227 14.6017 9.35824 14.5537 9.57335 14.4566L11.4572 16.3379V20.2421L10.3409 19.1273C10.4574 18.8699 10.5077 18.5778 10.4816 18.2775C10.4407 17.8078 10.2234 17.3546 9.86979 17.0013C9.5149 16.646 8.44526 16.071 6.69073 15.2921C6.41538 15.1698 6.0994 15.2284 5.88621 15.4416C5.67302 15.6548 5.6142 15.9705 5.73659 16.2462C6.51574 18.0012 7.09085 19.0708 7.44556 19.425C7.79904 19.7788 8.25237 19.9962 8.72215 20.037C8.77427 20.0415 8.82612 20.0438 8.87759 20.0438C9.12326 20.0438 9.36021 19.9927 9.57345 19.896L11.4573 21.7772V22.9136H8.5054C8.20549 22.9136 7.96231 23.1567 7.96231 23.4567C7.96231 23.7567 8.20549 23.9998 8.5054 23.9998H13.8379C14.1378 23.9998 14.381 23.7567 14.381 23.4567C14.381 23.1568 14.1378 22.9136 13.8379 22.9136H12.5435V21.7772L14.4273 19.896C14.6405 19.9927 14.8774 20.0438 15.1232 20.0438C15.1746 20.0438 15.2265 20.0415 15.2786 20.037C15.7483 19.9962 16.2018 19.7789 16.5548 19.4255C16.9099 19.0708 17.485 18.0011 18.2642 16.2462C18.3864 15.9706 18.3277 15.6548 18.1144 15.4416ZM14.601 12.9324C14.6195 12.7202 14.728 12.5007 14.8986 12.3302C14.8987 12.3301 14.8989 12.33 14.8991 12.3298C15.0475 12.1812 15.6515 11.8188 16.8695 11.2472C16.2978 12.4655 15.9356 13.0693 15.7867 13.218C15.4607 13.544 14.9816 13.616 14.7408 13.3755C14.7408 13.3755 14.7408 13.3755 14.7408 13.3755C14.598 13.2327 14.5919 13.0367 14.601 12.9324ZM14.6011 7.56942C14.6195 7.35694 14.728 7.13738 14.8986 6.96694C14.8988 6.9668 14.899 6.96666 14.8991 6.96652C15.0476 6.81788 15.6515 6.45553 16.8696 5.88394C16.2979 7.10217 15.9356 7.70606 15.7865 7.85484C15.4607 8.18105 14.9816 8.25328 14.7408 8.01272C14.598 7.86998 14.5919 7.67372 14.6011 7.56942ZM9.25985 8.01244C9.01863 8.25333 8.53962 8.181 8.21337 7.85437C8.06477 7.70592 7.70253 7.10203 7.1307 5.88389C8.34893 6.45558 8.95273 6.81783 9.10118 6.96647C9.10132 6.96661 9.10151 6.96675 9.10165 6.96689C9.27227 7.13733 9.38074 7.35689 9.39921 7.56938C9.40835 7.67372 9.40231 7.86998 9.25985 8.01244ZM9.25976 13.3752C9.01877 13.616 8.53952 13.544 8.21332 13.2177C8.06473 13.0693 7.70248 12.4654 7.13065 11.2472C8.34888 11.8189 8.95268 12.1812 9.10113 12.3298C9.10127 12.33 9.10146 12.3301 9.1016 12.3302C9.27223 12.5007 9.3807 12.7202 9.39917 12.9324C9.40831 13.0366 9.40221 13.2327 9.25976 13.3752ZM9.25962 18.8146C9.25948 18.8147 9.25934 18.8149 9.2592 18.815C9.25915 18.815 9.2591 18.8151 9.25906 18.8151C9.11618 18.9578 8.92029 18.964 8.81599 18.9549C8.60374 18.9365 8.38427 18.828 8.21337 18.657C8.06477 18.5085 7.70253 17.9046 7.1307 16.6865C8.34893 17.2582 8.95273 17.6204 9.10118 17.769C9.10132 17.7692 9.10151 17.7693 9.10165 17.7695C9.27232 17.9399 9.38074 18.1594 9.39921 18.3717C9.40826 18.4759 9.40217 18.6719 9.25962 18.8146ZM12.0001 4.77037C11.6598 4.77037 11.3723 4.38089 11.3723 3.91983C11.3723 3.70884 11.5433 3.02494 12.0001 1.76025C12.457 3.02512 12.628 3.70884 12.628 3.91983C12.628 4.38089 12.3404 4.77037 12.0001 4.77037ZM15.7865 18.6575C15.6161 18.8281 15.3966 18.9365 15.1843 18.955C15.08 18.9641 14.8838 18.9578 14.7408 18.8148C14.598 18.6721 14.5919 18.476 14.601 18.3718C14.6195 18.1596 14.728 17.94 14.8986 17.7696C14.8987 17.7695 14.8989 17.7693 14.8991 17.7692C15.0475 17.6205 15.6515 17.2582 16.8695 16.6866C16.2978 17.9047 15.9355 18.5087 15.7865 18.6575Z"/>
+                                                        <path d="M15.4946 22.9137H15.3307C15.0308 22.9137 14.7876 23.1568 14.7876 23.4568C14.7876 23.7568 15.0308 24 15.3307 24H15.4946C15.7945 24 16.0377 23.7568 16.0377 23.4568C16.0378 23.1568 15.7946 22.9137 15.4946 22.9137Z"/>
+                                                    </svg>                                                            
+                                                </div>
+                                            </div>
+                                            <div class="media_info">
+                                                <h5 class="title font-bold">Plantains</h5>
+                                                <div class="listmeta">
+                                                    <span class="listMetaItem">Cash Crop</span>
+                                                    <span class="listMetaseperator">•</span>
+                                                    <span class="listMetaItem">₦2,500 Per kg</span>
+                                                </div>
+                                            </div>
+                                            <div class="tableControl">
+                                                <div class="tabelControlItem" title="Edit Details" data-toggle="tooltip">
+                                                    <button type="button" data-target="#newCrop" data-toggle="modal" class="btn-icon">
+                                                        <svg class="cust_icon icon_xs" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9.84 2.96L13.04 6.16L3.2 16H0V12.8L9.84 2.96ZM10.96 1.84L12.8 0L16 3.2L14.16 5.04L10.96 1.84Z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                    <button type="button" class="btn-icon">
+                                                        <svg viewBox="0 0 16 16" class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z"/>
+                                                        </svg>           
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="list_item">
+                                        <div class="listItemWrapper media_item">
+                                            <div class="media_fgure">
+                                                <div class="icon_box box_inverse">
+                                                    <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18.1144 15.4416C17.9013 15.2284 17.5855 15.1697 17.3099 15.2921C15.5553 16.071 14.4857 16.6461 14.1308 17.0013C13.7772 17.3547 13.5599 17.8079 13.519 18.2775C13.4929 18.5778 13.5432 18.8699 13.6597 19.1274L12.5434 20.2422V16.338H12.5433L14.427 14.4569C14.6421 14.5538 14.8781 14.6019 15.1194 14.6019C15.6217 14.6019 16.147 14.3938 16.5545 13.9863C16.9097 13.6316 17.4849 12.5619 18.2639 10.8069C18.3863 10.5314 18.3275 10.2155 18.1143 10.0024C17.901 9.78914 17.5852 9.73055 17.3098 9.85289C15.5551 10.6318 14.4855 11.2069 14.1306 11.5621C13.777 11.9154 13.5598 12.3686 13.5189 12.8383C13.4927 13.1385 13.543 13.4306 13.6595 13.6882L12.5432 14.8029V10.9748L14.4269 9.09412C14.6419 9.19111 14.8779 9.2392 15.1192 9.2392C15.6216 9.2392 16.147 9.03094 16.5545 8.62303C16.9096 8.26833 17.4848 7.19864 18.2639 5.44369C18.3862 5.16811 18.3275 4.85227 18.1143 4.63912C17.901 4.42594 17.5851 4.3673 17.3097 4.48964C15.5551 5.26852 14.4855 5.84363 14.1306 6.19884C13.7769 6.55219 13.5597 7.00547 13.5188 7.4753C13.4927 7.77572 13.5429 8.0678 13.6595 8.32537L12.5432 9.43992V5.75644C13.2228 5.49909 13.7141 4.77333 13.7141 3.91988C13.7141 3.41644 13.3644 2.25347 12.6747 0.463266C12.5665 0.181828 12.3016 0 12.0001 0C11.6986 0 11.4338 0.181828 11.3255 0.463125C10.6358 2.25342 10.286 3.41639 10.286 3.91978C10.286 4.77323 10.7773 5.499 11.457 5.75634V9.43983L10.3407 8.32533C10.4572 8.0678 10.5075 7.77563 10.4814 7.47525C10.4405 7.00547 10.2233 6.55219 9.8696 6.1988C9.51471 5.84353 8.44507 5.26852 6.69054 4.48959C6.4151 4.36725 6.09921 4.42589 5.88602 4.63908C5.67279 4.85227 5.61406 5.16806 5.7364 5.44364C6.51551 7.19855 7.09067 8.26823 7.44537 8.62252C7.85309 9.03066 8.3786 9.23906 8.88115 9.23906C9.12237 9.23906 9.35829 9.19102 9.57335 9.09398L11.4571 10.9747V14.8028L10.3408 13.6881C10.4573 13.4306 10.5077 13.1385 10.4815 12.8381C10.4406 12.3685 10.2234 11.9153 9.86979 11.562C9.51485 11.2067 8.44526 10.6316 6.69063 9.85275C6.41524 9.73041 6.09931 9.78905 5.88612 10.0022C5.67288 10.2154 5.6141 10.5312 5.73649 10.8068C6.5156 12.5617 7.09076 13.6314 7.44565 13.9859C7.85342 14.3936 8.3786 14.6017 8.88106 14.6017C9.12227 14.6017 9.35824 14.5537 9.57335 14.4566L11.4572 16.3379V20.2421L10.3409 19.1273C10.4574 18.8699 10.5077 18.5778 10.4816 18.2775C10.4407 17.8078 10.2234 17.3546 9.86979 17.0013C9.5149 16.646 8.44526 16.071 6.69073 15.2921C6.41538 15.1698 6.0994 15.2284 5.88621 15.4416C5.67302 15.6548 5.6142 15.9705 5.73659 16.2462C6.51574 18.0012 7.09085 19.0708 7.44556 19.425C7.79904 19.7788 8.25237 19.9962 8.72215 20.037C8.77427 20.0415 8.82612 20.0438 8.87759 20.0438C9.12326 20.0438 9.36021 19.9927 9.57345 19.896L11.4573 21.7772V22.9136H8.5054C8.20549 22.9136 7.96231 23.1567 7.96231 23.4567C7.96231 23.7567 8.20549 23.9998 8.5054 23.9998H13.8379C14.1378 23.9998 14.381 23.7567 14.381 23.4567C14.381 23.1568 14.1378 22.9136 13.8379 22.9136H12.5435V21.7772L14.4273 19.896C14.6405 19.9927 14.8774 20.0438 15.1232 20.0438C15.1746 20.0438 15.2265 20.0415 15.2786 20.037C15.7483 19.9962 16.2018 19.7789 16.5548 19.4255C16.9099 19.0708 17.485 18.0011 18.2642 16.2462C18.3864 15.9706 18.3277 15.6548 18.1144 15.4416ZM14.601 12.9324C14.6195 12.7202 14.728 12.5007 14.8986 12.3302C14.8987 12.3301 14.8989 12.33 14.8991 12.3298C15.0475 12.1812 15.6515 11.8188 16.8695 11.2472C16.2978 12.4655 15.9356 13.0693 15.7867 13.218C15.4607 13.544 14.9816 13.616 14.7408 13.3755C14.7408 13.3755 14.7408 13.3755 14.7408 13.3755C14.598 13.2327 14.5919 13.0367 14.601 12.9324ZM14.6011 7.56942C14.6195 7.35694 14.728 7.13738 14.8986 6.96694C14.8988 6.9668 14.899 6.96666 14.8991 6.96652C15.0476 6.81788 15.6515 6.45553 16.8696 5.88394C16.2979 7.10217 15.9356 7.70606 15.7865 7.85484C15.4607 8.18105 14.9816 8.25328 14.7408 8.01272C14.598 7.86998 14.5919 7.67372 14.6011 7.56942ZM9.25985 8.01244C9.01863 8.25333 8.53962 8.181 8.21337 7.85437C8.06477 7.70592 7.70253 7.10203 7.1307 5.88389C8.34893 6.45558 8.95273 6.81783 9.10118 6.96647C9.10132 6.96661 9.10151 6.96675 9.10165 6.96689C9.27227 7.13733 9.38074 7.35689 9.39921 7.56938C9.40835 7.67372 9.40231 7.86998 9.25985 8.01244ZM9.25976 13.3752C9.01877 13.616 8.53952 13.544 8.21332 13.2177C8.06473 13.0693 7.70248 12.4654 7.13065 11.2472C8.34888 11.8189 8.95268 12.1812 9.10113 12.3298C9.10127 12.33 9.10146 12.3301 9.1016 12.3302C9.27223 12.5007 9.3807 12.7202 9.39917 12.9324C9.40831 13.0366 9.40221 13.2327 9.25976 13.3752ZM9.25962 18.8146C9.25948 18.8147 9.25934 18.8149 9.2592 18.815C9.25915 18.815 9.2591 18.8151 9.25906 18.8151C9.11618 18.9578 8.92029 18.964 8.81599 18.9549C8.60374 18.9365 8.38427 18.828 8.21337 18.657C8.06477 18.5085 7.70253 17.9046 7.1307 16.6865C8.34893 17.2582 8.95273 17.6204 9.10118 17.769C9.10132 17.7692 9.10151 17.7693 9.10165 17.7695C9.27232 17.9399 9.38074 18.1594 9.39921 18.3717C9.40826 18.4759 9.40217 18.6719 9.25962 18.8146ZM12.0001 4.77037C11.6598 4.77037 11.3723 4.38089 11.3723 3.91983C11.3723 3.70884 11.5433 3.02494 12.0001 1.76025C12.457 3.02512 12.628 3.70884 12.628 3.91983C12.628 4.38089 12.3404 4.77037 12.0001 4.77037ZM15.7865 18.6575C15.6161 18.8281 15.3966 18.9365 15.1843 18.955C15.08 18.9641 14.8838 18.9578 14.7408 18.8148C14.598 18.6721 14.5919 18.476 14.601 18.3718C14.6195 18.1596 14.728 17.94 14.8986 17.7696C14.8987 17.7695 14.8989 17.7693 14.8991 17.7692C15.0475 17.6205 15.6515 17.2582 16.8695 16.6866C16.2978 17.9047 15.9355 18.5087 15.7865 18.6575Z"/>
+                                                        <path d="M15.4946 22.9137H15.3307C15.0308 22.9137 14.7876 23.1568 14.7876 23.4568C14.7876 23.7568 15.0308 24 15.3307 24H15.4946C15.7945 24 16.0377 23.7568 16.0377 23.4568C16.0378 23.1568 15.7946 22.9137 15.4946 22.9137Z"/>
+                                                    </svg>                                                            
+                                                </div>
+                                            </div>
+                                            <div class="media_info">
+                                                <h5 class="title font-bold">Plantains</h5>
+                                                <div class="listmeta">
+                                                    <span class="listMetaItem">Cash Crop</span>
+                                                    <span class="listMetaseperator">•</span>
+                                                    <span class="listMetaItem">₦2,500 Per kg</span>
+                                                </div>
+                                            </div>
+                                            <div class="tableControl">
+                                                <div class="tabelControlItem" title="Edit Details" data-toggle="tooltip">
+                                                    <button type="button" data-target="#newCrop" data-toggle="modal" class="btn-icon">
+                                                        <svg class="cust_icon icon_xs" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9.84 2.96L13.04 6.16L3.2 16H0V12.8L9.84 2.96ZM10.96 1.84L12.8 0L16 3.2L14.16 5.04L10.96 1.84Z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                    <button type="button" class="btn-icon">
+                                                        <svg viewBox="0 0 16 16" class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z"/>
+                                                        </svg>           
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="formWidgetProgress col-md-3 col-lg-4">
+                <div class="verticalProgressMarkers">
+                    <div class="progressMarkerItem stepDone ">
+                        <div class="step_line">
+                            <div class="stepDetails">
+                                <span class="stepNode"></span>
+                                <div class="stepInfo">
+                                    <h4 class="title font-bold margin_bottom_sm">1. Farm information</h4>
+                                    <p>Update your farm information, providing details like the size, location and owner. You can add more farms in your account setting section.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progressMarkerItem active">
+                        <div class="step_line">
+                            <div class="stepDetails">
+                                <span class="stepNode"></span>
+                                <div class="stepInfo">
+                                    <h4 class="title font-bold margin_bottom_sm">2. Add Products</h4>
+                                    <p>Add your farm products like the kinds Crops you grow, or the animals you are raising, or both. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progressMarkerItem ">
+                        <div class="step_line">
+                            <div class="stepDetails">
+                                <span class="stepNode"></span>
+                                <div class="stepInfo">
+                                    <h4 class="title font-bold margin_bottom_sm">3. Update your Profile</h4>
+                                    <p>Setup your aggregator profile, to get found by investors and off-takers interested in your inventory.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+	<script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+    		
+</body>
+</html>
