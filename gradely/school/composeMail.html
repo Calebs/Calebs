@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Messages | Gradelyng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="discardMessage">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Confirm Delete</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p class="font-md">Are you sure you want to delete this conversation?</p>
+                    <p>This action cannot be reverted.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-outline">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="school_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="classes.html" class="menuLinkItem">classes</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="teachers.html" class="menuLinkItem">Teachers</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="parents.html" class="menuLinkItem">Parents</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="messages.html">
+                                <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.18073 5.42653C1.49745 4.97408 2.12098 4.86405 2.57343 5.18076L12 11.7793L21.4265 5.18076C21.879 4.86405 22.5025 4.97408 22.8192 5.42653C23.1359 5.87898 23.0259 6.50251 22.5734 6.81923L12.5734 13.8192C12.2291 14.0603 11.7708 14.0603 11.4265 13.8192L1.4265 6.81923C0.974052 6.50251 0.864017 5.87898 1.18073 5.42653Z"/>
+                                </svg>                                    
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi">AJ</div>
+                                </div>
+                                <span class="control_label">Andrew Jackson</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul class="dpd_nav">
+                                    <li>
+                                        <a href="school_profile.html">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="act_settings.html">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../login.html">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text sr-only">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="global_alert_holder hidden">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Personal information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body bg__off_white">
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+
+                        <section class="userMessagesBlock">
+                            <div class="container content_narrow">
+
+                                <!-- Append the class "show_message" to the messageHolder element, when the user clicks on a message item  -->
+                                <div class="messagesHolder">
+                                    <div class="conversationBox ">
+                                        <header class="conversationHeader">
+                                            <div class="fitWrapper innerWrapper">
+                                                <div class="messageActorInfo">
+                                                    <h4 class="title font-bold color__black caps_upper">New Message</h4>
+                                                </div>
+                                                <div class="boxControlOptions">
+                                                    <div class="msgControlBtn" title="Cancel message" data-toggle="tooltip">
+                                                        <a href="messages.html" class="btn-icon">
+                                                            <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z"/>
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z"/>
+                                                            </svg>             
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="conversationBody">
+                                            <div class="innerWrapper">
+                                                <div class="margin_top_md">
+                                                    <form action="">
+                                                        <div class="row form_row_group">
+                                                            <div class="form_group_item col-md-3">
+                                                                <h4 class="control-label caps_upper font-bold">Recepient</h4>
+                                                            </div>
+                                                            <div class="form_group_item col-md-9">
+                                                                <label class="control-label sr-only">Recepient</label>
+                                                                <!-- Add the class "has_suggestion" to show suggestions -->
+                                                                <div class="filterSearchControl ">
+                                                                    <input type="text" class="form-control" placeholder="Enter username">
+                                                                    <!-- Add the class "no_match" when there are no search match is found for the user inputer to display -->
+                                                                    <div class="search_suggestion_widget">
+                                                                        <div class="widget_wrapper">
+                                                                            <ul class="search_result_list contact_list">
+                                                                                <li class="search_result_item">
+                                                                                    <label for="user_0012" class="result_item_wrapper active">
+                                                                                        <div class="user_profile_details">
+                                                                                            <div class="">
+                                                                                                <input type="checkbox" name="userItem" id="user_0012" checked>
+                                                                                            </div>
+                                                                                            <div class="user_info_avi margin_left_s">
+                                                                                                <img src="../img/" alt="">
+                                                                                                <span class="default_avi">RH</span>
+                                                                                            </div>
+                                                                                            <div class="user_info">
+                                                                                                <h4 class="font-default text_clipped">Rubius Hagrid</h4>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </label>
+                                                                                </li>
+                                                                                <li class="search_result_item">
+                                                                                    <label for="user_0016" class="result_item_wrapper">
+                                                                                        <div class="user_profile_details">
+                                                                                            <div class="">
+                                                                                                <input type="checkbox" name="userItem" id="user_0016">
+                                                                                            </div>
+                                                                                            <div class="user_info_avi margin_left_s">
+                                                                                                <img src="../img/" alt="">
+                                                                                                <span class="default_avi">RA</span>
+                                                                                            </div>
+                                                                                            <div class="user_info">
+                                                                                                <h4 class="font-default text_clipped">Ruben Abarty</h4>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </label>
+                                                                                </li>
+                                                                                <li class="search_result_item">
+                                                                                    <label for="user_0012" class="result_item_wrapper">
+                                                                                        <div class="user_profile_details">
+                                                                                            <div class="">
+                                                                                                <input type="checkbox" name="userItem" id="user_0012">
+                                                                                            </div>
+                                                                                            <div class="user_info_avi margin_left_s">
+                                                                                                <img src="../img/" alt="">
+                                                                                                <span class="default_avi">RH</span>
+                                                                                            </div>
+                                                                                            <div class="user_info">
+                                                                                                <h4 class="font-default text_clipped">Rubius Hagrid</h4>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </label>
+                                                                                </li>
+                                                                                <li class="search_result_item">
+                                                                                    <label for="user_0016" class="result_item_wrapper">
+                                                                                        <div class="user_profile_details">
+                                                                                            <div class="">
+                                                                                                <input type="checkbox" name="userItem" id="user_0016">
+                                                                                            </div>
+                                                                                            <div class="user_info_avi margin_left_s">
+                                                                                                <img src="../img/" alt="">
+                                                                                                <span class="default_avi">RA</span>
+                                                                                            </div>
+                                                                                            <div class="user_info">
+                                                                                                <h4 class="font-default text_clipped">Ruben Abarty</h4>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </label>
+                                                                                </li>
+                                                                                <li class="search_result_item">
+                                                                                    <label for="user_0012" class="result_item_wrapper">
+                                                                                        <div class="user_profile_details">
+                                                                                            <div class="">
+                                                                                                <input type="checkbox" name="userItem" id="user_0012">
+                                                                                            </div>
+                                                                                            <div class="user_info_avi margin_left_s">
+                                                                                                <img src="../img/" alt="">
+                                                                                                <span class="default_avi">RH</span>
+                                                                                            </div>
+                                                                                            <div class="user_info">
+                                                                                                <h4 class="font-default text_clipped">Rubius Hagrid</h4>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </label>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="search_result_empty">
+                                                                            <p>No result found</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form_row_group">
+                                                            <div class="form_group_item col-md-3">
+                                                                <h4 class="control-label caps_upper font-bold">Subject</h4>
+                                                            </div>
+                                                            <div class="form_group_item col-md-9">
+                                                                <label class="control-label sr-only">Subject</label>
+                                                                <input type="text" class="form-control" placeholder="Subject">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row form_row_group">
+                                                            <div class="form_group_item col-md-3">
+                                                                <h4 class="control-label caps_upper font-bold">Message</h4>
+                                                            </div>
+                                                            <div class="form_group_item col-md-9">
+                                                                <label class="control-label sr-only">Your Message here</label>
+                                                                <textarea rows="10" class="form-control" placeholder="Write your message"></textarea>
+                                                            </div>
+                                                        </div>        
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="conversationFooter">
+                                            <div class="innerWrapper text-right">
+                                                <button type="button" class="btn btn-default">
+                                                    Cancel
+                                                </button>
+                                                <button type="submit" class="btn btn-primary">
+                                                    Send
+                                                </button>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

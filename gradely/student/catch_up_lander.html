@@ -1,0 +1,1406 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Gradely CatchUp | Gradelyng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal fade" id="soloPractice">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">New CatchUp Excercise</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="margin_bottom_md">
+                        <h4 class="font-sm font-bold caps_upper">You will be practicing:</h4>
+                        <div class="media_item margin_top_sm">
+                            <div class="media_figure">
+                                <div class="icon_box bg__white"> 
+                                    <i class="cust_icon icon_catchup icon_sm"></i>
+                                </div>
+                            </div>
+                            <div class="media_info">
+                                <h4 class="title text_clipped">Number Base System</h4>
+                                <span class="listMetaInfo">Mathematics</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label">How many Questions do you want to practice?</label>
+                            <div class="inputaffixed inputSurfixed">
+                                <input type="number" class="form-control inputControl" value="15">
+                                <div class="inputfixture">
+                                    <span >Questions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Difficulty</label>
+                            <div class="pillSelectorList">
+                                <div class="selectorItem">
+                                    <label for="qdiff_0" class="pillWrapper">
+                                        <input type="radio" id="qdiff_0" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel caps_upper">
+                                            EASY
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="qdiff_1" class="pillWrapper">
+                                        <input type="radio" id="qdiff_1" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel caps_upper">
+                                            Medium
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="qdiff_2" class="pillWrapper">
+                                        <input type="radio" id="qdiff_2" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel caps_upper">
+                                            Hard
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Do you want to time this test?</label>
+                            <div class="">
+                                <label for="pr_timed" class="radio-inline">
+                                    <input type="radio" checked id="pr_timed" name="test_time">
+                                    <span>Set Time</span>
+                                </label>
+                                <label for="pr_timednon" class="radio-inline">
+                                    <input type="radio" id="pr_timednon" name="test_time">
+                                    <span>Don't set time</span>
+                                </label>
+                            </div>
+                            <div class="form_mng">
+                                <label class="control-label">Test Duration</label>
+                                <div class="inputaffixed inputSurfixed">
+                                    <input type="number" class="form-control inputControl" value="30">
+                                    <div class="inputfixture">
+                                        <span >Minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section_cto text-center">
+                            <button type="submit" class="btn btn-primary">Start Excercise</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="newPractice">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">New CatchUp Excercise</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label">Select a subject</label>
+                            <div class="pillSelectorList">
+                                <div class="selectorItem">
+                                    <label for="pr_subj_maths" class="pillWrapper">
+                                        <input type="radio" id="pr_subj_maths" class="pillSelectControl" name="pr_subj">
+                                        <span class="selectorLabel">
+                                            Mathematics
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="pr_subj_eng" class="pillWrapper">
+                                        <input type="radio" id="pr_subj_eng" class="pillSelectControl" name="pr_subj">
+                                        <span class="selectorLabel">
+                                            English Language
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Don't show until the user selects the subject to practice -->
+                        <div class="form-group ">
+                            <label class="control-label">Select the topics you’d like to practice.</label>
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown" class="menuSelect_input">
+                                    <span class="menuSelect_label">Select the topics to practice</span>
+                                    <div class="menuSelect_inputIcon">
+                                        <span class="caret"></span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu widget_select_menu">
+                                    <header class="widget_select_header">
+                                        <div class="select_menu_search">
+                                            <span class="search_icon">
+                                                <svg class="cust_icon icon_xs" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                                    <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                                                    <path d="M15.364 2.636A9 9 0 1 1 2.636 15.363 9 9 0 0 1 15.364 2.636zM20 20l-5-5"></path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                            <input class="form-control prefixed_input" placeholder="Find topics by name...">
+                                        </div>
+                                    </header>
+                                    <!-- Toggle the class "is_empty" when the list is empty -->
+                                    <div class="widget_select_body ">
+                                        <ul class="search_result_list">
+                                            <li class="search_result_item">
+                                                <label class="media_item" for="topic_0">
+                                                    <div class="media_figure">
+                                                        <input type="checkbox" checked id="topic_0" name="pr_topics">
+                                                    </div>
+                                                    <div class="media_info">
+                                                        <h4 class="title font-bold">Number Base System</h4>
+                                                        <div class="perfMeter align-items-center no-gutters row">
+                                                            <div class="topicProgress col">
+                                                                <div class="progress progress_fail">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col margin_left_sm">
+                                                                <span class="topicTitle">38%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </li>
+
+                                            <li class="search_result_item">
+                                                <label class="media_item" for="topic_1">
+                                                    <div class="media_figure">
+                                                        <input type="checkbox" id="topic_1" name="pr_topics">
+                                                    </div>
+                                                    <div class="media_info">
+                                                        <h4 class="title font-bold">Trigonometric Ratios</h4>
+                                                        <div class="perfMeter align-items-center no-gutters row">
+                                                            <div class="topicProgress col">
+                                                                <div class="progress progress_fail">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col margin_left_sm">
+                                                                <span class="topicTitle">49%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </li>
+
+                                            <li class="search_result_item">
+                                                <label class="media_item" for="topic_2">
+                                                    <div class="media_figure">
+                                                        <input type="checkbox" id="topic_2" name="pr_topics">
+                                                    </div>
+                                                    <div class="media_info">
+                                                        <h4 class="title font-bold">Another topic name</h4>
+                                                        <div class="perfMeter align-items-center no-gutters row">
+                                                            <div class="topicProgress col">
+                                                                <div class="progress progress_avg">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col margin_left_sm">
+                                                                <span class="topicTitle">57%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </li>
+    
+
+                                        </ul>
+                                        <div class="search_result_empty">
+                                            <p>No result found</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">How many Questions do you want to practice?</label>
+                            <div class="inputaffixed inputSurfixed">
+                                <input type="number" class="form-control inputControl" value="15">
+                                <div class="inputfixture">
+                                    <span >Questions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Difficulty</label>
+                            <div class="pillSelectorList">
+                                <div class="selectorItem">
+                                    <label for="qdiff_0" class="pillWrapper">
+                                        <input type="radio" id="qdiff_0" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel caps_upper">
+                                            EASY
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="qdiff_1" class="pillWrapper">
+                                        <input type="radio" id="qdiff_1" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel caps_upper">
+                                            Medium
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="qdiff_2" class="pillWrapper">
+                                        <input type="radio" id="qdiff_2" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel caps_upper">
+                                            Hard
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Do you want to time this test?</label>
+                            <div class="">
+                                <label for="pr_timed" class="radio-inline">
+                                    <input type="radio" checked id="pr_timed" name="test_time">
+                                    <span>Set Time</span>
+                                </label>
+                                <label for="pr_timednon" class="radio-inline">
+                                    <input type="radio" id="pr_timednon" name="test_time">
+                                    <span>Don't set time</span>
+                                </label>
+                            </div>
+                            <div class="form_mng">
+                                <label class="control-label">Test Duration</label>
+                                <div class="inputaffixed inputSurfixed">
+                                    <input type="number" class="form-control inputControl" value="30">
+                                    <div class="inputfixture">
+                                        <span >Minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section_cto text-center">
+                            <button type="submit" class="btn btn-primary">Start Excercise</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for students">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="student_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem ">
+                            <a href="homework.html" class="menuLinkItem">Homework</a>
+                        </div>
+                        <div class="menuListItem active">
+                            <a href="resources.html" class="menuLinkItem">Resources</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="#">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
+                                </svg>
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi">RH</div>
+                                </div>
+                                <span class="control_label">Bubius Hagrid</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul class="dpd_nav">
+                                    <li>
+                                        <a href="profile.html">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="act_settings.html">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../login.html">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text sr-only">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="global_alert_holder hidden">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Personal information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">   
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+
+                        <header class="pageHeroBannner catchupHome">
+                            <div class="heroContentHolder">
+                                <div class="container">
+                                    <nav class="detail_control" aria-label="Page breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="resources.html">Resources</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Gradely CatchUp</li>
+                                        </ol>
+                                    </nav>
+                                    <div class="bannerIntro">
+                                        <div class="bannerIntroMsg">
+                                            <div class="title_prefixed">
+                                                <div class="icon_box bg__white"> 
+                                                    <i class="cust_icon icon_catchup icon_sm"></i>
+                                                </div>
+                                                <h3 class="title title_lg color__black font-bold">Gradely CatchUp</h3>
+                                            </div>
+                                            <p class="font-md">Take practice tests to boost your knowledge of your class lessons.</p>
+                                        </div>
+                                        <div class="bannerIntroCtr">
+                                            <button type="submit" data-target="#newPractice" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                                New Practice Test
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="section_block">
+                            <div class="container">
+
+                                <section class="layoutSectionGroup">
+                                    <header class="groupHeader">
+                                        <div class="grdly_header_title">
+                                            <h2 class="title title_sm font-bold">Recommended practice for the week</h2>
+                                            <p class="color__grey_dark font-md">Based on your weekly homework performance</p>
+                                        </div>
+                                        <div class="grdly_action_primary">
+                                        </div>
+                                    </header>
+                                    <div class="content_inner">
+                                        <div class="row">
+                                            <article class="col-sm-6 col-md-3 resourceCardItem">
+                                                <a href="startPractice.html" class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__inverse_light">
+                                                                <i class="cust_icon icon_book icon_xl"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="productTag">
+                                                            <span class="infoTag isHard">
+                                                                Hard
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-left">
+                                                        <div class="productDetailHeader">
+                                                            <h4 class="title color__black text_clipped font-bold" title="Bakare Isaac">Practice Set 1</h4>
+                                                            <div class="scoreBox">
+                                                                <span class="color__inverse font-bold">96%</span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="data_label text_clipped">Mathematics</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+
+                                            <article class="col-sm-6 col-md-3 resourceCardItem">
+                                                <a href="startPractice.html" class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__white">
+                                                                <i class="cust_icon icon_book icon_xl"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="productTag">
+                                                            <span class="infoTag isEasy">
+                                                                Easy
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-left">
+                                                        <div class="productDetailHeader">
+                                                            <h4 class="title color__black text_clipped font-bold" title="Bakare Isaac">Practice Set 2</h4>
+                                                            <div class="scoreBox">
+                                                                <span class="color__inverse font-bold"></span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="data_label text_clipped">Mathematics</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+
+                                            <article class="col-sm-6 col-md-3 resourceCardItem">
+                                                <a href="startPractice.html" class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__secondary_light">
+                                                                <i class="cust_icon icon_book icon_xl"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="productTag">
+                                                            <span class="infoTag isMedium">
+                                                                Medium
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-left">
+                                                        <div class="productDetailHeader">
+                                                            <h4 class="title color__black text_clipped font-bold" title="Bakare Isaac">Practice Set 3</h4>
+                                                            <div class="scoreBox">
+                                                                <span class="color__inverse font-bold"></span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="data_label text_clipped">Mathematics</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+
+                                            <article class="col-sm-6 col-md-3 resourceCardItem">
+                                                <a href="startPractice.html" class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__red_light">
+                                                                <i class="cust_icon icon_book icon_xl"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="productTag">
+                                                            <span class="infoTag isHard">
+                                                                Hard
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-left">
+                                                        <div class="productDetailHeader">
+                                                            <h4 class="title color__black text_clipped font-bold" title="Bakare Isaac">Practice Set 4</h4>
+                                                            <div class="scoreBox">
+                                                                <span class="color__inverse font-bold"></span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="data_label text_clipped">Mathematics</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="layoutSectionGroup">
+                                    <header class="groupHeader">
+                                        <div class="grdly_header_title">
+                                            <h2 class="title title_sm font-bold">Topics to CatchUp in</h2>
+                                        </div>
+                                        <div class="grdly_action_primary">
+                                        </div>
+                                    </header>
+                                    <div class="content_inner">
+                                        <div class="table table-responsive table-brand">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="">Topic</div>
+                                                        </th>
+                                                        <th>
+                                                            <div class="">Performance</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Subject</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Practiced</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Comments</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Action</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                <span>Number Base System</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="perfMeter align-items-center no-gutters row">
+                                                                <div class="topicProgress col">
+                                                                    <div class="progress progress_fail">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col margin_left_sm">
+                                                                    <span class="topicTitle">38%</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="badge badge-default">
+                                                                    Mathematics
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="itemTag tagQuestions" title="Total number of Questions practiced" data-toggle="tooltip">
+                                                                    27
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <p class="help-block">Struggling</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="#soloPractice" data-toggle="modal" data-backdrop="static" class="controlItemLink">CatchUp</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                <span>Trigonometric Ratios</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="perfMeter align-items-center no-gutters row">
+                                                                <div class="topicProgress col">
+                                                                    <div class="progress progress_fail">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 42%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col margin_left_sm">
+                                                                    <span class="topicTitle">42%</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="badge badge-default">
+                                                                    Mathematics
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="itemTag tagQuestions" title="Total number of Questions practiced" data-toggle="tooltip">
+                                                                    17
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <p class="help-block">Struggling</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="#soloPractice" data-toggle="modal" data-backdrop="static" class="controlItemLink">CatchUp</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                <span>Simple Tenses</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="perfMeter align-items-center no-gutters row">
+                                                                <div class="topicProgress col">
+                                                                    <div class="progress progress_avg">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col margin_left_sm">
+                                                                    <span class="topicTitle">57%</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="badge badge-default">
+                                                                    English Language
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="itemTag tagQuestions" title="Total number of Questions practiced" data-toggle="tooltip">
+                                                                    23
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <p class="help-block">Average</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="#soloPractice" data-toggle="modal" data-backdrop="static" class="controlItemLink">CatchUp</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                <span>Quadratic Equations</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="perfMeter align-items-center no-gutters row">
+                                                                <div class="topicProgress col">
+                                                                    <div class="progress progress_avg">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 62%" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col margin_left_sm">
+                                                                    <span class="topicTitle">62%</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="badge badge-default">
+                                                                    Mathematics
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="itemTag tagQuestions" title="Total number of Questions practiced" data-toggle="tooltip">
+                                                                    34
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <p class="help-block">Average</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="#soloPractice" data-toggle="modal" data-backdrop="static" class="controlItemLink">CatchUp</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div>
+                                                                <span>Subject verb Agreement</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="perfMeter align-items-center no-gutters row">
+                                                                <div class="topicProgress col">
+                                                                    <div class="progress progress_fail">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col margin_left_sm">
+                                                                    <span class="topicTitle">49%</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="badge badge-default">
+                                                                    English Language
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <span class="itemTag tagQuestions" title="Total number of Questions practiced" data-toggle="tooltip">
+                                                                    21
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div>
+                                                                <p class="help-block">Struggling</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="#soloPractice" data-toggle="modal" data-backdrop="static" class="controlItemLink">CatchUp</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="layoutSectionGroup">
+                                    <header class="groupHeader">
+                                        <div class="grdly_header_title">
+                                            <h2 class="title title_sm font-bold">Your Practice History</h2>
+                                        </div>
+                                        <div class="grdly_action_primary">
+                                        </div>
+                                    </header>
+                                    <div class="empty_state centered hidden">
+                                        <div class="def_wrapper centered text-center">
+                                            <h4 class="title font-bold margin_bottom_sm">No Practice record Found</h4>
+                                            <p>Seems you are new here. Find your past practice exercises here.</p>
+                                            <div class="margin_top_md">
+                                                <button type="button" data-target="#newPractice" data-toggle="modal" class="btn btn-primary-outline">Create a Practice Exercise </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_inner ">
+                                        <div class="table table-responsive table-brand">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <div>Description</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Difficulty</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Result</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Questions</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Duration</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Action</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="practiceSummary.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Week 3, Practice Set 1</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">English Language</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="infoTag isHard">
+                                                                    Hard
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                        <span class="topicgrade color__grey_dark">92%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions " title="Questions Practiced" data-toggle="tooltip">
+                                                                    30
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagDuration" title="Practice Time" data-toggle="tooltip">
+                                                                    25m
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="practiceSummary.html" class="controlItemLink">View Summary</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="practiceSummary.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Week 3, Practice Set 2</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Mathematics</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="infoTag isMedium">
+                                                                    Medium
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                        <span class="topicgrade color__grey_dark">85%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions " title="Questions Practiced" data-toggle="tooltip">
+                                                                    30
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagDuration" title="Practice Time" data-toggle="tooltip">
+                                                                    25m
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="practiceSummary.html" class="controlItemLink">View Summary</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="practiceSummary.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Week 3, Practice Set 1</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Mathematics</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="infoTag isEasy">
+                                                                    Easy
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                        <span class="topicgrade color__grey_dark">92%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions " title="Questions Practiced" data-toggle="tooltip">
+                                                                    30
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagDuration" title="Practice Time" data-toggle="tooltip">
+                                                                    25m
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="practiceSummary.html" class="controlItemLink">View Summary</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="practiceSummary.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Week 2, Practice Set 3</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Mathematics</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="infoTag isHard">
+                                                                    Hard
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                        <span class="topicgrade color__grey_dark">65%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_avg">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions " title="Questions Practiced" data-toggle="tooltip">
+                                                                    30
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagDuration" title="Practice Time" data-toggle="tooltip">
+                                                                    25m
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="practiceSummary.html" class="controlItemLink">View Summary</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="practiceSummary.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Week 2, Practice Set 2</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">English Language</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="infoTag isMedium">
+                                                                    Medium
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                        <span class="topicgrade color__grey_dark">92%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions " title="Questions Practiced" data-toggle="tooltip">
+                                                                    30
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagDuration" title="Practice Time" data-toggle="tooltip">
+                                                                    25m
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="practiceSummary.html" class="controlItemLink">View Summary</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="practiceSummary.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Week 2, Practice Set 1</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Mathematics</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="infoTag isHard">
+                                                                    Hard
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                        <span class="topicgrade color__grey_dark">92%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions " title="Questions Practiced" data-toggle="tooltip">
+                                                                    30
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagDuration" title="Practice Time" data-toggle="tooltip">
+                                                                    25m
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="practiceSummary.html" class="controlItemLink">View Summary</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="practiceSummary.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Week 1, Practice Set 1</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">English Language</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="infoTag isEasy">
+                                                                    Easy
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                        <span class="topicgrade color__grey_dark">92%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions " title="Questions Practiced" data-toggle="tooltip">
+                                                                    30
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagDuration" title="Practice Time" data-toggle="tooltip">
+                                                                    25m
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="practiceSummary.html" class="controlItemLink">View Summary</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="practiceSummary.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Week 1, Practice Set 2</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Mathematics</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="infoTag isMedium">
+                                                                    Medium
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">You Scored: <em>19</em>/<em>30</em></span>
+                                                                        <span class="topicgrade color__grey_dark">78%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>          
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagQuestions " title="Questions Practiced" data-toggle="tooltip">
+                                                                    30
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagDuration" title="Practice Time" data-toggle="tooltip">
+                                                                    25m
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="practiceSummary.html" class="controlItemLink">View Summary</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+    		
+</body>
+</html>

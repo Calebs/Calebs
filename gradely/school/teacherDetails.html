@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Osinnuga Mayowa | Gradely.school</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="newMessage">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">New Message</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="user_profile_details margin_bottom_md">
+                        <div class="user_info_avi avi_md">
+                            <img src="../img/" alt="">
+                            <span class="default_avi bg__danger color__white">OM</span>
+                        </div>
+                        <div class="user_info">
+                            <span class="color__grey_dark">Message to</span>
+                            <h4 class="title text_clipped font-bold">Osinnuga Mayowa</h4>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label sr-only">Subject</label>
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label sr-only">Your Message here</label>
+                            <textarea rows="7" class="form-control" placeholder="Write your message"></textarea>
+                        </div>                                           
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="AddClass">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <h4 class="modal-title text-caps">Attach to Class</h4>
+                        <div class="dialogDismiss">
+                            <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                        </div>
+                    </header>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="form-group dropdown">
+                                <a href="#" data-toggle="dropdown" class="menuSelect_input">
+                                    <span class="menuSelect_label">Select a Class</span>
+                                    <div class="menuSelect_inputIcon">
+                                        <span class="caret"></span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu widget_select_menu">
+                                    <header class="widget_select_header">
+                                        <div class="select_menu_search">
+                                            <span class="search_icon">
+                                                <svg class="cust_icon icon_xs" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                                    <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                                                    <path d="M15.364 2.636A9 9 0 1 1 2.636 15.363 9 9 0 0 1 15.364 2.636zM20 20l-5-5"></path>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                            <input class="form-control prefixed_input" placeholder="Find class by name...">
+                                        </div>
+                                    </header>
+                                    <!-- Toggle the class "is_empty" when the list is empty -->
+                                    <div class="widget_select_body ">
+                                        <ul class="search_result_list">
+                                            <li class="search_result_item">
+                                                <a href="" class="result_item_wrapper active">
+                                                    <div class="address_block">
+                                                        <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                        <span class="addr_field ">Class/code/Here</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="search_result_item">
+                                                <a href="" class="result_item_wrapper">
+                                                    <div class="address_block">
+                                                        <span class="addr_title">Junior Secondary School 3 (JSS3)</span>
+                                                        <span class="addr_field ">Class/code/Here</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="search_result_item">
+                                                <a href="" class="result_item_wrapper">
+                                                    <div class="address_block">
+                                                        <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                        <span class="addr_field ">Class/code/Here</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="search_result_item">
+                                                <a href="" class="result_item_wrapper">
+                                                    <div class="address_block">
+                                                        <span class="addr_title">Junior Secondary School 3 (JSS3)</span>
+                                                        <span class="addr_field ">Class/code/Here</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="search_result_empty">
+                                            <p>No result found</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label font-bold">Subject</label>
+                                <div class="pillSelectorList">
+                                    <div class="selectorItem">
+                                        <label for="subj_0" class="pillWrapper">
+                                            <input type="checkbox" id="subj_0" class="pillSelectControl" name="tchSubject">
+                                            <span class="selectorLabel caps_upper">
+                                                Mathematics
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="selectorItem">
+                                        <label for="subj_1" class="pillWrapper">
+                                            <input type="checkbox" id="subj_1" class="pillSelectControl" name="tchSubject">
+                                            <span class="selectorLabel caps_upper">
+                                                English Language
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>                  
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Attach</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="school_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem ">
+                            <a href="classes.html" class="menuLinkItem">classes</a>
+                        </div>
+                        <div class="menuListItem active">
+                            <a href="teachers.html" class="menuLinkItem">Teachers</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="parents.html" class="menuLinkItem">Parents</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="messages.html">
+                                <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.18073 5.42653C1.49745 4.97408 2.12098 4.86405 2.57343 5.18076L12 11.7793L21.4265 5.18076C21.879 4.86405 22.5025 4.97408 22.8192 5.42653C23.1359 5.87898 23.0259 6.50251 22.5734 6.81923L12.5734 13.8192C12.2291 14.0603 11.7708 14.0603 11.4265 13.8192L1.4265 6.81923C0.974052 6.50251 0.864017 5.87898 1.18073 5.42653Z"/>
+                                </svg>                                    
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi">AJ</div>
+                                </div>
+                                <span class="control_label">Andrew Jackson</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul class="dpd_nav">
+                                    <li>
+                                        <a href="school_profile.html">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="act_settings.html">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../login.html">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text sr-only">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="global_alert_holder hidden">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Personal information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">   
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+                        <div class="container content_narrow">
+                            <div class="profileLayout">
+                                <nav class="detail_control margin_bottom_lg" aria-label="Page breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="school_dashboard.html">My School</a></li>
+                                        <li class="breadcrumb-item"><a href="teachers.html">Teachers</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Osinnuga Mayowa</li>
+                                    </ol>
+                                </nav>
+
+                                <article class="layoutSectionGroup">
+                                    <div class="content_inner">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="itemGridListItemImageHolder">
+                                                <div class="itemGridImage">
+                                                    <img src="../img/" alt="" class="itemImage">
+                                                    <div class="itemDefault bg__danger color__white">
+                                                        <span>OM</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="user_info">
+                                                <h4 class="title title_lg font-bold color__black">Osinnuga Mayowa</h4>
+                                                <span class="color__grey_dark font-default">Joined, December, 2018</span>
+                                                <div class="teacherPerformance margin_top_sm">
+                                                    <div class="performanceScore scoreAvg">
+                                                        <span class="">7.9</span>
+                                                    </div>
+                                                    <div class="perfLabel">
+                                                        <span>Satisfactory</span>
+                                                    </div>
+                                                    <span class="infoIcon btn-icon margin_left_sm" title="This is a measure of the teachers impact of student performance over time" data-toggle="tooltip">
+                                                        <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M9.00006 11.9999C8.80425 12.0183 8.60777 11.9727 8.44006 11.8699C8.37924 11.8049 8.3334 11.7273 8.30576 11.6427C8.27812 11.558 8.26935 11.4684 8.28006 11.3799C8.2689 11.2402 8.2689 11.0997 8.28006 10.9599C8.28006 10.7699 8.35006 10.6099 8.39006 10.4599L9.00006 8.65995C9.05166 8.48041 9.08516 8.29616 9.10006 8.10995C9.10006 7.90995 9.10006 7.76995 9.10006 7.68995C9.10586 7.51506 9.07303 7.34104 9.00389 7.18029C8.93475 7.01954 8.83101 6.87602 8.70006 6.75995C8.38012 6.50574 7.97808 6.37766 7.57006 6.39995C7.27404 6.40462 6.98055 6.45522 6.70006 6.54995C6.39339 6.64995 6.06006 6.76662 5.70006 6.89995L5.56006 7.45995L6.00006 7.33995C6.13312 7.30029 6.27121 7.28008 6.41006 7.27995C6.60421 7.25966 6.79923 7.3093 6.96006 7.41995C7.01471 7.48827 7.05522 7.56677 7.07926 7.65089C7.10329 7.73501 7.11036 7.82307 7.10006 7.90995C7.1141 8.05294 7.1141 8.19696 7.10006 8.33995C7.10006 8.48995 7.03006 8.65995 6.98006 8.83995L6.46006 10.6599C6.46006 10.8499 6.38006 11.0199 6.36006 11.1699C6.35 11.3198 6.35 11.4701 6.36006 11.6199C6.35478 11.7957 6.38886 11.9704 6.4598 12.1314C6.53074 12.2923 6.63674 12.4353 6.77006 12.5499C7.09778 12.8123 7.51097 12.9441 7.93006 12.9199C8.21864 12.9241 8.5059 12.8802 8.78006 12.7899L9.78006 12.4199L9.92006 11.8599L9.46006 11.9999C9.30751 12.0218 9.15261 12.0218 9.00006 11.9999Z"/>
+                                                            <path d="M8.71007 5.35997C9.03309 5.35856 9.34237 5.22909 9.57007 4.99997C9.68358 4.89776 9.77434 4.77284 9.83646 4.6333C9.89859 4.49376 9.93069 4.34272 9.93069 4.18997C9.93069 4.03723 9.89859 3.88619 9.83646 3.74665C9.77434 3.60711 9.68358 3.48218 9.57007 3.37997C9.33973 3.15724 9.03045 3.03497 8.71007 3.03997C8.38665 3.0345 8.07408 3.15665 7.84007 3.37997C7.72568 3.48142 7.63435 3.60622 7.57225 3.74594C7.51015 3.88566 7.47872 4.03707 7.48007 4.18997C7.47806 4.34297 7.5092 4.49459 7.57134 4.63441C7.63348 4.77423 7.72516 4.89894 7.84007 4.99997C8.07146 5.22969 8.38402 5.35902 8.71007 5.35997Z"/>
+                                                        </svg> 
+                                                    </span>
+                                                </div>
+                                                <div class="tableControl margin_top_md">
+                                                    <div class="tabelControlItem">
+                                                        <button type="button" data-target="#newMessage" data-toggle="modal" class="controlItemLink font-default">Send a message</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <article class="margin_top_lg">
+                                                <div class="profileMeta row">
+                                                    <div class="infoListItem col-sm-6">
+                                                        <div class="infoImage">
+                                                            <i class="cust_icon icon_mail"></i>
+                                                        </div>
+                                                        <div class="infoContainer">
+                                                            <p>
+                                                                <a href="mailto:johnhorace@christland.com">johnhorace@christland.com</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="infoListItem col-sm-6">
+                                                        <div class="infoImage">
+                                                            <i class="cust_icon icon_phone"></i>
+                                                        </div>
+                                                        <div class="infoContainer">
+                                                            <p>
+                                                                <a href="tel:+2348037862234">+234 803 786 2234</a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="infoListItem col-sm-6">
+                                                        <div class="infoImage">
+                                                            <i class="cust_icon icon_map"></i>
+                                                        </div>
+                                                        <div class="infoContainer">
+                                                            <p>34 Louisiana Estate, Dakwo, Abuja, Nigeria</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="infoListItem col-sm-6">
+                                                        <div class="infoImage">
+                                                            <i class="cust_icon icon_calendar"></i>
+                                                        </div>
+                                                        <div class="infoContainer">
+                                                            <p><time>14 December, 1976</time></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                </article>
+
+                                <div class="base_divider"></div>
+                                <article class="layoutSectionGroup">
+                                    <header class="groupHeader margin_bottom_md">
+                                        <div class="grdly_header_title">
+                                            <h2 class="title font-bold">Assigned Classes</h2>
+                                        </div>
+                                        <div class="grdly_action_primary">
+                                            <button type="button" data-target="#AddClass" data-toggle="modal" class="input_control">
+                                                <span class="t_icon">
+                                                    <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                    <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                    </svg>
+                                                </span>
+                                                <span class="widget_cta_link">Assign Class</span>
+                                            </button>
+                                        </div>
+                                    </header>
+                                    <div class="content_inner">
+                                        <div class="cardList row">
+                                            <div class="cardItem col-sm-4 col-md-3">
+                                                <a href="class_details.html" class="outlineWrapper">
+                                                    <div class="cardDetails">
+                                                        <div class="cardDetailsRow margin_bottom_md">
+                                                            <span class="cust_icon icon_class"></span>
+                                                        </div>
+                                                        <div class="cardDetailsRow">
+                                                            <h4 class="title font-bold">Senior School 1 -Gold</h4>
+                                                            <span class="color__grey_dark">Mathematics</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <div class="base_divider"></div>
+                                <article class="layoutSectionGroup">
+                                    <header class="groupHeader margin_bottom_md">
+                                        <div class="grdly_header_title">
+                                            <h2 class="title font-bold">
+                                                Homework Created
+                                                <span class="has_brackets">32</span>
+                                            </h2>
+                                        </div>
+                                        <div class="grdly_action_primary">
+                                        </div>
+                                    </header>
+                                    <div class="content_inner">
+                                        <div class="table table-responsive table-brand">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 2 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest score" data-toggle="tooltip">
+                                                                    15
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest score" data-toggle="tooltip">49</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <a href="about_homework.html" class="btn-icon">
+                                                                    <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M9.00006 11.9999C8.80425 12.0183 8.60777 11.9727 8.44006 11.8699C8.37924 11.8049 8.3334 11.7273 8.30576 11.6427C8.27812 11.558 8.26935 11.4684 8.28006 11.3799C8.2689 11.2402 8.2689 11.0997 8.28006 10.9599C8.28006 10.7699 8.35006 10.6099 8.39006 10.4599L9.00006 8.65995C9.05166 8.48041 9.08516 8.29616 9.10006 8.10995C9.10006 7.90995 9.10006 7.76995 9.10006 7.68995C9.10586 7.51506 9.07303 7.34104 9.00389 7.18029C8.93475 7.01954 8.83101 6.87602 8.70006 6.75995C8.38012 6.50574 7.97808 6.37766 7.57006 6.39995C7.27404 6.40462 6.98055 6.45522 6.70006 6.54995C6.39339 6.64995 6.06006 6.76662 5.70006 6.89995L5.56006 7.45995L6.00006 7.33995C6.13312 7.30029 6.27121 7.28008 6.41006 7.27995C6.60421 7.25966 6.79923 7.3093 6.96006 7.41995C7.01471 7.48827 7.05522 7.56677 7.07926 7.65089C7.10329 7.73501 7.11036 7.82307 7.10006 7.90995C7.1141 8.05294 7.1141 8.19696 7.10006 8.33995C7.10006 8.48995 7.03006 8.65995 6.98006 8.83995L6.46006 10.6599C6.46006 10.8499 6.38006 11.0199 6.36006 11.1699C6.35 11.3198 6.35 11.4701 6.36006 11.6199C6.35478 11.7957 6.38886 11.9704 6.4598 12.1314C6.53074 12.2923 6.63674 12.4353 6.77006 12.5499C7.09778 12.8123 7.51097 12.9441 7.93006 12.9199C8.21864 12.9241 8.5059 12.8802 8.78006 12.7899L9.78006 12.4199L9.92006 11.8599L9.46006 11.9999C9.30751 12.0218 9.15261 12.0218 9.00006 11.9999Z"/>
+                                                                        <path d="M8.71007 5.35997C9.03309 5.35856 9.34237 5.22909 9.57007 4.99997C9.68358 4.89776 9.77434 4.77284 9.83646 4.6333C9.89859 4.49376 9.93069 4.34272 9.93069 4.18997C9.93069 4.03723 9.89859 3.88619 9.83646 3.74665C9.77434 3.60711 9.68358 3.48218 9.57007 3.37997C9.33973 3.15724 9.03045 3.03497 8.71007 3.03997C8.38665 3.0345 8.07408 3.15665 7.84007 3.37997C7.72568 3.48142 7.63435 3.60622 7.57225 3.74594C7.51015 3.88566 7.47872 4.03707 7.48007 4.18997C7.47806 4.34297 7.5092 4.49459 7.57134 4.63441C7.63348 4.77423 7.72516 4.89894 7.84007 4.99997C8.07146 5.22969 8.38402 5.35902 8.71007 5.35997Z"/>
+                                                                    </svg>  
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 2 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest score" data-toggle="tooltip">
+                                                                    15
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest score" data-toggle="tooltip">49</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <a href="about_homework.html" class="btn-icon">
+                                                                    <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M9.00006 11.9999C8.80425 12.0183 8.60777 11.9727 8.44006 11.8699C8.37924 11.8049 8.3334 11.7273 8.30576 11.6427C8.27812 11.558 8.26935 11.4684 8.28006 11.3799C8.2689 11.2402 8.2689 11.0997 8.28006 10.9599C8.28006 10.7699 8.35006 10.6099 8.39006 10.4599L9.00006 8.65995C9.05166 8.48041 9.08516 8.29616 9.10006 8.10995C9.10006 7.90995 9.10006 7.76995 9.10006 7.68995C9.10586 7.51506 9.07303 7.34104 9.00389 7.18029C8.93475 7.01954 8.83101 6.87602 8.70006 6.75995C8.38012 6.50574 7.97808 6.37766 7.57006 6.39995C7.27404 6.40462 6.98055 6.45522 6.70006 6.54995C6.39339 6.64995 6.06006 6.76662 5.70006 6.89995L5.56006 7.45995L6.00006 7.33995C6.13312 7.30029 6.27121 7.28008 6.41006 7.27995C6.60421 7.25966 6.79923 7.3093 6.96006 7.41995C7.01471 7.48827 7.05522 7.56677 7.07926 7.65089C7.10329 7.73501 7.11036 7.82307 7.10006 7.90995C7.1141 8.05294 7.1141 8.19696 7.10006 8.33995C7.10006 8.48995 7.03006 8.65995 6.98006 8.83995L6.46006 10.6599C6.46006 10.8499 6.38006 11.0199 6.36006 11.1699C6.35 11.3198 6.35 11.4701 6.36006 11.6199C6.35478 11.7957 6.38886 11.9704 6.4598 12.1314C6.53074 12.2923 6.63674 12.4353 6.77006 12.5499C7.09778 12.8123 7.51097 12.9441 7.93006 12.9199C8.21864 12.9241 8.5059 12.8802 8.78006 12.7899L9.78006 12.4199L9.92006 11.8599L9.46006 11.9999C9.30751 12.0218 9.15261 12.0218 9.00006 11.9999Z"/>
+                                                                        <path d="M8.71007 5.35997C9.03309 5.35856 9.34237 5.22909 9.57007 4.99997C9.68358 4.89776 9.77434 4.77284 9.83646 4.6333C9.89859 4.49376 9.93069 4.34272 9.93069 4.18997C9.93069 4.03723 9.89859 3.88619 9.83646 3.74665C9.77434 3.60711 9.68358 3.48218 9.57007 3.37997C9.33973 3.15724 9.03045 3.03497 8.71007 3.03997C8.38665 3.0345 8.07408 3.15665 7.84007 3.37997C7.72568 3.48142 7.63435 3.60622 7.57225 3.74594C7.51015 3.88566 7.47872 4.03707 7.48007 4.18997C7.47806 4.34297 7.5092 4.49459 7.57134 4.63441C7.63348 4.77423 7.72516 4.89894 7.84007 4.99997C8.07146 5.22969 8.38402 5.35902 8.71007 5.35997Z"/>
+                                                                    </svg>  
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 2 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest score" data-toggle="tooltip">
+                                                                    15
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest score" data-toggle="tooltip">49</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <a href="about_homework.html" class="btn-icon">
+                                                                    <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M9.00006 11.9999C8.80425 12.0183 8.60777 11.9727 8.44006 11.8699C8.37924 11.8049 8.3334 11.7273 8.30576 11.6427C8.27812 11.558 8.26935 11.4684 8.28006 11.3799C8.2689 11.2402 8.2689 11.0997 8.28006 10.9599C8.28006 10.7699 8.35006 10.6099 8.39006 10.4599L9.00006 8.65995C9.05166 8.48041 9.08516 8.29616 9.10006 8.10995C9.10006 7.90995 9.10006 7.76995 9.10006 7.68995C9.10586 7.51506 9.07303 7.34104 9.00389 7.18029C8.93475 7.01954 8.83101 6.87602 8.70006 6.75995C8.38012 6.50574 7.97808 6.37766 7.57006 6.39995C7.27404 6.40462 6.98055 6.45522 6.70006 6.54995C6.39339 6.64995 6.06006 6.76662 5.70006 6.89995L5.56006 7.45995L6.00006 7.33995C6.13312 7.30029 6.27121 7.28008 6.41006 7.27995C6.60421 7.25966 6.79923 7.3093 6.96006 7.41995C7.01471 7.48827 7.05522 7.56677 7.07926 7.65089C7.10329 7.73501 7.11036 7.82307 7.10006 7.90995C7.1141 8.05294 7.1141 8.19696 7.10006 8.33995C7.10006 8.48995 7.03006 8.65995 6.98006 8.83995L6.46006 10.6599C6.46006 10.8499 6.38006 11.0199 6.36006 11.1699C6.35 11.3198 6.35 11.4701 6.36006 11.6199C6.35478 11.7957 6.38886 11.9704 6.4598 12.1314C6.53074 12.2923 6.63674 12.4353 6.77006 12.5499C7.09778 12.8123 7.51097 12.9441 7.93006 12.9199C8.21864 12.9241 8.5059 12.8802 8.78006 12.7899L9.78006 12.4199L9.92006 11.8599L9.46006 11.9999C9.30751 12.0218 9.15261 12.0218 9.00006 11.9999Z"/>
+                                                                        <path d="M8.71007 5.35997C9.03309 5.35856 9.34237 5.22909 9.57007 4.99997C9.68358 4.89776 9.77434 4.77284 9.83646 4.6333C9.89859 4.49376 9.93069 4.34272 9.93069 4.18997C9.93069 4.03723 9.89859 3.88619 9.83646 3.74665C9.77434 3.60711 9.68358 3.48218 9.57007 3.37997C9.33973 3.15724 9.03045 3.03497 8.71007 3.03997C8.38665 3.0345 8.07408 3.15665 7.84007 3.37997C7.72568 3.48142 7.63435 3.60622 7.57225 3.74594C7.51015 3.88566 7.47872 4.03707 7.48007 4.18997C7.47806 4.34297 7.5092 4.49459 7.57134 4.63441C7.63348 4.77423 7.72516 4.89894 7.84007 4.99997C8.07146 5.22969 8.38402 5.35902 8.71007 5.35997Z"/>
+                                                                    </svg>  
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 2 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest score" data-toggle="tooltip">
+                                                                    15
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest score" data-toggle="tooltip">49</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <a href="about_homework.html" class="btn-icon">
+                                                                    <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M9.00006 11.9999C8.80425 12.0183 8.60777 11.9727 8.44006 11.8699C8.37924 11.8049 8.3334 11.7273 8.30576 11.6427C8.27812 11.558 8.26935 11.4684 8.28006 11.3799C8.2689 11.2402 8.2689 11.0997 8.28006 10.9599C8.28006 10.7699 8.35006 10.6099 8.39006 10.4599L9.00006 8.65995C9.05166 8.48041 9.08516 8.29616 9.10006 8.10995C9.10006 7.90995 9.10006 7.76995 9.10006 7.68995C9.10586 7.51506 9.07303 7.34104 9.00389 7.18029C8.93475 7.01954 8.83101 6.87602 8.70006 6.75995C8.38012 6.50574 7.97808 6.37766 7.57006 6.39995C7.27404 6.40462 6.98055 6.45522 6.70006 6.54995C6.39339 6.64995 6.06006 6.76662 5.70006 6.89995L5.56006 7.45995L6.00006 7.33995C6.13312 7.30029 6.27121 7.28008 6.41006 7.27995C6.60421 7.25966 6.79923 7.3093 6.96006 7.41995C7.01471 7.48827 7.05522 7.56677 7.07926 7.65089C7.10329 7.73501 7.11036 7.82307 7.10006 7.90995C7.1141 8.05294 7.1141 8.19696 7.10006 8.33995C7.10006 8.48995 7.03006 8.65995 6.98006 8.83995L6.46006 10.6599C6.46006 10.8499 6.38006 11.0199 6.36006 11.1699C6.35 11.3198 6.35 11.4701 6.36006 11.6199C6.35478 11.7957 6.38886 11.9704 6.4598 12.1314C6.53074 12.2923 6.63674 12.4353 6.77006 12.5499C7.09778 12.8123 7.51097 12.9441 7.93006 12.9199C8.21864 12.9241 8.5059 12.8802 8.78006 12.7899L9.78006 12.4199L9.92006 11.8599L9.46006 11.9999C9.30751 12.0218 9.15261 12.0218 9.00006 11.9999Z"/>
+                                                                        <path d="M8.71007 5.35997C9.03309 5.35856 9.34237 5.22909 9.57007 4.99997C9.68358 4.89776 9.77434 4.77284 9.83646 4.6333C9.89859 4.49376 9.93069 4.34272 9.93069 4.18997C9.93069 4.03723 9.89859 3.88619 9.83646 3.74665C9.77434 3.60711 9.68358 3.48218 9.57007 3.37997C9.33973 3.15724 9.03045 3.03497 8.71007 3.03997C8.38665 3.0345 8.07408 3.15665 7.84007 3.37997C7.72568 3.48142 7.63435 3.60622 7.57225 3.74594C7.51015 3.88566 7.47872 4.03707 7.48007 4.18997C7.47806 4.34297 7.5092 4.49459 7.57134 4.63441C7.63348 4.77423 7.72516 4.89894 7.84007 4.99997C8.07146 5.22969 8.38402 5.35902 8.71007 5.35997Z"/>
+                                                                    </svg>  
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <a href="about_homework.html" class="listItemWrapper">
+                                                                    <div class="eventItemThumb">
+                                                                        <div class="dateThumb" title="Homework Due date" data-toggle="tooltip">
+                                                                            <span class="dateItem dateDay">28</span>
+                                                                            <span class="dateItem dayMonth">Apr.</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <span class="">Week 2 - Logarithms</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagLeastScore" title="Lowest score" data-toggle="tooltip">
+                                                                    15
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-center">
+                                                                <span class="itemTag tagHighScore" title="Highest score" data-toggle="tooltip">49</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <a href="about_homework.html" class="btn-icon">
+                                                                    <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M9.00006 11.9999C8.80425 12.0183 8.60777 11.9727 8.44006 11.8699C8.37924 11.8049 8.3334 11.7273 8.30576 11.6427C8.27812 11.558 8.26935 11.4684 8.28006 11.3799C8.2689 11.2402 8.2689 11.0997 8.28006 10.9599C8.28006 10.7699 8.35006 10.6099 8.39006 10.4599L9.00006 8.65995C9.05166 8.48041 9.08516 8.29616 9.10006 8.10995C9.10006 7.90995 9.10006 7.76995 9.10006 7.68995C9.10586 7.51506 9.07303 7.34104 9.00389 7.18029C8.93475 7.01954 8.83101 6.87602 8.70006 6.75995C8.38012 6.50574 7.97808 6.37766 7.57006 6.39995C7.27404 6.40462 6.98055 6.45522 6.70006 6.54995C6.39339 6.64995 6.06006 6.76662 5.70006 6.89995L5.56006 7.45995L6.00006 7.33995C6.13312 7.30029 6.27121 7.28008 6.41006 7.27995C6.60421 7.25966 6.79923 7.3093 6.96006 7.41995C7.01471 7.48827 7.05522 7.56677 7.07926 7.65089C7.10329 7.73501 7.11036 7.82307 7.10006 7.90995C7.1141 8.05294 7.1141 8.19696 7.10006 8.33995C7.10006 8.48995 7.03006 8.65995 6.98006 8.83995L6.46006 10.6599C6.46006 10.8499 6.38006 11.0199 6.36006 11.1699C6.35 11.3198 6.35 11.4701 6.36006 11.6199C6.35478 11.7957 6.38886 11.9704 6.4598 12.1314C6.53074 12.2923 6.63674 12.4353 6.77006 12.5499C7.09778 12.8123 7.51097 12.9441 7.93006 12.9199C8.21864 12.9241 8.5059 12.8802 8.78006 12.7899L9.78006 12.4199L9.92006 11.8599L9.46006 11.9999C9.30751 12.0218 9.15261 12.0218 9.00006 11.9999Z"/>
+                                                                        <path d="M8.71007 5.35997C9.03309 5.35856 9.34237 5.22909 9.57007 4.99997C9.68358 4.89776 9.77434 4.77284 9.83646 4.6333C9.89859 4.49376 9.93069 4.34272 9.93069 4.18997C9.93069 4.03723 9.89859 3.88619 9.83646 3.74665C9.77434 3.60711 9.68358 3.48218 9.57007 3.37997C9.33973 3.15724 9.03045 3.03497 8.71007 3.03997C8.38665 3.0345 8.07408 3.15665 7.84007 3.37997C7.72568 3.48142 7.63435 3.60622 7.57225 3.74594C7.51015 3.88566 7.47872 4.03707 7.48007 4.18997C7.47806 4.34297 7.5092 4.49459 7.57134 4.63441C7.63348 4.77423 7.72516 4.89894 7.84007 4.99997C8.07146 5.22969 8.38402 5.35902 8.71007 5.35997Z"/>
+                                                                    </svg>  
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="section_cto">
+                                            <a href="teacher_homeworks.html" class="widget_cta_link caps_upper">See All</a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+                                               
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/jquery.rateit.min.js"></script>
+    <script src="../js/main.js"></script>
+    		
+</body>
+</html>

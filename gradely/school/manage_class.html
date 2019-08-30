@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Manage Class | Gradely.school</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="confirm_delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Confirm Delete</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <p class="subtitle status_tag-primary">You are about to delete the class <strong>Senior School 1 - Gold</strong>.</p>
+                        <p>Deleted class CANNOT be restored! Are you sure you want to delete it? </p>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-outline">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="AddTeacher">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Attach Teacher</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group dropdown">
+                            <a href="#" data-toggle="dropdown" class="menuSelect_input">
+                                <span class="menuSelect_label">Select a Teacher</span>
+                                <div class="menuSelect_inputIcon">
+                                    <span class="caret"></span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu widget_select_menu">
+                                <header class="widget_select_header">
+                                    <div class="select_menu_search">
+                                        <span class="search_icon">
+                                            <svg class="cust_icon icon_xs" viewBox="0 0 22 22"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                                                    <path
+                                                        d="M15.364 2.636A9 9 0 1 1 2.636 15.363 9 9 0 0 1 15.364 2.636zM20 20l-5-5">
+                                                    </path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <input class="form-control prefixed_input"
+                                            placeholder="Find teachers by name...">
+                                    </div>
+                                </header>
+                                <!-- Toggle the class "is_empty" when the list is empty -->
+                                <div class="widget_select_body ">
+                                    <ul class="search_result_list">
+                                        <li class="search_result_item">
+                                            <a href="#" class="result_item_wrapper user_profile_details">
+                                                <div class="user_info_avi">
+                                                    <img src="" alt="">
+                                                    <span class="default_avi">BI</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title">Bakare Isaac</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="#" class="result_item_wrapper user_profile_details">
+                                                <div class="user_info_avi">
+                                                    <img src="" alt="">
+                                                    <span class="default_avi">EO</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title">Elujobi Olarotimi</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="#" class="result_item_wrapper user_profile_details">
+                                                <div class="user_info_avi">
+                                                    <img src="" alt="">
+                                                    <span class="default_avi">PR</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title">Paul Ryan</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="#" class="result_item_wrapper user_profile_details">
+                                                <div class="user_info_avi">
+                                                    <img src="../img/mcgonangal.jpg" alt="">
+                                                    <span class="default_avi">MM</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title">Minerva mcgonangal</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="search_result_empty">
+                                        <p>No result found</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold">Subject</label>
+                            <div class="pillSelectorList">
+                                <div class="selectorItem">
+                                    <label for="subj_0" class="pillWrapper">
+                                        <input type="checkbox" id="subj_0" class="pillSelectControl" name="tchSubject">
+                                        <span class="selectorLabel caps_upper">
+                                            Mathematics
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="subj_1" class="pillWrapper">
+                                        <input type="checkbox" id="subj_1" class="pillSelectControl" name="tchSubject">
+                                        <span class="selectorLabel caps_upper">
+                                            English Language
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Attach</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="authenticationPageLayout">
+        <div class="grdly_page_frame bg__off_white">
+            <section class="global_alert_holder">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show  hidden" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Class information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body">
+                <header class="formWidgetHeader">
+                    <div class="widgetHeaderWrapper">
+                        <div class="formNavGroup navGroupLeft">
+                            <a href="class_details.html" class="navGroupItem formClose" title="Cancel">
+                                <svg class="cust_icon icon_xs" viewBox="0 0 20 20" fill="none" fill-rule="evenodd"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10 8.58589L2.929 1.51489L1.515 2.92889L8.586 9.99989L1.515 17.0709L2.929 18.4849L10 11.4139L17.071 18.4849L18.485 17.0709L11.414 9.99989L18.485 2.92889L17.071 1.51489L10 8.58589Z" />
+                                </svg>
+                            </a>
+                            <div class="navGroupItem formTitle">
+                                <div class="listDetails">
+                                    <h4 class="title text_clipped font-bold">Senior School 1 - Gold</h4>
+                                    <div class="listMetaInfo">
+                                        <span class="">CRL/SAT/REM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formNavGroup navGroupRight">
+                        </div>
+                    </div>
+                </header>
+                <div class="section_block">
+                    <div class="container form_body">
+                        <div class="formWidgetBody">
+                            <header class="grdly_page_header">
+                                <div class="grdly_header_title">
+                                    <h2 class="section_title font-bold">Manage Class</h2>
+                                </div>
+                                <div class="grdly_action_primary">
+                                </div>
+                            </header>
+                            <section class="gridCardRow">
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="gridFancyHeader infoStripCaption">
+                                        <span class="opt_rule"></span>
+                                        <span class="captionText font-bold gridCardTitle">Teachers</span>
+                                    </header>
+                                    <div class="empty_state justify-content-center hidden centered ">
+                                        <div class="def_wrapper color__grey_dark text-center">
+                                            <div class="def_img margin_bottom_md">
+                                                <img src="..//img/icons/teacher.svg" alt="No Teacher">
+                                            </div>
+                                            <p>There are no teachers assigned to this class in these class.</p>
+                                            <div class="margin_top_md">
+                                                <button type="button" class="btn btn-primary-outline btn-sm" data-target="#AddTeacher" data-toggle="modal">
+                                                    Add Teacher
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_inner ">
+                                        <div class="table table-responsive table-brand">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <div class="user_profile_details">
+                                                                    <div class="user_info_avi avi_md">
+                                                                        <img src="../img/" alt="">
+                                                                        <span class="default_avi">OM</span>
+                                                                    </div>
+                                                                    <div class="user_info">
+                                                                        <h4 class="title text_clipped font-bold">
+                                                                            Osinnuga Mayowa</h4>
+                                                                        <span
+                                                                            class="color__grey_dark">myoshin@gmail.com</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                Mathematics
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem" title="Remove Item"
+                                                                    data-toggle="tooltip">
+                                                                    <button type="button" class="btn-icon">
+                                                                        <svg viewBox="0 0 16 16"
+                                                                            class="cust_icon icon_xs"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path
+                                                                                d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z" />
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <div class="user_profile_details">
+                                                                    <div class="user_info_avi avi_md">
+                                                                        <img src="../img/" alt="">
+                                                                        <span class="default_avi">OM</span>
+                                                                    </div>
+                                                                    <div class="user_info">
+                                                                        <h4 class="title text_clipped font-bold">
+                                                                            Osinnuga Mayowa</h4>
+                                                                        <span
+                                                                            class="color__grey_dark">myoshin@gmail.com</span>
+                                                                    </div>
+                                                                    </article>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                Mathematics
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem" title="Remove Item"
+                                                                    data-toggle="tooltip">
+                                                                    <button type="button" class="btn-icon">
+                                                                        <svg viewBox="0 0 16 16"
+                                                                            class="cust_icon icon_xs"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path
+                                                                                d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z" />
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <div class="user_profile_details">
+                                                                    <div class="user_info_avi avi_md">
+                                                                        <img src="../img/" alt="">
+                                                                        <span class="default_avi">OM</span>
+                                                                    </div>
+                                                                    <div class="user_info">
+                                                                        <h4 class="title text_clipped font-bold">
+                                                                            Osinnuga Mayowa</h4>
+                                                                        <span
+                                                                            class="color__grey_dark">myoshin@gmail.com</span>
+                                                                    </div>
+                                                                    </article>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                Mathematics
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem" title="Remove Item"
+                                                                    data-toggle="tooltip">
+                                                                    <button type="button" class="btn-icon">
+                                                                        <svg viewBox="0 0 16 16"
+                                                                            class="cust_icon icon_xs"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path
+                                                                                d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z" />
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <div class="user_profile_details">
+                                                                    <div class="user_info_avi avi_md">
+                                                                        <img src="../img/" alt="">
+                                                                        <span class="default_avi">OM</span>
+                                                                    </div>
+                                                                    <div class="user_info">
+                                                                        <h4 class="title text_clipped font-bold">
+                                                                            Osinnuga Mayowa</h4>
+                                                                        <span
+                                                                            class="color__grey_dark">myoshin@gmail.com</span>
+                                                                    </div>
+                                                                    </article>
+                                                                </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                Mathematics
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem" title="Remove Item"
+                                                                    data-toggle="tooltip">
+                                                                    <button type="button" class="btn-icon">
+                                                                        <svg viewBox="0 0 16 16"
+                                                                            class="cust_icon icon_xs"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path
+                                                                                d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z" />
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="margin_top_md">
+                                            <button type="button" data-target="#AddTeacher" data-toggle="modal" class="input_control">
+                                                <span class="t_icon">
+                                                    <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                    <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                    </svg>
+                                                </span>
+                                                <span class="widget_cta_link">Add Teacher</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="gridFancyHeader infoStripCaption">
+                                        <span class="opt_rule"></span>
+                                        <span class="captionText font-bold gridCardTitle">Delete Class</span>
+                                    </header>
+
+                                    <div class="content_inner">
+                                        <h4 class="title color__grey_dark caps_upper margin_bottom_md"></h4>
+                                        <p class="font-md">Deleting this class will remove all link students, teachers
+                                            and homework performance information connected to the class. Are you sure
+                                            you want to delet it?</p>
+                                        <p class="font-md">This action can not be undone</p>
+                                        <div class="section_cto">
+                                            <button type="button" class="btn btn-default-outline"
+                                                data-target="#confirm_delete" data-toggle="modal">Delete Class</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+/* line 1, ../sass/partials/_posts.scss */
+.blog_masthead {
+  clear: both;
+  display: block;
+  padding-top: 100px;
+}
+
+/* line 7, ../sass/partials/_posts.scss */
+.post_header {
+  padding: 10px 0 70px;
+}
+
+/* line 11, ../sass/partials/_posts.scss */
+.postList {
+  flex-wrap: wrap;
+}
+
+/* line 15, ../sass/partials/_posts.scss */
+.postThumb {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 20, ../sass/partials/_posts.scss */
+.postThumbWrapper {
+  height: 100%;
+  max-width: 320px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 29, ../sass/partials/_posts.scss */
+.postThumbWrapper:hover .curl, .postThumbWrapper:focus .curl {
+  width: 40px;
+  height: 40px;
+}
+
+/* line 36, ../sass/partials/_posts.scss */
+.postThumbDetails {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* line 41, ../sass/partials/_posts.scss */
+.postThumbImage {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* line 47, ../sass/partials/_posts.scss */
+.postImageWrapper {
+  display: block;
+  position: relative;
+  padding-bottom: 75%;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 15px 40px;
+  background-color: #FE747D;
+  opacity: 1;
+}
+/* line 57, ../sass/partials/_posts.scss */
+.postImageWrapper:hover, .postImageWrapper:focus {
+  opacity: .75;
+}
+
+/* line 62, ../sass/partials/_posts.scss */
+.postExcerpt {
+  font-size: 18px;
+  line-height: 1.8em;
+  max-height: 5.4em;
+  overflow: hidden;
+  color: inherit;
+  text-overflow: ellipsis;
+}
+
+/* line 71, ../sass/partials/_posts.scss */
+.postTag {
+  z-index: 10;
+  color: inherit;
+}
+
+/* line 76, ../sass/partials/_posts.scss */
+.curl {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  overflow: hidden;
+  background: #2a4f77;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.3s ease 0s;
+}
+/* line 87, ../sass/partials/_posts.scss */
+.curl::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  -moz-transform: rotate(135deg) translateX(70%) scale(1.4);
+  -ms-transform: rotate(135deg) translateX(70%) scale(1.4);
+  -webkit-transform: rotate(135deg) translateX(70%) scale(1.4);
+  transform: rotate(135deg) translateX(70%) scale(1.4);
+  background: white;
+}
+
+/*Post Page*/
+/* line 102, ../sass/partials/_posts.scss */
+.featuredImage {
+  background: linear-gradient(to bottom, #07374b 0%, #07374b 50%, #ffffff 50%, #ffffff 100%);
+  position: relative;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  text-align: center;
+}
+/* line 109, ../sass/partials/_posts.scss */
+.featuredImage img {
+  display: inline-block;
+}
+
+/* line 114, ../sass/partials/_posts.scss */
+.postShare {
+  padding-top: 20px;
+  margin-top: 30px;
+  clear: both;
+  border-top: 1px solid #d5d5d5;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+/* line 124, ../sass/partials/_posts.scss */
+.meta_title {
+  flex-shrink: 0;
+  margin-right: 20px;
+}

@@ -10,8 +10,7 @@
 	<title>Setup your account - Add Class | Gradelyng</title>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
     <link rel="icon" href="../img/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css"/>
     <link rel="stylesheet" href="../css/base.min.css"/>
     <link rel="stylesheet" href="../css/styles.css"/>
@@ -20,17 +19,16 @@
     
 <body>
 
-    <div class="modal fade" id="addSchool">
+    <div class="modal fade" id="addClass">
         <div class="modal-dialog">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h4 class="modal-title text-caps">Add school</h4>
+                    <h4 class="modal-title text-caps">Add Class</h4>
                     <div class="dialogDismiss">
                         <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </header>
                 <div class="modal-body">
-                    <p class="subtitle font-md">An invitation to sign up on gradely will be sent to the school using the information you provide.</p>
                     <form action="">
                         <div class="form-group">
                             <label class="control-label">School Name</label>
@@ -41,8 +39,74 @@
                             <input type="email" class="form-control" placeholder="e.g admin@school.com">
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Contact Phone number</label>
-                            <input type="tel" class="form-control" placeholder="">
+                            <label for="" class="control-label caps_upper">Class Level</label>
+                            <select class="form-control" placeholder="Select school">
+                                <option>Class Level</option>
+                                <option>Primary Class 3</option>
+                                <option>Primary Class 4</option>
+                                <option>Primary Class 5</option>
+                                <option>Primary Class 6</option>
+                                <option>Junior Secondary School 1</option>
+                                <option>Junior Secondary School 2</option>
+                                <option>Junior Secondary School 3</option>
+                                <option selected>Senior Secondary School 1</option>
+                                <option>Senior Secondary School 2</option>
+                                <option>Senior Secondary School 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Class Name</label>
+                            <input type="text" class="form-control" placeholder="What is the name of your class?">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label caps_upper">Select your class curriculum level</label>
+                            <div class="pillSelectorList">
+                                <div class="selectorItem">
+                                    <label for="ucat_0" class="pillWrapper">
+                                        <input type="checkbox" id="ucat_0" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel caps_upper">
+                                            WAEC/NECO
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="ucat_2" class="pillWrapper">
+                                        <input type="checkbox" id="ucat_2" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel capsUpper">
+                                            CSIE (Cambridge)
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="ucat_3" class="pillWrapper">
+                                        <input type="checkbox" id="ucat_3" class="pillSelectControl" name="classCurriculum">
+                                        <span class="selectorLabel capsUpper">
+                                            SAT
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label caps_upper">Which subject(s) do you teach this class?</label>
+                            <div class="pillSelectorList">
+                                <div class="selectorItem">
+                                    <label for="subj_0" class="pillWrapper">
+                                        <input type="checkbox" id="subj_0" class="pillSelectControl" name="tchSubject">
+                                        <span class="selectorLabel caps_upper">
+                                            Mathematics
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="subj_1" class="pillWrapper">
+                                        <input type="checkbox" id="subj_1" class="pillSelectControl" name="tchSubject">
+                                        <span class="selectorLabel caps_upper">
+                                            English Language
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -118,115 +182,44 @@
                             </header>
                             <form action="">
                                 <div class="form-group">
-                                    <label for="" class="control-label caps_upper">Where do you teacher?</label>
-                                    <select class="form-control" placeholder="Select school">
-                                        <option>Choose your school</option>
-                                        <option>Christland Intl. College</option>
-                                        <option>Queens College</option>
-                                        <option>Kings College</option>
-                                        <option>Kings and Queens Intl. College</option>
-                                        <option>British International School</option>
-                                    </select>
-                                    <div class="more_control margin_top_md">
-                                        <button type="button" data-target="#addSchool" data-toggle="modal" class="input_control">
-                                        <span class="t_icon">
-                                            <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                            </svg>
-                                        </span>
-                                        <span >Can't find the school? <span class="widget_cta_link">Add it now</span></span>
-                                        </button>
-                                    </div>
+                                    <label for="" class="control-label caps_upper">Class code</label>
+                                    <input type="text" class="form-control" placeholder="Enter your class code here">
+                                    <p class="help-block">You can get your class code from your school administrator. Your school must be registered and have classes createf to do this.</p>
+                                    <p class="help-block text-error">Invalid code. Try again</p>
                                 </div>
-                                <div class="form-group">
-                                    <label for="" class="control-label caps_upper">Which class do you teach?</label>
-                                    <select class="form-control" placeholder="Select school">
-                                        <option>Select your class</option>
-                                        <option>Senior Secondary School 1 - SSS1</option>
-                                        <option>Senior Secondary School 2 - SSS2</option>
-                                        <option>Senior Secondary School 3 - SSS3</option>
-                                        <option>Junior Secondary School 1 - JSS1</option>
-                                        <option>Junior Secondary School 2 - JSS2</option>
-                                        <option>Junior Secondary School 3 - JSS3</option>
-                                    </select>
-                                    <p class="help-block hidden text-error">Invalid class code. Try again</p>
-                                </div>
-                                <div class="form-group">
-                                    <label for="" class="control-label caps_upper">Select your class curriculum level</label>
-                                    <div class="pillSelectorList">
-                                        <div class="selectorItem">
-                                            <label for="ucat_0" class="pillWrapper">
-                                                <input type="checkbox" id="ucat_0" class="pillSelectControl" name="classCurriculum">
-                                                <span class="selectorLabel caps_upper">
-                                                    WAEC
-                                                </span>
-                                            </label>
+
+                                <div class="newItem cardWrapper">
+                                    <a href="#addClass" data-toggle="modal" class="data_entity">
+                                        <div class="data_entity_icon">
+                                            <span class="t_icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                    <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                </svg>
+                                            </span>
                                         </div>
-                                        <div class="selectorItem">
-                                            <label for="ucat_1" class="pillWrapper">
-                                                <input type="checkbox" id="ucat_1" class="pillSelectControl" name="classCurriculum">
-                                                <span class="selectorLabel caps_upper">
-                                                    Neco
-                                                </span>
-                                            </label>
+                                        <div class="data_entity_info">
+                                            <h4 class="title font-bold">Don't have a class Code?</h4>
+                                            <span class="font-sm color__grey_dark">Create your class here</span>
                                         </div>
-                                        <div class="selectorItem">
-                                            <label for="ucat_2" class="pillWrapper">
-                                                <input type="checkbox" id="ucat_2" class="pillSelectControl" name="classCurriculum">
-                                                <span class="selectorLabel capsUpper">
-                                                    IGCSE
-                                                </span>
-                                            </label>
-                                        </div>
-                                        <div class="selectorItem">
-                                            <label for="ucat_3" class="pillWrapper">
-                                                <input type="checkbox" id="ucat_3" class="pillSelectControl" name="classCurriculum">
-                                                <span class="selectorLabel capsUpper">
-                                                    SAT
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="" class="control-label caps_upper">Which subject(s) do you teach this class?</label>
-                                    <div class="pillSelectorList">
-                                        <div class="selectorItem">
-                                            <label for="subj_0" class="pillWrapper">
-                                                <input type="checkbox" id="subj_0" class="pillSelectControl" name="tchSubject">
-                                                <span class="selectorLabel caps_upper">
-                                                    Mathematics
-                                                </span>
-                                            </label>
-                                        </div>
-                                        <div class="selectorItem">
-                                            <label for="subj_1" class="pillWrapper">
-                                                <input type="checkbox" id="subj_1" class="pillSelectControl" name="tchSubject">
-                                                <span class="selectorLabel caps_upper">
-                                                    English Language
-                                                </span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Show when the user focus on the input field above. -->
-                                <div class="form_cta text-center">
-                                    <button type="submit" class="btn btn-primary-outline">Add Class</button>
+                                    </a>
                                 </div>
 
                                 <!-- Use this to show a preview of the school that match with the provided student code -->
-                                <div class="infoPreviewCard margin_top_lg hidden">
+                                <div class="infoPreviewCard margin_top_lg ">
+                                    <h4 class="data_label margin_bottom_sm">Is this your Class?</h4>
                                     <div class="cardWrapper">
-                                        <div class="details_col_info ">
-                                            <div class="insight_title">
-                                                <span>Your Class Code</span>
+                                        <div class="user_profile_details align-items-start">
+                                            <div class="productThumb avi_md">
+                                                <span class="default_avi">
+                                                    <span class="cust_icon icon_school"></span>
+                                                </span>
                                             </div>
-                                            <div class="insight_value">
-                                                <h4 class="title title_sm font-bold color__black">CRL/SAT/REM</h4>
-                                                <p class="margin_top_sm">Note and share this code with your students for them to join your class.</p>
-                                            </div>
-                                            <div class="details_col_cta">
-                                                <button type="button" class="widget_cta_link">Copy Code</button>
+                                            <div class="user_info">
+                                                <h4 class="title font-bold color__black">Senior Secondary School 1A</h4>
+                                                <p class="listMetaInfo">Christland Intl. College</p>
+                                                <div class="details_col_cta">
+                                                    <button type="button" class="widget_cta_link">Not my Class</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title> Christland Intl. College | Gradely.school</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="school_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem ">
+                            <a href="classes.html" class="menuLinkItem">classes</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="teachers.html" class="menuLinkItem">Teachers</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="parents.html" class="menuLinkItem">Parents</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="messages.html">
+                                <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.18073 5.42653C1.49745 4.97408 2.12098 4.86405 2.57343 5.18076L12 11.7793L21.4265 5.18076C21.879 4.86405 22.5025 4.97408 22.8192 5.42653C23.1359 5.87898 23.0259 6.50251 22.5734 6.81923L12.5734 13.8192C12.2291 14.0603 11.7708 14.0603 11.4265 13.8192L1.4265 6.81923C0.974052 6.50251 0.864017 5.87898 1.18073 5.42653Z"/>
+                                </svg>                                    
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi">AJ</div>
+                                </div>
+                                <span class="control_label">Andrew Jackson</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul class="dpd_nav">
+                                    <li>
+                                        <a href="school_profile.html">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="act_settings.html">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../login.html">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text sr-only">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="global_alert_holder hidden">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Personal information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">   
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body bg__white"> 
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+                        <header class="pageLayoutheader spacing_lg">
+                            <div class="pageLayoutBanner">
+                                <div for="upload_imgs" class="responsiveImageWrapper">
+                                    <!-- bind hte uploaded image here -->
+                                    <img src="../img/banners/SchoolImage.jpg" alt="" class="bannerImage" >
+                                </div>
+                                <div class="schoolProfileContent">
+                                    <div class="container">
+                                        <div class="bannerControl">
+                                            <a href="edit_profile.html" class="btn btn-secondary">Settings</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="schoolProfileMetaHolder">
+                                <div class="container">
+                                    <div class="brandProfileDetails">
+                                        <!-- to show the uploaded logo, add the class "" after uploading an image. -->
+                                        <div class="schoolLogo avi_massive has_image">
+                                            <img src="../img/logoSample.png" alt="" class="schoolLogoImage">
+                                            <span class="default_avi">C</span>
+                                        </div>
+                                        <div class="user_details_wrapper">
+                                            <div class="user_info">
+                                                <h4 class="title title_lg font-bold">Chrisland Schools</h4>
+                                                <p class="font-md color__grey_light">Show forth the light</p>
+                                                <div class="insight_row margin_top_md">
+                                                    <div class="insight_item">
+                                                        <div class="insight_title">
+                                                            <span class="caps_upper color__grey_light">Curriculum</span>
+                                                        </div>
+                                                        <div class="insight_value">
+                                                            <span class="title font-bold">British Nigerian</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="insight_item">
+                                                        <div class="insight_title">
+                                                            <span class="caps_upper color__grey_light">Boarding Type</span>
+                                                        </div>
+                                                        <div class="insight_value">
+                                                            <span class="title font-bold">Day & Boarding</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="insight_item">
+                                                        <div class="insight_title">
+                                                            <span class="caps_upper color__grey_light">Scope</span>
+                                                        </div>
+                                                        <div class="insight_value">
+                                                            <span class="title font-bold">Secondary/College</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="insight_item">
+                                                        <div class="insight_title">
+                                                            <span class="caps_upper color__grey_light">Date Established</span>
+                                                        </div>
+                                                        <div class="insight_value">
+                                                            <span class="title font-bold">
+                                                                <time>October 2008</time>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </header>
+
+                        <section class="gridCardRow">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <article class="gridCardItem spacing_lg">
+                                            <div class="proseBlock">
+                                                <h4 class="title title_lg font-bold margin_bottom_md">About Us</h4>
+                                                <p>Our Vision is to be at the forefront in the private education sector, and to nurture the children to become all they can be through quality all-round education, from kindergarten to tertiary level,the private education sector, and to nurture the children to become all they can be through quality all-round education, from kindergarten to tertiary level, Our Vision is to be at the forefront in the private education sector, and to nurture the children to become all they can be through quality all-round education, from kindergarten to tertiary level.</p>
+                                            </div>
+                                        </article>
+
+                                        <article class="gridCardItem spacing_lg">
+                                            <h4 class="title title_lg font-bold margin_bottom_md">Demographics</h4>
+
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-6">
+                                                    <div class="userInfoBlockItem">
+                                                        <h4 class="margin_bottom_md caps_upper font-default">Gender</h4>
+                                                        <div class="chartSummary row">
+                                                            <div class="charteKy col-6">
+                                                                <div class="legendList">
+                                                                    <div class="legendItem margin_bottom_md">
+                                                                        <span class="legendIndicator bg__inverse">
+                                                                        </span>
+                                                                        <div class="data_entity_info">
+                                                                            <div class="listMetaInfo">
+                                                                                <span>Female</span>
+                                                                            </div>
+                                                                            <h4 class="title">664 students</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="legendItem margin_bottom_md">
+                                                                        <span class="legendIndicator bg__primary"></span>
+                                                                        <div class="data_entity_info">
+                                                                            <div class="listMetaInfo">
+                                                                                <span>Male</span>
+                                                                            </div>
+                                                                            <h4 class="title">546 students</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="chartHolder col-6">
+                                                                <canvas id="classPerformance" aria-label="Class performance chart" role="img"></canvas>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 offset-md-2 col-md-4">
+                                                    <div class="userInfoBlockItem">
+                                                        <h4 class="margin_bottom_md caps_upper font-default">Age</h4>
+                                                        <article class="topicItem">
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <span class="topicTitle font-default color__black">6-9</span>
+                                                                    <span class="topicgrade color__primary">37%</span>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_priamry">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 37%" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                        <article class="topicItem">
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <span class="topicTitle font-default color__black">10-12</span>
+                                                                    <span class="topicgrade color__primary">48%</span>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_priamry">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                        <article class="topicItem">
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <span class="topicTitle font-default color__black">13-15</span>
+                                                                    <span class="topicgrade color__primary">13%</span>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_priamry">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 13%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                        <article class="topicItem">
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <span class="topicTitle color__black">Above 16</span>
+                                                                    <span class="topicgrade color__primary">2%</span>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_priamry">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 2%" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="offset-md-1 col-md-4">
+                                        <div class="infoWidget">
+                                            <div class="paneWrapper">
+                                                <div class="userInfoBlockItem margin_bottom_md">
+                                                    <h4 class="margin_bottom_md color__grey_dark caps_upper font-default">Contact Person</h4>
+                                                    <div class="user_item">
+                                                        <div class="user_profile_details align-items-start">
+                                                            <div class="user_info_avi avi_lg">
+                                                                <img src="../img/hermionie.jpg" alt="">
+                                                                <span class="default_avi">HG</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title font-bold">Dr. (Mrs.) W.A Awosika (OON)</h4>
+                                                                <p class="listMetaInfo">Founder/Chairman</p>
+                                                                <div class="details_col_cta font-default">
+                                                                    <a href="tel:" class="widget_cta_link">Contact</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="userInfoBlockItem">
+                                                        <h4 class="margin_bottom_md color__grey_dark caps_upper font-default ">School Contact</h4>
+                                                        <div class="infoList">
+                                                            <div class="infoListItem">
+                                                                <div class="infoImage">
+                                                                    <div class="icon_box avi_avg box_inverse">
+                                                                        <i class="cust_icon map_pin"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="infoContainer">
+                                                                    <span class="data_label">Ikeja Branch</span>
+                                                                    <p>26, Opebi Road, Ikeja</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="infoListItem align-items-center">
+                                                                <div class="infoImage">
+                                                                    <div class="icon_box avi_avg box_inverse">
+                                                                        <i class="cust_icon phone"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="infoContainer">
+                                                                    <p>
+                                                                        <a href="tel:2348072548185" class="">+2348072548185</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="infoListItem align-items-center">
+                                                                <div class="infoImage">
+                                                                    <div class="icon_box avi_avg box_inverse">
+                                                                        <i class="cust_icon icon_mail"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="infoContainer">
+                                                                    <p>
+                                                                        <a href="mailto:info@chrislandschools.org" class="">info@chrislandschools.org</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="infoListItem align-items-center">
+                                                                <div class="infoImage">
+                                                                    <div class="icon_box avi_avg box_inverse">
+                                                                        <i class="cust_icon icon_link"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="infoContainer">
+                                                                    <p>
+                                                                        <a href="https://www.chrislandschools.org" target="_blank" class="">www.chrislandschools.org</a>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/Chart.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        var classChart = document.getElementById('classPerformance').getContext('2d');
+
+        var myDoughnutChart = new Chart(classChart, {
+            type: 'doughnut',
+            data: {
+                labels: ["Female Students", "Male Students"],
+                datasets: [{
+                    label: 'School gender summary',
+                    data: [654, 546],
+                    backgroundColor: [
+                        '#11bdcf',
+                        '#2a4f77',
+                    ],
+                    hoverBackgroundColor: '#08384D',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutoutPercentage: 70,
+                aspectRatio:1,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    </script>
+    		
+</body>
+</html>

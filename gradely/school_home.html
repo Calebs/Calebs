@@ -10,7 +10,7 @@
 	<title>Gradely.ng | Help your child succeed in Real-time</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="icon" href="img/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
     <link href="css/slick.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/base.min.css"/>
@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
     <div class="modal fade" id="school_signup">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -39,19 +38,19 @@
                                     <input type="text" class="form-control" placeholder="The name of your school">
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Contact Person</label>
-                                    <input type="text" class="form-control" placeholder="Name of contact person ">
+                                    <label class="control-label">Person</label>
+                                    <input type="text" class="form-control" placeholder="Your name">
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Contact's Role</label>
-                                    <input type="text" class="form-control" placeholder="The role of contact person. E.g School Admin, Head Teacher, e.t.c.">
+                                    <label class="control-label">Role in School</label>
+                                    <input type="text" class="form-control" placeholder="E.g School Admin, Head Teacher, e.t.c.">
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Contact Email</label>
+                                    <label class="control-label">Email Address</label>
                                     <input type="email" class="form-control" placeholder="Enter email address">
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label">Contact Phone number</label>
+                                    <label class="control-label">Phone number</label>
                                     <input type="text" class="form-control" value="+234">
                                 </div>
                                 <div class="form_cta text-right">
@@ -97,16 +96,29 @@
                             <a href="index.html" class="menuLinkItem">Home</a>
                         </div>
                         <div class="menuListItem active">
-                            <a href="school_home.html" class="menuLinkItem">For School</a>
+                            <a href="school_home.html" class="menuLinkItem">For Schools</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="about.html" class="menuLinkItem">About Us</a>
                         </div>
                         <div class="menuListItem">
                             <a href="pricing.html" class="menuLinkItem">Pricing</a>
                         </div>
                         <div class="menuListItem">
-                            <a href="contact.html" class="menuLinkItem">Contact Us</a>
+                            <a href="blog.html" class="menuLinkItem">Blog</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="login.html" class="menuLinkItem">Log In</a>
                         </div>
                     </nav>
                     <nav class="navMenu menuAlt">
+                        <div class="controlBtn btn_user_act hidden">
+                            <a href="signup_lander.html" class="btn btn-secondary">Sign Up</a>
+                        </div>
+                        <!-- only visible when user is logged in -->
+                        <div class="controlBtn btn_user_act">
+                            <a href="#" class="btn btn-secondary">My Dashboard</a>
+                        </div>
                         <div class="controlBtn nav_trigger">
                             <a class="primary-nav-trigger" href="#">
                                 <span class="menu-icon"></span>
@@ -129,7 +141,8 @@
         </div>
         <div class="herobottomShape heroBottomArch"></div>
     </section>
-    <main class="mainContentArea bg__white">
+
+    <main class="mainContentArea bg__white padding-top-none">
         <section class="heroSubs">
             <div class="container">
                 <div class="floatingContentPanel">
@@ -253,7 +266,7 @@
         <footer role="contentinfo" class="footerArea bg__inverse_light">
             <div class="footerArc"></div>
             <div class="container">
-                <section class="footerTop hidden footerRow">
+                <section class="footerTop footerRow">
                     <div class="text-center">
                         <h3 class="title title_lg margin_bottom_lg color__primary">Be the first to know when we launch</h3>
                         <div class="row">
@@ -313,7 +326,6 @@
                                         </svg>
                                     </a>
                                 </div>
-
                             </div>
                         </div>
                         <div class="col-md-8 brandNav">
@@ -327,6 +339,7 @@
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about.html">About Us</a></li>
                                             <li><a href="pricing.html">Pricing</a></li>
+                                            <li><a href="blog.html" target="_blank">Blog</a></li>
                                             <li><a href="school_home.html">For School</a></li>
                                         </ul>
                                     </div>
@@ -363,7 +376,6 @@
                 </section>
             </div>
         </footer>
-
     </main>
     
 	<script src="js/jquery.js"></script>

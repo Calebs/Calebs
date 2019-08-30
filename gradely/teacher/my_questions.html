@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Questions | Gradelyng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="confirm_delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Confirm Delete</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p class="font-md">Are you sure you want to delete the question <strong>Question text goes here</strong>?</p>
+                    <p>This action cannot be reverted.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-outline">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="teacher_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem ">
+                            <a href="homework.html" class="menuLinkItem">Homework</a>
+                        </div>
+                        <div class="menuListItem active">
+                            <a href="questions_lander.html" class="menuLinkItem">Questions</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="my_classes.html" class="menuLinkItem">Classes</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="#">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path
+                                        d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z" />
+                                </svg>
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi">AJ</div>
+                                </div>
+                                <span class="control_label">Andrew Jackson</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul class="dpd_nav">
+                                    <li>
+                                        <a href="profile.html">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="act_settings.html">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../login.html">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text sr-only">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="global_alert_holder hidden">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Personal information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body bg__off_white">
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+                        <div class="section_block">
+                            <div class="container content_narrow">
+                                <nav class="cm_page_breadcrumb_nav margin_bottom_md" aria-label="Page breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="questions_lander.html">Questions</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Mathematics</li>
+                                    </ol>
+                                </nav>
+                                <header class="section_header">
+                                    <div class="title_prefixed">
+                                        <h3 class="title title_sm color__black font-bold">Mathematics</h3>
+                                    </div>
+                                </header>
+                                <div class="filter_navigation">
+                                    <ul class="filter_nav_options">
+                                        <li><a href="subject_questions.html" title="All Questions">All</a></li>
+                                        <li><a href="my_questions.html" class="active" title="Compete Homework">My Questions</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div action="content_inner">
+                                    <div class="questionList">
+                                        <article class="questionListItem">
+                                            <div class="newItem no_margin cardWrapper">
+                                                <a href="new_question.html" class="data_entity align-items-center">
+                                                    <div class="data_entity_icon">
+                                                        <span class="t_icon">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                                <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9" />
+                                                            </svg>
+                                                        </span>
+                                                    </div>
+                                                    <div class="data_entity_info">
+                                                        <h4 class="questionText">Create your own question</h4>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </article>
+                                        <article class="questionListItem">
+                                            <div class="questionInfoWrapper">
+                                                <div class="questionInfoDetails">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped"><a href="question_preview.html" >Which of the following is not an example of waves?</a></h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDefault">Easy</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">NECO</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>30s</time></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item"><a
+                                                                    href="question_preview.html">View</a></li>
+                                                            <li class="dropdown-item"><a href="new_question.html">Edit Question</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Delete</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="questionListItem">
+                                            <div class="questionInfoWrapper">
+                                                <div class="questionInfoDetails">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">
+                                                           <a href="question_preview.html">Which of the following best
+                                                            describes the occupation of James Cooks?</a></h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagSecondary">Medium</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">WAEC</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>45s</time></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item"><a
+                                                                    href="question_preview.html">View</d></li>
+                                                            <li class="dropdown-item"><a href="new_question.html">Edit Question</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Delete</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="questionListItem">
+                                            <div class="questionInfoWrapper">
+                                                <div class="questionInfoDetails">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">
+                                                           <a href="question_preview.html">Which of the following is not
+                                                            an example of waves?</a></h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDefault">Easy</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">NECO</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>30s</time></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item"><d href="question_preview.html">View</d></li>
+                                                            <li class="dropdown-item"><a href="new_question.html">Edit Question</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Delete</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+
+                                        <article class="questionListItem">
+                                            <div class="questionInfoWrapper">
+                                                <div class="questionInfoDetails">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">
+                                                           <a href="question_preview.html">Which of the following best
+                                                            describes the occupation of James Cooks?</a></h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagSecondary">Medium</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">WAEC</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>45s</time></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item"><d href="question_preview.html">View</d></li>
+                                                            <li class="dropdown-item"><a href="new_question.html">Edit Question</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Delete</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="questionListItem">
+                                            <div checked class="questionInfoWrapper">
+                                                <div class="questionInfoDetails">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">
+                                                           <a href="question_preview.html">What type of triangle has
+                                                            three equal sides?</a>
+                                                        </h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDefault">Easy</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">NECO</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>30s</time></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item"><d href="question_preview.html">View</d></li>
+                                                            <li class="dropdown-item"><a href="new_question.html">Edit Question</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Delete</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        
+                                    </div>
+                                    <div class="list_pager margin_top_md">
+                                        <div class="pager_block">
+                                            <p class="pager_label">
+                                                You've viewed <span>30</span> of <span>727 Questions</span>
+                                            </p>
+                                            <div class="pager_progress_indicator">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                        style="width: 9%" aria-valuenow="9"
+                                                        aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">Page Progress</span> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pager_controls">
+                                                <button type="button" class="btn-nav">Previous</button>
+                                                <button type="button" class="btn-nav">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

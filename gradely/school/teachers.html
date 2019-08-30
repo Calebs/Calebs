@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Teachers | Gradelyng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="newTeacher">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">New Teacher</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label font-bold">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Name of the teacher">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Email Address here">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold">Subject</label>
+                            <div class="pillSelectorList">
+                                <div class="selectorItem">
+                                    <label for="subj_0" class="pillWrapper">
+                                        <input type="checkbox" id="subj_0" class="pillSelectControl" name="tchSubject">
+                                        <span class="selectorLabel caps_upper">
+                                            Mathematics
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="selectorItem">
+                                    <label for="subj_1" class="pillWrapper">
+                                        <input type="checkbox" id="subj_1" class="pillSelectControl" name="tchSubject">
+                                        <span class="selectorLabel caps_upper">
+                                            English Language
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                                                
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="newMessage">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">New Message</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="user_profile_details margin_bottom_md">
+                        <div class="user_info_avi avi_md">
+                            <img src="../img/mcgonangal.jpg" alt="">
+                            <span class="default_avi">RO</span>
+                        </div>
+                        <div class="user_info">
+                            <span class="color__grey_dark">Message to</span>
+                            <h4 class="title text_clipped font-bold">Racheal Oniga</h4>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label sr-only">Subject</label>
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label sr-only">Your Message here</label>
+                            <textarea rows="7" class="form-control" placeholder="Write your message"></textarea>
+                        </div>                                           
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="modal fade" id="fileUploader">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Bulk Upload</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+
+                    <section class="widgetHome ">
+                        <form action="">
+                            <div class="error_message ">
+                                <p>An error occured while trying to parse the document. Please make corrections and try again.</p>
+                            </div>
+    
+                            <div class="upload_dialog ">
+                                <label class="upload_control">
+                                <input type="file" name="file" id="upload_imgs" hidden="" accept=".xls" class="inputfile">
+                                <div class="upload_message">
+                                    <h4 class="title font-bold margin_bottom_sm">Upload document </h4>
+                                    <p>Upload a pre-formated document containing a list of your teachers. Download the sample format below..</p>
+                                </div>
+                                </label>
+                            </div>
+                    
+                            <!-- Hide until a file has been uploaded -->
+                            <div class="upload_dialog_items form-group">
+                                <article class="upload_item">
+                                    <div class="dialogDismiss">
+                                        <button class="close_dialog"></button>
+                                    </div>
+                                    <div class="file_item">
+                                        <div class="fileTypeThumb">
+                                        <div class="thumbBox thumbBox_xls">
+                                            <span class="filetypeValue">xls</span>
+                                        </div>
+                                        </div>
+                                        <div class="fileCardDetails font-sm">
+                                        <h4 class="title font-bold" title="Interview_draft_2.xls">myTeachers.xls</h4>
+                                        <span class="color__grey_dark">1.2MB</span>
+                                        </div>
+                                    </div>
+                                    <div class="fileUploadProgress">
+                                        <div class="progress">
+                                        <div class="progress-bar progress-bar-striped" style="width: 25%" role="progressbar"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Uploading</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </s>
+    
+                            <div class="form_cta text-center">
+                                <button class="btn btn-primary">Extract List</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this after parsing the document successfully -->
+                    <section class="responsePane hidden">
+                        <div class="content_wrapper text-center">
+                            <div class="defImg">
+                                <img src="../img/icons/task_done.svg" class="avi_xl" alt="">
+                            </div>
+                            <h3 class="title title_sm margin_bottom_md font-bold">Document Parsed Successfullly</h3>
+                            <p class="font-md">Your document complys with the correct format, and your list has been extracted and added to your account.</p>
+                            <div class="section_cto">
+                                <button type="button" data-dismiss="modal" class="btn btn-default-outline">Close</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirm_delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Confirm Delete</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p class="font-md">Are you sure you want to remove <strong>Teacher name here</strong> from your list of teachers?</p>
+                    <p>This action cannot be reverted.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-outline">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="school_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="classes.html" class="menuLinkItem">classes</a>
+                        </div>
+                        <div class="menuListItem active">
+                            <a href="teachers.html" class="menuLinkItem">Teachers</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="parents.html" class="menuLinkItem">Parents</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="messages.html">
+                                <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.18073 5.42653C1.49745 4.97408 2.12098 4.86405 2.57343 5.18076L12 11.7793L21.4265 5.18076C21.879 4.86405 22.5025 4.97408 22.8192 5.42653C23.1359 5.87898 23.0259 6.50251 22.5734 6.81923L12.5734 13.8192C12.2291 14.0603 11.7708 14.0603 11.4265 13.8192L1.4265 6.81923C0.974052 6.50251 0.864017 5.87898 1.18073 5.42653Z"/>
+                                </svg>                                    
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi">AJ</div>
+                                </div>
+                                <span class="control_label">Andrew Jackson</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul class="dpd_nav">
+                                    <li>
+                                        <a href="school_profile.html">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="act_settings.html">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../login.html">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text sr-only">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="global_alert_holder hidden">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Personal information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body bg__off_white">
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+
+                        <section class="section_block">
+                            <div class="container">
+                                <header class="grdly_page_header">
+                                    <div class="grdly_header_title">
+                                        <h2 class="section_title font-bold">Teachers</h2>
+                                    </div>
+                                    <div class="grdly_action_primary dropdown">
+                                        <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                            Add...
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <button type="button" data-target="#newTeacher" data-toggle="modal" data-backdrop="static">Add a Teacher</button>
+                                            </li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="dropdown-item">
+                                                <button type="button" data-target="#fileUploader" data-toggle="modal" data-backdrop="static">Upload List</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </header>
+                                <div class="filter_navigation">
+                                    <div class="filter_search">
+                                        <form action="">
+                                            <div class="search_bar_holder">
+                                                <button class="search_btn">
+                                                    <svg class="cust_icon" viewBox="0 0 22 22"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                                                            <path
+                                                                d="M15.364 2.636A9 9 0 1 1 2.636 15.363 9 9 0 0 1 15.364 2.636zM20 20l-5-5">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </button>
+                                                <div class="search_input">
+                                                    <input class="filter_search_input" placeholder="Find teacher by name..."/>
+                                                </div>
+                                                <div class="filterOption optionfilter">
+                                                    <a href="#" data-target="#my-collapse" data-toggle="collapse"
+                                                        aria-expanded="false" aria-controls="my-collapse"
+                                                        class="filterOptionWrapper">
+                                                        <span class="optionIcon">
+                                                            <svg class="cust_icon icon_xs" viewBox="0 0 16 12"
+                                                                xmlns="http://www.w3.org/2000/svg">
+                                                                <path
+                                                                    d="M6.22222 11.3334H9.77778V9.55564H6.22222V11.3334ZM0 0.666748V2.44453H16V0.666748H0ZM2.66667 6.88897H13.3333V5.11119H2.66667V6.88897Z" />
+                                                            </svg>
+                                                        </span>
+                                                        <span class="optionLabel">
+                                                            Filter
+                                                        </span>
+                                                        <span class="caret"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="filterOptionView collapse" id="my-collapse">
+                                                <h3 class="title caps_upper margin_bottom_md">Filter </h3>
+                                                <div class="FilterParams row">
+                                                    <article class="col-sm-4 filterParamBlock">
+                                                        <span class="paramsHeading">Performance Score</span>
+                                                        <div class="paramsList">
+                                                            <div class="checkbox">
+                                                                <label for="stat_all">
+                                                                    <input type="checkbox" checked name="fl_status"
+                                                                        id="stat_all">
+                                                                    <span class="label_text">All</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="stat_live">
+                                                                    <input type="checkbox" name="fl_status" id="stat_live">
+                                                                    <span class="label_text">
+                                                                        Not Available
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="stat_done">
+                                                                    <input type="checkbox" name="fl_status" id="stat_done">
+                                                                    <span class="label_text">Poor</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="stat_saved">
+                                                                    <input type="checkbox" name="fl_status" id="stat_saved">
+                                                                    <span class="label_text">Satisfactory</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="stat_exl">
+                                                                    <input type="checkbox" name="fl_status" id="stat_exl">
+                                                                    <span class="label_text">Excellent</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="col-sm-4 filterParamBlock">
+                                                        <span class="paramsHeading">Subject</span>
+                                                        <div class="paramsList">
+                                                            <div class="checkbox">
+                                                                <label for="pArea_all">
+                                                                    <input type="checkbox" checked name="fl_pArea"
+                                                                        id="pArea_all">
+                                                                    <span class="label_text">All</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="pArea_a">
+                                                                    <input type="checkbox" name="fl_pArea" id="pArea_a">
+                                                                    <span class="label_text">Mathematics</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="pArea_b">
+                                                                    <input type="checkbox" name="fl_pArea" id="pArea_b">
+                                                                    <span class="label_text">English Language</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="col-sm-4 filterParamBlock">
+                                                        <span class="paramsHeading">Class</span>
+                                                        <div class="paramsList">
+                                                            <div class="checkbox">
+                                                                <label for="tsClass_all">
+                                                                    <input type="checkbox" checked name="tsClass"
+                                                                        id="tsClass_all">
+                                                                    <span class="label_text">All</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="tsClass_gradely">
+                                                                    <input type="checkbox" name="tsClass" id="tsClass_gradely">
+                                                                    <span class="label_text">Junior Secondary School 1A</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="tsClass_me">
+                                                                    <input type="checkbox" name="tsClass" id="tsClass_me">
+                                                                    <span class="label_text">Junior Secondary School 1B</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="tsClass_me">
+                                                                    <input type="checkbox" name="tsClass" id="tsClass_me">
+                                                                    <span class="label_text">Junior Secondary School 2A</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label for="tsClass_me">
+                                                                    <input type="checkbox" name="tsClass" id="tsClass_me">
+                                                                    <span class="label_text">Junior Secondary School 2B</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="base_divider"></div>
+                                                <div class="text-center">
+                                                    <button type="button" class="btn btn-sm btn-default">Clear</button>
+                                                    <button type="submit" class="btn btn-sm btn-primary-outline">Apply</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="empty_state justify-content-center centered hidden">
+                                    <div class="def_wrapper color__grey_dark text-center">
+                                        <div class="def_img margin_bottom_md">
+                                            <img src="..//img/icons/teacher.svg" alt="No Teacher">
+                                        </div>
+                                        <p>There are no teachers assigned to this class in these class.</p>
+                                    </div>
+                                </div>
+
+                                <div class="content_inner ">
+                                    <div class="table table-responsive table-brand">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div class="">Teacher</div>
+                                                </th>
+                                                <th>
+                                                    <div class="">Performance Score</div>
+                                                </th>
+                                                <th>
+                                                    <div class="">Subject</div>
+                                                </th>
+                                                <th>
+                                                    <div>Class</div>
+                                                </th>
+                                                <th>
+                                                    <div class="">Options</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="table_description">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi avi_md">
+                                                                <img src="../img/mcgonangal.jpg" alt="">
+                                                                <span class="default_avi">RO</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Racheal Oniga</h4>
+                                                                <span class="color__grey_dark">
+                                                                    <a href="mailto:racheal@christland.com">racheal@christland.com</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="teacherPerformance">
+                                                        <div class="performanceScore scoreAvg">
+                                                            <span class="">7.9</span>
+                                                        </div>
+                                                        <div class="perfLabel">
+                                                            <span>Satisfactory</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="badge badge-default">
+                                                            Mathematics
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="">
+                                                            Senior Secondary School 1A
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item">
+                                                                <a href="teacherDetails.html">View</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button type="button" data-target="#newMessage" data-toggle="modal" data-backdrop="static">Contact</button></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Remove</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table_description">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi avi_md">
+                                                                <img src="../img/" alt="">
+                                                                <span class="default_avi">BC</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Babatunde Calebs</h4>
+                                                                <span class="color__grey_dark">
+                                                                    <a href="mailto:racheal@christland.com">calebsconsults@gmail.com</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="teacherPerformance">
+                                                        <div class="performanceScore scoreGood">
+                                                            <span class="">8.9</span>
+                                                        </div>
+                                                        <div class="perfLabel">
+                                                            <span>Excellent</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="badge badge-default">
+                                                            English
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="">
+                                                            Senior Secondary School 1A
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item">
+                                                                <a href="teacherDetails.html">View</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button type="button" data-target="#newMessage" data-toggle="modal" data-backdrop="static">Contact</button></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Remove</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table_description">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi avi_md">
+                                                                <img src="../img/" alt="">
+                                                                <span class="default_avi bg__primary color__white">BI</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Bakare Isaac</h4>
+                                                                <span class="color__grey_dark">
+                                                                    <a href="mailto:isaacbyles@yahoo.co.uk">isaacbyles@yahoo.co.uk</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="teacherPerformance">
+                                                        <div class="performanceScore scorePoor">
+                                                            <span class="">3.2</span>
+                                                        </div>
+                                                        <div class="perfLabel">
+                                                            <span>Poor</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="badge badge-default">
+                                                            Mathematics
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="">
+                                                            Senior Secondary School 2A
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item">
+                                                                <a href="teacherDetails.html">View</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button type="button" data-target="#newMessage" data-toggle="modal" data-backdrop="static">Contact</button></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Remove</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table_description">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi avi_md">
+                                                                <img src="../img/" alt="">
+                                                                <span class="default_avi bg__inverse_light">OM</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Osinnaga Mayowa</h4>
+                                                                <span class="color__grey_dark">
+                                                                    <a href="mailto:mayowaos@gmail.com">mayowaos@gmail.com</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="teacherPerformance">
+                                                        <div class="performanceScore scoreDefault">
+                                                            <span class=""></span>
+                                                        </div>
+                                                        <div class="perfLabel">
+                                                            <span>not Available</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="badge badge-default">
+                                                            Mathematics
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="">
+                                                            Senior Secondary School 2A
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item">
+                                                                <a href="teacherDetails.html">View</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button type="button" data-target="#newMessage" data-toggle="modal" data-backdrop="static">Contact</button></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Remove</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table_description">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi avi_md">
+                                                                <img src="../img/mcgonangal.jpg" alt="">
+                                                                <span class="default_avi">RO</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Racheal Oniga</h4>
+                                                                <span class="color__grey_dark">
+                                                                    <a href="mailto:racheal@christland.com">racheal@christland.com</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="teacherPerformance">
+                                                        <div class="performanceScore scoreAvg">
+                                                            <span class="">7.9</span>
+                                                        </div>
+                                                        <div class="perfLabel">
+                                                            <span>Satisfactory</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="badge badge-default">
+                                                            Mathematics
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="">
+                                                            Senior Secondary School 1A
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item">
+                                                                <a href="teacherDetails.html">View</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button type="button" data-target="#newMessage" data-toggle="modal" data-backdrop="static">Contact</button></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Remove</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table_description">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi avi_md">
+                                                                <img src="../img/" alt="">
+                                                                <span class="default_avi">BC</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Babatunde Calebs</h4>
+                                                                <span class="color__grey_dark">
+                                                                    <a href="mailto:racheal@christland.com">calebsconsults@gmail.com</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="teacherPerformance">
+                                                        <div class="performanceScore scoreGood">
+                                                            <span class="">8.9</span>
+                                                        </div>
+                                                        <div class="perfLabel">
+                                                            <span>Excellent</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="badge badge-default">
+                                                            English
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="">
+                                                            Senior Secondary School 1A
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item">
+                                                                <a href="teacherDetails.html">View</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button type="button" data-target="#newMessage" data-toggle="modal" data-backdrop="static">Contact</button></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Remove</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table_description">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi avi_md">
+                                                                <img src="../img/" alt="">
+                                                                <span class="default_avi bg__primary color__white">BI</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Bakare Isaac</h4>
+                                                                <span class="color__grey_dark">
+                                                                    <a href="mailto:isaacbyles@yahoo.co.uk">isaacbyles@yahoo.co.uk</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="teacherPerformance">
+                                                        <div class="performanceScore scorePoor">
+                                                            <span class="">3.2</span>
+                                                        </div>
+                                                        <div class="perfLabel">
+                                                            <span>Poor</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="badge badge-default">
+                                                            Mathematics
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="">
+                                                            Senior Secondary School 2A
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item">
+                                                                <a href="teacherDetails.html">View</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button type="button" data-target="#newMessage" data-toggle="modal" data-backdrop="static">Contact</button></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Remove</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="table_description">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi avi_md">
+                                                                <img src="../img/" alt="">
+                                                                <span class="default_avi bg__inverse_light">OM</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Osinnaga Mayowa</h4>
+                                                                <span class="color__grey_dark">
+                                                                    <a href="mailto:mayowaos@gmail.com">mayowaos@gmail.com</a>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="teacherPerformance">
+                                                        <div class="performanceScore scoreDefault">
+                                                            <span class=""></span>
+                                                        </div>
+                                                        <div class="perfLabel">
+                                                            <span>not Available</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="badge badge-default">
+                                                            Mathematics
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <span class="">
+                                                            Senior Secondary School 2A
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown tableControl">
+                                                        <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                            <svg class="cust_icon"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 20 20">
+                                                                <path
+                                                                    d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                            </svg>
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li class="dropdown-item">
+                                                                <a href="teacherDetails.html">View</a>
+                                                            </li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button type="button" data-target="#newMessage" data-toggle="modal" data-backdrop="static">Contact</button></li>
+                                                            <li class="dropdown-divider"></li>
+                                                            <li class="dropdown-item">
+                                                                <button data-target="#confirm_delete"
+                                                                    data-toggle="modal">Remove</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                    <div class="section_cto pager text-center">
+                                        <button type="button" class="btn btn-default">Load More</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Rubius Hagrid | Gradely.school</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="newMessage">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">New Message</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="user_profile_details margin_bottom_md">
+                        <div class="user_info_avi avi_md">
+                            <img src="" alt="">
+                            <span class="default_avi">JH</span>
+                        </div>
+                        <div class="user_info">
+                            <span class="color__grey_dark">Message to</span>
+                            <h4 class="title text_clipped font-bold">Jake Hagrid</h4>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label sr-only">Subject</label>
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label sr-only">Your Message here</label>
+                            <textarea rows="7" class="form-control" placeholder="Write your message"></textarea>
+                        </div>                                           
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="school_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem active">
+                            <a href="classes.html" class="menuLinkItem">classes</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="teachers.html" class="menuLinkItem">Teachers</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="parents.html" class="menuLinkItem">Parents</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="messages.html">
+                                <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.18073 5.42653C1.49745 4.97408 2.12098 4.86405 2.57343 5.18076L12 11.7793L21.4265 5.18076C21.879 4.86405 22.5025 4.97408 22.8192 5.42653C23.1359 5.87898 23.0259 6.50251 22.5734 6.81923L12.5734 13.8192C12.2291 14.0603 11.7708 14.0603 11.4265 13.8192L1.4265 6.81923C0.974052 6.50251 0.864017 5.87898 1.18073 5.42653Z"/>
+                                </svg>                                    
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi">AJ</div>
+                                </div>
+                                <span class="control_label">Andrew Jackson</span>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <ul class="dpd_nav">
+                                    <li>
+                                        <a href="school_profile.html">
+                                            My Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="act_settings.html">
+                                            Account Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../login.html">
+                                            Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text sr-only">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="global_alert_holder hidden">
+                <!-- Toggle class "show" to the alert -->
+                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
+                    <div class="container">
+                        <div class="extra_info">
+                            <div class="alert_icon">
+                                <span class="cust_icon icon_info"></span>
+                            </div>
+                            <div class="alert_info">
+                                <p>Personal information updated successfully</p>
+                            </div>
+                            <div class="dialogDismiss">
+                                <button type="button" data-dismiss="alert" class="close_dialog">   
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+                        <div class="container">
+                            <div class="profileLayout">
+                                <div class="detail_control margin_bottom_lg">
+                                    <a href="class_details.html" class="back_btn"
+                                        title="Back to homework">
+                                        <span class="back_icon">
+                                            <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path d="M7.05 9.293L6.343 10 12 15.657l1.414-1.414L9.172 10l4.242-4.243L12 4.343z" />
+                                            </svg>
+                                        </span>
+                                        <span class="bc_label">Back to Class</span>
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 col-lg-4 profileCard">
+                                        <div class="profileSummaryBlock">
+                                            <div class="profileSummaryWrapper">
+                                                <header class="profileHeaderBlock text-center">
+                                                    <div class="user_info_avi avi_xl margin_bottom_md">
+                                                        <img src="../img/hermionie.jpg" alt="">
+                                                        <span class="default_avi">RH</span>
+                                                    </div>
+                                                    <div class="userIntro">
+                                                        <h3 class="title title_sm color__black font-bold ">Rubius Hagrid</h3>
+                                                        <p class="profileSubtitle">Code: RUBIUSHAG</p>
+                                                    </div>
+                                                </header>
+                                                <div class="collapsibleBlock blockCollapsed ">
+                                                    <div class="userInfoBlock margin_top_lg">
+                                                        <div class="userInfoStatBlockk">
+                                                            <div class="infoStatRow">
+                                                                <div class="statDescription color__grey_dark">
+                                                                    <span>Assigned Homework</span>
+                                                                </div>
+                                                                <div class="statValue color__black font-md">
+                                                                    <span>32</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="infoStatRow">
+                                                                <div class="statDescription color__grey_dark">
+                                                                    <span>Homework Completed</span>
+                                                                </div>
+                                                                <div class="statValue color__black font-md">
+                                                                    <span>30</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="infoStatRow">
+                                                                <div class="statDescription color__grey_dark">
+                                                                    <span>Homework Missed</span>
+                                                                </div>
+                                                                <div class="statValue color__black font-md">
+                                                                    <span>2</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="infoStatRow">
+                                                                <div class="statDescription color__grey_dark">
+                                                                    <span>Date Joined</span>
+                                                                </div>
+                                                                <div class="statValue color__black font-md">
+                                                                    <time>Jan. 18, 2019</time>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="base_divider"></div>
+                                                        <div class="userInfoBlockItem margin_bottom_md userInfoParent">
+                                                            <h4 class="margin_bottom_md caps_upper font-default ">Parents</h4>
+                                                            <div class="user_list">
+                                                                <article class="user_item">
+                                                                    <div class="data_entity">
+                                                                        <div class="data_entity_icon">
+                                                                            <div class="user_info_avi avi_md">
+                                                                                <img src="" alt="">
+                                                                                <span class="default_avi">JH</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="data_entity_info user_info">
+                                                                            <h4 class="title font-bold">Jake Hagrid</h4>
+                                                                            <div class="listMetaInfo">
+                                                                                <span class="">Father</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="dataDismiss">
+                                                                            <a href="#newMessage" data-toggle="modal" data-backdrop="static" class="widget_cta_link">
+                                                                                Contact
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </article>
+                                                            </div>
+                                                        </div>
+                                                        <div class="userInfoBlockItem userInfoParent">
+                                                            <h4 class="margin_bottom_md caps_upper font-default ">Contact</h4>
+                                                            <div class="infoList">
+                                                                <div class="infoListItem">
+                                                                    <div class="infoImage">
+                                                                        <i class="cust_icon map_pin"></i>
+                                                                    </div>
+                                                                    <div class="infoContainer">
+                                                                        <address>
+                                                                            <span>4, Olayiwola Street, Off kudirat Abiola Road,</span> 
+                                                                            <span>10213 Oregun, Ikeja,</span>
+                                                                            <span>Lagos State</span>
+                                                                        </address>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="infoListItem">
+                                                                    <div class="infoImage">
+                                                                        <i class="cust_icon phone"></i>
+                                                                    </div>
+                                                                    <div class="infoContainer">
+                                                                        <p>
+                                                                            <span>Call</span>
+                                                                            <strong>
+                                                                                <a href="tel:08033752311" class="widget_cta_link">08033752311
+                                                                                </a>
+                                                                            </strong>
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="collapsetoggle expandCollapseSm"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-7 col-lg-8 profileContent">
+                                        <div class="gridCardItem">
+                                            <div class="gridCardWrapper">
+                                                <header class="gridCardHeader">
+                                                    <div class="headerTitleHolder">
+                                                        <h4 class="gridCardTitle">Performance Summary</h4>
+                                                    </div>
+                                                    <div class="headerContols">
+                                                    </div>
+                                                </header>
+                                                <div class="paneInner">
+                                                    <div class="filter_navigation">
+                                                        <div class="row">
+                                                            <div class="col-sm-4 col-md-3">
+                                                                <select class="form-control">
+                                                                    <option>Mathematics</option>
+                                                                    <option>English Language</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-sm-4 col-md-3">
+                                                                <select class="form-control">
+                                                                    <option>First Term</option>
+                                                                    <option>Second Term</option>
+                                                                    <option>Third Term</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="empty_state hidden centered text-center">
+                                                        <div class="def_wrapper">
+                                                            <div class="defImg">
+                                                                <img src="../img/icons/empty_report.svg" alt="No Report">
+                                                            </div>
+                                                            <h4 class="title font-bold margin_bottom_sm">Nothing to Report</h4>
+                                                            <p>You have no performance record yet. This will change as you complete your homework and interact with Gradely.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row contentGroup ">
+                                                        <div class="col-sm-4 infoBlock performanceChart">
+                                                            <div class="progressScore">
+                                                                <div id="bar" class="progressMeter"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-8 infoBlock activityInfo">
+                                                            <div class="row">
+                                                                <div class="insight_item margin_bottom_md col-sm-5" title="Average class score in this subject" data-toggle="tooltip">
+                                                                    <span class="data_label">Class Average</span>
+                                                                    <div class="insight_value">
+                                                                        <span class="title title_sm color__black">84.53%</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="userRank margin_bottom_md col-sm-7">
+                                                                    <div class="rankScale" title="How the child rank relative to other class mates">
+                                                                        <span class="data_label">Class rank</span>
+                                                                        <div class="percentileScale">
+                                                                            <div class="scaleItem itemTop">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemTop">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemTop">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemTop">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemBottom">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemBottom">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemBottom">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemBottom">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemBottom">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                            <div class="scaleItem itemBottom">
+                                                                                <span class="cust_icon icon_user"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <span class="percentileLabel">Top 40% of the class</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="insight_item margin_bottom_md col-sm-5" title="Best Performing topic" data-toggle="tooltip">
+                                                                    <span class="data_label">Best Topic</span>
+                                                                    <div class="insight_value">
+                                                                        <span class="title title_sm color__black">Mensuration</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="insight_item margin_bottom_md col-sm-7" title="Least Performing topic" data-toggle="tooltip">
+                                                                    <span class="data_label">Worst Topic</span>
+                                                                    <div class="insight_value">
+                                                                        <span class="title title_sm color__black">Logarithms & Indices</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="base_divider"></div>
+                                                    <div class="row contentGroup">
+                                                        <div class="col-sm-4 footerContolItem">
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <p class="topicTitle color__grey_dark">Highest Score: <span class="color__primary font-md">94%</span></p>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_excel">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 94%" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 footerContolItem">
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <p class="topicTitle color__grey_dark">Lowest Score: <span class="color__primary font-md">62.5%</span></p>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_avg">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 62.5%" aria-valuenow="62.5" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 footerContolItem">
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <p class="topicTitle color__grey_dark">Completion Rate: <span class="color__primary font-md">100%</span></p>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_excel">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="base_divider"></div>
+                                                    <div class="row contentGroup ">
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Number Base System</span>
+                                                                        <span class="topicgrade color__grey_dark">89%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Modular Arithmetic</span>
+                                                                        <span class="topicgrade color__grey_dark">82%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Quadratic Equations</span>
+                                                                        <span class="topicgrade color__grey_dark">73%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_avg">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Trigonometric Ratios</span>
+                                                                        <span class="topicgrade color__grey_dark">49%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_fail">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Indices</span>
+                                                                        <span class="topicgrade color__grey_dark">92%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Number Base System</span>
+                                                                        <span class="topicgrade color__grey_dark">89%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Modular Arithmetic</span>
+                                                                        <span class="topicgrade color__grey_dark">82%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Quadratic Equations</span>
+                                                                        <span class="topicgrade color__grey_dark">73%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_avg">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Trigonometric Ratios</span>
+                                                                        <span class="topicgrade color__grey_dark">49%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_fail">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                            <article class="topicItem col-sm-6">
+                                                                <div class="topicItemInfo">
+                                                                    <div class="topicMeta">
+                                                                        <span class="topicTitle color__black">Indices</span>
+                                                                        <span class="topicgrade color__grey_dark">92%</span>
+                                                                    </div>
+                                                                    <div class="topicProgress">
+                                                                        <div class="progress progress_excel">
+                                                                            <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </article>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                               
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/rounded_progressbar.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        var bar=new RadialProgress(
+            document.getElementById("bar"), {
+                colorBg: "#DDF1FA",
+                colorFg: "#60D2B0",
+                colorText: "#353535",
+                progress: 0.9578,
+                animationSpeed: .35,
+                setLabel: "Score",
+                round: true,
+                thick: 10,
+            });
+    </script>
+    		
+</body>
+</html>
