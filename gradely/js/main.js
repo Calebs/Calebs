@@ -1,5 +1,5 @@
 jQuery(document).ready(function($){
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 
 	// browser window scroll (in pixels) after which the "back to top" link is shown
 	var offset = 300,
@@ -23,8 +23,18 @@ jQuery(document).ready(function($){
 			scrollTop: 0 ,
         }, scroll_top_duration
 		);
-	});
+    });
     
+    // Autghentication form input    
+    $('.form-control').on('input', function() {
+        var $input_field = $(this).closest('.labeledFormInput');
+        if (this.value) {
+            $input_field.addClass('not_empty');
+        } else {
+            $input_field.removeClass('not_empty');
+        }
+    });
+
     /* General Navigation*/
 
    //primary navigation slide-in effect

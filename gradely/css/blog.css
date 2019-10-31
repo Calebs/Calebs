@@ -3,121 +3,108 @@
   clear: both;
   display: block;
   padding-top: 100px;
+  padding-bottom: 70px;
 }
 
-/* line 7, ../sass/partials/_posts.scss */
+/* line 8, ../sass/partials/_posts.scss */
 .post_header {
-  padding: 10px 0 70px;
+  padding-top: 10px;
 }
 
-/* line 11, ../sass/partials/_posts.scss */
+/* line 12, ../sass/partials/_posts.scss */
 .postList {
   flex-wrap: wrap;
 }
 
-/* line 15, ../sass/partials/_posts.scss */
+/* line 16, ../sass/partials/_posts.scss */
 .postThumb {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* line 20, ../sass/partials/_posts.scss */
+/* line 21, ../sass/partials/_posts.scss */
 .postThumbWrapper {
   height: 100%;
-  max-width: 320px;
   overflow: hidden;
   position: relative;
   margin: auto;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 29, ../sass/partials/_posts.scss */
-.postThumbWrapper:hover .curl, .postThumbWrapper:focus .curl {
-  width: 40px;
-  height: 40px;
+/* line 33, ../sass/partials/_posts.scss */
+.postThumbWrapper:hover, .postThumbWrapper:focus {
+  box-shadow: 2px 2px 8px rgba(242, 171, 62, 0.15);
 }
 
-/* line 36, ../sass/partials/_posts.scss */
+/* line 38, ../sass/partials/_posts.scss */
 .postThumbDetails {
   width: 100%;
-  padding: 20px 0;
+  padding: 15px;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 38, ../sass/partials/_posts.scss */
+  .postThumbDetails {
+    padding: 30px;
+  }
 }
 
-/* line 41, ../sass/partials/_posts.scss */
+/* line 47, ../sass/partials/_posts.scss */
 .postThumbImage {
   position: relative;
   text-align: center;
   overflow: hidden;
 }
 
-/* line 47, ../sass/partials/_posts.scss */
+/* line 53, ../sass/partials/_posts.scss */
 .postImageWrapper {
-  display: block;
+  display: none;
   position: relative;
-  padding-bottom: 75%;
+  padding-bottom: 52.25%;
   margin: 0 auto;
   width: 100%;
-  border-radius: 15px 40px;
   background-color: #FE747D;
   opacity: 1;
 }
-/* line 57, ../sass/partials/_posts.scss */
+/* line 62, ../sass/partials/_posts.scss */
+.has_image .postImageWrapper {
+  display: block;
+}
+/* line 66, ../sass/partials/_posts.scss */
 .postImageWrapper:hover, .postImageWrapper:focus {
   opacity: .75;
 }
 
-/* line 62, ../sass/partials/_posts.scss */
+/* line 71, ../sass/partials/_posts.scss */
 .postExcerpt {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8em;
-  max-height: 5.4em;
+  max-height: 12.6em;
   overflow: hidden;
   color: inherit;
   text-overflow: ellipsis;
 }
 
-/* line 71, ../sass/partials/_posts.scss */
+/* line 80, ../sass/partials/_posts.scss */
 .postTag {
   z-index: 10;
-  color: inherit;
+  color: #757575;
 }
-
-/* line 76, ../sass/partials/_posts.scss */
-.curl {
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  z-index: 1000;
-  overflow: hidden;
-  background: #2a4f77;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease;
-  -webkit-transition-delay: 0s;
-  transition: all 0.3s ease 0s;
-}
-/* line 87, ../sass/partials/_posts.scss */
-.curl::after {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  -moz-transform: rotate(135deg) translateX(70%) scale(1.4);
-  -ms-transform: rotate(135deg) translateX(70%) scale(1.4);
-  -webkit-transform: rotate(135deg) translateX(70%) scale(1.4);
-  transform: rotate(135deg) translateX(70%) scale(1.4);
-  background: white;
+/* line 84, ../sass/partials/_posts.scss */
+.postTag a {
+  text-decoration: underline;
+  color: #07374B;
 }
 
 /*Post Page*/
-/* line 102, ../sass/partials/_posts.scss */
+/* line 92, ../sass/partials/_posts.scss */
 .featuredImage {
   background: linear-gradient(to bottom, #07374b 0%, #07374b 50%, #ffffff 50%, #ffffff 100%);
   position: relative;
@@ -125,17 +112,20 @@
   margin-bottom: -40px;
   text-align: center;
 }
-/* line 109, ../sass/partials/_posts.scss */
+/* line 99, ../sass/partials/_posts.scss */
 .featuredImage img {
   display: inline-block;
 }
 
-/* line 114, ../sass/partials/_posts.scss */
-.postShare {
-  padding-top: 20px;
-  margin-top: 30px;
+/* line 104, ../sass/partials/_posts.scss */
+.postInfoWidget {
   clear: both;
   border-top: 1px solid #d5d5d5;
+  padding: 20px 0;
+}
+
+/* line 110, ../sass/partials/_posts.scss */
+.postShare {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -144,8 +134,75 @@
   align-items: center;
 }
 
-/* line 124, ../sass/partials/_posts.scss */
+/* line 115, ../sass/partials/_posts.scss */
 .meta_title {
   flex-shrink: 0;
   margin-right: 20px;
+}
+
+/* line 120, ../sass/partials/_posts.scss */
+.categoryTagItem {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+/* line 125, ../sass/partials/_posts.scss */
+.tagItemWrapper {
+  line-height: 28px;
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 35px;
+  background-color: #E5E5E5;
+  font-size: 13px;
+  color: #07374B;
+}
+/* line 134, ../sass/partials/_posts.scss */
+.tagItemWrapper:hover, .tagItemWrapper:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #F2AB3E;
+}
+
+/* line 140, ../sass/partials/_posts.scss */
+.postCatHolder {
+  display: block;
+  padding-top: 15px;
+  padding-left: 15px;
+  z-index: 10;
+  /* Tablets and phablets */
+}
+/* line 146, ../sass/partials/_posts.scss */
+.has_image .postCatHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width: 768px) {
+  /* line 140, ../sass/partials/_posts.scss */
+  .postCatHolder {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+}
+
+/* line 158, ../sass/partials/_posts.scss */
+.postCTA {
+  padding: 15px;
+  border: 1px solid #d5d5d5;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  border-radius: 4px;
+  background-color: transparent;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 158, ../sass/partials/_posts.scss */
+  .postCTA {
+    font-size: 16px;
+  }
+}
+/* line 171, ../sass/partials/_posts.scss */
+.postCTA:hover, .postCTA:focus {
+  background-color: #FCEACF;
+  border-color: transparent;
 }

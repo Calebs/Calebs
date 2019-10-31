@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Welcome to Gradely - Setup your account | Gradelyng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal fade" id="add_class">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Add your Class</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Get your class-code from your teacher or school administrator, and enter it below to add join the class.</p>
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Class code</label>
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Enter your class code here">
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-inverse">
+                                        Verify Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Use this to show a preview of the school that match with the provided student code -->
+                        <div class="infoPreviewCard margin_top_xl">
+                            <div class="cardWrapper">
+                                <div class="details_col_info ">
+                                    <div class="address_block">
+                                    <span class="addr_field addr_title font-bold">Senior Secondary School 1 (SSS1)</span>
+                                    <span class="addr_field ">@Christland Intl. College</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="student_dashboard.html" class="btn btn-primary">Join Class</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="inviteParent">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Invite your parent</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Gradely works best when you have your parents working with you. To add your parent, just provide their email address and we will take it from there</p>
+
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Parent's Email Address</label>
+                            <input type="text" class="form-control" placeholder="Enter your parent's email address">
+                            <p class="help-block hidden text-error">Invalid email address.</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main class="authenticationPageLayout">
+        <div class="grdly_page_frame bg__off_white"> 
+            <section class="grdly_page_body">
+                <div class="section_block">
+                    <div class="container form_body">
+                        <header class="section_header">
+                            <h3 class="title title_lg color__primary font-bold margin_bottom_sm">Hello Rubius,</h3>
+                            <p>Welcome to Gradely </p>
+                        </header>
+                        <p class="font-md">To enjoy all that Gradely has to offer, please complete the following tasks.</p>
+
+                        <div class="row userCardList margin_top_lg">
+                            <article class="ctaCardItem col-sm-6">
+                                <button type="button" data-toggle="modal" data-target="#add_class" class="cardItemWrapper">
+                                    <div class="icon_holder margin_bottom_md">
+                                        <img src="../img/icons/classroom_colored.svg" alt="">
+                                    </div>
+                                    <h4 class="title title_sm color__primary text_clipped font-bold margin_bottom_sm">Join a Class</h4>
+                                    <p>Join your classmates on Gradely and start taking homework</p>
+                                </button>
+                            </article>
+                            <article class="ctaCardItem col-sm-6">
+                                <button type="button" data-toggle="modal" data-target="#inviteParent" class="cardItemWrapper">
+                                    <div class="icon_holder margin_bottom_md">
+                                        <img src="../img/icons/parent_colored.svg" alt="">
+                                    </div>
+                                    <h4 class="title title_sm color__primary text_clipped font-bold margin_bottom_sm">Invite your Parent</h4>
+                                    <p>Tell your parents about Gradely, and unlock more features.</p>
+                                </button>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+	<script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+    		
+</body>
+</html>
