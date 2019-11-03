@@ -187,31 +187,49 @@
         <div class="grdly_page_frame">
             <section class="grdly_page_body bg__off_white"> 
                 <div class="grdly_page_wrapper">
-                    <div class="grdly_page_content">
 
-                        <div class="pageInfoStrip">
-                            <div class="container">
-                                <div class="infoStripCaption">
-                                    <span class="opt_rule"></span>
-                                    <span class="captionText">Hi, <span class="font-bold">Rubius</span></span>
+                    <div class="pageInfoStrip">
+                        <div class="container">
+                            <div class="infoStripCaption">
+                                <span class="opt_rule"></span>
+                                <span class="captionText">Hi, <span class="font-bold">Rubius</span></span>
+                            </div>
+                            <div class="infoStripWrapper">
+                                <div class="infoStripItemBLock">
+                                    <h4 class="title title_sm color__grey_dark">
+                                        Student Code: <span class="color__primary font-bold">RUBIUSHAG</span>
+                                    </h4>
                                 </div>
-                                <div class="infoStripWrapper">
-                                    <div class="infoStripItemBLock">
-                                        <h4 class="title title_sm color__grey_dark">
-                                            Student Code: <span class="color__primary font-bold">RUBIUSHAG</span>
-                                        </h4>
-                                    </div>
-                                    <div class="infoStripItemBLock hidden-sm">
-                                        <div class="user_info text-right">
-                                            <span class="data_label">
-                                                <time>01 April, 2019</time>
-                                            </span>
-                                            <div class="title"><span>First Term</span> - <span>Week 2</span></div>
-                                        </div>
+                                <div class="infoStripItemBLock hidden-sm">
+                                    <div class="user_info text-right">
+                                        <span class="data_label">
+                                            <time>01 April, 2019</time>
+                                        </span>
+                                        <div class="title"><span>First Term</span> - <span>Week 2</span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="container form_body ">
+                        <div class="embed-responsive embed-responsive-16by9 videoStage">
+                            <video preload="metadata" autoplay loop muted class="embed-responsive-item">
+                                <source src="../img/banners/student_dashbrd.mp4" type="video/mp4">
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                        </div>
+                        <div class="def_wrapper text-center margin_top_md">
+                            <h3 class="title title_lg font-bold margin_bottom_sm">Your student Dashboard</h3>
+                            <p class="">Your student dashboard gives a you an overview of your real-time performance in class. Take a homework to get started.</p>
+                            <div class="section_cto">
+                                <a href="homework.html" class="btn btn-primary">See your Homework</a>
+                                <a href="catch_up_lander.html" class="btn btn-secondary">Take Practice</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grdly_page_content margin_top_md hidden">
 
                         <section class="gridCardRow">
                             <div class="container">
@@ -589,7 +607,10 @@
                                             <div class="empty_state centered text-center hidden">
                                                 <div class="def_wrapper">
                                                     <h4 class="title font-bold margin_bottom_sm">Yay! No assignment</h4>
-                                                    <p class="font-sm">You have no upcoming assignment. Good time to read some more.</p>
+                                                    <p class="font-sm">You have no upcoming homework. This is a good time to CatchUp! on some of your past class topics.</p>
+                                                    <div class="margin_top_sm">
+                                                        <a href="catch_up_lander.html" class="btn btn-primary-outline btn-sm">Go to Practice</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="paneInner ">
@@ -831,6 +852,14 @@
             </section>
         </div>
     </main>
+
+    <!--Add class "loading" to activate the loader-->
+    <div class="page_loader loading">
+        <div class="loader_content">
+            <img src="../img/icons/ball-triangle.svg" class="loaderImage" alt="Page Loader">
+            <p class="font-md">loading...</p>
+        </div>
+    </div>
     
 	<script src="../js/jquery.js"></script>
     <script src="../js/base.min.js"></script>

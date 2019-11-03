@@ -20,13 +20,95 @@
     
 <body>
 
+    <div class="modal fade" id="add_class">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Add your Class</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Get your class-code from your school administrator, and enter it below to add join your class.</p>
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Class code</label>
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Enter your class code here">
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-inverse">
+                                        Verify Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Use this to show a preview of the school that match with the provided student code -->
+                        <div class="infoPreviewCard margin_top_xl">
+                            <div class="cardWrapper">
+                                <div class="details_col_info ">
+                                    <div class="address_block">
+                                    <span class="addr_field addr_title font-bold">Senior Secondary School 1 (SSS1)</span>
+                                    <span class="addr_field ">@Christland Intl. College</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="my_classes.html" class="btn btn-primary">Add Class</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="inviteSchool">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Invite your parent</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Invite your school to access to your school classes. You will be assigned to a class as soon as your school joins.</p>
+
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper required">School Name</label>
+                            <input type="text" required class="form-control" placeholder="Enter the name of your school">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper required">Contact Email Address</label>
+                            <input type="email" required class="form-control" placeholder="Enter an email address for your school">
+                            <p class="help-block hidden text-error">Invalid email address.</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper required">Contact Phone Number</label>
+                            <input type="tel" required class="form-control" placeholder="Enter a contact phone number">
+                            <p class="help-block hidden text-error">Invalid phone number.</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Invite School</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="mainHeader" role="banner">
         <div class="container-fluid">
             <div class="navbarWrapper">
                 <div class="navbarGroupItem navBarItemLeft">
                     <div class="brand_img">
                         <a href="../index.html" class="logo_link">
-                            <img src="../img/logo.svg" alt="Gradely for students">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
                         </a>
                     </div>
                 </div>
@@ -41,13 +123,22 @@
                         <div class="menuListItem active">
                             <a href="my_classes.html" class="menuLinkItem">Classes</a>
                         </div>
-                        <div class="menuListItem">
-                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
-                        </div>
                     </nav>
                 </div>
                 <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuAlt">
+                        <div class="controlBtn helpBtn">
+                            <a href="../teacher_help.html">
+                                <span class="btnIconHolder">
+                                    <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27127C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27915 10.1266 8.75816 9.94333C8.23717 9.76006 7.96339 9.18915 8.14667 8.66816C8.46014 7.77705 9.07887 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3718 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9197 11.0711 15.3569 11.889 14.7751 12.4464C14.1931 13.004 13.5031 13.3909 13.0159 13.6243C12.977 13.6429 12.9487 13.6696 12.933 13.6926C12.9257 13.7033 12.9225 13.7113 12.9211 13.7154C12.92 13.719 12.92 13.7205 12.92 13.7207V14C12.92 14.5523 12.4723 15 11.92 15C11.3677 15 10.92 14.5523 10.92 14V13.7208C10.92 12.8509 11.4686 12.1479 12.1518 11.8206C12.5483 11.6307 13.0263 11.3522 13.3915 11.0023C13.7567 10.6523 13.92 10.321 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.4501 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"/>
+                                        <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" />
+                                    </svg>                                            
+                                </span>
+                                <span class="control_label">Help</span>
+                            </a>
+                        </div>
                         <div class="controlBtn btnAlert">
                             <a href="#">
                                 <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -60,26 +151,58 @@
                             <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
                                 <div class="user_info_avi">
                                     <img src="" alt="">
-                                    <div class="default_avi">AJ</div>
+                                    <div class="default_avi bg__danger">AJ</div>
                                 </div>
-                                <span class="control_label">Andrew Jackson</span>
                                 <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu">
+                            
+                            <div class="dropdown-menu profile_dropdown">
+                                <header class="dpd_header">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi bg__danger">AJ</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold color__primary">Andrew Jackson</h4>
+                                            <p>andrewjay@gmail.com</p>
+                                            <div class="margin_top_sm">
+                                                <a href="profile.html" class="widget_cta_link">Manage Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
                                 <ul class="dpd_nav">
-                                    <li>
-                                        <a href="profile.html">
-                                            My Profile
+                                    <li class="dpd_nav_item">
+                                        <a href="../teacher_help.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Get Help
+                                            </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="act_settings.html">
-                                            Account Settings
+                                    <li class="dpd_nav_item">
+                                        <a href="act_settings.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_settings"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Account Settings
+                                            </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="../login.html">
-                                            Log Out
+                                    <li class="dpd_nav_item">
+                                        <a href="../login.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_logout"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Log Out
+                                            </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -99,28 +222,44 @@
 
     <main class="mainContentArea">
         <div class="grdly_page_frame">
-            <section class="global_alert_holder hidden">
-                <!-- Toggle class "show" to the alert -->
-                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
-                    <div class="container">
-                        <div class="extra_info">
-                            <div class="alert_icon">
-                                <span class="cust_icon icon_info"></span>
+            <section class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+
+                    <div class="container margin_top_lg form_body hidden">
+                        <div class="alert alert_primary fade show" role="alert">
+                            <div class="globalAlertWrapper">
+                                <div class="media_item">
+                                    <div class="media_figure">
+                                        <div class="icon_box avi_md box_rounded ">
+                                            <span class="cust_icon icon_info"></span>
+                                        </div>
+                                    </div>
+                                    <div class="media_info">
+                                        <h4 class="title font-bold caps_upper margin_bottom_sm">Invitation Sent</h4>
+                                        <p>An invitation to connect has been sent to your school - <mark>Chrisland Schools</mark>. You be notified as soon as they accept your invitation.</p>
+                                    </div>
+                                </div>
+                                <div class="dialogDismiss">
+                                    <button type="button" data-dismiss="alert" class="close_dialog">   
+                                    </button>
+                                </div>
                             </div>
-                            <div class="alert_info">
-                                <p>Personal information updated successfully</p>
-                            </div>
-                            <div class="dialogDismiss">
-                                <button type="button" data-dismiss="alert" class="close_dialog">   
-                                </button>
+                        </div>
+                        <div class="empty_state centered">
+                            <div class="def_wrapper text-center margin_top_md">
+                                <div class="def_img">
+                                    <img src="../img/icons/school_emptyScreen.svg" alt="School Needed">
+                                </div>
+                                <h3 class="title title_lg font-bold margin_bottom_sm">You must belong to a school</h3>
+                                <p class="font-md">You cannot join a class without a school. Add your school to get started.</p>
+                                <div class="section_cto">
+                                    <button type="button" data-target="#inviteSchool" data-toggle="modal" data-backdrop="static" class="btn btn-lg btn-secondary">Invite School</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="grdly_page_body bg__off_white"> 
-                <div class="grdly_page_wrapper">
-                    <div class="grdly_page_content">
+                    
+                    <div class="grdly_page_content ">
 
                         <section class="section_block">
                             <div class="container">
@@ -129,32 +268,30 @@
                                         <h2 class="section_title font-bold">My Classes</h2>
                                     </div>
                                     <div class="grdly_action_primary">
+                                        <button data-target="#add_class" data-toggle="modal" class="btn btn-primary">Add Class</button>
                                     </div>
-                                </header>                        
+                                </header>                  
+                                <div class="empty_state centered hidden">
+                                    <div class="def_wrapper text-center ">
+                                        <div class="def_img">
+                                            <img src="../img/icons/homework_emptyScreen.svg" alt="Subscription Needed">
+                                        </div>
+                                        <h3 class="title title_lg font-bold margin_bottom_sm">You have no Class</h3>
+                                        <p class="font-md">You have not been assiged any class. Collect your class code from your school admin to join a class.</p>
+                                        <div class="section_cto">
+                                            <button type="button" data-target="#add_class" data-toggle="modal" data-backdrop="static" class="btn btn-lg btn-secondary">Join a Class</button>
+                                        </div>
+                                    </div>
+                                </div>   
                                 <div class="content_inner">
                                     <div class="row userCardList">
-                                        <article class="col-sm-6 col-md-4 col-lg-3 cardItem">
-                                            <a href="new_class.html" class="cardWrapper newItem">
-                                                <div class="cardDetails align-items-center justify-content-center text-center">
-                                                    <span class="t_icon avi_md margin_bottom_md">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                            <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                                        </svg>
-                                                    </span>
-                                                    <h4 class="title font-bold">Add a Class</h4>
-                                                </div>
-                                            </a>
-                                        </article>
-                                        <article class="col-sm-6 col-md-4 col-lg-3 cardItem">
+                                        <article class="col-sm-6 col-md-4 cardItem">
                                             <a href="class_details.html" class="cardWrapper">
                                                 <div class="cardDetails">
                                                     <div class="cardDetailsRow productInfo">
-                                                        <div class="insight_title">
-                                                            <span>CRL/SAT/REM</span>
-                                                        </div>
                                                         <div class="insight_value">
-                                                            <h4 class="title title_sm color__primary">Senior secondary school 1 - SS1</h4>
-                                                            <p class="margin_top_sm">Christland Intl. College</p>
+                                                            <h4 class="title title_lg font-bold color__black">Senior secondary school 1 - SS1</h4>
+                                                            <p class="margin_top_sm font-md color__grey_dark">Christland Intl. College</p>
                                                         </div>
                                                     </div>
                                                     <div class="cardDetailsRow classSummary">

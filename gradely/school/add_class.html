@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-	<title>Christland College - Manage classes | Gradely.School</title>
+	<title>Add classes | Gradely.School</title>
     <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
     <link rel="icon" href="../img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
@@ -19,253 +19,852 @@
     
 <body>
 
+    <div class="modal fade" id="newBranch">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Class Details</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label color__black">Class Level</label>
+                            <select class="form-control form_mng">
+                                <option>Junior Secondary School 1</option>
+                                <option>Junior Secondary School 2</option>
+                                <option>Junior Secondary School 3</option>
+                                <option>Senior Secondary School 1</option>
+                                <option>Senior Secondary School 2</option>
+                                <option>Senior Secondary School 3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold">Branch Name</label>
+                            <input type="email" class="form-control" value="JSS1 - Gold">
+                        </div>                
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="confirm_delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Confirm Delete</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <p class="subtitle status_tag-primary">You are about to delete the class <strong>JSS 1 - Gold</strong>. All student data, homework information and reports will also be deleted.</p>
+                        <p>Deleted class CANNOT be restored! Are you sure you want to delete it? </p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-outline">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Delete It</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main class="authenticationPageLayout">
         <div class="grdly_page_frame bg__off_white">
             <section class="grdly_page_body">
                 <div class="section_block">
                     <div class="pageClose dialogDismiss">
-                        <a href="classes.html" class="close_dialog cls_lg">
+                        <a href="school_lander.html" class="close_dialog cls_lg">
                             <span class="closeLabel">Exit</span>
                         </a>
                     </div>
                     <div class="container form_body">
                         <div class="formWidgetBody">
                             <header class="section_header font-md">
-                                <div class="title_prefixed">
-                                    <div class="icon_box box_inverse">
-                                        <span class="cust_icon icon_class"></span>
-                                    </div>
-                                    <h3 class="title title_lg color__black font-bold">Manage Classes</h3>
-                                </div>
+                                <h3 class="title title_lg color__black margin_bottom_sm font-bold">Set-up your Classes</h3>
+                                <p>Setup your class naming systems, branches and generate your class codes</p>
                             </header>
                             <div class="content_inner">
-                                <section class="global_alert_holder">
-                                    <div class="alert alert_primary alert-dismissible fade show" role="alert">
-                                        <div class="globalAlertWrapper">
-                                            <div class="media_item">
-                                                <div class="media_figure">
-                                                    <div class="icon_box avi_md box_rounded box_red">
-                                                        <span class="cust_icon icon_notification"></span>
+
+                                <div class="formStepItem ">
+                                    <div class="margin_bottom_lg">
+                                        <h4 class="title caps_upper font-bold">Class Details</h4>
+                                    </div>
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label class="control-label color__black">School Type</label>
+                                            <select class="form-control form_mng">
+                                                <option>Select Education Level</option>
+                                                <option>Secondary School only</option>
+                                                <option>Primary School Only</option>
+                                                <option>Primary and Secondary Classes</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label color__black">How do you name your classes?</label>
+                                            <div class="margin_top_md">
+                                                <div class="radio">
+                                                    <label class="controlSummary" for="styleRegular">
+                                                        <div class="statInd">
+                                                            <input type="radio" id="styleRegular" name="namingStyle">
+                                                        </div>
+                                                        <div class="selectSummaryBlock">
+                                                            <h4 class="title caps_upper font-bold">JSS 1 - SSS3</h4>
+                                                            <p>Choose this if you use the default secondary class naming style for Nigerian schools.</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label class="controlSummary" for="styleFrgn">
+                                                        <div class="statInd">
+                                                            <input type="radio" id="styleFrgn" name="namingStyle">
+                                                        </div>
+                                                        <div class="selectSummaryBlock">
+                                                            <h4 class="title caps_upper font-bold">Year 7 - Year 12</h4>
+                                                            <p>Choose this if you use the K12 naming style, common with British and American schools.</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="form_cta text-right">
+                                            <button type="button " class="btn btn-primary">Name Classes</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="formStepItem stepDone">
+                                    <div class="margin_bottom_lg">
+                                        <h4 class="title caps_upper font-bold margin_bottom_sm">Create a Model Class</h4>
+                                        <p>Your model class is a sample of how your classes are named, and how many branches you have in each level. This will help us generate the other classes. </p>
+                                    </div>
+                                    <form action="">
+                                        <div class="row form_row_group">
+                                            <div class="form_group_item col-md-4">
+                                                <label class="control-label font-bold caps_upper">Class Level</label>
+                                            </div>
+                                            <div class="form_group_item col-md-8">
+                                                <h4 class="title font-bold color__primary">
+                                                    Junior Secondary School 1
+                                                </h4>
+                                            </div>
+                                        </div>
+                                        <div class="row form_row_group">
+                                            <div class="form_group_item col-md-4">
+                                                <label class="control-label font-bold caps_upper">Class Branches</label>
+                                            </div>
+                                            <div class="form_group_item col-md-8">
+                                                <div class="form-group">
+                                                    <div class="option_input_widget">
+                                                        <div class="option_widget_block option_answer_input">
+                                                            <input type="text" class="form-control" onclick="this.select();" value="Junior Secondary School 1A">
+                                                        </div>
+                                                    </div>
+                                                    <p class="help-block">Class Code: <strong class="color__black">IMD/JSS1A</strong></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="option_input_widget">
+                                                        <div class="option_widget_block option_answer_input">
+                                                            <input type="text" class="form-control" onclick="this.select();" value="Junior Secondary School 1b">
+                                                        </div>
+                                                        <div class="option_widget_block option_answer_marker" title="Remove Item" data-toggle="tooltip">
+                                                            <button type="button" class="close_dialog"></button>
+                                                        </div>
+                                                    </div>
+                                                    <p class="help-block">Class Code: <strong class="color__black">IMD/JSS1B</strong></p>
+                                                </div>
+                                                <div class="more_control margin_top_md">
+                                                    <button type="button" class="input_control">
+                                                        <span class="t_icon">
+                                                            <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                            <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                            </svg>
+                                                        </span>
+                                                        <span class="widget_cta_link">Add another Branch</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_cta text-right">
+                                            <button type="button " class="btn btn-primary"> Generate Classes </button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="formStepItem stepActive">
+                                    <div class="margin_bottom_lg">
+                                        <h4 class="title caps_upper font-bold margin_bottom_sm">Your Classes</h4>
+                                        <p>Find your classes below. </p>
+                                    </div>
+                                    <div class="panel-group" id="classPanel">
+                                        <article class="panel panel-class">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_1">Junior Secondary School 1</a>
+                                                </h4>
+                                                <div class="listHeaderItem" title="Remove Class"
+                                                data-toggle="tooltip">
+                                                    <button type="button" class="removeBtn" data-target="#confirm_delete" data-toggle="modal">
+                                                        <span class="removeIcon">
+                                                            <i class="cust_icon icon_remove icon_xs"></i>
+                                                        </span>
+                                                        <span class="hidden-sm caps_upper">Remove</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="class_1" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="table table-brand">
+                                                        <table class="table table-hover">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Gold</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1GOLD</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#confirm_delete" data-toggle="modal">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Silver</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1SILVER</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Bronze</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1BRNZ</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
-                                                <div class="media_info">
-                                                    <h4 class="title font-bold caps_upper margin_bottom_sm">Update Successful</h4>
-                                                    <p>Personal information updated successfully</p>
+                                            </div>
+                                        </article>
+                                        <article class="panel panel-class">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_2">Junior Secondary School 2</a>
+                                                </h4>
+                                                <div class="listHeaderItem" title="Remove Class"
+                                                data-toggle="tooltip">
+                                                    <button type="button" class="removeBtn" data-target="#confirm_delete" data-toggle="modal">
+                                                        <span class="removeIcon">
+                                                            <i class="cust_icon icon_remove icon_xs"></i>
+                                                        </span>
+                                                        <span class="hidden-sm caps_upper">Remove</span>
+                                                    </button>
                                                 </div>
                                             </div>
-                                            <div class="dialogDismiss">
-                                                <button type="button" data-dismiss="alert" class="close_dialog">   
-                                                </button>
+                                            <div id="class_2" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="table table-brand">
+                                                        <table class="table table-hover">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS2-Gold</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS2GOLD</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#confirm_delete" data-toggle="modal">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS2-Silver</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS2SILVER</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#confirm_delete" data-toggle="modal">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS2-Bronze</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS2BRNZ</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#confirm_delete" data-toggle="modal">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </article>
+                                        <article class="panel panel-class">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_3">Junior Secondary School 3</a>
+                                                </h4>
+                                                <div class="listHeaderItem" title="Remove Class"
+                                                data-toggle="tooltip">
+                                                    <button type="button" class="removeBtn" data-target="#confirm_delete" data-toggle="modal">
+                                                        <span class="removeIcon">
+                                                            <i class="cust_icon icon_remove icon_xs"></i>
+                                                        </span>
+                                                        <span class="hidden-sm caps_upper">Remove</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="class_3" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="table table-brand">
+                                                        <table class="table table-hover">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Gold</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1GOLD</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#confirm_delete" data-toggle="modal">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Silver</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1SILVER</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#confirm_delete" data-toggle="modal">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Bronze</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1BRNZ</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#newBranch" data-toggle="modal" data-backdrop="static">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon" data-target="#confirm_delete" data-toggle="modal">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="panel panel-class">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_4">Senior Secondary School 1</a>
+                                                </h4>
+                                                <div class="listHeaderItem ">
+                                                    <button type="button" class="removeBtn" title="Remove Class"
+                                                        data-toggle="tooltip">
+                                                        <span class="removeIcon">
+                                                            <i class="cust_icon icon_remove icon_xs"></i>
+                                                        </span>
+                                                        <span class="hidden-sm caps_upper">Remove</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="class_4" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="table table-brand">
+                                                        <table class="table table-hover">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">SSS1-Gold</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/SSS1GOLD</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Silver</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1SILVER</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Bronze</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1BRNZ</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="panel panel-class">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_5">Senior Secondary School 2</a>
+                                                </h4>
+                                                <div class="listHeaderItem ">
+                                                    <button type="button" class="removeBtn" title="Remove Class"
+                                                        data-toggle="tooltip">
+                                                        <span class="removeIcon">
+                                                            <i class="cust_icon icon_remove icon_xs"></i>
+                                                        </span>
+                                                        <span class="hidden-sm caps_upper">Remove</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="class_5" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="table table-brand">
+                                                        <table class="table table-hover">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS2-Gold</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS2GOLD</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS2-Silver</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS2SILVER</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS2-Bronze</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS2BRNZ</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="panel panel-class">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_6">Senior Secondary School 3</a>
+                                                </h4>
+                                                <div class="listHeaderItem ">
+                                                    <button type="button" class="removeBtn" title="Remove Class"
+                                                        data-toggle="tooltip">
+                                                        <span class="removeIcon">
+                                                            <i class="cust_icon icon_remove icon_xs"></i>
+                                                        </span>
+                                                        <span class="hidden-sm caps_upper">Remove</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div id="class_6" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="table table-brand">
+                                                        <table class="table table-hover">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Gold</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1GOLD</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Silver</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1SILVER</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="user_profile_details">
+                                                                            <div class="icon_box box_secondary">
+                                                                                <i class="cust_icon icon_class"></i>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title text_clipped font-bold">JSS1-Bronze</h4>
+                                                                                <p class="color__grey_dark">Class Code: <strong class="color__black">IMD/JSS1BRNZ</strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="tableControl">
+                                                                            <div class="tabelControlItem" title="Edit Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_edit icon_xs"></i>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                                <button type="button" class="btn-icon">
+                                                                                    <i class="cust_icon icon_close icon_xs"></i>          
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
                                     </div>
-                                </section>
-                                
-                              <form action="">
-                                <fieldset>
-                                    <div class="form-group">
-                                        <label class="control-label color__black">Select Education Level</label>
-                                        <select class="form-control">
-                                            <option>Select Education Level</option>
-                                            <option selected>Secondary School</option>
-                                            <option>Primary School</option>
-                                            <option>Primary and Secondary</option>
-                                        </select>
+                                    <div class="more_control margin_top_md">
+                                        <button type="button" data-target="#newBranch" data-toggle="modal" data-backdrop="static" class="input_control">
+                                            <span class="t_icon">
+                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                </svg>
+                                            </span>
+                                            <span class="widget_cta_link">Add another Class</span>
+                                        </button>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="control-label color__black">Select your preferred naming style</label>
-                                        <div class="pillSelectorList">
-                                            <div class="selectorItem">
-                                                <label for="qdiff_0" class="pillWrapper">
-                                                    <input type="radio" id="qdiff_0" class="pillSelectControl" name="classCurriculum">
-                                                    <span class="selectorLabel">
-                                                        JSS 1 - SSS3
-                                                    </span>
-                                                </label>
-                                            </div>
-                                            <div class="selectorItem">
-                                                <label for="qdiff_1" class="pillWrapper">
-                                                    <input type="radio" id="qdiff_1" class="pillSelectControl" name="classCurriculum">
-                                                    <span class="selectorLabel">
-                                                        Year 7 - Year 12
-                                                    </span>
-                                                </label>
-                                            </div>
-                                        </div>
+
+                                    <div class="form_cta text-right">
+                                        <button type="button " class="btn btn-primary"> Save And Continue </button>
                                     </div>
-                                </fieldset>
-                                <fieldset>
-                                    <div class="margin_bottom_lg">
-                                        <h4 class="title font-bold">Name your Classes</h4>
-                                        <p>Add as many sub-class and names for each classes below.</p>
-                                    </div>
-                                    <div class="row form_row_group">
-                                        <div class="form_group_item col-md-5">
-                                            <label class="control-label">Junior Secondary School 1</label>
-                                        </div>
-                                        <div class="form_group_item col-md-7">
-                                            <div class="option_input_widget">
-                                                <div class="option_widget_block option_answer_input">
-                                                    <input type="text" class="form-control" onclick="this.select();" value="A">
-                                                </div>
-                                                <div class="option_widget_block option_answer_marker" title="Remove Item" data-toggle="tooltip">
-                                                    <button type="button" class="close_dialog"></button>
-                                                </div>
-                                            </div>
-                                            <div class="option_input_widget">
-                                                <div class="option_widget_block option_answer_input">
-                                                    <input type="text" class="form-control" onclick="this.select();" value="Junior Secondary School 1b">
-                                                </div>
-                                                <div class="option_widget_block option_answer_marker" title="Remove Item" data-toggle="tooltip">
-                                                    <button type="button" class="close_dialog"></button>
-                                                </div>
-                                            </div>
-                                            <div class="more_control margin_top_md">
-                                                <button type="button" class="input_control">
-                                                    <span class="t_icon">
-                                                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                        <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="widget_cta_link">Add another Branch</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row form_row_group">
-                                        <div class="form_group_item col-md-5">
-                                            <label class="control-label">Junior Secondary School 2</label>
-                                        </div>
-                                        <div class="form_group_item col-md-7">
-                                            <div class="option_input_widget">
-                                                <div class="option_widget_block option_answer_input">
-                                                    <input type="text" class="form-control" onclick="this.select();" value="Junior Secondary School 2a">
-                                                </div>
-                                                <div class="option_widget_block option_answer_marker" title="Remove Item" data-toggle="tooltip">
-                                                    <button type="button" class="close_dialog"></button>
-                                                </div>
-                                            </div>
-                                            <div class="more_control margin_top_md">
-                                                <button type="button" class="input_control">
-                                                    <span class="t_icon">
-                                                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                        <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="widget_cta_link">Add another Branch</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row form_row_group">
-                                        <div class="form_group_item col-md-5">
-                                            <label class="control-label">Junior Secondary School 3</label>
-                                        </div>
-                                        <div class="form_group_item col-md-7">
-                                            <div class="option_input_widget">
-                                                <div class="option_widget_block option_answer_input">
-                                                    <input type="text" class="form-control" onclick="this.select();" value="Junior Secondary School 3a">
-                                                </div>
-                                                <div class="option_widget_block option_answer_marker" title="Remove Item" data-toggle="tooltip">
-                                                    <button type="button" class="close_dialog"></button>
-                                                </div>
-                                            </div>
-                                            <div class="more_control margin_top_md">
-                                                <button type="button" class="input_control">
-                                                    <span class="t_icon">
-                                                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                        <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="widget_cta_link">Add another Branch</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row form_row_group">
-                                        <div class="form_group_item col-md-5">
-                                            <label class="control-label">Senior Secondary School 1</label>
-                                        </div>
-                                        <div class="form_group_item col-md-7">
-                                            <div class="option_input_widget">
-                                                <div class="option_widget_block option_answer_input">
-                                                    <input type="text" class="form-control" onclick="this.select();" value="Senior Secondary School 1a">
-                                                </div>
-                                                <div class="option_widget_block option_answer_marker" title="Remove Item" data-toggle="tooltip">
-                                                    <button type="button" class="close_dialog"></button>
-                                                </div>
-                                            </div>
-                                            <div class="more_control margin_top_md">
-                                                <button type="button" class="input_control">
-                                                    <span class="t_icon">
-                                                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                        <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="widget_cta_link">Add another Branch</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row form_row_group">
-                                        <div class="form_group_item col-md-5">
-                                            <label class="control-label">Senior Secondary School 1</label>
-                                        </div>
-                                        <div class="form_group_item col-md-7">
-                                            <div class="option_input_widget">
-                                                <div class="option_widget_block option_answer_input">
-                                                    <input type="text" class="form-control" onclick="this.select();" value="Senior Secondary School 2a">
-                                                </div>
-                                                <div class="option_widget_block option_answer_marker" title="Remove Item" data-toggle="tooltip">
-                                                    <button type="button" class="close_dialog"></button>
-                                                </div>
-                                            </div>
-                                            <div class="more_control margin_top_md">
-                                                <button type="button" class="input_control">
-                                                    <span class="t_icon">
-                                                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                        <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="widget_cta_link">Add another Branch</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row form_row_group">
-                                        <div class="form_group_item col-md-5">
-                                            <label class="control-label">Senior Secondary School 3</label>
-                                        </div>
-                                        <div class="form_group_item col-md-7">
-                                            <div class="option_input_widget">
-                                                <div class="option_widget_block option_answer_input">
-                                                    <input type="text" class="form-control" onclick="this.select();" value="Senior Secondary School 3a">
-                                                </div>
-                                                <div class="option_widget_block option_answer_marker" title="Remove Item" data-toggle="tooltip">
-                                                    <button type="button" class="close_dialog"></button>
-                                                </div>
-                                            </div>
-                                            <div class="more_control margin_top_md">
-                                                <button type="button" class="input_control">
-                                                    <span class="t_icon">
-                                                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                        <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                                        </svg>
-                                                    </span>
-                                                    <span class="widget_cta_link">Add another Branch</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                              </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="submit_widget widget_fixed_bottom">
-                        <div class="container form_body">
-                            <div class="nav_flex_row justify-content-end">
-                                <button type="button" class="btn btn-primary">Save Changes</button>
+
+                                </div>
                             </div>
                         </div>
                     </div>

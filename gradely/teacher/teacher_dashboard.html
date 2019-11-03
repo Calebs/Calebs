@@ -20,6 +20,51 @@
     
 <body>
 
+    <div class="modal fade" id="add_class">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Add your Class</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Get your class-code from your school administrator, and enter it below to add join your class.</p>
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Class code</label>
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Enter your class code here">
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-inverse">
+                                        Verify Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Use this to show a preview of the school that match with the provided student code -->
+                        <div class="infoPreviewCard margin_top_xl">
+                            <div class="cardWrapper">
+                                <div class="details_col_info ">
+                                    <div class="address_block">
+                                    <span class="addr_field addr_title font-bold">Senior Secondary School 1 (SSS1)</span>
+                                    <span class="addr_field ">@Christland Intl. College</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="my_classes.html" class="btn btn-primary">Add Class</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="mainHeader" role="banner">
         <div class="container-fluid">
             <div class="navbarWrapper">
@@ -39,18 +84,24 @@
                             <a href="homework.html" class="menuLinkItem">Homework</a>
                         </div>
                         <div class="menuListItem">
-                            <a href="questions_lander.html" class="menuLinkItem">Questions</a>
-                        </div>
-                        <div class="menuListItem">
                             <a href="my_classes.html" class="menuLinkItem">Classes</a>
-                        </div>
-                        <div class="menuListItem">
-                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
                         </div>
                     </nav>
                 </div>
                 <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuAlt">
+                        <div class="controlBtn helpBtn">
+                            <a href="../teacher_help.html">
+                                <span class="btnIconHolder">
+                                    <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27127C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27915 10.1266 8.75816 9.94333C8.23717 9.76006 7.96339 9.18915 8.14667 8.66816C8.46014 7.77705 9.07887 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3718 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9197 11.0711 15.3569 11.889 14.7751 12.4464C14.1931 13.004 13.5031 13.3909 13.0159 13.6243C12.977 13.6429 12.9487 13.6696 12.933 13.6926C12.9257 13.7033 12.9225 13.7113 12.9211 13.7154C12.92 13.719 12.92 13.7205 12.92 13.7207V14C12.92 14.5523 12.4723 15 11.92 15C11.3677 15 10.92 14.5523 10.92 14V13.7208C10.92 12.8509 11.4686 12.1479 12.1518 11.8206C12.5483 11.6307 13.0263 11.3522 13.3915 11.0023C13.7567 10.6523 13.92 10.321 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.4501 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"/>
+                                        <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" />
+                                    </svg>                                            
+                                </span>
+                                <span class="control_label">Help</span>
+                            </a>
+                        </div>
                         <div class="controlBtn btnAlert">
                             <a href="#">
                                 <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -63,26 +114,58 @@
                             <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
                                 <div class="user_info_avi">
                                     <img src="" alt="">
-                                    <div class="default_avi">AJ</div>
+                                    <div class="default_avi bg__danger">AJ</div>
                                 </div>
-                                <span class="control_label">Andrew Jackson</span>
                                 <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu">
+                            
+                            <div class="dropdown-menu profile_dropdown">
+                                <header class="dpd_header">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi bg__danger">AJ</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold color__primary">Andrew Jackson</h4>
+                                            <p>andrewjay@gmail.com</p>
+                                            <div class="margin_top_sm">
+                                                <a href="profile.html" class="widget_cta_link">Manage Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
                                 <ul class="dpd_nav">
-                                    <li>
-                                        <a href="profile.html">
-                                            My Profile
+                                    <li class="dpd_nav_item">
+                                        <a href="../teacher_help.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Get Help
+                                            </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="act_settings.html">
-                                            Account Settings
+                                    <li class="dpd_nav_item">
+                                        <a href="act_settings.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_settings"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Account Settings
+                                            </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="../login.html">
-                                            Log Out
+                                    <li class="dpd_nav_item">
+                                        <a href="../login.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_logout"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Log Out
+                                            </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -102,96 +185,95 @@
 
     <main class="mainContentArea">
         <div class="grdly_page_frame">
-            <section class="global_alert_holder hidden">
-                <!-- Toggle class "show" to the alert -->
-                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
-                    <div class="container">
-                        <div class="extra_info">
-                            <div class="alert_icon">
-                                <span class="cust_icon icon_info"></span>
+            
+            <section class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+
+                    <div class="pageInfoStrip">
+                        <div class="container">
+                            <div class="infoStripCaption ">
+                                <span class="opt_rule"></span>
+                                <span class="captionText">You are viewing: </span>
                             </div>
-                            <div class="alert_info">
-                                <p>Personal information updated successfully</p>
-                            </div>
-                            <div class="dialogDismiss">
-                                <button type="button" data-dismiss="alert" class="close_dialog">   
-                                </button>
+                            <div class="infoStripWrapper">
+                                <div class="infoStripItemBLock dropdown">
+                                    <a href="#" data-toggle="dropdown" class="customDropdownHeader dropdown-toggle">
+                                        <div class="user_profile_details">
+                                            <div class="productThumb avi_md">
+                                                <span class="default_avi">
+                                                    <span class="cust_icon icon_school"></span>
+                                                </span>
+                                            </div>
+                                            <div class="user_info">
+                                                <h4 class="title text_clipped font-bold">Senior Secondary School 1</h4>
+                                                <span class="addr_field ">Class Code: <strong class="color__black">IMD/JSS1B</strong></span>
+                                            </div>
+                                        </div>
+                                        <span class="selectorTrigger_btn">
+                                            <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.43437 10.3598L7.99997 10.9254L12.5256 6.39975L11.3944 5.26855L7.99997 8.66215L4.60557 5.26855L3.47437 6.39975L7.43437 10.3598Z"/>
+                                            </svg>
+                                        </span>                        
+                                    </a>
+                                    <div class="dropdown-menu widget_select_menu">
+                                        <!-- Toggle the class "is_empty" when the list is empty -->
+                                        <div class="widget_select_body ">
+                                            <ul class="search_result_list">
+                                                <li class="search_result_item">
+                                                    <a href="" class="result_item_wrapper active">
+                                                        <div class="address_block">
+                                                            <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                            <span class="addr_field ">Class Code: <strong class="color__black">IMD/JSS1B</strong></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="search_result_item">
+                                                    <a href="" class="result_item_wrapper">
+                                                        <div class="address_block">
+                                                            <span class="addr_title">Junior Secondary School 3 (JSS3)</span>
+                                                            <span class="addr_field ">Class Code: <strong class="color__black">IMD/JSS3B</strong></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="search_result_empty">
+                                                <p>No result found</p>
+                                            </div>
+                                        </div>
+                                        <footer class="widget_select_footer">
+                                            <a class="widgetSelectCTA" href="#add_class" data-toggle="modal">Add a Class</a>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="infoStripItemBLock hidden-sm">
+                                    <div class="user_info text-right">
+                                        <span class="data_label">
+                                            <time>01 April, 2019</time>
+                                        </span>
+                                        <div class="title"><span>First Term</span> - <span>Week 2</span></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="grdly_page_body bg__off_white"> 
-                <div class="grdly_page_wrapper">
-                    <div class="grdly_page_content">
 
-                        <div class="pageInfoStrip">
-                            <div class="container">
-                                <div class="infoStripCaption ">
-                                    <span class="opt_rule"></span>
-                                    <span class="captionText">You are viewing: </span>
-                                </div>
-                                <div class="infoStripWrapper">
-                                    <div class="infoStripItemBLock dropdown">
-                                        <a href="#" data-toggle="dropdown" class="customDropdownHeader dropdown-toggle">
-                                            <div class="user_profile_details">
-                                                <div class="productThumb avi_md">
-                                                    <span class="default_avi">
-                                                        <span class="cust_icon icon_school"></span>
-                                                    </span>
-                                                </div>
-                                                <div class="user_info">
-                                                    <h4 class="title text_clipped font-bold">Senior Secondary School 1</h4>
-                                                    <span class="listMetaInfo">Christland Intl. College</span>
-                                                </div>
-                                            </div>
-                                            <span class="selectorTrigger_btn">
-                                                <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7.43437 10.3598L7.99997 10.9254L12.5256 6.39975L11.3944 5.26855L7.99997 8.66215L4.60557 5.26855L3.47437 6.39975L7.43437 10.3598Z"/>
-                                                </svg>
-                                            </span>                        
-                                        </a>
-                                        <div class="dropdown-menu widget_select_menu">
-                                            <!-- Toggle the class "is_empty" when the list is empty -->
-                                            <div class="widget_select_body ">
-                                                <ul class="search_result_list">
-                                                    <li class="search_result_item">
-                                                        <a href="" class="result_item_wrapper active">
-                                                            <div class="address_block">
-                                                                <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
-                                                                <span class="addr_field ">Christland Intl. College</span>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li class="search_result_item">
-                                                        <a href="" class="result_item_wrapper">
-                                                            <div class="address_block">
-                                                                <span class="addr_title">Junior Secondary School 3 (JSS3)</span>
-                                                                <span class="addr_field ">Christland Intl. College</span>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <div class="search_result_empty">
-                                                    <p>No result found</p>
-                                                </div>
-                                            </div>
-                                            <footer class="widget_select_footer">
-                                                <a class="widgetSelectCTA" href="new_class.html">Add a Class</a>
-                                            </footer>
-                                        </div>
-                                    </div>
-                                    <div class="infoStripItemBLock hidden-sm">
-                                        <div class="user_info text-right">
-                                            <span class="data_label">
-                                                <time>01 April, 2019</time>
-                                            </span>
-                                            <div class="title"><span>First Term</span> - <span>Week 2</span></div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="container form_body hidden">
+                        <div class="embed-responsive embed-responsive-16by9 videoStage">
+                            <video preload="metadata" autoplay loop muted class="embed-responsive-item">
+                                <source src="../img/banners/teacher_dashbrd.mp4" type="video/mp4">
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                        </div>
+                        <div class="def_wrapper text-center margin_top_md">
+                            <h3 class="title title_lg font-bold margin_bottom_sm">No Class report</h3>
+                            <p class="">Find class performance report, generated from the data collected from student homework. You will start seeing class performance report as soon as they complete the first homework excercise..</p>
+                            <div class="section_cto">
+                                <a href="new_homework.html" class="btn btn-secondary">Create Homework</a>
                             </div>
                         </div>
+                    </div>
+                    
+                    <div class="grdly_page_content margin_top_md">
 
                         <section class="gridCardRow">
                             <div class="container">
@@ -205,10 +287,9 @@
                                                 <div class="headerContols">
                                                     <div class="controlItem">
                                                         <label for="subjectswitcher" class="controlItemLabel">Subject</label>
-                                                        <select class="controlItemInput controlAction" id="subjectswitcher">
-                                                            <option>Mathematics</option>
-                                                            <option>English Language</option>
-                                                        </select>
+                                                        <span class="controlItemInput controlAction" id="subjectswitcher">
+                                                            Mathematics
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </header>
@@ -376,10 +457,9 @@
                                             <div class="headerContols">
                                                 <div class="controlItem">
                                                     <label for="subjectswitcher" class="controlItemLabel">Subject</label>
-                                                    <select class="controlItemInput controlAction" id="subjectswitcher">
-                                                        <option>Mathematics</option>
-                                                        <option>English Language</option>
-                                                    </select>
+                                                    <span class="controlItemInput controlAction" id="subjectswitcher">
+                                                        Mathematics
+                                                    </span>
                                                 </div>
                                                 <div class="controlItem controlItemPrimary">
                                                     <a href="new_homework.html" class="input_control">
@@ -919,6 +999,14 @@
             </section>
         </div>
     </main>
+
+    <!--Add class "loading" to activate the loader-->
+    <div class="page_loader">
+        <div class="loader_content">
+            <img src="../img/icons/ball-triangle.svg" class="loaderImage" alt="Page Loader">
+            <p class="font-md">loading...</p>
+        </div>
+    </div>
     
 	<script src="../js/jquery.js"></script>
     <script src="../js/base.min.js"></script>

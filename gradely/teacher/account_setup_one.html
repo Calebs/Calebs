@@ -19,129 +19,100 @@
     
 <body>
 
-    <main class="authenticationPageLayout">
-        <div class="grdly_page_frame bg__off_white">
-            <div class="modal fade" id="addClass">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <header class="modal-header">
-                            <h4 class="modal-title text-caps">Add Class</h4>
-                            <div class="dialogDismiss">
-                                <button type="button" class="close_dialog" data-dismiss="modal"></button>
-                            </div>
-                        </header>
-                        <div class="modal-body">
-                            <form action="">
-                                <div class="form-group">
-                                    <label class="control-label">School Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter the name of the school">
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Contact Email</label>
-                                    <input type="email" class="form-control" placeholder="e.g admin@school.com">
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label">Class Name</label>
-                                    <input type="text" class="form-control" placeholder="What is the name of your class?">
-                                </div>
-                                
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="grdly_page_body">
-                <header class="formWidgetHeader">
-                    <div class="widgetHeaderWrapper">
-                      <div class="formNavGroup navGroupLeft">
-                        <a href="account_setup_two.html" class="navGroupItem formClose" title="Skip this Setup">
-                          Skip
-                        </a>
-                        <a href="account_setup_one.html" title="Previous Step" class="navGroupItem navBack hidden">
-                          <svg class="cust_icon" viewBox="0 0 30 30" fill="none" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10.575 13.9394L9.51447 14.9999L18 23.4854L20.121 21.3644L13.758 14.9999L20.121 8.6354L18 6.5144L10.575 13.9394Z"/>
-                          </svg>
-                        </a>
-                      </div>
-                      <div class="formNavGroup navGroupCenter">
-                        <div class="navGroupItem formTitle">
-                          <h4 class="title font-bold">Account Setup</h4>
-                        </div>
-                      </div>
-                      <div class="formNavGroup navGroupRight">
-                        <a href="account_setup_two.html" class="navGroupItem formSubmit">
-                          Continue
-                        </a>
-                      </div>
-                    </div>
-                    <div class="formProgressBar">
-                      <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+    <div class="modal fade" id="flag_class">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Report Error</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </header>
+                <div class="modal-body">
+                    <p class="subtitle font-md">We are sorry for the mixup. Kindly provide the following information about your class for us to track the problem.</p>
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label">What is the name of your school?</label>
+                            <input type="text" class="form-control" placeholder="Enter your school name">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Your class Level</label>
+                            <select class="form-control">
+                                <option>Select a Class</option>
+                                <option>Junior Secondary School 1 / Grade 7</option>
+                                <option>Junior Secondary School 2 / Grade 8</option>
+                                <option>Junior Secondary School 3 / Grade 9</option>
+                                <option>Senior Secondary School 1 / Grade 10</option>
+                                <option>Senior Secondary School 2 / Grade 11</option>
+                                <option>Senior Secondary School 3 / Grade 12</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="authenticationPageLayout">
+        <div class="grdly_page_frame bg__off_white">
+            <section class="grdly_page_body">
                 <div class="section_block">
-                    <div class="container form_body">
-                        <div class="formWidgetBody">
-                            <header class="section_header font-md">
-                                <div class="title_prefixed">
-                                    <div class="icon_box box_inverse">
-                                        <span class="cust_icon icon_class"></span>
-                                    </div>
+                    <div class="container formLayoutWrapper">
+                        <div class="formWidgetBox">
+                            <div class="formWidgetWrapper">
+                                <header class="section_header font-md">
                                     <h3 class="title title_lg color__black font-bold">Add a Class</h3>
-                                </div>
-                                <p>Start by adding a class. This helps us connect you with your school, and students. You can add more classes on the Class page after you complete your onboarding.</p>
-                            </header>
-                            <form action="">
-                                <div class="form-group">
-                                    <label for="" class="control-label caps_upper">Class code</label>
-                                    <input type="text" class="form-control" placeholder="Enter your class code here">
-                                    <p class="help-block">You can get your class code from your school administrator. Your school must be registered and have classes createf to do this.</p>
-                                    <p class="help-block text-error">Invalid code. Try again</p>
-                                </div>
-
-                                <div class="newItem cardWrapper">
-                                    <a href="#addClass" data-toggle="modal" class="data_entity">
-                                        <div class="data_entity_icon">
-                                            <span class="t_icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                    <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <div class="data_entity_info">
-                                            <h4 class="title font-bold">Don't have a class Code?</h4>
-                                            <span class="font-sm color__grey_dark">Create your class here</span>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- Use this to show a preview of the school that match with the provided student code -->
-                                <div class="infoPreviewCard margin_top_lg ">
-                                    <h4 class="data_label margin_bottom_sm">Is this your Class?</h4>
-                                    <div class="cardWrapper">
-                                        <div class="user_profile_details align-items-start">
-                                            <div class="productThumb avi_md">
-                                                <span class="default_avi">
-                                                    <span class="cust_icon icon_school"></span>
-                                                </span>
+                                    <p>Start by adding a class. This helps us connect you with your school, and students. You can add more classes on the Class page after you complete your onboarding.</p>
+                                </header>
+                                <form action="">
+                                    <div class="form-group">
+                                        <label for="" class="control-label font-bold caps_upper">Class code</label>
+                                        <div class="form-row">
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" placeholder="Enter your class code here">
                                             </div>
-                                            <div class="user_info">
-                                                <h4 class="title font-bold color__black">Senior Secondary School 1A</h4>
-                                                <p class="listMetaInfo">Christland Intl. College</p>
+                                            <div class="col-4">
+                                                <button type="submit" class="btn btn-inverse">
+                                                    Verify Code
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <!-- Use this to show a preview of the school that match with the provided student code -->
+                                     <div class="infoPreviewCard margin_top_xl">
+                                        <div class="cardWrapper">
+                                            <div class="details_col_info ">
+                                                <div class="address_block">
+                                                <span class="addr_field addr_title font-bold">Senior Secondary School 1 (SSS1)</span>
+                                                <span class="addr_field ">@Christland Intl. College</span>
+                                                </div>
                                                 <div class="details_col_cta">
-                                                    <button type="button" class="widget_cta_link">Not my Class</button>
+                                                <button type="button" class="widget_cta_link" data-target="#flag_class" data-toggle="modal" >
+                                                    Not my Class
+                                                </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                
+                                    
 
-                            </form>
+                                </form>
+                            </div>
+                            <footer class="formWidgetFooter">
+                                <div class="row justify-content-between">
+                                    <div class="backBtn">
+                                        
+                                    </div>
+                                    <div class="nextBtn">
+                                        <a href="account_setup_two.html" class="btn btn-primary-ghost">Skip</a>
+                                        <button type="submit" class="btn btn-secondary">Continue</button>
+                                    </div>
+                                </div>
+                            </footer>
                         </div>
                     </div>
                 </div>

@@ -19,6 +19,52 @@
     
 <body>
 
+    <div class="modal fade" id="add_class">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Add your Class</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Get your class-code from your teacher or school administrator, and enter it below to add join the class.</p>
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Class code</label>
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Enter your class code here">
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-inverse">
+                                        Verify Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Use this to show a preview of the school that match with the provided student code -->
+                        <div class="infoPreviewCard margin_top_xl">
+                            <div class="cardWrapper">
+                                <div class="details_col_info ">
+                                    <div class="address_block">
+                                    <span class="addr_field addr_title font-bold">Senior Secondary School 1 (SSS1)</span>
+                                    <span class="addr_field ">@Christland Intl. College</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="student_dashboard.html" class="btn btn-primary">Join Class</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="mainHeader" role="banner">
         <div class="container-fluid">
             <div class="navbarWrapper">
@@ -142,7 +188,21 @@
             
             <section class="grdly_page_body bg__off_white"> 
                 <div class="grdly_page_wrapper">
-                    <div class="grdly_page_content">
+
+                    <div class="empty_state centered">
+                        <div class="def_wrapper text-center ">
+                            <div class="def_img">
+                                <img src="../img/icons/homework_emptyScreen.svg" alt="Subscription Needed">
+                            </div>
+                            <h3 class="title title_lg font-bold margin_bottom_sm">Join a class</h3>
+                            <p class="font-md">Class teachers create homework for students. You need to be connected to your school to take homework.</p>
+                            <div class="section_cto">
+                                <button type="button" data-target="#add_class" data-toggle="modal" data-backdrop="static" class="btn btn-lg btn-secondary">Add your Class</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grdly_page_content hidden">
 
                         <section class="section_block">
                             <div class="container">
@@ -223,16 +283,20 @@
                                     </div>
                                 </div>
 
-                                <div class="empty_state justify-content-center centered ">
+                                <div class="empty_state justify-content-center centered hidden">
                                     <div class="def_wrapper color__grey_dark text-center">
                                         <div class="def_img margin_bottom_md">
                                             <img src="../img/icons/homework.svg" alt="No Homework">
                                         </div>
-                                        <p>You have no new homework.</p>
+                                        <h4 class="title title_lg color__black font-bold margin_bottom_md">No new Homework</h4>
+                                        <p>You have no upcoming homework. This is a good tim    e to CatchUp! on some of your past class topics.</p>
+                                        <div class="margin_top_md">
+                                            <a href="catch_up_lander.html" class="btn btn-secondary">Go to Practice</a>
+                                        </div>
                                     </div>
                                 </div>
                             
-                                <div class="content_inner hidden">
+                                <div class="content_inner ">
                                     <div class="table table-responsive table-brand">
                                         <table class="table table-hover">
                                             <thead>

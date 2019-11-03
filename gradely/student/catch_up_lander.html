@@ -19,6 +19,32 @@
     
 <body>
 
+    <div class="modal fade" id="inviteParent">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Invite your parent</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Gradely works best when you have your parents working with you. To add your parent, just provide their email address and we will take it from there</p>
+
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Parent's Email or Phone Number</label>
+                            <input type="text" class="form-control" placeholder="Enter your parent's Email or Phone Number">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="soloPractice">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -438,29 +464,21 @@
 
     <main class="mainContentArea">
         <div class="grdly_page_frame">
-            <section class="global_alert_holder hidden">
-                <!-- Toggle class "show" to the alert -->
-                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
-                    <div class="container">
-                        <div class="extra_info">
-                            <div class="alert_icon">
-                                <span class="cust_icon icon_info"></span>
+            <section class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <div class="empty_state centered ">
+                        <div class="def_wrapper text-center ">
+                            <div class="def_img">
+                                <img src="../img/icons/resources_emptyScreen.svg" alt="Subscription Needed">
                             </div>
-                            <div class="alert_info">
-                                <p>Personal information updated successfully</p>
-                            </div>
-                            <div class="dialogDismiss">
-                                <button type="button" data-dismiss="alert" class="close_dialog">   
-                                </button>
+                            <h3 class="title title_lg font-bold margin_bottom_sm">Connect your Parent</h3>
+                            <p class="font-md">To get the maximum benefits of CatchUp!. Invite your parent to Gradely, to get started.</p>
+                            <div class="section_cto">
+                                <button type="button" data-target="#inviteParent" data-toggle="modal" data-backdrop="static" class="btn btn-lg btn-secondary">Invite Parent</button>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="grdly_page_body bg__off_white"> 
-                <div class="grdly_page_wrapper">
-                    <div class="grdly_page_content">
+                    <div class="grdly_page_content ">
 
                         <header class="pageHeroBannner catchupHome">
                             <div class="heroContentHolder">
@@ -1445,7 +1463,7 @@
     </main>
 
     <!-- Toggle the class "takeoverActive" to show it -->
-    <section class="grdl_page_takeover grdl_paywall ">
+    <section class="grdl_page_takeover grdl_paywall">
         <div class="pageClose dialogDismiss">
             <button type="button" class="close_dialog cls_lg">   
             </button>
