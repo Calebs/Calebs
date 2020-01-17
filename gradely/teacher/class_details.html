@@ -140,25 +140,6 @@
 
     <main class="mainContentArea">
         <div class="grdly_page_frame">
-            <section class="global_alert_holder hidden">
-                <!-- Toggle class "show" to the alert -->
-                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
-                    <div class="container">
-                        <div class="extra_info">
-                            <div class="alert_icon">
-                                <span class="cust_icon icon_info"></span>
-                            </div>
-                            <div class="alert_info">
-                                <p>Personal information updated successfully</p>
-                            </div>
-                            <div class="dialogDismiss">
-                                <button type="button" data-dismiss="alert" class="close_dialog">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section class="grdly_page_body bg__off_white">
                 <div class="splitLayout">
                     <div class="sideImage visible_sm bg__white">
@@ -168,7 +149,7 @@
                                 <div class="insight_row margin_top_md">
                                     <div class="insight_item">
                                         <div class="insight_value">
-                                            <span class="title title_sm color__black">CRL/SAT/REM</span>
+                                            <span class="title color__black">CRL/SAT/REM</span>
                                         </div>
                                         <div class="insight_title">
                                             <span class="color__grey_dark">Class Code</span>
@@ -176,15 +157,7 @@
                                     </div>
                                     <div class="insight_item">
                                         <div class="insight_value">
-                                            <span class="title title_sm color__black">120</span>
-                                        </div>
-                                        <div class="insight_title">
-                                            <span class="color__grey_dark">Class Size</span>
-                                        </div>  
-                                    </div>
-                                    <div class="insight_item">
-                                        <div class="insight_value">
-                                            <span class="title title_sm color__black">First Term</span>
+                                            <span class="title color__black">First Term</span>
                                         </div>
                                         <div class="insight_title">
                                             <span class="color__grey_dark">Current Term</span>
@@ -194,6 +167,82 @@
                             </header>
                             <div class="collapsibleBlock blockCollapsed ">
                                 <div class="userInfoBlock">
+                                    <div class="base_divider"></div>
+                                    <div class="userInfoBlockItem">
+                                        <h4 class="margin_bottom_md caps_upper font-default ">Class Summary</h4>
+                                        <div class="chartSummary row align-items-center">
+                                            <div class="chartHolder col-6">
+                                                <canvas id="classPerformance" aria-label="Class performance chart" role="img"></canvas>
+                                                <div class="text-center margin_top_md">
+                                                    <span class="data_label">Class Size:</span>
+                                                    <span class="title color__primary">120 Students</span>
+                                                </div>
+                                            </div>
+                                            <div class="charteKy col-6">
+                                                <div class="legendList">
+                                                    <div class="legendItem margin_bottom_md" title="Avg. Score is less than 50%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__danger">
+                                                        </span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">64 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>Less than 50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="legendItem margin_bottom_md" title="Avg. Score is greater than 50%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__secondary"></span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">27 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>More than 50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="legendItem margin_bottom_md" title="Avg. Score is greater than 75%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__success"></span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">36 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>More than 75%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="base_divider"></div>
+                                    <div class="userInfoBlockItem">
+                                        <h4 class="margin_bottom_md caps_upper font-default ">Best Performer</h4>
+                                        <div class="user_item">
+                                            <a href="profileSummary.html" class="user_profile_details">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="../img/hermionie.jpg" alt="">
+                                                    <span class="default_avi">HG</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title font-bold text_clipped">Hermione Granger</h4>
+                                                    <span class="listMetaInfo">Avg. Score: 78.94%</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="userInfoBlockItem margin_top_lg">
+                                        <h4 class="margin_bottom_md caps_upper font-default ">Least Performer</h4>
+                                        <div class="user_item">
+                                            <a href="profileSummary.html" class="user_profile_details">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="../img/" alt="">
+                                                    <span class="default_avi">PC</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title font-bold text_clipped">Penelope Clearwater</h4>
+                                                    <span class="listMetaInfo">Avg. Score: 34.41%</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                     <div class="base_divider"></div>
                                     <div class="userInfoBlockItem">
                                         <h4 class="margin_bottom_md caps_upper font-default ">School</h4>
@@ -207,62 +256,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="data_entity_info user_info">
+                                                <div class="data_entity_info">
                                                     <h4 class="title font-md color__primary">Christland Intl. College</h4>
                                                     <div class="listMetaInfo">
                                                         <span>26, Opebi Road, P.M.B. 21614, Opebi, Ikeja, 100281, Lagos</span>
                                                     </div>
-                                                    <div class="details_col_cta">
-                                                        <button type="button" class="widget_cta_link" data-target="#class_details" data-toggle="modal" >
-                                                            Edit Details
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                    <div class="base_divider"></div>
-                                    <div class="userInfoBlockItem">
-                                        <h4 class="margin_bottom_md caps_upper font-default ">Teachers</h4>
-                                        <div class="user_list">
-                                            <article class="user_item margin_bottom_sm user_profile_details">
-                                                <div class="user_info_avi">
-                                                    <img src="../img/horace.jpg" alt="">
-                                                    <span class="default_avi">HS</span>
-                                                </div>
-                                                <div class="user_info">
-                                                    <h4 class="title text_clipped">Horace Slughorn</h4>
-                                                    <span class="listMetaInfo">Mathematics</span>
-                                                </div>
-                                            </article>
-                                            <article class="user_item margin_bottom_sm user_profile_details">
-                                                <div class="user_info_avi">
-                                                    <img src="../img/mcgonangal.jpg" alt="">
-                                                    <span class="default_avi">MM</span>
-                                                </div>
-                                                <div class="user_info">
-                                                    <h4 class="title text_clipped">Minerva McGonagall</h4>
-                                                    <span class="listMetaInfo">Biology</span>
-                                                </div>
-                                            </article>
-                                            <article class="user_item margin_bottom_sm user_profile_details">
-                                                <div class="user_info_avi">
-                                                    <img src="../img/horace.jpg" alt="">
-                                                    <span class="default_avi">HS</span>
-                                                </div>
-                                                <div class="user_info">
-                                                    <h4 class="title text_clipped">Horace Slughorn</h4>
-                                                    <span class="listMetaInfo">Mathematics</span>
-                                                </div>
-                                            </article>
-                                            <article class="user_item margin_bottom_sm user_profile_details">
-                                                <div class="user_info_avi">
-                                                    <img src="../img/mcgonangal.jpg" alt="">
-                                                    <span class="default_avi">MM</span>
-                                                </div>
-                                                <div class="user_info">
-                                                    <h4 class="title text_clipped">Minerva McGonagall</h4>
-                                                    <span class="listMetaInfo">Biology</span>
                                                 </div>
                                             </article>
                                         </div>
@@ -274,7 +272,19 @@
                     </div>
                     <div class="layoutMain">
                         <div class="profileSummaryWrapper bg__off_white">
-                            <header class="filter_navigation">
+
+                            <header class="grdly_page_header">
+                                <div class="grdly_header_title">
+                                    <h3 class="title title_lg color__black font-bold">Class Students</h3>
+                                </div>
+                                <div class="grdly_action_primary">
+                                    <a href="add_students.html" class="btn btn-secondary">
+                                        Add Student(s)
+                                    </a>
+                                </div>
+                            </header>
+
+                            <nav class="filter_navigation">
                                 <div class="filter_menu">
                                     <ul class="filter_nav_options">
                                         <li><a href="class_details.html" class="active" title="New Homework">Students</a></li>
@@ -301,18 +311,42 @@
                                         </div>
                                     </form>
                                 </div>
-                            </header>
+                            </nav>
 
-                            <div class="empty_state justify-content-center centered hidden">
+                            <div class="empty_state justify-content-center centered ">
                                 <div class="def_wrapper color__grey_dark text-center">
                                     <div class="def_img margin_bottom_md">
-                                        <img src="..//img/icons/student.svg" alt="No Homework">
+                                        <img src="../img/icons/student.svg" class="" alt="No Students in class">
                                     </div>
                                     <p>There are no enrolled students in these class.</p>
+                                    <div class="section_cto">
+                                        <a href="add_students.html" class="btn btn-secondary">
+                                            Add Student(s)
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="content_inner ">
+                            <div class="content_inner hidden">
+                                <header class="pageFilterBar">
+                                    <div class="customListHeader">
+                                        <div class="listHeaderItem">
+                                            <h5 class="title"><strong>27</strong> Students</h5>
+                                        </div>
+                                        <div class="listHeaderItem">
+                                            <div class="filterOption optionfilter">
+                                                <a href="#" class="filterOptionWrapper">
+                                                    <span class="optionIcon">
+                                                        <i class="cust_icon icon_sample"></i>
+                                                    </span>
+                                                    <span class="optionLabel">
+                                                        Download
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
                                 <div class="table table-responsive table-brand">
                                     <table class="table table-hover">
                                         <thead>
@@ -342,16 +376,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/hermionie.jpg" alt="">
                                                             <span class="default_avi">HG</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Hermione Granger</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -365,8 +399,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -378,16 +426,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/" alt="">
                                                             <span class="default_avi bg__secondary">BC</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Babatunde Calebs</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -401,8 +449,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -414,16 +476,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/" alt="">
                                                             <span class="default_avi bg__primary">JS</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Jake Sully</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -437,8 +499,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -450,16 +526,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/" alt="">
                                                             <span class="default_avi">RR</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Ronald Regan</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -473,8 +549,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -486,16 +576,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/hermionie.jpg" alt="">
                                                             <span class="default_avi">HG</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Hermione Granger</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -509,8 +599,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -522,16 +626,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/" alt="">
                                                             <span class="default_avi bg__secondary">BC</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Babatunde Calebs</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -545,8 +649,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -558,16 +676,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/" alt="">
                                                             <span class="default_avi bg__secondary">JS</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Jake Sully</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -581,8 +699,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -594,16 +726,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/" alt="">
                                                             <span class="default_avi">RR</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Ronald Regan</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -617,8 +749,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -630,16 +776,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/" alt="">
                                                             <span class="default_avi bg__secondary">BC</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Babatunde Calebs</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -653,8 +799,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -666,16 +826,16 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="user_profile_details">
+                                                    <a href="profileSummary.html" class="user_profile_details">
                                                         <div class="user_info_avi avi_md">
                                                             <img src="../img/" alt="">
                                                             <span class="default_avi bg__secondary">JS</span>
                                                         </div>
                                                         <div class="user_info">
                                                             <h4 class="title font-bold text_clipped">Jake Sully</h4>
-                                                            <span class="listMetaInfo">Joined, December, 2018</span>
+                                                            <span class="listMetaInfo">Student Code: RR19/0002</span>
                                                         </div>
-                                                    </div>
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     <div class="">
@@ -689,8 +849,22 @@
                                                 </td>
                                                 <td>
                                                     <div class="tableControl">
-                                                        <div class="tabelControlItem">
-                                                            <a href="profileSummary.html" class="controlItemLink">Details</a>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="profileSummary.html">View Details</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button data-target="#remove_student" data-toggle="modal">Remove</button>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -732,22 +906,36 @@
 
     <script src="../js/jquery.js"></script>
     <script src="../js/base.min.js"></script>
-    <script src="../js/jquery.rateit.min.js"></script>
-    <script src="../js/rounded_progressbar.js"></script>
+    <script src="../js/Chart.min.js"></script>
     <script src="../js/main.js"></script>
 
     <script>
-        var bar = new RadialProgress(
-            document.getElementById("bar"), {
-                colorBg: "#DDF1FA",
-                colorFg: "#60D2B0",
-                colorText: "#353535",
-                progress: .75,
-                animationSpeed: .35,
-                setLabel: "Score",
-                round: true,
-                thick: 10,
-            });
+        var classChart = document.getElementById('classPerformance').getContext('2d');
+        
+        var myDoughnutChart = new Chart(classChart ,{
+            type: 'doughnut',
+            data: {
+                labels: ["Below 50%", "Above 50%", "Above 75%"],
+                datasets: [{
+                    label: 'Class Performance summary',
+                    data: [53, 27, 36],
+                    backgroundColor: [
+                        '#FE747D',
+                        '#F2AB3E',
+                        '#60D2B0'
+                    ],
+                    hoverBackgroundColor: '#08384D',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutoutPercentage: 70,
+                aspectRatio:1,
+                legend: {
+                    display: false
+                }
+            }
+        });
     </script>
 
 </body>

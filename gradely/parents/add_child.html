@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Add your child | Gradely.School</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal fade" id="add_child">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Add Child with Code</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                            <select class="form-control">
+                                <option>Father</option>
+                                <option>Mother</option>
+                                <option>Aunt</option>
+                                <option>Uncle</option>
+                                <option>Grand-Father</option>
+                                <option>Grand-Mother</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Enter Student Code</label>
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Enter your child's studnet code here">
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-inverse">
+                                        Verify Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Show this after the user has entered the parent code -->
+                        <div class="previewList margin_top_lg">
+                            <div class="infoPreviewCard">
+                                <div class="cardWrapper">
+                                    <div class="data_entity">
+                                        <div class="data_entity_icon">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <span class="default_avi">RH</span>
+                                            </div>
+                                        </div>
+                                        <div class="details_col_info ">
+                                            <div class="address_block">
+                                                <h4 class="title font-bold">Rubius Hagrid</h4>
+                                                <span class="addr_field addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                <span class="addr_field">@Christland Intl. College</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="createChild">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Sign up your Child</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    
+                    <form action="">    
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <label for="" class="control-label font-bold caps_upper">First Name</label>
+                                <input type="text" placeholder="Your child's First Name" class="form-control">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="" class="control-label font-bold caps_upper">Last Name</label>
+                                <input type="text" placeholder="Your child's Last Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                            <select class="form-control">
+                                <option>Father</option>
+                                <option>Mother</option>
+                                <option>Aunt</option>
+                                <option>Uncle</option>
+                                <option>Grand-Father</option>
+                                <option>Grand-Mother</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Student Code</label>
+                            <input type="text" class="form-control font-bold" readonly value="RH19/0021" >
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Create Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control user_pass" placeholder="Create a Password">
+                                <span class="input-group-addon">
+                                    <button type="button" id="showPass">
+                                        <i class="cust_icon icon_eye "></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="base_divider"></div>
+                    <p class="color__red"><strong>P.S</strong> Your child will require their <em>Student code</em> and <em>password</em> to log on to their student account.</p> 
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Create Child</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="authenticationPageLayout">
+        <div class="grdly_page_frame bg__off_white">
+            <section class="grdly_page_body">
+                <div class="section_block">
+                    <div class="pageClose dialogDismiss">
+                        <a href="school_lander.html" class="close_dialog cls_lg">
+                            <span class="closeLabel">Exit</span>
+                        </a>
+                    </div>
+                    <div class="container formLayoutWrapper">
+                        <div class="formWidgetBox">
+                            <div class="formWidgetWrapper">
+                                <header class="section_header font-md">
+                                    <h3 class="title title_lg margin_bottom_sm color__black font-bold">Add your Child</h3>
+                                    <p>Connect with your child using their <strong>“Student Code”</strong> Or sign them up yourself.</p>
+                                </header>
+                                <div class="content_inner">
+                                    <div class="userOptions row">
+                                        <article class="actionCard col-sm-6">
+                                            <a href="#add_child" data-toggle="modal" data-backdrop="static" class="actionCardWrapper">
+                                                <div class="media_info">
+                                                    <h4 class="title font-bold margin_bottom_sm">Use Child Code</h4>
+                                                    <p>If your child is signed up already, you can connect with them using their unique student code</p>
+                                                </div>
+                                            </a>
+                                        </article>
+                                        <article class="actionCard col-sm-6">
+                                            <a href="#createChild" data-toggle="modal" data-backdrop="static" class="actionCardWrapper">
+                                                <div class="media_info">
+                                                    <h4 class="title font-bold margin_bottom_sm">Sign Up your Child</h4>
+                                                    <p>If your child is not signed up already, create their account, and give them thier log in details.</p>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="previewList margin_top_lg">
+                                        <header class="gridFancyHeader infoStripCaption">
+                                            <span class="opt_rule"></span>
+                                            <span class="captionText gridCardTitle">Pending Acceptance</span>
+                                        </header>
+                                        <div class="table table-responsive table-brand">
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="user_profile_details">
+                                                                <div class="user_info_avi avi_md">
+                                                                    <img src="../img/" alt="">
+                                                                    <span class="default_avi">RH</span>
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                                    <span class="color__grey_dark">Son</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">RH19/0021</h4>
+                                                                <span class="color__grey_dark">Student Code</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                    <button type="button" class="btn-icon">
+                                                                        <svg viewBox="0 0 16 16" class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z"/>
+                                                                        </svg>           
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="user_profile_details">
+                                                                <div class="user_info_avi avi_md">
+                                                                    <img src="../img/" alt="">
+                                                                    <span class="default_avi">OH</span>
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped font-bold">Oluyemi Hagrid</h4>
+                                                                    <span class="color__grey_dark">Son</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">OH19/0021</h4>
+                                                                <span class="color__grey_dark">Student Code</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem" title="Remove Item" data-toggle="tooltip">
+                                                                    <button type="button" class="btn-icon">
+                                                                        <svg viewBox="0 0 16 16" class="cust_icon icon_xs" xmlns="http://www.w3.org/2000/svg">
+                                                                            <path d="M8.00007 6.86884L2.34327 1.21204L1.21207 2.34324L6.86887 8.00004L1.21207 13.6568L2.34327 14.788L8.00007 9.13124L13.6569 14.788L14.7881 13.6568L9.13127 8.00004L14.7881 2.34324L13.6569 1.21204L8.00007 6.86884Z"/>
+                                                                        </svg>           
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="formWidgetFooter">
+                                <div class="row justify-content-between">
+                                    <div class="backBtn">
+                                        <a href="parent_lander.html" class="btn btn-primary-outline">Cancel</a>
+                                    </div>
+                                    <div class="nextBtn">
+                                        <a href="parent_dashboard.html" class="btn btn-secondary">Done</a>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+	<script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+    		
+</body>
+</html>

@@ -99,6 +99,23 @@ jQuery(document).ready(function($){
      
         selector.on('change', function() {
           $(this).parents(".selectorItem").toggleClass("selected");
-      });
+    });
 
+        
+    $('#appNotifications').on('click', function(e) {
+        e.preventDefault();
+        $('body').addClass('scroll_lock');
+        $('body').addClass('drawerActive');
+    });
+
+    //open/close Filter panel
+    $('body').on('click','.offScreenDrawerContentWrapper .close_dialog, .offscreenDrawerBackdrop', function(event) {
+        event.stopPropagation();
+        closeDialog();
+    });
+
+    function closeDialog() {
+        $('body').removeClass('scroll_lock');
+        $('body').removeClass('drawerActive');
+	}
 });

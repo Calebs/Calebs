@@ -31,7 +31,7 @@
                 <div class="modal-body">
                     <form action="">
                         <div class="form-group">
-                          <label class="control-label font-bold">Full Name</label>
+                          <label class="control-label font-bold">Teacher's Name</label>
                           <input type="text" class="form-control" placeholder="Name of the teacher">
                         </div>
                         <div class="form-group">
@@ -39,31 +39,33 @@
                           <input type="email" class="form-control" placeholder="Email Address here">
                         </div>
                         <div class="form-group">
-                          <label class="control-label font-bold">Subject</label>
-                          <div class="pillSelectorList">
-                              <div class="selectorItem">
-                                  <label for="subj_0" class="pillWrapper">
-                                      <input type="checkbox" id="subj_0" class="pillSelectControl" name="tchSubject">
-                                      <span class="selectorLabel caps_upper">
-                                          Mathematics
-                                      </span>
-                                  </label>
-                              </div>
-                              <div class="selectorItem">
-                                  <label for="subj_1" class="pillWrapper">
-                                      <input type="checkbox" id="subj_1" class="pillSelectControl" name="tchSubject">
-                                      <span class="selectorLabel caps_upper">
-                                          English Language
-                                      </span>
-                                  </label>
-                              </div>
+                            <label class="control-label font-bold">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Teacher's Phone Number">
                           </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Select class</label>
+                            <select class="form-control">
+                                <option>Junior Secondary School 1</option>
+                                <option>Junior Secondary School 2</option>
+                                <option>Junior Secondary School 3</option>
+                                <option>Senior Secondary School 1</option>
+                                <option>Senior Secondary School 2</option>
+                                <option>Senior Secondary School 3</option>
+                            </select>
                         </div>
-                                             
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Subject?</label>
+                            <div class="margin_top_sm">
+                                <label for="sbjMaths" class="radio-inline">
+                                    <input type="radio" id="sbjMaths" checked name="hmSubject">
+                                    <span class="label_title caps_upper">Mathematics</span>
+                                </label>
+                            </div>
+                        </div>                  
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-primary">Send Invitation</button>
                 </div>
             </div>
         </div>
@@ -128,7 +130,7 @@
                         </form>
                     </section>
 
-                    <section class="extractedList ">
+                    <section class="extractedList hidden">
                         <div class="content_wrapper">
                             
                             <div class="table table-responsive table-brand">
@@ -222,7 +224,7 @@
                     </section>
 
                     <!-- Show this after parsing the document successfully -->
-                    <section class="responsePane hidden">
+                    <section class="responsePane ">
                         <div class="content_wrapper text-center">
                             <div class="defImg">
                                 <img src="../img/icons/task_done.svg" class="avi_xl" alt="">
@@ -242,8 +244,8 @@
     </div>
 
     <main class="authenticationPageLayout">
-        <div class="grdly_page_frame bg__off_white">
-            <section class="grdly_page_body">
+        <div class="grdly_page_frame ">
+            <section class="grdly_page_body bg__off_white">
                 <div class="section_block">
                     <div class="container formLayoutWrapper">
                         <div class="formWidgetBox">
@@ -253,36 +255,22 @@
                                     <p>Add your teachers to gradely, and start monitoring their class progress and performance.</p>
                                 </header>
                                 <div class="content_inner">
-                                    <div class="userOptions row">
-                                        <article class="actionCard col-sm-6">
-                                            <a href="#fileUploader" data-toggle="modal" data-backdrop="static" class="actionCardWrapper">
-                                                <div class="media_info">
-                                                    <h4 class="title font-bold margin_bottom_sm">Add from file</h4>
-                                                    <p>Upload a pre-formated document containing a list of your teachers.</p>
-                                                </div>
-                                            </a>
-                                        </article>
-                                        <article class="actionCard col-sm-6">
-                                            <a href="#newTeacher" data-toggle="modal" data-backdrop="static" class="actionCardWrapper">
-                                                <div class="media_info">
-                                                    <h4 class="title font-bold margin_bottom_sm">Add a Teacher</h4>
-                                                    <p>Add a single teacher by filling a short form</p>
-                                                </div>
-                                            </a>
-                                        </article>
-                                    </div>
-                                    <div class="linkTileItem">
-                                        <a href="#" download target="_blank" class="tileItemWrapper">
-                                            <div class="media_item">
-                                                <div class="media_figure">
-                                                    <i class="cust_icon icon_sample"></i>
-                                                </div>
-                                                <div class="media_info">
-                                                    <h4 class="title">Download Sample File</h4>
-                                                </div>
+                                    <div class="newItem cardWrapper margin_top_md">
+                                        <button data-target="#newTeacher" data-toggle="modal" data-backdrop="static" class="data_entity text-left">
+                                            <div class="data_entity_icon">
+                                                <span class="t_icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                        <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                    </svg>
+                                                </span>
                                             </div>
-                                        </a>
+                                            <div class="data_entity_info">
+                                                <h4 class="title font-bold">Invite a Teacher</h4>
+                                                <span class="font-sm color__grey_dark">Click here to invite a Teacher to your school </span>
+                                            </div>
+                                        </button>
                                     </div>
+                                    
                                     <div class="previewList margin_top_lg">
                                         <header class="gridFancyHeader infoStripCaption">
                                             <span class="opt_rule"></span>
@@ -429,7 +417,7 @@
                             <footer class="formWidgetFooter">
                                 <div class="row justify-content-between">
                                     <div class="backBtn">
-                                        <a href="account_setup_one.html" class="btn btn-default">Back</a>
+                                        <a href="account_setup_one.html" class="btn btn-primary-outline">Back</a>
                                     </div>
                                     <div class="nextBtn">
                                         <a href="account_setup_three.html" class="btn btn-primary-ghost">Skip</a>

@@ -56,6 +56,42 @@
         </div>
     </div>
 
+    <div class="modal fade" id="inviteSchool">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Invite your School</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Invite your school to access to your school classes. You will be assigned to a class as soon as your school joins.</p>
+
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper required">School Name</label>
+                            <input type="text" required class="form-control" placeholder="Enter the name of your school">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper required">Contact Email Address</label>
+                            <input type="email" required class="form-control" placeholder="Enter an email address for your school">
+                            <p class="help-block hidden text-error">Invalid email address.</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper required">Contact Phone Number</label>
+                            <input type="tel" required class="form-control" placeholder="Enter a contact phone number">
+                            <p class="help-block hidden text-error">Invalid phone number.</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Send Invitation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main class="authenticationPageLayout">
         <div class="grdly_page_frame bg__off_white">
             <section class="grdly_page_body">
@@ -64,7 +100,7 @@
                         <div class="formWidgetBox">
                             <div class="formWidgetWrapper">
                                 <header class="section_header font-md">
-                                    <h3 class="title title_lg color__black font-bold">Add a Class</h3>
+                                    <h3 class="title title_lg margin_bottom_sm color__black font-bold">Add a Class</h3>
                                     <p>Start by adding a class. This helps us connect you with your school, and students. You can add more classes on the Class page after you complete your onboarding.</p>
                                 </header>
                                 <form action="">
@@ -80,6 +116,19 @@
                                                 </button>
                                             </div>
                                         </div>
+                                        <div class="more_control margin_top_md">
+                                            <button type="button" data-target="#inviteSchool" data-toggle="modal" class="input_control">
+                                                <span class="t_icon">
+                                                    <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                    <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                    </svg>
+                                                </span>
+                                                <p>Don't have a class code? 
+                                                    <span class="widget_cta_link">Invite your School</span>
+                                                </p>
+                                            </button>
+                                        </div>
+
                                     </div>
 
                                      <!-- Use this to show a preview of the school that match with the provided student code -->

@@ -36,7 +36,6 @@ function RadialProgress(container, cfg) {
   tc.appendChild(tcap);
   tc.appendChild(t);
   tcc.appendChild(tc);
-  tcap.innerHTML = "Avg Score", 
   container.appendChild(tcc);
   this.text = t;
   this.prevW = 0; this.prevH = 0; this.prevP = 0; this.indetA = 0; this.indetB = 0.2; this.rot = 0;

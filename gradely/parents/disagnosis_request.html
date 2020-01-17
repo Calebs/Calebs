@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Request diagnostic test | Gradely.School</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal fade" id="test_success">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <header class="modal-header">
+                </header>
+                <div class="modal-body">
+                    <div class="content_wrapper text-center">
+                        <div class="defImg">
+                            <img src="../img/icons/diagnostic_request.svg" class="avi_xl" alt="">
+                        </div>
+                        <h3 class="title title_sm margin_bottom_sm font-bold">Request Received</h3>
+                        <p>A diagnostic test has been created for your child <strong>Rubius Hagrid</strong>. Log into your parent resources dashboard for report.</p>
+                        <p>Please note, your child must be logged into their gradely account to access the test.</p>
+                        <div class="section_cto">
+                            <button type="button" data-dismiss="modal" class="btn btn-primary">New Child</button>
+                            <a href="marketplace.html" class="btn btn-secondary">Go to Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="add_child">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps ">Add your child</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+
+                    <section class="widgetHome hidden">
+                        <form action="">
+                            <div class="userOptions row">
+                                <article class="actionCard col-sm-12">
+                                    <button type="button" class="actionCardWrapper">
+                                        <div class="media_info">
+                                            <h4 class="title font-bold margin_bottom_sm">I have my child's student code</h4>
+                                            <p>Click here if your child is already signed up on Gradey, and has a student code</p>
+                                        </div>
+                                    </button>
+                                </article>
+                                <article class="actionCard col-sm-12">
+                                    <button type="button" class="actionCardWrapper">
+                                        <div class="media_info">
+                                            <h4 class="title font-bold margin_bottom_sm">I want to register my Child</h4>
+                                            <p>Click here if your child is not already signed up on Gradely. And you want to create an account for them.</p>
+                                        </div>
+                                    </button>
+                                </article>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the user has a child code -->
+                    <section class="addWithCode hidden">
+                        <form class="content_wrapper">
+                            
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Enter Student Code</label>
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="Enter your child's studnet code here">
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-inverse">
+                                            Verify Code
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Show this after the user has entered the parent code -->
+                            <div class="previewList margin_top_lg">
+                                <div class="infoPreviewCard">
+                                    <div class="cardWrapper">
+                                        <div class="data_entity">
+                                            <div class="data_entity_icon">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="" alt="">
+                                                    <span class="default_avi">RH</span>
+                                                </div>
+                                            </div>
+                                            <div class="details_col_info ">
+                                                <div class="address_block">
+                                                    <h4 class="title font-bold">Rubius Hagrid</h4>
+                                                    <span class="addr_field addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field">@Christland Intl. College</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form_cta text-center">
+                                <button type="button" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-primary">Done</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the user choose to sign up the child -->
+                    <section class="signUpChild ">
+                        <form class="content_wrapper">
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="" class="control-label font-bold caps_upper">First Name</label>
+                                    <input type="text" placeholder="Your child's First Name" class="form-control">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="" class="control-label font-bold caps_upper">Last Name</label>
+                                    <input type="text" placeholder="Your child's Last Name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Student Code</label>
+                                <input type="text" class="form-control font-bold" readonly value="RH19/0021" >
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Create Password</label>
+                                <input type="text" class="form-control user_pass" placeholder="Create a Password for your child">
+                            </div>
+                            <div class="form_cta text-center">
+                                <p><strong>P.S</strong> Your child will require their <em>Student code</em> and <em>password</em> to log on to their student account.</p> 
+                                <div class="margin_top_md">
+                                    <button type="button" class="btn btn-default">Cancel</button>
+                                    <button type="button " class="btn btn-primary">Done</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="authenticationPageLayout">
+        <div class="grdly_page_frame bg__off_white">
+            <section class="grdly_page_body">
+                <div class="section_block">
+                    <div class="pageClose dialogDismiss">
+                        <a href="parent_lander.html" class="close_dialog cls_lg">
+                            <span class="closeLabel">Exit</span>
+                        </a>
+                    </div>
+                    <div class="container formLayoutWrapper">
+                        <div class="formWidgetBox">
+                            <div class="formWidgetWrapper">
+                                <header class="section_header">
+                                    <h3 class="title title_sm caps_upper color__black font-bold">Request Diagnostic Test</h3>
+                                </header>
+                                <div class="content_inner">
+                                    <form action="" class="form_body">
+                                        <div class="form-group ">
+                                            <label class="control-label font-bold caps_upper">Select the child you'd like to assess</label>
+                                            <div class="dropdown form_mng">
+                                                <a href="#" data-toggle="dropdown" class="menuSelect_input">
+                                                    <span class="menuSelect_label">Select a Child</span>
+                                                    <div class="menuSelect_inputIcon">
+                                                        <span class="caret"></span>
+                                                    </div>
+                                                </a>
+                                                <div class="dropdown-menu widget_select_menu">
+                                                    <!-- Toggle the class "is_empty" when the list is empty -->
+                                                    <div class="widget_select_body ">
+                                                        <ul class="search_result_list">
+                                                            <li class="search_result_item">
+                                                                <a href="" class="result_item_wrapper active">
+                                                                    <div class="user_profile_details">
+                                                                        <div class="user_info_avi">
+                                                                            <img src="../img/" alt="">
+                                                                            <span class="default_avi">RH</span>
+                                                                        </div>
+                                                                        <div class="user_info">
+                                                                            <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                                            <span>Junior Secondary School 2</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="search_result_empty">
+                                                            <p>No child found</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="more_control margin_top_md">
+                                                <a href="#add_child" class="input_control" data-toggle="modal" data-backdrop="static">
+                                                    <span class="t_icon">
+                                                        <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                        <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                        </svg>
+                                                    </span>
+                                                    <p>Child on Gradely?
+                                                        <span class="widget_cta_link">Add your Child</span>
+                                                    </p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" class="control-label caps_upper">Subject?</label>
+                                            <div class="margin_top_sm">
+                                                <label for="sbjMaths" class="radio-inline">
+                                                    <input type="radio" id="sbjMaths" checked name="hmSubject">
+                                                    <span class="label_title caps_upper">Mathematics</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="base_divider"></div>
+                                    <p><strong>Note:</strong> Our diagnostic test is only available for mathematics students from Junior secondary school 1 to Senior secondary school 3. You will be informed as soon as it is available to more categories.</p>
+                                </div>
+                            </div>
+                            <footer class="formWidgetFooter">
+                                <div class="row justify-content-between">
+                                    <div class="backBtn">
+                                        <a href="parent_lander.html" class="btn btn-default">Cancel</a>
+                                    </div>
+                                    <div class="nextBtn">
+                                        <button type="button" data-target="#test_success" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">Complete</a>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+	<script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+    		
+</body>
+</html>

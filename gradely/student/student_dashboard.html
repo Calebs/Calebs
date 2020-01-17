@@ -17,7 +17,79 @@
     <script src="../js/modernizr.js"></script> <!-- Modernizr -->
 </head>
     
-<body>
+<body class="" >
+
+    <div class="modal fade" id="welcome_dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modalBannerHero heroStudents">
+                    <img src="../img/banners/welcomeHero.svg" alt="">
+                </div>
+                <div class="modal-body text-center">
+                    <h2 class="title title_lg font-bold margin_bottom_sm color__primary">Welcome to Gradely</h2>
+                    <p>Now you can start taking your school howework, get immediate feedback on your performance with instant recommendation on how to get better.</p>
+                    <div class="insight_item margin_top_md">
+                        <div class="insight_value">
+                            <span class="title title_sm font-bold color__black">CRL/SAT/REM</span>
+                        </div>
+                        <div class="insight_title">
+                            <span class="color__red">Your student Code</span>
+                        </div>  
+                    </div>
+                    <div class="section_cto">
+                        <button class="btn btn-primary" type="button" data-dismiss="modal">
+                            Start Using Gradely
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="inviteParent">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Invite your parent</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Invite your parent using their email address or phone number</p>
+
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Parent's Name</label>
+                            <input type="text" class="form-control" placeholder="The name of your parent">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Parent's Email</label>
+                            <input type="email" class="form-control" placeholder="Enter your parent's Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Parent's Phone Number</label>
+                            <input type="email" class="form-control" placeholder="Enter your parent's Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                            <select class="form-control">
+                                <option>Father</option>
+                                <option>Mother</option>
+                                <option>Aunt</option>
+                                <option>Uncle</option>
+                                <option>Grand-Father</option>
+                                <option>Grand-Mother</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary">Send Invitation</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="add_class">
         <div class="modal-dialog">
@@ -84,7 +156,7 @@
                             <a href="homework.html" class="menuLinkItem">Homework <span class="updateBubble"></span></a>
                         </div>
                         <div class="menuListItem">
-                            <a href="resources.html" class="menuLinkItem">Resources <span class="updateBubble"></span></a>
+                            <a href="resources.html" class="menuLinkItem">CatchUp!<span class="updateBubble"></span></a>
                         </div>
                     </nav>
                 </div>
@@ -103,12 +175,12 @@
                             </a>
                         </div>
                         <div class="controlBtn btnAlert">
-                            <a href="#">
+                            <button type="button" id="appNotifications">
                                 <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
                                 </svg>
                                 <span class="badgeCount">8</span>
-                            </a>
+                            </button>
                         </div>
                         <div class="controlBtn btn_user_act dropdown">
                             <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
@@ -212,7 +284,16 @@
                         </div>
                     </div>
 
-                    <div class="container form_body ">
+                    <div class="container form_body hidden">
+                        <div class="notificationTray">
+                            <div class="alert alert_primary fade show" role="alert">
+                                <div class="globalAlertWrapper">
+                                    <h4 class="title font-bold">Hi, Toyin</h4>
+                                    <p class="color__default">Your Dad, <strong>Mr. Boye Atunbi</strong> would like you to take a short diagnostic test.</p>
+                                    <a href="startPractice.html" class="widget_cta_link">Take Test</a>
+                                </div>
+                            </div>                            
+                        </div>
                         <div class="embed-responsive embed-responsive-16by9 videoStage">
                             <video preload="metadata" autoplay loop muted class="embed-responsive-item">
                                 <source src="../img/banners/student_dashbrd.mp4" type="video/mp4">
@@ -220,7 +301,7 @@
                             </video>
                         </div>
                         <div class="def_wrapper text-center margin_top_md">
-                            <h3 class="title title_lg font-bold margin_bottom_sm">Your student Dashboard</h3>
+                            <h3 class="title title_sm font-bold margin_bottom_sm">Your Student Dashboard</h3>
                             <p class="">Your student dashboard gives a you an overview of your real-time performance in class. Take a homework to get started.</p>
                             <div class="section_cto">
                                 <a href="homework.html" class="btn btn-primary">See your Homework</a>
@@ -229,7 +310,7 @@
                         </div>
                     </div>
 
-                    <div class="grdly_page_content margin_top_md hidden">
+                    <div class="grdly_page_content margin_top_md ">
 
                         <section class="gridCardRow">
                             <div class="container">
@@ -853,13 +934,288 @@
         </div>
     </main>
 
+    <div class="offscreenDrawer ">
+        <div class="offscreenDrawerBackdrop"></div>
+        <div class="offScreenDrawerContent drawerLeft">
+            <div class="offScreenDrawerContentWrapper">
+                <header class="drawer_header">
+                    <h4 class="title title_lg font-bold color__black">Notifications</h4>
+                    <button type="button" class="close_dialog cls_lg" data-dismiss="modal"></button>
+                </header>
+                <div class="empty_state hidden centered">
+                    <div class="def_wrapper">
+                        <div class="defImg">
+                            <img src="../img/icons/notification_empty.svg" class="avi_xxl" alt="No Notifications">
+                        </div>
+                        <p class="">You have no new notification</p>
+                    </div>
+                </div>
+                <div class="drawer_body">
+                    <div class="text-right">
+                        <button class="dialogReset caps_upper">Clear All</button>
+                    </div>
+
+                    <div class="notificationList">
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> created an homework
+                                        </p>
+                                        <a href="homework_form.html">week 3 - Introduction to Mathematical Equations</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>10m</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi">RH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">You</strong> have completed a Diagnostic test
+                                        </p>
+                                        <a href="disagnosis_report.html">View Report - Diagnostic test title</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1h</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> created a Diagnostic test
+                                        </p>
+                                        <a href="startPractice.html">Take the test - Diagnostic test title</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>16h</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p>
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> accepted your invitation to Gradely
+                                        </p>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> has accepted your request
+                                        </p>
+                                        <a href=".html">Year 9 Achievers - <span>IMASC/19/Y9AS</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework due in 2 days
+                                        </p>
+                                        <a href="homework_form.html">Take homework - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework completed
+                                        </p>
+                                        <a href="homeworkReport.html">View Report - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p>
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> accepted your invitation to Gradely
+                                        </p>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> has accepted your request
+                                        </p>
+                                        <a href=".html">Year 9 Achievers - <span>IMASC/19/Y9AS</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework due in 2 days
+                                        </p>
+                                        <a href="homework_form.html">Take homework - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework completed
+                                        </p>
+                                        <a href="homeworkReport.html">View Report - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Add class "loading" to activate the loader-->
-    <div class="page_loader loading">
+    <div class="page_loader ">
         <div class="loader_content">
             <img src="../img/icons/ball-triangle.svg" class="loaderImage" alt="Page Loader">
             <p class="font-md">loading...</p>
         </div>
     </div>
+
+    <!-- Toggle the class "takeoverActive" to show it -->
+    <section class="grdl_page_takeover grdl_parentWall takeoverActive">
+        <div class="pageClose dialogDismiss">
+            <button type="button" class="close_dialog cls_lg">   
+            </button>
+        </div>
+        <div class="container">
+            <div class="empty_state centered">
+                <div class="def_wrapper text-center ">
+                    <div class="def_img">
+                        <img src="../img/icons/resources_emptyScreen.svg" alt="Connect to a Parrent">
+                    </div>
+                    <h3 class="title title_sm font-bold margin_bottom_sm">Add a Parent to Continue</h3>
+                    <p>To continue taking homework on gradely, you need to be connected to your parent's account. Invite your parent now to continue.</p>
+                    <div class="section_cto">
+                        <button type="button" data-target="#inviteParent" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">Invite Parent</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
 	<script src="../js/jquery.js"></script>
     <script src="../js/base.min.js"></script>
@@ -868,17 +1224,21 @@
     <script src="../js/main.js"></script>
 
     <script>
+        $('#welcome_dialog').modal({
+            backdrop: "static"
+        }); 
+
         var bar=new RadialProgress(
-            document.getElementById("bar"), {
-                colorBg: "#DDF1FA",
-                colorFg: "#60D2B0",
-                colorText: "#353535",
-                progress: 0.7865,
-                animationSpeed: .35,
-                setLabel: "Score",
-                round: true,
-                thick: 10,
-            });
+        document.getElementById("bar"), {
+            colorBg: "#DDF1FA",
+            colorFg: "#60D2B0",
+            colorText: "#353535",
+            progress: 0.7865,
+            animationSpeed: .35,
+            setLabel: "Score",
+            round: true,
+            thick: 10,
+        });
     </script>
     		
 </body>

@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label font-bold">Branch Name</label>
-                            <input type="email" class="form-control" value="JSS1 - Gold">
+                            <input type="email" class="form-control" placeholder="E.G. JSS1A">
                         </div>                
                     </form>
                 </div>
@@ -99,10 +99,9 @@
                                                 <label class="control-label color__black">School Type</label>
                                                 <select class="form-control form_mng">
                                                     <option>Select Education Level</option>
-                                                    <option>Secondary School only</option>
-                                                    <option>Primary School Only</option>
-                                                    <option>Primary and Secondary Classes</option>
+                                                    <option selected>Secondary School only</option>
                                                 </select>
+                                                <p class="help-block">We only support Secondary schools now.</p>
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label color__black">How do you name your classes?</label>
@@ -138,7 +137,7 @@
                                         </form>
                                     </div>
 
-                                    <div class="formStepItem stepDone">
+                                    <div class="formStepItem ">
                                         <div class="margin_bottom_lg">
                                             <h4 class="title caps_upper font-bold margin_bottom_sm">Create a Model Class</h4>
                                             <p>Your model class is a sample of how your classes are named, and how many branches you have in each level. This will help us generate the other classes. </p>
@@ -156,6 +155,27 @@
                                             </div>
                                             <div class="row form_row_group">
                                                 <div class="form_group_item col-md-4">
+                                                    <label class="control-label font-bold caps_upper">Class Structure</label>
+                                                </div>
+                                                <div class="form_group_item col-md-8">
+                                                    <div class="margin_top_sm">
+                                                        <div class="radio ">
+                                                            <label for="single_class" class="">
+                                                                <input type="radio" id="single_class" checked name="clsStructure">
+                                                                <span class="title">Single Branch per class level</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio margin_top_md">
+                                                            <label for="multi_class" class="">
+                                                                <input type="radio" id="multi_class"  name="clsStructure">
+                                                                <span class="title">Multiple Branch per class level</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form_row_group">
+                                                <div class="form_group_item col-md-4">
                                                     <label class="control-label font-bold caps_upper">Class Branches</label>
                                                 </div>
                                                 <div class="form_group_item col-md-8">
@@ -165,9 +185,8 @@
                                                                 <input type="text" class="form-control" onclick="this.select();" value="Junior Secondary School 1A">
                                                             </div>
                                                         </div>
-                                                        <p class="help-block">Class Code: <strong class="color__black">IMD/JSS1A</strong></p>
                                                     </div>
-                                                    <div class="form-group">
+                                                    <div class="form-group hidden">
                                                         <div class="option_input_widget">
                                                             <div class="option_widget_block option_answer_input">
                                                                 <input type="text" class="form-control" onclick="this.select();" value="Junior Secondary School 1b">
@@ -176,7 +195,6 @@
                                                                 <button type="button" class="close_dialog"></button>
                                                             </div>
                                                         </div>
-                                                        <p class="help-block">Class Code: <strong class="color__black">IMD/JSS1B</strong></p>
                                                     </div>
                                                     <div class="more_control margin_top_md">
                                                         <button type="button" class="input_control">
@@ -196,7 +214,7 @@
                                         </form>
                                     </div>
 
-                                    <div class="formStepItem ">
+                                    <div class="formStepItem stepDone">
                                         <div class="margin_bottom_lg">
                                             <h4 class="title caps_upper font-bold margin_bottom_sm">Your Classes</h4>
                                             <p>Find your classes below. </p>
@@ -207,15 +225,6 @@
                                                     <h4 class="panel-title">
                                                         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_1">Junior Secondary School 1</a>
                                                     </h4>
-                                                    <div class="listHeaderItem" title="Remove Class"
-                                                    data-toggle="tooltip">
-                                                        <button type="button" class="removeBtn" data-target="#confirm_delete" data-toggle="modal">
-                                                            <span class="removeIcon">
-                                                                <i class="cust_icon icon_remove icon_xs"></i>
-                                                            </span>
-                                                            <span class="hidden-sm caps_upper">Remove</span>
-                                                        </button>
-                                                    </div>
                                                 </div>
                                                 <div id="class_1" class="panel-collapse collapse">
                                                     <div class="panel-body">
@@ -314,15 +323,6 @@
                                                     <h4 class="panel-title">
                                                         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_2">Junior Secondary School 2</a>
                                                     </h4>
-                                                    <div class="listHeaderItem" title="Remove Class"
-                                                    data-toggle="tooltip">
-                                                        <button type="button" class="removeBtn" data-target="#confirm_delete" data-toggle="modal">
-                                                            <span class="removeIcon">
-                                                                <i class="cust_icon icon_remove icon_xs"></i>
-                                                            </span>
-                                                            <span class="hidden-sm caps_upper">Remove</span>
-                                                        </button>
-                                                    </div>
                                                 </div>
                                                 <div id="class_2" class="panel-collapse collapse">
                                                     <div class="panel-body">
@@ -421,15 +421,6 @@
                                                     <h4 class="panel-title">
                                                         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_3">Junior Secondary School 3</a>
                                                     </h4>
-                                                    <div class="listHeaderItem" title="Remove Class"
-                                                    data-toggle="tooltip">
-                                                        <button type="button" class="removeBtn" data-target="#confirm_delete" data-toggle="modal">
-                                                            <span class="removeIcon">
-                                                                <i class="cust_icon icon_remove icon_xs"></i>
-                                                            </span>
-                                                            <span class="hidden-sm caps_upper">Remove</span>
-                                                        </button>
-                                                    </div>
                                                 </div>
                                                 <div id="class_3" class="panel-collapse collapse">
                                                     <div class="panel-body">
@@ -528,15 +519,6 @@
                                                     <h4 class="panel-title">
                                                         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_4">Senior Secondary School 1</a>
                                                     </h4>
-                                                    <div class="listHeaderItem ">
-                                                        <button type="button" class="removeBtn" title="Remove Class"
-                                                            data-toggle="tooltip">
-                                                            <span class="removeIcon">
-                                                                <i class="cust_icon icon_remove icon_xs"></i>
-                                                            </span>
-                                                            <span class="hidden-sm caps_upper">Remove</span>
-                                                        </button>
-                                                    </div>
                                                 </div>
                                                 <div id="class_4" class="panel-collapse collapse">
                                                     <div class="panel-body">
@@ -635,15 +617,6 @@
                                                     <h4 class="panel-title">
                                                         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_5">Senior Secondary School 2</a>
                                                     </h4>
-                                                    <div class="listHeaderItem ">
-                                                        <button type="button" class="removeBtn" title="Remove Class"
-                                                            data-toggle="tooltip">
-                                                            <span class="removeIcon">
-                                                                <i class="cust_icon icon_remove icon_xs"></i>
-                                                            </span>
-                                                            <span class="hidden-sm caps_upper">Remove</span>
-                                                        </button>
-                                                    </div>
                                                 </div>
                                                 <div id="class_5" class="panel-collapse collapse">
                                                     <div class="panel-body">
@@ -742,15 +715,6 @@
                                                     <h4 class="panel-title">
                                                         <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#classPanel" href="#class_6">Senior Secondary School 3</a>
                                                     </h4>
-                                                    <div class="listHeaderItem ">
-                                                        <button type="button" class="removeBtn" title="Remove Class"
-                                                            data-toggle="tooltip">
-                                                            <span class="removeIcon">
-                                                                <i class="cust_icon icon_remove icon_xs"></i>
-                                                            </span>
-                                                            <span class="hidden-sm caps_upper">Remove</span>
-                                                        </button>
-                                                    </div>
                                                 </div>
                                                 <div id="class_6" class="panel-collapse collapse">
                                                     <div class="panel-body">
@@ -861,7 +825,7 @@
                             <footer class="formWidgetFooter">
                                 <div class="row justify-content-between">
                                     <div class="backBtn">
-                                        <a href="account_setup_two.html" class="btn btn-default">Back</a>
+                                        <a href="account_setup_two.html" class="btn btn-primary-outline">Back</a>
                                     </div>
                                     <div class="nextBtn">
                                         <a href="account_setup_four.html" class="btn btn-primary-ghost">Skip</a>

@@ -19,6 +19,110 @@
 
 <body>
 
+    <div class="modal fade" id="confirmTeacher">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Confirm class &amp; Subject</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="user_profile_details">
+                        <div class="user_info_avi avi_md">
+                            <img src="" alt="">
+                            <span class="default_avi">BI</span>
+                        </div>
+                        <div class="user_info">
+                            <h4 class="title font-bold">Bakare Isaac</h4>
+                            <span>bakare@gmail.com</span>
+                        </div>
+                    </div>
+                    <p></p>
+                    <form action="" class="margin_top_md">
+                        <div class="form-group dropdown">
+                            <label class="control-label font-bold">Assign to Class</label>
+                            <a href="#" data-toggle="dropdown" class="menuSelect_input">
+                                <span class="menuSelect_label">Select a Class</span>
+                                <div class="menuSelect_inputIcon">
+                                    <span class="caret"></span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu widget_select_menu">
+                                <header class="widget_select_header">
+                                    <div class="select_menu_search">
+                                        <span class="search_icon">
+                                            <svg class="cust_icon icon_xs" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                                <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                                                <path d="M15.364 2.636A9 9 0 1 1 2.636 15.363 9 9 0 0 1 15.364 2.636zM20 20l-5-5"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <input class="form-control prefixed_input" placeholder="Find class by name...">
+                                    </div>
+                                </header>
+                                <!-- Toggle the class "is_empty" when the list is empty -->
+                                <div class="widget_select_body ">
+                                    <ul class="search_result_list">
+                                        <li class="search_result_item">
+                                            <a href="" class="result_item_wrapper active">
+                                                <div class="address_block">
+                                                    <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field ">Class/code/Here</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="" class="result_item_wrapper">
+                                                <div class="address_block">
+                                                    <span class="addr_title">Junior Secondary School 3 (JSS3)</span>
+                                                    <span class="addr_field ">Class/code/Here</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="" class="result_item_wrapper">
+                                                <div class="address_block">
+                                                    <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field ">Class/code/Here</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="" class="result_item_wrapper">
+                                                <div class="address_block">
+                                                    <span class="addr_title">Junior Secondary School 3 (JSS3)</span>
+                                                    <span class="addr_field ">Class/code/Here</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="search_result_empty">
+                                        <p>No result found</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Assigned Subject</label>
+                            <div class="margin_top_sm">
+                                <label for="sbjMaths" class="radio-inline">
+                                    <input type="radio" id="sbjMaths" checked name="hmSubject">
+                                    <span class="label_title caps_upper">Mathematics</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="mainHeader" role="banner">
         <div class="container-fluid">
             <div class="navbarWrapper">
@@ -152,25 +256,6 @@
 
     <main class="mainContentArea">
         <div class="grdly_page_frame">
-            <section class="global_alert_holder hidden">
-                <!-- Toggle class "show" to the alert -->
-                <div class="global_alert alert alert_secondary alert-dismissible fade show" role="alert">
-                    <div class="container">
-                        <div class="extra_info">
-                            <div class="alert_icon">
-                                <span class="cust_icon icon_info"></span>
-                            </div>
-                            <div class="alert_info">
-                                <p>Personal information updated successfully</p>
-                            </div>
-                            <div class="dialogDismiss">
-                                <button type="button" data-dismiss="alert" class="close_dialog">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section class="grdly_page_body bg__off_white">
                 <div class="grdly_page_wrapper">
                     <div class="grdly_page_content">
@@ -196,19 +281,6 @@
 
                                 <div class="content_inner ">
                                     <div class="table table-responsive table-brand">
-                                        <nav class="actionsTray">
-                                            <div class="actionsLabel">
-                                                <span class="font-sm color__grey_dark caps_upper">Bulk Action:</span>
-                                            </div>
-                                            <div class="actionList">
-                                                <div class="actionItem">
-                                                    <button type="button" class="actionBtn">Approve All</button>
-                                                </div>
-                                                <div class="actionItem">
-                                                    <button type="button" class="actionBtn">Decline All</button>
-                                                </div>
-                                            </div>
-                                        </nav>
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
@@ -257,7 +329,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -299,7 +371,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -341,7 +413,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -383,7 +455,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -396,46 +468,46 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                        <td>
-                                                            <div class="table_description">
-                                                                <div class="user_profile_details">
-                                                                    <div class="user_info_avi avi_md">
-                                                                        <img src="../img/mcgonangal.jpg" alt="">
-                                                                        <span class="default_avi">RO</span>
-                                                                    </div>
-                                                                    <div class="user_info">
-                                                                        <h4 class="title text_clipped font-bold">Racheal Oniga</h4>
-                                                                        <a href="mailto:racheal@christland.com">racheal@christland.com</a>
-                                                                    </div>
+                                                    <td>
+                                                        <div class="table_description">
+                                                            <div class="user_profile_details">
+                                                                <div class="user_info_avi avi_md">
+                                                                    <img src="../img/mcgonangal.jpg" alt="">
+                                                                    <span class="default_avi">RO</span>
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped font-bold">Racheal Oniga</h4>
+                                                                    <a href="mailto:racheal@christland.com">racheal@christland.com</a>
                                                                 </div>
                                                             </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="">
-                                                                Senior Secondary School 1A
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            Senior Secondary School 1A
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span class="badge badge-default">
+                                                                Mathematics
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="tableControl">
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
+                                                                    Approve
+                                                                </button>
                                                             </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="">
-                                                                <span class="badge badge-default">
-                                                                    Mathematics
-                                                                </span>
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" class="controlItemLink">
+                                                                    Decline
+                                                                </button>
                                                             </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tableControl">
-                                                                <div class="tabelControlItem">
-                                                                    <button type="button" class="controlItemLink">
-                                                                        Approve
-                                                                    </button>
-                                                                </div>
-                                                                <div class="tabelControlItem">
-                                                                    <button type="button" class="controlItemLink">
-                                                                        Decline
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </td>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -467,7 +539,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -509,7 +581,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -551,7 +623,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -564,46 +636,46 @@
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                        <td>
-                                                            <div class="table_description">
-                                                                <div class="user_profile_details">
-                                                                    <div class="user_info_avi avi_md">
-                                                                        <img src="../img/mcgonangal.jpg" alt="">
-                                                                        <span class="default_avi">RO</span>
-                                                                    </div>
-                                                                    <div class="user_info">
-                                                                        <h4 class="title text_clipped font-bold">Racheal Oniga</h4>
-                                                                        <a href="mailto:racheal@christland.com">racheal@christland.com</a>
-                                                                    </div>
+                                                    <td>
+                                                        <div class="table_description">
+                                                            <div class="user_profile_details">
+                                                                <div class="user_info_avi avi_md">
+                                                                    <img src="../img/mcgonangal.jpg" alt="">
+                                                                    <span class="default_avi">RO</span>
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped font-bold">Racheal Oniga</h4>
+                                                                    <a href="mailto:racheal@christland.com">racheal@christland.com</a>
                                                                 </div>
                                                             </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="">
-                                                                Senior Secondary School 1A
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            Senior Secondary School 1A
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="">
+                                                            <span class="badge badge-default">
+                                                                Mathematics
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="tableControl">
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
+                                                                    Approve
+                                                                </button>
                                                             </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="">
-                                                                <span class="badge badge-default">
-                                                                    Mathematics
-                                                                </span>
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" class="controlItemLink">
+                                                                    Decline
+                                                                </button>
                                                             </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="tableControl">
-                                                                <div class="tabelControlItem">
-                                                                    <button type="button" class="controlItemLink">
-                                                                        Approve
-                                                                    </button>
-                                                                </div>
-                                                                <div class="tabelControlItem">
-                                                                    <button type="button" class="controlItemLink">
-                                                                        Decline
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </td>
+                                                        </div>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -635,7 +707,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -677,7 +749,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>
@@ -719,7 +791,7 @@
                                                     <td>
                                                         <div class="tableControl">
                                                             <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
                                                                     Approve
                                                                 </button>
                                                             </div>

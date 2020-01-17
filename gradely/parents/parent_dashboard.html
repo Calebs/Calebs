@@ -23,67 +23,47 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h4 class="modal-title text-caps">Add Child</h4>
+                    <h4 class="modal-title text-caps">Add a Child</h4>
                     <div class="dialogDismiss">
                         <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </header>
                 <div class="modal-body">
                     <form action="">
-                        <div class="form-group">
-                            <label for="" class="control-label caps_upper">Your Child's name</label>
-                            <input type="text" class="form-control" placeholder="Firstname Lastname">
-                            <p class="help-block hidden text-error">Invalid class code. Try again</p>
-                        </div>
+                        <p class="margin_bottom_md"><strong>Note:</strong> The student code is generated after the child sign up. If you don't have your child's student code, make sure they are registered, collect the code and connect.</p>
 
                         <div class="form-group">
-                            <label for="" class="control-label caps_upper">School</label>
-                            <select class="form-control" placeholder="Select school">
-                            <option>Select School</option>
-                            <option>Christland Intl. College</option>
-                            <option>Queens College</option>
-                            <option>Kings College</option>
-                            <option>Kings and Queens Intl. College</option>
-                            <option>British International School</option>
-                            </select>
-                            <div class="more_control margin_top_md">
-                            <button type="button" data-target="#addSchool" data-toggle="modal" class="input_control">
-                                <span class="t_icon">
-                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
-                                </svg>
-                                </span>
-                                <span >Can't find the school? <span class="widget_cta_link">Add it now</span></span>
-                            </button>
+                            <label for="" class="control-label font-bold caps_upper">Enter Student Code</label>
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Enter your child's studnet code here">
+                                </div>
+                                <div class="col-4">
+                                    <button type="submit" class="btn btn-inverse">
+                                        Verify Code
+                                    </button>
+                                </div>
                             </div>
-                            <p class="help-block hidden text-error">Invalid class code. Try again</p>
                         </div>
 
-                        <div class="form-group">
-                            <label for="" class="control-label caps_upper">Class</label>
-                            <select class="form-control" placeholder="Select school">
-                            <option>Select class</option>
-                            <option>Senior Secondary School 1 - SSS1</option>
-                            <option>Senior Secondary School 2 - SSS2</option>
-                            <option>Senior Secondary School 3 - SSS3</option>
-                            <option>Junior Secondary School 1 - JSS1</option>
-                            <option>Junior Secondary School 2 - JSS2</option>
-                            <option>Junior Secondary School 3 - JSS3</option>
-                            </select>
-                        </div>
-
-                        <!-- Use this to show a preview of the school that match with the provided student code -->
-                        <div class="infoPreviewCard ">
-                            <div class="cardWrapper">
-                                <div class="details_col_info ">
-                                    <div class="insight_title">
-                                        <span>Child Code</span>
-                                    </div>
-                                    <div class="insight_value">
-                                        <h4 class="title title_sm font-bold color__black">RUBIUSHAG</h4>
-                                    </div>
-                                    <div class="details_col_cta">
-                                    <p class="color__grey_dark">This is your child's unique code. It will be required to connect your accounts.</p>
+                        <!-- Show this after the user has entered the parent code -->
+                        <div class="previewList margin_top_lg">
+                            <div class="infoPreviewCard">
+                                <div class="cardWrapper">
+                                    <div class="data_entity">
+                                        <div class="data_entity_icon">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <span class="default_avi">RH</span>
+                                            </div>
+                                        </div>
+                                        <div class="details_col_info ">
+                                            <div class="address_block">
+                                                <h4 class="title font-bold">Rubius Hagrid</h4>
+                                                <span class="addr_field addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                <span class="addr_field">@Christland Intl. College</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -91,40 +71,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Add</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="addSchool">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <header class="modal-header">
-                    <h4 class="modal-title text-caps">Add school</h4>
-                    <div class="dialogDismiss">
-                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
-                    </div>
-                </header>
-                <div class="modal-body">
-                    <p class="subtitle font-md">An invitation to sign up on gradely will be sent to the school using the information you provide.</p>
-                    <form action="">
-                        <div class="form-group">
-                            <label class="control-label">School Name</label>
-                            <input type="text" class="form-control" placeholder="Enter the name of the school">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Contact Email</label>
-                            <input type="email" class="form-control" placeholder="e.g admin@school.com">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Contact Phone number</label>
-                            <input type="tel" class="form-control" placeholder="">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-primary">Done</button>
                 </div>
             </div>
         </div>
@@ -145,22 +92,34 @@
                         <div class="menuListItem active">
                             <a href="parent_dashboard.html" class="menuLinkItem">Dashboard</a>
                         </div>
-                        <div class="menuListItem">
-                            <a href="homework.html" class="menuLinkItem">Homework</a>
+                        <div class="menuListItem hasUpdate">
+                            <a href="homework.html" class="menuLinkItem">Homework <span class="updateBubble"></span></a>
                         </div>
                         <div class="menuListItem">
-                            <a href="marketplace.html" class="menuLinkItem">Marketplace</a>
+                            <a href="marketplace.html" class="menuLinkItem">CatchUp!<span class="updateBubble"></span></a>
                         </div>
                     </nav>
                 </div>
                 <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuAlt">
+                        <div class="controlBtn helpBtn">
+                            <a href="../parent_help.html">
+                                <span class="btnIconHolder">
+                                    <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27127C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27915 10.1266 8.75816 9.94333C8.23717 9.76006 7.96339 9.18915 8.14667 8.66816C8.46014 7.77705 9.07887 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3718 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9197 11.0711 15.3569 11.889 14.7751 12.4464C14.1931 13.004 13.5031 13.3909 13.0159 13.6243C12.977 13.6429 12.9487 13.6696 12.933 13.6926C12.9257 13.7033 12.9225 13.7113 12.9211 13.7154C12.92 13.719 12.92 13.7205 12.92 13.7207V14C12.92 14.5523 12.4723 15 11.92 15C11.3677 15 10.92 14.5523 10.92 14V13.7208C10.92 12.8509 11.4686 12.1479 12.1518 11.8206C12.5483 11.6307 13.0263 11.3522 13.3915 11.0023C13.7567 10.6523 13.92 10.321 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.4501 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"/>
+                                        <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" />
+                                    </svg>                                            
+                                </span>
+                                <span class="control_label">Help</span>
+                            </a>
+                        </div>
                         <div class="controlBtn btnAlert">
                             <a href="#">
                                 <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
                                 </svg>
-                                <span class="badgeCount">12</span>
+                                <span class="badgeCount">8</span>
                             </a>
                         </div>
                         <div class="controlBtn btn_user_act dropdown">
@@ -169,24 +128,55 @@
                                     <img src="" alt="">
                                     <div class="default_avi bg__secondary">JH</div>
                                 </div>
-                                <span class="control_label">Jake Hagrid</span>
                                 <span class="caret"></span>
                             </a>
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu profile_dropdown">
+                                <header class="dpd_header">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi bg__secondary">JH</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold color__primary">Jake Hagrid</h4>
+                                            <p>jakehagrid@gmail.com</p>
+                                            <div class="margin_top_sm">
+                                                <a href="profile.html" class="widget_cta_link">Manage Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
                                 <ul class="dpd_nav">
-                                    <li>
-                                        <a href="profile.html">
-                                            My Profile
+                                    <li class="dpd_nav_item">
+                                        <a href="../student_help.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Get Help
+                                            </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="act_settings.html">
-                                            Account Settings
+                                    <li class="dpd_nav_item">
+                                        <a href="act_settings.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_settings"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Account Settings
+                                            </span>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="../login.html">
-                                            Log Out
+                                    <li class="dpd_nav_item">
+                                        <a href="../login.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_logout"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Log Out
+                                            </span>
                                         </a>
                                     </li>
                                 </ul>
@@ -195,7 +185,7 @@
                         <div class="controlBtn nav_trigger">
                             <a class="primary-nav-trigger" href="#">
                                 <span class="menu-icon"></span>
-                                <span class="menu-text sr-only">Menu</span>
+                                <span class="menu-text">Menu</span>
                             </a>
                         </div>
                     </nav>
@@ -206,92 +196,149 @@
 
     <main class="mainContentArea">
         <div class="grdly_page_frame">
-            <section class="global_alert_holder ">
-                <!-- Toggle class "show" to the alert -->
-                <div class="global_alert alert alert_message alert-dismissible fade show" role="alert">
-                    <div class="container">
-                        <div class="extra_info">
-                            <div class="alert_icon">
-                                <span class="cust_icon icon_info"></span>
+
+            <section class="global_alert_holder">
+                <div class="alert alert_primary fade show alert-dismissible hidden" role="alert">
+                    <div class="globalAlertWrapper">
+                        <div class="media_item">
+                            <div class="media_figure">
+                                <img src="../img/icons/subscription_colored.svg" alt="">
                             </div>
-                            <div class="alert_info">
-                                <p>You have <strong>21 days</strong> left on your current plan. <a href="upgadeplan.html">Upgrade Now</a></p>                         
-                            </div>
-                            <div class="dialogDismiss">
-                                <button type="button" data-dismiss="alert" class="close_dialog">   
-                                </button>
+                            <div class="media_info">
+                                <h4 class="title font-bold">Upgrade Plan</h4>
+                                <p>You have <strong>21 days</strong> left on your current plan.</p>
+                                <a href="upgadeplan.html" class="widget_cta_link">Upgrade Now</a>
                             </div>
                         </div>
                     </div>
+                    <div class="dialogDismiss">
+                        <button type="button" data-dismiss="alert" class="close_dialog">   
+                        </button>
+                    </div>
                 </div>
             </section>
-            <section class="grdly_page_body bg__off_white"> 
-                <div class="grdly_page_wrapper">
-                    <div class="grdly_page_content">
 
-                        <header class="pageInfoStrip">
-                            <div class="container">
-                                <div class="infoStripCaption ">
-                                    <span class="opt_rule"></span>
-                                    <span class="captionText">You are viewing reports  on: </span>
-                                </div>
-                                <div class="infoStripWrapper">
-                                    <div class="infoStripItemBLock dropdown">
-                                        <a href="#" data-toggle="dropdown" class="customDropdownHeader dropdown-toggle">
-                                            <div class="user_profile_details">
-                                                <div class="user_info_avi avi_md">
-                                                    <img src="../img/" alt="">
-                                                    <span class="default_avi">RH</span>
-                                                </div>
-                                                <div class="user_info">
-                                                    <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
-                                                    <span class="listMetaInfo">Code: <span>RUBIUSHAG</span> </span>
-                                                </div>
+            <section class="grdly_page_body  bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <header class="pageInfoStrip">
+                        <div class="container">
+                            <div class="infoStripCaption ">
+                                <span class="opt_rule"></span>
+                                <span class="captionText">You are viewing reports  on: </span>
+                            </div>
+                            <div class="infoStripWrapper">
+                                <div class="infoStripItemBLock dropdown">
+                                    <a href="#" data-toggle="dropdown" class="customDropdownHeader dropdown-toggle">
+                                        <div class="user_profile_details">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="../img/" alt="">
+                                                <span class="default_avi">RH</span>
                                             </div>
-                                            <span class="selectorTrigger_btn">
-                                                <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M7.43437 10.3598L7.99997 10.9254L12.5256 6.39975L11.3944 5.26855L7.99997 8.66215L4.60557 5.26855L3.47437 6.39975L7.43437 10.3598Z"/>
-                                                </svg>
-                                            </span>                        
-                                        </a>
-                                        <div class="dropdown-menu widget_select_menu">
-                                            <!-- Toggle the class "is_empty" when the list is empty -->
-                                            <div class="widget_select_body ">
-                                                <ul class="search_result_list">
-                                                    <li class="search_result_item">
-                                                        <a href="" class="result_item_wrapper active">
-                                                            <div class="user_profile_details">
-                                                                <div class="user_info_avi">
-                                                                    <img src="../img/" alt="">
-                                                                    <span class="default_avi">RH</span>
-                                                                </div>
-                                                                <div class="user_info">
-                                                                    <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                                <div class="search_result_empty">
-                                                    <p>No result found</p>
-                                                </div>
+                                            <div class="user_info">
+                                                <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                <span class="listMetaInfo">Code: <span>RUBIUSHAG</span> </span>
                                             </div>
-                                            <footer class="widget_select_footer">
-                                                <button type="button" class="widgetSelectCTA" data-target="#add_child" data-toggle="modal">Add a Child</b>
-                                            </footer>
                                         </div>
+                                        <span class="selectorTrigger_btn">
+                                            <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.43437 10.3598L7.99997 10.9254L12.5256 6.39975L11.3944 5.26855L7.99997 8.66215L4.60557 5.26855L3.47437 6.39975L7.43437 10.3598Z"/>
+                                            </svg>
+                                        </span>                        
+                                    </a>
+                                    <div class="dropdown-menu widget_select_menu">
+                                        <!-- Toggle the class "is_empty" when the list is empty -->
+                                        <div class="widget_select_body ">
+                                            <ul class="search_result_list">
+                                                <li class="search_result_item">
+                                                    <a href="" class="result_item_wrapper active">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi">
+                                                                <img src="../img/" alt="">
+                                                                <span class="default_avi">RH</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="search_result_empty">
+                                                <p>No result found</p>
+                                            </div>
+                                        </div>
+                                        <footer class="widget_select_footer">
+                                            <button type="button" class="widgetSelectCTA" data-target="#add_child" data-toggle="modal">Add a Child</b>
+                                        </footer>
                                     </div>
-                                    <div class="infoStripItemBLock hidden-sm">
-                                        <div class="user_info text-right">
-                                            <span class="data_label">
-                                                <time>01 April, 2019</time>
-                                            </span>
-                                            <div class="title"><span>First Term</span> - <span>Week 2</span></div>
+                                </div>
+                                <div class="infoStripItemBLock hidden-sm">
+                                    <div class="user_info text-right">
+                                        <span class="data_label">
+                                            <time>01 April, 2019</time>
+                                        </span>
+                                        <div class="title"><span>First Term</span> - <span>Week 2</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <div class="container hidden form_body ">
+
+                        <div class="notificationTray">
+                            <div class="alert alert_primary fade show" role="alert">
+                                <div class="globalAlertWrapper">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi">WA</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold caps_upper">Wole Atunbi</h4>
+                                            <p>Diagnostic test scheduled <strong>Awaiting Result</strong> </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </header>
+                            <div class="alert alert_primary fade show" role="alert">
+                                <div class="globalAlertWrapper">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi bg__danger">TA</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold caps_upper">Toyin Atunbi</h4>
+                                            <p>Has completed a diagnostic test</p>
+                                            <a href="disagnosis_report.html" class="widget_cta_link">View Report</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div class="embed-responsive embed-responsive-16by9 videoStage">
+                            <video preload="metadata" autoplay loop muted class="embed-responsive-item">
+                                <source src="../img/banners/parent_dashbrd.mp4" type="video/mp4">
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                        </div>
+                        <div class="def_wrapper text-center margin_top_md">
+                            <h3 class="title title_sm font-bold margin_bottom_sm">No Homework to Report Yet</h3>
+                            <p>You will start getting performance update on <strong>“Rubius”</strong> as soon as he completes a homework. While you wait for the class homework, would you lilke to perform a diagnostic test?</p>
+                            <div class="section_cto">
+                                <button type="button" class="btn btn-primary">Request Homework</button>
+                                <a href="../catchup_home.html" class="btn btn-secondary">Schedule Diagnostic Test</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grdly_page_content margin_top_md">
 
                         <section class="gridCardRow">
                             <div class="container">
@@ -305,14 +352,11 @@
                                                 <div class="headerContols">
                                                     <div class="controlItem">
                                                         <label for="subjectswitcher" class="controlItemLabel">Subject</label>
-                                                        <select class="controlItemInput controlAction" id="subjectswitcher">
-                                                            <option>Mathematics</option>
-                                                            <option>English Language</option>
-                                                        </select>
+                                                        <span class="controlItemInput controlAction">Mathematics</span>
                                                     </div>
                                                 </div>
                                             </header>
-                                            <div class="empty_state  centered text-center">
+                                            <div class="empty_state hidden centered text-center">
                                                 <div class="def_wrapper">
                                                     <div class="defImg">
                                                         <img src="../img/icons/empty_report.svg" alt="No Report">
@@ -321,7 +365,7 @@
                                                     <p>You have no performance record yet. This will change as you complete your homework and interact with Gradely.</p>
                                                 </div>
                                             </div>
-                                            <div class="row paneInner hidden">
+                                            <div class="row paneInner">
                                                 <div class="col-sm-5 infoBlock performanceChart">
                                                     <div class="progressScore">
                                                         <div id="bar" class="progressMeter"></div>
@@ -408,13 +452,13 @@
                                     </article>
                                     <article class="gridCardItem col-lg-4">
                                         <div class="gridCardWrapper">
-                                            <div class="empty_state centered text-center ">
+                                            <div class="empty_state centered text-center hidden">
                                                 <div class="def_wrapper">
                                                     <h5 class="title font-bold margin_bottom_sm">No class Found</h5>
                                                     <p>To get information about your child's class, make sure they are connected to a class via their class code.  </p>
                                                 </div>
                                             </div>
-                                            <div class="paneInner hidden">
+                                            <div class="paneInner ">
                                                 <h4 class="gridCardTitle margin_bottom_md">Class</h4>
                                                 <div class="dataInfoBlock">
                                                     <div class="address_block">
@@ -496,6 +540,7 @@
 
                         <section class="gridCardRow">
                             <div class="container">
+
                                 <div class="row">
                                     <article class="gridCardItem col-md-7">
                                         <div class="gridCardWrapper">
@@ -506,18 +551,11 @@
                                                 <div class="headerContols">
                                                     <div class="controlItem">
                                                         <label for="sbj" class="controlItemLabel">Subject</label>
-                                                        <select class="controlItemInput controlAction" id="sbj">
-                                                            <option>Mathematics</option>
-                                                            <option>English Language</option>
-                                                        </select>
+                                                        <span class="controlItemInput controlAction">Mathematics</span>
                                                     </div>
                                                     <div class="controlItem">
                                                         <label for="term" class="controlItemLabel">Term</label>
-                                                        <select class="controlItemInput controlAction" id="term">
-                                                            <option>First Terms</option>
-                                                            <option>Second Terms</option>
-                                                            <option>Third Terms</option>
-                                                        </select>
+                                                        <span class="controlItemInput controlAction">First Term</span>
                                                     </div>
                                                 </div>
                                             </header>
@@ -537,7 +575,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Number Base System</span>
-                                                                <span class="topicgrade color__grey_dark">89%</span>
+                                                                <div class="topicgrade">
+                                                                    <span class="">89%</span>
+                                                                    <div class="snippetInfo growthRate growthUp font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>2.5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_excel">
@@ -550,7 +593,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Modular Arithmetic</span>
-                                                                <span class="topicgrade color__grey_dark">82%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>78%</span>
+                                                                    <div class="snippetInfo growthRate growthDown font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>1.5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_excel">
@@ -563,7 +611,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Quadratic Equations</span>
-                                                                <span class="topicgrade color__grey_dark">73%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>73%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_avg">
@@ -576,7 +629,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Trigonometric Ratios</span>
-                                                                <span class="topicgrade color__grey_dark">49%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>49%</span>
+                                                                    <div class="snippetInfo growthRate growthDown font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_fail">
@@ -589,7 +647,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Indices</span>
-                                                                <span class="topicgrade color__grey_dark">92%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>92%</span>
+                                                                    <div class="snippetInfo growthRate growthUp font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_excel">
@@ -602,7 +665,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Number Base System</span>
-                                                                <span class="topicgrade color__grey_dark">89%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>89%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_excel">
@@ -615,7 +683,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Modular Arithmetic</span>
-                                                                <span class="topicgrade color__grey_dark">82%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>82%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_excel">
@@ -628,7 +701,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Quadratic Equations</span>
-                                                                <span class="topicgrade color__grey_dark">73%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>73%</span>
+                                                                    <div class="snippetInfo growthRate growthUp font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>2.5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_avg">
@@ -641,7 +719,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Trigonometric Ratios</span>
-                                                                <span class="topicgrade color__grey_dark">49%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>49%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_fail">
@@ -654,7 +737,12 @@
                                                         <div class="topicItemInfo">
                                                             <div class="topicMeta">
                                                                 <span class="topicTitle color__black">Indices</span>
-                                                                <span class="topicgrade color__grey_dark">92%</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>92%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div class="topicProgress">
                                                                 <div class="progress progress_excel">
@@ -680,16 +768,16 @@
                                     </article>
                                     <article class="gridCardItem col-md-5">
                                         <div class="gridCardWrapper">
-                                            <div class="empty_state centered text-center ">
+                                            <div class="empty_state centered text-center hidden">
                                                 <div class="def_wrapper">
                                                     <h4 class="title font-bold margin_bottom_sm">No upcoming Homework</h4>
                                                     <p>Your child has not outstanding homework at the moment. Good time to take some practice tests.</p>
                                                     <div class="margin_top_md">
-                                                        <a href="marketplace.html" class="btn btn-primary-outline btn-sm">Set a Practice Test</a>
+                                                        <a href="diagnostic_form.html" class="btn btn-primary-outline btn-sm">Schedule Diagnostic Test</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="paneInner hidden">
+                                            <div class="paneInner">
                                                 <h4 class="gridCardTitle margin_bottom_md">Upcoming Homework</h4>
                                                 <div class="verticalItemList">
                                                     <article class="listItem">
@@ -827,16 +915,16 @@
                                         <span class="opt_rule"></span>
                                         <span class="captionText gridCardTitle">Homework Results</span>
                                     </header>
-                                    <div class="empty_state centered text-center ">
+                                    <div class="empty_state centered text-center hidden">
                                         <div class="def_wrapper">
                                             <h4 class="title font-bold margin_bottom_sm">No homework record</h4>
-                                            <p>There are no completed homework yet. Please make sure your child is connected to a school.</p>
+                                            <p>There are no completed homework yet. Please make sure your child is connected to a school. You can also send a request for homework to the class teacher</p>
                                             <div class="margin_top_md">
-                                                <a href="homework.html" class="btn btn-primary-outline btn-sm">See all homework</a>
+                                                <button type="button" class="btn btn-primary-outline btn-sm">Request homework</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="content_inner hidden">
+                                    <div class="content_inner ">
                                         <div class="table table-responsive table-brand">
                                             <table class="table table-hover">
                                                 <thead class="sr-only">
@@ -1145,7 +1233,7 @@
                                         <span class="opt_rule"></span>
                                         <span class="captionText gridCardTitle">Recommendation</span>
                                     </header>
-                                    <div class="empty_state centered text-center ">
+                                    <div class="empty_state centered text-center hidden">
                                         <div class="def_wrapper">
                                             <h4 class="title font-bold margin_bottom_sm">No Recommendation</h4>
                                             <p>There are no recommendation at the moment. However, you can browse our resources section to find more exciting materials to support your child.</p>
@@ -1154,7 +1242,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="content_inner hidden">
+                                    <div class="content_inner ">
                                         <div class="row userRecommendation">
                                             <article class="productCard col-sm-6 col-md-3">
                                                 <div class="cardWrapper">
@@ -1250,6 +1338,14 @@
             </section>
         </div>
     </main>
+
+    <!--Add class "loading" to activate the loader-->
+    <div class="page_loader ">
+        <div class="loader_content">
+            <img src="../img/icons/ball-triangle.svg" class="loaderImage" alt="Page Loader">
+            <p class="font-md">loading...</p>
+        </div>
+    </div>
     
 	<script src="../js/jquery.js"></script>
     <script src="../js/base.min.js"></script>

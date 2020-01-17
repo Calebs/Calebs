@@ -20,18 +20,20 @@
 <body>
 
     <main class="authenticationPageLayout">
-        <div class="grdly_page_frame bg__off_white">
+        <div class="grdly_page_frame">
            
-            <section class="grdly_page_body">
+            <section class="grdly_page_body bg__off_white">
                 <div class="section_block">
                     <div class="container formLayoutWrapper">
                         <div class="formWidgetBox">
                             <div class="formWidgetWrapper">
                                 <header class="section_header font-md">
-                                    <h3 class="title title_lg color__black font-bold margin_bottom_sm">Connect your Parent</h3>
-                                    <p>Gradely works best when you have your parents working with you. To add your parent, just provide their email address and we will take it from there</p>
+                                    <h3 class="title title_lg color__black font-bold margin_bottom_sm">Add your Parent</h3>
+                                    <p>Gradely works best when you have your parents working with you. To add your parent, just provide the following invitation and we will take it from there.</p>
                                 </header>
+
                                 <form action="" class="form_body">
+
                                     <div class="alert alert_primary fade show" role="alert">
                                         <div class="globalAlertWrapper">
                                             <div class="media_item">
@@ -45,28 +47,37 @@
                                                     <p>An invitation to connect has been sent to <mark>jameHagrid@gmail.com</mark>.</p>
                                                 </div>
                                             </div>
-                                            <div class="dialogDismiss">
-                                                <button type="button" data-dismiss="alert" class="close_dialog">   
-                                                </button>
-                                            </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
-                                        <label for="" class="control-label font-bold caps_upper">Parent's Email or Phone Number</label>
-                                        <div class="form-row">
-                                            <div class="col-8">
-                                                <input type="text" class="form-control" placeholder="Enter your parent's Email or Phone Number">
-                                            </div>
-                                            <div class="col-4">
-                                                <button type="submit" class="btn btn-inverse">
-                                                    Connect
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <p class="help-block hidden text-error">Invalid email address.</p>
+                                        <label for="" class="control-label font-bold caps_upper">Parent's Name</label>
+                                        <input type="text" class="form-control" placeholder="The name of your parent">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="control-label font-bold caps_upper">Parent's Email</label>
+                                        <input type="email" class="form-control" placeholder="Enter your parent's Email Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="control-label font-bold caps_upper">Parent's Phone Number</label>
+                                        <input type="tel" class="form-control" placeholder="Enter your parent's Phone Number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                        <select class="form-control">
+                                            <option>Father</option>
+                                            <option>Mother</option>
+                                            <option>Aunt</option>
+                                            <option>Uncle</option>
+                                            <option>Grand-Father</option>
+                                            <option>Grand-Mother</option>
+                                        </select>
+                                    </div>
+                                    <div class="form_cta text-right">
+                                        <button type="submit" class="btn btn-inverse">Send Invitation</button>
                                     </div>
                                 </form>
+
                             </div>
                             <footer class="formWidgetFooter">
                                 <div class="row justify-content-between">

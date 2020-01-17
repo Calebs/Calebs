@@ -19,6 +19,38 @@
     
 <body>
 
+    <div class="modal fade" id="setup_class">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Add your class</h4>
+                    <div class="dialogDismiss">
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>Before you continue, please tell us your class.</p>
+
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Select class</label>
+                            <select class="form-control">
+                                <option>Junior Secondary School 1</option>
+                                <option>Junior Secondary School 2</option>
+                                <option>Junior Secondary School 3</option>
+                                <option>Senior Secondary School 1</option>
+                                <option>Senior Secondary School 2</option>
+                                <option>Senior Secondary School 3</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="inviteParent">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -29,22 +61,40 @@
                     </div>
                 </header>
                 <div class="modal-body">
-                    <p>Gradely works best when you have your parents working with you. To add your parent, just provide their email address and we will take it from there</p>
+                    <p>Invite your parent using their email address or phone number</p>
 
                     <form action="" class="margin_top_md">
                         <div class="form-group">
-                            <label for="" class="control-label font-bold caps_upper">Parent's Email or Phone Number</label>
-                            <input type="text" class="form-control" placeholder="Enter your parent's Email or Phone Number">
+                            <label for="" class="control-label font-bold caps_upper">Parent's Name</label>
+                            <input type="text" class="form-control" placeholder="The name of your parent">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Parent's Email</label>
+                            <input type="email" class="form-control" placeholder="Enter your parent's Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Parent's Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter your parent's Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                            <select class="form-control">
+                                <option>Father</option>
+                                <option>Mother</option>
+                                <option>Aunt</option>
+                                <option>Uncle</option>
+                                <option>Grand-Father</option>
+                                <option>Grand-Mother</option>
+                            </select>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-secondary">Send Invitation</button>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="soloPractice">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -71,7 +121,7 @@
                     </div>
                     <form action="">
                         <div class="form-group">
-                            <label class="control-label">How many Questions do you want to practice?</label>
+                            <label class="control-label caps_upper font-bold">How many Questions do you want to practice?</label>
                             <div class="inputaffixed inputSurfixed">
                                 <input type="number" class="form-control inputControl" value="15">
                                 <div class="inputfixture">
@@ -80,238 +130,30 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Difficulty</label>
-                            <div class="pillSelectorList">
-                                <div class="selectorItem">
-                                    <label for="qdiff_0" class="pillWrapper">
-                                        <input type="radio" id="qdiff_0" class="pillSelectControl" name="classCurriculum">
-                                        <span class="selectorLabel caps_upper">
-                                            EASY
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="selectorItem">
-                                    <label for="qdiff_1" class="pillWrapper">
-                                        <input type="radio" id="qdiff_1" class="pillSelectControl" name="classCurriculum">
-                                        <span class="selectorLabel caps_upper">
-                                            Medium
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="selectorItem">
-                                    <label for="qdiff_2" class="pillWrapper">
-                                        <input type="radio" id="qdiff_2" class="pillSelectControl" name="classCurriculum">
-                                        <span class="selectorLabel caps_upper">
-                                            Hard
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Do you want to time this test?</label>
+                            <label for="" class="control-label caps_upper font-bold">Practice Difficulty</label>
                             <div class="">
-                                <label for="pr_timed" class="radio-inline">
-                                    <input type="radio" checked id="pr_timed" name="test_time">
-                                    <span>Set Time</span>
+                                <label for="qdiff_0" class="radio-inline">
+                                    <input type="radio" id="qdiff_0" name="practDiff">
+                                    <span class="selectorLabel caps_upper">
+                                        EASY
+                                    </span>
                                 </label>
-                                <label for="pr_timednon" class="radio-inline">
-                                    <input type="radio" id="pr_timednon" name="test_time">
-                                    <span>Don't set time</span>
+                                <label for="qdiff_1" class="radio-inline">
+                                    <input type="radio" id="qdiff_1" checked name="practDiff">
+                                    <span class="selectorLabel caps_upper">
+                                        Medium
+                                    </span>
+                                </label>
+                                <label for="qdiff_2" class="radio-inline">
+                                    <input type="radio" id="qdiff_2" name="practDiff">
+                                    <span class="selectorLabel caps_upper">
+                                        Hard
+                                    </span>
                                 </label>
                             </div>
-                            <div class="form_mng">
-                                <label class="control-label">Test Duration</label>
-                                <div class="inputaffixed inputSurfixed">
-                                    <input type="number" class="form-control inputControl" value="30">
-                                    <div class="inputfixture">
-                                        <span >Minutes</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="section_cto text-center">
-                            <button type="submit" class="btn btn-primary">Start Excercise</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="newPractice">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <header class="modal-header">
-                    <h4 class="modal-title">New CatchUp Excercise</h4>
-                    <div class="dialogDismiss">
-                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
-                    </div>
-                </header>
-                <div class="modal-body">
-                    <form action="">
-                        <div class="form-group">
-                            <label class="control-label">Select a subject</label>
-                            <div class="pillSelectorList">
-                                <div class="selectorItem">
-                                    <label for="pr_subj_maths" class="pillWrapper">
-                                        <input type="radio" id="pr_subj_maths" class="pillSelectControl" name="pr_subj">
-                                        <span class="selectorLabel">
-                                            Mathematics
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="selectorItem">
-                                    <label for="pr_subj_eng" class="pillWrapper">
-                                        <input type="radio" id="pr_subj_eng" class="pillSelectControl" name="pr_subj">
-                                        <span class="selectorLabel">
-                                            English Language
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Don't show until the user selects the subject to practice -->
-                        <div class="form-group ">
-                            <label class="control-label">Select the topics you’d like to practice.</label>
-                            <div class="dropdown">
-                                <a href="#" data-toggle="dropdown" class="menuSelect_input">
-                                    <span class="menuSelect_label">Select the topics to practice</span>
-                                    <div class="menuSelect_inputIcon">
-                                        <span class="caret"></span>
-                                    </div>
-                                </a>
-                                <div class="dropdown-menu widget_select_menu">
-                                    <header class="widget_select_header">
-                                        <div class="select_menu_search">
-                                            <span class="search_icon">
-                                                <svg class="cust_icon icon_xs" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                                                    <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
-                                                    <path d="M15.364 2.636A9 9 0 1 1 2.636 15.363 9 9 0 0 1 15.364 2.636zM20 20l-5-5"></path>
-                                                    </g>
-                                                </svg>
-                                            </span>
-                                            <input class="form-control prefixed_input" placeholder="Find topics by name...">
-                                        </div>
-                                    </header>
-                                    <!-- Toggle the class "is_empty" when the list is empty -->
-                                    <div class="widget_select_body ">
-                                        <ul class="search_result_list">
-                                            <li class="search_result_item">
-                                                <label class="media_item" for="topic_0">
-                                                    <div class="media_figure">
-                                                        <input type="checkbox" checked id="topic_0" name="pr_topics">
-                                                    </div>
-                                                    <div class="media_info">
-                                                        <h4 class="title font-bold">Number Base System</h4>
-                                                        <div class="perfMeter align-items-center no-gutters row">
-                                                            <div class="topicProgress col">
-                                                                <div class="progress progress_fail">
-                                                                    <div class="progress-bar" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col margin_left_sm">
-                                                                <span class="topicTitle">38%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </li>
-
-                                            <li class="search_result_item">
-                                                <label class="media_item" for="topic_1">
-                                                    <div class="media_figure">
-                                                        <input type="checkbox" id="topic_1" name="pr_topics">
-                                                    </div>
-                                                    <div class="media_info">
-                                                        <h4 class="title font-bold">Trigonometric Ratios</h4>
-                                                        <div class="perfMeter align-items-center no-gutters row">
-                                                            <div class="topicProgress col">
-                                                                <div class="progress progress_fail">
-                                                                    <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col margin_left_sm">
-                                                                <span class="topicTitle">49%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </li>
-
-                                            <li class="search_result_item">
-                                                <label class="media_item" for="topic_2">
-                                                    <div class="media_figure">
-                                                        <input type="checkbox" id="topic_2" name="pr_topics">
-                                                    </div>
-                                                    <div class="media_info">
-                                                        <h4 class="title font-bold">Another topic name</h4>
-                                                        <div class="perfMeter align-items-center no-gutters row">
-                                                            <div class="topicProgress col">
-                                                                <div class="progress progress_avg">
-                                                                    <div class="progress-bar" role="progressbar" style="width: 57%" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col margin_left_sm">
-                                                                <span class="topicTitle">57%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </label>
-                                            </li>
-    
-
-                                        </ul>
-                                        <div class="search_result_empty">
-                                            <p>No result found</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label">How many Questions do you want to practice?</label>
-                            <div class="inputaffixed inputSurfixed">
-                                <input type="number" class="form-control inputControl" value="15">
-                                <div class="inputfixture">
-                                    <span >Questions</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Difficulty</label>
-                            <div class="pillSelectorList">
-                                <div class="selectorItem">
-                                    <label for="qdiff_0" class="pillWrapper">
-                                        <input type="radio" id="qdiff_0" class="pillSelectControl" name="classCurriculum">
-                                        <span class="selectorLabel caps_upper">
-                                            EASY
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="selectorItem">
-                                    <label for="qdiff_1" class="pillWrapper">
-                                        <input type="radio" id="qdiff_1" class="pillSelectControl" name="classCurriculum">
-                                        <span class="selectorLabel caps_upper">
-                                            Medium
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="selectorItem">
-                                    <label for="qdiff_2" class="pillWrapper">
-                                        <input type="radio" id="qdiff_2" class="pillSelectControl" name="classCurriculum">
-                                        <span class="selectorLabel caps_upper">
-                                            Hard
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label">Do you want to time this test?</label>
+                            <label class="control-label caps_upper font-bold">Do you want to time this test?</label>
                             <div class="">
                                 <label for="pr_timed" class="radio-inline">
                                     <input type="radio" checked id="pr_timed" name="test_time">
@@ -363,7 +205,7 @@
                             <a href="homework.html" class="menuLinkItem">Homework <span class="updateBubble"></span></a>
                         </div>
                         <div class="menuListItem active">
-                            <a href="resources.html" class="menuLinkItem">Resources <span class="updateBubble"></span></a>
+                            <a href="resources.html" class="menuLinkItem">CatchUp!<span class="updateBubble"></span></a>
                         </div>
                     </nav>
                 </div>
@@ -382,12 +224,12 @@
                             </a>
                         </div>
                         <div class="controlBtn btnAlert">
-                            <a href="#">
+                            <button type="button" id="appNotifications">
                                 <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                     <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
                                 </svg>
                                 <span class="badgeCount">8</span>
-                            </a>
+                            </button>
                         </div>
                         <div class="controlBtn btn_user_act dropdown">
                             <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
@@ -464,59 +306,415 @@
 
     <main class="mainContentArea">
         <div class="grdly_page_frame">
+
             <section class="grdly_page_body bg__off_white"> 
                 <div class="grdly_page_wrapper">
-                    <div class="empty_state centered ">
+                    <div class="empty_state centered hidden">
                         <div class="def_wrapper text-center ">
                             <div class="def_img">
                                 <img src="../img/icons/resources_emptyScreen.svg" alt="Subscription Needed">
                             </div>
-                            <h3 class="title title_lg font-bold margin_bottom_sm">Connect your Parent</h3>
-                            <p class="font-md">To get the maximum benefits of CatchUp!. Invite your parent to Gradely, to get started.</p>
+                            <h3 class="title title_sm font-bold margin_bottom_sm">Connect your Parent</h3>
+                            <p>You must be connected to a parent before you can practice with CatchUp!. Click the button below to invite your parent to Gradely.</p>
                             <div class="section_cto">
-                                <button type="button" data-target="#inviteParent" data-toggle="modal" data-backdrop="static" class="btn btn-lg btn-secondary">Invite Parent</button>
+                                <button type="button" data-target="#inviteParent" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">Invite Parent</button>
                             </div>
                         </div>
                     </div>
                     <div class="grdly_page_content ">
-
-                        <header class="pageHeroBannner catchupHome">
-                            <div class="heroContentHolder">
-                                <div class="container">
-                                    <nav class="detail_control" aria-label="Page breadcrumb">
-                                        <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="resources.html">Resources</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Gradely CatchUp</li>
-                                        </ol>
-                                    </nav>
-                                    <div class="bannerIntro">
-                                        <div class="bannerIntroMsg">
-                                            <div class="title_prefixed">
-                                                <div class="icon_box bg__white"> 
-                                                    <i class="cust_icon icon_catchup icon_sm"></i>
-                                                </div>
-                                                <h3 class="title title_lg color__black font-bold">Gradely CatchUp</h3>
-                                            </div>
-                                            <p class="font-md">Take practice tests to boost your knowledge of your class lessons.</p>
-                                        </div>
-                                        <div class="bannerIntroCtr">
-                                            <button type="submit" data-target="#newPractice" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
-                                                New Practice Test
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </header>
-
                         <div class="section_block">
                             <div class="container">
+
+                                <header class="grdly_page_header">
+                                    <div class="grdly_header_title">
+                                        <div class="title_prefixed">
+                                            <div class="icon_box bg__white"> 
+                                                <i class="cust_icon icon_catchup icon_sm"></i>
+                                            </div>
+                                            <h3 class="title title_lg color__black font-bold">Gradely CatchUp!</h3>
+                                        </div>
+                                    </div>
+                                    <div class="grdly_action_primary">
+                                        <a href="new_practice.html" class="btn btn-secondary">
+                                            New Practice
+                                        </a>
+                                    </div>
+                                </header>
+
+                                <article class="gridCardItem spacing_lg">
+                                    <div class="gridCardWrapper">
+
+                                        <div class="empty_state centered  text-center">
+                                            <div class="def_wrapper centered">
+                                                <div class="defImg">
+                                                    <img src="../img/icons/catchup_intro.svg" alt="No Info">
+                                                </div>
+                                                <h4 class="title title_lg font-bold margin_bottom_sm">Welcome to CatchUp!</h4>
+                                                <p>Practice more, learn more, improve at your own pace. Take our system curated practice excercises or create your own excercises, get a detailed report of how you stand with recommendation on how to improve.</p>
+                                                <div class="section_cto">
+                                                    <a href="new_practice.html" class="btn btn-secondary">
+                                                        Start Practicing
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="paneInner hidden">
+                                            <div class="filterRow row">
+                                                <div class="filterItem dropdown">
+                                                    <button type="button" data-toggle="dropdown" class="filterControlItem dropdown-toggle">
+                                                        <span class="font-bold">This week</span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">This week</a></li>
+                                                        <li><a href="#">Last week</a></li>
+                                                        <li><a href="#">This Month</a></li>
+                                                        <li><a href="#">Last Month</a></li>
+                                                        <li><a href="#">This Year</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="userInfoBlockItem row">
+                                                <div class="practiceInsightItem col-sm-6 col-md-3">
+                                                    <div class="media_item">
+                                                        <div class="icon_box avi_avg box_rounded bg__inverse_light">
+                                                            <i class="cust_icon icon_attempts"></i>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <span class="insight_title color__grey_dark caps_upper">Attempted</span>
+                                                            <div class="insight_value">
+                                                                <span class="title title_lg font-bold color__primary">302</span>
+                                                            </div>
+                                                            <span class="insight_title color__grey_dark caps_upper">Questions</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="practiceInsightItem col-sm-6 col-md-3">
+                                                    <div class="media_item">
+                                                        <div class="icon_box avi_avg box_rounded bg__red_light">
+                                                            <i class="cust_icon icon_practices"></i>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <span class="insight_title color__grey_dark caps_upper">Practices</span>
+                                                            <div class="insight_value">
+                                                                <span class="title title_lg font-bold color__primary">28</span>
+                                                            </div>
+                                                            <span class="insight_title color__grey_dark caps_upper">Taken</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="practiceInsightItem col-sm-6 col-md-3">
+                                                    <div class="media_item">
+                                                        <div class="icon_box avi_avg box_rounded bg__secondary_light">
+                                                            <i class="cust_icon icon_improvement"></i>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <span class="insight_title color__grey_dark caps_upper">Made</span>
+                                                            <div class="insight_value">
+                                                                <div class="snippetInfo growthRate growthUp" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                    <span class="title title_lg font-bold">27%</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="insight_title color__grey_dark caps_upper">Improvement</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="practiceInsightItem col-sm-6 col-md-3">
+                                                    <div class="media_item">
+                                                        <div class="icon_box avi_avg box_rounded bg__primary_light">
+                                                            <i class="cust_icon icon_duration"></i>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <span class="insight_title color__grey_dark caps_upper">Spent</span>
+                                                            <div class="insight_value">
+                                                                <span class="title title_lg font-bold color__primary">
+                                                                    <time>12hr 32Min</time>
+                                                                </span>
+                                                            </div>
+                                                            <span class="insight_title color__grey_dark caps_upper">Practicing</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="base_divider"></div>
+                                            <div class="userInfoBlockItem row">
+                                                <div class="col-sm-6 col-md-5 ">
+                                                    <h4 class="margin_bottom_md caps_upper color__primary ">Most Practiced Topics</h4>
+                                                    <div class="chartSummary row no-gutters align-items-center practiceInsightItem">
+                                                        <div class="chartHolder col-md-5">
+                                                            <canvas id="classPerformance" aria-label="Class performance chart" role="img"></canvas>
+                                                        </div>
+                                                        <div class="charteKy col-md-7">
+                                                            <div class="legendList">
+                                                                <div class="legendItem align-items-center">
+                                                                    <span class="legendIndicator bg__inverse">
+                                                                    </span>
+                                                                    <div>
+                                                                        <span>Number Bases</span>
+                                                                        <span class="font-md color__grey_light margin_left_s">x5</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="legendItem align-items-center">
+                                                                    <span class="legendIndicator bg__primary">
+                                                                    </span>
+                                                                    <div>
+                                                                        <span>Trigonometry</span>
+                                                                        <span class="font-md color__grey_light margin_left_s">x4</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="legendItem align-items-center">
+                                                                    <span class="legendIndicator bg__secondary">
+                                                                    </span>
+                                                                    <div>
+                                                                        <span>Logarithm & Indices</span>
+                                                                        <span class="font-md color__grey_light margin_left_s">x2</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="legendItem align-items-center">
+                                                                    <span class="legendIndicator bg__danger">
+                                                                    </span>
+                                                                    <div>
+                                                                        <span>Mathematical Equations</span>
+                                                                        <span class="font-md color__grey_light margin_left_s">x8</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-md-7 ">
+                                                    <h4 class="margin_bottom_md caps_upper color__primary ">Current Rank</h4>
+                                                    <div class="row align-items-center">
+                                                        <div class="col-md-6 practiceInsightItem">
+                                                            <div class="userRank">
+                                                                <div class="rankScale">
+                                                                    <span class="font-sm color__grey_dark">Classmates in the same State</span>
+                                                                    <div class="percentileScale">
+                                                                        <div class="scaleItem itemTop">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemTop">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="insight_value ">
+                                                                        <span class="snippetInfo" data-toggle="tooltip" title="You currently rank 23rd out of 185 Senior secondary school 1 students in your state.">
+                                                                            <i class="cust_icon icon_info "></i>
+                                                                            <span class="title margin_left_sm font-regular color__black">Top 20% statewide</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 practiceInsightItem">
+                                                            <div class="userRank">
+                                                                <div class="rankScale">
+                                                                    <span class="font-sm color__grey_dark">Classmates Nationwide</span>
+                                                                    <div class="percentileScale">
+                                                                        <div class="scaleItem itemTop">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemTop">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemTop">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemTop">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemTop">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                        <div class="scaleItem itemBottom">
+                                                                            <span class="cust_icon icon_user"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="insight_value ">
+                                                                        <span class="snippetInfo" data-toggle="tooltip" title="You currently rank 346th out of 18,578 Senior secondary school 1 students in your state.">
+                                                                            <i class="cust_icon icon_info "></i>
+                                                                            <span class="title margin_left_sm font-regular color__black">Top 50% nationwide</span>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
 
                                 <section class="layoutSectionGroup">
                                     <header class="groupHeader">
                                         <div class="grdly_header_title">
-                                            <h2 class="title title_sm font-bold">Recommended practice for the week</h2>
-                                            <p class="color__grey_dark font-md">Based on your weekly homework performance</p>
+                                            <h2 class="title title_sm font-bold">Diagnostic` Tests</h2>
+                                        </div>
+                                    </header>
+                                    <div class="content_inner ">
+                                        <div class="table table-responsive table-brand">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <div>Status</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Description</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Subject</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Score</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Action</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="itemTag tagStatusComplete">
+                                                                    Done
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="disagnosis_report.html" class="listItemWrapper">
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Diagnostic test 1</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <time>21 April, 2019</time>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="badge badge-default">Mathematics</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                    <span class="topicgrade color__grey_dark">92%</span>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_excel">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="disagnosis_report.html" class="controlItemLink">View Report</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="itemTag tagStatusDefault">
+                                                                    Pending
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="disagnosis_report.html" class="listItemWrapper">
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Diagnostic test 1</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <time>28 Nov, 2019</time>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="badge badge-default">Mathematics</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <span class="topicTitle color__black">Not Score yet</span>
+                                                                    <span class="topicgrade color__grey_dark">-</span>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_excel">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="startPractice.html" class="controlItemLink">Take Test</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="layoutSectionGroup">
+                                    <header class="groupHeader">
+                                        <div class="grdly_header_title">
+                                            <h2 class="title title_sm font-bold">This week's Recommendation</h2>
+                                            <p class="color__grey_dark font-md">Based on last week's performance</p>
                                         </div>
                                         <div class="grdly_action_primary">
                                         </div>
@@ -1462,6 +1660,259 @@
         </div>
     </main>
 
+    <div class="offscreenDrawer ">
+        <div class="offscreenDrawerBackdrop"></div>
+        <div class="offScreenDrawerContent drawerLeft">
+            <div class="offScreenDrawerContentWrapper">
+                <header class="drawer_header">
+                    <h4 class="title title_lg font-bold color__black">Notifications</h4>
+                    <button type="button" class="close_dialog cls_lg" data-dismiss="modal"></button>
+                </header>
+                <div class="empty_state hidden centered">
+                    <div class="def_wrapper">
+                        <div class="defImg">
+                            <img src="../img/icons/notification_empty.svg" class="avi_xxl" alt="No Notifications">
+                        </div>
+                        <p class="">You have no new notification</p>
+                    </div>
+                </div>
+                <div class="drawer_body ">
+                    <div class="text-right">
+                        <button class="dialogReset caps_upper">Clear All</button>
+                    </div>
+
+                    <div class="notificationList">
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> created an homework
+                                        </p>
+                                        <a href="homework_form.html">week 3 - Introduction to Mathematical Equations</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>10m</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi">RH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">You</strong> have completed a Diagnostic test
+                                        </p>
+                                        <a href="disagnosis_report.html">View Report - Diagnostic test title</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1h</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> created a Diagnostic test
+                                        </p>
+                                        <a href="startPractice.html">Take the test - Diagnostic test title</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>16h</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p>
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> accepted your invitation to Gradely
+                                        </p>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> has accepted your request
+                                        </p>
+                                        <a href=".html">Year 9 Achievers - <span>IMASC/19/Y9AS</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework due in 2 days
+                                        </p>
+                                        <a href="homework_form.html">Take homework - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework completed
+                                        </p>
+                                        <a href="homeworkReport.html">View Report - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p>
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> accepted your invitation to Gradely
+                                        </p>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> has accepted your request
+                                        </p>
+                                        <a href=".html">Year 9 Achievers - <span>IMASC/19/Y9AS</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework due in 2 days
+                                        </p>
+                                        <a href="homework_form.html">Take homework - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework completed
+                                        </p>
+                                        <a href="homeworkReport.html">View Report - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Toggle the class "takeoverActive" to show it -->
     <section class="grdl_page_takeover grdl_paywall">
         <div class="pageClose dialogDismiss">
@@ -1491,7 +1942,44 @@
     
 	<script src="../js/jquery.js"></script>
     <script src="../js/base.min.js"></script>
+    <script src="../js/Chart.min.js"></script>
     <script src="../js/main.js"></script>
+
+    <script>
+
+        $('#setup_class').modal({
+            backdrop: "static"
+        }); 
+
+        var classChart = document.getElementById('classPerformance').getContext('2d');
+
+        var myDoughnutChart = new Chart(classChart, {
+            type: 'doughnut',
+            data: {
+                labels: ["Number Bases", "Trigonometry", "Logarithm & Indices", "Mathematical Equations"],
+                datasets: [{
+                    label: 'Class Performance summary',
+                    data: [5, 4, 2, 8],
+                    backgroundColor: [
+                        '#11BDCF',
+                        '#2A4F77',
+                        '#F2AB3E',
+                        '#FE747D'
+                    ],
+                    hoverBackgroundColor: '#959595',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutoutPercentage: 70,
+                aspectRatio:1,
+                legend: {
+                    display: false
+                }
+            }
+        });
+
+    </script>
     		
 </body>
 </html>
