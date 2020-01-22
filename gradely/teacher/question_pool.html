@@ -19,24 +19,729 @@
 
 <body>
 
+    <div class="modal fade" id="newQuestion">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="title title_sm font-bold caps_normal">Create Question</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row form_row_group">
+                            <div class="form_group_item col-md-3">
+                                <label class="control-label font-bold caps_upper">Question</label>
+                            </div>
+                            <div class="form_group_item col-md-9">
+                                <label for="" class="control-label sr-only">Question Text</label>
+                                <textarea rows="5" class="form-control" placeholder="Enter your question here"></textarea>
+                            </div>
+                        </div>
+                        <div class="row form_row_group">
+                            <div class="form_group_item col-md-3">
+                                <label class="control-label font-bold caps_upper">Difficulty</label>
+                            </div>
+                            <div class="form_group_item col-md-9">
+                                <label for="" class="control-label sr-only">Question Difficulty</label>
+                                <div class="pillSelectorList">
+                                    <div class="selectorItem">
+                                        <label for="qdiff_0" class="pillWrapper">
+                                            <input type="radio" id="qdiff_0" class="pillSelectControl" name="classCurriculum">
+                                            <span class="selectorLabel caps_upper">
+                                                EASY
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="selectorItem">
+                                        <label for="qdiff_1" class="pillWrapper">
+                                            <input type="radio" id="qdiff_1" class="pillSelectControl" name="classCurriculum">
+                                            <span class="selectorLabel caps_upper">
+                                                Medium
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="selectorItem">
+                                        <label for="qdiff_2" class="pillWrapper">
+                                            <input type="radio" id="qdiff_2" class="pillSelectControl" name="classCurriculum">
+                                            <span class="selectorLabel caps_upper">
+                                                Hard
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form_row_group">
+                            <div class="form_group_item col-md-3">
+                                <label class="control-label font-bold caps_upper">Duration</label>
+                            </div>
+                            <div class="form_group_item col-md-9">
+                                <label for="" class="control-label sr-only">Question Duration</label>
+                                <div class="input-group">
+                                    <input type="number" min="15" step="5" placeholder="Set duration, e.g 30" class="form-control">
+                                    <div class="input-group-addon bg__inverse_light">
+                                        <span class="color__default font-bold">Seconds</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_row_group row">
+                            <div class="form_group_item col-md-3">
+                                <label class="control-label font-bold caps_upper ">Options</label>
+                            </div>
+                            <div class="form_group_item col-md-9">
+                                <div class="numbered_row_list questionOptions">
+                                    <div class="numbered_row_item questionOptionItem">
+                                        <div class="row_count"></div>
+                                        <div class="row_content">
+                                            <div class="option_input_widget">
+                                                <div class="option_widget_block option_answer_input">
+                                                    <textarea row="3" class="form-control" placeholder="Option text here"></textarea>
+                                                </div>
+                                                <div class="option_widget_block option_answer_marker" title="Set as answer" data-toggle="tooltip">
+                                                    <input type="radio" name="quest_option" id="option_1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="numbered_row_item questionOptionItem">
+                                        <div class="row_count"></div>
+                                        <div class="row_content">
+                                            <div class="option_input_widget">
+                                                <div class="option_widget_block option_answer_input">
+                                                    <textarea row="3" class="form-control" placeholder="Option text here"></textarea>
+                                                </div>
+                                                <div class="option_widget_block option_answer_marker" title="Set as answer" data-toggle="tooltip">
+                                                    <input type="radio" name="quest_option" id="option_2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="numbered_row_item questionOptionItem">
+                                        <div class="row_count"></div>
+                                        <div class="row_content">
+                                            <div class="option_input_widget">
+                                                <div class="option_widget_block option_answer_input">
+                                                    <textarea row="3" class="form-control" placeholder="Option text here"></textarea>
+                                                </div>
+                                                <div class="option_widget_block option_answer_marker" title="Set as answer" data-toggle="tooltip">
+                                                    <input type="radio" name="quest_option" id="option_3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="numbered_row_item questionOptionItem">
+                                        <div class="row_count"></div>
+                                        <div class="row_content">
+                                            <div class="option_input_widget">
+                                                <div class="option_widget_block option_answer_input">
+                                                    <textarea row="3" class="form-control" placeholder="Option text here"></textarea>
+                                                </div>
+                                                <div class="option_widget_block option_answer_marker" title="Set as answer" data-toggle="tooltip">
+                                                    <input type="radio" name="quest_option" id="option_4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row form_row_group">
+                            <div class="form_group_item col-md-3">
+                                <label class="control-label font-bold caps_upper">Attach Image</label>
+                            </div>
+                            <div class="form_group_item col-md-9">
+                                <div class="attachment_tray">
+                                    <div class="tray_item attachment_control">
+                                        <label for="upload_imgs" class="upload_btn" title="Select Image">
+                                            <input type="file" multiple accept=".png, .jpg, .jpeg" name="file" id="upload_imgs" hidden="" class="inputfile">
+                                            <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"></polygon>
+                                            </svg>
+                                        </label>
+                                    </div>
+                                    <div class="tray_item attachment_tile">
+                                        <figure class="tile_image">
+                                            <div class="image_wrapper">
+                                                <img src="../img/banners/questionImage.jpg">
+                                                <div class="attachment_dismiss">
+                                                    <a href="#" class="dataDismiss">
+                                                        <svg class="cust_icon " width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M3.516 20.484C2.36988 19.377 1.45569 18.0529 0.826781 16.5889C0.197873 15.1248 -0.133162 13.5502 -0.147008 11.9568C-0.160854 10.3635 0.142767 8.78331 0.746137 7.30855C1.34951 5.83379 2.24055 4.49397 3.36726 3.36726C4.49397 2.24055 5.83379 1.34951 7.30855 0.746137C8.78331 0.142767 10.3635 -0.160854 11.9568 -0.147008C13.5502 -0.133162 15.1248 0.197873 16.5889 0.826781C18.0529 1.45569 19.377 2.36988 20.484 3.516C22.6699 5.77922 23.8794 8.81045 23.8521 11.9568C23.8247 15.1032 22.5627 18.1129 20.3378 20.3378C18.1129 22.5627 15.1032 23.8247 11.9568 23.8521C8.81045 23.8794 5.77922 22.6699 3.516 20.484ZM13.68 12L17.076 8.604L15.384 6.912L12 10.308L8.604 6.912L6.912 8.604L10.308 12L6.912 15.396L8.604 17.088L12 13.692L15.396 17.088L17.088 15.396L13.692 12H13.68Z"/>
+                                                        </svg>  
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="nav_flex_row ">
+                        <div class="backBtn">
+                            <a href="question_pool.html" class="btn btn-default-outline">Cancel</a>
+                        </div>
+                        <div class="nextBtn">
+                            <button type="button" class="btn btn-secondary">Save Question</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main class="authenticationPageLayout">
         <div class="grdly_page_frame bg__off_white">
             <section class="grdly_page_body">
                 
-                <div class="section_block">
+                <div class="questionPoolLayout showPane">
                     <div class="pageClose dialogDismiss">
                         <a href="homework_questions.html" class="close_dialog cls_lg">
+                            <span class="closeLabel">Exit</span>
                         </a>
                     </div>
-                    <div class="container">
-                        <div class="formWidgetBody">
-                            <header class="section_header font-md">
-                                <h3 class="title title_lg color__black font-bold"><span>Jss2</span> - <span>Mathematics</span></h3>
+                    <aside class="poolLayoutNav">
+                        <div class="poolLayoutWrapper">
+                            <header class="section_header">
+                                <p><span>JSS2</span> - <span>Mathematics</span></p>
+                                <h4 class="title title_sm font-bold">Find Questions by Topic</h4>
                             </header>
                             <div action="content_inner">
-                                
+                                <nav class="listNavBlock">
+                                    <div class="listNavGroupHeader">
+                                        <span class="caps_upper color__grey_dark">Second Term (WASSCE/NECO Curriculum)</span>
+                                    </div>
+                                    <div class="listNavItemGroup">
+                                        <div class="listNavItem active">
+                                            <button class="listNavItemBtn" type="button" title="Basic Operation of Integers">
+                                                <span>Basic Operation of Integers</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Whole Numbers (Standard forms and Prime Factors)">
+                                                <span>Whole Numbers (Standard forms and Prime Factors)</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem" title="">
+                                            <button class="listNavItemBtn" type="button" title="Whole Numbers (LCM, HCF, Square and Square Roots)">
+                                                <span>Whole Numbers (LCM, HCF, Square and Square Roots)</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Fractions (Transactions in Homes and Offices)">
+                                                <span>Fractions (Transactions in Homes and Offices)</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Approximation">
+                                                <span>Approximation</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Multiplication and division of Directed and Non directed Numbers">
+                                                <span>Multiplication and division of Directed and Non directed Numbers</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Algebraic Expressions">
+                                                <span>Algebraic Expressions</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Word Problems leading to simple Algebraic fractions">
+                                                <span>Word Problems leading to simple Algebraic fractions</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <nav class="listNavBlock hidden">
+                                    <div class="listNavGroupHeader">
+                                        <span class="caps_upper color__grey_dark">Second Term (IGCSE Curriculum)</span>
+                                    </div>
+                                    <div class="listNavItemGroup">
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Basic Operation of Integers">
+                                                <span>Basic Operation of Integers</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Whole Numbers (Standard forms and Prime Factors)">
+                                                <span>Whole Numbers (Standard forms and Prime Factors)</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem" title="">
+                                            <button class="listNavItemBtn" type="button" title="Whole Numbers (LCM, HCF, Square and Square Roots)">
+                                                <span>Whole Numbers (LCM, HCF, Square and Square Roots)</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Fractions (Transactions in Homes and Offices)">
+                                                <span>Fractions (Transactions in Homes and Offices)</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Approximation">
+                                                <span>Approximation</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Multiplication and division of Directed and Non directed Numbers">
+                                                <span>Multiplication and division of Directed and Non directed Numbers</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Algebraic Expressions">
+                                                <span>Algebraic Expressions</span>
+                                            </button>
+                                        </div>
+                                        <div class="listNavItem">
+                                            <button class="listNavItemBtn" type="button" title="Word Problems leading to simple Algebraic fractions">
+                                                <span>Word Problems leading to simple Algebraic fractions</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </nav>
+                                <div class="section_cto">
+                                    <button type="button" class="ft_control font-bold">Show more Topics</button>
+                                </div>                             
                             </div>
                          </div>
+                    </aside>
+                    <div class="poolLayoutContentHodler">
+                        <div class="poolLayoutWrapper bg__off_white">
+                            <header class="section_header">
+                                <div class="detail_control margin_bottom_lg">
+                                    <button type="button" class="back_btn collapsePane" title="Back to Topics">
+                                        <span class="back_icon">
+                                            <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M7.05 9.293L6.343 10 12 15.657l1.414-1.414L9.172 10l4.242-4.243L12 4.343z"/></svg>
+                                        </span>
+                                        <span class="bc_label">
+                                            Change Topic
+                                        </span>
+                                    </button>
+                                </div>
+                                <span class="color__grey_dark caps_upper font-sm">Week 2 - Second Term</span>
+                                <h3 class="title title_lg color__black font-bold">Basic Operation of Integers</h3>
+                                <p>Select the Questions you'll like to add to your homework</p>
+                            </header>
+
+                            <div class="empty_state justify-content-center centered hidden">
+                                <div class="def_wrapper text-center">
+                                    <div class="def_img margin_bottom_md">
+                                        <img src="../img/icons/empty_questions.svg" class="" alt="No Students in class">
+                                    </div>
+                                    <h4 class="title font-bold margin_bottom_sm">No Questions Found</h4>
+                                    <p>While we work to make questions available for all topics, you can create your own questions, to test your students.</p>
+                                    <div class="section_cto">
+                                        <button type="button" data-target="#newQuestion" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">
+                                            Create Question
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_inner ">
+                                <div class="questionList">
+                                    <article class="questionListItem">
+                                        <div class="newItem no_margin cardWrapper">
+                                            <button type="button" data-target="#newQuestion" data-toggle="modal" data-backdrop="static" class="media_item align-items-center text-left">
+                                                <div class="media_figure">
+                                                    <span class="t_icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                            <polygon
+                                                                points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div class="media_info">
+                                                    <h4 class="questionText">Create your question</h4>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </article>
+                                    <article class="questionListItem">
+                                        <div class="questionInfoWrapper">
+                                            <div class="questionInfoHeader">
+                                                <div class="questionInfoNumber">
+                                                    <label for="" title="Select this question" data-toggle="tooltip">
+                                                        <input type="checkbox" id="question_item_1" name="questionItem">
+                                                    </label>
+                                                </div>
+                                                <a href="#hm_question_1" data-toggle="collapse" data-parent="#classPanel" class="questionInfoDetails accordion-toggle collapsed">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">	
+                                                            Arrange the following from the greatest to the least. -9, +5, -6, +2, -4</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDefault">Easy</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>30s</time></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="hm_question_1">
+                                                <div class="questionItemBody">
+                                                    <div class="numbered_row_list questionOptions">
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-9, +5, -6, +2, -4</span>
+                                                        </div>
+                                                        <div class="numbered_row_item  questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-9, -6, -4 ,+2, +5</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem is_answer">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">+5, +2, -4, -6, -9</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-9, +5, +2, -6 , -4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="questionListItem">
+                                        <div class="questionInfoWrapper">
+                                            <div class="questionInfoHeader">
+                                                <div class="questionInfoNumber">
+                                                    <label for="" title="Select this question" data-toggle="tooltip">
+                                                        <input type="checkbox" id="question_item_2" name="questionItem">
+                                                    </label>
+                                                </div>
+                                                <a href="#hm_question_2" data-toggle="collapse" data-parent="#classPanel" class="questionInfoDetails accordion-toggle collapsed">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">Solve (-3) - (-9)</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDefault">Easy</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>30s</time></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="hm_question_2">
+                                                <div class="questionItemBody">
+                                                    <div class="numbered_row_list questionOptions">
+                                                        <div class="numbered_row_item questionOptionItem is_answer">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">6</span>
+                                                        </div>
+                                                        <div class="numbered_row_item  questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-6</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-12</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">12</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="questionListItem">
+                                        <div class="questionInfoWrapper">
+                                            <div class="questionInfoHeader">
+                                                <div class="questionInfoNumber">
+                                                    <label for="" title="Select this question" data-toggle="tooltip">
+                                                        <input type="checkbox" id="question_item_3" name="questionItem">
+                                                    </label>
+                                                </div>
+                                                <a href="#hm_question_4" data-toggle="collapse" data-parent="#classPanel" class="questionInfoDetails accordion-toggle collapsed">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">Which of the following best
+                                                            describes the occupation of James Cooks?</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagSecondary">Medium</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>45s</time></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="hm_question_4">
+                                                <div class="questionItemBody">
+                                                    <div class="numbered_row_list questionOptions">
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Less λ Equal f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item userSelection questionOptionItem is_answer">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Less λ Less f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Greater λ Equal f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Greater λ Less f</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="questionListItem">
+                                        <div class="questionInfoWrapper">
+                                            <div class="questionInfoHeader">
+                                                <div class="questionInfoNumber">
+                                                    <label for="" title="Select this question" data-toggle="tooltip">
+                                                        <input type="checkbox" id="question_item_4" name="questionItem">
+                                                    </label>
+                                                </div>
+                                                <a href="#hm_question_3" data-toggle="collapse" data-parent="#classPanel" class="questionInfoDetails accordion-toggle collapsed">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">What happens to water when its
+                                                            at 0 Degrees celcius?</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDanger">Hard</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>60s</time></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="hm_question_3">
+                                                <div class="questionItemBody">
+                                                    <div class="numbered_row_list questionOptions">
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Less λ Equal f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item userSelection questionOptionItem is_answer">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Less λ Less f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Greater λ Equal f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Greater λ Less f</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                    <article class="questionListItem">
+                                        <div class="questionInfoWrapper">
+                                            <div class="questionInfoHeader">
+                                                <div class="questionInfoNumber">
+                                                    <label for="" title="Select this question" data-toggle="tooltip">
+                                                        <input type="checkbox" id="question_item_1" name="questionItem">
+                                                    </label>
+                                                </div>
+                                                <a href="#hm_question_1" data-toggle="collapse" data-parent="#classPanel" class="questionInfoDetails accordion-toggle collapsed">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">	
+                                                            Arrange the following from the greatest to the least. -9, +5, -6, +2, -4</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDefault">Easy</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>30s</time></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="hm_question_1">
+                                                <div class="questionItemBody">
+                                                    <div class="numbered_row_list questionOptions">
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-9, +5, -6, +2, -4</span>
+                                                        </div>
+                                                        <div class="numbered_row_item  questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-9, -6, -4 ,+2, +5</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem is_answer">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">+5, +2, -4, -6, -9</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-9, +5, +2, -6 , -4</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="questionListItem">
+                                        <div class="questionInfoWrapper">
+                                            <div class="questionInfoHeader">
+                                                <div class="questionInfoNumber">
+                                                    <label for="" title="Select this question" data-toggle="tooltip">
+                                                        <input type="checkbox" id="question_item_2" name="questionItem">
+                                                    </label>
+                                                </div>
+                                                <a href="#hm_question_2" data-toggle="collapse" data-parent="#classPanel" class="questionInfoDetails accordion-toggle collapsed">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">Solve (-3) - (-9)</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDefault">Easy</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>30s</time></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="hm_question_2">
+                                                <div class="questionItemBody">
+                                                    <div class="numbered_row_list questionOptions">
+                                                        <div class="numbered_row_item questionOptionItem is_answer">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">6</span>
+                                                        </div>
+                                                        <div class="numbered_row_item  questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-6</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">-12</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">12</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="questionListItem">
+                                        <div class="questionInfoWrapper">
+                                            <div class="questionInfoHeader">
+                                                <div class="questionInfoNumber">
+                                                    <label for="" title="Select this question" data-toggle="tooltip">
+                                                        <input type="checkbox" id="question_item_3" name="questionItem">
+                                                    </label>
+                                                </div>
+                                                <a href="#hm_question_4" data-toggle="collapse" data-parent="#classPanel" class="questionInfoDetails accordion-toggle collapsed">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">Which of the following best
+                                                            describes the occupation of James Cooks?</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagSecondary">Medium</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>45s</time></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="hm_question_4">
+                                                <div class="questionItemBody">
+                                                    <div class="numbered_row_list questionOptions">
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Less λ Equal f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item userSelection questionOptionItem is_answer">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Less λ Less f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Greater λ Equal f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Greater λ Less f</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="questionListItem">
+                                        <div class="questionInfoWrapper">
+                                            <div class="questionInfoHeader">
+                                                <div class="questionInfoNumber">
+                                                    <label for="" title="Select this question" data-toggle="tooltip">
+                                                        <input type="checkbox" id="question_item_4" name="questionItem">
+                                                    </label>
+                                                </div>
+                                                <a href="#hm_question_3" data-toggle="collapse" data-parent="#classPanel" class="questionInfoDetails accordion-toggle collapsed">
+                                                    <div class="listDetails">
+                                                        <h4 class="questionText text_clipped">What happens to water when its
+                                                            at 0 Degrees celcius?</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="labelTag labelTagDanger">Hard</span>
+                                                            <span class="inline_seperator">•</span>
+                                                            <span class="">Duration: <time>60s</time></span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="panel-collapse collapse" id="hm_question_3">
+                                                <div class="questionItemBody">
+                                                    <div class="numbered_row_list questionOptions">
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Less λ Equal f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item userSelection questionOptionItem is_answer">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Less λ Less f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Greater λ Equal f</span>
+                                                        </div>
+                                                        <div class="numbered_row_item questionOptionItem">
+                                                            <span class="row_count"></span>
+                                                            <span class="row_content">Greater λ Less f</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Dork -->
+                <div class="submit_widget widget_fixed_bottom">
+                    <div class="container content_narrow">
+                        <div class="nav_flex_row">
+                            <div class="nav_rleft">
+                                <div class="insight_item">
+                                    <div class="insight_value">
+                                        <span class="title font-bold">3</span>
+                                    </div>
+                                    <div class="insight_title">
+                                        <span class="font-sm color__grey_dark">Selected</span>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="nav_right">
+                                <a href="homework_questions.html" class="btn btn-primary">Add to Homework</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
