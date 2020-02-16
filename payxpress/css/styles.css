@@ -376,6 +376,38 @@ address, address span {
   padding-top: 0 !important;
 }
 
+/* line 313, ../sass/partials/_base.scss */
+.icon_box {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: #E5E5E5;
+  fill: #0F427C;
+}
+
+/* line 325, ../sass/partials/_base.scss */
+.box_rounded {
+  border-radius: 50% !important;
+}
+
+/* line 329, ../sass/partials/_base.scss */
+.box_primary {
+  background-color: rgba(15, 66, 124, 0.25);
+}
+
+/* line 333, ../sass/partials/_base.scss */
+.box_secondary {
+  background-color: #FFEAB9;
+}
+
 /* line 1, ../sass/partials/_form.scss */
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -897,19 +929,35 @@ label.checkbox-inline {
 
 /* line 62, ../sass/partials/_user_area.scss */
 .avi_xl {
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 62, ../sass/partials/_user_area.scss */
+  .avi_xl {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+/* line 73, ../sass/partials/_user_area.scss */
+.avi_xxl {
   width: 96px;
   height: 96px;
-  font-size: 32px;
-}
-
-/* line 69, ../sass/partials/_user_area.scss */
-.avi_xxl {
-  width: 128px;
-  height: 128px;
   font-size: 64px;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 73, ../sass/partials/_user_area.scss */
+  .avi_xxl {
+    width: 128px;
+    height: 128px;
+  }
 }
 
-/* line 75, ../sass/partials/_user_area.scss */
+/* line 84, ../sass/partials/_user_area.scss */
 .avi_massive {
   width: 128px;
   height: 128px;
@@ -917,7 +965,7 @@ label.checkbox-inline {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 75, ../sass/partials/_user_area.scss */
+  /* line 84, ../sass/partials/_user_area.scss */
   .avi_massive {
     width: 256px;
     height: 256px;
@@ -925,7 +973,7 @@ label.checkbox-inline {
   }
 }
 
-/* line 87, ../sass/partials/_user_area.scss */
+/* line 96, ../sass/partials/_user_area.scss */
 .default_avi {
   width: 100%;
   height: 100%;
@@ -943,12 +991,12 @@ label.checkbox-inline {
   align-items: center;
   justify-content: center;
 }
-/* line 104, ../sass/partials/_user_area.scss */
+/* line 113, ../sass/partials/_user_area.scss */
 .has_image .default_avi {
   opacity: 0;
 }
 
-/* line 109, ../sass/partials/_user_area.scss */
+/* line 118, ../sass/partials/_user_area.scss */
 .user_info {
   box-sizing: border-box;
   display: -webkit-box;
@@ -996,28 +1044,51 @@ svg {
 
 /* line 29, ../sass/partials/_custom_icons.scss */
 .icon_md {
-  width: 48px;
-  height: 48px;
+  width: 24px;
+  height: 24px;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 29, ../sass/partials/_custom_icons.scss */
+  .icon_md {
+    width: 48px;
+    height: 48px;
+  }
 }
 
-/* line 34, ../sass/partials/_custom_icons.scss */
+/* line 39, ../sass/partials/_custom_icons.scss */
 .icon_lg {
   width: 64px;
   height: 64px;
 }
 
-/* line 39, ../sass/partials/_custom_icons.scss */
+/* line 44, ../sass/partials/_custom_icons.scss */
 .icon_xl {
   width: 64px;
   height: 64px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 39, ../sass/partials/_custom_icons.scss */
+  /* line 44, ../sass/partials/_custom_icons.scss */
   .icon_xl {
-    width: 116px;
-    height: 116px;
+    width: 128px;
+    height: 128px;
   }
+}
+
+/* line 54, ../sass/partials/_custom_icons.scss */
+.icon_cart {
+  background-image: url(../img/icons/cart_icon.svg);
+}
+
+/* line 58, ../sass/partials/_custom_icons.scss */
+.icon_portfolio {
+  background-image: url(../img/icons/portfolio.svg);
+}
+
+/* line 62, ../sass/partials/_custom_icons.scss */
+.icon_file {
+  background-image: url(../img/icons/file.svg);
 }
 
 /* line 1, ../sass/partials/_navigation.scss */
@@ -1097,20 +1168,20 @@ button:focus, button:visited {
   text-decoration: none !important;
   /* Tablets and phablets */
 }
+/* line 64, ../sass/partials/_navigation.scss */
+.btn + [class*="btn"] {
+  margin-left: 1.5em;
+}
 @media only screen and (min-width: 768px) {
   /* line 44, ../sass/partials/_navigation.scss */
   .btn {
     min-width: 100px;
     padding: 12px 32px;
   }
-  /* line 68, ../sass/partials/_navigation.scss */
+  /* line 72, ../sass/partials/_navigation.scss */
   .btn_user_act .btn {
     padding: 12px 22px;
     line-height: 1;
-  }
-  /* line 73, ../sass/partials/_navigation.scss */
-  .btn + [class*="btn"] {
-    margin-left: 1.5em;
   }
 }
 /* line 78, ../sass/partials/_navigation.scss */
@@ -1766,7 +1837,7 @@ header[role="banner"] .brand_img {
 @media only screen and (min-width: 768px) {
   /* line 1, ../sass/partials/_heroes.scss */
   .hero_area {
-    min-height: 550px;
+    min-height: 100%;
   }
 }
 
@@ -1803,6 +1874,21 @@ header[role="banner"] .brand_img {
 }
 
 /* line 45, ../sass/partials/_heroes.scss */
+.groceries_hero {
+  background-image: url(../img/banners/groceries_banner.jpg);
+}
+
+/* line 49, ../sass/partials/_heroes.scss */
+.utilities_hero {
+  background-image: url(../img/banners/utilities_hero.jpg);
+}
+
+/* line 53, ../sass/partials/_heroes.scss */
+.personal_hero {
+  background-image: url(../img/banners/personal_banner.jpg);
+}
+
+/* line 57, ../sass/partials/_heroes.scss */
 .heroContentWrapper {
   min-height: 65vh;
   padding: 100px 0 70px;
@@ -1811,19 +1897,19 @@ header[role="banner"] .brand_img {
   align-items: center;
   /* Tablets and phablets */
 }
-/* line 52, ../sass/partials/_heroes.scss */
+/* line 64, ../sass/partials/_heroes.scss */
 .contact_hero .heroContentWrapper {
   min-height: auto;
 }
 @media only screen and (min-width: 768px) {
-  /* line 45, ../sass/partials/_heroes.scss */
+  /* line 57, ../sass/partials/_heroes.scss */
   .heroContentWrapper {
     padding-top: 150px;
     padding-bottom: 150px;
   }
 }
 
-/* line 62, ../sass/partials/_heroes.scss */
+/* line 74, ../sass/partials/_heroes.scss */
 .hero_title {
   font-size: 28px;
   margin-bottom: 15px;
@@ -1833,20 +1919,20 @@ header[role="banner"] .brand_img {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 62, ../sass/partials/_heroes.scss */
+  /* line 74, ../sass/partials/_heroes.scss */
   .hero_title {
     font-size: 42px;
   }
 }
 
-/* line 72, ../sass/partials/_heroes.scss */
+/* line 84, ../sass/partials/_heroes.scss */
 .explainerList {
   display: list-item;
   list-style-type: disc;
   text-indent: 20px;
 }
 
-/* line 78, ../sass/partials/_heroes.scss */
+/* line 90, ../sass/partials/_heroes.scss */
 .hero_blub {
   font-weight: 400;
   font-size: 16px;
@@ -1855,13 +1941,13 @@ header[role="banner"] .brand_img {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 78, ../sass/partials/_heroes.scss */
+  /* line 90, ../sass/partials/_heroes.scss */
   .hero_blub {
     font-size: 21px;
   }
 }
 
-/* line 89, ../sass/partials/_heroes.scss */
+/* line 101, ../sass/partials/_heroes.scss */
 .showcase_media {
   padding: 20px 0;
   overflow: hidden;
@@ -1870,25 +1956,25 @@ header[role="banner"] .brand_img {
   /* Tablets and phablets */
   /* Tablets and phablets */
 }
-/* line 95, ../sass/partials/_heroes.scss */
+/* line 107, ../sass/partials/_heroes.scss */
 .showcase_media img {
   border-radius: 4px;
   box-shadow: 40px 40px 0 rgba(254, 186, 21, 0.3);
 }
 @media only screen and (min-width: 768px) {
-  /* line 89, ../sass/partials/_heroes.scss */
+  /* line 101, ../sass/partials/_heroes.scss */
   .showcase_media {
     padding: 30px;
   }
 }
 @media only screen and (max-width: 767px) {
-  /* line 89, ../sass/partials/_heroes.scss */
+  /* line 101, ../sass/partials/_heroes.scss */
   .showcase_media {
     margin-bottom: 30px;
   }
 }
 
-/* line 109, ../sass/partials/_heroes.scss */
+/* line 121, ../sass/partials/_heroes.scss */
 .slashedStyle {
   display: block;
   position: relative;
@@ -1898,13 +1984,13 @@ header[role="banner"] .brand_img {
   /* Tablets and phablets */
 }
 @media only screen and (max-width: 767px) {
-  /* line 116, ../sass/partials/_heroes.scss */
+  /* line 128, ../sass/partials/_heroes.scss */
   .slashedStyle img {
     max-width: 175px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 109, ../sass/partials/_heroes.scss */
+  /* line 121, ../sass/partials/_heroes.scss */
   .slashedStyle {
     bottom: -120px;
   }
@@ -2132,37 +2218,35 @@ footer[role="contentinfo"] {
 
 /* line 170, ../sass/partials/_sections.scss */
 .brandBlock {
-  text-align: center;
   margin-bottom: 20px;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
   /* line 170, ../sass/partials/_sections.scss */
   .brandBlock {
-    text-align: left;
     margin-bottom: 0;
   }
 }
 
-/* line 180, ../sass/partials/_sections.scss */
+/* line 178, ../sass/partials/_sections.scss */
 .copyright_notice {
   font-size: 12px;
   color: rgba(53, 53, 53, 0.75);
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 180, ../sass/partials/_sections.scss */
+  /* line 178, ../sass/partials/_sections.scss */
   .copyright_notice {
     max-width: 300px;
   }
 }
 
-/* line 188, ../sass/partials/_sections.scss */
+/* line 186, ../sass/partials/_sections.scss */
 .footItemRow {
   margin-bottom: 15px;
 }
 
-/* line 192, ../sass/partials/_sections.scss */
+/* line 190, ../sass/partials/_sections.scss */
 .footer_links {
   display: -webkit-box;
   display: -moz-box;
@@ -2173,16 +2257,45 @@ footer[role="contentinfo"] {
   justify-content: center;
 }
 
-/* line 198, ../sass/partials/_sections.scss */
+/* line 196, ../sass/partials/_sections.scss */
 .footerLinkItem {
   display: block;
   padding: 7.5px 15px;
   color: inherit;
 }
-/* line 203, ../sass/partials/_sections.scss */
+/* line 201, ../sass/partials/_sections.scss */
 .footerLinkItem:hover, .footerLinkItem:focus {
   color: #FEBA15;
   text-decoration: underline;
+}
+
+/* line 207, ../sass/partials/_sections.scss */
+.tabbedHeader {
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #FFEAB9;
+  margin-bottom: 40px;
+}
+
+/* line 214, ../sass/partials/_sections.scss */
+.tabTitleHolder {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* line 219, ../sass/partials/_sections.scss */
+.tabIcon {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+/* line 224, ../sass/partials/_sections.scss */
+.tabTitle {
+  flex-grow: 1;
 }
 
 /* line 2, ../sass/partials/_posts.scss */
@@ -2217,19 +2330,25 @@ footer[role="contentinfo"] {
 }
 
 /* line 27, ../sass/partials/_posts.scss */
+.heavyPadding {
+  padding: 40px;
+  border-radius: 25px;
+}
+
+/* line 32, ../sass/partials/_posts.scss */
 .postThumbDetails {
   width: 100%;
   padding: 15px;
 }
 
-/* line 32, ../sass/partials/_posts.scss */
+/* line 37, ../sass/partials/_posts.scss */
 .postThumbImage {
   position: relative;
   text-align: center;
   overflow: hidden;
 }
 
-/* line 38, ../sass/partials/_posts.scss */
+/* line 43, ../sass/partials/_posts.scss */
 .postImageWrapper {
   display: none;
   position: relative;
@@ -2239,16 +2358,16 @@ footer[role="contentinfo"] {
   background-color: #0F427C;
   opacity: 1;
 }
-/* line 47, ../sass/partials/_posts.scss */
+/* line 52, ../sass/partials/_posts.scss */
 .has_image .postImageWrapper {
   display: block;
 }
-/* line 51, ../sass/partials/_posts.scss */
+/* line 56, ../sass/partials/_posts.scss */
 .postImageWrapper:hover, .postImageWrapper:focus {
   opacity: .75;
 }
 
-/* line 56, ../sass/partials/_posts.scss */
+/* line 61, ../sass/partials/_posts.scss */
 .bannerImage {
   position: absolute;
   top: 0;
@@ -2264,7 +2383,7 @@ footer[role="contentinfo"] {
   pointer-events: none;
 }
 
-/* line 71, ../sass/partials/_posts.scss */
+/* line 76, ../sass/partials/_posts.scss */
 .postExcerpt {
   font-size: 16px;
   line-height: 1.8em;
@@ -2274,19 +2393,19 @@ footer[role="contentinfo"] {
   text-overflow: ellipsis;
 }
 
-/* line 80, ../sass/partials/_posts.scss */
+/* line 85, ../sass/partials/_posts.scss */
 .postTag {
   z-index: 10;
   color: #757575;
 }
-/* line 84, ../sass/partials/_posts.scss */
+/* line 89, ../sass/partials/_posts.scss */
 .postTag a {
   text-decoration: underline;
   color: #212121;
 }
 
 /*Post Page*/
-/* line 92, ../sass/partials/_posts.scss */
+/* line 97, ../sass/partials/_posts.scss */
 .featuredImage {
   background: linear-gradient(to bottom, #212121 0%, #212121 50%, #ffffff 50%, #ffffff 100%);
   position: relative;
@@ -2294,19 +2413,19 @@ footer[role="contentinfo"] {
   margin-bottom: -40px;
   text-align: center;
 }
-/* line 99, ../sass/partials/_posts.scss */
+/* line 104, ../sass/partials/_posts.scss */
 .featuredImage img {
   display: inline-block;
 }
 
-/* line 104, ../sass/partials/_posts.scss */
+/* line 109, ../sass/partials/_posts.scss */
 .postInfoWidget {
   clear: both;
   border-top: 1px solid #d5d5d5;
   padding: 20px 0;
 }
 
-/* line 110, ../sass/partials/_posts.scss */
+/* line 115, ../sass/partials/_posts.scss */
 .postShare {
   display: -webkit-box;
   display: -moz-box;
@@ -2316,19 +2435,19 @@ footer[role="contentinfo"] {
   align-items: center;
 }
 
-/* line 115, ../sass/partials/_posts.scss */
+/* line 120, ../sass/partials/_posts.scss */
 .meta_title {
   flex-shrink: 0;
   margin-right: 20px;
 }
 
-/* line 120, ../sass/partials/_posts.scss */
+/* line 125, ../sass/partials/_posts.scss */
 .categoryTagItem {
   display: inline-block;
   padding: 0 5px;
 }
 
-/* line 125, ../sass/partials/_posts.scss */
+/* line 130, ../sass/partials/_posts.scss */
 .tagItemWrapper {
   line-height: 28px;
   display: inline-block;
@@ -2338,13 +2457,13 @@ footer[role="contentinfo"] {
   font-size: 13px;
   color: #212121;
 }
-/* line 134, ../sass/partials/_posts.scss */
+/* line 139, ../sass/partials/_posts.scss */
 .tagItemWrapper:hover, .tagItemWrapper:focus {
   background-color: rgba(0, 0, 0, 0.25);
   color: #FEBA15;
 }
 
-/* line 140, ../sass/partials/_posts.scss */
+/* line 145, ../sass/partials/_posts.scss */
 .postCatHolder {
   display: block;
   padding-top: 15px;
@@ -2352,21 +2471,21 @@ footer[role="contentinfo"] {
   z-index: 10;
   /* Tablets and phablets */
 }
-/* line 146, ../sass/partials/_posts.scss */
+/* line 151, ../sass/partials/_posts.scss */
 .has_image .postCatHolder {
   position: absolute;
   top: 0;
   left: 0;
 }
 @media only screen and (min-width: 768px) {
-  /* line 140, ../sass/partials/_posts.scss */
+  /* line 145, ../sass/partials/_posts.scss */
   .postCatHolder {
     padding-top: 30px;
     padding-left: 30px;
   }
 }
 
-/* line 158, ../sass/partials/_posts.scss */
+/* line 163, ../sass/partials/_posts.scss */
 .postCTA {
   padding: 15px;
   border: 1px solid #d5d5d5;
@@ -2378,12 +2497,12 @@ footer[role="contentinfo"] {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 158, ../sass/partials/_posts.scss */
+  /* line 163, ../sass/partials/_posts.scss */
   .postCTA {
     font-size: 16px;
   }
 }
-/* line 171, ../sass/partials/_posts.scss */
+/* line 176, ../sass/partials/_posts.scss */
 .postCTA:hover, .postCTA:focus {
   background-color: #FCF9F1;
   border-color: transparent;
@@ -2396,16 +2515,22 @@ footer[role="contentinfo"] {
 
 /* line 5, ../sass/partials/_cards.scss */
 .tileWrapper {
-  display: block;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   background-color: white;
   border-radius: 15px;
   border: 1px solid #E5E5E5;
   padding: 15px 20px;
   width: 100%;
   height: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-/* line 15, ../sass/partials/_cards.scss */
+/* line 17, ../sass/partials/_cards.scss */
 .brandFigure {
   display: -webkit-box;
   display: -moz-box;
@@ -2417,14 +2542,14 @@ footer[role="contentinfo"] {
   text-align: center;
 }
 
-/* line 22, ../sass/partials/_cards.scss */
+/* line 24, ../sass/partials/_cards.scss */
 .brandImage {
   width: auto;
   max-height: 65px;
   margin-bottom: 15px;
 }
 
-/* line 28, ../sass/partials/_cards.scss */
+/* line 30, ../sass/partials/_cards.scss */
 .brandName {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2439,10 +2564,37 @@ footer[role="contentinfo"] {
 }
 
 /* line 6, ../sass/partials/_lists.scss */
+.featureWrapper {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+/* line 11, ../sass/partials/_lists.scss */
 .featureIcon {
   width: auto;
   max-height: 96px;
   margin-bottom: 20px;
+}
+
+/* line 17, ../sass/partials/_lists.scss */
+.featCount {
+  margin-bottom: 20px;
+}
+
+/* line 21, ../sass/partials/_lists.scss */
+.counter {
+  width: 64px;
+  height: 64px;
+  background-color: #0F427C;
+  color: #EDFAFA;
+  font-size: 21px;
+  line-height: 1;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
 }
 
 /* line 1, ../sass/partials/_dialogs.scss */
