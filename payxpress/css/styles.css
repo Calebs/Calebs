@@ -539,17 +539,31 @@ fieldset + fieldset {
 }
 
 /* line 109, ../sass/partials/_form.scss */
+.inputAddonBtn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  bottom: auto;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 65%;
+  z-index: 10;
+}
+
+/* line 118, ../sass/partials/_form.scss */
 input:focus {
   outline: none;
 }
 
-/* line 114, ../sass/partials/_form.scss */
+/* line 123, ../sass/partials/_form.scss */
 .text-error, .has-error {
   font-size: 12px;
   color: red !important;
 }
 
-/* line 119, ../sass/partials/_form.scss */
+/* line 128, ../sass/partials/_form.scss */
 .form-control {
   padding: 8px 12px;
   font-size: 14px;
@@ -575,26 +589,26 @@ input:focus {
   box-shadow: unset;
   vertical-align: middle;
 }
-/* line 141, ../sass/partials/_form.scss */
+/* line 150, ../sass/partials/_form.scss */
 .form-control.input-rounded {
   border-radius: 30px;
   padding-left: 15px;
 }
-/* line 146, ../sass/partials/_form.scss */
+/* line 155, ../sass/partials/_form.scss */
 .searchBar .form-control {
   padding-right: 50px;
   background-color: rgba(0, 0, 0, 0.25);
   color: #c5c5c5;
   border: none;
 }
-/* line 153, ../sass/partials/_form.scss */
+/* line 162, ../sass/partials/_form.scss */
 .form-control:focus {
   outline: 0;
   border-color: #FEBA15;
   box-shadow: none;
 }
 
-/* line 160, ../sass/partials/_form.scss */
+/* line 169, ../sass/partials/_form.scss */
 .control-label {
   text-transform: none;
   font-size: 1em;
@@ -604,32 +618,32 @@ input:focus {
   line-height: 1.4rem;
   color: #757575;
 }
-/* line 169, ../sass/partials/_form.scss */
+/* line 178, ../sass/partials/_form.scss */
 [class*="checkbox"] .control-label, [class*="radio"] .control-label {
   color: inherit;
 }
 
-/* line 174, ../sass/partials/_form.scss */
+/* line 183, ../sass/partials/_form.scss */
 select.form-control {
   background: white url(../img/icons/arrow-down.png) right center no-repeat;
   padding-right: 25px;
 }
-/* line 177, ../sass/partials/_form.scss */
+/* line 186, ../sass/partials/_form.scss */
 select.form-control:focus {
   outline: none;
   background: white url(../img/icons/arrow-down.png) right center no-repeat;
 }
 
-/* line 183, ../sass/partials/_form.scss */
+/* line 192, ../sass/partials/_form.scss */
 .radio, .checkbox {
   line-height: 1;
 }
-/* line 186, ../sass/partials/_form.scss */
+/* line 195, ../sass/partials/_form.scss */
 .radio + .radio, .radio + .checkbox, .checkbox + .radio, .checkbox + .checkbox {
   margin-top: 15px;
 }
 
-/* line 191, ../sass/partials/_form.scss */
+/* line 200, ../sass/partials/_form.scss */
 input[type="radio"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
@@ -643,19 +657,19 @@ input[type="radio"],
   background-color: transparent;
   cursor: pointer;
 }
-/* line 204, ../sass/partials/_form.scss */
+/* line 213, ../sass/partials/_form.scss */
 .controlSummary input[type="radio"], .controlSummary
 .radio input[type="radio"], .controlSummary
 .radio-inline input[type="radio"] {
   margin-top: 6px;
 }
-/* line 208, ../sass/partials/_form.scss */
+/* line 217, ../sass/partials/_form.scss */
 input[type="radio"]:focus,
 .radio input[type="radio"]:focus,
 .radio-inline input[type="radio"]:focus {
   outline: none;
 }
-/* line 211, ../sass/partials/_form.scss */
+/* line 220, ../sass/partials/_form.scss */
 input[type="radio"]:before, input[type="radio"]:after,
 .radio input[type="radio"]:before,
 .radio input[type="radio"]:after,
@@ -671,7 +685,7 @@ input[type="radio"]:before, input[type="radio"]:after,
   -webkit-transition: 240ms;
   transition: 240ms;
 }
-/* line 220, ../sass/partials/_form.scss */
+/* line 229, ../sass/partials/_form.scss */
 input[type="radio"]:before,
 .radio input[type="radio"]:before,
 .radio-inline input[type="radio"]:before {
@@ -684,7 +698,7 @@ input[type="radio"]:before,
   -webkit-transform: scale(0);
   transform: scale(0);
 }
-/* line 227, ../sass/partials/_form.scss */
+/* line 236, ../sass/partials/_form.scss */
 input[type="radio"]:after,
 .radio input[type="radio"]:after,
 .radio-inline input[type="radio"]:after {
@@ -692,7 +706,7 @@ input[type="radio"]:after,
   top: -3px;
   border: 2px solid #959595;
 }
-/* line 232, ../sass/partials/_form.scss */
+/* line 241, ../sass/partials/_form.scss */
 input[type="radio"]:checked:before,
 .radio input[type="radio"]:checked:before,
 .radio-inline input[type="radio"]:checked:before {
@@ -701,19 +715,19 @@ input[type="radio"]:checked:before,
   -webkit-transform: scale(0.5);
   transform: scale(0.5);
 }
-/* line 235, ../sass/partials/_form.scss */
+/* line 244, ../sass/partials/_form.scss */
 input[type="radio"]:disabled:checked:before,
 .radio input[type="radio"]:disabled:checked:before,
 .radio-inline input[type="radio"]:disabled:checked:before {
   background-color: #959595;
 }
-/* line 238, ../sass/partials/_form.scss */
+/* line 247, ../sass/partials/_form.scss */
 input[type="radio"]:checked:after,
 .radio input[type="radio"]:checked:after,
 .radio-inline input[type="radio"]:checked:after {
   border-color: #FEBA15;
 }
-/* line 241, ../sass/partials/_form.scss */
+/* line 250, ../sass/partials/_form.scss */
 input[type="radio"]:disabled:after, input[type="radio"]:disabled:checked:after,
 .radio input[type="radio"]:disabled:after,
 .radio input[type="radio"]:disabled:checked:after,
@@ -722,7 +736,7 @@ input[type="radio"]:disabled:after, input[type="radio"]:disabled:checked:after,
   border-color: #959595;
 }
 
-/* line 247, ../sass/partials/_form.scss */
+/* line 256, ../sass/partials/_form.scss */
 input[type="checkbox"],
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
@@ -733,13 +747,13 @@ input[type="checkbox"],
   -webkit-appearance: none;
   appearance: none;
 }
-/* line 256, ../sass/partials/_form.scss */
+/* line 265, ../sass/partials/_form.scss */
 input[type="checkbox"]:focus,
 .checkbox input[type="checkbox"]:focus,
 .checkbox-inline input[type="checkbox"]:focus {
   outline: none;
 }
-/* line 259, ../sass/partials/_form.scss */
+/* line 268, ../sass/partials/_form.scss */
 input[type="checkbox"]:after,
 .checkbox input[type="checkbox"]:after,
 .checkbox-inline input[type="checkbox"]:after {
@@ -756,7 +770,7 @@ input[type="checkbox"]:after,
   -webkit-transition: 240ms;
   transition: 240ms;
 }
-/* line 270, ../sass/partials/_form.scss */
+/* line 279, ../sass/partials/_form.scss */
 input[type="checkbox"]:checked:before,
 .checkbox input[type="checkbox"]:checked:before,
 .checkbox-inline input[type="checkbox"]:checked:before {
@@ -775,34 +789,34 @@ input[type="checkbox"]:checked:before,
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 283, ../sass/partials/_form.scss */
+/* line 292, ../sass/partials/_form.scss */
 input[type="checkbox"]:checked:after,
 .checkbox input[type="checkbox"]:checked:after,
 .checkbox-inline input[type="checkbox"]:checked:after {
   background-color: #0F427C;
   border-color: #0F427C;
 }
-/* line 287, ../sass/partials/_form.scss */
+/* line 296, ../sass/partials/_form.scss */
 input[type="checkbox"]:disabled:after,
 .checkbox input[type="checkbox"]:disabled:after,
 .checkbox-inline input[type="checkbox"]:disabled:after {
   border-color: #959595;
 }
-/* line 290, ../sass/partials/_form.scss */
+/* line 299, ../sass/partials/_form.scss */
 input[type="checkbox"]:disabled:checked:after,
 .checkbox input[type="checkbox"]:disabled:checked:after,
 .checkbox-inline input[type="checkbox"]:disabled:checked:after {
   background-color: #E5E5E5;
   border-color: transparent;
 }
-/* line 295, ../sass/partials/_form.scss */
+/* line 304, ../sass/partials/_form.scss */
 input[type="checkbox"]:disabled:checked:before,
 .checkbox input[type="checkbox"]:disabled:checked:before,
 .checkbox-inline input[type="checkbox"]:disabled:checked:before {
   border-color: #959595;
 }
 
-/* line 300, ../sass/partials/_form.scss */
+/* line 309, ../sass/partials/_form.scss */
 .required::after {
   content: "*";
   font-size: 1.025em;
@@ -810,19 +824,19 @@ input[type="checkbox"]:disabled:checked:before,
   color: #F61067;
 }
 
-/* line 307, ../sass/partials/_form.scss */
+/* line 316, ../sass/partials/_form.scss */
 input[disabled] {
   background-color: #c5c5c5;
 }
 
-/* line 311, ../sass/partials/_form.scss */
+/* line 320, ../sass/partials/_form.scss */
 .radio-inline,
 .checkbox-inline {
   padding: 10px 0 5px;
   display: inline-flex;
   align-items: center;
 }
-/* line 317, ../sass/partials/_form.scss */
+/* line 326, ../sass/partials/_form.scss */
 .radio-inline + .radio-inline,
 .radio-inline + .checkbox-inline,
 .checkbox-inline + .radio-inline,
@@ -830,21 +844,102 @@ input[disabled] {
   margin-left: 30px;
 }
 
-/* line 323, ../sass/partials/_form.scss */
+/* line 332, ../sass/partials/_form.scss */
 label {
   font-weight: normal;
 }
-/* line 326, ../sass/partials/_form.scss */
+/* line 335, ../sass/partials/_form.scss */
 label.radio-inline + label {
   margin-left: 30px;
 }
-/* line 330, ../sass/partials/_form.scss */
+/* line 339, ../sass/partials/_form.scss */
 label.checkbox-inline {
   margin: 5px 0;
   margin-bottom: 0 !important;
   font-size: 14px;
   display: inline-block;
   vertical-align: top;
+}
+
+/* line 1, ../sass/partials/_authentication.scss */
+.authblock {
+  display: block;
+  margin-bottom: 70px;
+  width: 100%;
+  background-color: white;
+  padding: 40px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  border: 1px solid #E5E5E5;
+  /* Tablets and phablets */
+}
+@media only screen and (min-width: 768px) {
+  /* line 1, ../sass/partials/_authentication.scss */
+  .authblock {
+    padding: 40px 60px;
+  }
+}
+
+/* line 16, ../sass/partials/_authentication.scss */
+.LogoHolder {
+  margin-bottom: 30px;
+}
+/* line 19, ../sass/partials/_authentication.scss */
+.LogoHolder img {
+  display: inline-block;
+  max-width: 200px;
+}
+
+/* line 25, ../sass/partials/_authentication.scss */
+.blockHeader {
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+/* line 30, ../sass/partials/_authentication.scss */
+.auth_cta {
+  align-items: center;
+  margin-top: 30px;
+}
+/* line 34, ../sass/partials/_authentication.scss */
+.auth_cta .disclaimer_block {
+  padding-top: 20px;
+  border-top: 1px solid #d5d5d5;
+}
+
+/* line 40, ../sass/partials/_authentication.scss */
+.error_message {
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  clear: both;
+  color: #353535;
+  background-color: transparent;
+  border: 1px solid #F61067;
+  border-radius: 10px;
+}
+
+/* line 51, ../sass/partials/_authentication.scss */
+.groupWrapper {
+  padding: 15px;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-color: transparent;
+  border-radius: 15px;
+}
+/* line 57, ../sass/partials/_authentication.scss */
+.groupWrapper:hover, .groupWrapper:focus {
+  background-color: #f5f5f5;
+  color: inherit;
+}
+
+/* line 63, ../sass/partials/_authentication.scss */
+.authFooter {
+  padding-bottom: 30px;
+  font-size: 12px;
+  background-color: transparent;
 }
 
 /* line 1, ../sass/partials/_user_area.scss */
@@ -1089,6 +1184,15 @@ svg {
 /* line 62, ../sass/partials/_custom_icons.scss */
 .icon_file {
   background-image: url(../img/icons/file.svg);
+}
+
+/* line 66, ../sass/partials/_custom_icons.scss */
+.icon_eye {
+  background-image: url(../img/icons/show.svg);
+}
+/* line 69, ../sass/partials/_custom_icons.scss */
+.show_pass .icon_eye {
+  background-image: url(../img/icons/hide.svg);
 }
 
 /* line 1, ../sass/partials/_navigation.scss */
@@ -1376,6 +1480,17 @@ button:focus, button:visited {
 }
 
 /* line 248, ../sass/partials/_navigation.scss */
+.cls_lg {
+  width: 48px;
+  height: 48px;
+}
+/* line 252, ../sass/partials/_navigation.scss */
+.cls_lg::before, .cls_lg::after {
+  height: 24px;
+  margin-top: -12px;
+}
+
+/* line 259, ../sass/partials/_navigation.scss */
 .to-top {
   display: inline-block;
   height: 30px;
@@ -1397,35 +1512,35 @@ button:focus, button:visited {
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
   z-index: 30000;
 }
-/* line 265, ../sass/partials/_navigation.scss */
+/* line 276, ../sass/partials/_navigation.scss */
 .no-touch .to-top:hover, .no-touch .to-top:focus {
   background-color: #0F427C;
   opacity: 1;
 }
-/* line 271, ../sass/partials/_navigation.scss */
+/* line 282, ../sass/partials/_navigation.scss */
 .to-top.is-visible, .to-top.fade-out, .no-touch .to-top:hover {
   -moz-transition: opacity 0.3s, visibility 0s;
   -o-transition: opacity 0.3s, visibility 0s;
   -webkit-transition: opacity 0.3s, visibility 0s;
   transition: opacity 0.3s, visibility 0s;
 }
-/* line 276, ../sass/partials/_navigation.scss */
+/* line 287, ../sass/partials/_navigation.scss */
 .to-top.is-visible {
   /* the button becomes visible */
   visibility: visible;
   opacity: 1;
 }
-/* line 281, ../sass/partials/_navigation.scss */
+/* line 292, ../sass/partials/_navigation.scss */
 .to-top.fade-out {
   /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
   opacity: .5;
 }
 
-/* line 287, ../sass/partials/_navigation.scss */
+/* line 298, ../sass/partials/_navigation.scss */
 .store_btn {
   max-width: 200px;
 }
-/* line 290, ../sass/partials/_navigation.scss */
+/* line 301, ../sass/partials/_navigation.scss */
 .store_btn > a {
   display: block;
   opacity: 1;
@@ -1434,7 +1549,7 @@ button:focus, button:visited {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 295, ../sass/partials/_navigation.scss */
+/* line 306, ../sass/partials/_navigation.scss */
 .store_btn > a:hover, .store_btn > a:focus {
   opacity: .75;
 }
@@ -1904,7 +2019,7 @@ header[role="banner"] .brand_img {
 @media only screen and (min-width: 768px) {
   /* line 57, ../sass/partials/_heroes.scss */
   .heroContentWrapper {
-    padding-top: 150px;
+    padding-top: 220px;
     padding-bottom: 150px;
   }
 }
