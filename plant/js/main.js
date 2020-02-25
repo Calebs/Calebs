@@ -71,24 +71,15 @@ jQuery(document).ready(function($){
         $(this).parents(".content_inner").toggleClass('contentCollapsed');
     });
 
-    var nav_link = $(".menuListItem > .menuLinkItem");
+    
 
-    nav_link.on('mouseover', function(e) {
-        //e.preventDefault();
-        parentDiv = $(this).parents(".menuListItem");
-        parentDiv.addClass('navMenuActive');
-        // if(!parentDiv.hasClass('navMenuActive')) {
-        //     parentDiv.addClass('navMenuActive');
-        // } else {
-        //     parentDiv.removeClass('navMenuActive');
-        // }
-    });
-
-    nav_link.on('mouseleave', function(e) {
-        //e.preventDefault();
-        parentDiv = $(this).parents(".menuListItem");
-        parentDiv.removeClass('navMenuActive');
-    });
+    if ($(window).width() < MQL) { 
+        var nav_link = $(".hasChildren > .menuLinkItem");
+        nav_link.on('click', function(e) {
+            e.preventDefault();
+            $(this).parents(".menuListItem").toggleClass('navMenuActive');
+        });
+    }
 
 
 });
