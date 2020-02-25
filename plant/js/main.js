@@ -24,16 +24,6 @@ jQuery(document).ready(function($){
         }, scroll_top_duration
 		);
     });
-    
-    // Autghentication form input    
-    $('.form-control').on('input', function() {
-        var $input_field = $(this).closest('.labeledFormInput');
-        if (this.value) {
-            $input_field.addClass('not_empty');
-        } else {
-            $input_field.removeClass('not_empty');
-        }
-    });
 
     /* General Navigation*/
 
@@ -66,7 +56,8 @@ jQuery(document).ready(function($){
             this.previousTop = currentTop;
         });
     }
-        //open/close primary navigation
+
+    //open/close primary navigation
     $('.primary-nav-trigger').on('click', function(event){
         event.stopPropagation();
         $('.menu-icon').toggleClass('is-clicked');
@@ -76,8 +67,28 @@ jQuery(document).ready(function($){
     });
         
     var show_more_toggle = $(".height_toggle");
-        show_more_toggle.on('click', function() {
+    show_more_toggle.on('click', function() {
         $(this).parents(".content_inner").toggleClass('contentCollapsed');
     });
+
+    var nav_link = $(".menuListItem > .menuLinkItem");
+
+    nav_link.on('mouseover', function(e) {
+        //e.preventDefault();
+        parentDiv = $(this).parents(".menuListItem");
+        parentDiv.addClass('navMenuActive');
+        // if(!parentDiv.hasClass('navMenuActive')) {
+        //     parentDiv.addClass('navMenuActive');
+        // } else {
+        //     parentDiv.removeClass('navMenuActive');
+        // }
+    });
+
+    nav_link.on('mouseleave', function(e) {
+        //e.preventDefault();
+        parentDiv = $(this).parents(".menuListItem");
+        parentDiv.removeClass('navMenuActive');
+    });
+
 
 });
