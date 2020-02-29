@@ -150,7 +150,7 @@
                                 <span class="caps_upper">Select a Topic</span>
                             </div>
                             <nav class="sideNavBlock">
-                                <ul class="navBlockList">
+                                <ul class="navBlockList" id="help_nav">
                                     <li class="navBlockItem"><a href="#" class="navBlockLink">About PLANT</a></li>
                                     <li class="navBlockItem active"><a href="#" class="navBlockLink">Agri Business Capacity Building Session</a></li>
                                     <li class="navBlockItem"><a href="#" class="navBlockLink">AgTech Incubation Program</a></li>
@@ -359,7 +359,15 @@
 
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
+    <script src="js/tinynav.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        $('#help_nav').tinyNav({
+            active: 'selected',
+            header: 'Help Topic'
+        });
+    </script>
     		
 </body>
 </html>
