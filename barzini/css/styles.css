@@ -1540,9 +1540,21 @@ header[role="banner"] .brand_img {
 /* line 158, ../sass/partials/_header_nav.scss */
 .primary-nav-trigger {
   position: relative;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  border-radius: 50%;
+}
+/* line 169, ../sass/partials/_header_nav.scss */
+.primary-nav-trigger:hover, .primary-nav-trigger:focus {
+  background-color: #f5f5f5;
 }
 
-/* line 162, ../sass/partials/_header_nav.scss */
+/* line 174, ../sass/partials/_header_nav.scss */
 .menu-icon {
   /* this span is the central line of the menu icon */
   display: block;
@@ -1556,7 +1568,7 @@ header[role="banner"] .brand_img {
   transition: background-color 0.6s;
   /* these are the upper and lower lines in the menu icon */
 }
-/* line 171, ../sass/partials/_header_nav.scss */
+/* line 183, ../sass/partials/_header_nav.scss */
 .menu-icon::before, .menu-icon:after {
   content: '';
   width: 100%;
@@ -1569,23 +1581,23 @@ header[role="banner"] .brand_img {
   -webkit-transition: -webkit-transform 0.6s, top 0.6s, background-color 0s;
   transition: transform 0.6s, top 0.6s, background-color 0s;
 }
-/* line 181, ../sass/partials/_header_nav.scss */
+/* line 193, ../sass/partials/_header_nav.scss */
 .menu-icon::before {
   top: -7px;
 }
-/* line 184, ../sass/partials/_header_nav.scss */
+/* line 196, ../sass/partials/_header_nav.scss */
 .menu-icon::after {
   top: 7px;
 }
-/* line 187, ../sass/partials/_header_nav.scss */
+/* line 199, ../sass/partials/_header_nav.scss */
 .menu-icon.is-clicked {
   background-color: rgba(175, 4, 4, 0);
 }
-/* line 189, ../sass/partials/_header_nav.scss */
+/* line 201, ../sass/partials/_header_nav.scss */
 .menu-icon.is-clicked::before, .menu-icon.is-clicked::after {
   background-color: #14121a;
 }
-/* line 193, ../sass/partials/_header_nav.scss */
+/* line 205, ../sass/partials/_header_nav.scss */
 .menu-icon.is-clicked::before {
   top: 0;
   -moz-transform: rotate(135deg);
@@ -1593,7 +1605,7 @@ header[role="banner"] .brand_img {
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-/* line 197, ../sass/partials/_header_nav.scss */
+/* line 209, ../sass/partials/_header_nav.scss */
 .menu-icon.is-clicked::after {
   top: 0;
   -moz-transform: rotate(225deg);
@@ -1602,7 +1614,7 @@ header[role="banner"] .brand_img {
   transform: rotate(225deg);
 }
 
-/* line 204, ../sass/partials/_header_nav.scss */
+/* line 216, ../sass/partials/_header_nav.scss */
 .menuPrimary {
   display: block;
   width: 100%;
@@ -1621,7 +1633,7 @@ header[role="banner"] .brand_img {
   /* Tablets and phablets */
 }
 @media only screen and (max-width: 767px) {
-  /* line 204, ../sass/partials/_header_nav.scss */
+  /* line 216, ../sass/partials/_header_nav.scss */
   .menuPrimary {
     top: 60px;
     transform-origin: top;
@@ -1630,7 +1642,7 @@ header[role="banner"] .brand_img {
     -webkit-transform: rotateX(-90deg);
     transform: rotateX(-90deg);
   }
-  /* line 220, ../sass/partials/_header_nav.scss */
+  /* line 232, ../sass/partials/_header_nav.scss */
   .showNavMenu .menuPrimary {
     -moz-transform: rotateX(0deg);
     -ms-transform: rotateX(0deg);
@@ -1639,7 +1651,7 @@ header[role="banner"] .brand_img {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 204, ../sass/partials/_header_nav.scss */
+  /* line 216, ../sass/partials/_header_nav.scss */
   .menuPrimary {
     left: 80px;
     top: 0;
@@ -1649,7 +1661,7 @@ header[role="banner"] .brand_img {
     -webkit-transform: rotateY(-90deg);
     transform: rotateY(-90deg);
   }
-  /* line 231, ../sass/partials/_header_nav.scss */
+  /* line 243, ../sass/partials/_header_nav.scss */
   .showNavMenu .menuPrimary {
     -moz-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
@@ -1657,7 +1669,7 @@ header[role="banner"] .brand_img {
     transform: rotateY(0deg);
   }
 }
-/* line 236, ../sass/partials/_header_nav.scss */
+/* line 248, ../sass/partials/_header_nav.scss */
 .showNavMenu .menuPrimary {
   visibility: visible;
   opacity: 1;
@@ -1668,7 +1680,7 @@ header[role="banner"] .brand_img {
   transition: transform 0.4s ease-in-out 0s, opacity 0.35s ease-in-out 0s, visibility 0.4s ease-in-out 0s;
 }
 
-/* line 243, ../sass/partials/_header_nav.scss */
+/* line 255, ../sass/partials/_header_nav.scss */
 .primaryMenuWrapper {
   width: 100%;
   display: block;
@@ -1678,13 +1690,13 @@ header[role="banner"] .brand_img {
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 243, ../sass/partials/_header_nav.scss */
+  /* line 255, ../sass/partials/_header_nav.scss */
   .primaryMenuWrapper {
     padding: 100px 70px;
   }
 }
 
-/* line 255, ../sass/partials/_header_nav.scss */
+/* line 267, ../sass/partials/_header_nav.scss */
 .primaryMenuItem {
   display: block;
   clear: both;
@@ -1693,13 +1705,13 @@ header[role="banner"] .brand_img {
   /* Tablets and phablets */
 }
 @media only screen and (max-width: 767px) {
-  /* line 255, ../sass/partials/_header_nav.scss */
+  /* line 267, ../sass/partials/_header_nav.scss */
   .primaryMenuItem {
     text-align: center;
   }
 }
 
-/* line 266, ../sass/partials/_header_nav.scss */
+/* line 278, ../sass/partials/_header_nav.scss */
 .menuLinkBtn {
   display: block;
   font-size: 21px;
@@ -1707,50 +1719,50 @@ header[role="banner"] .brand_img {
   font-family: "Spectral", Roboto, Segoe UI, Open Sans, sans-serif;
   /* Tablets and phablets */
 }
-/* line 272, ../sass/partials/_header_nav.scss */
+/* line 284, ../sass/partials/_header_nav.scss */
 .menuLinkBtn.btn {
   font-size: 16px;
   border-color: #959595;
 }
-/* line 276, ../sass/partials/_header_nav.scss */
+/* line 288, ../sass/partials/_header_nav.scss */
 .menuLinkBtn.btn:hover, .menuLinkBtn.btn:focus {
   background-color: #14121A;
   color: #f5f5f5;
 }
 @media only screen and (min-width: 768px) {
-  /* line 266, ../sass/partials/_header_nav.scss */
+  /* line 278, ../sass/partials/_header_nav.scss */
   .menuLinkBtn {
     font-size: 32px;
     display: inline-block;
   }
 }
 
-/* line 288, ../sass/partials/_header_nav.scss */
+/* line 300, ../sass/partials/_header_nav.scss */
 .navInfoBlock {
   max-width: 280px;
   margin: auto;
   /* Tablets and phablets */
 }
 @media only screen and (min-width: 768px) {
-  /* line 288, ../sass/partials/_header_nav.scss */
+  /* line 300, ../sass/partials/_header_nav.scss */
   .navInfoBlock {
     font-size: 16px;
     line-height: 2;
   }
 }
 
-/* line 298, ../sass/partials/_header_nav.scss */
+/* line 310, ../sass/partials/_header_nav.scss */
 .infoBlockTitle {
   font-size: 16px;
   letter-spacing: .2em;
 }
 
-/* line 303, ../sass/partials/_header_nav.scss */
+/* line 315, ../sass/partials/_header_nav.scss */
 .streamServices {
   clear: both;
 }
 
-/* line 307, ../sass/partials/_header_nav.scss */
+/* line 319, ../sass/partials/_header_nav.scss */
 .logo_grid {
   display: -webkit-box;
   display: -moz-box;
@@ -1764,24 +1776,24 @@ header[role="banner"] .brand_img {
   /* Tablets and phablets */
 }
 @media only screen and (max-width: 767px) {
-  /* line 307, ../sass/partials/_header_nav.scss */
+  /* line 319, ../sass/partials/_header_nav.scss */
   .logo_grid {
     justify-content: center;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 307, ../sass/partials/_header_nav.scss */
+  /* line 319, ../sass/partials/_header_nav.scss */
   .logo_grid {
     margin-left: -20px;
   }
 }
 
-/* line 322, ../sass/partials/_header_nav.scss */
+/* line 334, ../sass/partials/_header_nav.scss */
 .logo_item {
   padding: 15px 20px;
   color: #14121A;
 }
-/* line 326, ../sass/partials/_header_nav.scss */
+/* line 338, ../sass/partials/_header_nav.scss */
 .logo_item img {
   display: inline-block;
   height: 50px;
@@ -1790,7 +1802,7 @@ header[role="banner"] .brand_img {
   width: auto;
 }
 
-/* line 335, ../sass/partials/_header_nav.scss */
+/* line 347, ../sass/partials/_header_nav.scss */
 .copyright_notice {
   clear: both;
   color: rgba(149, 149, 149, 0.75);
