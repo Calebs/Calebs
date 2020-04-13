@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+$(document).ready(function(){
   $('[data-toggle="tooltip"]').tooltip();
 
 	// browser window scroll (in pixels) after which the "back to top" link is shown
@@ -25,16 +25,6 @@ jQuery(document).ready(function($){
 		);
     });
     
-    // Autghentication form input    
-    $('.form-control').on('input', function() {
-        var $input_field = $(this).closest('.labeledFormInput');
-        if (this.value) {
-            $input_field.addClass('not_empty');
-        } else {
-            $input_field.removeClass('not_empty');
-        }
-    });
-
     /* General Navigation*/
 
    //primary navigation slide-in effect
@@ -75,11 +65,13 @@ jQuery(document).ready(function($){
         $('body').toggleClass('scroll_lock');
     });
         
-        // Show and hide password, user login
+    // Show and hide password, user login
     var visualTrigger = $('#showPass');
     var pwd_input = $('.user_pass');
+
     visualTrigger.on('click',function() {
       $(this).toggleClass('show_pass');
+      
       if (pwd_input.attr("type") == "password") {
           pwd_input.attr("type", "text");
       } else {
@@ -94,13 +86,12 @@ jQuery(document).ready(function($){
     });
 
      /*Custom Selector*/
-     var selector = $(".pillSelectControl"), 
-        selectorLabel = $(".pillWrapper");
+    var selector = $(".pillSelectControl");
+        //selectorLabel = $(".pillWrapper");
      
-        selector.on('change', function() {
-          $(this).parents(".selectorItem").toggleClass("selected");
+    selector.on('change', function() {
+        $(this).parents(".selectorItem").toggleClass("selected");
     });
-
         
     $('#appNotifications').on('click', function(e) {
         e.preventDefault();

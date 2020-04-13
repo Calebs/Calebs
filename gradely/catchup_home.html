@@ -12,6 +12,7 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/base.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
@@ -31,25 +32,31 @@
                 </div>
                 <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuPrimary">
-                        <div class="menuListItem">
+                        <div class="menuListItem ">
                             <a href="index.html" class="menuLinkItem">Home</a>
                         </div>
                         <div class="menuListItem">
                             <a href="school_home.html" class="menuLinkItem">For Schools</a>
                         </div>
+                        <div class="menuListItem active">
+                            <a href="catchup_home.html" class="menuLinkItem">CatchUp!</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="tutoring_lander.html" class="menuLinkItem">Tutoring</a>
+                        </div>
                         <div class="menuListItem">
                             <a href="pricing.html" class="menuLinkItem">Pricing</a>
                         </div>
-                        <div class="menuListItem hidden">
+                        <div class="menuListItem">
                             <a href="login.html" class="menuLinkItem">Log In</a>
                         </div>
                     </nav>
                     <nav class="navMenu menuAlt">
-                        <div class="controlBtn btn_user_act hidden">
-                            <a href="#" class="btn btn-secondary">Sign Up</a>
+                        <div class="controlBtn btn_user_act">
+                            <a href="signup_lander.html" class="btn btn-secondary">Sign Up</a>
                         </div>
                         <!-- only visible when user is logged in -->
-                        <div class="controlBtn btn_user_act ">
+                        <div class="controlBtn btn_user_act hidden">
                             <a href="#" class="btn btn-secondary">My Dashboard</a>
                         </div>
                         <div class="controlBtn nav_trigger">
@@ -66,142 +73,343 @@
 
     <section class="hero_area resource_hero">
         <div class="container">
-            <div class="heroContentWrapper">
-                <div class="row align-items-center">
-                    <div class="heroTextWrapper color__inverse_light col-md-6 col-lg-5">
-                        <h2 class="hero_title margin_bottom_md font-bold color__white">Take Driver’s Seat in Your Child’s Learning</h2>
-                        <p class="hero_blub">See how your child ranks against other students in their level, with recommendation on how to help them improve.</p>
+            <div class="row heroContentWrapper">
+                <div class="col-md-5 heroContentBox box_floated_down">
+                    <div class="heroContentBoxWrapper bg__inverse_light color__black">
+                        <div class="coloredBar bg__inverse"></div>
+                        <h2 class="hero_title font-bold margin_bottom_md">Help Your Child CatchUp!</h2>
+                        <p class="font-md">Find out if your children are prepared  for future examinations and access resources to guarantee their success.</p>
                         <div class="section_cto">
-                            <p class="margin_bottom_sm">Schedule a diagnostic assessment for your child.</p>
-                            <div class="form-row">
-                                <div class="col-7">
-                                    <input type="text" class="form-control" placeholder="Enter your email">
-                                </div>  
-                                <div class="col-5">
-                                    <a href="./parents/parent_signup.html" class="btn btn-block btn-secondary">
-                                        Get Started
-                                    </a>
-                                </div>
-                            </div>
+                            <a href="parents/parent_signup.html" class="btn btn-secondary">Get Started</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <main class="mainContentArea padding-top-none"> 
+
+    <main class="mainContentArea"> 
         <section class="section_block">
             <div class="container">
-                <div class="info_sub_row">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 order-2 order-lg-1">
-                            <header class="section_header">
-                                <h4 class="title title_lg color__primary"><span class="font-bold">CatchUp!</span> <br>Helps your Child Measure Up</h4>
-                            </header>
-                            <div class="features_list">
-                                <article class="feature_item">
-                                    <div class="feat_wrapper media_item">
-                                        <div class="feature_image">
-                                            <img src="./img/icons/know_child.svg" alt="Know Your Child’s Knowledge Level">
-                                        </div>
-                                        <div class="media_info ">
-                                            <h4 class="title title_sm font-bold margin_bottom_md">
-                                                Know Your Child’s Knowledge Level
-                                            </h4>
-                                            <p>With regular diagnostic tests or homework results from school, get an accurate picture of their grade level proficiency in key topic areas.</p>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="feature_item">
-                                    <div class="feat_wrapper media_item">
-                                        <div class="feature_image">
-                                            <img src="./img/icons/get_recommendation.svg" alt="Get Recommendations and a Personalized Practice Plan">
-                                        </div>
-                                        <div class="media_info ">
-                                            <h4 class="title title_sm font-bold margin_bottom_md">
-                                                Get Recommendations and a Personalized Practice Plan
-                                            </h4>
-                                            <p>Get intelligent recommendations and plans to improve your child’s performance in weak areas.</p>
-                                        </div>
-                                    </div>
-                                </article>
+
+                <div class="row text-center">
+                    <div class="offset-md-3 col-md-6">
+                        <header class="section_header">
+                            <h2 class="title title_lg font-bold color__black margin_bottom_md">Get involved in your child’s success</h2>
+                            <p class="font-md">Gradely is reimagining how students learn. Using the power of technology to build engagement and mastery.</p>
+                        </header>
+                    </div>
+                </div>
+
+                <div class="row tileCardList">
+                    <article class="tileCardItem col-md-4">
+                        <div class="tileCardWrapper bg__inverse_light">
+                            <div class="tileCardinfo">
+                                <div class="feature_icon margin_bottom_md">
+                                    <img src="./img/icons/know_child.svg" alt="Real-time Feedback">
+                                </div>
+                                <h4 class="title title_sm font-bold color__primary margin_bottom_sm">Real-time Feedback</h4>
+                                <p>Reduce the distance between your child’s  current performance and desired performance with immediate feedback. Get recommendations on how best to intervene in your child’s education every time your child takes a practice test on Gradely.</p>
                             </div>
                         </div>
-                        <div class="col-md-6 order-1 order-lg-2 imageItemHolder">
-                            <img src="./img/banners/catchUpBanner.png">
+                    </article>
+                    <article class="tileCardItem col-md-4">
+                        <div class="tileCardWrapper bg__secondary_light">
+                            <div class="tileCardinfo">
+                                <div class="feature_icon margin_bottom_md">
+                                    <img src="./img/icons/engaged.svg" alt="Global Ranking">
+                                </div>
+                                <h4 class="title title_sm font-bold color__primary margin_bottom_sm">Global Ranking</h4>
+                                <p>Give your child a competitive edge by ensuring mastery beyond school level. Gradely will help you detect your child’s academic performance compared to others in the same grade or class level nationwide.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="formcontrolItem ">
-                            <h4 class="title color__primary">
-                                Start now at only <span class="font-bold">N1,500</span> per month
-                            </h4>
-                            <p class="color__grey_dark">Pay for a month and get one month FREE, till <time>December 31st.</time></p>
+                    </article>
+                    <article class="tileCardItem col-md-4">
+                        <div class="tileCardWrapper bg__red_light">
+                            <div class="tileCardinfo">
+                                <div class="feature_icon margin_bottom_md">
+                                    <img src="./img/icons/get_recommendation.svg" alt="Personalized Lessons">
+                                </div>
+                                <h4 class="title title_sm font-bold color__primary margin_bottom_sm">Personalized Lessons</h4>
+                                <p>Access learning  resources and recommendations tailored toward your child’s strengths, needs, skills and interests. Your child gets a learning plan that's based on what he knows and how he learns best.</p>
+                            </div>
                         </div>
-                        <div class="formcontrolItem formInputBtn">
-                            <a href="./parents/upgadeplan.html" class="btn btn-secondary">Subscribe</a>
+                    </article>
+                </div>
+
+                <div class="sponsorsWrapper text-center">
+                    <div class="secDivider dividerMini"></div>
+                    <h4 class="title color__grey_dark margin_bottom_md">Proudly supported and endorsed by</h4>
+                    <div class="logo_grid align-items-center">
+                        <div class="logo_item ">
+                            <img src="./img/icons/ccHub.png" class="" alt="CC-Hub">
+                        </div>
+                        <div class="logo_item ">
+                            <img src="./img/icons/ngHub.png" class="" alt="NGHub by facebook">
+                        </div>
+                        <div class="logo_item ">
+                            <img src="./img/icons/napps.png" class="" alt="NAPPS">
+                        </div>
+                        <div class="logo_item ">
+                            <img src="./img/icons/wizitup.png" class="" alt="Wizit Up">
                         </div>
                     </div>
                 </div>
                 
-                <div class="info_sub_row">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 order-2">
-                            <header class="section_header">
-                                <h4 class="title title_lg color__primary"><span class="font-bold">Learn!</span> <br> All of CatchUp! plus a lot more</h4>
-                            </header>
-                            <div class="features_list">
-                                <article class="feature_item">
-                                    <div class="feat_wrapper media_item">
-                                        <div class="feature_image">
-                                            <img src="./img/icons/make_difference.svg" alt="Make a Difference in Your Child’s Results in One Term">
-                                        </div>
-                                        <div class="media_info ">
-                                            <h4 class="title title_sm font-bold margin_bottom_md">
-                                                Make a Difference in Your Child’s Results in One Term
-                                            </h4>
-                                            <p>Increase grade-level proficiency across key curriculum topics and within one term makes impact on your child’s final exam grade.</p>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article class="feature_item">
-                                    <div class="feat_wrapper media_item">
-                                        <div class="feature_image">
-                                            <img src="./img/icons/engaged.svg" alt="Keep Them Bright & Engaged"/>
-                                        </div>
-                                        <div class="media_info ">
-                                            <h4 class="title title_sm font-bold margin_bottom_md">
-                                                Keep Them Engaged & Ahead
-                                            </h4>
-                                            <p>Give your children excitement that comes from interactive learning experiences, and have them start to push above their class level.</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="col-md-6 order-1 imageItemHolder">
-                            <img src="./img/banners/learnBanner.png">
-                        </div>
-                    </div>
-                    <div class="row no-gutters">
-                        <div class="formcontrolItem">
-                            <h4 class="title color__primary">
-                                Start now at only <span class="font-bold">N3,000</span> per month
-                            </h4>
-                            <p class="color__grey_dark">Pay for a month and get one month FREE, till <time>December 31st.</time></p>
-                        </div>
-                        <div class="formcontrolItem formInputBtn">
-                            <a href="./parents/upgadeplan.html" class="btn btn-secondary">Subscribe</a>
-                        </div>
-                    </div>
+            </div>
+        </section>
+        <section class="section_block bg__black">
+            <div class="container">
 
+                <div class="row text-center">
+                    <div class="offset-md-3 col-md-6">
+                        <header class="section_header color__white">
+                            <h2 class="title title_sm font-bold margin_bottom_md">Bridge learning gaps with Gradely’s adaptive learning technology</h2>
+                            <p>Gradely Catchup uses artificial intelligence to analyze your child’s academic strength & weaknesses and recommends curriculum-based practice questions, revision videos and live tutoring tailored to help your child achieve mastery.</p>
+                        </header>
+                    </div>
+                </div>
+
+                <div class="featureSlides margin_top_md">
+                    <div class="slideRow">
+                        <article class="featureRowItem">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 order-2 order-lg-2 color__white infoSubDetails">
+                                    <h4 class="title title_lg font-bold margin_bottom_md ">Connect your child to a Learning specialist</h4>
+                                    <p>Schedule a one-on-one live tutoring session with a seasoned  Mathematics specialist this weekend</p>
+                                    <div class="section_cto">
+                                        <a href="https://new_session.html" class="btn btn-primary-inverse">Book a Session</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 order-1 order-lg-1 imageItemHolder">
+                                    <img src="./img/banners/learning_expert.png">
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="featureRowItem">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 order-2 order-lg-1 color__white infoSubDetails">
+                                    <h4 class="title title_lg font-bold margin_bottom_md color__secondary"> Keep track of your child’s learning progress</h4>
+                                    <p>Don’t wait for examination results to find out if your child has mastered all that is expected as stipulated by the curriculum. Set up a diagnostic test for your child today.</p>
+                                    <div class="section_cto">
+                                        <a href="parents/parent_signup.html" class="btn btn-primary-inverse">Schedule a Test</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 order-1 order-lg-2 imageItemHolder">
+                                    <img src="./img/banners/catchUpBanner.png">
+                                </div>
+                            </div>
+                        </article>
+    
+                        <article class="featureRowItem">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 order-2 order-lg-1 color__white infoSubDetails">
+                                    <h4 class="title title_lg font-bold margin_bottom_md color__inverse">Make learning engaging and fun for your child</h4>
+                                    <p>Help your child study better with Gradely AI-powered gamified practice sessions tailored towards your child learning progress.</p>
+                                    <div class="section_cto">
+                                        <a href="#" class="btn btn-primary-inverse">Sign Up Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 order-1 order-lg-2 imageItemHolder">
+                                    <img src="./img/banners/learnBanner.png">
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="scroll_arrows"></div>
                 </div>
             </div>
         </section>
+
+        <section class="section_block">
+            <div class="container">
+                <header class="section_header text-center">
+                    <h2 class="title title_xl font-bold color__black">How it Works</h2>
+                </header>
+                <article class="info_sub_row">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 featureListItem">
+                            <div class="featureWrapper">
+                                <div class="featCount">
+                                    <span class="counter">1</span>
+                                    <div class="stepTrails">
+                                        <svg width="158px" height="33px" viewBox="0 0 158 33" xmlns="http://www.w3.org/2000/svg">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012" stroke-dasharray="10" stroke-linecap="round">
+                                                <g transform="translate(-436.000000, -2634.000000)" stroke="#959595" stroke-width="2">
+                                                    <path d="M437,2666 C488.870446,2624.66667 540.870446,2624.66667 593,2666" id="Path-2"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4 class="title">Create a <strong>FREE</strong> parent account</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 featureListItem">
+                            <div class="featureWrapper">
+                                <div class="featCount">
+                                    <span class="counter">2</span>
+                                    <div class="stepTrails">
+                                        <svg width="158px" height="33px" viewBox="0 0 158 33" xmlns="http://www.w3.org/2000/svg">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012" stroke-dasharray="10" stroke-linecap="round">
+                                                <g transform="translate(-436.000000, -2634.000000)" stroke="#959595" stroke-width="2">
+                                                    <path d="M437,2666 C488.870446,2624.66667 540.870446,2624.66667 593,2666" id="Path-2"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4 class="title"> Assign a diagnostic test to your child</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 featureListItem">
+                            <div class="featureWrapper">
+                                <div class="featCount">
+                                    <span class="counter">3</span>
+                                    <div class="stepTrails">
+                                        <svg width="158px" height="33px" viewBox="0 0 158 33" xmlns="http://www.w3.org/2000/svg">
+                                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012" stroke-dasharray="10" stroke-linecap="round">
+                                                <g transform="translate(-436.000000, -2634.000000)" stroke="#959595" stroke-width="2">
+                                                    <path d="M437,2666 C488.870446,2624.66667 540.870446,2624.66667 593,2666" id="Path-2"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4 class="title">View child’s diagnostic report</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6 featureListItem">
+                            <div class="featureWrapper">
+                                <div class="featCount">
+                                    <span class="counter">4</span>
+                                </div>
+                                <h4 class="title">Unlock learning resources </h4>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="info_sub_row">
+                    <div class="row text-center">
+                        <div class="offset-md-3 col-md-6">
+                            <div class="decDivider margin_bottom_lg">
+                                <svg width="222" height="16" viewBox="0 0 222 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 7.95384C8.33333 -0.110302 15.6667 -0.110302 23 7.95384C30.3333 16.018 37.6667 16.018 45 7.95384C52.3333 -0.110302 59.6667 -0.110302 67 7.95384C74.3333 16.018 81.6667 16.018 89 7.95384C96.3333 -0.110302 103.667 -0.110302 111 7.95384C118.333 16.018 125.667 16.018 133 7.95384C140.333 -0.110302 147.667 -0.110302 155 7.95384C162.333 16.018 169.667 16.018 177 7.95384C184.333 -0.110302 191.667 -0.110302 199 7.95384C206.333 16.018 213.667 16.018 221 7.95384" stroke="#D5D5D5" stroke-width="2"/>
+                                </svg>                                                     
+                            </div>
+                            <h2 class="title title_lg">Get started to unlock a personalised study pack for your child.</h2>
+                            <div class="section_cto">
+                                <a href="parents/parent_signup.html" class="btn btn-secondary">Sign Up for Free</a>
+                            </div>
+                            <div class="decDivider margin_top_lg">
+                                <svg width="222" height="16" viewBox="0 0 222 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 7.95384C8.33333 -0.110302 15.6667 -0.110302 23 7.95384C30.3333 16.018 37.6667 16.018 45 7.95384C52.3333 -0.110302 59.6667 -0.110302 67 7.95384C74.3333 16.018 81.6667 16.018 89 7.95384C96.3333 -0.110302 103.667 -0.110302 111 7.95384C118.333 16.018 125.667 16.018 133 7.95384C140.333 -0.110302 147.667 -0.110302 155 7.95384C162.333 16.018 169.667 16.018 177 7.95384C184.333 -0.110302 191.667 -0.110302 199 7.95384C206.333 16.018 213.667 16.018 221 7.95384" stroke="#D5D5D5" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="info_sub_row">
+                    <div class="row">
+                        <header class="col-md-5 section_header text-center">
+                            <h3 class="title title_lg font-bold color__black">Have Questions?</h3>
+                            <div class="section_cto">
+                                <a href="contact.html" class="btn btn-default-outline">
+                                    Contact Us
+                                </a>
+                            </div>
+                            <div class="decDivider margin_bottom_lg margin_top_lg">
+                                <svg width="174" height="19" viewBox="0 0 174 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 9.5C11.4219 19.5 20.8438 19.5 30.2656 9.5C39.6875 -0.5 49.1094 -0.5 58.5313 9.5C67.9531 19.5 77.375 19.5 86.7969 9.5C96.2188 -0.5 105.641 -0.5 115.063 9.5C124.484 19.5 133.906 19.5 143.328 9.5C152.75 -0.5 162.172 -0.5 171.594 9.5" stroke="#F2AB3E" stroke-width="4"/>
+                                </svg>                                                                                 
+                            </div>
+                            <p class="font-md">Or you can call us on: <a href="tel:(+234) 810 0598 268" class="font-bold  color__primary">(+234) 8100598268</a></p>
+                        </header>
+                        <div class="col-md-7">
+                            <div class="panel-group" id='help_list'>
+                                <article class="panel panel-help">
+                                    <h4 class="panel-title font-bold">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_1">What are the technical requirements for Gradely?</a>
+                                    </h4>
+                                    <div id="article_1" class="panel-collapse collapse">
+                                        <div class="panel-body prose_content">
+                                            <p>All you need to get started is a computer, tablet, or phone with a connection to the Internet.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="panel panel-help">
+                                    <h4 class="panel-title font-bold">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_2">Is Gradely curriculum compliant?</a>
+                                    </h4>
+                                    <div id="article_2" class="panel-collapse collapse">
+                                        <div class="panel-body prose_content">
+                                            <p>Yes. Gradely is built by learning specialists guided by the WAEC / NECO as well as the British IGCSE curriculum.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="panel panel-help">
+                                    <h4 class="panel-title font-bold">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_3">How much does Gradely CatchUp! cost?</a>
+                                    </h4>
+                                    <div id="article_3" class="panel-collapse collapse">
+                                        <div class="panel-body prose_content">
+                                            <p>Registration is free. You can create one free diagnostic test for your child. Our basic subscription plan of #1,500 gives your child access to Gradely gamified practice for one month. You'll also get notifications on your child's learning progress every time.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="panel panel-help">
+                                    <h4 class="panel-title font-bold">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_4">How will my child use Gradely?</a>
+                                    </h4>
+                                    <div id="article_4" class="panel-collapse collapse">
+                                        <div class="panel-body prose_content">
+                                            <p>After you signup, you'll be required to connect with your child on Gradely. You can do this by creating a profile for your child from your Gradely dashboard. As soon as this is done, you will receive the login details for your child. Your child can login via <a href="https://gradely.ng/login">https://gradely.ng/login</a> using the student code and password that you've generated.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="panel panel-help">
+                                    <h4 class="panel-title font-bold">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_5">How does live tutoring work on Gradely?</a>
+                                    </h4>
+                                    <div id="article_5" class="panel-collapse collapse">
+                                        <div class="panel-body prose_content">
+                                            <p>A learning specialist will be assigned to your child based on the report of the diagnostic test. A link to connect to the tutor via video chat will be sent to you via email as well as the other information you'll need after booking a session.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="panel panel-help">
+                                    <h4 class="panel-title font-bold">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_6">How much does a live tutoring session cost?</a>
+                                    </h4>
+                                    <div id="article_6" class="panel-collapse collapse">
+                                        <div class="panel-body prose_content">
+                                            <p>#5,000. We're currently piloting this service and it is free for now. Take this offer today.</p>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="panel panel-help">
+                                    <h4 class="panel-title font-bold">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_7">Do I need multiple parents account if I have more than one child?</a>
+                                    </h4>
+                                    <div id="article_7" class="panel-collapse collapse">
+                                        <div class="panel-body prose_content">
+                                            <p>Not at all. You only need a single parent account to use Gradely. You can add as many students as you want from your dashboard on Gradely.</p>
+                                        </div>
+                                    </div>
+                                </article> 
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <footer role="contentinfo" class="footerArea bg__inverse_light">
                 <div class="footerArc"></div>
                 <div class="container">
-                    <section class="footerTop footerRow">
+                    <section class="footerTop footerRow hidden">
                         <div class="text-center">
                             <h3 class="title title_lg margin_bottom_lg color__primary">Get updates straight to your inbox</h3>
                             <div class="row">
@@ -314,7 +522,22 @@
     
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        $(function () {
+            $('.slideRow').slick({
+                swipe: true,
+                arrows: true,
+                speed: 1000,
+                dots: false,
+                autoplay: false,
+                autoplaySpeed: 15000,
+                appendArrows: $(".scroll_arrows"),
+            });
+        });
+    </script>
     		
 </body>
 </html>

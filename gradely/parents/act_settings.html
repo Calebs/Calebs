@@ -23,55 +23,146 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h4 class="modal-title text-caps">Add a Child</h4>
+                    <h4 class="modal-title text-caps ">Add your child</h4>
                     <div class="dialogDismiss">
                         <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </header>
                 <div class="modal-body">
-                    <form action="">
-                        <p class="margin_bottom_md"><strong>Note:</strong> The student code is generated after the child sign up. If you don't have your child's student code, make sure they are registered, collect the code and connect.</p>
 
-                        <div class="form-group">
-                            <label for="" class="control-label font-bold caps_upper">Enter Student Code</label>
-                            <div class="form-row">
-                                <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="Enter your child's studnet code here">
-                                </div>
-                                <div class="col-4">
-                                    <button type="submit" class="btn btn-inverse">
-                                        Verify Code
+                    <section class="widgetHome hidden">
+                        <form action="">
+                            <div class="userOptions row">
+                                <article class="actionCard col-sm-12">
+                                    <button type="button" class="actionCardWrapper">
+                                        <div class="media_info">
+                                            <h4 class="title font-bold margin_bottom_sm">I have my child's student code</h4>
+                                            <p>Click here if your child is already signed up on Gradey, and has a student code</p>
+                                        </div>
                                     </button>
+                                </article>
+                                <article class="actionCard col-sm-12">
+                                    <button type="button" class="actionCardWrapper">
+                                        <div class="media_info">
+                                            <h4 class="title font-bold margin_bottom_sm">I want to register my Child</h4>
+                                            <p>Click here if your child is not already signed up on Gradely. And you want to create an account for them.</p>
+                                        </div>
+                                    </button>
+                                </article>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the user has a child code -->
+                    <section class="addWithCode ">
+                        <form class="content_wrapper">
+                            
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Enter Student Code</label>
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="Enter your child's studnet code here">
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-inverse">
+                                            Verify Code
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Show this after the user has entered the parent code -->
-                        <div class="previewList margin_top_lg">
-                            <div class="infoPreviewCard">
-                                <div class="cardWrapper">
-                                    <div class="data_entity">
-                                        <div class="data_entity_icon">
-                                            <div class="user_info_avi avi_md">
-                                                <img src="" alt="">
-                                                <span class="default_avi">RH</span>
+    
+                            <!-- Show this after the user has entered the parent code -->
+                            <div class="previewList margin_top_lg">
+                                <div class="infoPreviewCard">
+                                    <div class="cardWrapper">
+                                        <div class="data_entity">
+                                            <div class="data_entity_icon">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="" alt="">
+                                                    <span class="default_avi">RH</span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="details_col_info ">
-                                            <div class="address_block">
-                                                <h4 class="title font-bold">Rubius Hagrid</h4>
-                                                <span class="addr_field addr_title">Senior Secondary School 1 (SSS1)</span>
-                                                <span class="addr_field">@Christland Intl. College</span>
+                                            <div class="details_col_info ">
+                                                <div class="address_block">
+                                                    <h4 class="title font-bold">Rubius Hagrid</h4>
+                                                    <span class="addr_field addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field">@Christland Intl. College</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+    
+                            <div class="form_cta text-center">
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Add Child</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the user choose to sign up the child -->
+                    <section class="signUpChild hidden">
+                        <form class="content_wrapper">
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="" class="control-label font-bold caps_upper">First Name</label>
+                                    <input type="text" placeholder="Your child's First Name" class="form-control">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="" class="control-label font-bold caps_upper">Last Name</label>
+                                    <input type="text" placeholder="Your child's Last Name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label caps_upper font-bold">Class</label>
+                                <select class="form-control" placeholder="Select school">
+                                    <option>Select your child's class</option>
+                                    <option>Junior Secondary School 1 - JSS1</option>
+                                    <option>Junior Secondary School 2 - JSS2</option>
+                                    <option>Junior Secondary School 3 - JSS3</option>
+                                    <option>Senior Secondary School 1 - SSS1</option>
+                                    <option>Senior Secondary School 2 - SSS2</option>
+                                    <option>Senior Secondary School 3 - SSS3</option>
+                                </select>
+                                <p class="help-block hidden text-error">Invalid class code. Try again</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Create Password</label>
+                                <input type="text" class="form-control user_pass" placeholder="Create a Password for your child">
+                            </div>
+                            <div><strong class="color__red">P.S:</strong> <span class="font-sm color__grey_dark">A student code will be generated for your child. This along with the <em>password</em> you entered above will be required of your child to login</span></div>
+                            <div class="form_cta text-center"> 
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Create Child</button>
+                            </div>
+                        </form>
+                    </section>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Done</button>
                 </div>
             </div>
         </div>

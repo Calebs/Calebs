@@ -19,6 +19,114 @@
     
 <body>
 
+    <div class="modal fade" id="paymentCard">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title caps_upper">Card Details</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label font-bold caps_upper">Name on Card</label>
+                            <input type="text" placeholder="The name on your card" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold caps_upper">Card Number</label>
+                            <input type="text" placeholder="Your Card number" class="form-control">
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6 col-md-7">
+                                <label class="control-label font-bold caps_upper">Expiry Date</label>
+                                <div class="date_selector_widget">
+                                    <div class="date_item ">
+                                        <input type="text" placeholder="Month" class="form-control">
+                                    </div>
+                                    <div class="date_item">
+                                        <select class="form-control">
+                                            <option>Year</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6 col-md-5">
+                                <label class="control-label font-bold caps_upper">CVV/CVC Code</label>
+                                <input type="password" class="form-control" placeholder="•••" maxlength="4">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="delete_confirm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title caps_upper">Confirm Action</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p class="">Are you sure you want to remove your card? </p>
+
+                    <div class="infoPreviewCard margin_top_sm">
+                        <div class="cardWrapper">
+                            <div class="infoMetaDetails">
+                                <div class="metaLabel">
+                                    <span class="cust_icon card_visa icon_md"></span>
+                                </div>
+                                <div class="metaValue">
+                                    <span class="">•••• •••• •••• 4234</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default-outline">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cancel_sub">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title caps_upper">Cancel Subscription</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p class="">Are you sure you want to cancel this child's subscription to Gradely CatchUp!? </p>
+                    <p class="">Your child will no longer be able to access all features attached to the plan, including all the data gathered over the period of use.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default-outline">Abort</button>
+                    <button type="submit" class="btn btn-danger">Cancel It</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="mainHeader" role="banner">
         <div class="container-fluid">
             <div class="navbarWrapper">
@@ -169,18 +277,19 @@
                                     <h4 class="nav_heading">My Account</h4>
                                     <ul class="secondary_nav_menu">
                                         <li><a href="profile.html">Profile Details</a></li>
-                                        <li><a href="my_license.html" class="active">Subscription</a></li>
+                                        <li><a href="my_license.html" class="active">Billing</a></li>
                                         <li><a href="act_settings.html">Account Settings</a></li>
                                         <li><a href="change_password.html">Password</a></li>
                                     </ul>
                                 </div>
                             </div>
+
                             <!-- Main page content here -->
                             <div class="accountPageBodyMain">
                                 <div class="container-fluid">
                                     <header class="grdly_page_header">
                                         <div class="grdly_header_title">
-                                            <h2 class="section_title font-bold">My Subscription</h2>
+                                            <h2 class="section_title font-bold">Billing &amp; Subscription</h2>
                                         </div>
                                         <div class="grdly_action_primary">
                                         </div>
@@ -190,66 +299,93 @@
                                         <div class="content_inner">
                                             <div class="insight_box">
                                                 <div class="box_wrapper bg__white">
-                                                    <div class="viewStepHeader">
-                                                        <div class="viewStepBadge">
-                                                            <div class="productThumb avi_lg">
-                                                                <img src="../img/icons/Free.svg" alt="Current Plan Icon">
-                                                            </div>
-                                                        </div>
-                                                        <div class="viewStepDetails">
-                                                            <div class="viewStepInfo">
-                                                                <span class="viewStepLabel font-bold">Free Plan</span>
-                                                                <div class="listMetaInfo">
-                                                                    <span>₦ 0.00 per child</span>
+                                                    
+                                                    <article class="infoMetaRow">
+                                                        <h4 class="title font-bold margin_bottom_lg caps_upper color__grey_dark">Payment Method</h4>
+                                                        <div class="infoMetaWrapper">
+                                                            <div class="infoMetaDetails">
+                                                                <div class="metaLabel">
+                                                                    <span class="cust_icon card_visa icon_md"></span>
+                                                                </div>
+                                                                <div class="metaValue">
+                                                                    <span class="title title_sm ">•••• •••• •••• 4234</span>
                                                                 </div>
                                                             </div>
-                                                            <div class="viewStepAction">
-                                                                <a href="upgadeplan.html" class="btn btn-sm btn-primary-outline">Upgrade Plan</a>
+                                                            <div class="infoMetaOptions">
+                                                                <div class="metaControlItem">
+                                                                    <button type="button" data-target="#paymentCard" data-toggle="modal" class="metaControlBtn">Change Card Info</button>
+                                                                </div>
+                                                                <div class="metaControlItem">
+                                                                    <a href="billingHistory.html" class="metaControlBtn">Billing History</a>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div> 
-                                                    <div class="viewStepBody margin_top_md">
-                                                        <h4 class="font-default color__grey_dark caps_upper margin_bottom_md">Features</h4>
-                                                        <ul class="custom_bullet_list">
-                                                            <li class="bullet_list_item">
-                                                                <span class="bullet_list_label">View Child Analytics</span>
-                                                            </li>
-                                                            <li class="bullet_list_item">
-                                                                <span class="bullet_list_label">Get tutor annd other recommendation</span>
-                                                            </li>
-                                                            <li class="bullet_list_item">
-                                                                <span class="bullet_list_label">All class curricula</span>
-                                                            </li>
-                                                        </ul>
-                                                        <div class="base_divider"></div>
-                                                        <h4 class="font-default color__grey_dark caps_upper margin_bottom_md">Beneficiaries</h4>
-                                                        <div class="row user_list">
-                                                            <article class="user_item col-sm-6 col-md-4">
-                                                                <a href="childPage.html" class="margin_bottom_sm user_profile_details">
-                                                                    <div class="user_info_avi">
-                                                                        <img src="../img/hermionie.jpg" alt="">
-                                                                        <span class="default_avi">RH</span>
+                                                    </article>
+
+                                                    <article class="infoMetaRow">
+                                                        <h4 class="title font-bold margin_bottom_lg caps_upper color__grey_dark">Plan Details</h4>
+                                                        <div class="planItem">
+                                                            <div class="groupHeader">
+                                                                <h4 class="title font-bold text_clipped">Free Plan -<span class="font-default font-regular d-inline-block margin_left_s">#0.00 / Month</span></h4>
+                                                            </div>
+                                                            <div class="infoMetaWrapper">
+                                                                <div class="infoMetaDetails">
+                                                                    <article class="user_item">
+                                                                        <a href="childPage.html" class="margin_bottom_sm user_profile_details">
+                                                                            <div class="user_info_avi avi_md">
+                                                                                <img src="../img/hermionie.jpg" alt="">
+                                                                                <span class="default_avi">RH</span>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title font-regular text_clipped">Rubius Hagrid</h4>
+                                                                                <span class="listMetaInfo">Christland College</span>
+                                                                            </div>
+                                                                        </a>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="infoMetaOptions">
+                                                                    <div class="metaControlItem">
+                                                                        <a href="upgadeplan.html" class="metaControlBtn">Change Plan</a>
                                                                     </div>
-                                                                    <div class="user_info">
-                                                                        <h4 class="title font-bold text_clipped">Rubius Hagrid</h4>
-                                                                        <span class="listMetaInfo">Christland College</span>
+                                                                    <div class="metaControlItem">
+                                                                        <button type="button" data-target="#cancel_sub" data-toggle="modal" class="metaControlBtn">Cancel Subscription</button>
                                                                     </div>
-                                                                </a>
-                                                            </article>
-                                                            <article class="user_item col-sm-6 col-md-4">
-                                                                <a href="childPage.html" class="margin_bottom_sm user_profile_details">
-                                                                    <div class="user_info_avi">
-                                                                        <img src="../img/hermionie.jpg" alt="">
-                                                                        <span class="default_avi">PH</span>
-                                                                    </div>
-                                                                    <div class="user_info">
-                                                                        <h4 class="title font-bold text_clipped">Philius Hagrid</h4>
-                                                                        <span class="listMetaInfo">Christland College</span>
-                                                                    </div>
-                                                                </a>
-                                                            </article>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div> 
+
+                                                        <div class="planItem">
+                                                            <div class="groupHeader">
+                                                                <h4 class="title font-bold text_clipped">Free Plan -<span class="font-default font-regular d-inline-block margin_left_s">#0.00 / Month</span></h4>
+                                                            </div>
+                                                            <div class="infoMetaWrapper">
+                                                                <div class="infoMetaDetails">
+                                                                    <article class="user_item">
+                                                                        <a href="childPage.html" class="margin_bottom_sm user_profile_details">
+                                                                            <div class="user_info_avi avi_md">
+                                                                                <img src="../img/hermionie.jpg" alt="">
+                                                                                <span class="default_avi">RH</span>
+                                                                            </div>
+                                                                            <div class="user_info">
+                                                                                <h4 class="title font-regular text_clipped">Rubius Hagrid</h4>
+                                                                                <span class="listMetaInfo">Christland College</span>
+                                                                            </div>
+                                                                        </a>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="infoMetaOptions">
+                                                                    <div class="metaControlItem">
+                                                                        <a href="upgadeplan.html" class="metaControlBtn">Change Plan</a>
+                                                                    </div>
+                                                                    <div class="metaControlItem">
+                                                                        <button type="button" data-target="#cancel_sub" data-toggle="modal" class="metaControlBtn">Cancel Subscription</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </article>
+
                                                 </div>
                                             </div>
                                         </div>

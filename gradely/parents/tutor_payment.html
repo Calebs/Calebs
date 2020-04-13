@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Upgrade Plan | Gradelyng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="add_child">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps ">Add your child</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+
+                    <section class="widgetHome ">
+                        <form action="">
+                            <div class="userOptions row">
+                                <article class="actionCard col-sm-12">
+                                    <button type="button" class="actionCardWrapper">
+                                        <div class="media_info">
+                                            <h4 class="title font-bold margin_bottom_sm">I have my child's student code</h4>
+                                            <p>Click here if your child is already signed up on Gradey, and has a student code</p>
+                                        </div>
+                                    </button>
+                                </article>
+                                <article class="actionCard col-sm-12">
+                                    <button type="button" class="actionCardWrapper">
+                                        <div class="media_info">
+                                            <h4 class="title font-bold margin_bottom_sm">I want to register my Child</h4>
+                                            <p>Click here if your child is not already signed up on Gradely. And you want to create an account for them.</p>
+                                        </div>
+                                    </button>
+                                </article>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the user has a child code -->
+                    <section class="addWithCode hidden">
+                        <form class="content_wrapper">
+                            
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Enter Student Code</label>
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="Enter your child's studnet code here">
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-inverse">
+                                            Verify Code
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Show this after the user has entered the parent code -->
+                            <div class="previewList margin_top_lg">
+                                <div class="infoPreviewCard">
+                                    <div class="cardWrapper">
+                                        <div class="data_entity">
+                                            <div class="data_entity_icon">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="" alt="">
+                                                    <span class="default_avi">RH</span>
+                                                </div>
+                                            </div>
+                                            <div class="details_col_info ">
+                                                <div class="address_block">
+                                                    <h4 class="title font-bold">Rubius Hagrid</h4>
+                                                    <span class="addr_field addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field">@Christland Intl. College</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form_cta text-center">
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Add Child</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the user choose to sign up the child -->
+                    <section class="signUpChild hidden">
+                        <form class="content_wrapper">
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="" class="control-label font-bold caps_upper">First Name</label>
+                                    <input type="text" placeholder="Your child's First Name" class="form-control">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="" class="control-label font-bold caps_upper">Last Name</label>
+                                    <input type="text" placeholder="Your child's Last Name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label caps_upper font-bold">Class</label>
+                                <select class="form-control" placeholder="Select school">
+                                    <option>Select your child's class</option>
+                                    <option>Junior Secondary School 1 - JSS1</option>
+                                    <option>Junior Secondary School 2 - JSS2</option>
+                                    <option>Junior Secondary School 3 - JSS3</option>
+                                    <option>Senior Secondary School 1 - SSS1</option>
+                                    <option>Senior Secondary School 2 - SSS2</option>
+                                    <option>Senior Secondary School 3 - SSS3</option>
+                                </select>
+                                <p class="help-block hidden text-error">Invalid class code. Try again</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Create Password</label>
+                                <input type="text" class="form-control user_pass" placeholder="Create a Password for your child">
+                            </div>
+                            <div><strong class="color__red">P.S:</strong> <span class="font-sm color__grey_dark">A student code will be generated for your child. This along with the <em>password</em> you entered above will be required of your child to login</span></div>
+                            <div class="form_cta text-center"> 
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Create Child</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="authenticationPageLayout">
+        <div class="grdly_page_frame bg__off_white">
+            
+            <section class="grdly_page_body">
+                <div class="section_block">
+                    <div class="pageClose dialogDismiss">
+                        <a href="parent_dashboard_sub.html" class="close_dialog cls_lg">
+                            <span class="closeLabel">Exit</span>
+                        </a>
+                    </div>
+
+                    <div class="container ">
+                        <header class="section_header">
+                            <h3 class="title title_lg color__black font-bold">Schedule Session</h3>
+                        </header>
+                        <div action="content_inner">
+                            <div class="checkout_layout">
+                                <div class="chechoutForm checkoutPane">
+                                    <div class="checkoutPane_wrapper">
+                                        <div class="checkoutPane_content">
+                                            <header class="paneHeader">
+                                                <h3 class="title font-bold color__black">Session Details</h3>
+                                            </header>
+                                            <form action="">
+                                                <div class="detailsBlock">
+                                                    <p class="margin_bottom_md">Choose a Curriculum</p>
+                                                    <div class="hrPlanBLock">
+                                                        <article class="hrPlanItem planSelected">
+                                                            <label for="plan1" class="hrPlanWrapper">
+                                                                <input type="radio" id="#plan1" name="planOption" class="hidden">
+                                                                <div class="hrPlanDetails">
+                                                                    <header class="hrPlanHeader">
+                                                                        <h2 class="title color__black">WAEC/NECO</h2>
+                                                                        <h3 class="title title_sm font-bold margin_top_sm">₦3,000
+                                                                        </h3>
+                                                                        <div class="font-sm color__grey_dark">
+                                                                            <span>Per Session</span>
+                                                                        </div>
+                                                                    </header>
+                                                                    <div class="hrPlanInfo">
+                                                                        <p>Choose if you want to book a tutor, specialized in the WAEC/NECO curriculum.</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="selectionIndicator"></div>
+                                                            </label>
+                                                        </article>
+
+                                                        <article class="hrPlanItem">
+                                                            <label for="plan2" class="hrPlanWrapper">
+                                                                <input type="radio" id="#plan2" name="planOption" class="hidden">
+                                                                <div class="hrPlanDetails">
+                                                                    <header class="hrPlanHeader">
+                                                                        <h2 class="title color__black">IGCSE</h2>
+                                                                        <h3 class="title title_sm font-bold margin_top_sm">₦5,000
+                                                                        </h3>
+                                                                        <div class="font-sm color__grey_dark">
+                                                                            <span>Per Session</span>
+                                                                        </div>
+                                                                    </header>
+                                                                    <div class="hrPlanInfo">
+                                                                        <p>Choose if you want to book a tutor, specialized in the Cambridge IGCSE curriculum.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </label>
+                                                        </article>
+                                                    </div>
+                                                </div>
+                                                <div class="detailsBlock">
+                                                    <p class="control-label margin_bottom_md">Select the child(ren) you are getting the tutor for.</p>
+                                                    <div class="">
+                                                        <label class="media_item margin_bottom_lg" for="child_0">
+                                                            <div class="media_figure">
+                                                                <input type="checkbox" checked id="child_0" name="parentChild">
+                                                            </div>
+                                                            <div class="media_info">
+                                                                <div class="user_profile_details">
+                                                                    <div class="user_info_avi">
+                                                                        <img src="../img/" alt="">
+                                                                        <span class="default_avi bg__inverse_light">PH</span>
+                                                                    </div>
+                                                                    <div class="user_info">
+                                                                        <h4 class="title text_clipped font-bold">Philius Hagrid</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                        <label class="media_item" for="child1">
+                                                            <div class="media_figure">
+                                                                <input type="checkbox" checked id="child1" name="parentChild">
+                                                            </div>
+                                                            <div class="media_info">
+                                                                <div class="user_profile_details">
+                                                                    <div class="user_info_avi">
+                                                                        <img src="../img/hermionie.jpg" alt="">
+                                                                        <span class="default_avi bg__inverse_light">RH</span>
+                                                                    </div>
+                                                                    <div class="user_info">
+                                                                        <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    <div class="more_control margin_top_md">
+                                                        <a href="#add_child" class="input_control" data-toggle="modal" data-backdrop="static">
+                                                            <span class="t_icon">
+                                                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                                <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                                </svg>
+                                                            </span>
+                                                            <p>Child not on Gradely?
+                                                                <span class="widget_cta_link">Add your Child</span>
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="detailsBlock">
+                                                    <p class="margin_bottom_md">Session Timing</p>
+                                                    <div class="form-group form_mng">
+                                                        <div class="date_selector_widget">
+                                                            <div class="date_item date_month">
+                                                                <select class="form-control">
+                                                                    <option>Day</option>
+                                                                    <option>Monday</option>
+                                                                    <option>Tueday</option>
+                                                                    <option>Wednessday</option>
+                                                                    <option>Thursday</option>
+                                                                    <option>Friday</option>
+                                                                    <option>Saturday</option>
+                                                                    <option>Sunday</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="date_item date_month">
+                                                                <select class="form-control">
+                                                                    <option>Time</option>
+                                                                    <option>9:00 AM</option>
+                                                                    <option>9:30 AM</option>
+                                                                    <option>10:00 AM</option>
+                                                                    <option>10:30 AM</option>
+                                                                    <option>11:00 AM</option>
+                                                                    <option>11:30 AM</option>
+                                                                    <option>12:00 PM</option>
+                                                                    <option>12:30 PM</option>
+                                                                    <option>1:00 PM</option>
+                                                                    <option>1:30 PM</option>
+                                                                    <option>2:00 PM</option>
+                                                                    <option>2:30 PM</option>
+                                                                    <option>3:00 PM</option>
+                                                                    <option>3:30 PM</option>
+                                                                    <option>4:00 PM</option>
+                                                                    <option>4:30 PM</option>
+                                                                    <option>5:00 PM</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="date_item">
+                                                                <button type="button" class="close_dialog"></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="date_selector_widget">
+                                                            <div class="date_item date_month">
+                                                                <select class="form-control">
+                                                                    <option>Day</option>
+                                                                    <option>Monday</option>
+                                                                    <option>Tueday</option>
+                                                                    <option>Wednessday</option>
+                                                                    <option>Thursday</option>
+                                                                    <option>Friday</option>
+                                                                    <option>Saturday</option>
+                                                                    <option>Sunday</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="date_item date_month">
+                                                                <select class="form-control">
+                                                                    <option>Time</option>
+                                                                    <option>9:00 AM</option>
+                                                                    <option>9:30 AM</option>
+                                                                    <option>10:00 AM</option>
+                                                                    <option>10:30 AM</option>
+                                                                    <option>11:00 AM</option>
+                                                                    <option>11:30 AM</option>
+                                                                    <option>12:00 PM</option>
+                                                                    <option>12:30 PM</option>
+                                                                    <option>1:00 PM</option>
+                                                                    <option>1:30 PM</option>
+                                                                    <option>2:00 PM</option>
+                                                                    <option>2:30 PM</option>
+                                                                    <option>3:00 PM</option>
+                                                                    <option>3:30 PM</option>
+                                                                    <option>4:00 PM</option>
+                                                                    <option>4:30 PM</option>
+                                                                    <option>5:00 PM</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="date_item">
+                                                                <button type="button" class="close_dialog"></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="date_selector_widget">
+                                                            <div class="date_item date_month">
+                                                                <select class="form-control">
+                                                                    <option>Day</option>
+                                                                    <option>Monday</option>
+                                                                    <option>Tueday</option>
+                                                                    <option>Wednessday</option>
+                                                                    <option>Thursday</option>
+                                                                    <option>Friday</option>
+                                                                    <option>Saturday</option>
+                                                                    <option>Sunday</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="date_item date_month">
+                                                                <select class="form-control">
+                                                                    <option>Time</option>
+                                                                    <option>9:00 AM</option>
+                                                                    <option>9:30 AM</option>
+                                                                    <option>10:00 AM</option>
+                                                                    <option>10:30 AM</option>
+                                                                    <option>11:00 AM</option>
+                                                                    <option>11:30 AM</option>
+                                                                    <option>12:00 PM</option>
+                                                                    <option>12:30 PM</option>
+                                                                    <option>1:00 PM</option>
+                                                                    <option>1:30 PM</option>
+                                                                    <option>2:00 PM</option>
+                                                                    <option>2:30 PM</option>
+                                                                    <option>3:00 PM</option>
+                                                                    <option>3:30 PM</option>
+                                                                    <option>4:00 PM</option>
+                                                                    <option>4:30 PM</option>
+                                                                    <option>5:00 PM</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="date_item">
+                                                                <button type="button" class="close_dialog"></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="more_control margin_top_md">
+                                                            <a href="#add_child" class="input_control" data-toggle="modal" data-backdrop="static">
+                                                                <span class="t_icon">
+                                                                    <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                                    <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                                    </svg>
+                                                                </span>
+                                                                <p><span class="widget_cta_link">Add another day</span>
+                                                                </p>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <aside class="checkoutSummary checkoutPane">
+                                    <div class="checkoutPane_wrapper">
+                                        <header class="summary_block header_block">
+                                            <span class="title font-bold caps_upper color__black">Summary</span>
+                                        </header>
+                                        <div class="summary_block bg__inverse_light productInfo">
+                                            <h4 class="title font-bold margin_bottom_sm">WAEC/NECO Tutor</h4>
+                                        </div>
+                                        <div class="priceInfoBlock">
+                                            <div class="priceDetailRow">
+                                                <div class="priceRowLabel font-bold">
+                                                    <span>Price</span>
+                                                </div>
+                                                <div class="priceRowValue">
+                                                    <span class="price_value">₦3,000 per Session</span>
+                                                    <span class="price_suffix"></span>
+                                                </div>
+                                            </div>
+                                            <div class="priceDetailRow ">
+                                                <div class="priceRowLabel font-bold">
+                                                    <span>Number of Sessions</span>
+                                                </div>
+                                                <div class="priceRowValue ">
+                                                    <span class="price_value">3 Sessions</span>
+                                                    <span class="price_suffix"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <footer class="summary_block footerBlock">
+                                            <div class="priceDetailRow font-md">
+                                                <div class="priceRowLabel font-bold">
+                                                    <span>Total</span>
+                                                </div>
+                                                <div class="priceRowValue">
+                                                    <span class="price_value">₦9,000.00</span>
+                                                    <span class="price_suffix"></span>
+                                                </div>
+                                            </div>
+                                            <div class="priceDetailRow">
+                                                <button class="btn btn-secondary btn-block">Confirm Payment</button>
+                                            </div>
+                                        </footer>
+                                    </div>
+                                </aside>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

@@ -52,8 +52,8 @@
 
                         </div>
                         
-                        <div class="section_cto text-right">
-                            <a href="parent_dashboard.html" class="btn btn-default">Done</a>
+                        <div class="section_cto text-center">
+                            <a href="parent_dashboard.html" class="btn btn-secondary">Return to Dashboard</a>
                         </div>
                     </div>
                 </div>
@@ -150,8 +150,8 @@
                             </div>
     
                             <div class="form_cta text-center">
-                                <button type="button" class="btn btn-default">Cancel</button>
-                                <button type="button " class="btn btn-primary">Done</button>
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Add Child</button>
                             </div>
                         </form>
                     </section>
@@ -181,19 +181,26 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="" class="control-label font-bold caps_upper">Student Code</label>
-                                <input type="text" class="form-control font-bold" readonly value="RH19/0021" >
+                                <label for="" class="control-label caps_upper font-bold">Class</label>
+                                <select class="form-control" placeholder="Select school">
+                                    <option>Select your child's class</option>
+                                    <option>Junior Secondary School 1 - JSS1</option>
+                                    <option>Junior Secondary School 2 - JSS2</option>
+                                    <option>Junior Secondary School 3 - JSS3</option>
+                                    <option>Senior Secondary School 1 - SSS1</option>
+                                    <option>Senior Secondary School 2 - SSS2</option>
+                                    <option>Senior Secondary School 3 - SSS3</option>
+                                </select>
+                                <p class="help-block hidden text-error">Invalid class code. Try again</p>
                             </div>
                             <div class="form-group">
                                 <label for="" class="control-label font-bold caps_upper">Create Password</label>
                                 <input type="text" class="form-control user_pass" placeholder="Create a Password for your child">
                             </div>
-                            <div class="form_cta text-center">
-                                <p><strong>P.S</strong> Your child will require their <em>Student code</em> and <em>password</em> to log on to their student account.</p> 
-                                <div class="margin_top_md">
-                                    <button type="button" class="btn btn-default">Cancel</button>
-                                    <button type="button " class="btn btn-primary">Done</button>
-                                </div>
+                            <div><strong class="color__red">P.S:</strong> <span class="font-sm color__grey_dark">A student code will be generated for your child. This along with the <em>password</em> you entered above will be required of your child to login</span></div>
+                            <div class="form_cta text-center"> 
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Create Child</button>
                             </div>
                         </form>
                     </section>
@@ -216,13 +223,18 @@
                     <div class="container formLayoutWrapper">
                         <div class="formWidgetBox">
                             <div class="formWidgetWrapper">
-                                <header class="section_header">
-                                    <h3 class="title title_sm caps_upper color__black font-bold">Request Diagnostic Test</h3>
+
+                                <header class="section_header text-center">
+                                    <div class="icon_holder margin_bottom_md">
+                                        <img src="../img/icons/diag_test.svg" alt="">
+                                    </div>
+                                    <h3 class="title title_sm margin_bottom_sm font-bold color__default">Request Diagnostic Test</h3>
+                                    <p>Check your child’s academic level in a single test</p>
                                 </header>
                                 <div class="content_inner">
                                     <form action="" class="form_body">
                                         <div class="form-group ">
-                                            <label class="control-label font-bold caps_upper">Select the child you'd like to assess</label>
+                                            <label class="control-label font-bold caps_upper">Who is the test for?</label>
                                             <div class="dropdown form_mng">
                                                 <a href="#" data-toggle="dropdown" class="menuSelect_input">
                                                     <span class="menuSelect_label">Select a Child</span>
@@ -269,7 +281,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="" class="control-label caps_upper">Subject?</label>
+                                            <label for="" class="control-label font-bold caps_upper">Subject?</label>
                                             <div class="margin_top_sm">
                                                 <label for="sbjMaths" class="radio-inline">
                                                     <input type="radio" id="sbjMaths" checked name="hmSubject">
@@ -277,9 +289,36 @@
                                                 </label>
                                             </div>
                                         </div>
+                                        <div class="form_group_item">
+                                            <label for="" class="control-label font-bold caps_upper">Preferred Curriculum</label>
+                                            <div class="pillSelectorList margin_top_sm">
+                                                <div class="selectorItem">
+                                                    <label for="curriculum_0" class="pillWrapper">
+                                                        <input type="radio" id="curriculum_0" class="pillSelectControl" name="childCurriculum">
+                                                        <span class="selectorLabel caps_upper">
+                                                            WAEC/NECO
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="selectorItem">
+                                                    <label for="curriculum_1" class="pillWrapper">
+                                                        <input type="radio" id="curriculum_1" class="pillSelectControl" name="childCurriculum">
+                                                        <span class="selectorLabel caps_upper">
+                                                            Cambridge
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="selectorItem">
+                                                    <label for="curriculum_2" class="pillWrapper">
+                                                        <input type="radio" id="curriculum_2" class="pillSelectControl" name="childCurriculum">
+                                                        <span class="selectorLabel caps_upper">
+                                                            SAT
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </form>
-                                    <div class="base_divider"></div>
-                                    <p><strong>Note:</strong> Our diagnostic test is only available for mathematics students from Junior secondary school 1 to Senior secondary school 3. You will be informed as soon as it is available to more categories.</p>
                                 </div>
                             </div>
                             <footer class="formWidgetFooter">
@@ -288,7 +327,7 @@
                                         <a href="parent_lander.html" class="btn btn-default">Cancel</a>
                                     </div>
                                     <div class="nextBtn">
-                                        <button type="button" data-target="#test_success" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">Complete</a>
+                                        <button type="button" data-target="#test_success" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">Schedule Test</a>
                                     </div>
                                 </div>
                             </footer>

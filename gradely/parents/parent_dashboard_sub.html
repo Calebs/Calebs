@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Welcome Jake | Gradely.ng for Parent</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal fade" id="add_child">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps ">Add your child</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+
+                    <section class="widgetHome hidden">
+                        <form action="">
+                            <div class="userOptions row">
+                                <article class="actionCard col-sm-12">
+                                    <button type="button" class="actionCardWrapper">
+                                        <div class="media_info">
+                                            <h4 class="title font-bold margin_bottom_sm">I have my child's student code</h4>
+                                            <p>Click here if your child is already signed up on Gradey, and has a student code</p>
+                                        </div>
+                                    </button>
+                                </article>
+                                <article class="actionCard col-sm-12">
+                                    <button type="button" class="actionCardWrapper">
+                                        <div class="media_info">
+                                            <h4 class="title font-bold margin_bottom_sm">I want to register my Child</h4>
+                                            <p>Click here if your child is not already signed up on Gradely. And you want to create an account for them.</p>
+                                        </div>
+                                    </button>
+                                </article>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the user has a child code -->
+                    <section class="addWithCode ">
+                        <form class="content_wrapper">
+                            
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Enter Student Code</label>
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="Enter your child's studnet code here">
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-inverse">
+                                            Verify Code
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Show this after the user has entered the parent code -->
+                            <div class="previewList margin_top_lg">
+                                <div class="infoPreviewCard">
+                                    <div class="cardWrapper">
+                                        <div class="data_entity">
+                                            <div class="data_entity_icon">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="" alt="">
+                                                    <span class="default_avi">RH</span>
+                                                </div>
+                                            </div>
+                                            <div class="details_col_info ">
+                                                <div class="address_block">
+                                                    <h4 class="title font-bold">Rubius Hagrid</h4>
+                                                    <span class="addr_field addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field">@Christland Intl. College</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form_cta text-center">
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Add Child</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the user choose to sign up the child -->
+                    <section class="signUpChild hidden">
+                        <form class="content_wrapper">
+                            <div class="form-row">
+                                <div class="form-group col-sm-6">
+                                    <label for="" class="control-label font-bold caps_upper">First Name</label>
+                                    <input type="text" placeholder="Your child's First Name" class="form-control">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="" class="control-label font-bold caps_upper">Last Name</label>
+                                    <input type="text" placeholder="Your child's Last Name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label caps_upper font-bold">Class</label>
+                                <select class="form-control" placeholder="Select school">
+                                    <option>Select your child's class</option>
+                                    <option>Junior Secondary School 1 - JSS1</option>
+                                    <option>Junior Secondary School 2 - JSS2</option>
+                                    <option>Junior Secondary School 3 - JSS3</option>
+                                    <option>Senior Secondary School 1 - SSS1</option>
+                                    <option>Senior Secondary School 2 - SSS2</option>
+                                    <option>Senior Secondary School 3 - SSS3</option>
+                                </select>
+                                <p class="help-block hidden text-error">Invalid class code. Try again</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Create Password</label>
+                                <input type="text" class="form-control user_pass" placeholder="Create a Password for your child">
+                            </div>
+                            <div><strong class="color__red">P.S:</strong> <span class="font-sm color__grey_dark">A student code will be generated for your child. This along with the <em>password</em> you entered above will be required of your child to login</span></div>
+                            <div class="form_cta text-center"> 
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Create Child</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="book_tutor">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps ">Book a Session</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <section class="widgetHome ">
+                        <div class="userOptions">
+                            <article class="actionCard">
+                                <button type="button" class="actionCardWrapper">
+                                    <div class="media_info">
+                                        <h4 class="title font-bold margin_bottom_sm">COVID-9 Free 1 month Tutoring</h4>
+                                        <div class="insight_value">
+                                            <span class="title font-bold color__black">95</span>
+                                            <span>Slots of free Session still available this month. Book your spot.</span>
+                                        </div>
+                                    </div>
+                                </button>
+                            </article>
+                            <article class="actionCard">
+                                <button type="button" class="actionCardWrapper">
+                                    <div class="media_info">
+                                        <h4 class="title font-bold margin_bottom_sm">Book a Paid Session</h4>
+                                        <p>Click here if your child is not already signed up on Gradely. And you want to create an account for them.</p>
+                                    </div>
+                                </button>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Show this if the user choose to sign up the child -->
+                    <section class="bookPaidTutor hidden">
+                        <form class="content_wrapper">
+                            <div class="form-group form_mng">
+                                <label class="control-label font-bold caps_upper ">When will your child be available?</label>
+                                <div class="inputaffixed inputSurfixed">
+                                    <input type="datetime" class="form-control inputControl " placeholder="Set date and Time">
+                                    <div class="inputfixture">
+                                        <i class="cust_icon icon_calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form_mng">
+                                <label class="control-label font-bold caps_upper ">How many sessions do you need?</label>
+                                <input type="number" class="form-control " placeholder="Tell us how many sessions you seek for your child">
+                                <p class="help-block">A single session last 30min </p>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Subject?</label>
+                                <div class="margin_top_sm">
+                                    <label for="sbjMaths" class="radio-inline">
+                                        <input type="radio" id="sbjMaths" checked name="hmSubject">
+                                        <span class="label_title ">Mathematics</span>
+                                    </label>
+                                    <label for="sbjEng" class="radio-inline">
+                                        <input type="radio" id="sbjEng" name="hmSubject">
+                                        <span class="label_title ">English Language</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form_group_item">
+                                <label for="" class="control-label font-bold caps_upper">Preferred Curriculum</label>
+                                <div class="pillSelectorList margin_top_sm">
+                                    <div class="selectorItem">
+                                        <label for="curriculum_0" class="pillWrapper">
+                                            <input type="radio" id="curriculum_0" class="pillSelectControl" name="childCurriculum">
+                                            <span class="selectorLabel caps_upper">
+                                                WAEC/NECO
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="selectorItem">
+                                        <label for="curriculum_1" class="pillWrapper">
+                                            <input type="radio" id="curriculum_1" class="pillSelectControl" name="childCurriculum">
+                                            <span class="selectorLabel caps_upper">
+                                                Cambridge
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="selectorItem">
+                                        <label for="curriculum_2" class="pillWrapper">
+                                            <input type="radio" id="curriculum_2" class="pillSelectControl" name="childCurriculum">
+                                            <span class="selectorLabel caps_upper">
+                                                SAT
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <div class="form_cta text-center"> 
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <a href="tutor_payment.html " class="btn btn-secondary">Book Now</a>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for students">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem active">
+                            <a href="parent_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem hasUpdate">
+                            <a href="homework.html" class="menuLinkItem">Homework <span class="updateBubble"></span></a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn helpBtn">
+                            <a href="../parent_help.html">
+                                <span class="btnIconHolder">
+                                    <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27127C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27915 10.1266 8.75816 9.94333C8.23717 9.76006 7.96339 9.18915 8.14667 8.66816C8.46014 7.77705 9.07887 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3718 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9197 11.0711 15.3569 11.889 14.7751 12.4464C14.1931 13.004 13.5031 13.3909 13.0159 13.6243C12.977 13.6429 12.9487 13.6696 12.933 13.6926C12.9257 13.7033 12.9225 13.7113 12.9211 13.7154C12.92 13.719 12.92 13.7205 12.92 13.7207V14C12.92 14.5523 12.4723 15 11.92 15C11.3677 15 10.92 14.5523 10.92 14V13.7208C10.92 12.8509 11.4686 12.1479 12.1518 11.8206C12.5483 11.6307 13.0263 11.3522 13.3915 11.0023C13.7567 10.6523 13.92 10.321 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.4501 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"/>
+                                        <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" />
+                                    </svg>                                            
+                                </span>
+                                <span class="control_label">Help</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btnAlert">
+                            <a href="#">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
+                                </svg>
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi bg__secondary">JH</div>
+                                </div>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu profile_dropdown">
+                                <header class="dpd_header">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi bg__secondary">JH</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold color__primary">Jake Hagrid</h4>
+                                            <p>jakehagrid@gmail.com</p>
+                                            <div class="margin_top_sm">
+                                                <a href="profile.html" class="widget_cta_link">Manage Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
+                                <ul class="dpd_nav">
+                                    <li class="dpd_nav_item">
+                                        <a href="../student_help.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Get Help
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="act_settings.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_settings"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Account Settings
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="../login.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_logout"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Log Out
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+
+            <section class="global_alert_holder">
+                <div class="alert alert_primary fade show alert-dismissible" role="alert">
+                    <div class="globalAlertWrapper">
+                        <div class="media_item">
+                            <div class="media_figure">
+                                <img src="../img/icons/subscription_colored.svg" alt="">
+                            </div>
+                            <div class="media_info">
+                                <h4 class="title margin_bottom_x font-bold">Upgrade Plan</h4>
+                                <p class="font-sm">Subscribe at <strong>₦1,500 monthly</strong> to give your child access to 4000+ personalized practice questions now</p>
+                                <a href="upgadeplan.html" class="widget_cta_link margin_top_x">Subscribe Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialogDismiss">
+                        <button type="button" data-dismiss="alert" class="close_dialog">   
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grdly_page_body  bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <header class="pageInfoStrip">
+                        <div class="container">
+                            <div class="infoStripCaption ">
+                                <span class="opt_rule"></span>
+                                <span class="captionText">You are viewing reports  on: </span>
+                            </div>
+                            <div class="infoStripWrapper">
+                                <div class="infoStripItemBLock dropdown">
+                                    <a href="#" data-toggle="dropdown" class="customDropdownHeader dropdown-toggle">
+                                        <div class="user_profile_details">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="../img/" alt="">
+                                                <span class="default_avi">RH</span>
+                                            </div>
+                                            <div class="user_info">
+                                                <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                <span class="listMetaInfo">Code: <span>RUBIUSHAG</span> </span>
+                                            </div>
+                                        </div>
+                                        <span class="selectorTrigger_btn">
+                                            <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.43437 10.3598L7.99997 10.9254L12.5256 6.39975L11.3944 5.26855L7.99997 8.66215L4.60557 5.26855L3.47437 6.39975L7.43437 10.3598Z"/>
+                                            </svg>
+                                        </span>                        
+                                    </a>
+                                    <div class="dropdown-menu widget_select_menu">
+                                        <!-- Toggle the class "is_empty" when the list is empty -->
+                                        <div class="widget_select_body ">
+                                            <ul class="search_result_list">
+                                                <li class="search_result_item">
+                                                    <a href="" class="result_item_wrapper active">
+                                                        <div class="user_profile_details">
+                                                            <div class="user_info_avi">
+                                                                <img src="../img/" alt="">
+                                                                <span class="default_avi">RH</span>
+                                                            </div>
+                                                            <div class="user_info">
+                                                                <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="search_result_empty">
+                                                <p>No result found</p>
+                                            </div>
+                                        </div>
+                                        <footer class="widget_select_footer">
+                                            <button type="button" class="widgetSelectCTA" data-target="#add_child" data-toggle="modal">Add a Child</b>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="infoStripItemBLock hidden-sm">
+                                    <div class="user_info text-right">
+                                        <span class="data_label">
+                                            <time>01 April, 2019</time>
+                                        </span>
+                                        <div class="title"><span>First Term</span> - <span>Week 2</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <div class="container hidden form_body">
+                        <article class="formWidgetBox">
+                            <div class="formWidgetWrapper">
+                                <div class="paneInner">
+                                    <div class="media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="">
+                                                <img src="../img/icons/info.svg" class="icon_md">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title title_sm margin_bottom_x font-bold">Test is Ready</h4>
+                                            <p><strong>Wole Atunbi’s</strong> diagnostic test is ready to be taken.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <article class="col-sm-6 resourceCardItem">
+                                            <div class="itemListItemWrapper"> 
+                                                <!-- Show the pawwall here -->
+                                                <div class="itemGridListItemImageHolder">
+                                                    <div class="itemGridImage">
+                                                        <img src="../img/" alt="" class="itemImage">
+                                                        <div class="itemDefault bg__inverse_light">
+                                                            <i class="cust_icon icon_book icon_xl"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="itemGridListItemDetails text-center">
+                                                    <div class="margin_top_md">
+                                                        <a href="./disagnosis_report.html" class="btn btn-secondary btn-block">Take Test as <span>Wole</span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="col-sm-6 resourceCardItem">
+                                            <div class="itemListItemWrapper"> 
+                                                <!-- Show the pawwall here -->
+                                                <div class="itemGridListItemImageHolder">
+                                                    <div class="itemGridImage has_image">
+                                                        <img src="../img/banners/samp_avi1.jpg" alt="" class="itemImage">
+                                                    </div>
+                                                </div>
+                                                <div class="itemGridListItemDetails text-center">
+                                                    <div class="margin_top_md">
+                                                        <a href="#book_tutor" data-toggle="modal" data-backdrop="static" class="btn btn-secondary btn-block">Book a Tutor Session</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="grdly_page_content margin_top_md ">
+
+                        <section class="gridCardRow">
+                            <div class="container">
+                                <div class="row">
+                                    <article class="gridCardItem col-md-7">
+                                        <div class="gridCardWrapper">
+                                            <header class="gridCardHeader">
+                                                <h4 class="gridCardTitle">performance Summary</h4>
+                                            </header>
+                                            <div class="paneInner">
+                                                <div class="dataInfoBlock">
+                                                    <div class="address_block">
+                                                        <h4 class="title title_sm">Mathematics</h4>
+                                                        <div class="listMetaInfo">
+                                                            <span class="">SSS1</span>
+                                                            <span class="inline_seperator">-</span>
+                                                            <span class="">First Term</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="termTopicList row">
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Number Base System</span>
+                                                                <div class="topicgrade">
+                                                                    <span class="">89%</span>
+                                                                    <div class="snippetInfo growthRate growthUp font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>2.5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Modular Arithmetic</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>78%</span>
+                                                                    <div class="snippetInfo growthRate growthDown font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>1.5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Quadratic Equations</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>73%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>2</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_avg">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Trigonometric Ratios</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>49%</span>
+                                                                    <div class="snippetInfo growthRate growthDown font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_fail">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Indices</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>92%</span>
+                                                                    <div class="snippetInfo growthRate growthUp font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Number Base System</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>89%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Modular Arithmetic</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>82%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Quadratic Equations</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>73%</span>
+                                                                    <div class="snippetInfo growthRate growthUp font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>2.5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_avg">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 73%" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Trigonometric Ratios</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>49%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_fail">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 49%" aria-valuenow="49" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                    <article class="topicItem col-sm-6">
+                                                        <div class="topicItemInfo">
+                                                            <div class="topicMeta">
+                                                                <span class="topicTitle color__black">Indices</span>
+                                                                <div class="topicgrade color__grey_dark">
+                                                                    <span>92%</span>
+                                                                    <div class="snippetInfo growthRate font-sm" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                        <span>3.5</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="topicProgress">
+                                                                <div class="progress progress_excel">
+                                                                    <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="gridCardItem col-md-5">
+                                        <div class="gridCardWrapper">
+                                            <div class="empty_state centered text-center hidden">
+                                                <div class="def_wrapper">
+                                                    <h4 class="title font-bold margin_bottom_sm">No upcoming Homework</h4>
+                                                    <p>Your child has not outstanding homework at the moment. Good time to take some practice tests.</p>
+                                                    <div class="margin_top_md">
+                                                        <a href="diagnostic_form.html" class="btn btn-primary-outline btn-sm">Schedule Diagnostic Test</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="paneInner">
+                                                <h4 class="gridCardTitle margin_bottom_md">Upcoming Homework</h4>
+                                                <div class="verticalItemList">
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                    <article class="listItem">
+                                                        <a href="about_homework.html" class="listItemWrapper">
+                                                            <div class="eventItemThumb">
+                                                                <div class="dateThumb">
+                                                                    <span class="dateItem dateDay">13</span>
+                                                                    <span class="dateItem dayMonth">Feb.</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listDetails">
+                                                                <h5 class="title text_clipped color__primary">Homework title goes here. </h5>
+                                                                <div class="listMetaInfo">
+                                                                    <span class="">50 Questions</span>
+                                                                    <span class="inline_seperator">|</span>
+                                                                    <span class="">Mathematics</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="info_icon">
+                                                                <svg class="cust_icon icon_xs" viewBox="0 0 10 16" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M0 1.86667L1.86667 0L9.86667 8L1.86667 16L0 14.1333L6.13333 8L0 1.86667Z"/>
+                                                                </svg>
+                                                            </div>
+                                                        </a>
+                                                    </article>
+                                                </div>
+                                                <div class="more_control margin_top_md">
+                                                    <a href="homework.html" class="widget_cta_link">
+                                                        See All
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="gridCardRow">
+                            <div class="container">
+
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="groupHeader">
+                                        <div class="grdly_header_title">
+                                            <h2 class="title title_sm font-bold">Recommendation</h2>
+                                        </div>
+                                    </header>
+                                    <div class="empty_state centered text-center hidden">
+                                        <div class="def_wrapper">
+                                            <h4 class="title font-bold margin_bottom_sm">No Recommendation</h4>
+                                            <p>There are no recommendation at the moment. However, you can browse our resources section to find more exciting materials to support your child.</p>
+                                            <div class="margin_top_md">
+                                                <a href="marketplace.html" class="btn btn-primary-outline btn-sm">Browse Resources</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_inner ">
+                                        <div class="row userRecommendation">
+                                            <article class="col-6 col-md-2 resourceCardItem">
+                                                <a href="startPractice.html" class="itemListItemWrapper"> 
+                                                    <!-- Show the pawwall here -->
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__inverse_light">
+                                                                <i class="cust_icon icon_book icon_lg"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails">
+                                                        <div class="productDetailHeader">
+                                                            <h4 class="title color__black font-bold" title="">Starter Mathematics pack</h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+    
+                                            <article class="col-6 col-md-2 resourceCardItem">
+                                                <a href="startPractice.html" class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__white">
+                                                                <i class="cust_icon icon_book icon_lg"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails">
+                                                        <div class="productDetailHeader">
+                                                            <h4 class="title color__black font-bold" title="">Intermediate Mathematics pack</h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+
+                                            <article class="col-6 col-md-2 resourceCardItem">
+                                                <a href="startPractice.html" class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__red_light">
+                                                                <i class="cust_icon icon_tutor icon_lg"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails">
+                                                        <h4 class="title color__black font-bold" title="">Free Tutor Session </h4>
+                                                        <span>Sat 28th Mar, 2020</span>
+                                                    </div>
+                                                </a>
+                                            </article>
+    
+                                            <article class="col-6 col-md-2 resourceCardItem">
+                                                <a href="#book_tutor" data-toggle="modal" data-backdrop="static" class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage has_image">
+                                                            <img src="../img/banners/samp_avi1.jpg" alt="" class="itemImage">
+                                                        </div>
+                                                        <div class="productTag">
+                                                            <span class="infoTag isMedium">
+                                                                Free Inside
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails">
+                                                        <div class="productDetailHeader">
+                                                            <h4 class="title color__black font-bold" title="">Book a Tutor</h4>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="groupHeader">
+                                        <div class="grdly_header_title">
+                                            <h2 class="title title_sm font-bold">Diagnostic Tests</h2>
+                                        </div>
+                                    </header>
+                                    <div class="empty_state centered text-center hidden">
+                                        <div class="def_wrapper centered text-center">
+                                            <h4 class="title font-bold margin_bottom_sm">No diagnostic test record found</h4>
+                                            <p>Identify your child's weak point in every subject with a 40 min diagnostic test. Click the button below to request a test.</p>
+                                            <div class="margin_top_md">
+                                                <a href="disagnosis_request.html" class="btn btn-secondary">Request a Free Diagnostic Test</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_inner ">
+                                        <div class="table table-responsive table-brand">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <div>Status</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Description</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Subject</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Score</div>
+                                                        </th>
+                                                        <th>
+                                                            <div>Action</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="itemTag tagStatusComplete">
+                                                                    Done
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="disagnosis_report.html" class="listItemWrapper">
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Diagnostic test 1</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <time>21 April, 2019</time>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="badge badge-default">Mathematics</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <span class="topicTitle color__black">You Scored: <em>27</em>/<em>30</em></span>
+                                                                    <span class="topicgrade color__grey_dark">92%</span>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_excel">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="disagnosis_report.html" class="controlItemLink">View Report</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="itemTag tagStatusDefault">
+                                                                    Pending
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table_description">
+                                                                <a href="disagnosis_report.html" class="listItemWrapper">
+                                                                    <div class="listDetails">
+                                                                        <h5 class="title text_clipped color__primary font-bold">Diagnostic test 1</h5>
+                                                                        <div class="listMetaInfo">
+                                                                            <time>28 Nov, 2019</time>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                                <span class="badge badge-default">Mathematics</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="topicItemInfo">
+                                                                <div class="topicMeta">
+                                                                    <span class="topicTitle color__black">Not Score yet</span>
+                                                                    <span class="topicgrade color__grey_dark">-</span>
+                                                                </div>
+                                                                <div class="topicProgress">
+                                                                    <div class="progress progress_excel">
+                                                                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="tableControl">
+                                                                <div class="tabelControlItem">
+                                                                    <a href="disagnosis_report.html" class="controlItemLink">View Report</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!--Add class "loading" to activate the loader-->
+    <div class="page_loader ">
+        <div class="loader_content">
+            <img src="../img/icons/ball-triangle.svg" class="loaderImage" alt="Page Loader">
+            <p class="font-md">loading...</p>
+        </div>
+    </div>
+    
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/jquery.rateit.min.js"></script>
+    <script src="../js/rounded_progressbar.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        var bar=new RadialProgress(
+            document.getElementById("bar"), {
+                colorBg: "#DDF1FA",
+                colorFg: "#60D2B0",
+                colorText: "#353535",
+                progress: 0.7865,
+                animationSpeed: .35,
+                setLabel: "Score",
+                round: true,
+                thick: 10,
+            });
+    </script>
+    		
+</body>
+</html>
