@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Stop the spread | It Pays to Do Good</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+13px|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body class="">
+
+    <header role="banner" class="preAuthHeader">
+        <div class="headercaption">
+            <div class="container">
+                <p>It Pays to Do Good. <a href="#">Learn More</a></p>
+            </div>
+        </div>
+        <div class="mainNavArea">
+            <div class="container">
+                <div class="navbarWrapper">
+                    <div class="navbarGroupItem navBarItemLeft">
+                        <div class="brand_img">
+                            <a href="index.html" class="logo_link">
+                                <img src="img/logo_Dark.png" alt="Stop the Spread">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbarGroupItem navBarItemCenter">
+                        <nav class="navMenu menuPrimary">
+                            <div class="groupLeft groupItem">
+                                <div class="menuListItem">
+                                    <a href="request.html" class="menuLinkItem">Request Safety Item</a>
+                                </div>
+                                <!-- navMenuActive -->
+                                <div class="menuListItem">
+                                    <a href="supply.html" class="menuLinkItem">Supply Items</a>
+                                </div>
+                                <div class="menuListItem">
+                                    <a href="volunteer.html" class="menuLinkItem">Volunteer</a>
+                                </div>
+                            </div>
+                            <div class="groupRight groupItem">
+                                <div class="menuListItem">
+                                    <a href="about.html" class="menuLinkItem">About</a>
+                                </div>
+                                <div class="menuListItem">
+                                    <a href="faqs.html" class="menuLinkItem">FAQs</a>
+                                </div>
+                                <div class="menuListItem">
+                                    <a href="impact.html" class="menuLinkItem">Impact</a>
+                                </div>
+                                <div class="menuListItem btn_user_act">
+                                    <a class="btn btn-secondary" href="donate.html">Donate</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="navbarGroupItem navBarItemLeft">
+                        <nav class="navMenu menuAlt">
+                            <div class="controlBtn nav_trigger">
+                                <a class="primary-nav-trigger" href="#">
+                                    <span class="menu-icon"></span>
+                                    <span class="menu-text">Menu</span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea bg__white">
+        <section class="section_block">
+            <div class="container content_narrow">
+                <div class="row text-center color_text_alt">
+                    <div class="offset-md-2 col-md-8">
+                        <header class="section_header">
+                            <h2 class="title title_lg font-bold color__black ">View your Impact</h2>
+                            <p class="caps_upper">All time donations</p>
+                        </header>
+                    </div>
+                </div>
+                <div class="dn_tiers form-row">
+                    <article class="infoBox col-sm-4">
+                        <div class="infoBoxWrapper text-center bg__primary_light">
+                            <h2 class="infoStatFig color__black">15,000</h2>
+                            <span class="font-sm font-bold">Masks </span>
+                        </div>
+                    </article>
+                    <article class="infoBox col-sm-4">
+                        <div class="infoBoxWrapper text-center bg__primary_light">
+                            <h2 class="infoStatFig color__black">8,000</h2>
+                            <span class="font-sm font-bold">litres of sanitizer </span>
+                        </div>
+                    </article>
+                    <article class="infoBox col-sm-4">
+                        <div class="infoBoxWrapper text-center bg__primary_light">
+                            <h2 class="infoStatFig color__black">70</h2>
+                            <span class="font-sm font-bold">Washing Stations </span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center margin_top_md font-md color__black">
+                    <p>Interact, share knowledge and form partnerships to build and scale innovative, sustainable, tech driven solutions to priority challenges in the Agricultural sector.</p>
+                </div>
+                
+            </div>
+        </section>
+        <section class="section_block padding-top-none">
+            <div class="container">
+                <div class="filterBar">
+                    <div class="filterOptionRow">
+                        <div class="filterOption">
+                            <label class="control-label color__black">Filter by State</label>
+                            <select class="filterControl form-control">
+                                <option>FCT</option>
+                                <option value="">Lagos</option>
+                                <option selected>Oyo</option>
+                                <option value="">Kano</option>
+                                <option value="">Kaduna</option>
+                                <option value="">Enugu</option>
+                                <option value="">Osun</option>
+                            </select>
+                        </div>
+                        <div class="filterOption">
+                            <label class="control-label color__black">Filter by Item</label>
+                            <select class="filterControl form-control">
+                                <option>FCT</option>
+                                <option value="">Mask</option>
+                                <option selected>Sanitizer</option>
+                                <option value="">Washing Stations</option>
+                            </select>
+                        </div>
+                        <div class="filterOption">
+                            <label class="control-label color__black">Filter by Date</label>
+                            <input type="text" placeholder="Select date" class="filterControl form-control" id="dateFilter">
+                        </div>
+                        <div class="filterOption">
+                            <button type="submit" class="btn btn-sm btn-secondary">Filter</button>
+                            <button type="button" class="btn btn-sm btn-default">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="empty_state hidden centered text-center">
+                    <div class="def_wrapper color__grey_dark">
+                        <h4 class="title title_sm font-bold color__black">No Result found</h4>
+                        <p>We can't find any record of an impact here. Please try again.</p>
+                    </div>
+                </div>
+                <div class="contentInner ">
+                    <article class="listGroup">
+                        <div class="groupHeader margin_bottom_sm">
+                            <h4 class="title color__black">25TH APRIL</h4>
+                        </div>
+                        <div class="paneInner">
+                            <div class="postList row">
+
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="postThumb col-sm-6 col-md-3">
+                                    <div class="postThumbWrapper">
+                                        <div class="postThumbImage">
+                                            <a href="impactDetails.html" class="postImageWrapper">
+                                                <img src="./img/banners/postThumb.jpg" class="bannerImage">
+                                            </a>
+                                        </div>
+                                        <div class="postThumbDetails color_black">
+                                            <span class="postDateTag">25TH APRIL</span>
+                                            <h2 class="title font-bold margin_bottom_md"><a href="impactDetails.html">Abaji Community Group.</a></h2>
+
+                                            <div class="postMetaHolder">
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Face Masks</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Hand Sanitizer</span>
+                                                    <span class="title font_weight_700">
+                                                        5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Liquid Soap</span>
+                                                    <span class="title font_weight_700">5
+                                                        <span class="unit">ltrs</span>
+                                                    </span>
+                                                </div>
+                                                <div class="postMeta">
+                                                    <span class="caps_upper">Washing Stations</span>
+                                                    <span class="title font_weight_700">5</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                     
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="section_cto">
+                        <button type="button" class="btn btn-default">Load More</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo" class="footerArea">
+        <div class="container">
+            <section class="footerTop footerRow">
+                <div class="footer_block">
+                    <div class="ft_block_header">
+                        <h3 class="item_title color__white caps_upper">IMPORTANT INFORMATION</h3>
+                    </div>
+                    <div class="ft_block_segment">
+                        <ul class="footer_links">
+                            <li class="footerLinkWrapper"><a class="footerLinkItem" href="about.html">About Stop the Spread</a></li>
+                            <li class="footerLinkWrapper"><a class="footerLinkItem" href="privacy.html">Privacy Policy</a></li>
+                            <li class="footerLinkWrapper"><a class="footerLinkItem" href="terms.html">Terms & Conditions</a></li>
+                        </ul>                        
+                    </div>
+                </div>
+            </section>
+            <section class="footerBottom footerRow">
+                <div class="ft_block_segment">
+                    <div class="ftSegmentItem">
+                        <div class="brand_media">
+                            <a href="index.html">
+                                <img src="./img/logo_light.png" alt="Stop the Spread">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="licenseBlock ftSegmentItem">
+                        <p class="copyright_notice">&copy; Copyright 2020</p>
+                    </div>
+                    <div class="ftSegmentItem">
+                        <div class="socialsBlock">
+                            <div class="social_links">
+                                <a href="https://www.facebook.com/PLANTProgramme/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="cust_icon" viewBox="0 0 64 64">
+                                        <path class="st0" d="M45.1,31.8l-8.4,0.1L37,62.6l-12.7,0.1L24,32l-6,0.1l-0.1-10.8l6-0.1l-0.1-7c-0.1-5,2.2-12.8,12.7-13l9.4-0.1L46,11.7l-6.8,0.1c-1.1,0-2.7,0.6-2.7,3l0.1,6.4l9.5-0.1L45.1,31.8z M45.1,31.8"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.instagram.com/plantprogramme/" target="_blank" title="Follow on Instagram">
+                                    <svg class="cust_icon" viewBox="0 0 25 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.7145 -0.000976562H7.71448C3.57298 -0.000976562 0.214478 3.35752 0.214478 7.49902V16.499C0.214478 20.6405 3.57298 23.999 7.71448 23.999H16.7145C20.856 23.999 24.2145 20.6405 24.2145 16.499V7.49902C24.2145 3.35752 20.856 -0.000976562 16.7145 -0.000976562ZM21.9645 16.499C21.9645 19.394 19.6095 21.749 16.7145 21.749H7.71448C4.81948 21.749 2.46448 19.394 2.46448 16.499V7.49902C2.46448 4.60402 4.81948 2.24902 7.71448 2.24902H16.7145C19.6095 2.24902 21.9645 4.60402 21.9645 7.49902V16.499Z"/>
+                                        <path d="M12.2145 5.99902C8.90098 5.99902 6.21448 8.68552 6.21448 11.999C6.21448 15.3125 8.90098 17.999 12.2145 17.999C15.528 17.999 18.2145 15.3125 18.2145 11.999C18.2145 8.68552 15.528 5.99902 12.2145 5.99902ZM12.2145 15.749C10.1475 15.749 8.46448 14.066 8.46448 11.999C8.46448 9.93052 10.1475 8.24902 12.2145 8.24902C14.2815 8.24902 15.9645 9.93052 15.9645 11.999C15.9645 14.066 14.2815 15.749 12.2145 15.749Z"/>
+                                        <path d="M18.6645 6.3485C19.106 6.3485 19.464 5.99056 19.464 5.54901C19.464 5.10746 19.106 4.74951 18.6645 4.74951C18.2229 4.74951 17.865 5.10746 17.865 5.54901C17.865 5.99056 18.2229 6.3485 18.6645 6.3485Z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </footer>
+
+	<script src="js/jquery.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#dateFilter').datetimepicker({
+                timepicker:false,
+                defaultTime: false
+            });
+        });
+    </script>
+    		
+</body>
+</html>
