@@ -19,36 +19,27 @@
 
 <body class="">
 
-    <div class="modal fade" id="contact">
+    <div class="modal fade" id="orderItem">
         <div class="modal-dialog">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h4 class="modal-title">Contact Us</h4>
+                    <h4 class="modal-title sr-only">Donate Items</h4>
                     <div class="dialogDismiss">
                         <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </header>
                 <div class="modal-body">
+                    <header class="section_header text-center">
+                        <h2 class="title title_sm font-bold color__black">Add an Item</h2>
+                        <p>Select the item you would like to order. If you dont find a state or an item in this list, it means that state isnt currently set up for orders or that item is not currently available in that state to order.</p>
+                    </header>
                     <form action="" class="form_body">
                         <div class="form-group">
-                            <label class="control-label color__black">Name</label>
-                            <input type="text" class="form-control" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label color__black">Telephone Number</label>
-                            <input type="text" class="form-control" placeholder="Enter your phone number">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label color__black">Email Address</label>
-                            <input type="email" class="form-control" placeholder="Enter your email address">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label color__black">Location</label>
+                            <label class="control-label color__black">What location are you ordering to?</label>
                             <select class="form-control">
-                                <option selected>Select your current location</option>
                                 <option value="">FCT</option>
                                 <option value="">Lagos</option>
-                                <option>Oyo</option>
+                                <option selected>Oyo</option>
                                 <option value="">Kano</option>
                                 <option value="">Kaduna</option>
                                 <option value="">Enugu</option>
@@ -56,39 +47,81 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="control-label color__black">Question</label>
-                            <textarea class="form-control" rows="7" placeholder="How can we help you?"></textarea>
+                            <label class="control-label color__black">What do you want to order?</label>
+                            <select class="form-control">
+                                <option value="">Face Masks</option>
+                                <option value="">Hand Sanitizers</option>
+                                <option selected>Washing Stations</option>
+                                <option value="">PPE Kits</option>
+                                <option value="">Ventilator</option>
+                            </select>
                         </div>
-                        
-                        
+                        <div class="form-group">
+                            <label class="control-label color__black">How Many units do you want to donate?</label>
+                            <input type="number" class="form-control" value="10" min="1">
+                        </div>
+                        <div class="infoBoxWrapper text-center bg__primary_light margin_bottom_md">
+                            <p class="">The Minimum quantity of this item you can order in this state is 10,000 Units</p>
+                        </div>
+                        <div class="form-group text-center">
+                            <label class="control-label color__black">This will Cost</label>
+                            <div class="sumBox">
+                                <h4 class="title title_sm">N20,000</h4>
+                            </div>
+                        </div>
                     </form>
                     <div class="form_cta text-center">
-                        <button type="button" data-target="#req_success" data-toggle="modal" class="btn btn-secondary">Continue</button>
+                        <button type="button" class="btn btn-secondary">Continue</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="req_success">
-        <div class="modal-dialog modal-dialog-centered">
+    <div class="modal fade" id="buyerInfo">
+        <div class="modal-dialog">
             <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">User Details</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
                 <div class="modal-body">
-                    <div class="content_wrapper">
-                        <div class="userInfoGroup text-center">
-                            <div class="defImg">
-                                <img src="./img/icons/success_animated.gif" class="" alt="Done">
-                            </div>
-                            <h3 class="title title_sm margin_bottom_sm font-bold">Class Scheduled</h3>
-                            <p>You have successfully scheduled an online <strong>Mathematics</strong> session for <strong>JSS2-Gold</strong>. Your Class will hold on <strong>April 21, 2020 at 12:00 PM</strong></p>
+                    <header class="section_header text-center">
+                        <h2 class="title title_sm font-bold color__black">Please give us your details</h2>
+                        <p>We need your details to enable us  send you relevant information about your order.</p>
+                    </header>
+                    <form action="" class="form_body">
+                        <div class="form-group">
+                            <label class="control-label color__black">Your Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your full name">
                         </div>
-                        
-                        <div class="section_cto text-center">
-                            <a href="" class="btn btn-secondary">Done</a>
+                        <div class="form-group">
+                            <label class="control-label color__black">Telephone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter your contact phone number">
                         </div>
+                        <div class="form-group">
+                            <label class="control-label color__black">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter your email address">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label color__black">Where  will you pick up your deliveries?</label>
+                            <select class="form-control">
+                                <option value="">FCT</option>
+                                <option value="">Lagos</option>
+                                <option selected>Oyo</option>
+                                <option value="">Kano</option>
+                                <option value="">Kaduna</option>
+                                <option value="">Enugu</option>
+                                <option value="">Osun</option>
+                            </select>
+                        </div>
+                    </form>
+                    <div class="form_cta text-center">
+                        <a href="orderSummary.html" class="btn btn-secondary">Continue</a>
                     </div>
                 </div>
-                <div class="modal-footer"></div>
             </div>
         </div>
     </div>
@@ -162,105 +195,56 @@
         </div>
     </header>
 
+
     <main class="mainContentArea bg__off_white">
         <section class="section_block bg__white">
-            <div class="container content_narrow">
+            <div class="container">
                 <div class="row text-center color_text_alt">
                     <div class="offset-md-2 col-md-8">
-                        <h2 class="title title_lg font-bold color__black margin_bottom_md">FAQs & General Information</h2>
-                        <p>The Agtech Incubation program is designed to help interested tech entrepreneurs evolve into focused Agtech entrepreneurs by supporting them with tailored incubation </p>
+                        <header class="section_header">
+                            <h2 class="title title_lg font-bold color__black margin_bottom_sm">What Items do you want to order?</h2>
+                            <p>Interact, share knowledge and form partnerships to build and scale innovative, sustainable, tech driven solutions to priority challenges in the Agricultural sector.</p>
+                        </header>
+                    </div>
+                </div>
+                <div class="dn_tiers margin_top_lg text-center">
+                    <div class="row justify-content-center">
+                        <article class="userOption col-sm-6 col-md-4">
+                            <div class="optionWrapper text-center">
+                                <p class="title font-regular color__black">1000 Masks in FCT</p>
+                                <div class="margin_top_sm">
+                                    <span class="badge badge-primary">N200,000</span>
+                                </div>
+                                <div class="dialogDismiss">
+                                    <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="userOption col-sm-6 col-md-4">
+                            <div class="optionWrapper text-center">
+                                <p class="title font-regular color__black">10 Litres of Sanitizer in Ondo State</p>
+                                <div class="margin_top_sm">
+                                    <span class="badge badge-primary">In Kind</span>
+                                </div>
+                                <div class="dialogDismiss">
+                                    <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="margin_top_sm text-center">
+                        <button type="button" data-target="#orderItem" data-toggle="modal" data-backdrop="static" class="listItemAdd">Add Item</button>
                     </div>
                 </div>
                 
-            </div>
-        </section>
-        <section class="section_block bg__white padding-top-none">
-            <div class="container ">
-                <div class="dn_tiers row">
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                    <article class="userOption col-sm-3">
-                        <a href="faqs.html" class="optionWrapper text-center">
-                            <p class="title font_weight_500 color__black">How we source for Items</p>
-                        </a>
-                    </article>
-                </div>
-                <div class="section_cto text-center">
-                    <h6 class="title margin_bottom_sm">Cant find the answer to your question?</h6>
-                    <a href="#contact" data-toggle="modal" class="btn btn-secondary">Ask the team</a>
+                <div class="contentSumary text-center">
+                    <div class="sumBox bg__primary_dark centered">
+                        <span>Total Amount</span>
+                        <h4 class="title title_sm">N200,000</h4>
+                    </div>
+                    <div class="section_cto">
+                        <a href="#buyerInfo" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">Continue</a>
+                    </div>
                 </div>
             </div>
         </section>
