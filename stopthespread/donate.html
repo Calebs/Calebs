@@ -23,12 +23,15 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h4 class="modal-title">Donate Items</h4>
                     <div class="dialogDismiss">
                         <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </header>
                 <div class="modal-body">
+                    <header class="section_header text-center">
+                        <h2 class="title title_sm margin_bottom_sm font-bold color__black">Add an Item</h2>
+                        <p>Select the item you would like to donate. If you dont find  an item in this list, it means that  item is not currently available in that state to donate.</p>
+                    </header>
                     <form action="" class="form_body">
                         <div class="form-group">
                             <label class="control-label color__black">What do you want to donate?</label>
@@ -41,28 +44,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label class="control-label color__black">Where do you want to donate?</label>
-                            <select class="form-control">
-                                <option value="">FCT</option>
-                                <option value="">Lagos</option>
-                                <option selected>Oyo</option>
-                                <option value="">Kano</option>
-                                <option value="">Kaduna</option>
-                                <option value="">Enugu</option>
-                                <option value="">Osun</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label class="control-label color__black">How Many units do you want to donate?</label>
                             <input type="number" class="form-control" value="10" min="1">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label color__black">How do you want to donate?</label>
-                            <select class="form-control">
-                                <option value="">Cash</option>
-                                <option value="">Kind</option>
-                                <option selected>Cash and Kind</option>
-                            </select>
                         </div>
                         <div class="form-group text-center">
                             <label class="control-label color__black">This will Cost</label>
@@ -83,14 +66,13 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <header class="modal-header">
-                    <h4 class="modal-title">User Details</h4>
                     <div class="dialogDismiss">
                         <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </header>
                 <div class="modal-body">
                     <header class="section_header text-center">
-                        <h2 class="title title_sm font-bold color__black">Please give us your details</h2>
+                        <h2 class="title title_sm margin_bottom_sm font-bold color__black">Please give us your details</h2>
                         <p>We need your details to enable us acknowledge you and send you relevant information about your donation.</p>
                     </header>
                     <form action="" class="form_body">
@@ -135,11 +117,22 @@
                         <nav class="navMenu menuPrimary">
                             <div class="groupLeft groupItem">
                                 <div class="menuListItem">
-                                    <a href="request.html" class="menuLinkItem">Request Safety Item</a>
+                                    <a href="#" data-toggle="dropdown" class="menuLinkItem dropdown-toggle">Safety Items</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <a href="impact.html">Face Masks</a>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <a href="impact_disbursement.html">Liquid Wash</a>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <!-- navMenuActive -->
                                 <div class="menuListItem">
                                     <a href="supply.html" class="menuLinkItem">Supply Items</a>
+                                </div>
+                                <div class="menuListItem">
+                                    <a href="information.html" class="menuLinkItem">Request Items</a>
                                 </div>
                                 <div class="menuListItem">
                                     <a href="volunteer.html" class="menuLinkItem">Volunteer</a>
@@ -164,7 +157,7 @@
                                     </ul>
                                 </div>
                                 <div class="menuListItem btn_user_act">
-                                    <a class="btn btn-secondary" href="donate.html">Donate</a>
+                                    <a class="btn btn-secondary" href="#donateState" data-toggle="modal">Donate</a>
                                 </div>
                             </div>
                         </nav>
@@ -191,70 +184,82 @@
                 <div class="row text-center color_text_alt">
                     <div class="offset-md-2 col-md-8">
                         <header class="section_header">
-                            <h2 class="title title_lg font-bold color__black margin_bottom_sm">Help us hit the target to make the next donation in Kano</h2>
-                            <p><strong>Next Recepient:</strong> Dala Local Government Farmers Union</p>
+                            <h2 class="title title_md font-bold color__black margin_bottom_sm">Help us hit the target to make the next donation in Kano</h2>
                         </header>
                     </div>
                 </div>
-                <div class="dn_tiers margin_top_lg text-center">
+                <div class="dn_tiers text-center">
                     <div class="margin_bottom_sm">
-                        <label class="propLabel color__primary">Where we stand with donations today</label>
+                        <a href="#interventionPanel" data-toggle="collapse" class="propLabel color__primary">See where we stand with donations in Kano today</a>
                     </div>
-                    <div class="form-row justify-content-center">
-                        <article class="infoBox col-6 col-md-2">
-                            <div class="infoBoxWrapper text-center bg__primary_light">
-                                <span class="font_weight_500 text_clipped caps_upper">Masks Donated</span>
-                                <h2 class="infoStatFig color__black">200</h2>
-                                <span class="font-sm">Units</span>
-                            </div>
-                            <div class="infoBoxFooter bg__primary color__secondary text-center">
-                                <P class="font_weight_700">TARGET: 1000 units</P>
-                            </div>
-                        </article>
-                        <article class="infoBox col-6 col-md-2">
-                            <div class="infoBoxWrapper text-center bg__primary_light">
-                                <span class="font_weight_500 text_clipped caps_upper">HAND SANITIZERS DONATED</span>
-                                <h2 class="infoStatFig color__black">120</h2>
-                                <span class="font-sm">Liters</span>
-                            </div>
-                            <div class="infoBoxFooter bg__primary color__secondary text-center">
-                                <P class="font_weight_700">TARGET: 1000 units</P>
-                            </div>
-                        </article>
-                        <article class="infoBox col-6 col-md-2">
-                            <div class="infoBoxWrapper text-center bg__primary_light">
-                                <span class="font_weight_500 text_clipped caps_upper">LIQUID SOAP DONATED</span>
-                                <h2 class="infoStatFig color__black">10</h2>
-                                <span class="font-sm">Litres</span>
-                            </div>
-                            <div class="infoBoxFooter bg__primary color__secondary text-center">
-                                <P class="font_weight_700">TARGET: 1000 units</P>
-                            </div>
-                        </article>
-                        <article class="infoBox col-6 col-md-2">
-                            <div class="infoBoxWrapper text-center bg__primary_light">
-                                <span class="font_weight_500 text_clipped caps_upper">WASHING STATIONS DONATED</span>
-                                <h2 class="infoStatFig color__black">0</h2>
-                                <span class="font-sm">Units`</span>
-                            </div>
-                            <div class="infoBoxFooter bg__primary color__secondary text-center">
-                                <P class="font_weight_700">TARGET: 1000 units</P>
-                            </div>
-                        </article>
-                        <article class="infoBox col-6 col-md-2">
-                            <div class="infoBoxWrapper text-center bg__primary_light">
-                                <span class="font_weight_500 text_clipped caps_upper">INFORMATION POSTERS DONATED</span>
-                                <h2 class="infoStatFig color__black">20</h2>
-                                <span class="font-sm">Units</span>
-                            </div>
-                            <div class="infoBoxFooter bg__primary color__secondary text-center">
-                                <P class="font_weight_700">TARGET: 500 units</P>
-                            </div>
-                        </article>
+                    <div class="collapse in" id="interventionPanel">
+                        <p class="font-sm margin_bottom_sm">So far, good people like you have donated the following to Kano State</p>
+                        <div class="form-row justify-content-center">
+                            <article class="infoBox col-6 col-sm-4 col-md-2">
+                                <div class="infoBoxWrapper text-center bg__primary_light">
+                                    <span class="font-sm font_weight_500 text_clipped caps_upper">Masks</span>
+                                    <h2 class="infoStatFig color__black">200</h2>
+                                    <span class="font-sm">Units</span>
+                                </div>
+                                <div class="infoBoxFooter bg__primary color__secondary text-center">
+                                    <P class="font_weight_700">TARGET: 1000 units</P>
+                                </div>
+                            </article>
+                            <article class="infoBox col-6 col-sm-4 col-md-2">
+                                <div class="infoBoxWrapper text-center bg__primary_light">
+                                    <span class="font-sm font_weight_500 text_clipped caps_upper">HAND SANITIZERS</span>
+                                    <h2 class="infoStatFig color__black">120</h2>
+                                    <span class="font-sm">Liters</span>
+                                </div>
+                                <div class="infoBoxFooter bg__primary color__secondary text-center">
+                                    <P class="font_weight_700">TARGET: 1000 units</P>
+                                </div>
+                            </article>
+                            <article class="infoBox col-6 col-sm-4 col-md-2">
+                                <div class="infoBoxWrapper text-center bg__primary_light">
+                                    <span class="font-sm font_weight_500 text_clipped caps_upper">LIQUID SOAP</span>
+                                    <h2 class="infoStatFig color__black">10</h2>
+                                    <span class="font-sm">Litres</span>
+                                </div>
+                                <div class="infoBoxFooter bg__primary color__secondary text-center">
+                                    <P class="font_weight_700">TARGET: 1000 units</P>
+                                </div>
+                            </article>
+                            <article class="infoBox col-6 col-sm-4 col-md-2">
+                                <div class="infoBoxWrapper text-center bg__primary_light">
+                                    <span class="font-sm font_weight_500 text_clipped caps_upper">WASHING STATIONS</span>
+                                    <h2 class="infoStatFig color__black">0</h2>
+                                    <span class="font-sm">Units`</span>
+                                </div>
+                                <div class="infoBoxFooter bg__primary color__secondary text-center">
+                                    <P class="font_weight_700">TARGET: 1000 units</P>
+                                </div>
+                            </article>
+                            <article class="infoBox col-6 col-sm-4 col-md-2">
+                                <div class="infoBoxWrapper text-center bg__primary_light">
+                                    <span class="font_weight_500 text_clipped caps_upper">INFORMATION POSTERS</span>
+                                    <h2 class="infoStatFig color__black">20</h2>
+                                    <span class="font-sm">Units</span>
+                                </div>
+                                <div class="infoBoxFooter bg__primary color__secondary text-center">
+                                    <P class="font_weight_700">TARGET: 500 units</P>
+                                </div>
+                            </article>
+                            <article class="infoBox col-6 col-sm-4 col-md-2">
+                                <div class="infoBoxWrapper text-center bg__primary_light">
+                                    <span class="font_weight_500 text_clipped caps_upper">INFORMATION POSTERS</span>
+                                    <h2 class="infoStatFig color__black">20</h2>
+                                    <span class="font-sm">Units</span>
+                                </div>
+                                <div class="infoBoxFooter bg__primary color__secondary text-center">
+                                    <P class="font_weight_700">TARGET: 500 units</P>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
                 <div class="dn_tiers margin_top_lg text-center">
-                    <h4 class="title title_sm font_weight_700 color__primary margin_bottom_md">What would you like to donate?</h4>
+                    <h4 class="title title_sm font_weight_700 color__primary margin_bottom_md">What would you like to donate to Kano State?</h4>
                     <div class="row justify-content-center">
                         <article class="userOption col-sm-6 col-md-4">
                             <div class="optionWrapper text-center">
