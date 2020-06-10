@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Senior Secondary school 1 | Gradelyng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/base.min.css" />
+    <link rel="stylesheet" href="../css/jquery.datetimepicker.css"/>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+
+<body>
+
+    <div class="modal fade" id="scheduleClass">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Lesson Schedule</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="" class="form_body">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Lesson Title</label>
+                            <input type="text" class="form-control" placeholder="Give the lesson a name">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold caps_upper ">Lesson Date & Time</label>
+                            <div class="inputaffixed inputSurfixed">
+                                <input type="text" class="form-control inputControl" id="lessonTime" placeholder="Set date and Time">
+                                <div class="inputfixture">
+                                    <i class="cust_icon icon_calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold caps_upper ">Repeat Lesson?</label>
+                            <select class="form-control">
+                                <option value="">Don't repeat</option>
+                                <option value="">Daily</option>
+                                <option selected>Weekly</option>
+                                <option value="">Every weekday (Monday to Friday)</option>
+                                <option value="">Annually</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold caps_upper ">Class</label>
+                            <select class="form-control">
+                                <option>Select a class</option>
+                                <option selected>Senior Secondary School 1 - SSS1</option>
+                                <option>Senior Secondary School 2 - SSS2</option>
+                                <option>Senior Secondary School 3 - SSS3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Subject?</label>
+                            <div class="margin_top_sm">
+                                <label for="sbjMaths" class="radio-inline">
+                                    <input type="radio" id="sbjMaths" checked name="hmSubject">
+                                    <span class="label_title caps_upper">Mathematics</span>
+                                </label>
+                                <label for="sbjEnglish" class="radio-inline">
+                                    <input type="radio" id="sbjEnglish" name="hmSubject">
+                                    <span class="label_title caps_upper">English Language</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form_cta text-center">
+                        <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                        <button type="button" data-toggle="modal" data-target="#req_success" class="btn btn-secondary">Schedule Class</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <div class="modal fade" id="req_success">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="content_wrapper">
+                        <div class="userInfoGroup text-center">
+                            <div class="def_img">
+                                <img src="../img/icons/success_animated.gif" class="avi_xxl" alt="Done">
+                            </div>
+                            <h3 class="title title_sm margin_bottom_sm font-bold">Class Scheduled</h3>
+                            <p>You have successfully scheduled an online <strong>Mathematics</strong> session for <strong>JSS2-Gold</strong>. Your Class will hold on <strong>April 21, 2020 at 12:00 PM</strong></p>
+                        </div>
+                        
+                        <div class="section_cto text-center">
+                            <a href="teacher_dashboard.html" class="btn btn-secondary">Return to Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="teacher_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="homework.html" class="menuLinkItem">Homework</a>
+                        </div>
+                        <div class="menuListItem active">
+                            <a href="my_classes.html" class="menuLinkItem">Classes</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="#">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
+                                </svg>
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi bg__danger">AJ</div>
+                                </div>
+                                <span class="caret"></span>
+                            </a>
+                            
+                            <div class="dropdown-menu profile_dropdown">
+                                <header class="dpd_header">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi bg__danger">AJ</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold color__primary">Andrew Jackson</h4>
+                                            <p>andrewjay@gmail.com</p>
+                                            <div class="margin_top_sm">
+                                                <a href="profile.html" class="widget_cta_link">Manage Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
+                                <ul class="dpd_nav">
+                                    <li class="dpd_nav_item">
+                                        <a href="../teacher_help.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Get Help
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="act_settings.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_settings"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Account Settings
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="../login.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_logout"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Log Out
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="grdly_page_body bg__off_white">
+                <div class="splitLayout">
+                    <div class="sideImage visible_sm bg__white">
+                        <div class="profileSummaryWrapper">
+                            <header class="profileHeaderBlock align-items-start">
+                                <h4 class="title title_lg font-bold">Senior Secondary School 1</h4>
+                                <div class="insight_row margin_top_md">
+                                    <div class="insight_item">
+                                        <div class="insight_value">
+                                            <span class="title color__black">CRL/SAT/REM</span>
+                                        </div>
+                                        <div class="insight_title">
+                                            <span class="color__grey_dark">Class Code</span>
+                                        </div>  
+                                    </div>
+                                    <div class="insight_item">
+                                        <div class="insight_value">
+                                            <span class="title color__black">First Term</span>
+                                        </div>
+                                        <div class="insight_title">
+                                            <span class="color__grey_dark">Current Term</span>
+                                        </div>  
+                                    </div>
+                                </div>
+                            </header>
+                            <div class="collapsibleBlock blockCollapsed ">
+                                <div class="userInfoBlock">
+                                    <div class="base_divider"></div>
+                                    <div class="userInfoBlockItem">
+                                        <h4 class="margin_bottom_md caps_upper font-default ">Class Summary</h4>
+                                        <div class="chartSummary row align-items-center">
+                                            <div class="chartHolder col-6">
+                                                <canvas id="classPerformance" aria-label="Class performance chart" role="img"></canvas>
+                                                <div class="text-center margin_top_md">
+                                                    <span class="data_label">Class Size:</span>
+                                                    <span class="title color__primary">120 Students</span>
+                                                </div>
+                                            </div>
+                                            <div class="charteKy col-6">
+                                                <div class="legendList">
+                                                    <div class="legendItem margin_bottom_md" title="Avg. Score is less than 50%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__danger">
+                                                        </span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">64 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>Less than 50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="legendItem margin_bottom_md" title="Avg. Score is greater than 50%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__secondary"></span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">27 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>More than 50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="legendItem margin_bottom_md" title="Avg. Score is greater than 75%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__success"></span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">36 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>More than 75%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="base_divider"></div>
+                                    <div class="userInfoBlockItem">
+                                        <h4 class="margin_bottom_md caps_upper font-default ">Best Performer</h4>
+                                        <div class="user_item">
+                                            <a href="profileSummary.html" class="user_profile_details">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="../img/hermionie.jpg" alt="">
+                                                    <span class="default_avi">HG</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title font-bold text_clipped">Hermione Granger</h4>
+                                                    <span class="listMetaInfo">Avg. Score: 78.94%</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="userInfoBlockItem margin_top_lg">
+                                        <h4 class="margin_bottom_md caps_upper font-default ">Least Performer</h4>
+                                        <div class="user_item">
+                                            <a href="profileSummary.html" class="user_profile_details">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="../img/" alt="">
+                                                    <span class="default_avi">PC</span>
+                                                </div>
+                                                <div class="user_info">
+                                                    <h4 class="title font-bold text_clipped">Penelope Clearwater</h4>
+                                                    <span class="listMetaInfo">Avg. Score: 34.41%</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="base_divider"></div>
+                                    <div class="userInfoBlockItem">
+                                        <h4 class="margin_bottom_md caps_upper font-default ">School</h4>
+                                        <div class="user_list">
+                                            <article class="data_entity">
+                                                <div class="data_entity_icon">
+                                                    <div class="productThumb avi_md">
+                                                        <img src="../img/" alt="">
+                                                        <div class="default_avi">
+                                                            <span class="cust_icon icon_school"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data_entity_info">
+                                                    <h4 class="title font-md color__primary">Christland Intl. College</h4>
+                                                    <div class="listMetaInfo">
+                                                        <span>26, Opebi Road, P.M.B. 21614, Opebi, Ikeja, 100281, Lagos</span>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="collapsetoggle expandCollapseSm"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layoutMain">
+                        <div class="profileSummaryWrapper bg__off_white">
+
+                            <header class="grdly_page_header">
+                                <div class="grdly_header_title">
+                                    <h3 class="title title_sm font-bold">Class Lessons</h3>
+                                </div>
+                                <div class="grdly_action_primary">
+                                    <button type="button" data-target="#scheduleClass" data-toggle="modal" class="btn btn-secondary">
+                                        New
+                                    </button>
+                                </div>
+                            </header>
+
+                            <div class="filter_menu">
+                                <ul class="filter_nav_options">
+                                    <li><a href="class_details.html">Students</a></li>
+                                    <li><a href="class_homework.html">Homework</a>
+                                    </li>
+                                    <li><a href="class_lessons.html" class="active">Lessons</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="empty_state justify-content-center centered hidden">
+                                <div class="def_wrapper color__grey_dark text-center">
+                                    <div class="def_img margin_bottom_md">
+                                        <img src="../img/banners/empty_class.png" class="" alt="No class scheduled">
+                                    </div>
+                                    <p>You have no schedule lesson for this class.</p>
+                                    <div class="margin_top_md">
+                                        <button type="button" data-target="#scheduleClass" data-toggle="modal" class="btn btn-secondary">Schedule a Lesson</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_inner ">
+                                
+                                <div class="table table-responsive table-brand">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <div>Lesson</div>
+                                                </th>
+                                                <th>
+                                                    <div>Subject</div>
+                                                </th>
+                                                <th>
+                                                    <div class="">Options</div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="">
+                                            <tr>
+                                                <td>
+                                                    <div class="media_item">
+                                                        <div class="icon_box box_secondary">
+                                                            <span class="cust_icon icon_videoLesson"></span>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <h4 class="title font-bold text_clipped">Lesson title goes here</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span class="">Apr 21, 2020</span>
+                                                                <span class="inline_seperator">•</span>
+                                                                <span class="">10:00 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-default">
+                                                        Mathematics
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <div class="tableControl">
+                                                        <div class="tabelControlItem">
+                                                            <button type="button" data-target="#scheduleClass" class="controlItemLink">Start</a>
+                                                        </div>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#scheduleClass" data-toggle="modal">Edit</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Cancel</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media_item">
+                                                        <div class="icon_box box_secondary">
+                                                            <span class="cust_icon icon_videoLesson"></span>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <h4 class="title font-bold text_clipped">Lesson title goes here</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span class="">Apr 21, 2020</span>
+                                                                <span class="inline_seperator">•</span>
+                                                                <span class="">11:00 AM</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-default">
+                                                        English Language
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <div class="tableControl">
+                                                        <div class="tabelControlItem">
+                                                            <button type="button" data-target="#scheduleClass" class="controlItemLink">Start</a>
+                                                        </div>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#scheduleClass" data-toggle="modal">Edit</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Cancel</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media_item">
+                                                        <div class="icon_box box_secondary">
+                                                            <span class="cust_icon icon_videoLesson"></span>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <h4 class="title font-bold text_clipped">Lesson title goes here</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span class="">Apr 21, 2020</span>
+                                                                <span class="inline_seperator">•</span>
+                                                                <span class="">12:00 PM</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-default">
+                                                        Chemistry
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <div class="tableControl">
+                                                        <div class="tabelControlItem">
+                                                            <button type="button" data-target="#scheduleClass" class="controlItemLink">Start</a>
+                                                        </div>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#scheduleClass" data-toggle="modal">Edit</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Cancel</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media_item">
+                                                        <div class="icon_box box_secondary">
+                                                            <span class="cust_icon icon_videoLesson"></span>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <h4 class="title font-bold text_clipped">Lesson title goes here</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span class="">Apr 21, 2020</span>
+                                                                <span class="inline_seperator">•</span>
+                                                                <span class="">02:00 PM</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-default">
+                                                        Biology
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <div class="tableControl">
+                                                        <div class="tabelControlItem">
+                                                            <button type="button" data-target="#scheduleClass" class="controlItemLink">Start</a>
+                                                        </div>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#scheduleClass" data-toggle="modal">Edit</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Cancel</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="media_item">
+                                                        <div class="icon_box box_secondary">
+                                                            <span class="cust_icon icon_videoLesson"></span>
+                                                        </div>
+                                                        <div class="media_info">
+                                                            <h4 class="title font-bold text_clipped">Lesson title goes here</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span class="">Apr 21, 2020</span>
+                                                                <span class="inline_seperator">•</span>
+                                                                <span class="">03:00 PM</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="badge badge-default">
+                                                        Physics
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <div class="tableControl">
+                                                        <div class="tabelControlItem">
+                                                            <button type="button" data-target="#scheduleClass" class="controlItemLink">Start</a>
+                                                        </div>
+                                                        <div class="dropdown tabelControlItem">
+                                                            <a href="#" data-toggle="dropdown" class="btn-icon">
+                                                                <svg class="cust_icon"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    viewBox="0 0 20 20">
+                                                                    <path d="M4 12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm6 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" />
+                                                                </svg>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="dropdown-item">
+                                                                    <a href="#scheduleClass" data-toggle="modal">Edit</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li class="dropdown-item">
+                                                                    <button type="button">Cancel</button>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/Chart.min.js"></script>
+    <script src="../js/jquery.datetimepicker.full.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            $('#lessonTime').datetimepicker();
+        });
+
+        var classChart = document.getElementById('classPerformance').getContext('2d');
+        
+        var myDoughnutChart = new Chart(classChart ,{
+            type: 'doughnut',
+            data: {
+                labels: ["Below 50%", "Above 50%", "Above 75%"],
+                datasets: [{
+                    label: 'Class Performance summary',
+                    data: [53, 27, 36],
+                    backgroundColor: [
+                        '#FE747D',
+                        '#F2AB3E',
+                        '#60D2B0'
+                    ],
+                    hoverBackgroundColor: '#08384D',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutoutPercentage: 70,
+                aspectRatio:1,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

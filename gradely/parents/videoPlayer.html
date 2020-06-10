@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Video Lesson: Introduction to Algebrae | Gradelyng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal fade" id="rep_video">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Report Question</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label class="control-label caps_upper font-bold margin_bottom_sm">Report video for</label>
+                            <div class="checkbox">
+                                <label for="issue_1">
+                                    <input type="checkbox" id="issue_1" name="reportQuestion">
+                                    <span class="label_title">Poor Quality (Teaching style, Audio, Visuals)</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="issue_2">
+                                    <input type="checkbox" id="issue_2" name="reportQuestion">
+                                    <span class="label_title">Not relevant to you</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="issue_3">
+                                    <input type="checkbox" id="issue_3" name="reportQuestion">
+                                    <span class="label_title">The teacher is too fast or slow</span>
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="issue_4">
+                                    <input type="checkbox" id="issue_4" name="reportQuestion">
+                                    <span class="label_title">Errors (Grammatical, Solution, Formula etc.)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label caps_upper font-bold">Additional Comment</label>
+                            <textarea class="form-control" rows="8" placeholder="Tell us more about your experience"></textarea>
+                        </div>
+                        <div class="form_cta text-center"> 
+                            <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                            <button type="button " class="btn btn-secondary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for students">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem">
+                            <a href="parent_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem hasUpdate">
+                            <a href="report.html" class="menuLinkItem">Report</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <a href="#">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
+                                </svg>
+                                <span class="badgeCount">8</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi">BO</div>
+                                </div>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu profile_dropdown">
+                                <header class="dpd_header">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_bordered avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi">BO</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold color__primary">Boye Oshinaga</h4>
+                                            <p>boye@gmail.com</p>
+                                            <div class="margin_top_sm">
+                                                <a href="profile.html" class="widget_cta_link">Manage Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
+                                <ul class="dpd_nav">
+                                    <li class="dpd_nav_item">
+                                        <a href="../student_help.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Get Help
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="act_settings.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_settings"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Account Settings
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="../login.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_logout"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Log Out
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <div class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <div class="grdly_page_content">
+                        <section class="videoHeroSection ">
+                            <div class="videoPlayerWrapper">
+                                <div class="container ">
+                                    <div class="embed-responsive embed-responsive-16by9 videoStage">
+                                        <video poster="../img/card_banners/videoBanner.jpg" controls class="embed-responsive-item">
+                                            <source src="../img/banners/catchUp_walkthrough.mp4" type="video/mp4">
+                                            Sorry, your browser doesn't support embedded videos.
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Toggle the class "paywallActive" to show it -->
+                            <div class="videoPaywall ">
+                                <div class="container">
+                                    <div class="def_wrapper color__grey text-center ">
+                                        <div class="defImg">
+                                            <img src="../img/icons/subscribe.svg" alt="Payment Required">
+                                        </div>
+                                        <h3 class="title title_sm font-bold color__white margin_bottom_sm">Subscription Required</h3>
+                                        <p>You cannot access this content as it is not included in your current subscription package. Upgrade your plan to be able to access it.</p>
+                                        <div class="section_cto">
+                                            <a href="" class="btn btn-secondary">Upgrade Plan</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <header class="videoControlWrapper">
+                                <div class="container">
+                                    <div class="controlBarWrapper">
+                                        <div class="videoTitleHolder">
+                                            <h2 class="title title_sm color__black font-bold">Introduction to Algebraic Fractions</h2>
+                                            <div class="listMetaInfo">
+                                                <span class="">Mathematics</span>
+                                                <span class="inline_seperator">•</span>
+                                                <span class="">2,000 Views</span>
+                                            </div>
+                                        </div>
+                                        <div class="videoControls">
+                                            <button type="button" class="btn btn-sm btn-primary-inverse">
+                                                <span class="btnIcon">
+                                                    <i class="cust_icon icon_share"></i>
+                                                </span>
+                                                <span>Share</span>
+                                            </button>
+                                            <button type="button" data-target="#rep_video" data-toggle="modal" class="btn btn-sm btn_danger_light margin_left_m">
+                                                <span class="btnIcon">
+                                                    <i class="cust_icon icon_flag"></i>
+                                                </span>
+                                                <span>Report</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                        <section class="section_block">
+                            <div class="container">
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="groupHeader">
+                                        <h3 class="title title_sm color__black">More Recommended for You</h3>
+                                    </header> 
+                                    <div class="content_inner ">
+                                        <div class="form-row recommendationList">
+                                            <article class="recommendationCardItem cardItem col-6 col-sm-4 col-md-2">
+                                                <a href="startPractice.html" class="recommendationCardWrapper bg__white">
+                                                    <div class="cardItemThumb">
+                                                        <img src="../img/card_banners/percentages.jpg" class="productImage" alt="">
+                                                        <div class="cardItemThumbOverlay">
+                                                            <span class="">
+                                                                <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                                                </svg>                     
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardItemDetails">
+                                                        <div class="recommendationHeader">
+                                                            <div class="recommendationType">
+                                                                <span class="cardSubtitle color__grey_dark caps_upper">Practice</span>
+                                                            </div>
+                                                            <div class="recommendationStatus"></div>
+                                                        </div>
+                                                        <h5 class="cardItemTitle color__black">Number Base System</h5>
+                                                        <div class="cardItemCta text-center">
+                                                            <span class="btn btn-sm btn-primary-inverse">Start Now</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                            <article class="recommendationCardItem cardItem col-6 col-sm-4 col-md-2">
+                                                <a href="videoPlayer.html" class="recommendationCardWrapper bg__white">
+                                                    <div class="cardItemThumb">
+                                                        <img src="../img/card_banners/polygon.jpg" class="productImage" alt="">
+                                                        <div class="cardItemThumbOverlay">
+                                                            <span class="">
+                                                                <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                                                </svg>                     
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardItemDetails">
+                                                        <div class="recommendationHeader">
+                                                            <div class="recommendationType">
+                                                                <span class="cardSubtitle color__grey_dark caps_upper">Practice</span>
+                                                            </div>
+                                                            <div class="recommendationStatus"></div>
+                                                        </div>
+                                                        <h5 class="cardItemTitle color__black">Area of 3d shapes</h5>
+                                                        <div class="cardItemCta text-center">
+                                                            <span class="btn btn-sm btn-primary-inverse">Start Now</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                            <article class="recommendationCardItem cardItem col-6 col-sm-4 col-md-2">
+                                                <a href="startPractice.html" class="recommendationCardWrapper bg__white">
+                                                    <div class="cardItemThumb">
+                                                        <img src="../img/card_banners/setTheory.jpg" class="productImage" alt="">
+                                                        <div class="cardItemThumbOverlay">
+                                                            <span class="">
+                                                                <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                                                </svg>                     
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardItemDetails">
+                                                        <div class="recommendationHeader">
+                                                            <div class="recommendationType">
+                                                                <span class="cardSubtitle color__grey_dark caps_upper">Practice</span>
+                                                            </div>
+                                                            <div class="recommendationStatus"></div>
+                                                        </div>
+                                                        <h5 class="cardItemTitle color__black">Set theory</h5>
+                                                        <div class="cardItemCta text-center">
+                                                            <span class="btn btn-sm btn-primary-inverse">Start Now</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="groupHeader">
+                                        <h3 class="title title_sm color__black">Watch Again </h3>
+                                    </header> 
+                                    <div class="content_inner ">
+                                        <div class="form-row recommendationList">
+                                            <article class="recommendationCardItem is_video cardItem col-6 col-sm-4 col-md-2">
+                                                <a href="startPractice.html" class="recommendationCardWrapper bg__white">
+                                                    <div class="cardItemThumb">
+                                                        <img src="../img/card_banners/percentages.jpg" class="productImage" alt="">
+                                                        <div class="cardItemThumbOverlay">
+                                                            <span class="">
+                                                                <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                                                </svg>                     
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardItemDetails">
+                                                        <h5 class="cardItemTitle color__black">Number Base System</h5>
+                                                        <div class="cardItemCta text-center">
+                                                            <span class="btn btn-sm btn-primary-inverse">Watch Now</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                            <article class="recommendationCardItem is_video cardItem col-6 col-sm-4 col-md-2">
+                                                <a href="videoPlayer.html" class="recommendationCardWrapper bg__white">
+                                                    <div class="cardItemThumb">
+                                                        <img src="../img/card_banners/videoThumb.png" class="productImage" alt="">
+                                                        <div class="cardItemThumbOverlay">
+                                                            <span class="">
+                                                                <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                                                </svg>                     
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardItemDetails">
+                                                        <h5 class="cardItemTitle color__black">Number Base system</h5>
+                                                        <div class="cardItemCta text-center">
+                                                            <span class="btn btn-sm btn-primary-inverse">Watch Now</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                            <article class="recommendationCardItem is_video cardItem col-6 col-sm-4 col-md-2">
+                                                <a href="startPractice.html" class="recommendationCardWrapper bg__white">
+                                                    <div class="cardItemThumb">
+                                                        <img src="../img/card_banners/setTheory.jpg" class="productImage" alt="">
+                                                        <div class="cardItemThumbOverlay">
+                                                            <span class="">
+                                                                <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                                                </svg>                     
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardItemDetails">
+                                                        <h5 class="cardItemTitle color__black">Set theory</h5>
+                                                        <div class="cardItemCta text-center">
+                                                            <span class="btn btn-sm btn-primary-inverse">Watch Now</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                            <article class="recommendationCardItem is_video cardItem col-6 col-sm-4 col-md-2">
+                                                <a href="startPractice.html" class="recommendationCardWrapper bg__white">
+                                                    <div class="cardItemThumb">
+                                                        <img src="../img/card_banners/measurement.jpg" class="productImage" alt="">
+                                                        <div class="cardItemThumbOverlay">
+                                                            <span class="">
+                                                                <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                                                </svg>                     
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cardItemDetails">
+                                                        <h5 class="cardItemTitle color__black">Measurement</h5>
+                                                        <div class="cardItemCta text-center">
+                                                            <span class="btn btn-sm btn-primary-inverse">Watch Now</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    		
+</body>
+</html>

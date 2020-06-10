@@ -12,13 +12,98 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
-    <link href="css/slick.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/base.min.css"/>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/frontend.css"/>
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
 </head>
 
 <body class="">
+
+    <div class="modal fade" id="parentSignUp">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="content-panel authblock">
+                        <header class="blockHeader">
+                            <p>Get Started</p>
+                            <h2 class="title title_sm font-bold color__black">Create a Parent Account</h2>
+                        </header>
+                        <form action="">
+                            <div class="labeledFormInput form-group">
+                                <label class="control-label font-bold caps_upper">
+                                    Name
+                                </label>
+                                <input type="text" required class="form-control" placeholder="Your First and Last name">
+                            </div>
+                            <div class="labeledFormInput form-group">
+                                <label class="control-label font-bold caps_upper">
+                                    Email Address
+                                </label>
+                                <input type="mail" required class="form-control" placeholder="Your email address">
+                            </div>
+                            <div class="labeledFormInput form-group">
+                                <label class="control-label font-bold caps_upper">
+                                    Phone Number
+                                </label>
+                                <input type="text" required class="form-control" placeholder="Enter your phone number">
+                            </div>
+                            <div class="labeledFormInput form-group">
+                                <label class="control-label font-bold caps_upper">
+                                    Password
+                                </label>
+                                <input type="password" required  class="form-control user_pass" placeholder="Create a Password">
+                                <div class="inputAddonBtn">
+                                    <button type="button" id="showPass">
+                                        <i class="cust_icon icon_eye "></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="auth_cta text-center">
+                                <a href="tutor_subscription.html" class="btn btn-secondary">Create Account</a>
+                            </div>
+                            <div class="margin_top_lg text-center color__black">
+                                <p>Already have an account? <a href="login.html" class="btn-link">Log In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="tutorProfile">
+        <div class="modal-dialog">
+            <div class="modal-content bg__black">
+                <div class="modalBannerHero">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://player.vimeo.com/video/414238418" width="640" height="339" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                     </div>
+                </div>
+                <div class="modal-body">
+                    <div class="media_item">
+                        <div class="media_figure">
+                            <div class="user_info_avi avi_lg">
+                                <img src="./img/banners/azubike.jpg" alt="Ani Azubike">
+                            </div>
+                        </div>
+                        <div class="media_info color__inverse_light">
+                            <div class="margin_bottom_sm">
+                                <h4 class="title title_sm font-bold color__secondary">Azubike Ani</h4>
+                                <p class="font-sm color__grey_light">Year 12 / SSS 3 Mathematics. British & Nigerian Curriculum</p>
+                            </div>
+                            <p>With more than 5 years teaching experience, I have horned my ability to motivate every kid i’ve thought to believe Mathematics is not difficult. In my spare time, I like to read and write some code.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header role="banner" class="preAuthHeader">
         <div class="container">
@@ -43,9 +128,6 @@
                         </div>
                         <div class="menuListItem active">
                             <a href="tutoring_lander.html" class="menuLinkItem">Tutoring</a>
-                        </div>
-                        <div class="menuListItem">
-                            <a href="pricing.html" class="menuLinkItem">Pricing</a>
                         </div>
                         <div class="menuListItem">
                             <a href="login.html" class="menuLinkItem">Log In</a>
@@ -136,8 +218,13 @@
         <section class="section_block">
             <div class="container">
 
-                <div class="row text-center">
-                    <div class="offset-md-3 col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <div class="computerScreen">
+                            <img src="./img/banners/computer_bg.png" class="computerImage" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
                         <header class="section_header">
                             <h2 class="title title_lg font-bold color__black margin_bottom_md">AI Powered Tutoring</h2>
                             <p class="font-md">Gradely online tutoring is tailored towards where students truly are in their learning journey, and where they need the most support as recommended by Gradely artificial intelligence system before they can achieve mastery based on the WAEC and Cambridge IGCSE curriculum for secondary schools.</p>
@@ -157,7 +244,7 @@
         <section class="section_block bg__black color__inverse_light">
             <div class="container content_narrow">
                 <header class="section_header">
-                    <h2 class="hero_title font-bold color__white margin_bottom_md">How It Works</h2>
+                    <h2 class="hero_title font-bold color__white">How It Works</h2>
                 </header>
                 <div class="row align-items-center">
                     <div class="col-md-6">
@@ -198,7 +285,7 @@
                         <div class="heroContentBoxWrapper bg__dark">
                             <header class="blockHeader">
                                 <h2 class="title title_lg font-bold color__inverse">Get Started</h2>
-                                <p>Create your Free parent Account</p>
+                                <p>Request a free tutoring session</p>
                             </header>
                             <form action="">
                                 <div class="labeledFormInput form-group formInputDark text-left">
@@ -231,7 +318,7 @@
                                     </div>
                                 </div>
                                 <div class="section_cto text-right">
-                                    <button type="submit" class="btn btn-secondary">Book a Tutor</btton>
+                                    <a href="./parents/tutor_payment.html" class="btn btn-secondary">Book a Tutor</a>
                                 </div>
                             </form>
                         </div>
@@ -239,49 +326,283 @@
                 </div>
             </div>
         </section>
+
+        <section class="section_block">
+            <div class="container">
+                <header class="section_header">
+                    <div class="margin_bottom_x">
+                        <span class="badge badge-secondary">Tutors</span>
+                    </div>
+                    <h2 class="title title_lg font-bold color__black">Certified #GradelyMaths Experts</h2>
+                </header>
+                <div class="row justify-content-center teamMemberGrid">
+                    <article class="tutorItem teamMemberItem col-6 col-sm-3">
+                        <a href="#tutorProfile" data-toggle="modal" class="teamMemberBlock text-center">
+                            <div class="memberImage">
+                                <img src="./img/banners/azubike.jpg" class="bannerImage" alt="Ani Azubike">
+                                <div class="cardOverlay">
+                                    <span class="ctaIconBtn overlayToggle">
+                                        <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                        </svg>                                            
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="memberDetails">
+                                <h4 class="title font-bold color__primary">Azubike Ani</h4>
+                                <p class="member_role">Year 12 / SSS 3 Mathematics. <br> British & Nigerian Curriculum</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="tutorItem teamMemberItem col-6 col-sm-3">
+                        <a href="#tutorProfile" data-toggle="modal" class="teamMemberBlock text-center">
+                            <div class="memberImage">
+                                <img src="./img/banners/kadijat.jpg" class="bannerImage" alt="Khadijat Akinade">
+                                <div class="cardOverlay">
+                                    <span class="ctaIconBtn overlayToggle">
+                                        <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                        </svg>                                            
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="memberDetails">
+                                <h4 class="title font-bold color__primary">Khadijat Akinade</h4>
+                                <p class="member_role">Year 7 / JSS 1 Mathematics. <br> British Curriculum</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="tutorItem teamMemberItem col-6 col-sm-3">
+                        <a href="#tutorProfile" data-toggle="modal" class="teamMemberBlock text-center">
+                            <div class="memberImage">
+                                <img src="./img/banners/imisi.png" class="bannerImage" alt="Imisiayo Oloyede">
+                                <div class="cardOverlay">
+                                    <span class="ctaIconBtn overlayToggle">
+                                        <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                        </svg>                                            
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="memberDetails">
+                                <h4 class="title font-bold color__primary">Imisiayo Oloyede</h4>
+                                <p class="member_role">Upper primary school classes.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="tutorItem teamMemberItem col-6 col-sm-3">
+                        <a href="#tutorProfile" data-toggle="modal" class="teamMemberBlock text-center">
+                            <div class="memberImage">
+                                <img src="./img/banners/dele.jpg" class="bannerImage" alt="Dele Gbede ">
+                                <div class="cardOverlay">
+                                    <span class="ctaIconBtn overlayToggle">
+                                        <svg class="cust_icon icon_md" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
+                                        </svg>                                            
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="memberDetails">
+                                <h4 class="title font-bold color__primary">Ebube Okoli</h4>
+                                <p class="member_role">Year 9 / JSS 3 Mathematics. <br> Nigerian Curriculum</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
         
         <section class="section_block">
             <div class="container content_narrow">
-                <header class="section_header text-center">
-                    <h2 class="title title_lg font-bold">Why Use Gradely</h2>
-                </header>
+                <article class="info_sub_row">
+                    <header class="section_header text-center">
+                        <h2 class="title title_lg color__black font-bold">Why Use Gradely</h2>
+                    </header>
 
-                <div class="row tileCardList">
-                    <article class="featureItem col-sm-4">
-                        <div class="feature_wrapper">
-                            <div class="feature_icon margin_bottom_md">
-                                <img src="./img/icons/childFocused.svg" alt="Child Centered">
+                    <div class="row tileCardList">
+                        <article class="featureItem col-sm-4">
+                            <div class="feature_wrapper">
+                                <div class="feature_icon margin_bottom_md">
+                                    <img src="./img/icons/childFocused.svg" alt="Child Centered">
+                                </div>
+                                <h4 class="title title_sm font-bold margin_bottom_sm">Child Centered</h4>
+                                <p>Teaching is most effective when the learner is ready to learn. With Gradely, you determine the frequency of the tutoring sessions; Choose the time and date that works best for your child.</p>
                             </div>
-                            <h4 class="title title_sm font-bold margin_bottom_sm">Child Centered</h4>
-                            <p>Teaching is most effective when the learner is ready to learn. With Gradely, you determine the frequency of the tutoring sessions; Choose the time and date that works best for your child.</p>
-                        </div>
-                    </article>
-                    <article class="featureItem col-sm-4">
-                        <div class="feature_wrapper">
-                            <div class="feature_icon margin_bottom_md">
-                                <img src="./img/icons/progress.svg" alt="Measurable  Progress">
+                        </article>
+                        <article class="featureItem col-sm-4">
+                            <div class="feature_wrapper">
+                                <div class="feature_icon margin_bottom_md">
+                                    <img src="./img/icons/progress.svg" alt="Measurable  Progress">
+                                </div>
+                                <h4 class="title title_sm font-bold margin_bottom_sm">Measurable  Progress</h4>
+                                <p>Make data-driven decisions; Get access to Gradely learning analytics dashboard which will help you track  the impact of every tutoring session in real-time.</p>
                             </div>
-                            <h4 class="title title_sm font-bold margin_bottom_sm">Measurable  Progress</h4>
-                            <p>Make data-driven decisions; Get access to Gradely learning analytics dashboard which will help you track  the impact of every tutoring session in real-time.</p>
-                        </div>
-                    </article>
-                    <article class="featureItem col-sm-4">
-                        <div class="feature_wrapper">
-                            <div class="feature_icon margin_bottom_md">
-                                <img src="./img/icons/resources.svg" alt="Extra Resources">
+                        </article>
+                        <article class="featureItem col-sm-4">
+                            <div class="feature_wrapper">
+                                <div class="feature_icon margin_bottom_md">
+                                    <img src="./img/icons/resources.svg" alt="Extra Resources">
+                                </div>
+                                <h4 class="title title_sm font-bold margin_bottom_sm">Extra Resources</h4>
+                                <p>In addition to the tutoring sessions, Gradely gives your child access to gamified practice modules and elearning videos tailored towards your child’s  learning needs. </p>
                             </div>
-                            <h4 class="title title_sm font-bold margin_bottom_sm">Extra Resources</h4>
-                            <p>In addition to the tutoring sessions, Gradely gives your child access to gamified practice modules and elearning videos tailored towards your child’s  learning needs. </p>
+                        </article>
+                    </div>
+                </article>
+
+                <article class="info_sub_row">
+                    <div class="row text-center">
+                        <div class="offset-md-2 col-md-8">
+                            <header class="section_header">
+                                <h2 class="title title_lg font-regular color__black">Get quality tutors at the best price and at the convenience of your home. </h2>
+                            </header>
                         </div>
-                    </article>
+                    </div>
+                    <div class="pricingBlock">
+                        <nav class="pricingVariantNav text-center margin_bottom_lg">
+                            <div class="switchTabItem nav">
+                                <a href="#planNGN" class="switchTabLink active" data-toggle="tab">Nigerian Curriculum</a>
+                                <a href="#planGBR" class="switchTabLink" data-toggle="tab">British Curriculum</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="planNGN">
+                                <div class="row tileCardList">
+                                    <article class="col-sm-4 planTileItem">
+                                        <div class="planTileWrapper">
+                                            <div class="planDetails text-center">
+                                                <h2 class="title title_sm font-bold margin_bottom_md">Daily Session</h2>
+                                                <p class="planSummary">Get one(1) session with our certified subject tutors.</p>
+                                                <div class="planPrice margin_top_md">
+                                                    <h3 class="title title_lg">₦3,000
+                                                    </h3>
+                                                    <span class="font-sm color__grey_dark d-block">Per Session</span>
+                                                </div>
+                                                <div class="section_cto">
+                                                    <a href="#parentSignUp" data-toggle="modal" data-backdrop="static" class="btn btn-default-outline">Book Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-sm-4 planTileItem">
+                                        <div class="planTileWrapper">
+                                            <div class="planDetails text-center">
+                                                <h2 class="title title_sm font-bold margin_bottom_md">Weekly Plan</h2>
+                                                <p class="planSummary">Get three(3) session a week with our certified subject tutors.</p>
+                                                <div class="planPrice margin_top_md">
+                                                    <h3 class="title title_lg">₦7,000
+                                                    </h3>
+                                                    <span class="font-sm color__grey_dark d-block">Per Week</span>
+                                                </div>
+                                                <div class="section_cto">
+                                                    <a href="#parentSignUp" data-toggle="modal" data-backdrop="static" class="btn btn-default-outline">Get this Plan</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-sm-4 planTileItem">
+                                        <div class="planTileWrapper">
+                                            <div class="planDetails text-center">
+                                                <h2 class="title title_sm font-bold margin_bottom_md">Monthly Plan</h2>
+                                                <p class="planSummary">Get three(3) session every week of the month.</p>
+                                                <div class="planPrice margin_top_md">
+                                                    <h3 class="title title_lg">₦25,000
+                                                    </h3>
+                                                    <span class="font-sm color__grey_dark d-block">Per Month</span>
+                                                </div>
+                                                <div class="section_cto">
+                                                    <a href="#parentSignUp" data-toggle="modal" data-backdrop="static" class="btn btn-default-outline">Get this Plan</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show" id="planGBR">
+                                <div class="row tileCardList">
+                                    <article class="col-sm-4 planTileItem">
+                                        <div class="planTileWrapper">
+                                            <div class="planDetails text-center">
+                                                <h2 class="title title_sm font-bold margin_bottom_md">Daily Session</h2>
+                                                <p class="planSummary">Get one session with our certified subject tutors.</p>
+                                                <div class="planPrice margin_top_md">
+                                                    <h3 class="title title_lg">₦5,000
+                                                    </h3>
+                                                    <span class="font-sm color__grey_dark d-block">Per Session</span>
+                                                </div>
+                                                <div class="section_cto">
+                                                    <a href="#parentSignUp" data-toggle="modal" data-backdrop="static" class="btn btn-default-outline">Book Now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-sm-4 planTileItem">
+                                        <div class="planTileWrapper">
+                                            <div class="planDetails text-center">
+                                                <h2 class="title title_sm font-bold margin_bottom_md">Weekly Plan</h2>
+                                                <p class="planSummary">Get three(3) session a week with our certified subject tutors.</p>
+                                                <div class="planPrice margin_top_md">
+                                                    <h3 class="title title_lg">₦12,000
+                                                    </h3>
+                                                    <span class="font-sm color__grey_dark d-block">Per Week</span>
+                                                </div>
+                                                <div class="section_cto">
+                                                    <a href="#parentSignUp" data-toggle="modal" data-backdrop="static" class="btn btn-default-outline">Get this Plan</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="col-sm-4 planTileItem">
+                                        <div class="planTileWrapper">
+                                            <div class="planDetails text-center">
+                                                <h2 class="title title_sm font-bold margin_bottom_md">Monthly Plan</h2>
+                                                <p class="planSummary">Get three(3) session every week of the month.</p>
+                                                <div class="planPrice margin_top_md">
+                                                    <h3 class="title title_lg">₦40,000
+                                                    </h3>
+                                                    <span class="font-sm color__grey_dark d-block">Per Month</span>
+                                                </div>
+                                                <div class="section_cto">
+                                                    <a href="#parentSignUp" data-toggle="modal" data-backdrop="static" class="btn btn-default-outline">Get this Plan</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="footnote text-center">
+                        <p class="color__grey_dark">**session of online tutoring lasts between 30 and 45 mins. Total delivered over the internet</p>
+                    </div>
+                </article>
+
+                <div class="section_cto text-center margin_bottom_xl">
+                    <h3 class="title title_sm font-regular color__black">Have Questions?</h3>
+                    <div class="section_cto">
+                        <a href="#" class="btn btn-default-outline">
+                            <span class="btnIcon">
+                                <i class="cust_icon icon_whatsapp"></i>
+                            </span>
+                            <span class="btnLabel">Contact Us</span>
+                        </a>
+                    </div>
+                    <div class="decDivider margin_bottom_lg margin_top_lg">
+                        <svg width="174" height="19" viewBox="0 0 174 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 9.5C11.4219 19.5 20.8438 19.5 30.2656 9.5C39.6875 -0.5 49.1094 -0.5 58.5313 9.5C67.9531 19.5 77.375 19.5 86.7969 9.5C96.2188 -0.5 105.641 -0.5 115.063 9.5C124.484 19.5 133.906 19.5 143.328 9.5C152.75 -0.5 162.172 -0.5 171.594 9.5" stroke="#F2AB3E" stroke-width="4"/>
+                        </svg>                                                                                 
+                    </div>
+                    <p class="font-md">Or you can call us on: <a href="tel:(+234)8100598268" class="font-bold color__red">(+234) 810 0598 268</a></p>
                 </div>
+                
             </div>
         </section>
 
         <section class="section_block">
             <div class="container content_narrow">
                 <header class="section_header text-center">
-                    <h2 class="title title_xl font-bold color__black">Frequently Asked Questions</h2>
+                    <h2 class="title title_lg font-bold color__primary">Frequently Asked Questions</h2>
                 </header>
 
                 <article class="helpArticleRow  ">
@@ -293,7 +614,6 @@
                             <p>All you need to get started is a computer, tablet, or phone with a connection to the Internet.</p>
                         </div>
                     </div>
-                    
                 </article>
                 <article class="helpArticleRow ">
                     <div class="row">
@@ -301,7 +621,7 @@
                             <h4 class="title title_sm font-bold ">What class is this meant for?</h4>
                         </header>
                         <div class="helpArticleBody col-md-7 prose_content">
-                            <p>Gradely live tutoring is currently focused on students in secondary schools. To expand to other class levels soon.</p>
+                            <p>Gradely live tutoring is currently available to students  Primary 4, 5 and 6 and students in secondary school.</p>
                         </div>
                     </div>
                 </article>
@@ -331,26 +651,10 @@
                             <h4 class="title title_sm font-bold ">How much does a tutoring session cost?</h4>
                         </header>
                         <div class="helpArticleBody col-md-7 prose_content">
-                            <p>Tutoring costs between #1,500 and #5,000 per session, But we give out 10 free sessions every week. Register now and get 2 weeks free online tutoring session for your child.</p>
+                            <p>Tutoring costs between ₦3,000 and ₦5,000 per session, But we give out 10 free sessions every week. Register for FREE to stand a chance of scheduling a free session for your child.</p>
                         </div>
                     </div>
                 </article>
-
-                <div class="section_cto text-center margin_top_xl">
-                    <h3 class="title title_sm font-regular color__black">Have Questions?</h3>
-                    <div class="section_cto">
-                        <a href="contact.html" class="btn btn-default-outline">
-                            Contact Us
-                        </a>
-                    </div>
-                    <div class="decDivider margin_bottom_lg margin_top_lg">
-                        <svg width="174" height="19" viewBox="0 0 174 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 9.5C11.4219 19.5 20.8438 19.5 30.2656 9.5C39.6875 -0.5 49.1094 -0.5 58.5313 9.5C67.9531 19.5 77.375 19.5 86.7969 9.5C96.2188 -0.5 105.641 -0.5 115.063 9.5C124.484 19.5 133.906 19.5 143.328 9.5C152.75 -0.5 162.172 -0.5 171.594 9.5" stroke="#F2AB3E" stroke-width="4"/>
-                        </svg>                                                                                 
-                    </div>
-                    <p class="font-md">Or you can call us on: <a href="tel:(+234) 810 0598 268" class="font-bold  color__primary">(+234) 8100598268</a></p>
-                </div>
-                
             </div>
         </section>
 
@@ -467,6 +771,12 @@
                 </div>
         </footer>
     </main>
+
+    <div class="floatingActionBtn">
+        <a href="#" class="floatingBtn">
+            <i class="cust_icon icon_whatsapp icon_md"></i>
+        </a>
+    </div>
     
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>

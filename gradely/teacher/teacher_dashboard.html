@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/jquery.datetimepicker.css"/>
     <link rel="stylesheet" href="../css/base.min.css"/>
     <link rel="stylesheet" href="../css/styles.css"/>
     <script src="../js/modernizr.js"></script> <!-- Modernizr -->
@@ -65,6 +66,95 @@
         </div>
     </div>
 
+    <div class="modal fade" id="scheduleClass">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps">Lesson Schedule</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <form action="" class="form_body">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Lesson Title</label>
+                            <input type="text" class="form-control" placeholder="Give the lesson a name">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold caps_upper ">Lesson Date & Time</label>
+                            <div class="inputaffixed inputSurfixed">
+                                <input type="text" class="form-control inputControl" id="lessonTime" placeholder="Set date and Time">
+                                <div class="inputfixture">
+                                    <i class="cust_icon icon_calendar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold caps_upper ">Repeat Lesson?</label>
+                            <select class="form-control">
+                                <option value="">Don't repeat</option>
+                                <option value="">Daily</option>
+                                <option selected>Weekly</option>
+                                <option value="">Every weekday (Monday to Friday)</option>
+                                <option value="">Annually</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label font-bold caps_upper ">Class</label>
+                            <select class="form-control">
+                                <option>Select a class</option>
+                                <option selected>Senior Secondary School 1 - SSS1</option>
+                                <option>Senior Secondary School 2 - SSS2</option>
+                                <option>Senior Secondary School 3 - SSS3</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold caps_upper">Subject?</label>
+                            <div class="margin_top_sm">
+                                <label for="sbjMaths" class="radio-inline">
+                                    <input type="radio" id="sbjMaths" checked name="hmSubject">
+                                    <span class="label_title caps_upper">Mathematics</span>
+                                </label>
+                                <label for="sbjEnglish" class="radio-inline">
+                                    <input type="radio" id="sbjEnglish" name="hmSubject">
+                                    <span class="label_title caps_upper">English Language</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="form_cta text-center">
+                        <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                        <button type="button" data-toggle="modal" data-target="#req_success" class="btn btn-secondary">Schedule Class</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <div class="modal fade" id="req_success">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="content_wrapper">
+                        <div class="userInfoGroup text-center">
+                            <div class="def_img">
+                                <img src="../img/icons/success_animated.gif" class="avi_xxl" alt="Done">
+                            </div>
+                            <h3 class="title title_sm margin_bottom_sm font-bold">Class Scheduled</h3>
+                            <p>You have successfully scheduled an online <strong>Mathematics</strong> session for <strong>JSS2-Gold</strong>. Your Class will hold on <strong>April 21, 2020 at 12:00 PM</strong></p>
+                        </div>
+                        
+                        <div class="section_cto text-center">
+                            <a href="teacher_dashboard.html" class="btn btn-secondary">Return to Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
     <header class="mainHeader" role="banner">
         <div class="container-fluid">
             <div class="navbarWrapper">
@@ -90,18 +180,6 @@
                 </div>
                 <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuAlt">
-                        <div class="controlBtn helpBtn">
-                            <a href="../teacher_help.html">
-                                <span class="btnIconHolder">
-                                    <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27127C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27915 10.1266 8.75816 9.94333C8.23717 9.76006 7.96339 9.18915 8.14667 8.66816C8.46014 7.77705 9.07887 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3718 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9197 11.0711 15.3569 11.889 14.7751 12.4464C14.1931 13.004 13.5031 13.3909 13.0159 13.6243C12.977 13.6429 12.9487 13.6696 12.933 13.6926C12.9257 13.7033 12.9225 13.7113 12.9211 13.7154C12.92 13.719 12.92 13.7205 12.92 13.7207V14C12.92 14.5523 12.4723 15 11.92 15C11.3677 15 10.92 14.5523 10.92 14V13.7208C10.92 12.8509 11.4686 12.1479 12.1518 11.8206C12.5483 11.6307 13.0263 11.3522 13.3915 11.0023C13.7567 10.6523 13.92 10.321 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.4501 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"/>
-                                        <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" />
-                                    </svg>                                            
-                                </span>
-                                <span class="control_label">Help</span>
-                            </a>
-                        </div>
                         <div class="controlBtn btnAlert">
                             <a href="#">
                                 <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -171,12 +249,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="controlBtn nav_trigger">
-                            <a class="primary-nav-trigger" href="#">
-                                <span class="menu-icon"></span>
-                                <span class="menu-text sr-only">Menu</span>
-                            </a>
-                        </div>
                     </nav>
                 </div>
             </div>
@@ -198,7 +270,7 @@
                                 <div class="infoStripItemBLock dropdown">
                                     <a href="#" data-toggle="dropdown" class="customDropdownHeader dropdown-toggle">
                                         <div class="user_profile_details">
-                                            <div class="productThumb avi_md">
+                                            <div class="user_info_avi avi_md">
                                                 <span class="default_avi">
                                                     <span class="cust_icon icon_school"></span>
                                                 </span>
@@ -268,7 +340,7 @@
                             <p class="">Find class performance report, generated from the data collected from student homework. You will start seeing class performance report as soon as they complete the first homework excercise..</p>
                             <div class="section_cto">
                                 <a href="new_homework.html" class="btn btn-secondary">Create Homework</a>
-                                <a href="verifyUsers.html" class="btn btn-inverse">Waiting Students <span class="has_brackets margin_left_s">12</span> </a>
+                                <a href="#scheduleClass" data-toggle="modal" data-backdrop="static" class="btn btn-inverse">Schedule a Live Class </a>
                             </div>
                         </div>
                     </div>
@@ -293,7 +365,7 @@
                                                     </div>
                                                 </div>
                                             </header>
-                                            <div class="empty_state hidden centered text-center">
+                                            <div class="empty_state centered text-center">
                                                 <div class="def_wrapper color__grey_dark">
                                                     <div class="defImg">
                                                         <img src="../img/icons/empty_report.svg" alt="No Report">
@@ -302,7 +374,7 @@
                                                     <p>There has been no activity in your class yet, Thus there is no report to show for the class. Check back soon.</p>
                                                 </div>
                                             </div>
-                                            <div class="paneInner ">
+                                            <div class="paneInner hidden">
                                                 <div class="row">
                                                     <div class="col-sm-6 infoBlock performanceChart">
                                                         <div class="chartHolder">
@@ -398,7 +470,7 @@
                                                     <div class="insight_row margin_top_md">
                                                         <div class="insight_item">
                                                             <div class="insight_value">
-                                                                <span class="title title_sm color__black">18</span>
+                                                                <span class="title font-bold color__black">18</span>
                                                             </div>
                                                             <div class="insight_title">
                                                                 <span class="color__grey_dark">Homework</span>
@@ -406,7 +478,7 @@
                                                         </div>
                                                         <div class="insight_item">
                                                             <div class="insight_value">
-                                                                <span class="title title_sm color__black">120</span>
+                                                                <span class="title font-bold color__black">120</span>
                                                             </div>
                                                             <div class="insight_title">
                                                                 <span class="color__grey_dark">Students</span>
@@ -414,7 +486,7 @@
                                                         </div>
                                                         <div class="insight_item">
                                                             <div class="insight_value">
-                                                                <span class="title title_sm color__black">89.45</span>
+                                                                <span class="title font-bold color__black">89%</span>
                                                             </div>
                                                             <div class="insight_title">
                                                                 <span class="color__grey_dark">Class Average</span>
@@ -422,17 +494,35 @@
                                                         </div>
                                                     </div>
                                                     <div class="details_col_cta">
-                                                        <a href="new_class.html" class="widget_cta_link">Edit Details</a>
+                                                        <a href="class_details.html" class="widget_cta_link">View Class</a>
                                                     </div>
                                                 </div>
                                                 <div class="base_divider"></div>
                                                 <div class="dataInfoBlock">
-                                                    <h4 class="gridCardTitle margin_bottom_md">School</h4>
-                                                    <div class="data_entity_info">
-                                                        <h4 class="title font-bold color__black">Christland Intl. College</h4>
-                                                        <p class="addr_field">26, Opebi Road, P.M.B. 21614, Opebi,Ikeja, 100281, Lagos</p>
-                                                        <div class="details_col_cta">
-                                                            <a href="class_details.html"  class="widget_cta_link">View Class</a>
+                                                    <h4 class="gridCardTitle margin_bottom_md">Online Lesson</h4>
+                                                    <!-- Show this if there is no scheduled meeting for the class -->
+                                                    <div class="paneDefault text-center hidden">
+                                                        <p>You have no schedule lesson for this class.</p>
+                                                        <div class="margin_top_md">
+                                                            <button type="button" data-target="#scheduleClass" data-toggle="modal" class="btn btn-sm btn-secondary">Schedule a Lesson</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="contentInner">
+                                                        <div class="data_entity_info ">
+                                                            <h4 class="title color__black">Mathematics Lesson</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span class="">Apr 21, 2020</span>
+                                                                <span class="inline_seperator">•</span>
+                                                                <span class="">12:00 PM</span>
+                                                            </div>
+                                                            <div class="details_col_cta">
+                                                                <button type="button" class="btn btn-secondary btn-sm">Start</button>
+                                                                <button type="button" data-target="#scheduleClass" data-toggle="modal" class="widget_cta_link margin_left_m">Edit</button>
+                                                                <button type="button" class="widget_cta_link">Cancel</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="section_cto">
+                                                            <a href="class_lessons.html" class="widget_cta_link">See all your scheduled classes</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -466,7 +556,7 @@
                                                 </div>
                                             </div>
                                         </header>
-                                        <div class="empty_state justify-content-center centered text-center hidden">
+                                        <div class="empty_state justify-content-center centered text-center ">
                                             <div class="def_wrapper color__grey_dark">
                                                 <h4 class="title title_sm font-bold color__black margin_bottom_sm">No Homework Created</h4>
                                                 <p class="">Seems you are yet to create an homework for this class. Click the button below to create your first homework</p>
@@ -475,7 +565,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="paneInner ">
+                                        <div class="paneInner hidden">
                                             <div class="table table-responsive table-brand">
                                                 <table class="table table-hover">
                                                     <thead class="sr-only">
@@ -801,191 +891,6 @@
                                     </div>
                                 </article>
 
-                                <div class="gridCardItem spacing_lg">
-                                    <header class="row no-gutters margin_bottom_md justify-content-between">
-                                        <div class="headerTitleHolder">
-                                            <h4 class="gridCardTitle">Students Requests</h4>
-                                        </div>
-                                        <div class="headerContols">
-                                            <a href="verifyUsers.html"  class="widget_cta_link">View All
-                                            </a>
-                                        </div>
-                                    </header>
-                                    <div class="empty_state justify-content-center centered hidden">
-                                        <div class="def_wrapper color__grey_dark text-center">
-                                            <p>There are no students awaiting verification</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="paneInner ">
-                                        
-                                        <div class="itemGridList row ">
-                                            <article class="itemGridListItem col-sm-4 col-md-2">
-                                                <div class="itemListItemWrapper">
-                                                    <div class="itemGridListItemImageHolder">
-                                                        <div class="itemGridImage avi_xl">
-                                                            <img src="../img/" alt="" class="itemImage">
-                                                            <div class="itemDefault bg__danger color__white">
-                                                                <span>BI</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="itemGridListItemDetails text-center">
-                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Bakare Isaac">Bakare Isaac</h4>
-                                                        <div class="tableControl">
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Approve
-                                                                </button>
-                                                            </div>
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Decline
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="itemGridListItem col-sm-4 col-md-2">
-                                                <div class="itemListItemWrapper">
-                                                    <div class="itemGridListItemImageHolder">
-                                                        <div class="itemGridImage avi_xl">
-                                                            <img src="../img/" alt="" class="itemImage">
-                                                            <div class="itemDefault bg__danger color__white">
-                                                                <span>BC</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="itemGridListItemDetails text-center">
-                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Babatunde Calebs">Babatunde Calebs</h4>
-                                                        <div class="tableControl">
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Approve
-                                                                </button>
-                                                            </div>
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Decline
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="itemGridListItem col-sm-4 col-md-2">
-                                                <div class="itemListItemWrapper">
-                                                    <div class="itemGridListItemImageHolder">
-                                                        <div class="itemGridImage avi_xl">
-                                                            <img src="../img/" alt="" class="itemImage">
-                                                            <div class="itemDefault bg__black color__white">
-                                                                <span>RW</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="itemGridListItemDetails text-center">
-                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Ronald Weasly">Ronald Weasly</h4>
-                                                        <div class="tableControl">
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Approve
-                                                                </button>
-                                                            </div>
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Decline
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="itemGridListItem col-sm-4 col-md-2">
-                                                <div class="itemListItemWrapper">
-                                                    <div class="itemGridListItemImageHolder">
-                                                        <div class="itemGridImage avi_xl">
-                                                            <img src="../img/" alt="" class="itemImage">
-                                                            <div class="itemDefault bg__secondary color__white">
-                                                                <span>PC</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="itemGridListItemDetails text-center">
-                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Penelope Clearwater">Penelope Clearwater</h4>
-                                                        <div class="tableControl">
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Approve
-                                                                </button>
-                                                            </div>
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Decline
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="itemGridListItem col-sm-4 col-md-2">
-                                                <div class="itemListItemWrapper">
-                                                    <div class="itemGridListItemImageHolder">
-                                                        <div class="itemGridImage avi_xl">
-                                                            <img src="../img/" alt="" class="itemImage">
-                                                            <div class="itemDefault bg__white color__black">
-                                                                <span>SS</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="itemGridListItemDetails text-center">
-                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Severus Snape">Severus Snape</h4>
-                                                        <div class="tableControl">
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Approve
-                                                                </button>
-                                                            </div>
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Decline
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                            <article class="itemGridListItem col-sm-4 col-md-2">
-                                                <div class="itemListItemWrapper">
-                                                    <div class="itemGridListItemImageHolder">
-                                                        <div class="itemGridImage avi_xl">
-                                                            <img src="../img/" alt="" class="itemImage">
-                                                            <div class="itemDefault bg__inverse color__white">
-                                                                <span>LY</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="itemGridListItemDetails text-center">
-                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Luke Young">Luke Young</h4>
-                                                        <div class="tableControl">
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Approve
-                                                                </button>
-                                                            </div>
-                                                            <div class="tabelControlItem">
-                                                                <button type="button" class="controlItemLink">
-                                                                    Decline
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </article>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </section>
 
@@ -1006,10 +911,15 @@
 	<script src="../js/jquery.js"></script>
     <script src="../js/base.min.js"></script>
     <script src="../js/Chart.min.js"></script>
-    <script src="../js/jquery.rateit.min.js"></script>
+    <script src="../js/jquery.datetimepicker.full.min.js"></script>
     <script src="../js/main.js"></script>
 
     <script>
+
+        $(document).ready(function() {
+            $('#lessonTime').datetimepicker();
+        });
+
         var classChart = document.getElementById('classPerformance').getContext('2d');
         var myDoughnutChart = new Chart(classChart, {
             type: 'doughnut',
@@ -1035,6 +945,7 @@
                 }
             }
         });
+        
     </script>
     		
 </body>

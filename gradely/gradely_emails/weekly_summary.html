@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<style type="text/css">
+    /* CLIENT-SPECIFIC STYLES */
+    body, table, td, a { 
+        -webkit-text-size-adjust: 100%; 
+        -ms-text-size-adjust: 100%; 
+        margin:0;
+		padding:0;
+    }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; }
+
+    /* RESET STYLES */
+    img,a img{
+        border:0;
+        height:auto;
+        outline:none;
+        line-height: 100%;
+        text-decoration:none;
+    }
+    table { 
+        border-collapse: collapse !important; 
+        mso-table-lspace:0pt;
+        mso-table-rspace:0pt;
+    }
+    body { 
+        height: 100% !important; 
+        font-weight: 400; 
+        font-size: 16px;
+        line-height: 1.65;
+        color: #454545;
+        font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; 
+    }
+    
+    .wrapper {
+        width: 600px;
+    }
+
+    hr {
+        border-color: #d5d5d5;
+        border-width: 1px;
+        border-style: solid;
+        padding: 0;
+    }
+    
+    h1,h2,h3,h4,h5,h6{
+        display:block;
+        margin:0;
+        padding:0;
+        color: #07374B;
+    }
+    
+    a {
+        color: #FE747D;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+
+    a:hover, a:focus {
+        color: #11BDCF;
+        text-decoration: underline;
+    }
+    
+    #outlook a{
+        padding: 0;
+    }
+    
+    p{
+        margin: 10px 0;
+        padding:0;
+    }
+    
+    h1{
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: normal;
+        text-align: center;
+    }
+    
+    /* iOS BLUE LINKS */
+    a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+    }
+  
+    
+    .social_link_item {
+        width: 12.5%;
+        text-align: center;
+        display: block;
+    }
+    
+	/* MOBILE STYLES */
+	@media screen and (max-width:480px) {
+		h1 {
+			font-size: 24px !important;
+		}
+        
+        body {
+            font-size: 14px;
+        }
+		
+		.wrapper {
+			width: 100% !important;
+		}
+
+        .social_link_item {
+            width: auto !important;
+        }
+	}
+
+    /* ANDROID CENTER FIX */
+    div[style*="margin: 15px 0;"] { margin: 0 !important; }
+</style>
+</head>
+
+<body style="background-color: #f5f5f5; margin: 0 !important; padding: 0 !important;">
+
+    <!-- HIDDEN PREHEADER TEXT -->
+    <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+        <p>You have received this email because you just signed up for an account on https://www.gradely.ng</p>
+    </div>
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"  width="100%">
+        
+    <!-- LOGO / Header-->
+    <tr>
+        <td bgcolor="#f5f5f5" style="padding: 50px 15px 0 15px; background-color: #f5f5f5;" align="center">
+            <table border="0" style="border-collapse:collapse;" cellpadding="0" cellspacing="0" width="600" class="wrapper" >
+                <tr>
+                    <td align="center" valign="center" style="padding: 0px 0 30px 0; color: #dbf5f8;">
+                        <table border="0" style="border-collapse:collapse;" cellpadding="0" cellspacing="0" width="600" class="wrapper">
+                            <tr>
+                                <td align="center" valign="center" style="text-align: center">
+                                    <a href="https://gradely.ng" target="_blank">
+                                        <img alt="Gradely" src="./img/Logo.png" style="display: block; width: 100%; max-width: 175px; font-size: 24px;" border="0">
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <style>
+    
+        .userAvarter {
+            width: 48px;
+            height: 48px;
+            overflow: hidden;
+            flex: 0 0 auto;
+            position: relative;
+            border-radius: 50%;
+            vertical-align: middle;
+            border-style: none;
+            font-size: 16px;
+            box-sizing: border-box;
+            border: 2px solid #07374B;
+            color: #07374B;
+        }
+
+        .userAvarter > img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+            color: transparent;
+            margin: auto;
+            text-indent: 100%;
+            left: 50%;
+            top: 50%;
+            bottom: auto;
+            right: auto;
+            background-color: #f5f5f5;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 1;
+            border-radius: inherit;
+        }
+
+        .default_avi {
+            width: 100%;
+            height: 100%;
+            text-transform: uppercase;
+            font-weight: 600;
+            background-color: #11BDCF;
+            border-radius: inherit;
+            font-size: 1em;
+            line-height: 1em;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            display: block;
+            line-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .listNumber {
+            font-weight:500; 
+            display: inline-block; 
+            width: 32px; 
+            height: 32px; 
+            line-height: 32px; 
+            text-align: center;
+            background-color: #FAA017;
+            border-radius: 50%;
+        }
+
+        .paneHeader {
+            display: block;
+            clear: both;
+            margin-bottom: 30px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .paneIcon {
+            margin-bottom: 15px;
+            text-align: center;
+            clear: both;
+        }
+
+        .paneIcon img {
+            display: inline-block;
+            max-width: 64px;
+        }
+
+        /* Stat styles */
+
+        .statRow {
+            width: 100%;
+            display: block;
+            clear: both;
+            margin-left: -15px;
+            margin-right: -15px;
+            text-align: center;
+        }
+
+        .clearfix {
+            overflow: auto;
+        }
+
+        .clearfix::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .perfStatItem {
+            display: inline-block;
+            padding: 10px 15px;
+        }
+
+        .statTitle {
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.45;
+
+        }
+
+        .unit {
+            color: #757575;
+            font-size: 12px;
+            font-weight: 400;
+            display: inline-block;
+            padding-left: 2px;
+        }
+
+        .statLabel {
+            font-size: 14px;
+            color: #353535;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .statRemark {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .statRemark > img {
+            display: inline-block;
+            max-width: 32px;
+        }
+
+        .cust_icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            overflow: hidden;
+            vertical-align: middle;
+            fill: inherit;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .icon_user {
+            background-image: url(./img/user_outline.png);
+        }
+
+        .itemTop .icon_user {
+            background-image: url(./img/user_filled.png);
+        }
+
+        .percentileScale {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 5px -2px;
+        }
+
+        .scaleItem {
+            padding: 1px;
+            display: inline-block;
+        }
+
+        .progress {
+            height: 6px;
+            font-size: 0;
+            text-align: left;
+            border-radius: 25px;
+            background-color: #dbf5f8;
+            overflow: hidden;
+            max-width: 280px;
+        }
+
+        .progress-bar {
+            display: block;
+            color: #fff;
+            height: 100%;
+            text-align: center;
+            white-space: nowrap;
+            background-color: #11BDCF;
+            transition: width .6s ease;
+        }
+
+        .progress_excel .progress-bar {
+            background-color: #60D2B0;
+        }
+
+        .progress_avg .progress-bar {
+            background-color: #FAA017;
+        }
+        
+        .progress_fail .progress-bar {
+            background-color: #FE747D;
+        }
+
+        .topicItem {
+            display: block;
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .topicName {
+            float: left;
+            font-size: 14px; 
+        }
+
+        .topicScore {
+            float: right;
+            text-align: right;
+        }
+
+        .scoreGood {
+            color: #60D2B0;
+        }
+
+        .scoreAvg {
+            color: #FAA017;
+        }
+
+        .scorePoor {
+            color: #FE747D;
+        }
+
+        @media screen and (min-width:720px) { 
+            .perfStatItem {
+                min-width: 140px;
+                /* float: left; */
+            }
+
+            .topicName {
+                font-size: 16px; 
+            }
+        }
+    
+    </style>
+    
+    <!-- mail hero -->
+    <tr>
+        <td bgcolor="#f5f5f5" align="center" style="padding: 0 15px 0 15px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse:collapse;">
+                <tr>
+                    <td bgcolor="#ffffff" align="center" style="background-color:#ffffff; border-radius: 4px; padding: 40px 40px 40px 40px; font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;" >
+                    <table border="0" cellpadding="0" cellspacing="0" align="center" class="wrapper">
+                        <tbody>
+                            <tr>
+                                <td align="center" style="padding-bottom: 20px;">
+                                   <table border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td align="center" style="text-align: center;">
+                                               <div class="userThumb" style="text-align: center; width: 100%;">
+                                                   <div class="userAvarter" style="margin: 0 auto 10px auto;">
+                                                       <img src="./img/user_avi.jpg" alt="">
+                                                       <div class="default_avi">FO</div>
+                                                   </div>
+                                                   <div class="userDetails">
+                                                       <h4 style="font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; color: #353535; font-weight: 500; font-size: 18px; line-height: 1; margin: 0; padding: 0;">Rubius Hagrid</h4>
+                                                       <p style="color: #757575; font-size: 13px; padding: 0; margin: 0;">Junior Secondary School 2</p>
+                                                   </div>
+                                               </div>
+                                            </td>
+                                       </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" >
+                                   <table border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td align="center" style="color:#454545; text-align: center;">
+                                               <div style="padding-bottom: 20px;">
+                                                <h1 style="font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; color: #07374B; font-weight: 700; font-size: 21px; line-height: 1; margin: 0; padding: 0;">Weekly Performance Update</h1>
+                                                <h4 style="font-size: 14px; font-weight: 400; margin: 0; padding: 0; color: #757575; margin-top: 5px;"><span>April 1, 2020</span> to <span>April 7, 2020</span></h4>
+                                               </div>
+                                                <p style="display: block; margin: 0; padding: 0;">Whoops! We saw no practice activity for [child name] last week. </p>
+                                           </td>
+                                       </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- stat snippets -->
+                            <tr>
+                                <td align="center" style="padding-top: 30px;">
+                                  <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                    <tr>
+                                        <td align="center" style="padding: 0; margin:0; font-size: 14px;">
+                                            <div class="statRow clearfix">
+
+                                                <div class="perfStatItem">
+                                                   <h4 class="statTitle">
+                                                       <span style="display: inline-block; color: #113255;">0</span>
+                                                   </h4>
+                                                   <span class="statLabel" >Practice</span>
+                                                   <div class="statRemark">
+                                                       <img src="./img/thumbsDown.png" width="32" height="32" border="0" alt="Excellent">
+                                                   </div>
+                                                </div>
+
+                                                <div class="perfStatItem">
+                                                    <h4 class="statTitle">
+                                                        <span>0%</span>
+                                                    </h4>
+                                                    <span class="statLabel" >Avg. Score</span>
+                                                    <div class="statRemark">
+                                                        <img src="./img/thumbsDown.png" width="32" height="32" border="0" alt="Excellent">
+                                                    </div>
+                                                </div>
+
+                                                <div class="perfStatItem">
+                                                    <h4 class="statTitle">
+                                                        <span>0</span>
+                                                    </h4>
+                                                    <span class="statLabel" >Practice Streak</span>
+                                                    <div class="statRemark">
+                                                        <img src="./img/thumbsDown.png" width="32" height="32" border="0" alt="Poor">
+                                                    </div>
+                                                </div>
+
+                                           </div>
+                                        </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            
+                        </tbody>
+                      </table>
+                  </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- Mastery Card -->
+    <tr>
+        <td bgcolor="#f5f5f5" align="center" style="padding: 30px 15px 0 15px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse:collapse;">
+                <!-- Mastery top -->
+                <tr>
+                    <td bgcolor="#2A4F77" align="center" style="background-color:#ffffff; color: #454545; border-radius: 4px; padding: 40px 40px 40px 40px; font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;" >
+                    <table border="0" cellpadding="0" cellspacing="0" align="center" class="wrapper">
+                        <tbody>
+                            <tr>
+                              <td align="center" style="padding: 0;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                    <tr>
+                                        <td align="center" style="padding-top: 0; padding-bottom: 0; text-align: center;">
+                                            <div class="paneHeader">
+                                                <div class="paneIcon">
+                                                    <img src="./img/mastery.png" alt="Subject Mastery">
+                                                </div>
+                                                <h3 style="font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; font-size: 18px; color: #353535; font-weight: 400; line-height: 1; margin: 0; padding: 0">Subject Mastery per topic</h3>
+                                            </div>
+                                            <p class="font-size: 12px; display: block; color: #454545; margin: 0; padding:0;">From previous practice / home work performance, [Child name] has attained a mastery of <strong>66% in Mathematics</strong>.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="padding-top: 30px;">
+                                          <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                              <tr>
+                                                  <td align="center">
+                                                        <div class="rankScale">
+                                                            <span style="font-size: 12px; text-transform: uppercase; display: block; margin-bottom: 4px; font-weight: 500; color: #757557;">Subject Mastery</span>
+                                                            <div class="progress progress_avg">
+                                                                <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                            <div class="insight_value ">
+                                                                <span style="font-size: 14px; display: block; margin-top: 5px; font-weight: 600; color: #353535;">66% Mastery of Mathematics</span>
+                                                            </div>
+                                                        </div>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                </table>
+                              </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                  </td>
+                </tr>
+
+                <!-- Topic Outline -->
+                <tr>
+                    <td bgcolor="#2A4F77" align="left" style="background-color:#ffffff; color: #454545; border-top:1px solid #d5d5d5; padding: 40px 40px 40px 40px; font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;" >
+                    <table border="0" cellpadding="0" cellspacing="0" align="left" class="wrapper">
+                        <tbody>
+
+                            <tr>
+                              <td align="left" style="padding: 0;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                    <tr>
+                                        <td align="center" style="padding-top: 0;">
+                                          <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                              <tr>
+                                                  <td align="center">
+                                                    <h4 style="font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; color: #353535; text-transform: uppercase; font-weight: 700; font-size: 14px; line-height: 1; margin: 0; padding: 0;  margin-bottom: 20px">
+                                                        Currently Excelling In
+                                                    </h4>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="padding-top: 0;">
+                                          <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                              <tr>
+                                                  <td align="left">
+                                                    <div class="topicItem clearfix">
+                                                        <div class="topicName">
+                                                            <h4 style="margin: 0; padding: 0; font-weight: 400;">Binary system</h4>
+                                                        </div>
+                                                        <div class="topicScore scoreGood">
+                                                            <span style="display: inline-block; font-weight: 700;">92%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="topicItem clearfix">
+                                                        <div class="topicName">
+                                                            <h4 style="margin: 0; padding: 0; font-weight: 400;">Number Base System</h4>
+                                                        </div>
+                                                        <div class="topicScore scoreGood">
+                                                            <span style="display: inline-block; font-weight: 700;">85%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="topicItem clearfix">
+                                                        <div class="topicName">
+                                                            <h4 style="margin: 0; padding: 0; font-weight: 400;">Binary system</h4>
+                                                        </div>
+                                                        <div class="topicScore scoreGood">
+                                                            <span style="display: inline-block; font-weight: 700;">82%</span>
+                                                        </div>
+                                                    </div>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                </table>
+                              </td>
+                            </tr>
+
+                        </tbody>
+                      </table>
+                  </td>
+                </tr>
+
+                <!-- Topic Outline -->
+                <tr>
+                    <td bgcolor="#2A4F77" align="left" style="background-color:#ffffff; color: #454545; border-top:1px solid #d5d5d5; padding: 40px 40px 40px 40px; border-radius: 0 0 4px 4px; font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;" >
+                    <table border="0" cellpadding="0" cellspacing="0" align="left" class="wrapper">
+                        <tbody>
+
+                            <tr>
+                              <td align="left" style="padding: 0;">
+                                <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                    <tr>
+                                        <td align="center" style="padding-top: 0;">
+                                          <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                              <tr>
+                                                  <td align="center">
+                                                    <h4 style="font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; color: #353535; text-transform: uppercase; font-weight: 700; font-size: 14px; line-height: 1; margin: 0; padding: 0;  margin-bottom: 20px">
+                                                        Currently Struggling with
+                                                    </h4>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="left" style="padding-top: 0;">
+                                          <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                              <tr>
+                                                  <td align="left">
+                                                    <div class="topicItem clearfix">
+                                                        <div class="topicName">
+                                                            <h4 style="margin: 0; padding: 0; font-weight: 400;">Area of plane shapes</h4>
+                                                        </div>
+                                                        <div class="topicScore scoreAvg">
+                                                            <span style="display: inline-block; font-weight: 700;">62%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="topicItem clearfix">
+                                                        <div class="topicName">
+                                                            <h4 style="margin: 0; padding: 0; font-weight: 400;">Substitution & change of subject</h4>
+                                                        </div>
+                                                        <div class="topicScore scorePoor">
+                                                            <span style="display: inline-block; font-weight: 700;">35%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="topicItem clearfix">
+                                                        <div class="topicName">
+                                                            <h4 style="margin: 0; padding: 0; font-weight: 400;">Similarity (linear, area & volume factor)</h4>
+                                                        </div>
+                                                        <div class="topicScore scorePoor">
+                                                            <span style="display: inline-block; font-weight: 700;">21%</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="topicItem clearfix">
+                                                        <div class="topicName">
+                                                            <h4 style="margin: 0; padding: 0; font-weight: 400;">Area of plane shapes</h4>
+                                                        </div>
+                                                        <div class="topicScore scorePoor">
+                                                            <span style="display: inline-block; font-weight: 700;">11%</span>
+                                                        </div>
+                                                    </div>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                </table>
+                              </td>
+                            </tr>
+
+                        </tbody>
+                      </table>
+                  </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+
+    <!-- Rank Card -->
+    <tr>
+        <td bgcolor="#f5f5f5" align="center" style="padding: 30px 15px 0 15px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse:collapse;">
+                <tr>
+                    <td bgcolor="#2A4F77" align="center" style="background-color:#ffffff; color: #454545; border-radius: 4px; padding: 40px 40px 40px 40px; font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;" >
+                    <table border="0" cellpadding="0" cellspacing="0" align="center" class="wrapper">
+                        <tbody>
+
+                            <!-- card Footer -->
+                            <tr>
+                              <td align="center" style="padding: 0;">
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td align="center" style="padding-top: 0; padding-bottom: 0; text-align: center;">
+                                            <div class="paneHeader">
+                                                <div class="paneIcon">
+                                                    <img src="./img/rank.png" alt="Child Rank">
+                                                </div>
+                                                <h3 style="font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; font-size: 18px; color: #353535; font-weight: 400; line-height: 1; margin: 0; padding: 0">Current Rank</h3>
+                                            </div>
+                                            <p class="font-size: 12px; display: block; color: #454545; margin: 0; padding:0;">When we compare to other Gradely students in the same class.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="padding-top: 30px;">
+                                          <table border="0" cellspacing="0" cellpadding="0" style="width: 100%;">
+                                              <tr>
+                                                  <td align="center">
+                                                        <div class="rankScale">
+                                                            <span style="font-size: 12px; text-transform: uppercase; display: block; margin-bottom: 4px; font-weight: 500; color: #757557;">Compared to Classmates in Nigeria</span>
+                                                            <div class="percentileScale">
+                                                                <div class="scaleItem itemTop">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemTop">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                                <div class="scaleItem itemBottom">
+                                                                    <span class="cust_icon icon_user"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="insight_value ">
+                                                                <span style="font-size: 14px; display: block; margin-top: 5px; font-weight: 400; color: #353535;">Top 20% Nationwide</span>
+                                                            </div>
+                                                        </div>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                </table>
+                              </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                  </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+    <!-- recommendation CTA -->
+    <tr>
+        <td bgcolor="#f5f5f5" align="center" style="padding: 30px 15px 0 15px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse:collapse;">
+                <tr>
+                    <td bgcolor="#2A4F77" align="center" style="background-color:#ffffff; color: #454545; border-radius: 4px; padding: 40px 40px 40px 40px; font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;" >
+                    <table border="0" cellpadding="0" cellspacing="0" align="center" class="wrapper">
+                        <tbody>
+
+                            <tr>
+                              <td align="center" style="padding: 0;">
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td align="center" style="padding-top: 0; padding-bottom: 0; text-align: center;">
+                                            <div class="paneHeader">
+                                                <div class="paneIcon">
+                                                    <img src="./img/recommendation.png" alt="">
+                                                </div>
+                                                <h3 style="font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; font-size: 21px; color: #353535; font-weight: 700; line-height: 1; margin: 0; padding: 0">Ready to intervene?</h3>
+                                            </div>
+                                            <p style="font-size: 16px; display: block; color: #454545; margin: 0; padding:0;">We have recommended thousands of curriculum-based gamified practice questions, revision videos and online tutors on Gradely that will help <strong>[child name]</strong> achieve mastery. </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="padding-top: 30px;">
+                                          <table border="0" cellspacing="0" cellpadding="0">
+                                              <tr>
+                                                  <td align="center">
+                                                      <a href="https://www.gradely.ng" target="_blank" style="font-size: 14px; color: #07374B; font-weight: 700; background-color: #FAA017; text-transform: uppercase; font-size: 12px; padding: 12px 35px 12px 35px; border-radius: 25px 25px 25px 25px; display: inline-block;">View Recommendation</a>
+                                                  </td>
+                                              </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                </table>
+                              </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                  </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- Help CTA -->
+    <tr>
+        <td bgcolor="#f5f5f5" align="center" style="padding: 30px 15px 0 15px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse:collapse;">
+                <tr>
+                    <td bgcolor="#2A4F77" align="center" style="background-color:#113255; color: #DDF1FA; border-radius: 4px; padding: 40px 40px 40px 40px; font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;" >
+                    <table border="0" cellpadding="0" cellspacing="0" align="center" class="wrapper">
+                        <tbody>
+
+                            <tr>
+                              <td align="center" style="padding: 0;">
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td align="center" style="padding-top: 20px; padding-bottom: 20px; text-align: center;">
+                                            <h3 style="font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif; font-size: 21px; color: #ffffff; font-weight: 500; line-height: 1; margin: 0; padding: 0">Need more Help?</h3>
+                                            <p style="display: block; padding-top: 10px;">If you have any questions or complaint, send us an email at <a href="mailto:support@gradely.ng" target="_blank">support@gradely.ng</a> or call us <a href="tel:2348100598268">+2348100598268</a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                              </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                  </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+        
+    <!-- FOOTER -->
+    <tr>
+        <td bgcolor="#f5f5f5" align="center" style="background-color: #f5f5f5; color: #454545; font-family: 'Segoe UI', Calibri, Helvetica, Arial, sans-serif;  padding: 40px 15px 20px 15px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" >
+            
+            <!--Navigations to the site-->
+            <tr>
+                <td align="center" style="padding-bottom: 30px; border-bottom: 1px solid #d5d5d5;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse:collapse;">
+                                                
+                        <!--Social media links-->
+                        <tr style="text-align:center">
+                          <td width="24" class="social_link_item" style="padding-left: 20px; display:inline-block; text-align: center; padding-right: 20px;" align="center">
+                            <a href="http://facebook.com/gradelyng" target="_blank">
+                                <img src="./img/facebook.png" width="24" height="24" style="display:block; height:24px; width: auto;" border="0" alt="Follow us on Facebook">
+                            </a>     
+                          </td>
+                          <td width="24" class="social_link_item" style="padding-left: 20px; display:inline-block;  text-align: center; padding-right: 20px;" align="center">
+                            <a href="http://twitter.com/gradelyng" target="_blank">
+                                <img src="./img/twitter.png" width="24" height="24" style="display:block; height:24px; width: auto;" border="0" alt="Find us on Twitter">
+                            </a>    
+                          </td>
+                          <td width="24" class="social_link_item" style="padding-left: 20px; display:inline-block;  text-align: center; padding-right: 20px;" align="center">
+                            <a href="http://youtube.com/gradelyng" target="_blank">
+                                <img src="./img/youtube.png" width="24" height="24" style="display:block; height:24px; width: auto;" border="0" alt="Subscribe to our YouTube Channel">
+                            </a>    
+                          </td>
+                          <td width="24" class="social_link_item" style="padding-left: 20px; display:inline-block;  text-align: center; padding-right: 20px;" align="center">
+                            <a href="http://linkedin.com/gradelyng" target="_blank">
+                                <img src="./img/linkedin.png" width="24" height="24" style="display:block; height:24px; width: auto;" border="0" alt="Find us on LinkedIn">
+                            </a>    
+                          </td>
+                          <td width="24" class="social_link_item" style="padding-left: 20px; display:inline-block;  text-align: center; padding-right: 20px;" align="center">
+                            <a href="http://instagram.com/gradelyng" target="_blank">
+                                <img src="./img/instagram.png" width="24" height="24" style="display:block; height:24px; width: auto;" border="0" alt="Follow us on Instagram">
+                            </a>    
+                          </td>
+                        </tr>
+                        
+                        <!--support navigation links-->
+                        <tr style="text-align: center;">
+                          <td style="padding-top: 30px;" align="center">
+                            <div style="margin: 0;">
+                                <a href="#" style="font-size: 14px; color: #555555; display:inline-block; padding-left: 15px; padding-right: 15px;">About Us</a> 
+                                <a href="#" style="font-size: 14px; color: #555555; display:inline-block; padding-left: 15px; padding-right: 15px;">Blog</a>
+                                <a href="#" style="font-size: 14px; color: #555555; display:inline-block; padding-left: 15px; padding-right: 15px;">Contact Us</a>
+                                <a href="#" style="font-size: 14px; color: #555555; display:inline-block; padding-left: 15px; padding-right: 15px;">FAQs</a>
+                            </div>   
+                          </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding-top: 10px;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse:collapse;">
+                                    <tr>
+                                        <td align="center" style="padding: 0 15px 0 15px; color: #757575; font-size: 13px;">
+                                            <a href="#" style="font-size:13px; color: #555555; display:inline-block; padding-top:10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; text-decoration:underline;">Read on Web</a> 
+                                            <font ṣtyle="color: #959595; display:inline-block; padding-left: 10px; padding-right: 10px;">•</font>
+                                            <a href="#" style="font-size: 13px; color: #555555; display:inline-block; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; text-decoration:underline;">Email Preferences</a>
+                                            <font ṣtyle="color: #959595; display:inline-block; padding-left: 10px; padding-right: 10px;">•</font>
+                                            <a href="#" style="font-size: 13px; color: #555555; display:inline-block; padding-top: 10px; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; text-decoration:underline;">Unsubscribe</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="padding: 15px 15px 0 15px; color: #757575; font-size: 13px;">
+                                            <p style="display: block;">We hope you enjoy our updates. But if you no longer wish to receive Gradely update emails, you may change your preferences by clicking the link above.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+             <!-- footer Logo -->
+             <tr>
+                <td align="center" style="padding-bottom:30px; padding-top: 30px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse:collapse;">
+                        <tr>
+                          <td align="center" style="padding-bottom: 20px;">
+                            <a href="http://www.gradely.ng/frontshop" target="_blank">
+                                <img src="./img/logomark.png" width="32" height="32" style="margin:0; padding:0; border:none; display:block;" border="0" alt="gradely.ng">
+                            </a>    
+                          </td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 13px; color: #757575;" align="center">
+                                <p style="display: block; padding: 0; margin: 0;">© 2018 gradely.ng</p>  
+                                <p style="display: block; padding: 0; margin: 0; line-height: 1;">8, Monthgomery Road, Yaba, Lagos State, Nigeria</p>  
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

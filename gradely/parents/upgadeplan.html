@@ -19,6 +19,138 @@
 
 <body>
 
+    <div class="modal fade" id="add_child">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title text-caps ">Add child</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+
+                    <!-- Show this by default -->
+                    <section class="signUpChild ">
+                        <form class="content_wrapper">
+                            <div class="error_message promptSecondary">
+                                <p class="">
+                                    <span class="font-md">⚠</span>
+                                    Student already registered? <button type="button" class="btn-link color__black font-bold">Use student code</button>
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Child's Name</label>
+                                <input type="text" placeholder="E.g John Oke" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label caps_upper font-bold">Class</label>
+                                <select class="form-control" placeholder="Select school">
+                                    <option>Select your child's class</option>
+                                    <option>Junior Secondary School 1 - JSS1</option>
+                                    <option>Junior Secondary School 2 - JSS2</option>
+                                    <option>Junior Secondary School 3 - JSS3</option>
+                                    <option>Senior Secondary School 1 - SSS1</option>
+                                    <option>Senior Secondary School 2 - SSS2</option>
+                                    <option>Senior Secondary School 3 - SSS3</option>
+                                </select>
+                                <p class="help-block hidden text-error">Invalid class code. Try again</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Create Password</label>
+                                <input type="text" class="form-control user_pass" placeholder="Create a Password for your child">
+                            </div>
+                            <div><strong class="color__red">P.S:</strong> <span class="font-sm color__grey_dark">A student code will be generated for your child. This along with the <em>password</em> you entered above will be required of your child to login</span></div>
+                            <div class="form_cta text-center"> 
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Create Child</button>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Show this if the student exists and the user clicks the use student code btn -->
+                    <section class="addWithCode hidden">
+                        <form class="content_wrapper">
+                            <div class="error_message promptSecondary">
+                                <p class="">
+                                    <span class="font-md">⚠</span>
+                                    Student code not found. <button type="button" class="btn-link color__black font-bold">Create an account instead</button>
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Relationship</label>
+                                <select class="form-control">
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Aunt</option>
+                                    <option>Uncle</option>
+                                    <option>Grand-Father</option>
+                                    <option>Grand-Mother</option>
+                                </select>
+                            </div>
+    
+                            <div class="form-group">
+                                <label for="" class="control-label font-bold caps_upper">Enter Student Code</label>
+                                <div class="form-row">
+                                    <div class="col-8">
+                                        <input type="text" class="form-control" placeholder="Enter your child's studnet code here">
+                                    </div>
+                                    <div class="col-4">
+                                        <button type="submit" class="btn btn-inverse">
+                                            Verify Code
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Show this after the user has entered the parent code -->
+                            <div class="previewList margin_top_lg hidden">
+                                <div class="infoPreviewCard">
+                                    <div class="cardWrapper">
+                                        <div class="data_entity">
+                                            <div class="data_entity_icon">
+                                                <div class="user_info_avi avi_md">
+                                                    <img src="" alt="">
+                                                    <span class="default_avi">RH</span>
+                                                </div>
+                                            </div>
+                                            <div class="details_col_info ">
+                                                <div class="address_block">
+                                                    <h4 class="title font-bold">Rubius Hagrid</h4>
+                                                    <span class="addr_field addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field">@Christland Intl. College</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form_cta text-center">
+                                <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                                <button type="button " class="btn btn-secondary">Add Child</button>
+                            </div>
+                        </form>
+                    </section>
+
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main class="authenticationPageLayout">
         <div class="grdly_page_frame bg__off_white">
             
@@ -31,137 +163,139 @@
                         </a>
                     </div>
 
-                    <div class="container ">
+                    <div class="container content_narrow">
                         <header class="section_header">
                             <h3 class="title title_lg color__black font-bold">Upgrade Plan</h3>
                         </header>
-                        <div action="content_inner">
-                            <div class="checkout_layout">
-                                <div class="chechoutForm checkoutPane">
-                                    <div class="checkoutPane_wrapper">
-                                        <div class="checkoutPane_content">
-                                            <header class="paneHeader">
-                                                <h3 class="title font-bold color__black">Subscription Details</h3>
-                                            </header>
-                                            <form action="">
-                                                <div class="detailsBlock">
-                                                    <p class="margin_bottom_md">Chose a subscription plan</p>
-                                                    <div class="hrPlanBLock">
-                                                        <article class="hrPlanItem planSelected">
-                                                            <label for="plan1" class="hrPlanWrapper">
-                                                                <input type="radio" id="#plan1" name="planOption" class="hidden">
-                                                                <div class="hrPlanDetails">
-                                                                    <header class="hrPlanHeader">
-                                                                        <h2 class="title color__black">Basic</h2>
-                                                                        <h3 class="title title_sm font-bold margin_top_sm">₦1,500
-                                                                        </h3>
-                                                                        <div class="font-sm color__grey_dark">
-                                                                            <span>Per Child / Month</span>
-                                                                        </div>
-                                                                    </header>
-                                                                    <div class="hrPlanInfo">
-                                                                        <p>Gives your child unlimited access to gamified practice, on-demand tutoring, and the full suite of Gradely's diagnostic reporting.</p>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="selectionIndicator"></div>
-                                                            </label>
-                                                        </article>
 
-                                                        <article class="hrPlanItem">
-                                                            <label for="plan2" class="hrPlanWrapper">
-                                                                <input type="radio" id="#plan2" name="planOption" class="hidden">
-                                                                <div class="hrPlanDetails">
-                                                                    <header class="hrPlanHeader">
-                                                                        <h2 class="title color__black">Premium</h2>
-                                                                        <h3 class="title title_sm font-bold margin_top_sm">₦3,000
-                                                                        </h3>
-                                                                        <div class="font-sm color__grey_dark">
-                                                                            <span>Per Child / Month</span>
-                                                                        </div>
-                                                                    </header>
-                                                                    <div class="hrPlanInfo">
-                                                                        <p>Gives your child unlimited access to gamified practice, interactive videos,  on-demand tutoring and Counseling, and the full suite of Gradely's diagnostic reporting.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </label>
-                                                        </article>
-                                                    </div>
-                                                </div>
-                                                <div class="detailsBlock">
-                                                    <p class="control-label margin_bottom_md">Select the child(ren) you want to buy this plan for.</p>
-                                                    <div class="">
-                                                        <label class="media_item margin_bottom_lg" for="child_0">
-                                                            <div class="media_figure">
-                                                                <input type="checkbox" checked id="child_0" name="parentChild">
-                                                            </div>
-                                                            <div class="media_info">
-                                                                <div class="user_profile_details">
-                                                                    <div class="user_info_avi avi_md">
-                                                                        <img src="../img/" alt="">
-                                                                        <span class="default_avi bg__inverse_light">PH</span>
-                                                                    </div>
-                                                                    <div class="user_info">
-                                                                        <h4 class="title text_clipped font-bold">Philius Hagrid</h4>
-                                                                        <span class="listMetaInfo">Christland College</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                        <label class="media_item" for="child1">
-                                                            <div class="media_figure">
-                                                                <input type="checkbox" checked id="child1" name="parentChild">
-                                                            </div>
-                                                            <div class="media_info">
-                                                                <div class="user_profile_details">
-                                                                    <div class="user_info_avi avi_md">
-                                                                        <img src="../img/hermionie.jpg" alt="">
-                                                                        <span class="default_avi bg__inverse_light">RH</span>
-                                                                    </div>
-                                                                    <div class="user_info">
-                                                                        <h4 class="title text_clipped font-bold">Rubius Hagrid</h4>
-                                                                        <span class="listMetaInfo">Christland College</span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <div class="detailsBlock">
-                                                    <div class="row">
-                                                        <div class="form-group col-sm-6">
-                                                            <label class="control-label color__black marginn_bottom_sm required">Duration?</label>
-                                                            <div class="inputaffixed inputSurfixed">
-                                                                <input type="number" value="1" min="1" class="form-control inputControl" placeholder="How long "/>
-                                                                <div class="inputfixture">
-                                                                    <select class="prefixOptions">
-                                                                        <option>Month</option>
-                                                                        <option selected>Year</option>
-                                                                    </select>
+                        <div action="content_inner">
+                            <div class="checkout_layout row">
+                                <div class="chechoutForm col-md-7 checkoutPane">
+                                    <form action="">
+                                        <div class="detailsBlock">
+                                            <h4 class="font-default font-bold caps_upper color__grey_dark margin_bottom_md">Choose a Plan</h4>
+                                            <div class="hrPlanBLock row">
+                                                <article class="tilePlanhr col-sm-4 planSelected">
+                                                    <label for="plan1" class="hrPlanWrapper">
+                                                        <input type="radio" id="#plan1" name="planOption" class="hidden">
+                                                        <div class="hrPlanDetails">
+                                                            <header class="hrPlanHeader">
+                                                                <h2 class="title color__black">3 Months</h2>
+                                                            </header>
+                                                            <div class="hrPlanInfo text-center">
+                                                                <h3 class="title title_sm font-bold color__black">₦4,500
+                                                                </h3>
+                                                                <div class="font-sm color__grey_dark">
+                                                                    <span>Per Child</span>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="form-group checkbox">
-                                                        <label for="terms_agreement" class="control-label">
-                                                            <input type="checkbox" id="terms_agreement">
-                                                            <span class="label_text">I agree to the <a href="#" class="btn-link">Terms</a> and <a href="#" class="btn-link">Policies</a>.</span>
-                                                        </label>
-                                                    </div>
-                                                    <button class="btn btn-primary btn-block">Proceed to Payment</button>
-                                                </div>
-                                            </form>
+                                                        <div class="selectionIndicator"></div>
+                                                    </label>
+                                                </article>
+
+                                                <article class="tilePlanhr col-sm-4 ">
+                                                    <label for="plan2" class="hrPlanWrapper">
+                                                        <input type="radio" id="#plan2" name="planOption" class="hidden">
+                                                        <div class="hrPlanDetails">
+                                                            <header class="hrPlanHeader">
+                                                                <h2 class="title color__black">6 Months</h2>
+                                                            </header>
+                                                            <div class="hrPlanInfo text-center">
+                                                                <h3 class="title title_sm font-bold color__black">₦8,100
+                                                                </h3>
+                                                                <div class="font-sm color__grey_dark">
+                                                                    <span>Per Child</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="selectionIndicator"></div>
+                                                    </label>
+                                                </article>
+
+                                                <article class="tilePlanhr col-sm-4">
+                                                    <label for="plan3" class="hrPlanWrapper">
+                                                        <input type="radio" id="#plan3" name="planOption" class="hidden">
+                                                        <div class="hrPlanDetails">
+                                                            <header class="hrPlanHeader">
+                                                                <h2 class="title color__black">1 Year</h2>
+                                                            </header>
+                                                            <div class="hrPlanInfo text-center">
+                                                                <h3 class="title title_sm font-bold color__black">₦15,000
+                                                                </h3>
+                                                                <div class="font-sm color__grey_dark">
+                                                                    <span>Per Child</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="selectionIndicator"></div>
+                                                    </label>
+                                                </article>
+                                            </div>
                                         </div>
-                                    </div>
+                                        <div class="detailsBlock">
+                                            <div class="checkoutItemTray">
+                                                <h4 class="font-default font-bold caps_upper color__grey_dark margin_bottom_md">Add your Child(ren)</h4>
+                                                <div class="user_list">
+                                                    <article class="row user_item margin_bottom_md">
+                                                        <div class="col-1">
+                                                            <input type="checkbox" id="child_one" checked name="my_children">
+                                                        </div>
+                                                        <label for="child_one" class="col-11">
+                                                            <div class="user_profile_details">
+                                                                <div class="user_info_avi avi_md avi_bordered">
+                                                                    <img src="../img/student_avi/avi_samp0.png" alt="">
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped font-bold">Philius Hagrid</h4>
+                                                                    <span>Year 7</span>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </article>
+                                                    <article class="row user_item margin_bottom_md">
+                                                        <div class="col-1">
+                                                            <input type="checkbox" id="child_two" checked name="my_children">
+                                                        </div>
+                                                        <label for="child_two" class="col-11">
+                                                            <div class="user_profile_details">
+                                                                <div class="user_info_avi avi_md avi_bordered">
+                                                                    <img src="../img/student_avi/avi_samp0.png" alt="">
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped font-bold">Philius Hagrid</h4>
+                                                                    <span>Year 7</span>
+                                                                </div>
+                                                            </div>
+                                                        </label>
+                                                    </article>
+                                                </div>
+                                                <div class="more_control margin_top_md">
+                                                    <a href="#add_child" class="input_control" data-toggle="modal" data-backdrop="static">
+                                                        <span class="t_icon">
+                                                            <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                            <polygon points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9"/>
+                                                            </svg>
+                                                        </span>
+                                                        <p>
+                                                            <span class="widget_cta_link">Add a Child</span>
+                                                        </p>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="detailsBlock">
+                                            <p>Please be informed that your plan will be automatically renewed at the end of your subscription circle. You can cancel auto renewal on your subscription page</p>
+                                        </div>
+                                    </form>
                                 </div>
-                                <aside class="checkoutSummary checkoutPane">
+                                <aside class="checkoutSummary col-md-5 checkoutPane">
                                     <div class="checkoutPane_wrapper">
                                         <header class="summary_block header_block">
-                                            <span class="title font-bold caps_upper color__black">Summary</span>
+                                            <span class="title font-bold caps_upper color__black">Plan Summary</span>
                                         </header>
-                                        <div class="summary_block bg__inverse_light productInfo">
-                                            <h4 class="title font-bold margin_bottom_sm">Gradely Basic</h4>
-                                            <p>Your subscription will be automatically renewed until you cancel it.
-                                            </p>
+                                        <div class="summary_block bg__inverse_light">
+                                            <h4 class="title font-bold margin_bottom_x">3 month of CatchUp!</h4>
                                         </div>
                                         <div class="priceInfoBlock">
                                             <div class="priceDetailRow">
@@ -169,25 +303,15 @@
                                                     <span>Price</span>
                                                 </div>
                                                 <div class="priceRowValue">
-                                                    <span class="price_value">₦1,500 per child/month</span>
-                                                    <span class="price_suffix"></span>
+                                                    <span class="price_value">₦4,500</span>
                                                 </div>
                                             </div>
                                             <div class="priceDetailRow ">
                                                 <div class="priceRowLabel font-bold">
-                                                    <span>Quanity</span>
+                                                    <span>Children</span>
                                                 </div>
                                                 <div class="priceRowValue ">
-                                                    <span class="price_value">2 Children</span>
-                                                    <span class="price_suffix"></span>
-                                                </div>
-                                            </div>
-                                            <div class="priceDetailRow ">
-                                                <div class="priceRowLabel font-bold">
-                                                    <span>Duration</span>
-                                                </div>
-                                                <div class="priceRowValue ">
-                                                    <span class="price_value">1 year</span>
+                                                    <span class="price_value">1</span>
                                                     <span class="price_suffix"></span>
                                                 </div>
                                             </div>
@@ -198,11 +322,41 @@
                                                     <span>Total</span>
                                                 </div>
                                                 <div class="priceRowValue">
-                                                    <span class="price_value">₦18,000.00</span>
+                                                    <span class="price_value">₦4,500</span>
                                                     <span class="price_suffix"></span>
                                                 </div>
                                             </div>
+                                            <div class="priceDetailRow d-block">
+                                                <label class="control-label caps_upper font-bold">
+                                                    I have a Coupon COde
+                                                </label>
+                                                <div class="labeledFormInput ">
+                                                    <input type="text"  class="form-control" placeholder="">
+                                                    <div class="inputAddonBtn">
+                                                        <button type="submit">
+                                                            <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 4.29289C12.3166 3.90237 11.6834 3.90237 11.2929 4.29289C10.9024 4.68342 10.9024 5.31658 11.2929 5.70711L16.5858 11H5C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H16.5858L11.2929 18.2929C10.9024 18.6834 10.9024 19.3166 11.2929 19.7071C11.6834 20.0976 12.3166 20.0976 12.7071 19.7071L19.7071 12.7071C20.0976 12.3166 20.0976 11.6834 19.7071 11.2929L12.7071 4.29289Z"/>
+                                                            </svg>                   
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="priceDetailRow">
+                                                <a href="subscription_successful.html" class="btn btn-secondary btn-block">Confirm Payment</a>
+                                            </div>
                                         </footer>
+                                    </div>
+                                    <div class="section_cto text-center margin_bottom_xl">
+                                        <h3 class="title title_sm font-regular color__black">Have Questions?</h3>
+                                        <div class="margin_top_md margin_bottom_md">
+                                            <a href="#" class="btn btn-default-outline">
+                                                <span class="btnIcon">
+                                                    <i class="cust_icon icon_whatsapp"></i>
+                                                </span>
+                                                <span class="btnLabel">Contact Us</span>
+                                            </a>
+                                        </div>
+                                        <p class="font-md">Or you can call us on: <a href="tel:(+234)8100598268" class="font-bold color__red">(+234) 810 0598 268</a></p>
                                     </div>
                                 </aside>
                             </div>

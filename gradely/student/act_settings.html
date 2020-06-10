@@ -19,51 +19,101 @@
     
 <body>
 
-    <div class="modal fade" id="inviteParent">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <header class="modal-header">
-                    <h4 class="modal-title text-caps">Invite your parent</h4>
-                    <div class="dialogDismiss">
-                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for students">
+                        </a>
                     </div>
-                </header>
-                <div class="modal-body">
-                    <p>Invite your parent using their email address or phone number</p>
-
-                    <form action="" class="margin_top_md">
-                        <div class="form-group">
-                            <label for="" class="control-label font-bold caps_upper">Parent's Name</label>
-                            <input type="text" class="form-control" placeholder="The name of your parent">
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="control-label font-bold caps_upper">Parent's Email</label>
-                            <input type="email" class="form-control" placeholder="Enter your parent's Email Address">
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="control-label font-bold caps_upper">Parent's Phone Number</label>
-                            <input type="tel" class="form-control" placeholder="Enter your parent's Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="control-label font-bold caps_upper">Relationship</label>
-                            <select class="form-control">
-                                <option>Father</option>
-                                <option>Mother</option>
-                                <option>Aunt</option>
-                                <option>Uncle</option>
-                                <option>Grand-Father</option>
-                                <option>Grand-Mother</option>
-                            </select>
-                        </div>
-                    </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-secondary">Send Invitation</button>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem ">
+                            <a href="student_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="report.html" class="menuLinkItem">Report</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btnAlert">
+                            <button type="button" id="appNotifications">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
+                                </svg>
+                                <span class="badgeCount">8</span>
+                            </button>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi avi_bordered">
+                                    <img src="../img/student_avi/avi_samp.png" alt="">
+                                </div>
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu profile_dropdown">
+                                <header class="dpd_header">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi">RH</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold color__primary">Rubius Hagrid</h4>
+                                            <p>SC: <strong>RUBIUSHAG</strong></p>
+                                            <div class="margin_top_sm">
+                                                <a href="profile.html" class="widget_cta_link">Manage Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
+                                <ul class="dpd_nav">
+                                    <li class="dpd_nav_item">
+                                        <a href="../student_help.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Get Help
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="act_settings.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_settings"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Account Settings
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="../login.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_logout"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Log Out
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
-    </div>
-
+    </header>
+    
     <div class="modal fade" id="change_class">
         <div class="modal-dialog">
             <div class="modal-content">

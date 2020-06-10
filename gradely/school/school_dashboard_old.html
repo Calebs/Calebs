@@ -1,0 +1,1133 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title> Welcome to your Dashboard | Gradely.school</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <div class="modal fade" id="confirmTeacher">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h4 class="modal-title">Confirm class &amp; Subject</h4>
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="user_profile_details">
+                        <div class="user_info_avi avi_md">
+                            <img src="" alt="">
+                            <span class="default_avi">BI</span>
+                        </div>
+                        <div class="user_info">
+                            <h4 class="title font-bold">Bakare Isaac</h4>
+                            <span>bakare@gmail.com</span>
+                        </div>
+                    </div>
+                    <p></p>
+                    <form action="" class="margin_top_md">
+                        <div class="form-group dropdown">
+                            <label class="control-label font-bold">Assign to Class</label>
+                            <a href="#" data-toggle="dropdown" class="menuSelect_input">
+                                <span class="menuSelect_label">Select a Class</span>
+                                <div class="menuSelect_inputIcon">
+                                    <span class="caret"></span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu widget_select_menu">
+                                <header class="widget_select_header">
+                                    <div class="select_menu_search">
+                                        <span class="search_icon">
+                                            <svg class="cust_icon icon_xs" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                                <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+                                                <path d="M15.364 2.636A9 9 0 1 1 2.636 15.363 9 9 0 0 1 15.364 2.636zM20 20l-5-5"></path>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <input class="form-control prefixed_input" placeholder="Find class by name...">
+                                    </div>
+                                </header>
+                                <!-- Toggle the class "is_empty" when the list is empty -->
+                                <div class="widget_select_body ">
+                                    <ul class="search_result_list">
+                                        <li class="search_result_item">
+                                            <a href="" class="result_item_wrapper active">
+                                                <div class="address_block">
+                                                    <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field ">Class/code/Here</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="" class="result_item_wrapper">
+                                                <div class="address_block">
+                                                    <span class="addr_title">Junior Secondary School 3 (JSS3)</span>
+                                                    <span class="addr_field ">Class/code/Here</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="" class="result_item_wrapper">
+                                                <div class="address_block">
+                                                    <span class="addr_title">Senior Secondary School 1 (SSS1)</span>
+                                                    <span class="addr_field ">Class/code/Here</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="search_result_item">
+                                            <a href="" class="result_item_wrapper">
+                                                <div class="address_block">
+                                                    <span class="addr_title">Junior Secondary School 3 (JSS3)</span>
+                                                    <span class="addr_field ">Class/code/Here</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="search_result_empty">
+                                        <p>No result found</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Assigned Subject</label>
+                            <div class="margin_top_sm">
+                                <label for="sbjMaths" class="radio-inline">
+                                    <input type="radio" id="sbjMaths" checked name="hmSubject">
+                                    <span class="label_title caps_upper">Mathematics</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="mainHeader" role="banner">
+        <div class="container-fluid">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem active">
+                            <a href="school_dashboard.html" class="menuLinkItem">Dashboard</a>
+                        </div>
+                        <div class="menuListItem ">
+                            <a href="classes.html" class="menuLinkItem">classes</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="teachers.html" class="menuLinkItem">Teachers</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="parents.html" class="menuLinkItem">Parents</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn helpBtn">
+                            <a href="../school_help.html">
+                                <span class="btnIconHolder">
+                                    <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12Z"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2581 8.02432C11.7926 7.94447 11.3138 8.03195 10.9066 8.27127C10.4994 8.51058 10.1901 8.88629 10.0333 9.33184C9.85006 9.85283 9.27915 10.1266 8.75816 9.94333C8.23717 9.76006 7.96339 9.18915 8.14667 8.66816C8.46014 7.77705 9.07887 7.02563 9.89327 6.547C10.7077 6.06837 11.6652 5.89341 12.5962 6.05311C13.5273 6.2128 14.3718 6.69686 14.9801 7.41953C15.5883 8.14205 15.9213 9.05648 15.92 10.0009C15.9197 11.0711 15.3569 11.889 14.7751 12.4464C14.1931 13.004 13.5031 13.3909 13.0159 13.6243C12.977 13.6429 12.9487 13.6696 12.933 13.6926C12.9257 13.7033 12.9225 13.7113 12.9211 13.7154C12.92 13.719 12.92 13.7205 12.92 13.7207V14C12.92 14.5523 12.4723 15 11.92 15C11.3677 15 10.92 14.5523 10.92 14V13.7208C10.92 12.8509 11.4686 12.1479 12.1518 11.8206C12.5483 11.6307 13.0263 11.3522 13.3915 11.0023C13.7567 10.6523 13.92 10.321 13.92 10L13.92 9.99851C13.9207 9.52619 13.7542 9.06886 13.4501 8.70753C13.1459 8.34619 12.7236 8.10417 12.2581 8.02432Z"/>
+                                        <path d="M13 17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17C11 16.4477 11.4477 16 12 16C12.5523 16 13 16.4477 13 17Z" />
+                                    </svg>                                            
+                                </span>
+                                <span class="control_label">Help</span>
+                            </a>
+                        </div>
+                        <div class="controlBtn btnAlert">
+                            <button type="button" id="appNotifications">
+                                <svg class="cust_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/>
+                                </svg>
+                                <span class="badgeCount">8</span>
+                            </button>
+                        </div>
+                        <div class="controlBtn btn_user_act dropdown">
+                            <a href="#" data-toggle="dropdown" class="userAccountDetails dropdown-toggle">
+                                <div class="user_info_avi">
+                                    <img src="" alt="">
+                                    <div class="default_avi bg__inverse_light">FS</div>
+                                </div>
+                                <span class="caret"></span>
+                            </a>
+                            
+                            <div class="dropdown-menu profile_dropdown">
+                                <header class="dpd_header">
+                                    <div class="media_item">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="" alt="">
+                                                <div class="default_avi bg__inverse_light">FS</div>
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="title font-bold color__primary">Francis Sani</h4>
+                                            <p class="text_clipped">Chrisland Schools</p>
+                                            <div class="margin_top_sm">
+                                                <a href="mng_profile.html" class="widget_cta_link">Manage Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </header>
+                                <ul class="dpd_nav">
+                                    <li class="dpd_nav_item">
+                                        <a href="school_profile.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_school"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                School Profile
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="../school_help.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Get Help
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="act_settings.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_settings"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Account Settings
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="dpd_nav_item">
+                                        <a href="../login.html" class="dsp_tab_row">
+                                            <span class="icon_holder">
+                                                <i class="cust_icon icon_logout"></i>
+                                            </span>
+                                            <span class="nav_item_text">
+                                                Log Out
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <section class="grdly_page_body bg__off_white"> 
+                <div class="grdly_page_wrapper">
+                    <header class="pageLayoutheader">
+                        <div class="pageLayoutBanner">
+                            <div for="upload_imgs" class="responsiveImageWrapper">
+                                <!-- bind hte uploaded image here -->
+                                <img src="../img/banners/SchoolImage.jpg" alt="" class="bannerImage" >
+                            </div>
+                            <div class="schoolProfileContent">
+                                <div class="container">
+                                    <div class="bannerControl">
+                                        <a href="edit_profile.html" class="btn btn-secondary">Settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="schoolProfileMetaHolder">
+                            <div class="container">
+                                <div class="user_profile_details align-items-end">
+                                    <!-- to show the uploaded logo, add the class "" after uploading an image. -->
+                                    <div class="schoolLogo avi_xxl has_image">
+                                        <img src="../img/icons/sc_imaad.png" alt="" class="schoolLogoImage">
+                                        <span class="default_avi">C</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="pageInfoStrip">
+                        <div class="container">
+                            <div class="infoStripCaption ">
+                                <span class="opt_rule"></span>
+                                <span class="captionText">You are viewing: </span>
+                            </div>
+                            <div class="infoStripWrapper">
+                                <div class="infoStripItemBLock dropdown">
+                                    <a href="#" data-toggle="dropdown" class="customDropdownHeader dropdown-toggle">
+                                        <div class="user_profile_details">
+                                            <div class="productThumb avi_md">
+                                                <span class="default_avi">
+                                                    <span class="cust_icon icon_school"></span>
+                                                </span>
+                                            </div>
+                                            <div class="user_info">
+                                                <h4 class="title text_clipped font-bold">Senior Secondary School 1</h4>
+                                                <span class="addr_field ">Class Code: <strong class="color__black">IMD/JSS1B</strong></span>
+                                            </div>
+                                        </div>
+                                        <span class="selectorTrigger_btn">
+                                            <svg class="cust_icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.43437 10.3598L7.99997 10.9254L12.5256 6.39975L11.3944 5.26855L7.99997 8.66215L4.60557 5.26855L3.47437 6.39975L7.43437 10.3598Z"/>
+                                            </svg>
+                                        </span>                        
+                                    </a>
+                                    <div class="dropdown-menu widget_select_menu">
+                                        <!-- Toggle the class "is_empty" when the list is empty -->
+                                        <div class="widget_select_body ">
+                                            <ul class="search_result_list">
+                                                <li class="search_result_item">
+                                                    <a href="" class="result_item_wrapper active">
+                                                        <div class="address_block">
+                                                            <span class="addr_title">Senior Secondary School 1A </span>
+                                                            <span class="addr_field ">Class Code: <strong class="color__black">IMD/SSS1BA</strong></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="search_result_item">
+                                                    <a href="" class="result_item_wrapper">
+                                                        <div class="address_block">
+                                                            <span class="addr_title">Junior Secondary School 3B</span>
+                                                            <span class="addr_field ">Class Code: <strong class="color__black">IMD/JSS3B</strong></span>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div class="search_result_empty">
+                                                <p>No result found</p>
+                                            </div>
+                                        </div>
+                                        <footer class="widget_select_footer">
+                                            <a class="widgetSelectCTA" href="new_class.html">Add a Class</a>
+                                        </footer>
+                                    </div>
+                                </div>
+                                <div class="infoStripItemBLock hidden-sm">
+                                    <div class="user_info text-right">
+                                        <span class="data_label">
+                                            <time>01 April, 2019</time>
+                                        </span>
+                                        <div class="title"><span>First Term</span> - <span>Week 2</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container margin_top_lg form_body hidden">
+                        <div class="embed-responsive embed-responsive-16by9 videoStage">
+                            <video preload="metadata" autoplay loop muted class="embed-responsive-item">
+                                <source src="../img/banners/school_dashboard.mp4" type="video/mp4">
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                        </div>
+                        <div class="def_wrapper text-center margin_top_md">
+                            <h3 class="title title_sm font-bold margin_bottom_sm">No Class report</h3>
+                            <p class="">Seems like no homework activity has happened in this class. While we wait for the first homework, you can send a reminder to the teachers to create their first homework.</p>
+                            <div class="section_cto">
+                                <button type="button" class="btn btn-primary-outline">Send Reminder</button>
+                                <a href="verifyUsers.html" class="btn btn-inverse">Waiting Teachers <span class="has_brackets margin_left_s">12</span> </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grdly_page_content margin_top_md ">
+                        
+                        <section class="gridCardRow ">
+                            <div class="container">
+
+                                <article class="gridCardItem">
+                                    <div class="gridCardWrapper">
+                                        <div class="paneInner">
+                                            <h4 class="gridCardTitle margin_bottom_md">This week in Class</h4>
+                                            <div class="snippetRow">
+                                                <div class="statCell">
+                                                    <div class="insight_item">
+                                                        <div class="insight_value">
+                                                            <span class="title title_lg font-bold color__black">8</span>
+                                                        </div>
+                                                        <div class="insight_title">
+                                                            <span class="color__grey_dark">Homework Created</span>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                                <div class="statCell">
+                                                    <div class="insight_item">
+                                                        <div class="insight_value">
+                                                            <span class="title title_lg font-bold color__black">5</span>
+                                                        </div>
+                                                        <div class="insight_title">
+                                                            <span class="color__grey_dark">Homework Due</span>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                                <div class="statCell">
+                                                    <div class="insight_item">
+                                                        <div class="insight_value">
+                                                            <span class="title title_lg font-bold color__black">4</span>
+                                                        </div>
+                                                        <div class="insight_title">
+                                                            <span class="color__grey_dark">Homework Completed</span>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                                <div class="statCell">
+                                                    <div class="insight_item">
+                                                        <div class="insight_value">
+                                                            <span class="title title_lg font-bold color__black">95.45%</span>
+                                                            <span class="snippetInfo" data-toggle="tooltip" title="The ratio of the class that completed at least one homework">
+                                                                <i class="cust_icon icon_info "></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="insight_title ">
+                                                            <span class="color__grey_dark">Completion Rate</span>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                                <div class="statCell">
+                                                    <div class="insight_item">
+                                                        <div class="insight_value">
+                                                            <span class="title title_lg font-bold color__black">85.45%</span>
+                                                            <div class="snippetInfo growthRate growthUp" data-toggle="tooltip" title="Change in average performance in one week" >
+                                                                <span>2.5</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="insight_title">
+                                                            <span class="color__grey_dark">Avg. Class Score</span>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>                                       
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <div class="row">
+                                    <article class="gridCardItem spacing_lg col-lg-8">
+                                        <div class="gridCardWrapper">
+                                            <header class="gridCardHeader">
+                                                <div class="headerTitleHolder">
+                                                    <h4 class="gridCardTitle">Class Summary</h4>
+                                                </div>
+                                                <div class="headerContols">
+                                                    <div class="controlItem">
+                                                        <label for="subjectswitcher" class="controlItemLabel">Subject</label>
+                                                        <span class="controlItemInput controlAction" id="subjectswitcher">
+                                                            Mathematics
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="empty_state hidden centered text-center">
+                                                <div class="def_wrapper">
+                                                    <div class="defImg">
+                                                        <img src="../img/icons/empty_report.svg" alt="No Report">
+                                                    </div>
+                                                    <p>There has been no activity in your class yet, Thus there is no report to show for the class. Check back soon.</p>
+                                                </div>
+                                            </div>
+                                            <div class="paneInner">
+                                                <div class="row">
+                                                    <div class="col-sm-6 infoBlock performanceChart">
+                                                        <div class="chartHolder">
+                                                            <canvas id="classPerformance" aria-label="Class performance chart" role="img"></canvas>
+                                                        </div>
+                                                        <div class="text-center margin_top_md">
+                                                            <span class="data_label">Number of students in Class:</span>
+                                                            <span class="percentileLabel">120 Students</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 infoBlock activityInfo">
+                                                        <div class="dataInfoBlock">
+                                                            <span class="data_label margin_bottom_sm">Best Performer</span>
+                                                            <div class="user_item">
+                                                                <a href="profileSummary.html" class="user_profile_details">
+                                                                    <div class="user_info_avi avi_md">
+                                                                        <img src="../img/hermionie.jpg" alt="">
+                                                                        <span class="default_avi">HG</span>
+                                                                    </div>
+                                                                    <div class="user_info">
+                                                                        <h4 class="title font-bold text_clipped">Hermione Granger</h4>
+                                                                        <span class="listMetaInfo">Avg. Score: 78.94%</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dataInfoBlock">
+                                                            <span class="data_label margin_bottom_sm">Least Performer</span>
+                                                            <div class="user_item">
+                                                                <a href="profileSummary.html" class="user_profile_details">
+                                                                    <div class="user_info_avi avi_md">
+                                                                        <img src="../img/" alt="">
+                                                                        <span class="default_avi">PC</span>
+                                                                    </div>
+                                                                    <div class="user_info">
+                                                                        <h4 class="title font-bold text_clipped">Penelope Clearwater</h4>
+                                                                        <span class="listMetaInfo">Avg. Score: 34.41%</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="margin_top_lg">
+                                                            <a href="class_details.html" class="widget_cta_link">See all Students</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="base_divider"></div>
+                                                <div class="legendList row ">
+                                                    <div class="legendItem col-sm-4" title="Avg. Score is less than 50%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__danger">
+                                                        </span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">64 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>Less than 50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="legendItem col-sm-4" title="Avg. Score is greater than 50%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__secondary">
+                                                        </span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">32 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>More than 50%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="legendItem col-sm-4" title="Avg. Score is greater than 75%" data-toggle="tooltip">
+                                                        <span class="legendIndicator bg__success">
+                                                        </span>
+                                                        <div class="data_entity_info">
+                                                            <h4 class="title">24 Students</h4>
+                                                            <div class="listMetaInfo">
+                                                                <span>More than 75%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    
+                                    <article class="gridCardItem spacing_lg col-lg-4">
+                                        <div class="gridCardWrapper">
+                                            <div class="empty_state centered text-center hidden">
+                                                <div class="def_wrapper">
+                                                    <p>You have not added any class. Add a class to begin.</p>
+                                                    <div class="margin_top_sm">
+                                                        <a href="mng_class.html" class="btn btn-primary-outline btn-sm">Add Class</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="paneInner">
+                                                <h4 class="gridCardTitle margin_bottom_md">Class</h4>
+                                                <div class="dataInfoBlock">
+                                                    <div class="data_entity_info">
+                                                        <h4 class="title font-bold color__black">Senior Secondary School 1 (SSS1)</h4>
+                                                        <p class="addr_field">Class Code: <span class="">CRL/SAT/REM</span> </p>
+                                                    </div>
+                                                    <div class="insight_row margin_top_md">
+                                                        <div class="insight_item">
+                                                            <div class="insight_value">
+                                                                <span class="title title_sm font-bold color__black">18</span>
+                                                            </div>
+                                                            <div class="insight_title">
+                                                                <span class="color__grey_dark">Homework</span>
+                                                            </div>  
+                                                        </div>
+                                                        <div class="insight_item">
+                                                            <div class="insight_value">
+                                                                <span class="title title_sm font-bold color__black">120</span>
+                                                            </div>
+                                                            <div class="insight_title">
+                                                                <span class="color__grey_dark">Students</span>
+                                                            </div>  
+                                                        </div>
+                                                        <div class="insight_item">
+                                                            <div class="insight_value">
+                                                                <span class="title title_sm font-bold color__black">89.45</span>
+                                                            </div>
+                                                            <div class="insight_title">
+                                                                <span class="color__grey_dark">Class Average</span>
+                                                            </div>  
+                                                        </div>
+                                                    </div>
+                                                    <div class="details_col_cta">
+                                                        <a href="new_class.html" class="widget_cta_link">Edit Details</a>
+                                                    </div>
+                                                </div>
+                                                <div class="base_divider"></div>
+                                                <div class="dataInfoBlock">
+                                                    <span class="data_label">Teachers</span>
+                                                    <div class="user_list margin_top_sm">
+                                                        <div class="user_item margin_bottom_sm">
+                                                            <a href="#" class="user_profile_details">
+                                                                <div class="user_info_avi">
+                                                                    <img src="../img/horace.jpg" alt="">
+                                                                    <span class="default_avi">HS</span>
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped">Horace Slughorn</h4>
+                                                                    <span class="listMetaInfo">Mathematics</span>
+                                                                </div>
+                                                                <span class="info_icon">
+                                                                    <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289Z"/>
+                                                                    </svg
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="user_item margin_bottom_sm">
+                                                            <a href="#" class="user_profile_details">
+                                                                <div class="user_info_avi">
+                                                                    <img src="../img/" alt="">
+                                                                    <span class="default_avi">HD</span>
+                                                                </div>
+                                                                <div class="user_info">
+                                                                    <h4 class="title text_clipped">Hilder Dokubo</h4>
+                                                                    <span class="listMetaInfo">English Language</span>
+                                                                </div>
+                                                                <span class="info_icon">
+                                                                    <svg class="cust_icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071L9.70711 18.7071C9.31658 19.0976 8.68342 19.0976 8.29289 18.7071C7.90237 18.3166 7.90237 17.6834 8.29289 17.2929L13.5858 12L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289Z"/>
+                                                                    </svg
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="details_col_cta">
+                                                        <a href="class_details.html" class="widget_cta_link">View Class</a>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <div class="gridCardItem spacing_lg">
+                                    <header class="row no-gutters margin_bottom_md justify-content-between">
+                                        <div class="headerTitleHolder">
+                                            <h4 class="gridCardTitle ">Teachers awaiting Verification <span class="has_brackets">24</span></h4>
+                                        </div>
+                                        <div class="headerContols">
+                                            <a href="verifyUsers.html"  class="widget_cta_link">View All
+                                            </a>
+                                        </div>
+                                    </header>
+                                    <div class="paneInner ">
+                                        <div class="empty_state justify-content-center centered hidden">
+                                            <div class="def_wrapper color__grey_dark text-center">
+                                                <p>There are no students awaiting verification</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="itemGridList row ">
+                                            <article class="itemGridListItem col-sm-4 col-md-2">
+                                                <div class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage avi_xl">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__danger color__white">
+                                                                <span>BI</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-center">
+                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Bakare Isaac">Bakare Isaac</h4>
+                                                        <div class="tableControl">
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
+                                                                    Approve
+                                                                </button>
+                                                            </div>
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" class="controlItemLink">
+                                                                    Decline
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="itemGridListItem col-sm-4 col-md-2">
+                                                <div class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage avi_xl">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__danger color__white">
+                                                                <span>BC</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-center">
+                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Babatunde Calebs">Babatunde Calebs</h4>
+                                                        <div class="tableControl">
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
+                                                                    Approve
+                                                                </button>
+                                                            </div>
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" class="controlItemLink">
+                                                                    Decline
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="itemGridListItem col-sm-4 col-md-2">
+                                                <div class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage avi_xl">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__black color__white">
+                                                                <span>RW</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-center">
+                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Ronald Weasly">Ronald Weasly</h4>
+                                                        <div class="tableControl">
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
+                                                                    Approve
+                                                                </button>
+                                                            </div>
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" class="controlItemLink">
+                                                                    Decline
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="itemGridListItem col-sm-4 col-md-2">
+                                                <div class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage avi_xl">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__secondary color__white">
+                                                                <span>PC</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-center">
+                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Penelope Clearwater">Penelope Clearwater</h4>
+                                                        <div class="tableControl">
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
+                                                                    Approve
+                                                                </button>
+                                                            </div>
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" class="controlItemLink">
+                                                                    Decline
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="itemGridListItem col-sm-4 col-md-2">
+                                                <div class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage avi_xl">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__white color__black">
+                                                                <span>SS</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-center">
+                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Severus Snape">Severus Snape</h4>
+                                                        <div class="tableControl">
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
+                                                                    Approve
+                                                                </button>
+                                                            </div>
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" class="controlItemLink">
+                                                                    Decline
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                            <article class="itemGridListItem col-sm-4 col-md-2">
+                                                <div class="itemListItemWrapper">
+                                                    <div class="itemGridListItemImageHolder">
+                                                        <div class="itemGridImage avi_xl">
+                                                            <img src="../img/" alt="" class="itemImage">
+                                                            <div class="itemDefault bg__inverse color__white">
+                                                                <span>LY</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="itemGridListItemDetails text-center">
+                                                        <h4 class="title text_clipped color__black font-bold margin_bottom_sm" title="Luke Young">Luke Young</h4>
+                                                        <div class="tableControl">
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" data-toggle="modal" data-target="#confirmTeacher" class="controlItemLink">
+                                                                    Approve
+                                                                </button>
+                                                            </div>
+                                                            <div class="tabelControlItem">
+                                                                <button type="button" class="controlItemLink">
+                                                                    Decline
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!--Add class "loading" to activate the loader-->
+    <div class="page_loader ">
+        <div class="loader_content">
+            <img src="../img/icons/ball-triangle.svg" class="loaderImage" alt="Page Loader">
+            <p class="font-md">loading...</p>
+        </div>
+    </div>
+
+    <div class="offscreenDrawer ">
+        <div class="offscreenDrawerBackdrop"></div>
+        <div class="offScreenDrawerContent drawerLeft">
+            <div class="offScreenDrawerContentWrapper">
+                <header class="drawer_header">
+                    <h4 class="title title_lg font-bold color__black">Notifications</h4>
+                    <button type="button" class="close_dialog cls_lg" data-dismiss="modal"></button>
+                </header>
+                <div class="empty_state hidden centered">
+                    <div class="def_wrapper">
+                        <div class="defImg">
+                            <img src="../img/icons/notification_empty.svg" class="avi_xxl" alt="No Notifications">
+                        </div>
+                        <p class="">You have no new notification</p>
+                    </div>
+                </div>
+                <div class="drawer_body">
+                    <div class="text-right">
+                        <button class="dialogReset caps_upper">Clear All</button>
+                    </div>
+
+                    <div class="notificationList">
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> created an homework
+                                        </p>
+                                        <a href="homework_form.html">week 3 - Introduction to Mathematical Equations</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>10m</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi">RH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">You</strong> have completed a Diagnostic test
+                                        </p>
+                                        <a href="disagnosis_report.html">View Report - Diagnostic test title</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1h</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> created a Diagnostic test
+                                        </p>
+                                        <a href="startPractice.html">Take the test - Diagnostic test title</a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>16h</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p>
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> accepted your invitation to Gradely
+                                        </p>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> has accepted your request
+                                        </p>
+                                        <a href=".html">Year 9 Achievers - <span>IMASC/19/Y9AS</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework due in 2 days
+                                        </p>
+                                        <a href="homework_form.html">Take homework - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework completed
+                                        </p>
+                                        <a href="homeworkReport.html">View Report - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__inverse_light">JH</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p>
+                                            <strong class="color__primary font-bold">Jake Hagrid</strong> accepted your invitation to Gradely
+                                        </p>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="user_info_avi avi_md">
+                                        <img src="../img/" alt="">
+                                        <span class="default_avi bg__secondary">AJ</span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Andrew Jackson</strong> has accepted your request
+                                        </p>
+                                        <a href=".html">Year 9 Achievers - <span>IMASC/19/Y9AS</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>1d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework due in 2 days
+                                        </p>
+                                        <a href="homework_form.html">Take homework - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="notificationItem">
+                            <div class="notificationItemWrapper">
+                                <div class="notificationFigure">
+                                    <div class="icon_box box_rounded box_inverse avi_md">
+                                        <span class="cust_icon icon_class"></span>
+                                    </div>
+                                </div>
+                                <div class="notificationDetails">
+                                    <div class="notificationMsg text_clipped">
+                                        <p >
+                                            <strong class="color__primary font-bold">Year 9 Achievers</strong> Homework completed
+                                        </p>
+                                        <a href="homeworkReport.html">View Report - <span>Homework title here</span></a>
+                                    </div>
+                                    <div class="notificationTime">
+                                        <time>2d</time>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/Chart.min.js"></script>
+    <script src="../js/jquery.rateit.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+        var classChart = document.getElementById('classPerformance').getContext('2d');
+
+        var myDoughnutChart = new Chart(classChart, {
+            type: 'doughnut',
+            data: {
+                labels: ["Below 50%", "Above 50%", "Above 75%"],
+                datasets: [{
+                    label: 'Class Performance summary',
+                    data: [64, 32, 24],
+                    backgroundColor: [
+                        '#FE747D',
+                        '#F2AB3E',
+                        '#60D2B0'
+                    ],
+                    hoverBackgroundColor: '#08384D',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutoutPercentage: 70,
+                aspectRatio:1,
+                legend: {
+                    display: false
+                }
+            }
+        });
+    </script>
+    		
+</body>
+</html>

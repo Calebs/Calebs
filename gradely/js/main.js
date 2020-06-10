@@ -108,5 +108,14 @@ $(document).ready(function(){
     function closeDialog() {
         $('body').removeClass('scroll_lock');
         $('body').removeClass('drawerActive');
-	}
+    }
+    
+    var hideOverlayBtn = $('.overlayToggle'),
+        overlayContainer = $('.showcaseCta');
+
+        hideOverlayBtn.on('click', function(e) {
+            e.preventDefault();
+            $(this).parents(".showcaseCta").addClass("hideOverlay");
+        });
+
 });
