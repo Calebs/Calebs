@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title> Class title given by teacher here | Gradely.ng</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/base.min.css"/>
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
+</head>
+    
+<body>
+
+    <header class="headerSecondary" role="banner">
+        <div class="container">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="../index.html" class="logo_link">
+                            <img src="../img/logo.svg" alt="Gradely for Teachers">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <div class="classTitleBlock">
+                        <h4 class="title font-bold">Class title goes here</h4>
+                        <span class="color__grey">Junior Secondary School 2</span>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btn_user_act">
+                            <a href="#" class="btn btn-danger">Leave</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainContentArea">
+        <div class="grdly_page_frame">
+            <!-- Insert live class widget here -->
+        </div>
+    </main>
+
+    <!--Add class "loading" to activate the loader-->
+    <div class="page_loader ">
+        <div class="loader_content">
+            <img src="../img/icons/ball-triangle.svg" class="loaderImage" alt="Page Loader">
+            <p class="font-md">Setting up your class</p>
+        </div>
+    </div>
+
+    <!-- Browser support prompt -->
+    <!-- Toggle the class "takeoverActive" to show it -->
+    <section class="grdl_page_takeover grdl_paywall">
+        <div class="container">
+            <div class="empty_state centered">
+                <div class="def_wrapper text-center ">
+                    <h3 class="title title_lg font-bold color__black margin_bottom_sm">Improve your Experience</h3>
+                    <p>You are using a web browser that doesn’t yet support this feature. Please use one of the following to improve your experience</p>
+                    <div class="row margin_top_lg">
+                        <div class="iconButtonTile col-6">
+                            <a href="#" class="groupWrapper">
+                                <div class="tileIcon">
+                                    <img src="../img/icons/chrome_browser.svg" alt="">
+                                </div>
+                                <h4 class="font-bold color__black margin_bottom_x">Google Chrome</h4>
+                                <span class="btn-link">Download</span>
+                            </a>
+                        </div>
+                        <div class="iconButtonTile col-6">
+                            <a href="#" class="groupWrapper">
+                                <div class="tileIcon">
+                                    <img src="../img/icons/opera_browser.svg" alt="">
+                                </div>
+                                <h4 class="font-bold color__black margin_bottom_x">Opera Browser</h4>
+                                <span class="btn-link">Download</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+	<script src="../js/jquery.js"></script>
+    <script src="../js/base.min.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+            $('#lessonTime').datetimepicker();
+        });
+
+        var classChart = document.getElementById('classPerformance').getContext('2d');
+        var myDoughnutChart = new Chart(classChart, {
+            type: 'doughnut',
+            data: {
+                labels: ["Below 50%", "Above 50%", "Above 75%"],
+                datasets: [{
+                    label: 'Class Performance summary',
+                    data: [64, 32, 24],
+                    backgroundColor: [
+                        '#FE747D',
+                        '#F2AB3E',
+                        '#60D2B0'
+                    ],
+                    hoverBackgroundColor: '#08384D',
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                cutoutPercentage: 70,
+                aspectRatio:1,
+                legend: {
+                    display: false
+                }
+            }
+        });
+        
+    </script>
+
+</body>
+</html>
