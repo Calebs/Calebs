@@ -12,6 +12,7 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/flipTimer.css"/>
     <link rel="stylesheet" href="css/base.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/modernizr.js"></script> <!-- Modernizr -->
@@ -31,10 +32,10 @@
                 </div>
                 <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuPrimary">
-                        <div class="menuListItem active">
+                        <div class="menuListItem">
                             <a href="parents_lander.html" class="menuLinkItem">For Parents</a>
                         </div>
-                        <div class="menuListItem">
+                        <div class="menuListItem active">
                             <a href="school_lander.html" class="menuLinkItem">For Schools</a>
                         </div>
                         <div class="menuListItem hasChildren">
@@ -66,18 +67,74 @@
     </header>
 
     <main class="mainContentArea">
-        <section class="hero_area parent_hero">
-            <div class="container content_narrow">
-                <div class="heroContentWrapper row imageLeft color__inverse_light">
-                    <div class="heroTextWrapper col-md-7">
-                        <h2 class="hero_title font-bold color__white">Help them CatchUp!<br> <span class="font-regular"> on their <i class="font-style-italic">School work</i></span></h2>
+        <section class="hero_area school_hero">
+            <div class="container">
+                <div class="heroContentWrapper row color__inverse_light">
+                    <div class="heroTextWrapper col-md-5">
+                        <h2 class="hero_title font-bold color__white">Your Digital School Starts <span class="fauxBtn fauxCursor">Here</span></h2>
+                        <p>Build effective digital and blended school programs with best-in-class technology from Gradely For Schools.</p>
                         <div class="section_cto">
-                            <a href="#" class="btn btn-secondary">Sign Up</a>
-                            <a href="#" class="btn btn-default">View Demo</a>
+                            <a href="#" class="btn btn-default">Request Live Demo</a>
+                            <button type="button" class="playIconBtn btnSecondary visible_sm">
+                                <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.75 2.5V13.5L13.25 8L4.75 2.5Z" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="heroPersonImage">
-                        <img src="img/banners/gradely_boyModel.png" alt="A boy, holding a tablet" class="">
+                    <div class="floatingCta md-offset-3 col-md-3 hidden-sm">
+                        <button type="button" class="playIconBtn btnSecondary iconBtnXl">
+                            <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.75 2.5V13.5L13.25 8L4.75 2.5Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_block padding-top-none bg__black">
+            <div class="container color__inverse_light">
+                <div class="row info_sub_row">
+                    <div class="section_header text-center-sm col-md-6">
+                        <div class="media_item media_column_sm">
+                            <div class="media_figure">
+                                <div class="featureIconWrapper">
+                                    <img src="./img/icons/giftbox.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="media_info">
+                                <h4 class="title title_sm color__white font-bold margin_bottom_sm">
+                                    Pre-launch discount offer
+                                </h4>
+                                <p class="font-sm">Get 50% discount when you subscribe for the Gradely LMS school plan before official launch </p>
+                                <div class="section_cto">
+                                    <button class="btn btn-sm btn-default-outline">Request Invoice</button> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 imageItemHolder">
+                        <h4 class="title font-bold margin_bottom_md caps_upper color__grey_light">Countdown to Launch Date</h4>
+                        <div class="eventTimer">
+                            <div class="flipTimer">
+                                <div class="eventItem">
+                                    <div class="days"></div>
+                                    <div class="digiteSetLabel">Days</div>
+                                </div>
+                                <div class="eventItem">
+                                    <div class="hours"></div>
+                                    <div class="digiteSetLabel">Hours</div>
+                                </div>
+                                <div class="eventItem">
+                                    <div class="minutes"></div>
+                                    <div class="digiteSetLabel">Minutes</div>
+                                </div>
+                                <div class="eventItem">
+                                    <div class="seconds"></div>
+                                    <div class="digiteSetLabel">Seconds</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,11 +144,59 @@
             <div class="container ">
                 <div class="row info_sub_row align-items-center">
                     <div class="col-md-6 order-2">
-                        <div class="section_header text-center-sm">
+                        <div class="section_header centered text-center-sm">
                             <h4 class="title title_md font-bold margin_bottom_sm color__default">
-                                CatchUp! with Daily Recommendations
+                                Engaging Class Experiences
                             </h4>
-                            <p>Get new Practice and Video Lesson recommendations daily for your child. Keep getting new recommendations as they complete practice sets of different topics and difficulty levels. </p>
+                            <p>Schedule and hold live video classes for various class subjects and levels. Share class recordings instantly and engage students in discussions on an interactive class feed.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1 imageItemHolder">
+                        <div class="embed-responsive embed-responsive-16by9 videoStage">
+                            <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
+                                <source src="./img/featuresClips/Live_class.mp4" type="video/mp4">
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bannerBlobItem featBlob blobDots"></div>
+        </section>
+
+        <section class="section_block bg__off_white">
+            <div class="container ">
+                <div class="row info_sub_row align-items-center">
+                    <div class="col-md-6 order-2 order-md-1">
+                        <div class="section_header centered text-center-sm">
+                            <h4 class="title title_md font-bold margin_bottom_sm color__default">
+                                Powerful Assessment Tools
+                            </h4>
+                            <p>Create different assessment formats and make use of a mapped questions pool to simplify the process of creating homework. Hold proctored exams that prevent cheating.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1 order-md-2 imageItemHolder">
+                        <div class="embed-responsive embed-responsive-16by9 videoStage">
+                            <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
+                                <source src="./img/featuresClips/homework.mp4" type="video/mp4">
+                                Sorry, your browser doesn't support embedded videos.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bannerBlobItem featBlob blobDots blobFlippedVR"></div>
+        </section>
+
+        <section class="section_block">
+            <div class="container ">
+                <div class="row info_sub_row align-items-center">
+                    <div class="col-md-6 order-2">
+                        <div class="section_header centered text-center-sm">
+                            <h4 class="title title_md font-bold margin_bottom_sm color__default">
+                                Personalized Learning Paths
+                            </h4>
+                            <p>Leverage AI-assisted recommendations for each student as well as hundreds of practice and video lesson resources to support them on their personalized learning paths.</p>
                         </div>
                     </div>
                     <div class="col-md-6 order-1 imageItemHolder">
@@ -104,79 +209,31 @@
                     </div>
                 </div>
             </div>
-            <div class="bannerBlobItem featBlob blobRing"></div>
+            <div class="bannerBlobItem featBlob blobDots"></div>
         </section>
 
         <section class="section_block bg__off_white">
             <div class="container ">
                 <div class="row info_sub_row align-items-center">
                     <div class="col-md-6 order-2 order-md-1">
-                        <div class="section_header text-center-sm">
+                        <div class="section_header centered text-center-sm">
                             <h4 class="title title_md font-bold margin_bottom_sm color__default">
-                                Just-in-Time Tutor Interventions
+                                Students Progress Reports
                             </h4>
-                            <p>Schedule an on-demand tutor to assist with difficult concepts or entire topics and subjects. Tutors are experienced, passionate and eager to set your child on the right path.</p>
+                            <p>View students’ performance at a glance and see which students are excelling or lagging behind on various topics across different subjects. Export reports to CSV or PDF.</p>
                         </div>
                     </div>
                     <div class="col-md-6 order-1 order-md-2 imageItemHolder">
                         <div class="embed-responsive embed-responsive-16by9 videoStage">
                             <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
-                                <source src="./img/featuresClips/tutoring.mp4" type="video/mp4">
+                                <source src="./img/featuresClips/Class_report.mp4" type="video/mp4">
                                 Sorry, your browser doesn't support embedded videos.
                             </video>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="bannerBlobItem featBlob blobRing blobFlippedVR"></div>
-        </section>
-
-        <section class="section_block">
-            <div class="container ">
-                <div class="row info_sub_row align-items-center">
-                    <div class="col-md-6 order-2">
-                        <div class="section_header text-center-sm">
-                            <h4 class="title title_md font-bold margin_bottom_sm color__default">
-                                Integrate with School Work and Assessment
-                            </h4>
-                            <p>Bring your school onboard their learning journey, and don’t miss out of class activities and homework. See school work and personal work all in one place.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 order-1 imageItemHolder">
-                        <div class="embed-responsive embed-responsive-16by9 videoStage">
-                            <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
-                                <source src="./img/featuresClips/homework_student.mp4" type="video/mp4">
-                                Sorry, your browser doesn't support embedded videos.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bannerBlobItem featBlob blobRing"></div>
-        </section>
-
-        <section class="section_block bg__off_white">
-            <div class="container ">
-                <div class="row info_sub_row align-items-center">
-                    <div class="col-md-6 order-2 order-md-1">
-                        <div class="section_header text-center-sm">
-                            <h4 class="title title_md font-bold margin_bottom_sm color__default">
-                                Progress Reports on your Dashboard and in your Inbox
-                            </h4>
-                            <p>Get reports on their learning progress and mastery levels in real-time on your dashboard or direct in your inbox weekly. Manage topics to focus on and guide their journey.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 order-1 order-md-2 imageItemHolder">
-                        <div class="embed-responsive embed-responsive-16by9 videoStage">
-                            <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
-                                <source src="./img/featuresClips/diagnosticReport.mp4" type="video/mp4">
-                                Sorry, your browser doesn't support embedded videos.
-                            </video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bannerBlobItem featBlob blobRing blobFlippedVR"></div>
+            <div class="bannerBlobItem featBlob blobDots blobFlippedVR"></div>
         </section>
 
         <section class="section_block">
@@ -184,94 +241,182 @@
                 <header class="row section_header">
                     <div class="offset-md-2 col-md-8 text-center">
                         <h4 class="title title_md color__black">
-                            Research-Proven Methods to Improve Student Confidence and Ability
+                            How we Compare With The Others
                         </h4>
                     </div>
                 </header>
-                <div class="featureThumbRow row">
-                    <article class="col-md-4 featureThumbItem">
-                        <div class="featureThumbWrapper text-center">
-                            <div class="featureIconWrapper">
-                                <img src="./img/icons/iconPretest.svg" class="featFigureImage" alt="Pretest">
+                <div class="compareTable">
+                    <article class="featureGroup">
+                        <header class="feeatureGroupHeader">
+                            <div class="compareFeatureTitle">
                             </div>
-                            <h4 class="featureTitle margin_bottom_sm font-bold">Pretest</h4>
-                            <p>Each student starts with a quick pretest. The pretest determines the best starting point in the curriculum for the student.</p>
-                        </div>
-                    </article>
-                    <article class="col-md-4 featureThumbItem">
-                        <div class="featureThumbWrapper text-center">
-                            <div class="featureIconWrapper">
-                                <img src="./img/icons/iconProTutors.svg" class="featFigureImage" alt="Professional Educators">
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <div class="brandCompareLogo">
+                                        <img src="./img/logo.svg" alt="Gradely">
+                                        <span class="brandName sr-only">Gradely</span>
+                                    </div>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <div class="brandCompareLogo">
+                                        <img src="./img/icons/googleClass.svg" alt="Google Classroom">
+                                        <span class="brandName sr-only">Google Classroom</span>
+                                    </div>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <div class="brandCompareLogo">
+                                        <img src="./img/icons/Edmodo.svg" alt="Edmodo">
+                                        <span class="brandName sr-only">Edmodo</span>
+                                    </div>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <div class="brandCompareLogo">
+                                        <img src="./img/icons/others.svg" alt="Other School Information Management Systems">
+                                        <span class="brandName sr-only">Other School Information Management Systems</span>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="featureTitle margin_bottom_sm font-bold">Professional Educators</h4>
-                            <p>A community of professionally-trained teachers, educators and child psychologists build the content.</p>
-                        </div>
-                    </article>
-                    <article class="col-md-4 featureThumbItem">
-                        <div class="featureThumbWrapper text-center">
-                            <div class="featureIconWrapper">
-                                <img src="./img/icons/iconAdopt.svg" class="featFigureImage" alt="Adaptive Learning">
+                        </header>
+                        <div class="featureGroupRow featureRow">
+                            <div class="compareFeatureTitle">
+                                <span>Interactive Class Feed</span>
                             </div>
-                            <h4 class="featureTitle margin_bottom_sm font-bold">Adaptive Learning</h4>
-                            <p>The pedagogical approach of adaptive learning is linked to better learning engagement and improved learning outcomes.</p>
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                            </div>
                         </div>
+                        <div class="featureGroupRow featureRow">
+                            <div class="compareFeatureTitle">
+                                <span>Live Video-conferencing Classes</span>
+                            </div>
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featureGroupRow featureRow">
+                            <div class="compareFeatureTitle">
+                                <span>Content Library for Students</span>
+                            </div>
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featureGroupRow featureRow">
+                            <div class="compareFeatureTitle">
+                                <span>Question Pool for Assessment</span>
+                            </div>
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featureGroupRow featureRow">
+                            <div class="compareFeatureTitle">
+                                <span>Reporting & Analytics</span>
+                            </div>
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featureGroupRow featureRow">
+                            <div class="compareFeatureTitle">
+                                <span>Personalized Recommendations</span>
+                            </div>
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featureGroupRow featureRow">
+                            <div class="compareFeatureTitle">
+                                <span>Integration with School Information Systems</span>
+                            </div>
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                            </div>
+                        </div>
+
                     </article>
                 </div>
             </div>
+        
         </section>
-        <section class="tileLayout">
-            <div class="row no-gutters">
-                <article class="tileItem col-sm-4">
-                    <div class="contentInner text-center">
-                        <div class="margin_bottom_md">
-                            <h4 class="title title_sm color__default font-bold">Get a Monthly Bundle</h4>
-                        </div>
-                        <div class="pricingInfo margin_bottom_lg text-center">
-                            <h3 class="title title_md color__black">₦4,500
-                            </h3>
-                            <span>Per Month</span>
-                        </div>
-                        <p class="planSummary">included: 3 tutor sessions per week + 1 month CatchUp! subscription</p>
-                        <div class="section_cto">
-                            <a href="#" class="btn btn-primary-outline">Buy Now</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="tileItem col-sm-4">
-                    <div class="contentInner text-center">
-                        <div class="margin_bottom_md">
-                            <h4 class="title title_sm color__default font-bold">CatchUp! Monthly</h4>
-                        </div>
-                        <div class="pricingInfo margin_bottom_lg text-center">
-                            <h3 class="title title_md color__black">₦1,500
-                            </h3>
-                            <span>Per Month</span>
-                        </div>
-                        <p class="planSummary">included: 1 month CatchUp! subscription</p>
-                        <div class="section_cto">
-                            <a href="#" class="btn btn-primary-outline">Subscribe Now</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="tileItem col-sm-4">
-                    <div class="contentInner text-center">
-                        <div class="margin_bottom_md">
-                            <h4 class="title title_sm color__default font-bold">Schedule a Tutor Session</h4>
-                        </div>
-                        <div class="pricingInfo margin_bottom_lg text-center">
-                            <h3 class="title title_md color__black">₦2,500
-                            </h3>
-                            <span></span>
-                        </div>
-                        <p class="planSummary">included: 1 trial tutor session</p>
-                        <div class="section_cto">
-                            <a href="#" class="btn btn-primary-outline">Book Now</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="section_block ">
+        <section class="section_block padding-top-none">
             <div class="container">
                 <article class="info_sub_row">
                     <div class=" row align-items-center">
@@ -389,9 +534,8 @@
                         </div>
                         <div class="col-md-6 order-1 order-md-2">
                             <div class="section_header mx_w_450">
-                                <h5 class="title caps_upper color__red font-bold">Case Studies & Testimonials</h5>
-                                <h2 class="title title_lg font-bold color__black margin_bottom_sm">See what some parents 
-                                    have to say.</h2>
+                                <h5 class="title caps_upper color__red font-bold">Case Studies</h5>
+                                <h2 class="title title_md font-bold color__black margin_bottom_sm">These schools have some nice things to say.</h2>
                                 <p>These schools have some nice things to say.</p>
                             </div>
                             <div class="carousel-indicators caseStudyThumbnails hidden-sm">
@@ -663,7 +807,19 @@
     
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
+    <script src="js/jquery.flipTimer.js"></script>
     <script src="js/main.js"></script>
        
+    <script>
+        $(function () {
+            
+            $('.flipTimer').flipTimer({
+                direction:'down',
+                date:'December 14, 2020 12:00:00',
+                callback:function() { alert('Officially Launched!'); }
+            });
+        });
+    </script>
+    		
 </body>
 </html>
