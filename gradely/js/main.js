@@ -64,6 +64,29 @@ $(document).ready(function(){
         $('header[role="banner"]').toggleClass('is-active');
         $('body').toggleClass('scroll_lock');
     });
+
+    if ($(window).width() < MQL) {
+        var topicBtn = $('.listNavItemBtn'),
+            switchTopic = $('.collapsePane');
+
+        topicBtn.on('click', function(evLock) {
+            evLock.stopPropagation();
+            hideTopics();
+        });
+
+        switchTopic.on('click', function(evLock) {
+            evLock.stopPropagation();
+            showTopics();
+        });
+    }
+
+    function showTopics() {
+        $('.questionPoolLayout').removeClass('showPane');
+    }
+
+    function hideTopics() {
+        $('.questionPoolLayout').addClass('showPane');
+    }
         
     // Show and hide password, user login
     var visualTrigger = $('#showPass');
@@ -105,17 +128,35 @@ $(document).ready(function(){
         closeDialog();
     });
 
+    
+
     function closeDialog() {
         $('body').removeClass('scroll_lock');
         $('body').removeClass('drawerActive');
     }
     
-    var hideOverlayBtn = $('.overlayToggle'),
-        overlayContainer = $('.showcaseCta');
+    var hideOverlayBtn = $('.overlayToggle');
 
-        hideOverlayBtn.on('click', function(e) {
-            e.preventDefault();
-            $(this).parents(".showcaseCta").addClass("hideOverlay");
-        });
+    hideOverlayBtn.on('click', function(e) {
+        e.preventDefault();
+        $(this).parents(".showcaseCta").addClass("hideOverlay");
+    });
+
+    /*Video Widget*/
+    
+    var video_launcher = $('.watch_vid'),
+        close_widget = $('.widget_dismiss > button '),
+        video_widget_block = $('.video_widget');
+
+    video_launcher.on('click', function(e) {
+        e.preventDefault();
+        video_widget_block.addClass('show_widget');
+        $('body').addClass('scroll_lock');
+    });
+
+    close_widget.on("click", function() {
+        $(this).parents('.video_widget').removeClass("show_widget");
+        $('body').removeClass('scroll_lock');
+    });
 
 });

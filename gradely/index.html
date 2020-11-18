@@ -20,6 +20,44 @@
 
 <body class="">
 
+    <div class="modal fade" id="backtoSchoolPromo">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content promoPopup" style="background-image: url(./img/banners/promoBg.png) ;">
+                <header class="modal-header">
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="content-panel ">
+                        <div class="row info_sub_row align-items-center">
+                            <div class="col-sm-5 imageItemHolder text-center">
+                                <img src="./img/banners/promoIllo.svg" alt="Gradely Back to school promotion">
+                            </div>
+                            <div class="col-sm-7 color__default">
+                                <h4 class="title title_sm margin_bottom_sm font-bold caps_upper!">Congratulations</h4>
+                                <h2 class="title title_md margin_bottom_md">Your child is qualified for Gradely Back2School offer</h2>
+
+                                <ul class="font-md">
+                                    <li>Free knowledge level test</li>
+                                    <li>10,000+ Practice questions and Videos</li>
+                                </ul>
+                                <div class="promoPricing margin_top_md">
+                                    <span class="price oldPrice font-bold">₦1,500</span>
+                                    <span class="price newPrice font-bold">₦500</span>
+                                    <span class="">Only</span>
+                                </div>
+                                <div class="section_cto">
+                                    <a href="parents/parent_signup.html" class="btn btn-secondary">Claim Offer Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header role="banner" class="preAuthHeader">
         <div class="container">
             <div class="navbarWrapper">
@@ -533,7 +571,7 @@
                         </div>
                     </section>
                 </div>
-            </footer>
+        </footer>
 
     </main>
     
@@ -544,6 +582,14 @@
 
     <script>
         $(function () {
+            setTimeout(function(){
+                $('#backtoSchoolPromo').modal({
+                    backdrop: "static"
+                });  
+            },10000);
+            
+            
+            
             $('.slideText').slick({
                 arrows: false,
                 speed: 500,

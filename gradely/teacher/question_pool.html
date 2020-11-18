@@ -201,7 +201,7 @@
     <main class="authenticationPageLayout">
         <div class="grdly_page_frame bg__off_white">
             <section class="grdly_page_body">
-                
+                <!-- Append the class "showPane" to show the questions pane on mobile -->
                 <div class="questionPoolLayout showPane">
                     <div class="pageClose dialogDismiss" id="">
                         <a href="homework.html" class="close_dialog cls_lg">
@@ -214,7 +214,7 @@
                                 <p><span>JSS2</span> - <span>Mathematics</span></p>
                                 <h4 class="title title_sm font-bold">Find Questions by Topic</h4>
                             </header>
-                            <div action="content_inner">
+                            <div class="content_inner">
                                 <nav class="listNavBlock">
                                     <div class="listNavGroupHeader">
                                         <span class="caps_upper color__grey_dark">Second Term (WASSCE/NECO Curriculum)</span>
@@ -361,7 +361,7 @@
                                                             points="20 9 11 9 11 0 9 0 9 9 0 9 0 11 9 11 9 20 11 20 11 11 20 11 20 9" />
                                                     </svg>
                                                 </span>
-                                                <span class="hidden-sm font-bold caps_upper">Create your Questions</span>
+                                                <span class="font-bold caps_upper">Create your Questions</span>
                                             </button>
                                         </div>
                                     </div>
@@ -740,7 +740,7 @@
                                 </div>
                             </div>
                             <div class="nav_right">
-                                <a href="homework_questions.html" id="addtoHomework" class="btn btn-primary">Add to Homework</a>
+                                <a href="homework_questions.html" id="addtoHomework" class="btn btn-secondary">Add to Homework</a>
                             </div>
                         </div>
                     </div>
@@ -752,57 +752,57 @@
 
     <script src="../js/jquery.js"></script>
     <script src="../js/base.min.js"></script>
-    <script src="../js/driver.min.js"></script>
+    <!-- <script src="../js/driver.min.js"></script> -->
     <script src="../js/main.js"></script>
 
     <script>
-        const guidedTour = new Driver();
+        // const guidedTour = new Driver();
 
-        guidedTour.defineSteps([
-        {
-            element: '#selectTopic',
-            popover: {
-            className: '',
-            title: 'Select a topic',
-            description: 'Select a topic from to see the questions available under the topic.',
-            position: 'bottom'
-            }
-        },
-        {
-            element: '#showMoreTopics',
-            popover: {
-            title: 'Show more topics',
-            description: 'Click to show topics from other terms and curriculums',
-            position: 'top'
-            }
-        },
-        {
-            element: '#createQuestion',
-            popover: {
-            title: 'Create Question',
-            description: 'Click here to create your own questions.',
-            position: 'top'
-            }
-        },
-        {
-            element: '#selectQuestion',
-            popover: {
-            title: 'Select Question',
-            description: 'Click here to add a question to your homework.',
-            position: 'top'
-            }
-        },
-        {
-            element: '#addtoHomework',
-            popover: {
-            title: 'Add To Homework',
-            description: 'After selecting all the questions you want for the homework, Click this button to add them to the homework.',
-            position: 'top'
-            }
-        },
-        ]);
-        // Start the introduction
-        guidedTour.start();
+        // guidedTour.defineSteps([
+        // {
+        //     element: '#selectTopic',
+        //     popover: {
+        //     className: '',
+        //     title: 'Select a topic',
+        //     description: 'Select a topic from to see the questions available under the topic.',
+        //     position: 'bottom'
+        //     }
+        // },
+        // {
+        //     element: '#showMoreTopics',
+        //     popover: {
+        //     title: 'Show more topics',
+        //     description: 'Click to show topics from other terms and curriculums',
+        //     position: 'top'
+        //     }
+        // },
+        // {
+        //     element: '#createQuestion',
+        //     popover: {
+        //     title: 'Create Question',
+        //     description: 'Click here to create your own questions.',
+        //     position: 'top'
+        //     }
+        // },
+        // {
+        //     element: '#selectQuestion',
+        //     popover: {
+        //     title: 'Select Question',
+        //     description: 'Click here to add a question to your homework.',
+        //     position: 'top'
+        //     }
+        // },
+        // {
+        //     element: '#addtoHomework',
+        //     popover: {
+        //     title: 'Add To Homework',
+        //     description: 'After selecting all the questions you want for the homework, Click this button to add them to the homework.',
+        //     position: 'top'
+        //     }
+        // },
+        // ]);
+        // // Start the introduction
+        // guidedTour.start();
 
     </script>
 
