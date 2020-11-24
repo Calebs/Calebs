@@ -12,6 +12,7 @@
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css" />
     <link rel="stylesheet" href="css/flipTimer.css"/>
     <link rel="stylesheet" href="css/base.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
@@ -19,6 +20,49 @@
 </head>
 
 <body class="">
+
+    <div class="modal fade" id="requestSuccess">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="content_wrapper">
+                        <div class="userInfoGroup text-center">
+                            <svg class="statusIcon statusIconSuccess" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                                <path class="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
+                                <circle class="successAnimationCircle" cx="35" cy="35" r="24" stroke-width="4" stroke-linecap="round" fill="transparent"/>
+                                <polyline class="successAnimationCheck"  stroke-width="4" points="23 34 34 43 47 27" fill="transparent"/>
+                            </svg>
+                            <h3 class="title title_sm margin_bottom_sm color__black font-bold">Request Received</h3>
+                            <p>Your request for a demo of the Gradely app for school has been received. A member of our team will be in touch with more information.</p>
+                        </div>
+                        
+                        <div class="section_cto text-center">
+                            <a href="school_lander.html" class="btn btn-inverse">Dismiss</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video_widget">
+        <div class="widget_content_wrapper">
+             <div class="widget_dismiss">
+                <button type="button" class="close_dialog cls_lg" data-dismiss="modal"></button>
+             </div>
+             <div class="widget_content">
+                <div class="container">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video preload="metadata" controls class="embed-responsive-item">
+                            <source src="./img/featuresClips/school_demo_video.mp4" type="video/mp4">
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
 
     <header role="banner" class="preAuthHeader">
         <div class="container">
@@ -42,7 +86,6 @@
                             <a href="#" class="menuLinkItem">More <span class="caret"></span></a>
                             <div class="navItemChildrenHolder">
                                 <div class="navItemChildrenContainer">
-
                                 </div>
                             </div>
                         </div>
@@ -52,7 +95,7 @@
                     </nav>
                     <nav class="navMenu menuAlt">
                         <div class="controlBtn btn_user_act">
-                            <a href="login.html" class="btn btn-secondary">Log In</a>
+                            <a href="login.html" class="btn btn-sm btn-secondary">Log In</a>
                         </div>
                         <div class="controlBtn nav_trigger">
                             <a class="primary-nav-trigger" href="#">
@@ -74,8 +117,8 @@
                         <h2 class="hero_title font-bold color__white">Your Digital School Starts <span class="fauxBtn fauxCursor">Here</span></h2>
                         <p>Build effective digital and blended school programs with best-in-class technology from Gradely For Schools.</p>
                         <div class="section_cto">
-                            <a href="#" class="btn btn-default">Request Live Demo</a>
-                            <button type="button" class="playIconBtn btnSecondary visible_sm">
+                            <a href="#" id="drawerLauncher" class="btn btn-secondary">Request Live Demo</a>
+                            <button type="button" class="playIconBtn watch_vid visible_sm">
                                 <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.75 2.5V13.5L13.25 8L4.75 2.5Z" />
                                 </svg>
@@ -83,7 +126,7 @@
                         </div>
                     </div>
                     <div class="floatingCta md-offset-3 col-md-3 hidden-sm">
-                        <button type="button" class="playIconBtn btnSecondary iconBtnXl">
+                        <button type="button" class="playIconBtn watch_vid iconBtnXl">
                             <svg class="cust_icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.75 2.5V13.5L13.25 8L4.75 2.5Z" />
                             </svg>
@@ -92,6 +135,7 @@
                 </div>
             </div>
         </section>
+
         <section class="section_block padding-top-none bg__black">
             <div class="container color__inverse_light">
                 <div class="row info_sub_row">
@@ -279,14 +323,14 @@
                         </header>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Interactive Class Feed</span>
+                                <span>Interactive Class Feed (with Video & File Uploads)</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
                                     <span class="cust_icon icon_on"></span>
                                 </div>
                                 <div class="text-center planBlock">
-                                    <span class="cust_icon icon_off"></span>
+                                    <span class="cust_icon icon_on"></span>
                                 </div>
                                 <div class="text-center planBlock">
                                     <span class="cust_icon icon_on"></span>
@@ -298,7 +342,7 @@
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Live Video-conferencing Classes</span>
+                                <span>Live Video Classes and Recording</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -311,32 +355,13 @@
                                     <span class="cust_icon icon_off"></span>
                                 </div>
                                 <div class="text-center planBlock">
-                                    <span class="cust_icon icon_on"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="featureGroupRow featureRow">
-                            <div class="compareFeatureTitle">
-                                <span>Content Library for Students</span>
-                            </div>
-                            <div class="featureOptions">
-                                <div class="text-center planBlock">
-                                    <span class="cust_icon icon_on"></span>
-                                </div>
-                                <div class="text-center planBlock">
-                                    <span class="cust_icon icon_off"></span>
-                                </div>
-                                <div class="text-center planBlock">
-                                    <span class="cust_icon icon_off"></span>
-                                </div>
-                                <div class="text-center planBlock">
                                     <span class="cust_icon icon_off"></span>
                                 </div>
                             </div>
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Question Pool for Assessment</span>
+                                <span>Practice and Video Lessons Library</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -355,7 +380,7 @@
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Reporting & Analytics</span>
+                                <span>Topic-based Question Pool for Teachers</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -374,7 +399,7 @@
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Personalized Recommendations</span>
+                                <span>Proctored Examinations</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -393,7 +418,7 @@
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Integration with School Information Systems</span>
+                                <span>Report Analytics with Remedial Recommendations</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -406,16 +431,16 @@
                                     <span class="cust_icon icon_off"></span>
                                 </div>
                                 <div class="text-center planBlock">
-                                    <span class="cust_icon icon_on"></span>
+                                    <span class="cust_icon icon_off"></span>
                                 </div>
                             </div>
                         </div>
-
                     </article>
                 </div>
             </div>
         
         </section>
+        
         <section class="section_block padding-top-none">
             <div class="container">
                 <article class="info_sub_row">
@@ -608,7 +633,7 @@
                             <div class="decDivider margin_bottom_lg margin_top_lg">
                                 <svg width="174" height="19" viewBox="0 0 174 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M2 9.5C11.4219 19.5 20.8438 19.5 30.2656 9.5C39.6875 -0.5 49.1094 -0.5 58.5313 9.5C67.9531 19.5 77.375 19.5 86.7969 9.5C96.2188 -0.5 105.641 -0.5 115.063 9.5C124.484 19.5 133.906 19.5 143.328 9.5C152.75 -0.5 162.172 -0.5 171.594 9.5" stroke="#F2AB3E" stroke-width="4"/>
-                                </svg>                                                                                 
+                                </svg>
                             </div>
                             <p class="font-md">Or you can call us on: <a href="tel:(+234) 810 0598 268" class="color__red">(+234) 8100598268</a></p>
                         </header>
@@ -616,52 +641,54 @@
                             <div class="panel-group" id='help_list'>
                                 <article class="panel panel-help">
                                     <h4 class="panel-title">
-                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_1">What payment methods do you offer?</a>
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_1">Is this a Learning Management System or an Interactive Content Platform?</a>
                                     </h4>
                                     <div id="article_1" class="panel-collapse collapse">
                                         <div class="panel-body prose_content">
-                                            <p>All you need to get started is a computer, tablet, or phone with a connection to the Internet.</p>
+                                            <p>Gradely combines the best of both worlds. We are also the only LMS provider that offer curriculum-aligned interactive content for schools in Nigeria.</p>
                                         </div>
                                     </div>
                                 </article>
                                 <article class="panel panel-help">
                                     <h4 class="panel-title">
-                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_2">How do I switch between plans?</a>
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_2">What subjects, classes and curriculum does your LMS cover?</a>
                                     </h4>
                                     <div id="article_2" class="panel-collapse collapse">
                                         <div class="panel-body prose_content">
-                                            <p>Yes. Gradely is built by learning specialists guided by the WAEC / NECO as well as the British IGCSE curriculum.</p>
+                                            <p>We currently have <strong>questions</strong> for Mathematics, English Language and Biology for all classes and the <strong> Nigerian and British curriculums</strong>. All other subjects will be available as time goes on.</p>
+                                            <p>We have <strong>video lessons</strong> for Mathematics, English Language, Agricultural Science, Biology, Chemistry, Physics, Further Mathematics, Accounting, Commerce, Civic education, CRK, Economics, French, Literature-in-English and Yoruba/Hausa/Igbo for Senior Secondary classes. Videos for other classes are in production. </p>
                                         </div>
                                     </div>
                                 </article>
                                 <article class="panel panel-help">
                                     <h4 class="panel-title">
-                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_3">Is the free plan free forever?</a>
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_3">Does your platform have an administrative management system?</a>
                                     </h4>
                                     <div id="article_3" class="panel-collapse collapse">
                                         <div class="panel-body prose_content">
-                                            <p>Registration is free. You can create one free diagnostic test for your child. Our basic subscription plan of #1,500 gives your child access to Gradely gamified practice for one month. You'll also get notifications on your child's learning progress every time.</p>
+                                            <p>No, we don’t have an administrative management system. We only have academic support for now but there are free and low-cost administrative system out there we can recommend to you.</p>
                                         </div>
                                     </div>
                                 </article>
                                 <article class="panel panel-help">
                                     <h4 class="panel-title">
-                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_4">How many children can I add if I use the Basic plan?</a>
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_4">What are the pricing packages for Gradely for Schools?</a>
                                     </h4>
                                     <div id="article_4" class="panel-collapse collapse">
                                         <div class="panel-body prose_content">
-                                            <p>After you signup, you'll be required to connect with your child on Gradely. You can do this by creating a profile for your child from your Gradely dashboard. As soon as this is done, you will receive the login details for your child. Your child can login via <a href="https://gradely.ng/login">https://gradely.ng/login</a> using the student code and password that you've generated.
-                                            </p>
+                                            <p>Gradely for Schools LMS cost NGN 6000 per student per year of LMS subscription: this covers premium access to all features of the LMS including Interactive Class Feed, Live Video Class, Assessment tool with built-in question pool, Proctored Examination and Reporting.</p>
+                                            <p>Gradely CatchUp! is our personalized content bank of video lessons and practice cost N 12,000 per student per year. </p>
                                         </div>
                                     </div>
                                 </article>
                                 <article class="panel panel-help">
                                     <h4 class="panel-title">
-                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_5">Can I cancel a plan after payment?</a>
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#help_list" href="#article_5">How do you protect school data on Gradely?</a>
                                     </h4>
                                     <div id="article_5" class="panel-collapse collapse">
                                         <div class="panel-body prose_content">
-                                            <p>A learning specialist will be assigned to your child based on the report of the diagnostic test. A link to connect to the tutor via video chat will be sent to you via email as well as the other information you'll need after booking a session.</p>
+                                            <p>We adhere to GDPR standards of data privacy and individual data protection. Also, we ensure there is server side transmission encryption. All uploaded files are stored on file storage platforms for performance and security. All files has unique token assign to them at creation for access, therefore cannot be guessed or read by humans. </p>
+                                            <p>Every single request on our platform requires authentication, meaning we’ll have to know who you are before we determine what you get.</p>
                                         </div>
                                     </div>
                                 </article>
@@ -673,6 +700,93 @@
             <div class="bannerBlobItem blobTopBottomCenter"></div>
         </section>
     </main>
+
+    <div class="offscreenDrawer"> 
+        <div class="offscreenDrawerBackdrop"></div>
+        <div class="offScreenDrawerContent drawerRight">
+          <div class="offScreenDrawerContentWrapper">
+            <!-- Dismiss the dialog -->
+            <div class="widget_dismiss">
+                <button class="close_dialog"></button>
+            </div>
+            
+            <header class="drawer_header">
+              <h4 class="title title_md color__black font-bold">
+                Request Demo
+              </h4>
+            </header>
+
+            <div class="drawer_body">
+
+                <div class="error_message hidden text-left">
+                    <p>An error occured.</p>
+                </div>
+
+                <form action="">
+                    <div class="form-group">
+                        <label class="control-label ">
+                            Your Name
+                        </label>
+                        <input type="text" required class="form-control" placeholder="e.g David Ibiwoye">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label ">
+                            School Name
+                        </label>
+                        <input type="text" required class="form-control" placeholder="e.g Gradely Intl. College">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label ">
+                            Role in School
+                        </label>
+                        <input type="text" required class="form-control" placeholder="e.g Principal">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label class="control-label ">
+                                Contact Email Address
+                            </label>
+                            <input type="text" required class="form-control" placeholder="e.g david@gmail.com">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="control-label">
+                                Contact Phone Number
+                            </label>
+                            <input type="text" required class="form-control" placeholder="e.g 2348130030020">
+                        </div>
+                    </div>                                    
+                    <div class="form-group">
+                        <label class="control-label">
+                            School Type
+                        </label>
+                        <select class="form-control">
+                            <option>Primary School</option>
+                            <option>Secondary School</option>
+                            <option>Primary & Secondary School</option>
+                            <option>College</option>
+                            <option>Polytechnic</option>
+                            <option>University</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">
+                            Preferred Demo Date and time
+                        </label>
+                        <div class="schedularInputItem">
+                            <input type="text" class="form-control" id="fmCalendar" placeholder="Set the date and time you will be available for the demo">
+                            <span class="inputItemIcon">
+                                <i class="cust_icon icon_calendar"></i>
+                            </span>
+                        </div>
+                    </div>       
+                </form>
+                <div class="section_cto text-right">
+                    <button type="button" data-target="#requestSuccess" data-toggle="modal" data-backdrop="static" class="btn btn-sm btn-secondary">Submit Request</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
     <footer role="contentinfo" class="footerArea">
         <div class="container">
@@ -807,12 +921,15 @@
     
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
-    <script src="js/jquery.flipTimer.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.flipTimer.js"></script>
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
        
     <script>
         $(function () {
-            
+
+            $("#fmCalendar").datetimepicker();
+
             $('.flipTimer').flipTimer({
                 direction:'down',
                 date:'December 14, 2020 12:00:00',

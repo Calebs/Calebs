@@ -15,16 +15,7 @@ $(document).ready(function(){
 			$back_to_top.addClass('fade-out');
 		}
 	});
-    
-	//smooth scroll to top
-	$back_to_top.on('click', function(event){
-		event.preventDefault();
-		$('body,html').animate({
-			scrollTop: 0 ,
-        }, scroll_top_duration
-		);
-    });
-    
+        
     /* General Navigation*/
 
    //primary navigation slide-in effect
@@ -56,7 +47,8 @@ $(document).ready(function(){
             this.previousTop = currentTop;
         });
     }
-        //open/close primary navigation
+    
+    //open/close primary navigation
     $('.primary-nav-trigger').on('click', function(event){
         event.stopPropagation();
         $('.menu-icon').toggleClass('is-clicked');
@@ -65,35 +57,19 @@ $(document).ready(function(){
         $('body').toggleClass('scroll_lock');
     });
         
-    // Show and hide password, user login
-    var visualTrigger = $('#showPass');
-    var pwd_input = $('.user_pass');
+    /*Video Widget*/
+    
+    var video_launcher = $('.watch_vid'),
+        close_widget = $('.widget_dismiss > button '),
+        video_widget_block = $('.video_widget');
 
-    visualTrigger.on('click',function() {
-      $(this).toggleClass('show_pass');
-      
-      if (pwd_input.attr("type") == "password") {
-          pwd_input.attr("type", "text");
-      } else {
-          pwd_input.attr("type", "password");
-      }
+    video_launcher.on('click', function(e) {
+        e.preventDefault();
+        video_widget_block.addClass('show_widget');
+        $('body').addClass('scroll_lock');
     });
 
-    /*Show more collapsed items in a list with more than 4 items*/
-    var show_more_toggle = $(".collapsetoggle");
-        show_more_toggle.on('click', function() {
-        $(this).parents(".collapsibleBlock").toggleClass('blockCollapsed');
-    });
-
-     /*Custom Selector*/
-    var selector = $(".pillSelectControl");
-        //selectorLabel = $(".pillWrapper");
-     
-    selector.on('change', function() {
-        $(this).parents(".selectorItem").toggleClass("selected");
-    });
-        
-    $('#appNotifications').on('click', function(e) {
+    $('#drawerLauncher').on('click', function(e) {
         e.preventDefault();
         $('body').addClass('scroll_lock');
         $('body').addClass('drawerActive');
@@ -110,12 +86,9 @@ $(document).ready(function(){
         $('body').removeClass('drawerActive');
     }
     
-    var hideOverlayBtn = $('.overlayToggle'),
-        overlayContainer = $('.showcaseCta');
-
-        hideOverlayBtn.on('click', function(e) {
-            e.preventDefault();
-            $(this).parents(".showcaseCta").addClass("hideOverlay");
-        });
+    close_widget.on("click", function() {
+        $(this).parents('.video_widget').removeClass("show_widget");
+        $('body').removeClass('scroll_lock');
+    });
 
 });
