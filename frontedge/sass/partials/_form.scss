@@ -20,9 +20,11 @@
 
 .input-group {
     z-index: 1;
+    border: 1px solid $brand_primary;
+    border-radius: 30px;
 
     & > .form-control {
-        border-right: none;
+        border: none;
     }
 
     +.input-group {
@@ -33,18 +35,22 @@
 .input-group-addon {
     background: $brand_primary;
     color: $color_white;
-    padding: 0 15px;
+    padding: 0 20px;
     align-self: center;
     height: 100%;
-    line-height: 45px;
+    line-height: 55px;
     border-left: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 30px;
     width: auto;
 }
 
 .form-group {
     position: relative;
     margin-bottom: 30px;
+}
+
+.formWidth1_3 {
+    max-width: 320px;
 }
 
 input:focus {
@@ -63,19 +69,18 @@ input:focus {
 .form-control {
     padding: .84rem 1.5rem;
     font-size: 1rem;
-    line-height: normal;
     top: 0;
     left: 0;
     z-index: 1;
     margin: 0;
     outline: 0;
     width: 100%;
-    min-height: 45px;
+    min-height: 55px;
     position: relative;
     border: 1px solid $brand_primary;
     border-radius: 4px;
     overflow: hidden;
-    color: $color_text;
+    color: $brand_primary;
     text-indent: .01px;
     @include appearance(none);
     @include box-shadow(0 0 0, transparent);
@@ -97,7 +102,6 @@ input:focus {
     }
 }
 
-
 .control-label {
     text-transform: none;
     font-size: 1em;
@@ -105,7 +109,7 @@ input:focus {
     margin-bottom: 0;
     padding-bottom: 7.5px;
     line-height: 1.4rem;
-    color: $color_grey_dark;
+    color: $color_text;
     
     [class*="checkbox"] &, [class*="radio"] & {
         color: inherit;
@@ -115,15 +119,12 @@ input:focus {
 select.form-control {
     background: white url(../img/icons/arrow-down.png) right center no-repeat;
     padding-right: 25px;
-
-    &.labeledFormInput {
-        padding-right: 25px;
-        background-position-x: 97%;
-    }
+    background-position-x: 97%;
 
     &:focus {
         outline: none;
         background: white url(../img/icons/arrow-down.png) right center no-repeat;
+        background-position-x: 97%;
     }
 }
 
@@ -281,4 +282,10 @@ label {
         display: inline-block;
         vertical-align: top;
     }
+}
+
+.formCTA {
+    clear: both;
+    width: 100%;
+    margin-top: 45px;
 }

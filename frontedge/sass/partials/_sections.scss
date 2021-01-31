@@ -145,21 +145,19 @@ footer[role="contentinfo"] {
 }
 
 .brandBlock {
-    @include flexbox();
-    border-bottom: 1px solid rgba($brand_inverse, .25);
-    margin-bottom: 20px;
-    padding-top: 15px;
+    position: relative;
+    text-align: center;
 
     @include MQ(M) {
+        margin-bottom: 20px;
+        padding-top: 15px;
         text-align: left;
         border-bottom: none;
     }
 }
 
 .brand_media {
-    position: relative;
     overflow: hidden;
-    flex-shrink: 0;
 
     img {
         max-width: 140px;
@@ -175,6 +173,10 @@ footer[role="contentinfo"] {
     flex-direction: column;
     padding-top: 15px;
     padding-bottom: 15px;
+
+    @include MQ-MAX(S) {
+        text-align: center;
+    }
 }
 
 .ft_block_segment + .ft_block_segment {
@@ -195,14 +197,11 @@ footer[role="contentinfo"] {
 }
 
 .footerCrumbs {
-    @include flexbox();
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 50px;
+    clear: both;
+    padding-top: 10px;
 
     @include MQ(M) {
-        flex-direction: row;
-        justify-content: space-between;
+        padding-top: 50px;
     }
 }
 
@@ -292,5 +291,32 @@ footer[role="contentinfo"] {
 
     @include MQ(M) {
         padding-right: 40px;
+    }
+}
+
+// Header with line Divider
+
+.CTASectionHeader {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.sectionLine {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $brand_accent;
+    position: absolute;
+    @include center(y);
+}
+
+.headerTextHolder {
+    margin: auto;
+    padding: 10px 15px;
+    background-color: white;
+
+    @include MQ(M) {
+        padding-right: 30px;
+        padding-left: 30px;
     }
 }

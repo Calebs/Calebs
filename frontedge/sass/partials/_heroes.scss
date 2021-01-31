@@ -2,7 +2,7 @@
     background-size: cover;
     width: 100%;
     position: relative;
-    background-position: top right;
+    background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
     overflow: hidden;
@@ -46,20 +46,23 @@
     background-position: top center;
     right: 0;
     left: 0;
+    top: 160px;
 }
 
 .logoBgPattern {
-    top: 160px;
     background-image: url(../img/banners/logo_bg_grey.svg);
 }
 
 .floatingAirplane {
-    width: 80%;
-    top: 80px;
     max-height: 850px;
     background-size: 100%;
     @include center(x);
     background-image: url(../img/banners/pageFloatingIcons.png);
+
+    @include MQ(M) {
+        width: 80%;
+        top: 80px;
+    }
 }
 
 .heroContentWrapper {
@@ -163,7 +166,7 @@
 
     img {
         display: inline-block;
-        max-width: 520px;
+        max-width: 370px;
         width: 100%;
     }
 
