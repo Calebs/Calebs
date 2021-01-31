@@ -1,0 +1,133 @@
+.media_item {
+    @include flexbox();
+    overflow: hidden;
+}
+
+.media_figure {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.media_info {
+    flex: 1;
+}
+
+// Media Cards
+
+.brandMediaCoverage {
+    position: relative;
+    display: block;
+    clear: both;
+    padding: 50px 0 0;
+}
+
+.mediaPostList {
+    @include clearfix;
+}
+
+.mediaPostItem {
+    padding: 15px 0;
+    width: calc(100% - 30px);
+    float: left;
+    display: block;
+    height: 360px;
+    
+    @include MQ(M) {
+        width: calc(100% / 3);
+    }
+
+    &.slick-center {
+        position: relative;
+        z-index: 5;
+    }
+
+}
+
+.mediaPostWrapper {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 30px;
+    background-color: $border_grey_light;
+    padding: 40px ;
+    @include transition(all .6s ease-in-out);
+    position: relative;
+
+    .slick-current & {
+        background-color: white;
+        box-shadow: 0 0 4px rgba(black, .15);
+    }
+
+    @include MQ(M) {
+        .slick-current & {
+            @include transform(scale(1.1, 1.1));
+        }
+    }
+}
+
+.mediaBrand {
+    margin-bottom: 20px;
+    overflow: hidden;
+    
+    img {
+        max-height: 64px;
+        width: auto;
+        display: inline-block;
+    }
+}
+
+.postExcerpt {
+    line-height: 1.5;
+    height: 7.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.slick-slide {
+    opacity: 0.35;
+    pointer-events: none;
+
+    &.slick-current  {
+        opacity: 1;
+        pointer-events: unset;
+    }
+}
+
+.titleListItem {
+    @include flexbox();
+
+    &::before {
+        height: 35px;
+        width: 35px;
+        display: inline-flex;
+        content: "";
+        margin-right: 20px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons/fe_listmarker.svg);
+
+        .listMarkerTick &{
+            background-image: url(../img/icons/listMarkerTick.svg);
+        }
+
+        @include MQ(M) {
+            margin-top: 10px;
+        }
+    }
+
+    > span {
+        flex-grow: 1;
+        width: 100%;
+    }
+    
+    + .titleListItem {
+        margin-top: 20px;
+    }
+}
+
+.heroListMem {
+    display: block;
+    padding-left: 55px;
+}
