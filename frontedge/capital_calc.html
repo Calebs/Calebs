@@ -114,42 +114,28 @@
                             </div>
                             <div class="form-group formWidth1_3">
                                 <label class="control-label text-style-italics">Annual Sales</label>
-                                <div class="input-group dropdown">
+                                <div class="input-group">
                                     <input type="text" class="form-control inputRounded" placeholder="2,500,000.00">
                                     <div class="input-group-addon">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                                            <span class="font-bold text-style-italics">₦</span>
-                                            <i class="cust_icon icon_chevron_down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">NGN (₦)</a></li>
-                                            <li><a href="#">USD ($)</a></li>
-                                        </ul>
+                                        <span class="font-bold text-style-italics">NGN</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group formWidth1_3">
-                                <label class="control-label text-style-italics">Average Payment term</label>
-                                <div class="input-group dropdown">
-                                    <input type="number" class="form-control inputRounded" placeholder="3">
+                                <label class="control-label text-style-italics">Average Customer Payment Term</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control inputRounded" placeholder="21">
                                     <div class="input-group-addon">
                                         <span class="font-bold text-style-italics">Days</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group formWidth1_3">
-                                <label class="control-label text-style-italics">Average cost per unit</label>
-                                <div class="input-group dropdown">
-                                    <input type="text" class="form-control inputRounded" placeholder="1,500.00">
+                                <label class="control-label text-style-italics">Profit margin</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control inputRounded" placeholder="30">
                                     <div class="input-group-addon">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">
-                                            <span class="font-bold text-style-italics">₦</span>
-                                            <i class="cust_icon icon_chevron_down"></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">NGN (₦)</a></li>
-                                            <li><a href="#">USD ($)</a></li>
-                                        </ul>
+                                        <span class="font-bold text-style-italics">%</span>
                                     </div>
                                 </div>
                             </div>
@@ -162,7 +148,12 @@
                     <div class="col-md-7 wcCalculatorResults">
                         <div class="wcCalculatorInfoWidget">
                             <div class="wcCalculatorChart">
-                                <canvas id="salesPerformance" aria-label="Comparison of profit with and without Front Edge" role="img"></canvas>
+                                <canvas id="salesPerformance" aria-label="Comparison of sales with and without Front Edge" role="img"></canvas>
+                            </div>
+                        </div>
+                        <div class="wcCalculatorInfoWidget">
+                            <div class="wcCalculatorChart">
+                                <canvas id="profitPerformance" aria-label="Comparison of profit with and without Front Edge" role="img"></canvas>
                             </div>
                         </div>
                         <div class="wcCalculatorInfoWidget">
@@ -183,7 +174,7 @@
             </div>
         </section>
     </main>
-
+    
     <footer role="contentinfo" class="footerArea">
         <div class="container">
             <div class="row">
@@ -207,7 +198,8 @@
                             </div>
                             <div class="ft_block_segment">
                                 <ul class="ft_nav_block">
-                                    <li><a href="small_bizs.html">Supply Chain Finance</a></li>
+                                    <li><a href="corporates.html">For Corporates</a></li>
+                                    <li><a href="small_bizs.html">For Small & Medium Businesses</a></li>
                                     <li><a href="capital_calc.html">Working Capital Calculator</a></li>
                                     <li><a href="get_financed.html">Get financed</a></li>
                                 </ul>
@@ -220,8 +212,7 @@
                             <div class="ft_block_segment">
                                 <ul class="ft_nav_block">
                                     <li><a href="about.html">About us</a></li>
-                                    <li><a href="case_studies.html">Customers</a></li>
-                                    <li><a href="case_studies.html">Partners</a></li>
+                                    <li><a href="case_studies.html">Case Studies</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -253,7 +244,6 @@
         </div>
     </footer>
 
-
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
     <script src="js/Chart.min.js"></script>
@@ -261,11 +251,11 @@
 
     <script>
 
-        var profitComparison = document.getElementById('salesPerformance');
-        var salesProfit = new Chart(profitComparison, {
+        var salesComparison = document.getElementById('salesPerformance');
+        var salesProfit = new Chart(salesComparison, {
                 type: 'bar',
                 data: {
-                labels: ['Cash before FrontEdge', 'Cash after FrontEdge'],
+                labels: ['Sales before FrontEdge', 'Sales After FrontEdge'],
                 datasets: [{
                     label: 'Profith with and and Front Edge',
                     data: [2500000, 6500000],
@@ -277,7 +267,53 @@
                 }]
             },
             options: {
-                aspectRatio:2,
+                aspectRatio:3,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            display: false,
+                        },
+                        gridLines: {
+                            display: false,
+                            
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontFamily: "'Mulish',Open Sans, Segoe UI, sans-serif",
+                            fontStyle: 'italic',
+                            fontColor: '#000000'
+                        },
+                        gridLines: {
+                            display: false
+                        }
+                    }]
+                },
+                legend: {
+                    display: false
+                }
+                
+            }
+        });
+
+        var profitComparison = document.getElementById('profitPerformance');
+        var profitProfit = new Chart(profitComparison, {
+                type: 'bar',
+                data: {
+                labels: ['Profit before FrontEdge', 'Profit after FrontEdge'],
+                datasets: [{
+                    label: 'Profit with and and Front Edge',
+                    data: [2500000, 6500000],
+                    backgroundColor: [
+                        '#dedede',
+                        '#02baff'
+                    ],
+                    borderWidth: 0,
+                }]
+            },
+            options: {
+                aspectRatio:3,
                 scales: {
                     yAxes: [{
                         ticks: {
