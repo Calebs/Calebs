@@ -56,6 +56,13 @@ $(document).ready(function(){
         $('header[role="banner"]').toggleClass('is-active');
         $('body').toggleClass('scroll_lock');
     });
+
+    var hideOverlayBtn = $('.overlayToggle');
+
+    hideOverlayBtn.on('click', function(e) {
+        e.preventDefault();
+        $(this).parents(".widgetMediaHolder").removeClass("has_overlay");
+    });
         
     /*Video Widget*/
     

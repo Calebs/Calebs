@@ -56,8 +56,26 @@
                         <div class="menuListItem">
                             <a href="school_lander.html" class="menuLinkItem">For Schools</a>
                         </div>
-                        <div class="menuListItem">
-                            <a href="blog.html" class="menuLinkItem">Blog</a>
+                        <div class="menuListItem subMenuContainer">
+                            <a href="#" class="menuLinkItem">
+                                <span class="subLinkHolder">
+                                    More <i class="dropdownMarker"></i>
+                                </span>
+                            </a>
+                            <ul class="subMenu dropdown-menu">
+                                <li class="subMenuItem">
+                                    <a href="about.html" class="subMenuItem_link">About Us</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="blog.html" class="subMenuItem_link">Blog</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="help_center.html" class="subMenuItem_link">Help Center</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="contact.html" class="subMenuItem_link">Contact Us</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="menuListItem">
                             <a href="signup_lander.html" class="menuLinkItem">Sign Up</a>
@@ -106,7 +124,7 @@
                             <h2 class="title title_md font-bold color__black margin_bottom_sm">The Toolbox to Help Your Child Succeed</h2>
                             <p>Gradely empowers parents with personalised learning resources, so you can take charge of their progress and help them succeed in school and in life.</p>
                             <div class="section_cto">
-                                <a href="#" class="btn btn-secondary">Sign up FOR 1-WEEK FREE</a>
+                                <a href="#" class="btn btn-secondary">Sign Up For Free</a>
                             </div>
                         </div>
                     </div>
@@ -296,7 +314,7 @@
                             <figure class="featureFig box_rounded centered">
                                 <img src="./img/banners/engagedClass.jpg" class="featFigureImage" alt="Image showing Keep Classes Engaging">
                             </figure>
-                            <h4 class="featureTitle margin_bottom_sm font-bold">Keep Classes Engaging</h4>
+                            <h4 class="featureTitle color__black margin_bottom_sm font-bold">Keep Classes Engaging</h4>
                             <p>Hold live classes with students and engage them in an interactive feed.</p>
                         </div>
                     </div>
@@ -305,7 +323,7 @@
                             <figure class="featureFig box_rounded centered">
                                 <img src="./img/banners/createAssessment.jpg" class="featFigureImage" alt="Image showing Create Assessment">
                             </figure>
-                            <h4 class="featureTitle margin_bottom_sm font-bold">Create Assessment in 2 minutes</h4>
+                            <h4 class="featureTitle color__black margin_bottom_sm font-bold">Create Assessment in 2 minutes</h4>
                             <p>Use thousands of curriculum-mapped questions to set homework and exams pretty quickly.</p>
                         </div>
                     </div>
@@ -314,13 +332,13 @@
                             <figure class="featureFig box_rounded centered">
                                 <img src="./img/banners/personalizedIntervention.jpg" class="featFigureImage" alt="Image showing Personalize Interventions">
                             </figure>
-                            <h4 class="featureTitle margin_bottom_sm font-bold">Personalize Interventions</h4>
-                            <p>Use insights from reports and personalized recommendations to tailor interventions.</p>
+                            <h4 class="featureTitle color__black margin_bottom_sm font-bold">Personalise Interventions</h4>
+                            <p>Use insights from reports and recommended resources to tailor interventions.</p>
                         </div>
                     </div>
                 </div>
                 <div class="section_cto text-center">
-                    <a href="#" class="btn btn-secondary">SIGN UP FOR 30 DAYS FREE</a>
+                    <a href="#" id="drawerLauncher" class="btn btn-secondary">Request Live Demo</a>
                 </div>
             </div>
         </section>
@@ -337,11 +355,11 @@
                                 </article>
                                 <article class="insightItem">
                                     <span class="insightLabel">Teachers</span>
-                                    <h4 class="insightValue color__black">400+</h4>
+                                    <h4 class="insightValue color__black">400</h4>
                                 </article>
                                 <article class="insightItem">
                                     <span class="insightLabel">Students</span>
-                                    <h4 class="insightValue color__black">5,000+</h4>
+                                    <h4 class="insightValue color__black">5,000</h4>
                                 </article>
                             </div>
                         </div>
@@ -443,6 +461,93 @@
             <div class="bannerBlobItem blobTopBottomCenter"></div>
         </section>
     </main>
+
+    <div class="offscreenDrawer"> 
+        <div class="offscreenDrawerBackdrop"></div>
+        <div class="offScreenDrawerContent drawerRight">
+          <div class="offScreenDrawerContentWrapper">
+            <!-- Dismiss the dialog -->
+            <div class="widget_dismiss">
+                <button class="close_dialog"></button>
+            </div>
+            
+            <header class="drawer_header">
+              <h4 class="title title_md color__black font-bold">
+                Request Demo
+              </h4>
+            </header>
+
+            <div class="drawer_body">
+
+                <div class="error_message hidden text-left">
+                    <p>An error occured.</p>
+                </div>
+
+                <form action="">
+                    <div class="form-group">
+                        <label class="control-label ">
+                            Your Name
+                        </label>
+                        <input type="text" required class="form-control" placeholder="e.g David Ibiwoye">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label ">
+                            School Name
+                        </label>
+                        <input type="text" required class="form-control" placeholder="e.g Gradely Intl. College">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label ">
+                            Role in School
+                        </label>
+                        <input type="text" required class="form-control" placeholder="e.g Principal">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label class="control-label ">
+                                Contact Email Address
+                            </label>
+                            <input type="text" required class="form-control" placeholder="e.g david@gmail.com">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="control-label">
+                                Contact Phone Number
+                            </label>
+                            <input type="text" required class="form-control" placeholder="e.g 2348130030020">
+                        </div>
+                    </div>                                    
+                    <div class="form-group">
+                        <label class="control-label">
+                            School Type
+                        </label>
+                        <select class="form-control">
+                            <option>Primary School</option>
+                            <option>Secondary School</option>
+                            <option>Primary & Secondary School</option>
+                            <option>College</option>
+                            <option>Polytechnic</option>
+                            <option>University</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">
+                            Preferred Demo Date and time
+                        </label>
+                        <div class="schedularInputItem">
+                            <input type="text" class="form-control" id="fmCalendar" placeholder="Set the date and time you will be available for the demo">
+                            <span class="inputItemIcon">
+                                <i class="cust_icon icon_calendar"></i>
+                            </span>
+                        </div>
+                    </div>       
+                </form>
+                <div class="section_cto text-right">
+                    <button type="button" data-target="#requestSuccess" data-toggle="modal" data-backdrop="static" class="btn btn-sm btn-secondary">Submit Request</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
 
     <footer role="contentinfo" class="footerArea">
         <div class="container">

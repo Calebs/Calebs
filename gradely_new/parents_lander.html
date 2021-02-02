@@ -37,8 +37,26 @@
                         <div class="menuListItem">
                             <a href="school_lander.html" class="menuLinkItem">For Schools</a>
                         </div>
-                        <div class="menuListItem hasChildren">
-                            <a href="blog.html" class="menuLinkItem">Blog</a>
+                        <div class="menuListItem subMenuContainer">
+                            <a href="#" class="menuLinkItem">
+                                <span class="subLinkHolder">
+                                    More <i class="dropdownMarker"></i>
+                                </span>
+                            </a>
+                            <ul class="subMenu dropdown-menu">
+                                <li class="subMenuItem">
+                                    <a href="about.html" class="subMenuItem_link">About Us</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="blog.html" class="subMenuItem_link">Blog</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="help_center.html" class="subMenuItem_link">Help Center</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="contact.html" class="subMenuItem_link">Contact Us</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="menuListItem">
                             <a href="signup_lander.html" class="menuLinkItem">Sign Up</a>
@@ -65,7 +83,7 @@
             <div class="container content_narrow">
                 <div class="heroContentWrapper row imageLeft color__inverse_light">
                     <div class="heroTextWrapper col-md-7">
-                        <h2 class="hero_title font-bold color__white">Help them CatchUp!<br> <span class="font-regular"> on their <i class="font-style-italic">School work</i></span></h2>
+                        <h2 class="hero_title font-bold color__white">Help them CatchUp!<br> <span class="font-regular"> on their <i class="font-style-italic" id="proposition">School Work</i></span></h2>
                         <div class="section_cto">
                             <a href="#" class="btn btn-secondary">Sign Up</a>
                         </div>
@@ -656,7 +674,18 @@
     
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
+    <script src="js/core.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        var vrProposition = document.getElementById('proposition');
+
+        var typewriter = new Typewriter(vrProposition, {
+            strings: ['School work', 'grades', 'potential'],
+            loop: true, // infinite loop
+            autoStart: true,
+        });
+    </script>
        
 </body>
 </html>

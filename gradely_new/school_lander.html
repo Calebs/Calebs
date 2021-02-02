@@ -21,6 +21,53 @@
 
 <body class="">
 
+    <div class="modal fade" id="event_rsvp">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="dialogDismiss">
+                    <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="title font-bold color__black">RSVP for Launch Event</h4>
+                    <form action="" class="margin_top_md">
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Your Name</label>
+                            <input type="text" class="form-control" placeholder="e.g Mariam Adeboye ">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Name of School</label>
+                            <input type="text" class="form-control" placeholder="e.g Mariam Adeboye ">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter your Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Phone Number</label>
+                            <input type="number" class="form-control" placeholder="Enter your Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label font-bold">Role In school</label>
+                            <select class="form-control">
+                                <option>- Select One -</option>
+                                <option>Owner</option>
+                                <option>Principal / Head Teacher</option>
+                                <option>School Admin</option>
+                                <option>School IT Admin</option>
+                                <option>School Teacher</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+                    <button type="submit" data-target="#requestSuccess" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="modal fade" id="requestSuccess">
         <div class="modal-dialog ">
             <div class="modal-content">
@@ -82,8 +129,26 @@
                         <div class="menuListItem active">
                             <a href="school_lander.html" class="menuLinkItem">For Schools</a>
                         </div>
-                        <div class="menuListItem hasChildren">
-                            <a href="blog.html" class="menuLinkItem">Blog</a>
+                        <div class="menuListItem subMenuContainer">
+                            <a href="#" class="menuLinkItem">
+                                <span class="subLinkHolder">
+                                    More <i class="dropdownMarker"></i>
+                                </span>
+                            </a>
+                            <ul class="subMenu dropdown-menu">
+                                <li class="subMenuItem">
+                                    <a href="about.html" class="subMenuItem_link">About Us</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="blog.html" class="subMenuItem_link">Blog</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="help_center.html" class="subMenuItem_link">Help Center</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="contact.html" class="subMenuItem_link">Contact Us</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="menuListItem">
                             <a href="signup_lander.html" class="menuLinkItem">Sign Up</a>
@@ -134,25 +199,12 @@
 
         <section class="section_block padding-top-none bg__black">
             <div class="container color__inverse_light">
-                <div class="row info_sub_row">
-                    <div class="section_header text-center-sm col-md-6">
-                        <div class="media_item media_column_sm">
-                            <div class="media_figure">
-                                <div class="featureIconWrapper">
-                                    <img src="./img/icons/giftbox.svg" alt="">
-                                </div>
-                            </div>
-                            <div class="media_info">
-                                <h4 class="title title_sm color__white font-bold margin_bottom_sm">
-                                    Pre-launch discount offer
-                                </h4>
-                                <p class="font-sm">Get 50% discount when you subscribe for the Gradely LMS school plan before official launch </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 imageItemHolder">
-                        <h4 class="title font-bold margin_bottom_md caps_upper color__grey_light">Countdown to Launch Date</h4>
-                        <div class="eventTimer">
+                <div class="info_sub_row">
+                    <div class="section_header text-center-sm">
+                        <h4 class="title title_sm margin_bottom_md color__grey_light">
+                            Launch Date: <span class="color__white font-bold">February 19, 2021</span>
+                        </h4>
+                        <div class="eventTimer margin_bottom_xl">
                             <div class="flipTimer">
                                 <div class="eventItem">
                                     <div class="days"></div>
@@ -171,6 +223,9 @@
                                     <div class="digiteSetLabel">Seconds</div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="section_cto">
+                            <button type="button" data-target="#event_rsvp" data-backdrop="static" data-toggle="modal" class="btn btn-sm btn-default-outline">Register to attend</button> 
                         </div>
                     </div>
                 </div>
@@ -231,9 +286,9 @@
                     <div class="col-md-6 order-2">
                         <div class="section_header centered text-center-sm">
                             <h4 class="title title_md font-bold margin_bottom_sm color__default">
-                                Personalized Learning Paths
+                                Personalised Learning Paths
                             </h4>
-                            <p>Leverage AI-assisted recommendations for each student as well as hundreds of practice and video lesson resources to support them on their personalized learning paths.</p>
+                            <p>Leverage AI-assisted recommendations for each student as well as hundreds of practice and video lesson resources to support them on their personalised learning paths.</p>
                         </div>
                     </div>
                     <div class="col-md-6 order-1 imageItemHolder">
@@ -302,8 +357,8 @@
                                 </div>
                                 <div class="text-center planBlock">
                                     <div class="brandCompareLogo">
-                                        <img src="./img/icons/Edmodo.svg" alt="Edmodo">
-                                        <span class="brandName sr-only">Edmodo</span>
+                                        <img src="./img/icons/microsofTeams.svg" alt="Edmodo">
+                                        <span class="brandName sr-only">Microsoft Teams</span>
                                     </div>
                                 </div>
                                 <div class="text-center planBlock">
@@ -316,7 +371,7 @@
                         </header>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Interactive Class Feed (with Video & File Uploads)</span>
+                                <span>Interactive Class Feed (with file uploads)</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -335,7 +390,7 @@
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Live Video Classes and Recording</span>
+                                <span>Videoconferencing (with recording)</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -345,35 +400,16 @@
                                     <span class="cust_icon icon_on"></span>
                                 </div>
                                 <div class="text-center planBlock">
-                                    <span class="cust_icon icon_off"></span>
-                                </div>
-                                <div class="text-center planBlock">
-                                    <span class="cust_icon icon_off"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="featureGroupRow featureRow">
-                            <div class="compareFeatureTitle">
-                                <span>Practice and Video Lessons Library</span>
-                            </div>
-                            <div class="featureOptions">
-                                <div class="text-center planBlock">
                                     <span class="cust_icon icon_on"></span>
                                 </div>
                                 <div class="text-center planBlock">
                                     <span class="cust_icon icon_off"></span>
                                 </div>
-                                <div class="text-center planBlock">
-                                    <span class="cust_icon icon_off"></span>
-                                </div>
-                                <div class="text-center planBlock">
-                                    <span class="cust_icon icon_off"></span>
-                                </div>
                             </div>
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Topic-based Question Pool for Teachers</span>
+                                <span>Video Lessons Library</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -392,7 +428,7 @@
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Proctored Examinations</span>
+                                <span>Question Pool</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -411,7 +447,26 @@
                         </div>
                         <div class="featureGroupRow featureRow">
                             <div class="compareFeatureTitle">
-                                <span>Report Analytics with Remedial Recommendations</span>
+                                <span>Proctored Exams</span>
+                            </div>
+                            <div class="featureOptions">
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_on"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                                <div class="text-center planBlock">
+                                    <span class="cust_icon icon_off"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featureGroupRow featureRow">
+                            <div class="compareFeatureTitle">
+                                <span>Remedial Recommendations</span>
                             </div>
                             <div class="featureOptions">
                                 <div class="text-center planBlock">
@@ -670,7 +725,7 @@
                                     <div id="article_4" class="panel-collapse collapse">
                                         <div class="panel-body prose_content">
                                             <p>Gradely for Schools LMS cost NGN 6000 per student per year of LMS subscription: this covers premium access to all features of the LMS including Interactive Class Feed, Live Video Class, Assessment tool with built-in question pool, Proctored Examination and Reporting.</p>
-                                            <p>Gradely CatchUp! is our personalized content bank of video lessons and practice cost N 12,000 per student per year. </p>
+                                            <p>Gradely CatchUp! is our personalised content bank of video lessons and practice cost N 12,000 per student per year. </p>
                                         </div>
                                     </div>
                                 </article>
@@ -680,7 +735,7 @@
                                     </h4>
                                     <div id="article_5" class="panel-collapse collapse">
                                         <div class="panel-body prose_content">
-                                            <p>We adhere to GDPR standards of data privacy and individual data protection. Also, we ensure there is server side transmission encryption. All uploaded files are stored on file storage platforms for performance and security. All files has unique token assign to them at creation for access, therefore cannot be guessed or read by humans. </p>
+                                            <p>We adhere to GDPR standards of data privacy and individual data protection. Also, we ensure there is server-side transmission encryption. All uploaded files are stored on file storage platforms for performance and security. All files have unique token assign to them at creation for access, therefore cannot be guessed or read by humans. </p>
                                             <p>Every single request on our platform requires authentication, meaning we’ll have to know who you are before we determine what you get.</p>
                                         </div>
                                     </div>
