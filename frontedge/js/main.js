@@ -74,6 +74,10 @@ jQuery(document).ready(function($){
         $('header[role="banner"]').toggleClass('is-active');
         $('body').toggleClass('scroll_lock');
     });
+
+    if ($(window).width() < MQL) {
+        $('.ft_block_segment.panel-collapse').addClass('collapse');
+    }
         
         // Show and hide password, user login
     var visualTrigger = $('#showPass');
