@@ -63,6 +63,10 @@ $(document).ready(function(){
         e.preventDefault();
         $(this).parents(".widgetMediaHolder").removeClass("has_overlay");
     });
+
+    if ($(window).width() < MQL) {
+        $('.ft_block_segment.panel-collapse').addClass('collapse');
+    }
         
     /*Video Widget*/
     
