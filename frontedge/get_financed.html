@@ -91,32 +91,48 @@
             <div class="container content_narrow">
                 <div class="offset-md-2 col-md-8">
                     <div class="formPanel">
-                        <form action="">
+                        <form @submit.prevent="ValidCaptcha" id ="form">
                             <div class="row">
                                 <div class="form-group col-sm-6">
                                     <label for="" class="control-label text-style-italics">First Name*</label>
-                                    <input type="text" class="form-control inputRounded" placeholder="First Name">
+                                    <input required v-model="firstName" type="text" class="form-control inputRounded" placeholder="First Name">
                                 </div>
                                 <div class="form-group col-sm-6">
                                     <label for="" class="control-label text-style-italics">Last Name*</label>
-                                    <input type="text" class="form-control inputRounded" placeholder="Last Name">
+                                    <input required v-model="lastName" type="text" class="form-control inputRounded" placeholder="Last Name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label text-style-italics">Email Address*</label>
-                                <input type="text" class="form-control inputRounded" placeholder="Enter your Email Address">
+                                <input required v-model="email" type="email" class="form-control inputRounded" placeholder="Enter your Email Address">
                             </div>
                             <div class="form-group">
                                 <label class="control-label text-style-italics">Phone Number*</label>
-                                <input type="text" class="form-control inputRounded" placeholder="Enter your phone number">
+                                <input required v-model="phoneNumber" type="number" class="form-control inputRounded" placeholder="Enter your phone number">
                             </div>
                             <div class="form-group">
                                 <label class="control-label text-style-italics">Comments</label>
-                                <textarea class="form-control inputRounded" rows="10" placeholder="Add any other relevant information you wish to share"></textarea>
+                                <textarea required v-model="body" class="form-control inputRounded" rows="10" placeholder="Add any other relevant information you wish to share"></textarea>
+                            </div>
+                            <div class="captcha">  
+                                <input type="text" id="txtCaptcha" style=" border: none !important; font-weight: bold; font-size: 30px; font-family: 'Brush Script MT', cursive;" />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <input type="text" id="txtCompare" />  
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="button" id="btnrefresh" value="Refresh" v-on:click="GenerateCaptcha();" />  
+                                    </div>
+                                </div>                              
+                                <br />  
+                            </div>  
+                            <div class=" " v-if="loading">
+                                <img class="d-block mx-auto" style="height:30px; width: 30px;" src="../frontedge_ui/img/loader_gif.gif" alt="loader_gif"/>
                             </div>
                             <div class="section_cto text-center">
-                                <button class="btn btn-secondary" type="submit">Submit Request</button>
+                                <button :disabled="loading" class="btn btn-secondary" type="submit">Submit Request</button>
                             </div>
+
                         </form>
                     </div>
                 </div>
@@ -199,10 +215,145 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
     <script src="js/main.js"></script>
+    <script lang="js"> 
+        // import VueRecaptcha from 'vue-recaptcha';
 
+        var app2 = new Vue({
+            
+        el: '#form',
+        // components: { VueRecaptcha },
+
+        data: {
+            email:'',
+            loading:false,
+            firstName:'',
+            lastName:'',
+            to:['hello@frontedge.io'],
+            phoneNumber:'',
+            subject:'',
+            body:''
+        },
+        mounted(){
+        // this.handleSubmit();
+        this.GenerateCaptcha();
+
+        },
+
+        methods: {
+            handleSubmit(){
+                //  event.preventDefault();
+                this.loading = true
+                const bodyHtml=`
+                    "<html>
+                        <h2>FRONT EDGE</h2>
+                        <strong>First Name: ${this.firstName}</strong>
+                        <br></br>
+                        <strong>Last Name: ${this.lastName}</strong>
+                        <br></br>
+                        <strong>Email: ${this.email}</strong>
+                        <br></br>
+                        <strong>Subject: ${this.phoneNumber}</strong>
+                        <br></br>
+                        <strong>Message: ${this.body}</strong>
+                        <br></br>
+                    </html>"
+                    `
+                const payload={
+                    to:this.to,
+                    subject:this.phoneNumber,
+                    body:bodyHtml
+                }
+                const randomNumber = Math.random(10)*1000;
+                const Header = {
+                     'client-id': 'website',
+                     'api-key': 'app-909siowurosn803',
+                     'Content-Type': 'application/json'
+                    }
+                 
+                const requestOptions = {
+                method: 'POST',
+                headers: Header,
+                body: JSON.stringify(payload)
+                };
+     fetch(`https://staging.frontedgegroup.com/api/notification/v1/email/${randomNumber}`, requestOptions).then(res=>{
+         if(res){
+             this.loading = false
+             this.reset();
+            if(res.status ===200 || res.status==201){
+                Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your Message has being sent successfully',
+                showConfirmButton: false,
+                timer: 2500
+                });
+              }else{
+                Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Failed to send. Please try again',
+                showConfirmButton: false,
+                timer: 2500
+                });
+              }
+             }
+            }).catch(err=>{
+                Swal.firer({
+                position: 'top-end',
+                icon: 'error',
+                title: 'Failed to send. Please try again',
+                showConfirmButton: false,
+                timer: 2500
+                });
+            })
+          },
+             /* Function to Generat Captcha */  
+              GenerateCaptcha() {  
+                var chr1 = Math.ceil(Math.random() * 10) + '';  
+                var chr2 = Math.ceil(Math.random() * 10) + '';  
+                var chr3 = Math.ceil(Math.random() * 10) + '';  
+      
+                var str = new Array(4).join().replace(/(.|$)/g, function () { return ((Math.random() * 36) | 0).toString(36)[Math.random() < .5 ? "toString" : "toUpperCase"](); });  
+                var captchaCode = str + chr1 + ' ' + chr2 + ' ' + chr3;  
+                document.getElementById("txtCaptcha").value = captchaCode;
+                document.getElementById("txtCompare").value = "";
+ 
+            }  ,
+      
+            /* Validating Captcha Function */  
+             ValidCaptcha() {  
+                var str1 = this.removeSpaces(document.getElementById('txtCaptcha').value);  
+                var str2 = this.removeSpaces(document.getElementById('txtCompare').value);  
+      
+                if (str1 == str2) {
+                    this.handleSubmit();
+                    
+                    return true;
+                };  
+                alert("Incorrect CAPTCHA, try again!")
+                return false;  
+            }  ,
+      
+            /* Remove spaces from Captcha Code */  
+             removeSpaces(string) {  
+                return string.split(' ').join('');  
+            },
+            reset(){
+            this.email =""
+            this.firstName = ""
+            this.lastName = ""
+            this.subject=""
+            this.phoneNumber=""
+            this.body = ""
+        }
+        },
+       
+        })
+        </script>
 </body>
 </html>
