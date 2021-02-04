@@ -450,7 +450,7 @@ getSalesProfitValue(value){
                 data: {
                 labels: ['Without FrontEdge', 'With FrontEdge'],
                 datasets: [{
-                    label: 'Sales with and without Front Edge',
+                    label: 'Estimated Sales',
                     data: result,
                     backgroundColor: [
                         '#dedede',
@@ -465,11 +465,10 @@ getSalesProfitValue(value){
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            display: false,
+                            display: true,
                         },
                         gridLines: {
                             display: false,
-                            
                         }
                     }],
                     xAxes: [{
@@ -486,8 +485,7 @@ getSalesProfitValue(value){
                 },
                 legend: {
                     display: false
-                }
-                
+                }   
             }
         });
 
@@ -532,7 +530,7 @@ getSalesProfitValue(value){
                 data: {
                 labels: ['Without FrontEdge', 'With FrontEdge'],
                 datasets: [{
-                    label: 'Profit with and without Front Edge',
+                    label: 'Estimated Profit',
                     data: result,
                     backgroundColor: [
                         '#dedede',
@@ -547,11 +545,10 @@ getSalesProfitValue(value){
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            display: false,
+                            display: true,
                         },
                         gridLines: {
-                            display: false,
-                            
+                            display: false
                         }
                     }],
                     xAxes: [{
