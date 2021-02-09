@@ -107,9 +107,8 @@
                             <div class="form-group formWidth1_3">
                                 <label class="control-label text-style-italics">Product</label>
                                 <select name="productType" class="form-control inputRounded"  @change="onChange($event)" id="productType">
-                                    <option>Invoice financing</option>
-                                    <option value="1">Purchase order financing</option>
-                                    <option value="2">Bank statement financing</option>
+                                    <option value="1">Invoice financing </option>
+                                    <option value="2">Purchase order financing</option>
                                 </select>
                             </div>
                             <div class="form-group formWidth1_3">
@@ -127,34 +126,18 @@
                                 <div class="input-group">
                                     <input type="number" v-model="paymentTermCustomer" id="averageCustomer" class="form-control inputRounded" placeholder="21">
                                     <div class="input-group-addon">
-                                        <!-- <span class="font-bold text-style-italics">Days</span> -->
-                                         <select class="font-bold text-style-italics bg__primary color__white" style="border: 0px solid;" @change="onCDate($event)" name="averageCustomerCurrency" id="averageCustomerCurrency">
-                                        <option value="1">Days</option>
-                                        <option value="7">Weeks</option>
-                                        <option value="30">Months</option>
-                                    </select>
+                                        <span class="font-bold text-style-italics">Days</span>
                                     </div>
-                                    <!-- <select class="select-blue" style="z-index: 9;" @change="onCDate($event)" name="averageCustomerCurrency" id="averageCustomerCurrency">
-                                        <option value="1">Days<i class="fa fa-angle-down ml-3"></i></option>
-                                        <option value="7">Weeks</option>
-                                        <option value="30">Months</option>
-                                    </select> -->
                                 </div>
                             </div>
 
                             <div class="form-group formWidth1_3" v-show="purchaseOrderField">
                                 <label class="control-label text-style-italics" for="invoicevalue" >Average Supplier Payment Term</label>
-                                <!-- <i class="fa fa-angle-down angle"></i> -->
                                 <div class="input-group">
                                 <input class="form-control inputRounded" v-model="paymentTermSupplier" type="text" id="averageSupplier" placeholder="5" aria-placeholder="averageSupplier">
                               
                                 <div class="input-group-addon"> 
-                                     <select  class="font-bold text-style-italics bg__primary color__white" style="border: 0px solid;" @change="onSDate($event)"name="invoicevalue" id="paymentTermSupplier">
-                                    <option value="1">Days<i class="fa fa-angle-down ml-3"></i></option>
-                                    <option value="7">Weeks</option>
-                                    <option value="30">Months</option>
-                                </select>
-                                    <!-- <span class="font-bold text-style-italics">Days</span> -->
+                                    <span class="font-bold text-style-italics">Days</span>
                                 </div>
                             </div>
                             </div>
@@ -165,13 +148,7 @@
                                 <div class="input-group">
                                 <input v-model="averageInventoryTime" type="number" id="averageInventoryTime" placeholder="5" aria-placeholder="averageInventoryTime" class="form-control inputRounded">
                                 <div class="input-group-addon">
-                                    <select class="font-bold text-style-italics bg__primary color__white" style="border: 0px solid;" @change="onInventDate($event)" name="invoicevalue" id="invoicevalue">
-                                    <option value="1">Days<i class="fa fa-angle-down ml-3"></i></option>
-                                    <option value="7">Weeks</option>
-                                    <option value="30">Months</option>
-
-                                </select>
-                                    <!-- <span class="font-bold text-style-italics">Days</span> -->
+                                    <span class="font-bold text-style-italics">Days</span>
                                 </div>
                                 </div>
                             </div>
@@ -197,13 +174,13 @@
                         <div class="wcCalculatorInfoWidget">
                             <h4 class="title text-center color__default text-style-italics margin_bottom_md">Estimated Sales</h4>
                             <div class="wcCalculatorChart">
-                                <canvas id="salesPerformance" aria-label="Comparison of sales with and without Front Edge" role="img"></canvas>
+                                <div id="chartDiv" style="height: 300px;"></div>
                             </div>
                         </div>
                         <div class="wcCalculatorInfoWidget">
                             <h4 class="title text-center color__default text-style-italics margin_bottom_md">Estimated Profit</h4>
                             <div class="wcCalculatorChart">
-                                <canvas id="profitPerformance" aria-label="Comparison of profit with and without Front Edge" role="img"></canvas>
+                                <div id="chartDiv1" style="height: 300px;"></div>
                             </div>
                         </div>
                         <div class="wcCalculatorInfoWidget">
@@ -219,8 +196,8 @@
                                 </div>
                                 <div class="infoStatSnippet">
                                     <span class="statLabel color__black">Amount of Incremental Profit</span>
-                                    <h4 v-if="calculated.amountIncrementalSales >= 0" class="title title_sm font-bold">₦{{getSalesProfitValue(calculated.amountIncrementalSales)}}</h4>
-                                    <h4 v-if="calculated.amountIncrementalSales < 0" class="title title_sm font-bold color__danger">-₦{{getSalesProfitValue(calculated.amountIncrementalSales)}}</h4>
+                                    <h4 v-if="calculated.amountIncrementalProfit >= 0" class="title title_sm font-bold">₦{{getSalesProfitValue(calculated.amountIncrementalProfit)}}</h4>
+                                    <h4 v-if="calculated.amountIncrementalProfit < 0" class="title title_sm font-bold">-₦{{getSalesProfitValue(calculated.amountIncrementalProfit)}}</h4>
                                 </div>
                             </div>
                         </div>
@@ -305,383 +282,219 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jscharting.com/latest/jscharting.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
     <script src="js/Chart.min.js"></script>
     <script src="js/main.js"></script>
 
-    <script lang="js">        
-        var app2 = new Vue({
-        el: '#calc',
-        data: {
-                calculating: false,
-                purchaseOrderField:false,
-            // ields for Invoice Financing
+<script lang="js">        
+    var app2 = new Vue({
+    el: '#calc',
+    data: {
+            calculating: false,
+            purchaseOrderField:false,
+        // ields for Invoice Financing
 
-                profitMargin:30,
-                productType: "",
-                annualSales:2500000,
-                paymentTermCustomer:21,
-            // Additional fields for Purchase Order
-                paymentTermSupplier:5,
-                averageInventoryTime:10,
+            profitMargin:30,
+            productType: "",
+            annualSales:2500000,
+            paymentTermCustomer:21,
+        // Additional fields for Purchase Order
+            paymentTermSupplier:5,
+            averageInventoryTime:10,
 
-                calculated:{
-                    amountIncrementalSales:0.00,
-                    amountIncrementalProfit:0.00,
-                    profitAfter: 0,
-                    profitBefore: 0,
-                    salesAfter: 0,
-                    salesBefore: 0,
-                },
-                cDate:1,
-                sDate:1,
-                inventDate:1
-
-
+            calculated:{
+                amountIncrementalSales:0.00,
+                amountIncrementalProfit:0.00,
+                profitAfter: 0,
+                profitBefore: 0,
+                salesAfter: 0,
+                salesBefore: 0,
             },
-            created(){
-            },
-            mounted(){
-                this.handleSubmit();
-                // this.firstGraphPaint()
-                // this.secondGraphPaint()
-            },
+            cDate:1,
+            sDate:1,
+            inventDate:1
 
-            methods: {
-                onChange(event){
-                    // this.changeToFormat();
-                    if( event.target.value == 2){
-                        this.purchaseOrderField = true
-                    }else{
-                        this.purchaseOrderField = false
-                    }
-             
-                },
-              
-                handleSubmit(){
-                    this.calculating = false;
-                    var x = document.querySelector('#productType').value
-                    const payload={
-                        profitMargin: parseInt(this.profitMargin),
-                        productType:x==2?"purchase_order_finance":'invoice_finance' ,
-                        annualSales:parseInt(this.annualSales),
 
-                        paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
-                        paymentTermSupplier:this.paymentTermSupplier*this.sDate ,
-                        averageInventoryTime:this.averageInventoryTime*this.inventDate 
-                    }
+        },
+        created(){
+        },
+        mounted(){
 
-                    if(x==2){
-                        var payload1={
-                        profitMargin: parseInt(this.profitMargin),
-                        productType:"purchase_order_finance" ,
-                        annualSales:parseInt(this.annualSales),
-                        paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
-                        paymentTermSupplier:this.paymentTermSupplier*this.sDate ,
-                        averageInventoryTime:this.averageInventoryTime*this.inventDate 
-                    }
-                    
+            // this.firstGraphPaint();
+            // this.secondGraphPaint();
+            this.handleSubmit();
+        },
+        methods: {
+            onChange(event){
+                // this.changeToFormat();
+                if( event.target.value == 2){
+                    this.purchaseOrderField = true
                 }else{
+                    this.purchaseOrderField = false
+                }
+            },
+            
+            getSalesProfitValue(value){
+                if(value<0){
+                    return new Intl.NumberFormat().format(Math.abs(value))
+                }
+                return new Intl.NumberFormat().format(value);
+            },
+
+            handleSubmit(){
+                this.calculating = false;
+                var x = document.querySelector('#productType').value
+                const payload={
+                    profitMargin: parseInt(this.profitMargin),
+                    productType:x==2?"purchase_order_finance":'invoice_finance' ,
+                    annualSales:parseInt(this.annualSales),
+
+                    paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
+                    paymentTermSupplier:this.paymentTermSupplier*this.sDate ,
+                    averageInventoryTime:this.averageInventoryTime*this.inventDate 
+                }
+
+                if(x==2){
                     var payload1={
-                        profitMargin: parseInt(this.profitMargin),
-                        productType:'invoice_finance',
-                        annualSales:parseInt(this.annualSales),
-                        paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
-                    }
-                    }
-                    // console.log(payload)
-                    this.calculating= true
-                    this.calculate(payload1).then(res=>{
-                        res.text().then(res=>{
-                            this.calculated = JSON.parse(res).data;
-                            const result = JSON.parse(res).data;
-                            this.firstGraphPaint(result)
-                            this.secondGraphPaint(result)
-                        })
-                    })
-                },
-                refresh(){
-                event.preventDefault();
-                this.profitMargin=undefined;
-                this.productType=undefined;
-                this.annualSales=undefined;
-                this.paymentTermCustomer=undefined;
-            // Additional fields for Purchase Order
-                this.paymentTermSupplier=undefined;
-                this.averageInventoryTime=undefined;
-                 
-                },
-          
-                 calculate(payload) {
-                    const Header = {
-                    'Content-Type': 'application/json'
-                    }
-                const requestOptions = {
-                method: 'POST',
-                headers: Header,
-                body: JSON.stringify(payload)
-    };
-    return fetch(`https://staging.frontedgegroup.com/api/scf/invitation/workingCalculator`, requestOptions)
-    // .then(this.handleResponse);
-
-},
-
-getSalesProfitValue(value){
-    if(value<0){
-        return 
-        new Intl.NumberFormat().format(Math.abs(value))
-    }
-    return new Intl.NumberFormat().format(value)
-;
-},
-
-
-            firstGraphPaint(val){   
-                this.calculating= false
-                
-                var result = [];
-                    result.push(val.salesAfter)
-                    result.push(val.salesBefore)
-                var salesComparison = document.getElementById('salesPerformance');
-                var salesProfit = new Chart(salesComparison, {
-                type: 'bar',
-                data: {
-                labels: ['Without FrontEdge', 'With FrontEdge'],
-                datasets: [{
-                    label: 'Estimated Sales',
-                    data: result,
-                    backgroundColor: [
-                        '#dedede',
-                        '#02baff'
-                    ],
-                    borderWidth: 0,
-                }]
-            },
-            options: {
-                aspectRatio:2,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            display: true,
-                        },
-                        gridLines: {
-                            display: false,
-                        }
-                    }],
-                    xAxes: [{
-                        ticks: {
-                            fontFamily: "'Mulish',Open Sans, Segoe UI, sans-serif",
-                            fontStyle: 'italic',
-                            fontColor: '#000000',
-                            fontSize:10,
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-                },
-                legend: {
-                    display: false
-                }   
-            }
-        });
-
-            
-                
-            },
-
-
-            
-            secondGraphPaint(val){
-                // var chart = JSC.chart('chartDiv1', { 
-                // defaultSeries_type: 'column', 
-                // description: 
-                // '%type Profit before and after Frontedge', 
-                // legend_description: 'Profit legend', 
-                // defaultPoint_label_visible: true, 
-
-                // legend_defaultEntry_description: '%name', 
-                // // toolbar_items_export_description: 'export menu', 
-                // defaultPoint_description: '%name %value', 
-                // series: [ 
-                // { 
-                //     name: 'Profit', 
-                //     hatchPalette: false, 
-                //     defaultPoint_hatch_color: 'black', 
-                //     palette: ['#DEDEDE','white', '#02BAFF'], 
-                //     points: [ 
-                //     { name: 'Profit before', y: this.calculated.profitBefore }, 
-                //     { name: '-', y: undefined }, 
-                //     { name: 'Profit after', y: this.calculated.profitAfter }, 
-                //     ] 
-                // } 
-                // ] 
-                // }); 
-                var result = [];
-                    result.push(val.profitAfter)
-                    result.push(val.profitBefore)
-
-                var profitComparison = document.getElementById('profitPerformance');
-                var profitProfit = new Chart(profitComparison, {
-                type: 'bar',
-                data: {
-                labels: ['Without FrontEdge', 'With FrontEdge'],
-                datasets: [{
-                    label: 'Estimated Profit',
-                    data: result,
-                    backgroundColor: [
-                        '#dedede',
-                        '#02baff'
-                    ],
-                    borderWidth: 0,
-                }]
-            },
-            options: {
-                aspectRatio:2,
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true,
-                            display: true,
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }],
-                    xAxes: [{
-                        ticks: {
-                            fontFamily: "'Mulish',Open Sans, Segoe UI, sans-serif",
-                            fontStyle: 'italic',
-                            fontSize:10,
-                            fontColor: '#000000'
-                        },
-                        gridLines: {
-                            display: false
-                        }
-                    }]
-                },
-                legend: {
-                    display: false
+                    profitMargin: parseInt(this.profitMargin),
+                    productType:"purchase_order_finance" ,
+                    annualSales:parseInt(this.annualSales),
+                    paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
+                    paymentTermSupplier:this.paymentTermSupplier*this.sDate ,
+                    averageInventoryTime:this.averageInventoryTime*this.inventDate 
                 }
                 
+            }else{
+                var payload1={
+                    profitMargin: parseInt(this.profitMargin),
+                    productType:'invoice_finance',
+                    annualSales:parseInt(this.annualSales),
+                    paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
+                }
             }
-        });
-
+                // console.log(payload)
+                this.calculating= true
+                this.calculate(payload1).then(res=>{
+                    res.text().then(res=>{
+                        this.calculated = JSON.parse(res).data;
+                        this.firstGraphPaint()
+                        this.secondGraphPaint()
+                    })
+                })
+            },
+            refresh(){
+                event.preventDefault();
+            this.profitMargin=undefined;
+            this.productType=undefined;
+            this.annualSales=undefined;
+            this.paymentTermCustomer=undefined;
+        // Additional fields for Purchase Order
+            this.paymentTermSupplier=undefined;
+            this.averageInventoryTime=undefined;
+             
+            },
+      
+             calculate(payload) {
+                const Header = {
+                'Content-Type': 'application/json'
+                }
+            const requestOptions = {
+            method: 'POST',
+            headers: Header,
+            body: JSON.stringify(payload)
+            };
+            return fetch(`https://staging.frontedgegroup.com/api/scf/invitation/workingCalculator`, requestOptions)
+            // .then(this.handleResponse);
             },
 
+        firstGraphPaint(){   
+            this.calculating= false
+            var chart = JSC.chart('chartDiv', { 
+            defaultSeries_type: 'column', 
+            description: 
+            '%type Sales before and after Frontedge', 
+            legend_description: 'Estimated Sales', 
+            defaultPoint_label_visible: true, 
+            defaultPoint_label_color: "black",
+            legend_defaultEntry_description: '%name', 
+            // toolbar_items_export_description: 'export menu', 
+            defaultPoint_description: '%name %value', 
+            legend_visible: false,
+            xAxis_defaultTick: {
+                placement: 'outside',
+                label_style: { color: '#000000', fontWeight: 'bold', fontFamily:"'Mulish',Open Sans, Segoe UI, sans-serif", fontStyle: 'italic'}
+            },
+            series: [ 
+            { 
+                name: 'Sales', 
+                hatchPalette: false, 
+                defaultPoint_hatch_color: 'black', 
+                palette: ['#DEDEDE', '#02BAFF'], 
+                points: [
+                { 
+                    name: 'Without Frontedge',
+                    y: this.calculated.salesBefore,
+                    
+                 }, 
+                // { name: '-', y: undefined }, 
+
+                { name: 'With Frontedge', y: this.calculated.salesAfter }, 
+                ] 
+            } 
+            ] 
+            }); 
+        },
+
+        secondGraphPaint(){
+            var chart = JSC.chart('chartDiv1', { 
+            defaultSeries_type: 'column', 
+            description: 
+            '%type Profit before and after Frontedge', 
+            legend_description: 'Estimated Profit', 
+            legend_visible: false,
+            defaultPoint_label_visible: true, 
+            defaultPoint_label_color: "black",
+            legend_defaultEntry_description: '%name', 
+            // toolbar_items_export_description: 'export menu', 
+            defaultPoint_description: '%name %value', 
+            xAxis_defaultTick: {
+                placement: 'outside',
+                label_style: { color: '#000000', fontWeight: 'bold', fontFamily:"'Mulish',Open Sans, Segoe UI, sans-serif", fontStyle: 'italic'}
+            },
+            series: [ 
+            { 
+                name: 'Profit', 
+                hatchPalette: false, 
+                defaultPoint_hatch_color: 'black', 
+                palette: ['#DEDEDE','#02BAFF'], 
+                points: [ 
+                { name: 'Without Frontedge', y: this.calculated.profitBefore }, 
+                // { name: '-', y: undefined }, 
+                { name: 'With Frontedge', y: this.calculated.profitAfter }, 
+                ] 
+            } 
+            ] 
+            }); 
+         
+        },
+
 onCDate(event){
-    this.cDate = event.target.value;
+this.cDate = event.target.value;
 },
 
 onSDate(event){
-    this.sDate = event.target.value;
+this.sDate = event.target.value;
 },
 onInventDate(event){
-    this.inventDate = event.target.value;
-        }
-    }            
+this.inventDate = event.target.value;
+    }
+}            
 })
 
-    </script>
-
-    <script>
-
-        // var salesComparison = document.getElementById('salesPerformance');
-        // var salesProfit = new Chart(salesComparison, {
-        //         type: 'bar',
-        //         data: {
-        //         labels: ['Sales before FrontEdge', 'Sales After FrontEdge'],
-        //         datasets: [{
-        //             label: 'Profith with and and Front Edge',
-        //             data: [2500000, 6500000],
-        //             backgroundColor: [
-        //                 '#dedede',
-        //                 '#02baff'
-        //             ],
-        //             borderWidth: 0,
-        //         }]
-        //     },
-        //     options: {
-        //         aspectRatio:3,
-        //         scales: {
-        //             yAxes: [{
-        //                 ticks: {
-        //                     beginAtZero: true,
-        //                     display: false,
-        //                 },
-        //                 gridLines: {
-        //                     display: false,
-                            
-        //                 }
-        //             }],
-        //             xAxes: [{
-        //                 ticks: {
-        //                     fontFamily: "'Mulish',Open Sans, Segoe UI, sans-serif",
-        //                     fontStyle: 'italic',
-        //                     fontColor: '#000000'
-        //                 },
-        //                 gridLines: {
-        //                     display: false
-        //                 }
-        //             }]
-        //         },
-        //         legend: {
-        //             display: false
-        //         }
-                
-        //     }
-        // });
-
-        // var profitComparison = document.getElementById('profitPerformance');
-        // var profitProfit = new Chart(profitComparison, {
-        //         type: 'bar',
-        //         data: {
-        //         labels: ['Profit before FrontEdge', 'Profit after FrontEdge'],
-        //         datasets: [{
-        //             label: 'Profit with and and Front Edge',
-        //             data: [2500000, 6500000],
-        //             backgroundColor: [
-        //                 '#dedede',
-        //                 '#02baff'
-        //             ],
-        //             borderWidth: 0,
-        //         }]
-        //     },
-        //     options: {
-        //         aspectRatio:3,
-        //         scales: {
-        //             yAxes: [{
-        //                 ticks: {
-        //                     beginAtZero: true,
-        //                     display: false,
-        //                 },
-        //                 gridLines: {
-        //                     display: false,
-                            
-        //                 }
-        //             }],
-        //             xAxes: [{
-        //                 ticks: {
-        //                     fontFamily: "'Mulish',Open Sans, Segoe UI, sans-serif",
-        //                     fontStyle: 'italic',
-        //                     fontColor: '#000000'
-        //                 },
-        //                 gridLines: {
-        //                     display: false
-        //                 }
-        //             }]
-        //         },
-        //         legend: {
-        //             display: false
-        //         }
-                
-        //     }
-        // });
-
-    </script>
+</script>
     
 
 </body>
