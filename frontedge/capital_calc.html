@@ -114,7 +114,7 @@
                             <div class="form-group formWidth1_3">
                                 <label class="control-label text-style-italics">Annual Sales</label>
                                 <div class="input-group">
-                                    <input type="text" v-model="annualSales" id="anualSales" class="form-control inputRounded" placeholder="2,500,000.00">
+                                    <input type="text" v-model="annualSales" id="anualSales" class="form-control inputRounded" placeholder="2,500,000">
                                     <div class="input-group-addon">
                                         <span class="font-bold text-style-italics">NGN</span>
                                     </div>
@@ -124,7 +124,7 @@
                             <div class="form-group formWidth1_3">
                                 <label class="control-label text-style-italics">Average Customer Payment Term</label>
                                 <div class="input-group">
-                                    <input type="number" v-model="paymentTermCustomer" id="averageCustomer" class="form-control inputRounded" placeholder="21">
+                                    <input type="text" v-model="paymentTermCustomer" pattern="^[\d,]+$" id="averageCustomer" class="form-control inputRounded" placeholder="21">
                                     <div class="input-group-addon">
                                         <span class="font-bold text-style-italics">Days</span>
                                     </div>
@@ -134,7 +134,7 @@
                             <div class="form-group formWidth1_3" v-show="purchaseOrderField">
                                 <label class="control-label text-style-italics" for="invoicevalue" >Average Supplier Payment Term</label>
                                 <div class="input-group">
-                                <input class="form-control inputRounded" v-model="paymentTermSupplier" type="text" id="averageSupplier" placeholder="5" aria-placeholder="averageSupplier">
+                                <input class="form-control inputRounded" pattern="^[\d,]+$" v-model="paymentTermSupplier" type="text" id="averageSupplier" placeholder="5" aria-placeholder="averageSupplier">
                               
                                 <div class="input-group-addon"> 
                                     <span class="font-bold text-style-italics">Days</span>
@@ -142,11 +142,11 @@
                             </div>
                             </div>
 
-                            <div class="form-group formWidth1_3" v-if="purchaseOrderField">
+                            <div class="form-group formWidth1_3" v-show="purchaseOrderField">
                                 <label class="control-label text-style-italics" for="invoicevalue" >Average Inventory Time</label>
                                 <!-- <i class="fa fa-angle-down angle"></i> -->
                                 <div class="input-group">
-                                <input v-model="averageInventoryTime" type="number" id="averageInventoryTime" placeholder="5" aria-placeholder="averageInventoryTime" class="form-control inputRounded">
+                                <input v-model="averageInventoryTime" pattern="^[\d,]+$" name="averageInventoryTime" type="text" id="averageInventoryTime" placeholder="5" aria-placeholder="averageInventoryTime" class="form-control inputRounded">
                                 <div class="input-group-addon">
                                     <span class="font-bold text-style-italics">Days</span>
                                 </div>
@@ -299,11 +299,11 @@
 
             profitMargin:30,
             productType: "",
-            annualSales:2500000,
-            paymentTermCustomer:21,
+            annualSales:"2,500,000",
+            paymentTermCustomer:"21",
         // Additional fields for Purchase Order
-            paymentTermSupplier:5,
-            averageInventoryTime:10,
+            paymentTermSupplier:"5",
+            averageInventoryTime:"10",
 
             calculated:{
                 amountIncrementalSales:0.00,
@@ -322,9 +322,7 @@
         created(){
         },
         mounted(){
-
-            // this.firstGraphPaint();
-            // this.secondGraphPaint();
+            this.getInputValues()
             this.handleSubmit();
         },
         methods: {
@@ -350,35 +348,43 @@
                 const payload={
                     profitMargin: parseInt(this.profitMargin),
                     productType:x==2?"purchase_order_finance":'invoice_finance' ,
-                    annualSales:parseInt(this.annualSales),
+                    annualSales:parseFloat(this.annualSales.replace(/,/g, '')),
 
-                    paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
-                    paymentTermSupplier:this.paymentTermSupplier*this.sDate ,
-                    averageInventoryTime:this.averageInventoryTime*this.inventDate 
+                    paymentTermCustomer:parseFloat(this.paymentTermCustomer.replace(/,/g, '')),
+                    paymentTermSupplier:parseFloat(this.paymentTermSupplier.replace(/,/g, '')),
+                    averageInventoryTime:parseFloat(this.averageInventoryTime.replace(/,/g, ''))
                 }
 
                 if(x==2){
                     var payload1={
                     profitMargin: parseInt(this.profitMargin),
                     productType:"purchase_order_finance" ,
-                    annualSales:parseInt(this.annualSales),
-                    paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
-                    paymentTermSupplier:this.paymentTermSupplier*this.sDate ,
-                    averageInventoryTime:this.averageInventoryTime*this.inventDate 
+                    annualSales:parseFloat(this.annualSales.replace(/,/g, '')),
+                    paymentTermCustomer:parseFloat(this.paymentTermCustomer.replace(/,/g, '')),
+                    paymentTermSupplier:parseFloat(this.paymentTermSupplier.replace(/,/g, '')),
+                    averageInventoryTime:parseFloat(this.averageInventoryTime.replace(/,/g, ''))
                 }
                 
             }else{
                 var payload1={
                     profitMargin: parseInt(this.profitMargin),
                     productType:'invoice_finance',
-                    annualSales:parseInt(this.annualSales),
-                    paymentTermCustomer:this.paymentTermCustomer*this.cDate ,
+                    annualSales:parseFloat(this.annualSales.replace(/,/g, '')),
+                    paymentTermCustomer:parseFloat(this.paymentTermCustomer.replace(/,/g, '')),
                 }
             }
                 // console.log(payload)
-                this.calculating= true
+                this.calculating= true;
+                // Fix input values after submit
+                this.annualSales = parseInt(this.annualSales.split(',').join("") || 0).toLocaleString('en-US');
+                this.paymentTermCustomer = parseInt(this.paymentTermCustomer.split(',').join("") || 0).toLocaleString('en-US');
+                this.paymentTermSupplier = parseInt(this.paymentTermSupplier.split(',').join("") || 0).toLocaleString('en-US');
+                this.averageInventoryTime = parseInt(this.averageInventoryTime.split(',').join("") || 0).toLocaleString('en-US');
+
                 this.calculate(payload1).then(res=>{
                     res.text().then(res=>{
+                        if(res){
+                        }
                         this.calculated = JSON.parse(res).data;
                         this.firstGraphPaint()
                         this.secondGraphPaint()
@@ -415,7 +421,7 @@
             var chart = JSC.chart('chartDiv', { 
             defaultSeries_type: 'column', 
             description: 
-            '%type Sales before and after Frontedge', 
+            '%type Sales before and after Front edge', 
             legend_description: 'Estimated Sales', 
             defaultPoint_label_visible: true, 
             defaultPoint_label_color: "black",
@@ -435,13 +441,13 @@
                 palette: ['#DEDEDE', '#02BAFF'], 
                 points: [
                 { 
-                    name: 'Without Frontedge',
+                    name: 'Without Front edge',
                     y: this.calculated.salesBefore,
                     
                  }, 
                 // { name: '-', y: undefined }, 
 
-                { name: 'With Frontedge', y: this.calculated.salesAfter }, 
+                { name: 'With Front edge', y: this.calculated.salesAfter }, 
                 ] 
             } 
             ] 
@@ -452,7 +458,7 @@
             var chart = JSC.chart('chartDiv1', { 
             defaultSeries_type: 'column', 
             description: 
-            '%type Profit before and after Frontedge', 
+            '%type Profit before and after Front edge', 
             legend_description: 'Estimated Profit', 
             legend_visible: false,
             defaultPoint_label_visible: true, 
@@ -471,28 +477,38 @@
                 defaultPoint_hatch_color: 'black', 
                 palette: ['#DEDEDE','#02BAFF'], 
                 points: [ 
-                { name: 'Without Frontedge', y: this.calculated.profitBefore }, 
+                { name: 'Without Front edge', y: this.calculated.profitBefore }, 
                 // { name: '-', y: undefined }, 
-                { name: 'With Frontedge', y: this.calculated.profitAfter }, 
+                { name: 'With Front edge', y: this.calculated.profitAfter }, 
                 ] 
-            } 
+                } 
             ] 
             }); 
-         
         },
 
-onCDate(event){
-this.cDate = event.target.value;
-},
-
-onSDate(event){
-this.sDate = event.target.value;
-},
-onInventDate(event){
-this.inventDate = event.target.value;
-    }
-}            
+        getInputValues(){
+            document.getElementById('anualSales').addEventListener('input', event =>{
+            var v = event.target.value;
+            var formatedInput = parseInt(v.split(',').join("") || 0).toLocaleString('en-US');
+            event.target.value = formatedInput;
+        });
+        document.getElementById('averageCustomer').addEventListener('input', event =>{
+            var v = event.target.value;
+            var formatedInput = parseInt(v.split(',').join("") || 0).toLocaleString('en-US');
+            event.target.value = formatedInput;
+        });
+        document.getElementById('averageSupplier').addEventListener('input', event =>{
+            var v = event.target.value;
+            var formatedInput = parseInt(v.split(',').join("") || 0).toLocaleString('en-US');
+            event.target.value = formatedInput;        });
+        document.getElementById('averageInventoryTime').addEventListener('input', event =>{
+            var v = event.target.value;
+            var formatedInput = parseInt(v.split(',').join("") || 0).toLocaleString('en-US');
+            event.target.value = formatedInput;        });
+        }
+    }            
 })
+
 
 </script>
     
