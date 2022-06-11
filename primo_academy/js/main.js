@@ -24,6 +24,16 @@ jQuery(document).ready(function($){
         }, scroll_top_duration
 		);
     });
+    
+    // Autghentication form input    
+    $('.form-control').on('input', function() {
+        var $input_field = $(this).closest('.labeledFormInput');
+        if (this.value) {
+            $input_field.addClass('not_empty');
+        } else {
+            $input_field.removeClass('not_empty');
+        }
+    });
 
     /* General Navigation*/
 
@@ -32,7 +42,7 @@ jQuery(document).ready(function($){
     var MQL = 768;
 
     if ($(window).width() > MQL) {
-        var headerHeight = $('.mainHeader').height();
+        var headerHeight = $('.preAuthHeader').height();
         $(window).on('scroll', {
             previousTop: 0
           },
@@ -41,16 +51,16 @@ jQuery(document).ready(function($){
             //check if user is scrolling up
             if (currentTop < this.previousTop) {
                 //if scrolling up...
-                if (currentTop > 0 && $('.mainHeader').hasClass('is-fixed')) {
-                    $('.mainHeader').addClass('is-visible');
+                if (currentTop > 0 && $('.preAuthHeader').hasClass('is-fixed')) {
+                    $('.preAuthHeader').addClass('is-visible');
                 } else {
-                    $('.mainHeader').removeClass('is-visible is-fixed');
+                    $('.preAuthHeader').removeClass('is-visible is-fixed');
                 }
             } else {
                 //if scrolling down...
-                $('.mainHeader').removeClass('is-visible');
-                if (currentTop > headerHeight && !$('.mainHeader').hasClass('is-fixed')) {
-                    $('.mainHeader').addClass('is-fixed');
+                $('.preAuthHeader').removeClass('is-visible');
+                if (currentTop > headerHeight && !$('.preAuthHeader').hasClass('is-fixed')) {
+                    $('.preAuthHeader').addClass('is-fixed');
                 }
             }
             this.previousTop = currentTop;
@@ -64,7 +74,18 @@ jQuery(document).ready(function($){
         $('header[role="banner"]').toggleClass('is-active');
         $('body').toggleClass('scroll_lock');
     });
-       
+        
+        // Show and hide password, user login
+    var visualTrigger = $('#showPass');
+    var pwd_input = $('.user_pass');
+    visualTrigger.on('click',function() {
+      $(this).toggleClass('show_pass');
+      if (pwd_input.attr("type") == "password") {
+          pwd_input.attr("type", "text");
+      } else {
+          pwd_input.attr("type", "password");
+      }
+    });
 
     /*Show more collapsed items in a list with more than 4 items*/
     var show_more_toggle = $(".collapsetoggle");
@@ -72,21 +93,12 @@ jQuery(document).ready(function($){
         $(this).parents(".collapsibleBlock").toggleClass('blockCollapsed');
     });
 
-    $('.search_toggle').on('click', function(event){
-        event.stopPropagation();
-        $('header[role="banner"]').addClass('showSearch');
-        $('body').addClass('scroll_lock');
-    });
-
-    //open/close Filter panel
-    $('body').on('click','.navSearchBar .close_dialog', function(event) {
-        event.stopPropagation();
-        closeFilter();
-    });
-
-    function closeFilter() {
-        $('body').removeClass('scroll_lock');
-        $('header[role="banner"]').removeClass('showSearch');
-	}
+     /*Custom Selector*/
+     var selector = $(".pillSelectControl"), 
+        selectorLabel = $(".pillWrapper");
+     
+        selector.on('change', function() {
+          $(this).parents(".selectorItem").toggleClass("selected");
+      });
 
 });
