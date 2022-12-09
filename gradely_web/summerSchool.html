@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Summer School :: Gradely | Online learning that improves grades</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script> 
+</head>
+
+<body class="">
+
+    <div class="modal fade" id="userAuthDialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="modalAuthWrapper">
+                        <header class="margin_bottom_md text-center">
+                            <h3 class="title title_sm font-bold color__default">Create an account</h3>
+                            <p class="color__default">You're only one more step away.</p>
+                        </header>
+
+                        <div class="authOptionWrapper">
+                            <a href="#" class="authOptionButton">
+                                <span class="optionBtn_Icon">
+                                    <i class="cust_icon icon_sm icon_parent"></i>
+                                </span>
+                                <span class="optionBtn_Label">Sign up a parent account</span>
+                            </a>
+                        </div>
+
+                        <div class="authOptionWrapper">
+                            <div class="text-center margin_bottom_lg">
+                                <h4 class="title title_sm color__default">Already have an account? Log in</h4>
+                            </div>
+                            <form action="">
+                                <div class="form-group labeledForm">
+									<label class="control-label font-bold">Email Address</label>
+									<input type="text" class="form-control labeledFormInput" placeholder="Enter your email address">
+								</div>
+								<div class="form-group labeledForm">
+									<label class="control-label font-bold">Password</label>
+                                    <input type="password" class="form-control labeledFormInput user_pass" placeholder="Enter your password">
+                                    <span class="inputAddonBtn">
+                                        <button type="button" id="showPass">
+                                            <i class="cust_icon icon_eye "></i>
+                                        </button>
+                                    </span>
+								</div>
+                            </form>
+                            <div class="section_cto text-center">
+                                <button type="submit" disabled class="btn btn-block btn-secondary">Continue</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header role="banner" class="preAuthHeader">
+        <div class="container">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="index.html" class="logo_link">
+                            <img src="img/logo.svg" alt="Gradely.ng">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem active">
+                            <a href="parents_lander.html" class="menuLinkItem">Parents</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="school_lander.html" class="menuLinkItem">Schools</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="teacher_lander.html" class="menuLinkItem">Teachers</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="blog.html" class="menuLinkItem">
+                                <span class="subLinkHolder">
+                                    Resources
+                                </span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btn_user_act">
+                            <a href="signup_lander.html" class="btn btn-sm btn-primary-outline">Start Learning</a>
+                        </div>
+                        <div class="controlBtn btn_user_act hidden-sm">
+                            <a href="login.html" class="btn btn-sm btn-secondary">Log In</a>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <nav class="auxheader">
+            <div class="container">
+                <ul class="auxNavMenu">
+                    <li class="menuListItem">
+                        <a href="parents_lander.html" class="auxMenuLinkItem">Home Schooling</a>
+                    </li>
+                    <li class="menuListItem">
+                        <a href="catchUp.html" class="auxMenuLinkItem">Learning</a>
+                    </li>
+                    <li class="menuListItem">
+                        <a href="examPrep.html" class="auxMenuLinkItem">Exam Prep</a>
+                    </li>
+                    <li class="menuListItem">
+                        <a href="tutoring.html" class="auxMenuLinkItem">Tutoring</a>
+                    </li>
+                    <li class="menuListItem active">
+                        <a href="summerSchool.html" class="auxMenuLinkItem">Extracurricular</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero_area bg_wave summerSchool">
+        <div class="container">
+            <div class="heroContentWrapper row">
+                <div class="heroTextWrapper col-md-6 order-md-1 order-2">
+                    <h2 class="hero_title font-regular color__black">Experiment with your hobbies and learn practical, real-life skills outside the classroom.</h2>
+                    <p class="font-bold caps_upper color__inverse">For students in Primary 1 to SS3</p>
+
+                    <div class="programChecklist hidden-sm">
+                        <ul class="checklistHolder row">
+                            <li class="checkListItem col-sm-6">
+                                <div class="checkListItem_wrapper media_item">
+                                    <div class="media_figure">
+                                        <span class="iconBox">
+                                            <i class="icon_checkmark icon_sm cust_icon"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media_info">
+                                        <span class="checklistLabel">4 weeks of live classes</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="checkListItem col-sm-6">
+                                <div class="checkListItem_wrapper media_item">
+                                    <div class="media_figure">
+                                        <span class="iconBox bg__secondary_light">
+                                            <i class="icon_checkmark icon_sm cust_icon"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media_info">
+                                        <span class="checklistLabel">End-of-course project</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="checkListItem col-sm-6">
+                                <div class="checkListItem_wrapper media_item">
+                                    <div class="media_figure">
+                                        <span class="iconBox bg__inverse_light">
+                                            <i class="icon_checkmark icon_sm cust_icon"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media_info">
+                                        <span class="checklistLabel">Demo day competition & prizes</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="checkListItem col-sm-6">
+                                <div class="checkListItem_wrapper media_item">
+                                    <div class="media_figure">
+                                        <span class="iconBox bg__red_light">
+                                            <i class="icon_checkmark icon_sm cust_icon"></i>
+                                        </span>
+                                    </div>
+                                    <div class="media_info">
+                                        <span class="checklistLabel">Up to 15 video lessons & practicals</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="section_cto">
+                        <a href="#userAuthDialog" data-toggle="modal" data-backdrop="static" class="btn lone-btn btn-secondary">Enrol Now</a>
+                    </div>
+                </div>
+                <div class="heroImageWrapper col-md-6 order-md-2 order-1">
+                    <img src="img/banners/summerSchoolImg.png" alt="images describing some summer school course" class="">
+                </div>
+            </div>
+        </div>
+        <span class="bannerBlobItem blobTopRight blob_beans"></span>
+        <span class="bannerBlobItem blobBottomLeft blob_x"></span>
+    </section>
+
+    <main class="mainContentArea padding-top-none">
+        <section class="section_block">
+            <div class="container">
+                <header class="section_header text-center">
+                    <h3 class="title title_lg font-bold color__black ">Browse Courses</h3>
+                </header>
+                <ul class="courseList row">
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper cardItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Music</h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_music.jpg" class="courseImage" alt="image depicting music">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper cardItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Visual Design </h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_design.jpg" class="courseImage" alt="image depicting visual Design">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper cardItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Coding</h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_coding.jpg" class="courseImage" alt="image depicting coding">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper cardItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Dance</h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_dancing.jpg" class="courseImage" alt="image depicting dancing">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper cardItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Culinary Arts</h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_cooking.jpg" class="courseImage" alt="image depicting Culinary Arts">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper cardItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Entrepreneurship</h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_entrepreneur.jpg" class="courseImage" alt="image depicting an entrepreneur">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section_block padding-top-none">
+            <div class="container">
+                <div class="calloutBanner bg__green_light">
+                    <div class="row align-items-center">
+                        <div class="calloutIlloHolder col-md-6">
+                            <img src="./img/banners/student_callout_illo.svg" alt="">
+                        </div>
+                        <div class="callOutInfo col-md-6">
+                            <div class="calloutInfoWrapper centered">
+                                <h4 class="title title_md font-bold color__black">Who can Enroll?</h4>
+                                <p class="hero_blub">Student between the age of 5 and 16 years, or a Parents / Schools with students in the above age group</p>
+                                <div class="section_cto">
+                                    <a href="#userAuthDialog" data-toggle="modal" data-backdrop="static" class="btn lone-btn btn-secondary">Enrol Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="bannerBlobItem blobTopRight_bleedout blob_strokes_sm"></span>
+            </div>
+        </section>
+        <section class="section_block">
+            <div class="container content_narrow">
+                <header class="section_header text-center">
+                    <h3 class="title title_lg font-bold color__black ">Frequently Asked Questions</h3>
+                </header>
+
+                <div class="FAQs_list" id='faqs'>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_1">How do I enrol?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_1" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_2">How much does it cost?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_2" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_3">How many courses do I gain access to once I enrol?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_3" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_4">What do I need to enrol?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_4" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_5">Where do I attend the classes and watch the videos?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_5" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_6">What happens at the end of the course?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_6" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="helpContact margin_top_lg">
+                    <h3 class="title title_md color__black">Need Help?</h3>
+                    <p>We’re available to answer your questions and support your onboarding process.</p>
+
+                    <ul class="contactInfoList">
+                        <li class="contact_detail">
+                            <div class="media_item">
+                                <div class="media_figure">
+                                    <span class="iconBox bg__primary">
+                                        <i class="cust_icon icon_phone"></i>
+                                    </span>
+                                </div>
+                                <div class="media_info">
+                                    <span class="infoLabel color__grey_dark">Call Us</span>
+                                    <h4 class="title title_sm color__black font-bold">
+                                        <a href="tel:+2348100598268">(+234) 810 059 8268</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact_detail">
+                            <div class="media_item">
+                                <div class="media_figure">
+                                    <span class="iconBox bg__primary">
+                                        <i class="cust_icon icon_whatsapp"></i>
+                                    </span>
+                                </div>
+                                <div class="media_info">
+                                    <span class="infoLabel color__grey_dark">Chat with us</span>
+                                    <h4 class="title title_sm color__black font-bold">
+                                        <a href="#">(+234) 810 059 8268</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact_detail">
+                            <div class="media_item">
+                                <div class="media_figure">
+                                    <span class="iconBox bg__primary">
+                                        <i class="cust_icon icon_mail"></i>
+                                    </span>
+                                </div>
+                                <div class="media_info">
+                                    <span class="infoLabel color__grey_dark">Send us a Mail</span>
+                                    <h4 class="title title_sm color__black font-bold">
+                                        <a href="mailto:hello@gradely.ng">hello@gradely.ng</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <span class="UI_cornerBlobs corner_blob_yellow"></span>
+        <span class="UI_cornerBlobs corner_blob_red"></span>
+        <span class="UI_cornerBlobs corner_blob_blue"></span>
+        <span class="UI_cornerBlobs corner_blob_torgue"></span>
+    </main>
+    
+    <footer role="contentinfo" class="footerArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="brandBlock col-md-3">
+                            <div class="brand_media">
+                                <a href="index.html">
+                                    <img src="./img/logoMark.svg" alt="Gradely.ng">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footerBlock col-md-9">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_0" class="blockHeaderLink font-bold color__white collapsed">Inside Gradely</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_0">
+                                <ul class="ft_nav_block">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Gradely</a></li>
+                                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="help_center.html">Help Centre</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 brandNav">
+                    <div class="row" id="footerBlockItem">
+                        <div class="col-md-3 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_1" class="blockHeaderLink font-bold color__white collapsed">Product</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_1">
+                                <ul class="ft_nav_block">
+                                    <li><a href="school_lander.html">For Schools</a></li>
+                                    <li><a href="parents_lander.html">For Parents</a></li>
+                                    <li><a href="tutoring_lander.html">Tutoring</a></li>
+                                    <li><a href="launch_event.html">Events</a></li>
+                                    <li><a href="#">Campaigns</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_2" class="blockHeaderLink font-bold color__white collapsed">Account</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_2">
+                                <ul class="ft_nav_block">
+                                    <li><a href="#">Sign up as a Student</a></li>
+                                    <li><a href="#">Sign up as a Parent</a></li>
+                                    <li><a href="#">Sign up as a Teacher</a></li>
+                                    <li><a href="#">Sign up as a School</a></li>
+                                    <li><a href="tutor_signup.html">Become a Tutor</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_3" class="blockHeaderLink font-bold color__white collapsed">Support</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_3">
+                                <ul class="ft_nav_block">
+                                    <li>
+                                        <a href="#" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_whatsapp"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">(+234) 805 596 7844</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_whatsapp"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">(+234) 810 059 8268</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:support@gradely.ng" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_mail"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">support@gradely.ng</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="help_center.html" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">Visit Help center</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="socialLinks margin_top_lg">
+                                    <a href="https://www.facebook.com/gradelyng/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_fb"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/gradelyng/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_ig"></i>
+                                    </a>
+                                    <a href="https://www.twitter.com/gradelyng" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_tw"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UCsiHe1Qm8SZ_8LD5zkEY1Rw/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_youtube"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/gradelyng/about/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_ln"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerCrumbs">
+                <div class="copyright">
+                    <p>Copyright 2020, Gradely Inc. All rights reserved.</p>
+                </div>
+                <ul class="footer_links">
+                    <li><a href="terms.html" class="footerLinkItem">Terms & Conditions</a></li>
+                    <li><a href="policies.html" class="footerLinkItem">Privacy Policies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    
+	<script src="js/jquery.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/main.js"></script>
+       
+    		
+</body>
+</html>

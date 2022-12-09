@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Summer School :: Gradely | Online learning that improves grades</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script> 
+</head>
+
+<body class="">
+
+    <div class="modal fade" id="userAuthDialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="modalAuthWrapper">
+                        <header class="margin_bottom_md text-center">
+                            <h3 class="title title_sm font-bold color__default">Create an account</h3>
+                            <p class="color__default">You're only one more step away.</p>
+                        </header>
+
+                        <div class="authOptionWrapper">
+                            <a href="#" class="authOptionButton">
+                                <span class="optionBtn_Icon">
+                                    <i class="cust_icon icon_sm icon_parent"></i>
+                                </span>
+                                <span class="optionBtn_Label">Sign up a parent account</span>
+                            </a>
+                        </div>
+
+                        <div class="authOptionWrapper">
+                            <div class="text-center margin_bottom_lg">
+                                <h4 class="title title_sm color__default">Already have an account? Log in</h4>
+                            </div>
+                            <form action="">
+                                <div class="form-group labeledForm">
+									<label class="control-label font-bold">Email Address</label>
+									<input type="text" class="form-control labeledFormInput" placeholder="Enter your email address">
+								</div>
+								<div class="form-group labeledForm">
+									<label class="control-label font-bold">Password</label>
+                                    <input type="password" class="form-control labeledFormInput user_pass" placeholder="Enter your password">
+                                    <span class="inputAddonBtn">
+                                        <button type="button" id="showPass">
+                                            <i class="cust_icon icon_eye "></i>
+                                        </button>
+                                    </span>
+								</div>
+                            </form>
+                            <div class="section_cto text-center">
+                                <button type="submit" disabled class="btn btn-block btn-secondary">Continue</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header role="banner" class="preAuthHeader">
+        <div class="container">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="index.html" class="logo_link">
+                            <img src="img/logo.svg" alt="Gradely.ng">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem active">
+                            <a href="parents_lander.html" class="menuLinkItem">Parents</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="school_lander.html" class="menuLinkItem">Schools</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="teacher_lander.html" class="menuLinkItem">Teachers</a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="blog.html" class="menuLinkItem">
+                                <span class="subLinkHolder">
+                                    Resources
+                                </span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btn_user_act">
+                            <a href="signup_lander.html" class="btn btn-sm btn-primary-outline">Start Learning</a>
+                        </div>
+                        <div class="controlBtn btn_user_act hidden-sm">
+                            <a href="login.html" class="btn btn-sm btn-secondary">Log In</a>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <nav class="auxheader">
+            <div class="container">
+                <ul class="auxNavMenu">
+                    <li class="menuListItem">
+                        <a href="parents_lander.html" class="auxMenuLinkItem">Home Schooling</a>
+                    </li>
+                    <li class="menuListItem">
+                        <a href="catchUp.html" class="auxMenuLinkItem">Learning</a>
+                    </li>
+                    <li class="menuListItem">
+                        <a href="examPrep.html" class="auxMenuLinkItem">Exam Prep</a>
+                    </li>
+                    <li class="menuListItem">
+                        <a href="tutoring.html" class="auxMenuLinkItem">Tutoring</a>
+                    </li>
+                    <li class="menuListItem active">
+                        <a href="summerSchool.html" class="auxMenuLinkItem">Extracurricular</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mainContentArea">
+        <section class="section_block">
+            <div class="container">
+                <div class="row">
+                    <section class="col-md-7 col-sm-8">
+                        <header class="courseHeader">
+                            <a href="summerSchool.html" class="backbutton margin_bottom_md">
+                                <span class="bkIcon">
+                                    <svg class="cust_icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.29 11.29C8.19896 11.3851 8.12759 11.4972 8.08 11.62C7.97998 11.8635 7.97998 12.1365 8.08 12.38C8.12759 12.5028 8.19896 12.6149 8.29 12.71L11.29 15.71C11.4783 15.8983 11.7337 16.0041 12 16.0041C12.2663 16.0041 12.5217 15.8983 12.71 15.71C12.8983 15.5217 13.0041 15.2663 13.0041 15C13.0041 14.7337 12.8983 14.4783 12.71 14.29L11.41 13H15C15.2652 13 15.5196 12.8946 15.7071 12.7071C15.8946 12.5196 16 12.2652 16 12C16 11.7348 15.8946 11.4804 15.7071 11.2929C15.5196 11.1054 15.2652 11 15 11H11.41L12.71 9.71C12.8037 9.61704 12.8781 9.50644 12.9289 9.38458C12.9797 9.26272 13.0058 9.13201 13.0058 9C13.0058 8.86799 12.9797 8.73728 12.9289 8.61542C12.8781 8.49356 12.8037 8.38296 12.71 8.29C12.617 8.19627 12.5064 8.12188 12.3846 8.07111C12.2627 8.02034 12.132 7.9942 12 7.9942C11.868 7.9942 11.7373 8.02034 11.6154 8.07111C11.4936 8.12188 11.383 8.19627 11.29 8.29L8.29 11.29ZM2 12C2 13.9778 2.58649 15.9112 3.6853 17.5557C4.78412 19.2002 6.3459 20.4819 8.17317 21.2388C10.0004 21.9957 12.0111 22.1937 13.9509 21.8079C15.8907 21.422 17.6725 20.4696 19.0711 19.0711C20.4696 17.6725 21.422 15.8907 21.8079 13.9509C22.1937 12.0111 21.9957 10.0004 21.2388 8.17317C20.4819 6.3459 19.2002 4.78412 17.5557 3.6853C15.9112 2.58649 13.9778 2 12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12ZM20 12C20 13.5823 19.5308 15.129 18.6518 16.4446C17.7727 17.7602 16.5233 18.7855 15.0615 19.391C13.5997 19.9965 11.9911 20.155 10.4393 19.8463C8.88743 19.5376 7.46197 18.7757 6.34315 17.6569C5.22433 16.538 4.4624 15.1126 4.15372 13.5607C3.84504 12.0089 4.00346 10.4003 4.60896 8.93853C5.21447 7.47672 6.23984 6.22729 7.55544 5.34824C8.87103 4.46919 10.4177 4 12 4C14.1217 4 16.1566 4.84285 17.6569 6.34315C19.1571 7.84344 20 9.87827 20 12Z"/>
+                                    </svg>
+                                </span>
+                                <span class="bkLabel caps_upper font-bold">Summer School</span>
+                            </a>
+                            <h2 class="title title_lg font-bold color__black">Coding</h2>
+                            <p class="color__grey_dark">For students in Primary 1 to SS3</p>
+                            <div class="section_cto">
+                                <a href="#userAuthDialog" data-toggle="modal" data-backdrop="static" class="btn btn-secondary">Enrol Now</a>
+                            </div>
+                        </header>
+                        <div class="courseTrailer margin_bottom_lg">
+                            <div class="widgetMediaHolder has_overlay">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/QUJlX7uCyVY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                                </div>
+                                <div class="widgetMediaOverlay">
+                                    <div class="widgetMediaInner">
+                                        <div class="widgetInfoPrompt">
+                                            <button type="button" class="overlayCtaBtn overlayToggle">
+                                                <span class="ctaIconHolder">
+                                                    <svg class="cust_icon icon_md" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                    </svg>                                                
+                                                </span>
+                                            </button>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="courseSub_groups">
+                            <h3 class="title title_sm color__black font-bold margin_bottom_md">About the Course</h3>
+                            <p>During these coding classes, your students will improve their logical thinking, creative thinking, and overall problem solving skills. At the end of the course, your students would have a portfolio showcasing their very own block programming projects or websites or apps.</p>
+                        </div>
+
+                        <div class="courseSub_groups">
+                            <h3 class="title title_sm color__black font-bold margin_bottom_md">Requirements</h3>
+                            <p>Access to an internet enabled computer, with a fully installed scratch app for block programming and MIT app Inventor for App development</p>
+                        </div>
+                        <div class="courseSub_groups">
+                            <h3 class="title title_sm color__black font-bold margin_bottom_md">Course Instructor</h3>
+                            <div class="media_item">
+                                <div class="media_figure">
+                                    <div class="user_info_avi avi_xl"> 
+                                        <img src="./img/banners/femi_ibiwoye.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="media_info">
+                                    <h4 class="title title_sm margin_bottom_x color__black">Femi Ibiwoye</h4>
+                                    <p>A short information about the instructor. Not more than 2 lines or 240 characters.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <aside class="offset-md-1 col-md-4 col-sm-4">
+                        <div class="courseInfoWidget bg__inverse_light">
+                            <h4 class="title title_sm color__black font-bold">Includes...</h4>
+                            <ul class="customTitleList margin_top_md">
+                                <li class="titleListItem">
+                                    <span>4 Weeks of live classes</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>Up to 12 video lessons</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>Final week project</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>Demo Day & Prize</span>
+                                </li>
+                            </ul>
+                            <div class="section_cto">
+                                <a href="#userAuthDialog" data-toggle="modal" data-backdrop="static" class="btn btn-block btn-secondary">Enrol Now</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <section class="section_block padding-top-none">
+            <div class="container">
+                <header class="section_header">
+                    <h3 class="title title_lg font-bold color__black ">What you’ll learn</h3>
+                </header>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="courseOptions">
+                            <h4 class="title title_sm font-bold color__black margin_bottom_md">Block Programming</h4>
+                            <ul class="customTitleList margin_top_md">
+                                <li class="titleListItem">
+                                    <span>Terms used in scratch</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>How to set up a scratch profile</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>How to use scratch blocks (Motion, Looks, Events, Control etc). </span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>How to add a sprite and backdrop in scratch.</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>How to hide and show a sprite.</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>How to change the size of a sprite. </span>
+                                </li>
+                            </ul>
+                            <div class="margin_top_sm">
+                                <button type="button" class="btn-link font-bold">Show More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="courseOptions">
+                            <h4 class="title title_sm font-bold color__black margin_bottom_md">Mobile & Web App Development</h4>
+                            <ul class="customTitleList margin_top_md">
+                                <li class="titleListItem">
+                                    <span>Getting Familiar with the MIT APP Inventor Interface</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>How to use the Pallette-Viewer-Component</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>How to use the Image & Label Component</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>Creating a horizontal Arrangement Layout for an android App</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>How to create a Nest Layout</span>
+                                </li>
+                                <li class="titleListItem">
+                                    <span>Creating a Text-to-Speech Android App</span>
+                                </li>
+                            </ul>
+                            <div class="margin_top_sm">
+                                <button type="button" class="btn-link font-bold">Show More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_block bg__off_white">
+            <div class="container">
+                <header class="section_header">
+                    <h3 class="title title_lg font-bold color__black ">Discover other course</h3>
+                </header>
+                <ul class="courseList row">
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Dance</h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_dancing.jpg" class="courseImage" alt="image depicting dancing">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Culinary Arts</h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_cooking.jpg" class="courseImage" alt="image depicting Culinary Arts">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="courseItem col-sm-6 col-md-4">
+                        <a href="course_details.html" class="courseItemWrapper centered bg__black">
+                            <div class="courseHeading">
+                                <h4 class="title title_sm font-bold color__white">Entrepreneurship</h4>
+                            </div>
+                            <div class="courseImageHolder">
+                                <img src="./img/banners/cr_entrepreneur.jpg" class="courseImage" alt="image depicting an entrepreneur">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer role="contentinfo" class="footerArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="brandBlock col-md-3">
+                            <div class="brand_media">
+                                <a href="index.html">
+                                    <img src="./img/logoMark.svg" alt="Gradely.ng">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footerBlock col-md-9">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_0" class="blockHeaderLink font-bold color__white collapsed">Inside Gradely</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_0">
+                                <ul class="ft_nav_block">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Gradely</a></li>
+                                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="help_center.html">Help Centre</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 brandNav">
+                    <div class="row" id="footerBlockItem">
+                        <div class="col-md-3 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_1" class="blockHeaderLink font-bold color__white collapsed">Product</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_1">
+                                <ul class="ft_nav_block">
+                                    <li><a href="school_lander.html">For Schools</a></li>
+                                    <li><a href="parents_lander.html">For Parents</a></li>
+                                    <li><a href="tutoring_lander.html">Tutoring</a></li>
+                                    <li><a href="launch_event.html">Events</a></li>
+                                    <li><a href="#">Campaigns</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_2" class="blockHeaderLink font-bold color__white collapsed">Account</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_2">
+                                <ul class="ft_nav_block">
+                                    <li><a href="#">Sign up as a Student</a></li>
+                                    <li><a href="#">Sign up as a Parent</a></li>
+                                    <li><a href="#">Sign up as a Teacher</a></li>
+                                    <li><a href="#">Sign up as a School</a></li>
+                                    <li><a href="tutor_signup.html">Become a Tutor</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_3" class="blockHeaderLink font-bold color__white collapsed">Support</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_3">
+                                <ul class="ft_nav_block">
+                                    <li>
+                                        <a href="#" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_whatsapp"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">(+234) 805 596 7844</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_whatsapp"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">(+234) 810 059 8268</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:support@gradely.ng" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_mail"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">support@gradely.ng</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="help_center.html" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_help"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">Visit Help center</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="socialLinks margin_top_lg">
+                                    <a href="https://www.facebook.com/gradelyng/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_fb"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/gradelyng/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_ig"></i>
+                                    </a>
+                                    <a href="https://www.twitter.com/gradelyng" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_tw"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UCsiHe1Qm8SZ_8LD5zkEY1Rw/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_youtube"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/gradelyng/about/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_xs icon_ln"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footerCrumbs">
+                <div class="copyright">
+                    <p>Copyright 2020, Gradely Inc. All rights reserved.</p>
+                </div>
+                <ul class="footer_links">
+                    <li><a href="terms.html" class="footerLinkItem">Terms & Conditions</a></li>
+                    <li><a href="policies.html" class="footerLinkItem">Privacy Policies</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    
+	<script src="js/jquery.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/main.js"></script>
+       
+    		
+</body>
+</html>
