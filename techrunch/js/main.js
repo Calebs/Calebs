@@ -62,7 +62,7 @@ jQuery(document).ready(function($){
 
      /*Custom Selector*/
      var selector = $(".pillSelectControl"), 
-        selectorLabel = $(".pillWrapper");
+        selectorLabel = $(".selectInputWrapper");
      
         selector.on('change', function() {
           $(this).parents(".selectorItem").toggleClass("selected");
