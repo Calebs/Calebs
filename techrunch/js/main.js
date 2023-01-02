@@ -16,25 +16,6 @@ jQuery(document).ready(function($){
 		}
 	});
     
-	//smooth scroll to top
-	$back_to_top.on('click', function(event){
-		event.preventDefault();
-		$('body,html').animate({
-			scrollTop: 0 ,
-        }, scroll_top_duration
-		);
-    });
-    
-    // Autghentication form input    
-    $('.form-control').on('input', function() {
-        var $input_field = $(this).closest('.labeledFormInput');
-        if (this.value) {
-            $input_field.addClass('not_empty');
-        } else {
-            $input_field.removeClass('not_empty');
-        }
-    });
-
     /* General Navigation*/
 
    //primary navigation slide-in effect
@@ -74,24 +55,10 @@ jQuery(document).ready(function($){
         $('header[role="banner"]').toggleClass('is-active');
         $('body').toggleClass('scroll_lock');
     });
-        
-        // Show and hide password, user login
-    var visualTrigger = $('#showPass');
-    var pwd_input = $('.user_pass');
-    visualTrigger.on('click',function() {
-      $(this).toggleClass('show_pass');
-      if (pwd_input.attr("type") == "password") {
-          pwd_input.attr("type", "text");
-      } else {
-          pwd_input.attr("type", "password");
-      }
-    });
-
-    /*Show more collapsed items in a list with more than 4 items*/
-    var show_more_toggle = $(".collapsetoggle");
-        show_more_toggle.on('click', function() {
-        $(this).parents(".collapsibleBlock").toggleClass('blockCollapsed');
-    });
+    
+    if ($(window).width() < MQL) {
+        $('.ft_block_segment.panel-collapse').addClass('collapse');
+    }
 
      /*Custom Selector*/
      var selector = $(".pillSelectControl"), 
