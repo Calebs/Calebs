@@ -7,34 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
-	<title>Gradely.ng | Help your child succeed in Real-time</title>
+	<title>Welcome to Gradely | Online learning that improves grades</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
     <link rel="icon" href="img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css"/>
-    <link rel="stylesheet" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/Flickity.css"/>
     <link rel="stylesheet" href="css/base.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
-    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script> 
 </head>
 
 <body class="">
 
-    <div class="video_widget">
-        <div class="widget_content_wrapper">
-             <div class="widget_dismiss">
-                <button type="button" class="close_dialog cls_lg" data-dismiss="modal"></button>
-             </div>
-             <div class="widget_content">
-                <div class="container">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <video preload="metadata" controls class="embed-responsive-item">
-                            <source src="./img/featuresClips/school_demo_video.mp4" type="video/mp4">
-                            Sorry, your browser doesn't support embedded videos.
-                        </video>
+    <div class="modal fade" id="videoPlayer">
+        <div class="modal-dialog modal-dialog-centered mediaRenderDialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
                     </div>
                 </div>
-             </div>
+                <div class="modal-body mediaRenderDialogbody">
+                    <div class="content_wrapper">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/Cm2z8fwVPvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+                        </div>  
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -48,24 +50,52 @@
                         </a>
                     </div>
                 </div>
-                <div class="navbarGroupItem navBarItemRight">
+                <div class="navbarGroupItem navBarItemCenter">
                     <nav class="navMenu menuPrimary">
-                        <div class="menuListItem">
-                            <a href="parents_lander.html" class="menuLinkItem">For Parents</a>
-                        </div>
-                        <div class="menuListItem">
-                            <a href="school_lander.html" class="menuLinkItem">For Schools</a>
-                        </div>
                         <div class="menuListItem subMenuContainer">
                             <a href="#" class="menuLinkItem">
-                                <span class="subLinkHolder">
-                                    More <i class="dropdownMarker"></i>
+                                <span class="navLink_content">
+                                    Parents
+                                    <i class="cust_icon more_indicator"></i>
                                 </span>
                             </a>
                             <ul class="subMenu dropdown-menu">
                                 <li class="subMenuItem">
-                                    <a href="about.html" class="subMenuItem_link">About Us</a>
+                                    <a href="parents_lander.html" class="subMenuItem_link">Learn</a>
                                 </li>
+                                <li class="subMenuItem">
+                                    <a href="examPrep.html" class="subMenuItem_link">Exam Prep</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="tutoring.html" class="subMenuItem_link">Tutoring</a>
+                                </li>
+                                <li class="subMenuItem active">
+                                    <a href="summerSchool.html" class="subMenuItem_link">Extra Curricular</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="school_lander.html" class="menuLinkItem">
+                                <span class="navLink_content">
+                                    Schools
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="teacher_lander.html" class="menuLinkItem">
+                                <span class="navLink_content">
+                                    Teachers
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menuListItem subMenuContainer">
+                            <a href="#" class="menuLinkItem">
+                                <span class="navLink_content">
+                                    Resources
+                                    <i class="cust_icon more_indicator"></i>
+                                </span>
+                            </a>
+                            <ul class="subMenu dropdown-menu">
                                 <li class="subMenuItem">
                                     <a href="blog.html" class="subMenuItem_link">Blog</a>
                                 </li>
@@ -77,12 +107,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="menuListItem">
-                            <a href="signup_lander.html" class="menuLinkItem">Sign Up</a>
-                        </div>
                     </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
                     <nav class="navMenu menuAlt">
                         <div class="controlBtn btn_user_act">
+                            <a href="signup_lander.html" class="btn btn-sm btn-primary-outline">Start Learning</a>
+                        </div>
+                        <div class="controlBtn btn_user_act hidden-sm">
                             <a href="login.html" class="btn btn-sm btn-secondary">Log In</a>
                         </div>
                         <div class="controlBtn nav_trigger">
@@ -97,462 +129,491 @@
         </div>
     </header>
 
-    <main class="mainContentArea">
-        <section class="hero_area home_hero">
-            <div class="container content_narrow">
-                <div class="heroContentWrapper imageRight row">
-                    <div class="heroTextWrapper col-md-7 order-md-1 order-2">
-                        <h2 class="hero_title font-bold color__black">Personalised Learning <br> <span class="font-regular"> at <i class="font-style-italic">home</i> and in <i class="font-style-italic">school</i></span></h2>
-                        <p class="hero_blub">KG - Grade 12| Nigerian & British Curriculum</p>
-                        <div class="section_cto">
-                            <a href="#" class="btn btn-secondary">Start Here</a>
-                        </div>
+    <section class="hero_area bg_wave bg__red_light homeHero">
+        <div class="container">
+            <div class="heroContentWrapper row">
+                <div class="heroTextWrapper col-md-5 order-md-1 order-2">
+                    <h2 class="hero_title font-bold color__black">Personalize learning and see improvement <span class="color__secondary">in 4 weeks!</span> </h2>
+                    <p>According to a study by 8 professors from the University of Oxford, Gradely improves grades by 50% in 3 months.</p>
+                    <h4 class="font-bold caps_upper margin_top_md color__red">For students in Primary 1 to SS3</h4>
+
+                    <div class="section_cto">
+                        <a href="https://app.gradely.co/auth/signup-lander" target="_blank" class="btn lone-btn caps_upper btn-secondary">Start for free</a>
                     </div>
-                    <div class="heroPersonImage">
-                        <img src="img/banners/gradely_girl.png" alt="A young lady, holding a laptop" class="">
+                </div>
+                <div class="heroImageWrapper col-md-7 order-md-2 order-1">
+                    <img src="img/banners/homeHero_anim.gif" alt="" class="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="mainContentArea padding-top-none">
+        <section class="section_block">
+            <div class="container">
+                <div class="logo_grid align-items-center">
+                    <div class="logo_item">
+                        <img src="./img/icons/techcabal.png" class="" alt="Techcabal">
+                    </div>
+                    <div class="logo_item">
+                        <img src="./img/icons/techpoint.png" class="" alt="Techpoint">
+                    </div>
+                    <div class="logo_item">
+                        <img src="./img/icons/techcrunch.png" class="" alt="Techrunch">
+                    </div>
+                    <div class="logo_item">
+                        <img src="./img/icons/bbc.png" class="" alt="BBC">
+                    </div>
+                    <div class="logo_item">
+                        <img src="./img/icons/cnn.png" class="" alt="CNN">
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="section_block">
             <div class="container">
+                <header class="row">
+                    <div class="section_header offset-md-3 col-md-6 text-center">
+                        <h3 class="title title_lg font-bold color__black margin_bottom_sm">How it works</h3>
+                        <p>According to a study by 8 professors from the University of Oxford, Gradely improves grades by 50% in 3 months.</p>
+                    </div>    
+                </header>
+
+                <div class="frameWorkWheel">
+                    <figure class="frameWorkWheelIllo">
+                        <img src="./img/banners/gradelyFrameworkWheel.svg" alt="The Gradely Framework">
+                    </figure>
+                    <div class="frameWorkItem topLeft_spoke">
+                        <div class="frameWorkItemFig">
+                            <img src="./img/icons/adaptive_assessments.svg" alt="">
+                        </div>
+                        <div class="frameWorkItemInfo">
+                            <h4 class="title title_sm color__black font-bold">Adaptive Assessment</h4>
+                            <p>Student takes homework or practice test</p>
+                        </div>
+                    </div>
+                    
+                    <div class="frameWorkItem topRight_spoke">
+                        <div class="frameWorkItemFig">
+                            <img src="./img/icons/video_lessons.svg" alt="">
+                        </div>
+                        <div class="frameWorkItemInfo">
+                            <h4 class="title title_sm color__black font-bold">Recommended Video Lessons</h4>
+                            <p>Watches recommended video lessons</p>
+                        </div>
+                    </div>
+                    <div class="frameWorkItem bottomLeft_spoke">
+                        <div class="frameWorkItemFig">
+                            <img src="./img/icons/performance_report.svg" alt="">
+                        </div>
+                        <div class="frameWorkItemInfo">
+                            <h4 class="title title_sm color__black font-bold">Better Results</h4>
+                            <p>Watches recommended video lessons</p>
+                        </div>
+                    </div>
+                    <div class="frameWorkItem bottomRight_spoke">
+                        <div class="frameWorkItemFig">
+                            <img src="./img/icons/tutoring.svg" alt="">
+                        </div>
+                        <div class="frameWorkItemInfo">
+                            <h4 class="title title_sm color__black font-bold">Targeted 1-on-1 Tutor Sessions</h4>
+                            <p>Takes recommended tutoring in specific topics</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section_cto text-center">
+                    <a href="#" class="btn btn-default caps_upper">
+                        <span class="btnLabel">Book a Free Counselling Session</span>
+                        <span class="btnIcon">
+                            <i class="cust_icon arrow_out"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section_block">
+            <div class="container ">
+                <div class="row info_sub_row align-items-center">
+                    <div class="col-md-6 order-2">
+                        <div class="section_header text-center-sm">
+                            <span class="font-bold caps_upper color__secondary">For Parents</span>
+                            <h3 class="title title_sm font-bold margin_bottom_md color__black">
+                                Homeschool & After School
+                            </h3>
+                            <p>Help them use Gradely to gain mastery of difficult subject topics by daily practice on recommended tests, video lessons and tutor sessions anywhere, anytime.</p>
+                            <div class="section_cto">
+                                <a href="" class="btn caps_upper btn-default-outline">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1 imageItemHolder">
+                        <div class="featuredImage">
+                            <img src="./img/banners/for_parent.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_block">
+            <div class="container ">
                 <div class="row info_sub_row align-items-center">
                     <div class="col-md-6 order-2 order-md-1">
-                        <div class="section_header">
-                            <h5 class="title caps_upper color__red font-bold">Gradely For Parents</h5>
-                            <h2 class="title title_md font-bold color__black margin_bottom_sm">The Toolbox to Help Your Child Succeed</h2>
-                            <p>Gradely empowers parents with personalised learning resources, so you can take charge of their progress and help them succeed in school and in life.</p>
+                        <div class="section_header text-center-sm">
+                            <span class="font-bold caps_upper color__red">For Schools</span>
+                            <h3 class="title title_sm font-bold margin_bottom_md color__black">
+                                Assessments & Intervention Support
+                            </h3>
+                            <p>Make your schooling more efficient with the best free tools and content in one Learning Management System (LMS), online or offline.</p>
                             <div class="section_cto">
-                                <a href="#" class="btn btn-secondary">Sign Up For Free</a>
+                                <a href="" class="btn caps_upper btn-default-outline">Learn more</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 order-1 order-md-2 imageItemHolder">
-                        <img src="img/banners/familyBlobBanner.jpg" alt="A family showing the father, mother, their son and daughter" class="infoBlobImage">
+                        <div class="featuredImage">
+                            <img src="./img/banners/for_schools.gif" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="bannerBlobItem featBlob blobFlippedVR circleBlob"></div>
         </section>
-
-        <section class="section_hero_banner section_block bg_features">
-            <div class="container content_narrow">
-                <nav class="tabNav">
-                    <ul class="nav userNav">
-                        <li class="userNavItem">
-                            <a href="#ftPractice" data-toggle="tab" class="userNavLink active">
-                                <span class="navIcon">
-                                    <img src="./img/icons/practice.svg" alt="Icon for Practice`">
-                                </span>
-                                <span class="navLabel">Practice</span>
-                            </a>
-                        </li>
-                        <li class="userNavItem">
-                            <a href="#ftVideoLesson" data-toggle="tab" class="userNavLink">
-                                <span class="navIcon">
-                                    <img src="./img/icons/videoLesson.svg" alt="Icon for Video Lessons`">
-                                </span>
-                                <span class="navLabel">Video Lessons</span>
-                            </a>
-                        </li>
-                        <li class="userNavItem">
-                            <a href="#ftTutoring" data-toggle="tab" class="userNavLink">
-                                <span class="navIcon">
-                                    <img src="./img/icons/liveTutoring.svg" alt="Icon for On-demand Tutors`">
-                                </span>
-                                <span class="navLabel">On-demand Tutors</span>
-                            </a>
-                        </li>
-                        <li class="userNavItem">
-                            <a href="#ftSchoolWork" data-toggle="tab" class="userNavLink">
-                                <span class="navIcon">
-                                    <img src="./img/icons/keepWithSchool.svg" alt="Icon for Keep Up with School`">
-                                </span>
-                                <span class="navLabel">Keep Up with School</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="tab-content">
-                    <article class="tab-pane active show in" id="ftPractice">
-                        <div class="row info_sub_row align-items-center">
-                            <div class="col-md-5 order-2 order-md-1">
-                                <div class="section_header text-center-sm">
-                                    <h4 class="title title_md font-bold margin_bottom_sm color__black">
-                                        Practice
-                                    </h4>
-                                    <p>Practice makes brilliant, especially when it’s adapted everyday just for you and pushes you further till you attain mastery.</p>
-                                    <div class="section_cto">
-                                        <a href="#" class="btn btn-secondary">Start Practicing</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-7 order-1 order-md-2 imageItemHolder">
-                                <div class="embed-responsive embed-responsive-16by9 videoStage">
-                                    <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
-                                        <source src="./img/featuresClips/practice.mp4" type="video/mp4">
-                                        Sorry, your browser doesn't support embedded videos.
-                                    </video>
-                                </div>
+        <section class="section_block">
+            <div class="container ">
+                <div class="row info_sub_row align-items-center">
+                    <div class="col-md-6 order-2">
+                        <div class="section_header text-center-sm">
+                            <span class="font-bold caps_upper color__inverse">For Teachers</span>
+                            <h3 class="title title_sm font-bold margin_bottom_md color__black">
+                                Learning & Student Management
+                            </h3>
+                            <p>Create an easier and more effective teaching experience for you and your students with the right tools and resources, online or offline.</p>
+                            <div class="section_cto">
+                                <a href="" class="btn caps_upper btn-default-outline">Learn more</a>
                             </div>
                         </div>
-                    </article>
-                    <article class="tab-pane show in" id="ftVideoLesson">
-                        <div class="row info_sub_row align-items-center">
-                            <div class="col-md-5 order-2">
-                                <div class="section_header text-center-sm">
-                                    <h4 class="title title_md font-bold margin_bottom_sm color__black">
-                                        Video Lessons
-                                    </h4>
-                                    <p>Encounter rich and animated video lessons on your learning journey to understand concepts better. </p>
-                                    <div class="section_cto">
-                                        <a href="#" class="btn btn-secondary">Watch Video</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-7 order-1 imageItemHolder">
-                                <div class="embed-responsive embed-responsive-16by9 videoStage">
-                                    <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
-                                        <source src="./img/featuresClips/videoLesson.mp4" type="video/mp4">
-                                        Sorry, your browser doesn't support embedded videos.
-                                    </video>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-md-6 order-1 imageItemHolder">
+                        <div class="featuredImage">
+                            <img src="./img/banners/for_teachers.gif" alt="">
                         </div>
-                    </article>
-                    <article class="tab-pane show in" id="ftTutoring">
-                        <div class="row info_sub_row align-items-center">
-                            <div class="col-md-5 order-2 order-md-1">
-                                <div class="section_header text-center-sm">
-                                    <h4 class="title title_md font-bold margin_bottom_sm color__black">
-                                        On-demand Tutors
-                                    </h4>
-                                    <p>Go beyond video lessons and schedule live sessions with a seasoned tutor to finally get a handle on a difficult concept.</p>
-                                    <div class="section_cto">
-                                        <a href="#" class="btn btn-secondary">Book a Trial Session</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-7 order-1 order-md-2 imageItemHolder">
-                                <div class="embed-responsive embed-responsive-16by9 videoStage">
-                                    <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
-                                        <source src="./img/featuresClips/tutoring.mp4" type="video/mp4">
-                                        Sorry, your browser doesn't support embedded videos.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="tab-pane show in" id="ftSchoolWork">
-                        <div class="row info_sub_row align-items-center">
-                            <div class="col-md-5 order-2">
-                                <div class="section_header text-center-sm">
-                                    <h4 class="title title_md font-bold margin_bottom_sm color__black">
-                                        Keep Up With School
-                                    </h4>
-                                    <p>Get homework and live classes scheduled by your school right inside of your dashboard, and don’t miss out on anything.</p>
-                                    <div class="section_cto">
-                                        <a href="#" class="btn btn-secondary">Invite Your School</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-7 order-1 imageItemHolder">
-                                <div class="embed-responsive embed-responsive-16by9 videoStage">
-                                    <video preload="metadata" autoplay loop muted class="embed-responsive-item" onclick="this.paused ? this.play() : this.pause();">
-                                        <source src="./img/featuresClips/homework_student.mp4" type="video/mp4">
-                                        Sorry, your browser doesn't support embedded videos.
-                                    </video>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section class="section_hero_banner section_block bg_schoolProp">
+        <section class="section_block">
             <div class="container">
-                <div class="row heroContentWrapper">
-                    <div class="heroTextWrapper col-md-5 color__inverse_light">
-                        <h5 class="title caps_upper color__inverse font-bold">Gradely For Schools</h5>
-                        <h2 class="title title_md color__white margin_bottom_md font-bold">Experience the Power of Digital Schooling</h2>
-                        <p class="font-md">Say “hello” to the most advanced learning management system in Africa yet, built for modern primary and secondary schools running blended learning programs.</p>
-                        <div class="section_cto visible_sm">
-                            <button class="btn btn-default watch_vid">
-                                <span class="btnIcon">
-                                    <svg class="cust_icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4.79062 2.09314C4.63821 1.98427 4.43774 1.96972 4.27121 2.05542C4.10467 2.14112 4 2.31271 4 2.5V12.5C4 12.6873 4.10467 12.8589 4.27121 12.9446C4.43774 13.0303 4.63821 13.0157 4.79062 12.9069L11.7906 7.90687C11.922 7.81301 12 7.66148 12 7.5C12 7.33853 11.922 7.18699 11.7906 7.09314L4.79062 2.09314Z" fill="black"/>
-                                    </svg>                                                                     
-                                </span>
-                                <span class="btnLabel">Watch Video</span>
-                            </button> 
-                        </div>
-                    </div>
-                </div>
-                <!-- hideOverlay -->
-                <div class="playerOverlayCta">
-                    <div class="overlayCtaWrapper text-center color__white">
-                        <button type="button" class="overlayCtaBtn overlayToggle watch_vid">
-                            <span class="ctaIconHolder margin_bottom_sm">
-                                <svg class="cust_icon icon_lg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24 0C10.7453 0 0 10.7452 0 24C0 37.2548 10.7453 48 24 48C37.2547 48 48 37.2548 48 24C48 10.7452 37.2547 0 24 0ZM32.295 25.2722L20.295 32.7722C20.0522 32.9238 19.7761 33 19.5 33C19.2499 33 18.9994 32.9378 18.7727 32.8118C18.2959 32.5474 18 32.0456 18 31.5V16.5C18 15.9544 18.2959 15.4526 18.7727 15.1882C19.2495 14.9224 19.8325 14.9385 20.295 15.2278L32.295 22.7278C32.7334 23.0025 33 23.483 33 24C33 24.517 32.7334 24.9976 32.295 25.2722Z"/>
-                                </svg>
-                            </span>
-                            <span class="ctaLabel font-bold caps_upper">Watch video</span>
-                        </button>
-                    </div>
+                <header class="row">
+                    <div class="section_header offset-md-2 col-md-8 text-center">
+                        <h3 class="title title_md font-bold color__black margin_bottom_sm">Over 3000 fun and interactive video lessons across all topics </h3>
+                        <p>Learn or relearn your subject topics with our library of well illustrated pre-recorded video lessons in core subjects.</p>
+                    </div>    
+                </header>
+
+                <div class="featuredVideos cardList">
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="videoCardItem carouselCardItem">
+                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="tileWrapper">
+                            <div class="videoThumbnail">
+                                <div class="videoOverlay">
+                                    <span class="ctaIconHolder ctaIconHolder_m">
+                                        <svg class="cust_icon icon_sm" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                        </svg>                                                
+                                    </span>
+                                </div>
+                                <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                            </div>
+                            <div class="videoDetails">
+                                <h4 class="title font-bold color__black">Estimation & Accuracy</h4>
+                                <span class="color__grey_dark caps_upper font-default">English Language</span>
+                            </div>
+                        </a>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section class="section_block">
             <div class="container">
-                <div class="featureThumbRow row">
-                    <div class="col-md-4 featureThumbItem">
-                        <div class="featureThumbWrapper text-center">
-                            <figure class="featureFig box_rounded centered">
-                                <img src="./img/banners/engagedClass.jpg" class="featFigureImage" alt="Image showing Keep Classes Engaging">
-                            </figure>
-                            <h4 class="featureTitle color__black margin_bottom_sm font-bold">Keep Classes Engaging</h4>
-                            <p>Hold live classes with students and engage them in an interactive feed.</p>
-                        </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <header class="sectionTitleHolder margin_bottom_lg">
+                            <h3 class="title title_lg font-bold color__black ">What Our Customers Say</h3>
+                        </header>
                     </div>
-                    <div class="col-md-4 featureThumbItem">
-                        <div class="featureThumbWrapper text-center">
-                            <figure class="featureFig box_rounded centered">
-                                <img src="./img/banners/createAssessment.jpg" class="featFigureImage" alt="Image showing Create Assessment">
-                            </figure>
-                            <h4 class="featureTitle color__black margin_bottom_sm font-bold">Create Assessment in 2 minutes</h4>
-                            <p>Use thousands of curriculum-mapped questions to set homework and exams pretty quickly.</p>
+                    <section class="col-md-9">
+                        <div class="row">
+                            <article class="col-md-6 testimonialTile">
+                                <div class="testimonialWrapper">
+                                    <div class="customer media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="./img/banners/boye_osinaga.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="font-bold color__alt">Lanre Oshilaja</h4>
+                                            <span class="color__grey_dark">SAT (2022)</span>
+                                        </div>
+                                    </div>
+                                    <blockquote class="quoteInfo">
+                                        <span class="quoteMark">
+                                            <img src="./img/banners/quote_mark.svg" alt="Quotation mark">
+                                        </span>
+                                        <p>This is the testimonial excerpt from the user's testimonial video to the right. It circles round each highlighted parent.</p>
+                                    </blockquote>
+                                    <div class="quoteCTA margin_top_lg">
+                                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="cardSupplimentaryInfo">
+                                            <span class="playIconBtn">
+                                                <i class="cust_icon icon_xs icon_play_fill"></i>
+                                            </span>
+                                            <span class="infoLabel">Watch Video</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-md-6 testimonialTile">
+                                <div class="testimonialWrapper">
+                                    <div class="customer media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="./img/banners/boye_osinaga.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="font-bold color__alt">Lanre Oshilaja</h4>
+                                            <span class="color__grey_dark">SAT (2022)</span>
+                                        </div>
+                                    </div>
+                                    <blockquote class="quoteInfo">
+                                        <span class="quoteMark">
+                                            <img src="./img/banners/quote_mark.svg" alt="Quotation mark">
+                                        </span>
+                                        <p>This is the testimonial excerpt from the user's testimonial video to the right. It circles round each highlighted parent. This is the testimonial excerpt from the user's testimonial video to the right....</p>
+                                    </blockquote>
+                                    <div class="quoteCTA margin_top_lg">
+                                        <a href="#" class="cardSupplimentaryInfo">
+                                            <span class="infoLabel">Read Case Study</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-md-6 testimonialTile">
+                                <div class="testimonialWrapper">
+                                    <div class="customer media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="./img/banners/boye_osinaga.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="font-bold color__alt">Lanre Oshilaja</h4>
+                                            <span class="color__grey_dark">SAT (2022)</span>
+                                        </div>
+                                    </div>
+                                    <blockquote class="quoteInfo">
+                                        <span class="quoteMark">
+                                            <img src="./img/banners/quote_mark.svg" alt="Quotation mark">
+                                        </span>
+                                        <p>This is the testimonial excerpt from the user's testimonial video to the right. It circles round each highlighted parent.</p>
+                                    </blockquote>
+                                    <!-- <div class="quoteCTA margin_top_lg">
+                                        <a href="#" class="cardSupplimentaryInfo">
+                                            <span class="playIconBtn">
+                                                <i class="cust_icon icon_xs icon_play_fill"></i>
+                                            </span>
+                                            <span class="infoLabel">Learn more</span>
+                                        </a>
+                                    </div> -->
+                                </div>
+                            </article>
+                            <article class="col-md-6 testimonialTile">
+                                <div class="testimonialWrapper">
+                                    <div class="customer media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="./img/banners/boye_osinaga.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="font-bold color__alt">Lanre Oshilaja</h4>
+                                            <span class="color__grey_dark">SAT (2022)</span>
+                                        </div>
+                                    </div>
+                                    <blockquote class="quoteInfo">
+                                        <span class="quoteMark">
+                                            <img src="./img/banners/quote_mark.svg" alt="Quotation mark">
+                                        </span>
+                                        <p>This is the testimonial excerpt from the user's testimonial video to the right. It circles round each highlighted parent.</p>
+                                    </blockquote>
+                                    <div class="quoteCTA margin_top_lg">
+                                        <a href="#" class="cardSupplimentaryInfo">
+                                            <span class="infoLabel">Read Case Study</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
-                    </div>
-                    <div class="col-md-4 featureThumbItem">
-                        <div class="featureThumbWrapper text-center">
-                            <figure class="featureFig box_rounded centered">
-                                <img src="./img/banners/personalizedIntervention.jpg" class="featFigureImage" alt="Image showing Personalize Interventions">
-                            </figure>
-                            <h4 class="featureTitle color__black margin_bottom_sm font-bold">Personalise Interventions</h4>
-                            <p>Use insights from reports and recommended resources to tailor interventions.</p>
-                        </div>
-                    </div>
+                    </section>
                 </div>
-                <div class="section_cto text-center">
-                    <a href="#" id="drawerLauncher" class="btn btn-secondary">Request Live Demo</a>
-                </div>
+                <span class="bannerBlobItem blobTopRight_bleedout blob_strokes_md" style="top: -50px; right: -130px; max-width: 200px;"></span>
             </div>
         </section>
-        
-        <section class="section_block sectionBorderedTop">
-            <div class="container">
-                <div class="brandTraction">
-                    <div class="row">
-                        <div class="offset-md-2 col-md-8">
-                            <div class="insightRow">
-                                <article class="insightItem">
-                                    <span class="insightLabel">Learning minutes</span>
-                                    <h4 class="insightValue color__black">16,889</h4>
-                                </article>
-                                <article class="insightItem">
-                                    <span class="insightLabel">Teachers</span>
-                                    <h4 class="insightValue color__black">400</h4>
-                                </article>
-                                <article class="insightItem">
-                                    <span class="insightLabel">Students</span>
-                                    <h4 class="insightValue color__black">5,000</h4>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <header class="section_header text-center">
-                    <h3 class="title title_sm font-bold color__black">See What People Are Saying</h3>
-                </header>
-                <div class="brandMediaCoverage">
-                    <div class="mediaPostList">
-                        <article class="mediaPostItem">
-                            <a href="#" target="_blank" class="mediaPostWrapper">
-                                <figure class="mediaBrand">
-                                    <img src="./img/icons/theNation.png" alt="The Nation">
-                                </figure>
-                                <div class="mediaPostDetails">
-                                    <h4 class="title color__black margin_bottom_md font-bold">Tackling COVID-19 pandemic impact</h4>
-                                    <p class="postExcerpt">Gradely is offering free life-time access to digital homework resources for schools to set weekly homework and support students learning while they are at home during this period.</p>
-                                    <div class="section_cto">
-                                        <span class="ft_control caps_upper">Read More</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="mediaPostItem">
-                            <a href="#" target="_blank" class="mediaPostWrapper">
-                                <figure class="mediaBrand">
-                                    <img src="./img/icons/techpoint.png" alt="Techpoint">
-                                </figure>
-                                <div class="mediaPostDetails">
-                                    <h4 class="title color__black margin_bottom_md font-bold">Gradely wins Edtech Summit Award for the adaptive solution of the year</h4>
-                                    <p class="postExcerpt">Gradely is offering free life-time access to digital homework resources for schools to set weekly homework and support students learning while they are at home during this period.</p>
-                                    <div class="section_cto">
-                                        <span class="ft_control caps_upper">Read More</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="mediaPostItem">
-                            <a href="#" target="_blank" class="mediaPostWrapper">
-                                <figure class="mediaBrand">
-                                    <img src="./img/icons/techCabal.png" alt="TechCabal">
-                                </figure>
-                                <div class="mediaPostDetails">
-                                    <h4 class="title color__black margin_bottom_md font-bold">Nigerian edtech startup, Gradely is trying to solve the problem of a “blank slate” for teachers</h4>
-                                    <p class="postExcerpt">Gradely is offering free life-time access to digital homework resources for schools to set weekly homework and support students learning while they are at home during this period.</p>
-                                    <div class="section_cto">
-                                        <span class="ft_control caps_upper">Read More</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="mediaPostItem">
-                            <a href="#" target="_blank" class="mediaPostWrapper">
-                                <figure class="mediaBrand">
-                                    <img src="./img/icons/theNation.png" alt="The Nation">
-                                </figure>
-                                <div class="mediaPostDetails">
-                                    <h4 class="title color__black margin_bottom_md font-bold">Tackling COVID-19 pandemic impact</h4>
-                                    <p class="postExcerpt">Gradely is offering free life-time access to digital homework resources for schools to set weekly homework and support students learning while they are at home during this period.</p>
-                                    <div class="section_cto">
-                                        <span class="ft_control caps_upper">Read More</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="mediaPostItem">
-                            <a href="#" target="_blank" class="mediaPostWrapper">
-                                <figure class="mediaBrand">
-                                    <img src="./img/icons/techpoint.png" alt="Techpoint">
-                                </figure>
-                                <div class="mediaPostDetails">
-                                    <h4 class="title color__black margin_bottom_md font-bold">Gradely wins Edtech Summit Award for the adaptive solution of the year</h4>
-                                    <p class="postExcerpt">Gradely is offering free life-time access to digital homework resources for schools to set weekly homework and support students learning while they are at home during this period.</p>
-                                    <div class="section_cto">
-                                        <span class="ft_control caps_upper">Read More</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="mediaPostItem">
-                            <a href="#" target="_blank" class="mediaPostWrapper">
-                                <figure class="mediaBrand">
-                                    <img src="./img/icons/techCabal.png" alt="TechCabal">
-                                </figure>
-                                <div class="mediaPostDetails">
-                                    <h4 class="title color__black margin_bottom_md font-bold">Nigerian edtech startup, Gradely is trying to solve the problem of a “blank slate” for teachers</h4>
-                                    <p class="postExcerpt">Gradely is offering free life-time access to digital homework resources for schools to set weekly homework and support students learning while they are at home during this period.</p>
-                                    <div class="section_cto">
-                                        <span class="ft_control caps_upper">Read More</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                    <div class="scroll_arrows"></div>
-                </div>
-            </div>
-            <div class="bannerBlobItem blobTopBottomCenter"></div>
-        </section>
+
+        <span class="UI_cornerBlobs corner_blob_yellow"></span>
+        <span class="UI_cornerBlobs corner_blob_red"></span>
+        <span class="UI_cornerBlobs corner_blob_blue"></span>
+        <span class="UI_cornerBlobs corner_blob_torgue"></span>
     </main>
-
-    <div class="offscreenDrawer"> 
-        <div class="offscreenDrawerBackdrop"></div>
-        <div class="offScreenDrawerContent drawerRight">
-          <div class="offScreenDrawerContentWrapper">
-            <!-- Dismiss the dialog -->
-            <div class="widget_dismiss">
-                <button class="close_dialog"></button>
-            </div>
-            
-            <header class="drawer_header">
-              <h4 class="title title_md color__black font-bold">
-                Request Demo
-              </h4>
-            </header>
-
-            <div class="drawer_body">
-
-                <div class="error_message hidden text-left">
-                    <p>An error occured.</p>
-                </div>
-
-                <form action="">
-                    <div class="form-group">
-                        <label class="control-label ">
-                            Your Name
-                        </label>
-                        <input type="text" required class="form-control" placeholder="e.g David Ibiwoye">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label ">
-                            School Name
-                        </label>
-                        <input type="text" required class="form-control" placeholder="e.g Gradely Intl. College">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label ">
-                            Role in School
-                        </label>
-                        <input type="text" required class="form-control" placeholder="e.g Principal">
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label class="control-label ">
-                                Contact Email Address
-                            </label>
-                            <input type="text" required class="form-control" placeholder="e.g david@gmail.com">
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label class="control-label">
-                                Contact Phone Number
-                            </label>
-                            <input type="text" required class="form-control" placeholder="e.g 2348130030020">
-                        </div>
-                    </div>                                    
-                    <div class="form-group">
-                        <label class="control-label">
-                            School Type
-                        </label>
-                        <select class="form-control">
-                            <option>Primary School</option>
-                            <option>Secondary School</option>
-                            <option>Primary & Secondary School</option>
-                            <option>College</option>
-                            <option>Polytechnic</option>
-                            <option>University</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">
-                            Preferred Demo Date and time
-                        </label>
-                        <div class="schedularInputItem">
-                            <input type="text" class="form-control" id="fmCalendar" placeholder="Set the date and time you will be available for the demo">
-                            <span class="inputItemIcon">
-                                <i class="cust_icon icon_calendar"></i>
-                            </span>
-                        </div>
-                    </div>       
-                </form>
-                <div class="section_cto text-right">
-                    <button type="button" data-target="#requestSuccess" data-toggle="modal" data-backdrop="static" class="btn btn-sm btn-secondary">Submit Request</button>
-                </div>
-            </div>
-          </div>
-        </div>
-    </div>
-
+    
     <footer role="contentinfo" class="footerArea">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="row">
                         <div class="brandBlock col-md-3">
                             <div class="brand_media">
@@ -564,7 +625,7 @@
                         <div class="footerBlock col-md-9">
                             <div class="ft_block_header">
                                 <h3 class="item_title">
-                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_0" class="blockHeaderLink font-bold color__white collapsed">Inside Gradely</a>
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_0" class="blockHeaderLink font-bold color__black collapsed">Inside Gradely</a>
                                 </h3>
                             </div>
                             <div class="ft_block_segment panel-collapse" id="footerblock_0">
@@ -572,67 +633,59 @@
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About Gradely</a></li>
                                     <li><a href="blog.html" target="_blank">Blog</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="help_center.html">Help Centre</a></li>
+                                    <li><a href="#">Become a Tutor</a></li>
+                                    <li><a href="#">Download the app</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8 brandNav">
+                <div class="col-md-9 brandNav">
                     <div class="row" id="footerBlockItem">
-                        <div class="col-md-3 footerBlock">
+                        <div class="col-md-2 footerBlock">
                             <div class="ft_block_header">
                                 <h3 class="item_title">
-                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_1" class="blockHeaderLink font-bold color__white collapsed">Product</a>
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_1" class="blockHeaderLink font-bold color__black collapsed">Product</a>
                                 </h3>
                             </div>
                             <div class="ft_block_segment panel-collapse" id="footerblock_1">
                                 <ul class="ft_nav_block">
                                     <li><a href="school_lander.html">For Schools</a></li>
                                     <li><a href="parents_lander.html">For Parents</a></li>
-                                    <li><a href="launch_event.html">Events</a></li>
+                                    <li><a href="tutoring_lander.html">Tutoring</a></li>
+                                    <li><a href="#">Learn</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-4 footerBlock">
+                        <div class="col-md-2 footerBlock">
                             <div class="ft_block_header">
                                 <h3 class="item_title">
-                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_2" class="blockHeaderLink font-bold color__white collapsed">Account</a>
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_2" class="blockHeaderLink font-bold color__black collapsed">Support</a>
                                 </h3>
                             </div>
                             <div class="ft_block_segment panel-collapse" id="footerblock_2">
                                 <ul class="ft_nav_block">
-                                    <li><a href="#">Sign up as a Student</a></li>
-                                    <li><a href="#">Sign up as a Parent</a></li>
-                                    <li><a href="#">Sign up as a Teacher</a></li>
-                                    <li><a href="#">Sign up as a School</a></li>
-                                    <li><a href="tutor_signup.html">Become a Tutor</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="policies.html">Privacy</a></li>
+                                    <li><a href="terms">Terms & Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-5 footerBlock">
+                        <div class="col-md-3 footerBlock">
                             <div class="ft_block_header">
                                 <h3 class="item_title">
-                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_3" class="blockHeaderLink font-bold color__white collapsed">Support</a>
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_3" class="blockHeaderLink font-bold color__black collapsed">Contact</a>
                                 </h3>
                             </div>
                             <div class="ft_block_segment panel-collapse" id="footerblock_3">
                                 <ul class="ft_nav_block">
                                     <li>
-                                        <a href="#" class="contactInfoLink">
+                                        <a href="tel:+2348055967844" class="contactInfoLink">
                                             <span class="infoLinkIcon">
-                                                <i class="cust_icon icon_whatsapp"></i>
+                                                <i class="cust_icon icon_phone"></i>
                                             </span>
                                             <span class="infoLinkLabel">(+234) 805 596 7844</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="contactInfoLink">
-                                            <span class="infoLinkIcon">
-                                                <i class="cust_icon icon_whatsapp"></i>
-                                            </span>
-                                            <span class="infoLinkLabel">(+234) 810 059 8268</span>
                                         </a>
                                     </li>
                                     <li>
@@ -644,92 +697,95 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="help_center.html" class="contactInfoLink">
+                                        <a href="https://wa.me/+2348055967844" target="_blank" class="contactInfoLink">
                                             <span class="infoLinkIcon">
-                                                <i class="cust_icon icon_help"></i>
+                                                <i class="cust_icon icon_whatsapp"></i>
                                             </span>
-                                            <span class="infoLinkLabel">Visit Help center</span>
+                                            <span class="infoLinkLabel">(+234) 810 059 8268</span>
                                         </a>
                                     </li>
                                 </ul>
-                                <div class="socialLinks margin_top_lg">
+                                <div class="socialLinks margin_top_sm">
                                     <a href="https://www.facebook.com/gradelyng/" class="socialLinkItem" target="_blank">
-                                        <i class="cust_icon icon_xs icon_fb"></i>
+                                        <i class="cust_icon icon_fb"></i>
                                     </a>
                                     <a href="https://www.instagram.com/gradelyng/" class="socialLinkItem" target="_blank">
-                                        <i class="cust_icon icon_xs icon_ig"></i>
+                                        <i class="cust_icon icon_ig"></i>
                                     </a>
                                     <a href="https://www.twitter.com/gradelyng" class="socialLinkItem" target="_blank">
-                                        <i class="cust_icon icon_xs icon_tw"></i>
+                                        <i class="cust_icon icon_tw"></i>
                                     </a>
                                     <a href="https://www.youtube.com/channel/UCsiHe1Qm8SZ_8LD5zkEY1Rw/" class="socialLinkItem" target="_blank">
-                                        <i class="cust_icon icon_xs icon_youtube"></i>
+                                        <i class="cust_icon icon_youtube"></i>
                                     </a>
                                     <a href="https://www.linkedin.com/company/gradelyng/about/" class="socialLinkItem" target="_blank">
-                                        <i class="cust_icon icon_xs icon_ln"></i>
+                                        <i class="cust_icon icon_ln"></i>
                                     </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title font-bold color__black margin_bottom_md">Membership & Awards
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment">
+                                <div class="company_certs">
+                                    <figure class="certFigure">
+                                        <img src="./img/icons/APEN_logo.png" alt="APEN">
+                                    </figure>
+                                    <figure class="certFigure">
+                                        <img src="./img/icons/AISEN_logo.png" alt="AISEN">
+                                    </figure>
+                                    <figure class="certFigure">
+                                        <img src="./img/icons/NAPPS_logo.png" alt="NAPPS">
+                                    </figure>
+                                    <figure class="certFigure">
+                                        <img src="./img/icons/cert_badge.png" alt="ISO Cert">
+                                    </figure>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footerCrumbs">
-                <div class="copyright">
-                    <p>Copyright 2020, Gradely Inc. All rights reserved.</p>
+        </div>
+        <div class="footerBase bg__black">
+            <div class="container">
+                <div class="footerCrumbs">
+                    <div class="copyright">
+                        <p>Copyright 2020, Gradely Inc.. All rights reserved.</p>
+                    </div>
+                    <div class="audienceLocal">
+                        <div class="localWrapper">
+                            <i class="cust_icon icon_globe"></i>
+                            <div class="localInfo">
+                                <span class="localMetaItem metaCountry">Nigeria</span>
+                                <i>|</i>
+                                <span class="localMetaItem metaCurrency">Naira (NGN)</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <ul class="footer_links">
-                    <li><a href="terms.html" class="footerLinkItem">Terms & Conditions</a></li>
-                    <li><a href="policies.html" class="footerLinkItem">Privacy Policies</a></li>
-                </ul>
             </div>
         </div>
     </footer>
     
 	<script src="js/jquery.js"></script>
     <script src="js/base.min.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
     <script src="js/main.js"></script>
-       
+
     <script>
-        $(function () {
-            $('.mediaPostList').slick({
-                speed: 1000,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                swipe: true,
-                arrows: true,
-                dots: true,
-                centerPadding: '0px',
-                centerMode: true,
-                appendArrows: $(".scroll_arrows"),
-                responsive: [
-                {
-                  breakpoint: 992,
-                  settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                  }
-                },
-                {
-                  breakpoint: 768,
-                  settings: {
-                        slidesToShow: 2,
-                        centerMode: false,
-                        slidesToScroll: 1
-                  }
-                },
-                {
-                  breakpoint: 576,
-                  settings: {
-                        slidesToShow: 1,
-                        centerMode: false,
-                        slidesToScroll: 1
-                  }
-                }]
-            }); 
+        $('.cardList').flickity({
+            // options
+            cellAlign: 'left',
+            freeScroll: true,
+            groupCells: true,
+            wrapAround: true
         });
     </script>
+       
     		
 </body>
 </html>

@@ -1,0 +1,480 @@
+// antialiasing mode font rendering
+html * {
+    @include font-smoothing;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
+mark {
+    padding: 5px 8.5px;
+    border-radius: 5px;
+    background-color: lighten($brand_accent, 35);
+}
+
+body {
+    font-family: $body_font;
+    font-size: 1.4rem;
+    font-size: 14px;
+    word-spacing: -.01em;
+    letter-spacing: .01em;
+    height: 100%;
+    height: 100vh;
+    width: 100%;
+    font-weight: 400;
+    position: relative;
+    line-height: 1.85;
+    color: $color_text_alt;
+    background-color: white;
+    
+    @include MQ(M) {
+        font-size: 1.6rem;
+        font-size: 16px;
+    }
+
+
+    &.scroll_lock {
+        overflow: hidden;
+    }
+}
+
+/* Backgrounds */
+
+.bg__default {
+    background-color: $border_grey_light !important;
+}
+
+.bg__white {
+    background-color: white !important;
+}
+
+.bg__off_white {
+    background-color: $color_white !important;
+}
+
+.bg__primary {
+    background-color: $brand_primary !important;
+}
+
+.bg__secondary {
+    background-color: $brand_accent !important;
+}
+
+.bg__danger {
+    background-color: $brand_red !important;
+}
+
+.bg__success {
+    background-color: $brand_green !important;
+}
+
+.bg__secondary_tinted {
+    background-color: tint($brand_accent, 60%) !important;
+}
+
+.bg__secondary_light {
+    background-color: $brand_accent_light !important;
+}
+
+.bg__red_light {
+    background-color: $brand_red_light !important;
+}
+
+.bg__green_light {
+    background-color: $brand_green_light !important;
+}
+
+.bg__black {
+    background-color: $brand_black !important;
+}
+
+.bg__inverse {
+    background-color: $brand_inverse !important;
+}
+
+.bg__primary_light {
+    background-color: $brand_primary_light !important;
+}
+
+.bg__inverse_light {
+    background-color: $brand_inverse_light !important;
+}
+
+.bg__dark {
+    background-color: rgba(black, .3) !important;
+}
+
+.bg_gradient_grey {
+    background-color: $color_white;
+    background: linear-gradient(180deg, #FDFAFA 0%, #F5F5F5 46.85%, rgba(253, 250, 250, 0) 100%);
+}
+
+.color__primary {
+    color: $brand_primary !important;
+}
+
+.color__secondary {
+    color: $brand_accent !important;
+}
+
+.color__secondary_light {
+    color: $brand_accent_light !important;
+}
+
+.color__inverse {
+    color: $brand_inverse !important;
+}
+
+.color__inverse_light {
+    color: $brand_inverse_light !important;
+    fill: $brand_inverse_light ;
+}
+
+.color__black {
+    color: $brand_black !important;
+}
+
+.color__grey_light {
+    color: $border_grey !important;
+}
+
+.color__grey {
+    color: $border_grey_light !important;
+}
+
+.color__grey_dark {
+    color: $color_grey_dark !important;
+}
+
+.color__white {
+    color: $color_white !important;
+}
+
+.color__default {
+    color: $color_text !important;
+}
+
+.color__alt {
+    color: $color_text_alt !important;
+}
+
+.color__green {
+    color: $brand_green !important;
+}
+
+.color__red {
+    color: $brand_red !important;
+}
+
+.font-sm {
+    font-size: 12px !important;
+}
+
+.font-default {
+    font-size: 14px !important;
+}
+
+.font-md {
+    font-size: 16px !important;
+}
+
+.font-lg {
+    font-size: 18px !important;
+
+    @include MQ(M) {
+        font-size: 21px !important;
+    }
+}
+
+.font-style-italic {
+    font-style: italic !important;
+
+    @include MQ(L) {
+        .heroTextWrapper & {
+            font-size: .9em;
+        }
+    }
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text_clipped {
+    @include text_truncate();
+}
+
+.text_italics {
+    font-style: italic !important;
+}
+
+.caps_upper {
+    text-transform: uppercase !important;
+}
+
+.caps_normal {
+    text-transform: none !important;
+}
+
+.container {
+    width: auto;
+    position: relative;
+    max-width: 1170px;
+}
+
+.blogLayoutWrapper {
+    max-width: 800px;
+}
+
+.container-fluid {
+    max-width: 1440px;
+    
+    @include MQ(M) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.content_narrow {   
+    max-width: 970px;
+}
+
+.centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@include MQ-MAX(M) {
+    .hidden-sm {
+        display: none !important;
+    }
+
+    .text-center-sm {
+        text-align: center !important;
+    }
+}
+
+@include MQ(M) {
+    .visible_sm {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+p {
+    margin: 0;
+    @include break-inside(avoid);
+        
+    +p {
+        padding-top: .5em;
+    }
+}
+
+address, address span {
+    display: block;
+}
+
+.margin_top_x {
+    margin-top: 5px;
+}
+
+.margin_top_sm {
+    margin-top: 10px !important;
+}
+
+.margin_top_md {
+    margin-top: 20px !important;
+}
+
+.margin_top_lg {
+    margin-top: 30px !important;
+}
+
+.margin_top_xl {
+    margin-top: 50px !important;
+}
+
+.margin_bottom_x {
+    margin-bottom: 5px;
+}
+
+.margin_bottom_sm {
+    margin-bottom: 10px !important;
+}
+
+.margin_bottom_md {
+    margin-bottom: 20px !important;
+}
+
+.margin_bottom_lg {
+    margin-bottom: 30px !important;
+}
+
+.margin_bottom_xl {
+    margin-bottom: 50px !important;
+}
+
+.margin_left_s {
+    margin-left: 5px;
+}
+
+.margin_left_sm {
+    margin-left: 10px;
+}
+
+.margin_left_m {
+    margin-left: 15px;
+}
+
+.margin_right_s {
+    margin-right: 5px;
+}
+
+.no_margin {
+    margin: 0 !important;
+}
+
+.padding-top-none {
+    padding-top: 0 !important;
+}
+
+.padding-bottom-none {
+    padding-bottom: 0 !important;
+}
+
+.box_rounded {
+    border-radius: 50% !important;
+}
+
+.mx_w_450 {
+    max-width: 450px;
+}
+
+.error_message {
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    clear: both;
+    color: $color_text;
+    background-color: $brand_red_light;
+    border: 1px solid $brand_red;
+    border-radius: 5px;
+}
+
+.coloredBar {
+    display: block;
+    height: 4px;
+    width: 100%;
+    max-width: 100px;
+    margin-bottom: 15px;
+    background-color: $brand_primary;
+}
+
+.separatorBar {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $border_grey;
+    margin: 20px 0;
+}
+
+.badge {
+    font-size: 12px;
+    border-radius: 25px;
+    padding: 0.85em 1.5em;
+    background-color: $border_grey_light;
+    color: $brand_black;
+    display: inline-block;
+    text-align: center;
+}
+
+.badge-default {
+    background-color: transparent;
+    color: $color_grey_dark;
+    border: 1px solid $border_grey;
+}
+.badge-primary {
+    background-color: rgba($brand_primary, 0.15);
+    color: $brand_primary;
+}
+.badge-secondary {
+    background-color: rgba($brand_accent, 0.15);
+    color: $brand_accent;
+}
+.badge-danger {
+    background-color: rgba($brand_red, 0.15);
+    color: $brand_red;
+}
+.badge-black {
+    background-color: rgba($brand_black, 0.15);
+    color: $brand_black;
+}
+.badge-success {
+    background-color: rgba($brand_green, 0.15);
+    color: $brand_green;
+}

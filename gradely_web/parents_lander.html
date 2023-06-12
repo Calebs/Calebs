@@ -1,0 +1,1051 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>Welcome to Gradely | Online learning that improves grades</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/Flickity.css"/>
+    <link rel="stylesheet" href="css/base.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script> 
+</head>
+
+<body class="">
+
+    <div class="modal fade" id="videoPlayer">
+        <div class="modal-dialog modal-dialog-centered mediaRenderDialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </div>
+                <div class="modal-body mediaRenderDialogbody">
+                    <div class="content_wrapper">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/Cm2z8fwVPvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"></iframe>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="preTest_config">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <div class="dialogDismiss">
+                        <button type="button" class="close_dialog" data-dismiss="modal"></button>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <div class="modalAuthWrapper">
+                        <header class="margin_bottom_md text-center">
+                            <h3 class="title title_sm font-bold color__default">Take a Pre-Test</h3>
+                            <p class="color__default">Let's see how well you've mastered the subject.</p>
+                        </header>
+
+                        <div class="authOptionWrapper">
+                            <form action="">
+                                <div class="form-group labeledForm">
+									<label class="control-label font-bold">Name</label>
+									<input type="text" class="form-control labeledFormInput" placeholder="Who is taking the test?">
+								</div>
+                                <div class="form-group labeledForm">
+									<label class="control-label font-bold">Class</label>
+									<select class="form-control labeledFormInput" placeholder="What class are you?">
+                                        <option>Select your Class</option>
+                                        <option>Primary 1 / Grade 1</option>
+                                        <option>Primary 2 / Grade 2</option>
+                                        <option>Primary 3 / Grade 3</option>
+                                        <option>Primary 4 / Grade 4</option>
+                                        <option>Primary 5 / Grade 5</option>
+                                        <option>Primary 6 / Grade 6</option>
+                                        <option>JSS 1 / Year 7</option>
+                                        <option>JSS 2 / Year 8</option>
+                                        <option>JSS 3 / Year 9</option>
+                                        <option>SSS 1 / Year 10</option>
+                                        <option>SSS 2 / Year 11</option>
+                                        <option>SSS 3 / Year 12</option>
+                                    </select>
+								</div>
+                                <div class="form-group">
+									<label class="d-block control-label font-bold margin_bottom_sm">Which subjects will you like to test?</label>
+									<div class="optionsSelector">
+                                        <div class="optionItem">
+                                            <label for="sbj_maths" class="radio-inline">
+                                                <input type="radio" id="sbj_maths" name="subj_option">
+                                                <span class="color__black">Mathematics</span>
+                                            </label>
+                                        </div>
+                                        <div class="optionItem">
+                                            <label for="sbj_Eng" class="radio-inline">
+                                                <input type="radio" id="sbj_Eng" name="subj_option">
+                                                <span class="color__black">English Language</span>
+                                            </label>
+                                        </div>
+                                        <div class="optionItem">
+                                            <label for="sbj_science" class="radio-inline">
+                                                <input type="radio" id="sbj_science" name="subj_option">
+                                                <span class="color__black">Science</span>
+                                            </label>
+                                        </div>
+                                    </div>
+								</div>
+                            </form>
+                            <div class="section_cto text-center">
+                                <button type="submit" disabled class="btn btn-block btn-secondary">Start Pre-Test</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header role="banner" class="preAuthHeader">
+        <div class="container">
+            <div class="navbarWrapper">
+                <div class="navbarGroupItem navBarItemLeft">
+                    <div class="brand_img">
+                        <a href="index.html" class="logo_link">
+                            <img src="img/logo.svg" alt="Gradely.ng">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbarGroupItem navBarItemCenter">
+                    <nav class="navMenu menuPrimary">
+                        <div class="menuListItem subMenuContainer active">
+                            <a href="#" class="menuLinkItem">
+                                <span class="navLink_content">
+                                    Parents
+                                    <i class="cust_icon more_indicator"></i>
+                                </span>
+                            </a>
+                            <ul class="subMenu dropdown-menu">
+                                <li class="subMenuItem active">
+                                    <a href="parents_lander.html" class="subMenuItem_link">Learn</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="examPrep.html" class="subMenuItem_link">Exam Prep</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="tutoring.html" class="subMenuItem_link">Tutoring</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="summerSchool.html" class="subMenuItem_link">Extra Curricular</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="school_lander.html" class="menuLinkItem">
+                                <span class="navLink_content">
+                                    Schools
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menuListItem">
+                            <a href="teacher_lander.html" class="menuLinkItem">
+                                <span class="navLink_content">
+                                    Teachers
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menuListItem subMenuContainer">
+                            <a href="#" class="menuLinkItem">
+                                <span class="navLink_content">
+                                    Resources
+                                    <i class="cust_icon more_indicator"></i>
+                                </span>
+                            </a>
+                            <ul class="subMenu dropdown-menu">
+                                <li class="subMenuItem">
+                                    <a href="blog.html" class="subMenuItem_link">Blog</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="help_center.html" class="subMenuItem_link">Help Center</a>
+                                </li>
+                                <li class="subMenuItem">
+                                    <a href="contact.html" class="subMenuItem_link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="navbarGroupItem navBarItemRight">
+                    <nav class="navMenu menuAlt">
+                        <div class="controlBtn btn_user_act">
+                            <a href="signup_lander.html" class="btn btn-sm btn-primary-outline">Start Learning</a>
+                        </div>
+                        <div class="controlBtn btn_user_act hidden-sm">
+                            <a href="login.html" class="btn btn-sm btn-secondary">Log In</a>
+                        </div>
+                        <div class="controlBtn nav_trigger">
+                            <a class="primary-nav-trigger" href="#">
+                                <span class="menu-icon"></span>
+                                <span class="menu-text">Menu</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero_area bg_wave bg__secondary_light">
+        <div class="container">
+            <div class="heroContentWrapper row">
+                <div class="heroTextWrapper col-md-5 order-md-1 order-2">
+                    <h2 class="hero_title font-bold color__black">Master difficult topics. Get better grades </h2>
+                    <h4 class="font-bold caps_upper margin_top_md color__red">for Primary & Secondary students</h4>
+
+                    <div class="section_cto">
+                        <a href="#preTest_config" data-toggle="modal" class="btn lone-btn caps_upper btn-secondary">Take a Pre-Test</a>
+                    </div>
+                </div>
+                <div class="heroImageWrapper col-md-7 order-md-2 order-1">
+                    <img src="img/banners/parent_hero.gif" alt="" class="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="mainContentArea padding-top-none">
+        
+        <section class="section_block">
+            <div class="container ">
+
+                <div class="row info_sub_row align-items-center">
+                    <div class="col-md-6 order-2">
+                        <div class="section_header text-center-sm">
+                            <span class="font-bold caps_upper font-sm color__secondary">Learn</span>
+                            <h3 class="title title_md font-bold margin_bottom_md color__black">
+                                Take assessment and know learning gaps
+                            </h3>
+                            <p>Practice difficult topics with our recommended assessments & video lesson library anywhere, anytime.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-1 imageItemHolder">
+                        <div class="featuredImage">
+                            <img src="./img/banners/learn.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_block">
+            <div class="container ">
+                <header class="section_header">
+                    <span class="font-bold caps_upper font-sm color__red">Video Lessons</span>
+                    <h3 class="title title_md font-bold color__black margin_bottom_sm">Learn difficult topics with video lessons</h3>
+                    <p>Find well illustrated and interactive videos lessons on different topics to help you learn in a fun and engaging way.</p>
+                </header>
+            </div>
+            <div class="videoGallery ">
+                <div class="galleryWrapper">
+                    <div class="galleryRow gallery_marq">
+                        <ul class="galleryItemList">
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="galleryRow gallery_marq" style="justify-content: flex-start;">
+                        <ul class="galleryItemList">
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="galleryItem">
+                                <a href="#videoPlayer" data-toggle="modal" data-backdrop="static">
+                                    <div class="videoThumbnail">
+                                        <div class="videoOverlay">
+                                            <span class="ctaIconHolder ctaIconHolder_sm">
+                                                <svg class="cust_icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M23.6298 12.9957C21.6337 11.7041 19 13.1369 19 15.5144V48.4856C19 50.8631 21.6337 52.2959 23.6298 51.0043L49.1074 34.5187C50.9344 33.3365 50.9344 30.6635 49.1074 29.4813L23.6298 12.9957Z"/>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <img src="./img/banners/dummy_video_thumb.png" class="imageThumb" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section_block padding-top-none">
+            <div class="container ">
+                <div class="row">
+                    <article class="col-md-6">
+                        <div class="featuredImage">
+                            <img src="./img/banners/tutoring.gif" alt="">
+                        </div>
+                        <div class="section_header">
+                            <span class="font-bold font-sm caps_upper color__primary">Tutoring</span>
+                            <h3 class="title title_sm font-bold margin_bottom_md color__black">
+                                Get to 100% mastery with 1-on-1 tutor sessions
+                            </h3>
+                            <p>Join group or private online tutor sessions for more help in your home work, special exams, or to ask questions on difficult academic concepts.</p>
+                            <div class="section_cto">
+                                <a href="tutoring.html" class="btn caps_upper btn-default-outline">Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-6">
+                        <div class="featuredImage">
+                            <img src="./img/banners/exam_prep.gif" alt="">
+                        </div>
+                        <div class="section_header text-center-sm">
+                            <span class="font-bold font-sm caps_upper color__grey_dark">Exam Prep</span>
+                            <h3 class="title title_sm font-bold margin_bottom_md color__black">
+                                Up-to-date Past Questions and Answers
+                            </h3>
+                            <p>Practice with mock exams, accurate past questions & explainer videos to get yourself exam-ready for Common Entrance, WAEC, JAMB, and other national & international examinations.</p>
+                            <div class="section_cto">
+                                <a href="examPrep.html" class="btn caps_upper btn-default-outline">Learn more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section_block ">
+            <div class="container">
+                <header class="row">
+                    <div class="section_header offset-md-3 col-md-6 text-center">
+                        <h3 class="title title_lg font-bold color__black margin_bottom_sm">Choose your Plan</h3>
+                        <p>With as low as ₦5,000 per month, your child will have access to unlimited access to all of gradely learn content, including videos, educational games and practice quizzes</p>
+                    </div>    
+                </header>
+                <div class="row">
+                    <article class="col-md-4 col-sm-6 pricingCardItem">
+                        <div class="pricingCardWrapper text-center">
+                            <div class="pricingHeading bg__inverse_light">
+                                <h4 class="title font-bold caps_upper">1 Month</h4>
+                            </div>
+                            <div class="pricingDetails">
+                                <div class="planPrice margin_bottom_md">
+                                    <h2 class="priceValue font-bold color__black">₦5,000</h2>
+                                    <span class="priceSub color__grey_dark">Per Student</span>
+                                </div>
+                                <div class="section_cto">
+                                    <a href="#" class="btn btn-secondary-outline">Subscribe Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 col-sm-6 pricingCardItem">
+                        <div class="pricingCardWrapper text-center">
+                            <div class="pricingHeading">
+                                <h4 class="title font-bold caps_upper">3 Months</h4>
+                            </div>
+                            <div class="pricingDetails">
+                                <div class="planPrice margin_bottom_md">
+                                    <h2 class="priceValue font-bold color__black">₦10,000</h2>
+                                    <span class="priceSub color__grey_dark">Per Student</span>
+                                </div>
+                                <div class="section_cto">
+                                    <a href="#" class="btn btn-secondary">Subscribe Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-md-4 col-sm-12 pricingCardItem">
+                        <div class="pricingCardWrapper text-center">
+                            <div class="pricingHeading bg__green_light">
+                                <h4 class="title font-bold caps_upper">1 Year</h4>
+                            </div>
+                            <div class="pricingDetails">
+                                <div class="planPrice margin_bottom_md">
+                                    <h2 class="priceValue font-bold color__black">₦25,000</h2>
+                                    <span class="priceSub color__grey_dark">Per Student</span>
+                                </div>
+                                <div class="section_cto">
+                                    <a href="#" class="btn btn-secondary-outline">Subscribe Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section_block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <header class="sectionTitleHolder margin_bottom_lg">
+                            <h3 class="title title_lg font-bold color__black ">Parents Love Us</h3>
+                        </header>
+                    </div>
+                    <section class="col-md-9">
+                        <div class="row">
+                            <article class="col-md-6 testimonialTile">
+                                <div class="testimonialWrapper">
+                                    <div class="customer media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="./img/banners/boye_osinaga.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="font-bold color__alt">Lanre Oshilaja</h4>
+                                            <span class="color__grey_dark">SAT (2022)</span>
+                                        </div>
+                                    </div>
+                                    <blockquote class="quoteInfo">
+                                        <span class="quoteMark">
+                                            <img src="./img/banners/quote_mark.svg" alt="Quotation mark">
+                                        </span>
+                                        <p>This is the testimonial excerpt from the user's testimonial video to the right. It circles round each highlighted parent.</p>
+                                    </blockquote>
+                                    <div class="quoteCTA margin_top_lg">
+                                        <a href="#videoPlayer" data-toggle="modal" data-backdrop="static" class="cardSupplimentaryInfo">
+                                            <span class="playIconBtn">
+                                                <i class="cust_icon icon_xs icon_play_fill"></i>
+                                            </span>
+                                            <span class="infoLabel">Watch Video</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-md-6 testimonialTile">
+                                <div class="testimonialWrapper">
+                                    <div class="customer media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="./img/banners/boye_osinaga.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="font-bold color__alt">Lanre Oshilaja</h4>
+                                            <span class="color__grey_dark">SAT (2022)</span>
+                                        </div>
+                                    </div>
+                                    <blockquote class="quoteInfo">
+                                        <span class="quoteMark">
+                                            <img src="./img/banners/quote_mark.svg" alt="Quotation mark">
+                                        </span>
+                                        <p>This is the testimonial excerpt from the user's testimonial video to the right. It circles round each highlighted parent. This is the testimonial excerpt from the user's testimonial video to the right....</p>
+                                    </blockquote>
+                                    <div class="quoteCTA margin_top_lg">
+                                        <a href="#" class="cardSupplimentaryInfo">
+                                            <span class="infoLabel">Read Case Study</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="col-md-6 testimonialTile">
+                                <div class="testimonialWrapper">
+                                    <div class="customer media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="./img/banners/boye_osinaga.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="font-bold color__alt">Lanre Oshilaja</h4>
+                                            <span class="color__grey_dark">SAT (2022)</span>
+                                        </div>
+                                    </div>
+                                    <blockquote class="quoteInfo">
+                                        <span class="quoteMark">
+                                            <img src="./img/banners/quote_mark.svg" alt="Quotation mark">
+                                        </span>
+                                        <p>This is the testimonial excerpt from the user's testimonial video to the right. It circles round each highlighted parent.</p>
+                                    </blockquote>
+                                    <!-- <div class="quoteCTA margin_top_lg">
+                                        <a href="#" class="cardSupplimentaryInfo">
+                                            <span class="playIconBtn">
+                                                <i class="cust_icon icon_xs icon_play_fill"></i>
+                                            </span>
+                                            <span class="infoLabel">Learn more</span>
+                                        </a>
+                                    </div> -->
+                                </div>
+                            </article>
+                            <article class="col-md-6 testimonialTile">
+                                <div class="testimonialWrapper">
+                                    <div class="customer media_item margin_bottom_lg">
+                                        <div class="media_figure">
+                                            <div class="user_info_avi avi_md">
+                                                <img src="./img/banners/boye_osinaga.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="media_info">
+                                            <h4 class="font-bold color__alt">Lanre Oshilaja</h4>
+                                            <span class="color__grey_dark">SAT (2022)</span>
+                                        </div>
+                                    </div>
+                                    <blockquote class="quoteInfo">
+                                        <span class="quoteMark">
+                                            <img src="./img/banners/quote_mark.svg" alt="Quotation mark">
+                                        </span>
+                                        <p>This is the testimonial excerpt from the user's testimonial video to the right. It circles round each highlighted parent.</p>
+                                    </blockquote>
+                                    <div class="quoteCTA margin_top_lg">
+                                        <a href="#" class="cardSupplimentaryInfo">
+                                            <span class="infoLabel">Read Case Study</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+                <span class="bannerBlobItem blobTopRight_bleedout blob_strokes_md" style="top: -50px; right: -130px; max-width: 200px;"></span>
+            </div>
+        </section>
+
+        <section class="section_block">
+            <div class="container content_narrow">
+                <header class="section_header text-center">
+                    <h3 class="title title_lg font-bold color__black ">Frequently Asked Questions</h3>
+                </header>
+
+                <div class="FAQs_list" id='faqs'>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_1">1. What does my child need to use Gradely?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_1" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>All you need to get started is a computer or tablet that has access to the internet.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_2">2. What class does my child have to be in?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_2" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_3">3. When do the group classes hold?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_3" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_4">4. Can I reschedule my child's class?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_4" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="panel-help">
+                        <header class="panel-header">
+                            <h4 class="panel-title title title_sm color__black">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" href="#helpItem_5">5. Can I reschedule my child's class?</a>
+                            </h4>
+                        </header>
+                        <div id="helpItem_5" class="panel-collapse collapse" data-parent="#faqs">
+                            <div class="panel-body">
+                                <p>Each course is packed with intense learning. While you have some flexibility in how you tackle your workload, the course is curated in a specific order. We build up foundations that support more and more advanced techniques with lessons to practice your new skills along the way.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="helpContact margin_top_lg">
+                    <h3 class="title title_md color__black">Need Help?</h3>
+                    <p>We're available to answer your questions and support your onboarding process.</p>
+
+                    <ul class="contactInfoList">
+                        <li class="contact_detail">
+                            <div class="media_item">
+                                <div class="media_figure">
+                                    <span class="iconBox bg__primary">
+                                        <i class="cust_icon icon_phone_fill"></i>
+                                    </span>
+                                </div>
+                                <div class="media_info">
+                                    <span class="infoLabel color__grey_dark">Call Us</span>
+                                    <h4 class="title title_sm color__black font-bold">
+                                        <a href="tel:+2348100598268">(+234) 810 059 8268</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact_detail">
+                            <div class="media_item">
+                                <div class="media_figure">
+                                    <span class="iconBox bg__primary">
+                                        <i class="cust_icon icon_whatsapp_light"></i>
+                                    </span>
+                                </div>
+                                <div class="media_info">
+                                    <span class="infoLabel color__grey_dark">Chat with us</span>
+                                    <h4 class="title title_sm color__black font-bold">
+                                        <a href="#">(+234) 810 059 8268</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="contact_detail">
+                            <div class="media_item">
+                                <div class="media_figure">
+                                    <span class="iconBox bg__primary">
+                                        <i class="cust_icon icon_at"></i>
+                                    </span>
+                                </div>
+                                <div class="media_info">
+                                    <span class="infoLabel color__grey_dark">Send us a Mail</span>
+                                    <h4 class="title title_sm color__black font-bold">
+                                        <a href="mailto:hello@gradely.ng">hello@gradely.ng</a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <span class="UI_cornerBlobs corner_blob_yellow"></span>
+        <span class="UI_cornerBlobs corner_blob_red"></span>
+        <span class="UI_cornerBlobs corner_blob_blue"></span>
+        <span class="UI_cornerBlobs corner_blob_torgue"></span>
+    </main>
+    
+    <footer role="contentinfo" class="footerArea">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="brandBlock col-md-3">
+                            <div class="brand_media">
+                                <a href="index.html">
+                                    <img src="./img/logoMark.svg" alt="Gradely.ng">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footerBlock col-md-9">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_0" class="blockHeaderLink font-bold color__black collapsed">Inside Gradely</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_0">
+                                <ul class="ft_nav_block">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Gradely</a></li>
+                                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                                    <li><a href="#">Become a Tutor</a></li>
+                                    <li><a href="#">Download the app</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 brandNav">
+                    <div class="row" id="footerBlockItem">
+                        <div class="col-md-2 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_1" class="blockHeaderLink font-bold color__black collapsed">Product</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_1">
+                                <ul class="ft_nav_block">
+                                    <li><a href="school_lander.html">For Schools</a></li>
+                                    <li><a href="parents_lander.html">For Parents</a></li>
+                                    <li><a href="tutoring_lander.html">Tutoring</a></li>
+                                    <li><a href="#">Learn</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_2" class="blockHeaderLink font-bold color__black collapsed">Support</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_2">
+                                <ul class="ft_nav_block">
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="policies.html">Privacy</a></li>
+                                    <li><a href="terms">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title">
+                                    <a data-toggle="collapse" data-parent="#footerBlockItem" href="#footerblock_3" class="blockHeaderLink font-bold color__black collapsed">Contact</a>
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment panel-collapse" id="footerblock_3">
+                                <ul class="ft_nav_block">
+                                    <li>
+                                        <a href="tel:+2348055967844" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_phone"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">(+234) 805 596 7844</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:support@gradely.ng" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_mail"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">support@gradely.ng</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://wa.me/+2348055967844" target="_blank" class="contactInfoLink">
+                                            <span class="infoLinkIcon">
+                                                <i class="cust_icon icon_whatsapp"></i>
+                                            </span>
+                                            <span class="infoLinkLabel">(+234) 810 059 8268</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="socialLinks margin_top_sm">
+                                    <a href="https://www.facebook.com/gradelyng/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_fb"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/gradelyng/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_ig"></i>
+                                    </a>
+                                    <a href="https://www.twitter.com/gradelyng" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_tw"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UCsiHe1Qm8SZ_8LD5zkEY1Rw/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_youtube"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/gradelyng/about/" class="socialLinkItem" target="_blank">
+                                        <i class="cust_icon icon_ln"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 footerBlock">
+                            <div class="ft_block_header">
+                                <h3 class="item_title font-bold color__black margin_bottom_md">Membership & Awards
+                                </h3>
+                            </div>
+                            <div class="ft_block_segment">
+                                <div class="company_certs">
+                                    <figure class="certFigure">
+                                        <img src="./img/icons/APEN_logo.png" alt="APEN">
+                                    </figure>
+                                    <figure class="certFigure">
+                                        <img src="./img/icons/AISEN_logo.png" alt="AISEN">
+                                    </figure>
+                                    <figure class="certFigure">
+                                        <img src="./img/icons/NAPPS_logo.png" alt="NAPPS">
+                                    </figure>
+                                    <figure class="certFigure">
+                                        <img src="./img/icons/cert_badge.png" alt="ISO Cert">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerBase bg__black">
+            <div class="container">
+                <div class="footerCrumbs">
+                    <div class="copyright">
+                        <p>Copyright 2020, Gradely Inc.. All rights reserved.</p>
+                    </div>
+                    <div class="audienceLocal">
+                        <div class="localWrapper">
+                            <i class="cust_icon icon_globe"></i>
+                            <div class="localInfo">
+                                <span class="localMetaItem metaCountry">Nigeria</span>
+                                <i>|</i>
+                                <span class="localMetaItem metaCurrency">Naira (NGN)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+	<script src="js/jquery.js"></script>
+    <script src="js/base.min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $('.cardList').flickity({
+            // options
+            cellAlign: 'left',
+            freeScroll: true,
+            groupCells: true,
+            wrapAround: true
+        });
+    </script>
+       
+    		
+</body>
+</html>

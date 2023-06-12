@@ -1,0 +1,379 @@
+
+.media_column_sm {
+    @include MQ-MAX(S) {
+        flex-direction: column;
+    }
+}
+
+.pricingInfo {
+    clear: both;   
+}
+
+// Compare Table
+.featureGroup {
+    @include flexbox();
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.feeatureGroupHeader, .featureRow {
+    @include flexbox();
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featureRow {
+    padding: 10px 0;
+    
+    @include MQ-MAX(M) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        > * {
+            width: 100%;
+        }
+    }
+}
+
+.feeatureGroupHeader {
+    border-bottom: 2px solid $border_grey_light;
+    padding-bottom: 15px;
+
+    @include MQ-MAX(M) {
+        .compareFeatureTitle {
+            display: none;
+        }
+    }
+}
+
+.brandCompareLogo {
+    display: block;
+    
+    > img {
+        display: inline-block;
+        vertical-align: bottom;
+        max-width: 96px;
+
+        @include MQ(M) {
+            max-height: 32px;
+            width: auto;
+        }
+    }
+}
+
+.featureGroupRow + .featureGroupRow {
+    border-top: 1px solid $brand_inverse_light;
+}
+
+.compareFeatureTitle {
+    flex: 2;
+    position: relative;
+
+    @include MQ-MAX(S) {
+        margin-bottom: 15px;
+    }
+
+    @include MQ(M) {
+        font-size: 16px;
+    }
+
+}
+
+.featureOptions {
+    flex: 2;
+    @include flexbox;
+    align-items: center;
+    margin: 0 -15px;
+    justify-content: center;
+
+    @include MQ-MAX(S) {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.planBlock {
+    flex: 1;
+    padding: 0 15px;
+    
+    @include MQ(M) {
+        min-width: 150px;
+    }
+}
+
+// Help center posts
+.articleGroupWrapper {
+    display: block;
+    max-width: 500px;
+}
+
+.helpArticleItem {
+    display: block;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+
+    .featuredList & {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $brand_inverse_light;
+
+        @include MQ(M) {
+            font-size: 16px;
+        }
+    }
+}
+
+.helpArticleLink {
+    display: inline-flex;
+    color: $color_text_alt;
+    align-items: center;
+
+    &::before {
+        height: 24px;
+        width: 24px;
+        display: inline-flex;
+        content: "";
+        margin-right: 10px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: .65;
+        @include transition(opacity .4s linear 0s);
+        background-image: url(../img/icons/listMarker.svg);
+    }
+
+    &:hover, &:focus {
+        color: $brand_accent;
+
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.helpArticleRow {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d5d5d5;
+    width: 100%;
+}
+@include MQ(M) {
+    .helpArticleBody {
+        padding-right: 0;
+        padding-left: 30px;
+    }
+}
+
+.helpArticleHeader {
+    margin-bottom: 15px;
+    line-height: 1.5;
+
+    @include MQ(M) {
+        padding-right: 0;
+        margin-bottom: 0;
+        padding-right: 20px;
+    }
+}
+
+.actionStep {
+    @include flexbox();
+    margin-bottom: 40px;
+    width: 100%;
+
+    @include MQ(M) {
+        margin-bottom: 60px;
+    }
+}
+
+.actionStepCount {
+    flex-shrink: 0;
+    margin-right: 20px;
+    position: relative;
+}
+
+.numberSlasher {
+    display: block;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 15%;
+}
+
+.actionStepNumber {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.35);
+    margin-top: -15px;
+    display: block;
+
+    @include MQ(M) {
+        font-size: 64px;
+        margin-top: -20px;
+    }
+}
+
+.actionStepInfo {
+    flex: 1;
+
+    @include MQ(M) {
+        font-size: 16px;
+    }
+}
+
+.feature_item {
+    margin-bottom: 40px;
+}
+
+.feature_icon {
+    > img {
+        max-width: 64px;
+        display: inline-block;
+    }
+}
+
+.feature_wrapper {
+    @include flexbox();
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+
+    @include MQ(L) {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.planTileItem {
+    margin-bottom: 30px;
+}
+.planTileItem:nth-child(2) .planTileWrapper {
+    border-color: $brand_accent;
+}
+.planTileItem:nth-child(3) .planTileWrapper {
+    border-color: $brand_red;
+}
+
+.planTileWrapper {
+    border: 1px solid $brand_inverse;
+    border-radius: 15px;
+    background-color: white;
+    padding: 40px;
+}
+
+.planSummary {
+    line-height: 1.8em;
+    overflow: hidden;
+
+    @include MQ(M) {
+        height: 5.4em;
+    }
+}
+
+// Video Gallery
+
+.videoGallery {
+    display: block;
+    clear: both;
+}
+
+.galleryWrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.galleryRow {
+    --space: 2rem;
+    @include flexbox();
+    display: grid;
+    place-content: center;
+    gap: var(--space);
+    margin-block: var(--space);
+}
+
+.gallery_marq {
+    --gap: var(--space);
+    @include animation(scroll_left 240s linear 0s infinite);
+    
+
+    &:hover, &:focus {
+        animation-play-state: paused;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery_marq {
+      animation-play-state: paused;
+    }
+  }
+
+.galleryItemList {
+    @include flexbox();
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-items: center;
+    flex-shrink: 0;
+}
+
+.galleryItem {
+    position: relative;
+    margin-inline: 7.5px;
+    width: 195px;
+    
+    @include MQ(M) {
+        width: 280px;
+    }
+}
+
+
+@-webkit-keyframes scroll_left{
+    0% {
+      @include transform(translateX(-var(--gap)));
+    }
+    100% {
+      @include transform(translateX(calc(-100% - var(--gap))));
+    }
+}
+
+@keyframes scroll_left{
+    0% {
+      @include transform(translateX(-var(--gap)));
+    }
+    100% {
+        @include transform(translateX(calc(-100% - var(--gap))));
+    }
+}
+
+
+.planBenefitItem {
+    @include flexbox();
+    font-size: 14px;
+    align-items: center;
+
+    + .planBenefitItem {
+        margin-top: 10px;
+    }
+
+    > span {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    &::before {
+        height: 16px;
+        width: 16px;
+        display: inline-flex;
+        content: "";
+        margin-right: 10px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons/listmarker.svg);
+    }
+}

@@ -1,0 +1,290 @@
+// TImer
+.timer, .timer-done, .timer-loop {
+    font-size: 21px;
+    color: $brand_primary;
+    font-weight: bold;
+  }
+
+  .timer {
+    @include flexbox;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  // These are the default CSS classes
+  // used by this plugin. Use these values
+  // for a basic style to get started.
+  .jst-hours,
+  .jst-minutes,
+  .jst-seconds{
+    padding: 0 2.5px;
+  }
+
+  .jst-clearDiv {
+    clear: both;
+  }
+
+  .jst-timeout {
+    color: $brand_red;
+  }
+
+  /* Dots */
+
+.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-dots {
+    list-style: none;
+    display: block;
+    padding: 50px 0 0;
+    width: 100%;
+    text-align: center;
+
+    button {
+        border: 0;
+        display: block;
+        height: 15px;
+        width: 15px;
+        padding: 0;
+        border-radius: 50%;
+        @include image_replacement();
+        background-color: $border_grey;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            outline: none;
+        }
+    }
+
+    li {
+        position: relative;
+        display: inline-block;
+        margin: 0 5px;       
+
+        &.slick-active button {
+            border-color: transparent;
+            background-color: $brand_accent;
+        }
+    }
+}
+
+.scroll_arrows {
+    display: block;
+    width: 100%;
+}
+
+.slick-arrow {
+    cursor: pointer;
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid $border_grey;
+    justify-content: center;
+    align-items: center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include image_replacement;
+    color: transparent;
+    border-radius: 50%;
+    @include transition(all .6s linear);
+    position: absolute;
+    @include center(y);
+
+    .brandMediaCoverage & {
+        margin-top: -50px;
+    }
+
+    @include MQ-MAX(M) {
+        display: none;
+
+        .caseStudyItem & {
+            display: inline-flex;
+        }
+    }
+
+    &:hover, &:focus {
+        opacity: 1;
+        outline: 0;
+    }   
+}
+
+.slick-prev {
+    background-image: url(../img/icons/arrowLeft.svg);
+    left: -5px;
+
+    .carousel-control-prev & {
+        left: -20px;
+    }
+}
+
+.slick-next {
+    background-image: url(../img/icons/arrowRight.svg);
+    right: -5px;
+
+    .carousel-control-next & {
+        right: -20px;
+    }
+}
+
+// Date Picker
+
+.dtpicker-content {
+    border-radius: 25px;
+
+    @include MQ(M) {
+        padding: 20px;
+    }
+}
+
+.dtpicker-bg {
+    font-family: $body_font;
+}
+
+.dtpicker-header {
+
+    .dtpicker-title {
+        color: $color_grey_dark;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    .dtpicker-close {
+        z-index: 5;
+        width: 30px;
+        height: 30px;
+        font-size: 0;
+        text-align: center;
+        border-radius: 50%;
+        top: -10px;
+        right: -10px;
+        @include image_replacement;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            width: 2px;
+            background: $border_grey_dark;
+            height: 14px;
+            top: 50%;
+            left: 50%;
+            margin: -7px 0 0 -1px;
+        }
+        &::before {
+            @include transform(rotate(-45deg));
+        }
+        &::after {
+            @include transform(rotate(45deg));
+        }
+        &:hover,
+        &:focus {
+            background-color: $brand_inverse_light;
+            &::before,
+            &::after {
+                background-color: $brand_black;
+            }
+        }
+    }
+
+    .dtpicker-value {
+        font-size: 16px;
+        font-weight: bold;
+        color: $brand_primary;
+    }
+}
+
+.dtpicker-buttonCont .dtpicker-button {
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    background-color: transparent;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 0px transparent;
+    @include transition(all .6s ease-in-out);
+    text-decoration: none !important;
+    border: 1px solid transparent;
+
+    &:hover, &:focus {
+        background-color: $brand_inverse;
+        color: $brand_primary !important;
+        border-color: transparent;
+    }
+}
+
+.dtpicker-twoButtons .dtpicker-buttonSet {
+    background-color: $brand_primary;
+    color: $color_white !important;
+}
+
+.dtpicker-twoButtons .dtpicker-buttonClear {
+    border-color: $brand_primary;
+    color: $brand_primary !important;
+}
+
+.dtpicker-components {
+    .dtpicker-compValue {
+        border: 1px solid $border_grey_light;
+        border-radius: 25px;
+        max-width: 110px;
+        margin: .5em auto;
+    }
+
+    .dtpicker-compButton {
+        font-size: 175%;
+        color: $brand_primary !important;
+        border-radius: 25px;;
+
+        &:hover, &:focus {
+            background-color: $color_white;
+            color: $brand_inverse !important;
+        }
+    }
+
+    .dtpicker-comp > * {
+        color: $brand_black;
+    }
+}
+
+.carousel-inner {
+    overflow: visible;
+}
+
+.carousel-indicators {
+    position: relative;
+    padding: 10px 0 20px;
+    cursor: pointer;
+
+    &.prodHowTo {
+        display: block;
+        margin: 0;
+        max-width: 520px;
+        padding: 0;
+    }
+
+    > li {
+        background-color: $border_grey_light;
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+    }
+
+    .active {
+        background-color: $brand_accent;
+    }
+}
+
+.howItWorkFig {
+    display: block;
+    max-width: 500px;
+    border-radius: 25px;
+    object-fit: cover;
+    overflow: hidden;
+    margin: auto;
+}
